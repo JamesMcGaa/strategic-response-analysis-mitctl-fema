@@ -1,0 +1,545 @@
+myDescription,careAboutMonthDemand_Beta_01,t_month_Disaster,numMonthsToAvg,setScenarioProbabilitiesTo1OverN_Flag,minDisasterYear,maxDisasterYear,minYearSubset,maxYearSubset,truckDistanceMethod,expandWhichWarehousesCarryItem_01,maxDrivingTimeCutAbove_Hrs,minTimeRequiredToRespond,numDisasters,n_itemIter,initialInventorySum,objCostType,initialSuppliesVarFlag,warehouseID,startingInventory,optimalInventory
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Cost,Optimal,"Majuro, Marshall Islands",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Cost,Optimal,"Rarotonga, Cook Islands",418,178.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Cost,Optimal,"Pohnpei, Federated States of Micronesia",0,198.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Cost,Optimal,"Suva, Fiji",2478,23998.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Cost,Optimal,"Noumea, New Caledonia",279,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Cost,Optimal,"Brisbane, Australia",11214,910.5999999999972
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Cost,Optimal,"43000 Subang, Selangor, Malaysia",6666,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Cost,Optimal,"Honiara, Solomon Islands",1880,2290.800000000003
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Cost,Optimal,"Auckland, New Zealand",600,7090.000000000002
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Cost,Optimal,"Nukualofa, Tonga",3589,618.6
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Cost,Optimal,"Koror, Palau",100,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Cost,Optimal,"Port Vila, Vanuatu",3020,2399.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Cost,Optimal,"Tarawa, Kiribati",298,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Cost,Optimal,"Apia, Samoa",3105,198.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Cost,Optimal,"Funafuti, Tuvalu",312,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Cost,Optimal,"Lae, Papua New Guinea",2676,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Cost,Optimal,"Sydney, Australia",1246,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Cost,Actual,"Majuro, Marshall Islands",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Cost,Actual,"Rarotonga, Cook Islands",418,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Cost,Actual,"Pohnpei, Federated States of Micronesia",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Cost,Actual,"Suva, Fiji",2478,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Cost,Actual,"Noumea, New Caledonia",279,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Cost,Actual,"Brisbane, Australia",11214,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Cost,Actual,"43000 Subang, Selangor, Malaysia",6666,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Cost,Actual,"Honiara, Solomon Islands",1880,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Cost,Actual,"Auckland, New Zealand",600,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Cost,Actual,"Nukualofa, Tonga",3589,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Cost,Actual,"Koror, Palau",100,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Cost,Actual,"Port Vila, Vanuatu",3020,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Cost,Actual,"Tarawa, Kiribati",298,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Cost,Actual,"Apia, Samoa",3105,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Cost,Actual,"Funafuti, Tuvalu",312,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Cost,Actual,"Lae, Papua New Guinea",2676,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Cost,Actual,"Sydney, Australia",1246,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Time,Optimal,"Majuro, Marshall Islands",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Time,Optimal,"Rarotonga, Cook Islands",418,22.6
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Time,Optimal,"Pohnpei, Federated States of Micronesia",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Time,Optimal,"Suva, Fiji",2478,16052.200000000004
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Time,Optimal,"Noumea, New Caledonia",279,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Time,Optimal,"Brisbane, Australia",11214,2218.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Time,Optimal,"43000 Subang, Selangor, Malaysia",6666,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Time,Optimal,"Honiara, Solomon Islands",1880,1198.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Time,Optimal,"Auckland, New Zealand",600,16780.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Time,Optimal,"Nukualofa, Tonga",3589,612.2
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Time,Optimal,"Koror, Palau",100,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Time,Optimal,"Port Vila, Vanuatu",3020,998.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Time,Optimal,"Tarawa, Kiribati",298,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Time,Optimal,"Apia, Samoa",3105,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Time,Optimal,"Funafuti, Tuvalu",312,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Time,Optimal,"Lae, Papua New Guinea",2676,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Time,Optimal,"Sydney, Australia",1246,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Time,Actual,"Majuro, Marshall Islands",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Time,Actual,"Rarotonga, Cook Islands",418,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Time,Actual,"Pohnpei, Federated States of Micronesia",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Time,Actual,"Suva, Fiji",2478,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Time,Actual,"Noumea, New Caledonia",279,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Time,Actual,"Brisbane, Australia",11214,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Time,Actual,"43000 Subang, Selangor, Malaysia",6666,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Time,Actual,"Honiara, Solomon Islands",1880,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Time,Actual,"Auckland, New Zealand",600,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Time,Actual,"Nukualofa, Tonga",3589,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Time,Actual,"Koror, Palau",100,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Time,Actual,"Port Vila, Vanuatu",3020,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Time,Actual,"Tarawa, Kiribati",298,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Time,Actual,"Apia, Samoa",3105,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Time,Actual,"Funafuti, Tuvalu",312,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Time,Actual,"Lae, Papua New Guinea",2676,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Time,Actual,"Sydney, Australia",1246,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Cost,Optimal,"Majuro, Marshall Islands",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Cost,Optimal,"Rarotonga, Cook Islands",762,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Cost,Optimal,"Pohnpei, Federated States of Micronesia",267,44.741754822650904
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Cost,Optimal,"Suva, Fiji",1070,20268.58108108108
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Cost,Optimal,"Noumea, New Caledonia",0,81061.41795968077
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Cost,Optimal,"Brisbane, Australia",49767,394.2410238179879
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Cost,Optimal,"43000 Subang, Selangor, Malaysia",24718,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Cost,Optimal,"Honiara, Solomon Islands",3495,9999.333333333334
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Cost,Optimal,"Nukualofa, Tonga",10060,4.417777777777777
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Cost,Optimal,"Koror, Palau",500,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Cost,Optimal,"Port Vila, Vanuatu",11006,8873.867069486405
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Cost,Optimal,"Tarawa, Kiribati",614,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Cost,Optimal,"Apia, Samoa",4165,4692.8
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Cost,Optimal,"Auckland, New Zealand",5660,201.6
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Cost,Optimal,"Sydney, Australia",5529,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Cost,Optimal,"Funafuti, Tuvalu",1047,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Cost,Optimal,"Lae, Papua New Guinea",6881,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Cost,Actual,"Majuro, Marshall Islands",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Cost,Actual,"Rarotonga, Cook Islands",762,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Cost,Actual,"Pohnpei, Federated States of Micronesia",267,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Cost,Actual,"Suva, Fiji",1070,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Cost,Actual,"Noumea, New Caledonia",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Cost,Actual,"Brisbane, Australia",49767,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Cost,Actual,"43000 Subang, Selangor, Malaysia",24718,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Cost,Actual,"Honiara, Solomon Islands",3495,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Cost,Actual,"Nukualofa, Tonga",10060,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Cost,Actual,"Koror, Palau",500,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Cost,Actual,"Port Vila, Vanuatu",11006,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Cost,Actual,"Tarawa, Kiribati",614,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Cost,Actual,"Apia, Samoa",4165,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Cost,Actual,"Auckland, New Zealand",5660,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Cost,Actual,"Sydney, Australia",5529,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Cost,Actual,"Funafuti, Tuvalu",1047,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Cost,Actual,"Lae, Papua New Guinea",6881,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Time,Optimal,"Majuro, Marshall Islands",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Time,Optimal,"Rarotonga, Cook Islands",762,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Time,Optimal,"Pohnpei, Federated States of Micronesia",267,44.741754822650904
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Time,Optimal,"Suva, Fiji",1070,20268.58108108108
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Time,Optimal,"Noumea, New Caledonia",0,81061.41795968077
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Time,Optimal,"Brisbane, Australia",49767,394.2410238179879
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Time,Optimal,"43000 Subang, Selangor, Malaysia",24718,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Time,Optimal,"Honiara, Solomon Islands",3495,9999.333333333334
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Time,Optimal,"Nukualofa, Tonga",10060,4.417777777777777
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Time,Optimal,"Koror, Palau",500,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Time,Optimal,"Port Vila, Vanuatu",11006,8873.867069486405
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Time,Optimal,"Tarawa, Kiribati",614,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Time,Optimal,"Apia, Samoa",4165,4692.8
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Time,Optimal,"Auckland, New Zealand",5660,201.6
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Time,Optimal,"Sydney, Australia",5529,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Time,Optimal,"Funafuti, Tuvalu",1047,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Time,Optimal,"Lae, Papua New Guinea",6881,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Time,Actual,"Majuro, Marshall Islands",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Time,Actual,"Rarotonga, Cook Islands",762,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Time,Actual,"Pohnpei, Federated States of Micronesia",267,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Time,Actual,"Suva, Fiji",1070,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Time,Actual,"Noumea, New Caledonia",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Time,Actual,"Brisbane, Australia",49767,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Time,Actual,"43000 Subang, Selangor, Malaysia",24718,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Time,Actual,"Honiara, Solomon Islands",3495,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Time,Actual,"Nukualofa, Tonga",10060,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Time,Actual,"Koror, Palau",500,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Time,Actual,"Port Vila, Vanuatu",11006,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Time,Actual,"Tarawa, Kiribati",614,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Time,Actual,"Apia, Samoa",4165,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Time,Actual,"Auckland, New Zealand",5660,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Time,Actual,"Sydney, Australia",5529,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Time,Actual,"Funafuti, Tuvalu",1047,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Time,Actual,"Lae, Papua New Guinea",6881,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Cost,Optimal,"Majuro, Marshall Islands",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Cost,Optimal,"Rarotonga, Cook Islands",313,146.8
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Cost,Optimal,"Honiara, Solomon Islands",552,1198.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Cost,Optimal,"Lae, Papua New Guinea",68,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Cost,Optimal,"Noumea, New Caledonia",320,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Cost,Optimal,"Tarawa, Kiribati",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Cost,Optimal,"Port Vila, Vanuatu",3003,1798.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Cost,Optimal,"Brisbane, Australia",10344,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Cost,Optimal,"Pohnpei, Federated States of Micronesia",0,33.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Cost,Optimal,"Nukualofa, Tonga",312,618.6
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Cost,Optimal,"Koror, Palau",50,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Cost,Optimal,"Suva, Fiji",1913,17100.600000000002
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Cost,Optimal,"Apia, Samoa",814,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Cost,Optimal,"Auckland, New Zealand",1006,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Cost,Optimal,"43000 Subang, Selangor, Malaysia",756,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Cost,Optimal,"Funafuti, Tuvalu",295,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Cost,Optimal,"Sydney, Australia",1149,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Cost,Actual,"Majuro, Marshall Islands",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Cost,Actual,"Rarotonga, Cook Islands",313,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Cost,Actual,"Honiara, Solomon Islands",552,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Cost,Actual,"Lae, Papua New Guinea",68,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Cost,Actual,"Noumea, New Caledonia",320,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Cost,Actual,"Tarawa, Kiribati",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Cost,Actual,"Port Vila, Vanuatu",3003,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Cost,Actual,"Brisbane, Australia",10344,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Cost,Actual,"Pohnpei, Federated States of Micronesia",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Cost,Actual,"Nukualofa, Tonga",312,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Cost,Actual,"Koror, Palau",50,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Cost,Actual,"Suva, Fiji",1913,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Cost,Actual,"Apia, Samoa",814,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Cost,Actual,"Auckland, New Zealand",1006,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Cost,Actual,"43000 Subang, Selangor, Malaysia",756,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Cost,Actual,"Funafuti, Tuvalu",295,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Cost,Actual,"Sydney, Australia",1149,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Time,Optimal,"Majuro, Marshall Islands",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Time,Optimal,"Rarotonga, Cook Islands",313,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Time,Optimal,"Honiara, Solomon Islands",552,321.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Time,Optimal,"Lae, Papua New Guinea",68,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Time,Optimal,"Noumea, New Caledonia",320,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Time,Optimal,"Tarawa, Kiribati",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Time,Optimal,"Port Vila, Vanuatu",3003,478.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Time,Optimal,"Brisbane, Australia",10344,2218.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Time,Optimal,"Pohnpei, Federated States of Micronesia",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Time,Optimal,"Nukualofa, Tonga",312,98.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Time,Optimal,"Koror, Palau",50,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Time,Optimal,"Suva, Fiji",1913,7048.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Time,Optimal,"Apia, Samoa",814,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Time,Optimal,"Auckland, New Zealand",1006,10732.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Time,Optimal,"43000 Subang, Selangor, Malaysia",756,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Time,Optimal,"Funafuti, Tuvalu",295,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Time,Optimal,"Sydney, Australia",1149,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Time,Actual,"Majuro, Marshall Islands",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Time,Actual,"Rarotonga, Cook Islands",313,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Time,Actual,"Honiara, Solomon Islands",552,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Time,Actual,"Lae, Papua New Guinea",68,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Time,Actual,"Noumea, New Caledonia",320,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Time,Actual,"Tarawa, Kiribati",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Time,Actual,"Port Vila, Vanuatu",3003,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Time,Actual,"Brisbane, Australia",10344,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Time,Actual,"Pohnpei, Federated States of Micronesia",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Time,Actual,"Nukualofa, Tonga",312,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Time,Actual,"Koror, Palau",50,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Time,Actual,"Suva, Fiji",1913,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Time,Actual,"Apia, Samoa",814,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Time,Actual,"Auckland, New Zealand",1006,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Time,Actual,"43000 Subang, Selangor, Malaysia",756,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Time,Actual,"Funafuti, Tuvalu",295,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,ShelterKit,20895,Time,Actual,"Sydney, Australia",1149,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Cost,Optimal,"Majuro, Marshall Islands",75,83.2
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Cost,Optimal,"Rarotonga, Cook Islands",2068,476.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Cost,Optimal,"Pohnpei, Federated States of Micronesia",31,575.2
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Cost,Optimal,"Lae, Papua New Guinea",6206,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Cost,Optimal,"Noumea, New Caledonia",585,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Cost,Optimal,"Tarawa, Kiribati",306,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Cost,Optimal,"Port Vila, Vanuatu",5116,5636.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Cost,Optimal,"Brisbane, Australia",28097,4436.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Cost,Optimal,"Honiara, Solomon Islands",3373,11996.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Cost,Optimal,"Nukualofa, Tonga",5015,3196.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Cost,Optimal,"Koror, Palau",324,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Cost,Optimal,"Suva, Fiji",4604,46927.600000000006
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Cost,Optimal,"Apia, Samoa",2681,396.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Cost,Optimal,"Auckland, New Zealand",9364,36924.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Cost,Optimal,"43000 Subang, Selangor, Malaysia",39680,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Cost,Optimal,"Funafuti, Tuvalu",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Cost,Optimal,"Sydney, Australia",3121,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Cost,Actual,"Majuro, Marshall Islands",75,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Cost,Actual,"Rarotonga, Cook Islands",2068,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Cost,Actual,"Pohnpei, Federated States of Micronesia",31,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Cost,Actual,"Lae, Papua New Guinea",6206,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Cost,Actual,"Noumea, New Caledonia",585,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Cost,Actual,"Tarawa, Kiribati",306,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Cost,Actual,"Port Vila, Vanuatu",5116,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Cost,Actual,"Brisbane, Australia",28097,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Cost,Actual,"Honiara, Solomon Islands",3373,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Cost,Actual,"Nukualofa, Tonga",5015,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Cost,Actual,"Koror, Palau",324,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Cost,Actual,"Suva, Fiji",4604,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Cost,Actual,"Apia, Samoa",2681,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Cost,Actual,"Auckland, New Zealand",9364,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Cost,Actual,"43000 Subang, Selangor, Malaysia",39680,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Cost,Actual,"Funafuti, Tuvalu",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Cost,Actual,"Sydney, Australia",3121,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Time,Optimal,"Majuro, Marshall Islands",75,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Time,Optimal,"Rarotonga, Cook Islands",2068,476.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Time,Optimal,"Pohnpei, Federated States of Micronesia",31,396.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Time,Optimal,"Lae, Papua New Guinea",6206,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Time,Optimal,"Noumea, New Caledonia",585,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Time,Optimal,"Tarawa, Kiribati",306,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Time,Optimal,"Port Vila, Vanuatu",5116,5636.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Time,Optimal,"Brisbane, Australia",28097,5994.399999999994
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Time,Optimal,"Honiara, Solomon Islands",3373,6402.8
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Time,Optimal,"Nukualofa, Tonga",5015,3196.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Time,Optimal,"Koror, Palau",324,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Time,Optimal,"Suva, Fiji",4604,44636.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Time,Optimal,"Apia, Samoa",2681,8543.199999999997
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Time,Optimal,"Auckland, New Zealand",9364,35365.600000000006
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Time,Optimal,"43000 Subang, Selangor, Malaysia",39680,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Time,Optimal,"Funafuti, Tuvalu",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Time,Optimal,"Sydney, Australia",3121,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Time,Actual,"Majuro, Marshall Islands",75,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Time,Actual,"Rarotonga, Cook Islands",2068,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Time,Actual,"Pohnpei, Federated States of Micronesia",31,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Time,Actual,"Lae, Papua New Guinea",6206,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Time,Actual,"Noumea, New Caledonia",585,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Time,Actual,"Tarawa, Kiribati",306,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Time,Actual,"Port Vila, Vanuatu",5116,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Time,Actual,"Brisbane, Australia",28097,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Time,Actual,"Honiara, Solomon Islands",3373,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Time,Actual,"Nukualofa, Tonga",5015,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Time,Actual,"Koror, Palau",324,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Time,Actual,"Suva, Fiji",4604,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Time,Actual,"Apia, Samoa",2681,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Time,Actual,"Auckland, New Zealand",9364,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Time,Actual,"43000 Subang, Selangor, Malaysia",39680,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Time,Actual,"Funafuti, Tuvalu",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tarpaulin4x6,110646,Time,Actual,"Sydney, Australia",3121,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Cost,Optimal,"Majuro, Marshall Islands",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Cost,Optimal,"Rarotonga, Cook Islands",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Cost,Optimal,"Pohnpei, Federated States of Micronesia",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Cost,Optimal,"Lae, Papua New Guinea",600,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Cost,Optimal,"Noumea, New Caledonia",625,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Cost,Optimal,"Tarawa, Kiribati",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Cost,Optimal,"Brisbane, Australia",45020,11090.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Cost,Optimal,"43000 Subang, Selangor, Malaysia",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Cost,Optimal,"Honiara, Solomon Islands",104,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Cost,Optimal,"Nukualofa, Tonga",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Cost,Optimal,"Koror, Palau",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Cost,Optimal,"Port Vila, Vanuatu",1234,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Cost,Optimal,"Suva, Fiji",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Cost,Optimal,"Apia, Samoa",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Cost,Optimal,"Auckland, New Zealand",0,41495.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Cost,Optimal,"Funafuti, Tuvalu",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Cost,Optimal,"Sydney, Australia",5002,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Cost,Actual,"Majuro, Marshall Islands",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Cost,Actual,"Rarotonga, Cook Islands",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Cost,Actual,"Pohnpei, Federated States of Micronesia",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Cost,Actual,"Lae, Papua New Guinea",600,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Cost,Actual,"Noumea, New Caledonia",625,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Cost,Actual,"Tarawa, Kiribati",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Cost,Actual,"Brisbane, Australia",45020,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Cost,Actual,"43000 Subang, Selangor, Malaysia",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Cost,Actual,"Honiara, Solomon Islands",104,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Cost,Actual,"Nukualofa, Tonga",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Cost,Actual,"Koror, Palau",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Cost,Actual,"Port Vila, Vanuatu",1234,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Cost,Actual,"Suva, Fiji",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Cost,Actual,"Apia, Samoa",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Cost,Actual,"Auckland, New Zealand",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Cost,Actual,"Funafuti, Tuvalu",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Cost,Actual,"Sydney, Australia",5002,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Time,Optimal,"Majuro, Marshall Islands",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Time,Optimal,"Rarotonga, Cook Islands",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Time,Optimal,"Pohnpei, Federated States of Micronesia",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Time,Optimal,"Lae, Papua New Guinea",600,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Time,Optimal,"Noumea, New Caledonia",625,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Time,Optimal,"Tarawa, Kiribati",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Time,Optimal,"Brisbane, Australia",45020,11090.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Time,Optimal,"43000 Subang, Selangor, Malaysia",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Time,Optimal,"Honiara, Solomon Islands",104,990.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Time,Optimal,"Nukualofa, Tonga",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Time,Optimal,"Koror, Palau",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Time,Optimal,"Port Vila, Vanuatu",1234,1990.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Time,Optimal,"Suva, Fiji",0,20605.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Time,Optimal,"Apia, Samoa",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Time,Optimal,"Auckland, New Zealand",0,17910.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Time,Optimal,"Funafuti, Tuvalu",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Time,Optimal,"Sydney, Australia",5002,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Time,Actual,"Majuro, Marshall Islands",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Time,Actual,"Rarotonga, Cook Islands",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Time,Actual,"Pohnpei, Federated States of Micronesia",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Time,Actual,"Lae, Papua New Guinea",600,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Time,Actual,"Noumea, New Caledonia",625,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Time,Actual,"Tarawa, Kiribati",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Time,Actual,"Brisbane, Australia",45020,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Time,Actual,"43000 Subang, Selangor, Malaysia",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Time,Actual,"Honiara, Solomon Islands",104,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Time,Actual,"Nukualofa, Tonga",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Time,Actual,"Koror, Palau",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Time,Actual,"Port Vila, Vanuatu",1234,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Time,Actual,"Suva, Fiji",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Time,Actual,"Apia, Samoa",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Time,Actual,"Auckland, New Zealand",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Time,Actual,"Funafuti, Tuvalu",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,SleepingMats,52585,Time,Actual,"Sydney, Australia",5002,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Cost,Optimal,"Majuro, Marshall Islands",1200,83.2
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Cost,Optimal,"Rarotonga, Cook Islands",2391,476.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Cost,Optimal,"Pohnpei, Federated States of Micronesia",6080,575.2
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Cost,Optimal,"Suva, Fiji",19749,45060.40000000001
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Cost,Optimal,"Noumea, New Caledonia",1000,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Cost,Optimal,"Port Vila, Vanuatu",5722,4798.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Cost,Optimal,"Brisbane, Australia",12130,16801.2
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Cost,Optimal,"Honiara, Solomon Islands",11796,7991.199999999997
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Cost,Optimal,"Auckland, New Zealand",9500,35203.600000000006
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Cost,Optimal,"Nukualofa, Tonga",7894,6596.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Cost,Optimal,"Koror, Palau",714,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Cost,Optimal,"Tarawa, Kiribati",600,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Cost,Optimal,"Apia, Samoa",3591,25991.199999999997
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Cost,Optimal,"Funafuti, Tuvalu",1185,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Cost,Optimal,"43000 Subang, Selangor, Malaysia",45950,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Cost,Optimal,"Lae, Papua New Guinea",12727,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Cost,Optimal,"Sydney, Australia",1347,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Cost,Actual,"Majuro, Marshall Islands",1200,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Cost,Actual,"Rarotonga, Cook Islands",2391,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Cost,Actual,"Pohnpei, Federated States of Micronesia",6080,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Cost,Actual,"Suva, Fiji",19749,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Cost,Actual,"Noumea, New Caledonia",1000,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Cost,Actual,"Port Vila, Vanuatu",5722,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Cost,Actual,"Brisbane, Australia",12130,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Cost,Actual,"Honiara, Solomon Islands",11796,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Cost,Actual,"Auckland, New Zealand",9500,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Cost,Actual,"Nukualofa, Tonga",7894,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Cost,Actual,"Koror, Palau",714,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Cost,Actual,"Tarawa, Kiribati",600,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Cost,Actual,"Apia, Samoa",3591,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Cost,Actual,"Funafuti, Tuvalu",1185,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Cost,Actual,"43000 Subang, Selangor, Malaysia",45950,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Cost,Actual,"Lae, Papua New Guinea",12727,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Cost,Actual,"Sydney, Australia",1347,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Time,Optimal,"Majuro, Marshall Islands",1200,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Time,Optimal,"Rarotonga, Cook Islands",2391,476.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Time,Optimal,"Pohnpei, Federated States of Micronesia",6080,396.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Time,Optimal,"Suva, Fiji",19749,44636.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Time,Optimal,"Noumea, New Caledonia",1000,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Time,Optimal,"Port Vila, Vanuatu",5722,5636.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Time,Optimal,"Brisbane, Australia",12130,5994.399999999994
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Time,Optimal,"Honiara, Solomon Islands",11796,11996.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Time,Optimal,"Auckland, New Zealand",9500,35365.600000000006
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Time,Optimal,"Nukualofa, Tonga",7894,3880.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Time,Optimal,"Koror, Palau",714,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Time,Optimal,"Tarawa, Kiribati",600,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Time,Optimal,"Apia, Samoa",3591,35196.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Time,Optimal,"Funafuti, Tuvalu",1185,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Time,Optimal,"43000 Subang, Selangor, Malaysia",45950,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Time,Optimal,"Lae, Papua New Guinea",12727,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Time,Optimal,"Sydney, Australia",1347,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Time,Actual,"Majuro, Marshall Islands",1200,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Time,Actual,"Rarotonga, Cook Islands",2391,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Time,Actual,"Pohnpei, Federated States of Micronesia",6080,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Time,Actual,"Suva, Fiji",19749,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Time,Actual,"Noumea, New Caledonia",1000,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Time,Actual,"Port Vila, Vanuatu",5722,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Time,Actual,"Brisbane, Australia",12130,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Time,Actual,"Honiara, Solomon Islands",11796,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Time,Actual,"Auckland, New Zealand",9500,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Time,Actual,"Nukualofa, Tonga",7894,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Time,Actual,"Koror, Palau",714,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Time,Actual,"Tarawa, Kiribati",600,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Time,Actual,"Apia, Samoa",3591,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Time,Actual,"Funafuti, Tuvalu",1185,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Time,Actual,"43000 Subang, Selangor, Malaysia",45950,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Time,Actual,"Lae, Papua New Guinea",12727,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,JerryCanGen,143576,Time,Actual,"Sydney, Australia",1347,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Cost,Optimal,"Majuro, Marshall Islands",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Cost,Optimal,"Rarotonga, Cook Islands",95,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Cost,Optimal,"Honiara, Solomon Islands",3350,59270.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Cost,Optimal,"Lae, Papua New Guinea",4963,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Cost,Optimal,"Noumea, New Caledonia",480,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Cost,Optimal,"Brisbane, Australia",19640,726.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Cost,Optimal,"43000 Subang, Selangor, Malaysia",49800,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Cost,Optimal,"Pohnpei, Federated States of Micronesia",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Cost,Optimal,"Nukualofa, Tonga",2344,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Cost,Optimal,"Koror, Palau",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Cost,Optimal,"Port Vila, Vanuatu",3536,46270.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Cost,Optimal,"Suva, Fiji",16306,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Cost,Optimal,"Tarawa, Kiribati",216,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Cost,Optimal,"Apia, Samoa",1602,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Cost,Optimal,"Auckland, New Zealand",1100,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Cost,Optimal,"Funafuti, Tuvalu",652,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Cost,Optimal,"Sydney, Australia",2182,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Cost,Actual,"Majuro, Marshall Islands",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Cost,Actual,"Rarotonga, Cook Islands",95,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Cost,Actual,"Honiara, Solomon Islands",3350,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Cost,Actual,"Lae, Papua New Guinea",4963,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Cost,Actual,"Noumea, New Caledonia",480,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Cost,Actual,"Brisbane, Australia",19640,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Cost,Actual,"43000 Subang, Selangor, Malaysia",49800,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Cost,Actual,"Pohnpei, Federated States of Micronesia",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Cost,Actual,"Nukualofa, Tonga",2344,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Cost,Actual,"Koror, Palau",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Cost,Actual,"Port Vila, Vanuatu",3536,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Cost,Actual,"Suva, Fiji",16306,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Cost,Actual,"Tarawa, Kiribati",216,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Cost,Actual,"Apia, Samoa",1602,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Cost,Actual,"Auckland, New Zealand",1100,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Cost,Actual,"Funafuti, Tuvalu",652,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Cost,Actual,"Sydney, Australia",2182,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Time,Optimal,"Majuro, Marshall Islands",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Time,Optimal,"Rarotonga, Cook Islands",95,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Time,Optimal,"Honiara, Solomon Islands",3350,59270.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Time,Optimal,"Lae, Papua New Guinea",4963,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Time,Optimal,"Noumea, New Caledonia",480,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Time,Optimal,"Brisbane, Australia",19640,726.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Time,Optimal,"43000 Subang, Selangor, Malaysia",49800,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Time,Optimal,"Pohnpei, Federated States of Micronesia",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Time,Optimal,"Nukualofa, Tonga",2344,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Time,Optimal,"Koror, Palau",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Time,Optimal,"Port Vila, Vanuatu",3536,46270.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Time,Optimal,"Suva, Fiji",16306,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Time,Optimal,"Tarawa, Kiribati",216,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Time,Optimal,"Apia, Samoa",1602,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Time,Optimal,"Auckland, New Zealand",1100,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Time,Optimal,"Funafuti, Tuvalu",652,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Time,Optimal,"Sydney, Australia",2182,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Time,Actual,"Majuro, Marshall Islands",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Time,Actual,"Rarotonga, Cook Islands",95,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Time,Actual,"Honiara, Solomon Islands",3350,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Time,Actual,"Lae, Papua New Guinea",4963,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Time,Actual,"Noumea, New Caledonia",480,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Time,Actual,"Brisbane, Australia",19640,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Time,Actual,"43000 Subang, Selangor, Malaysia",49800,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Time,Actual,"Pohnpei, Federated States of Micronesia",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Time,Actual,"Nukualofa, Tonga",2344,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Time,Actual,"Koror, Palau",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Time,Actual,"Port Vila, Vanuatu",3536,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Time,Actual,"Suva, Fiji",16306,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Time,Actual,"Tarawa, Kiribati",216,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Time,Actual,"Apia, Samoa",1602,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Time,Actual,"Auckland, New Zealand",1100,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Time,Actual,"Funafuti, Tuvalu",652,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,39,MosquitoNetGen,106266,Time,Actual,"Sydney, Australia",2182,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Cost,Optimal,"Majuro, Marshall Islands",1,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Cost,Optimal,"Rarotonga, Cook Islands",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Cost,Optimal,"Pohnpei, Federated States of Micronesia",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Cost,Optimal,"Lae, Papua New Guinea",343,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Cost,Optimal,"Noumea, New Caledonia",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Cost,Optimal,"Brisbane, Australia",250,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Cost,Optimal,"Port Vila, Vanuatu",26,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Cost,Optimal,"Honiara, Solomon Islands",114,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Cost,Optimal,"Auckland, New Zealand",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Cost,Optimal,"Nukualofa, Tonga",215,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Cost,Optimal,"Koror, Palau",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Cost,Optimal,"Suva, Fiji",51,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Cost,Optimal,"Tarawa, Kiribati",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Cost,Optimal,"Apia, Samoa",303,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Cost,Optimal,"43000 Subang, Selangor, Malaysia",2597,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Cost,Optimal,"Funafuti, Tuvalu",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Cost,Optimal,"Sydney, Australia",27,3927.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Cost,Actual,"Majuro, Marshall Islands",1,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Cost,Actual,"Rarotonga, Cook Islands",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Cost,Actual,"Pohnpei, Federated States of Micronesia",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Cost,Actual,"Lae, Papua New Guinea",343,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Cost,Actual,"Noumea, New Caledonia",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Cost,Actual,"Brisbane, Australia",250,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Cost,Actual,"Port Vila, Vanuatu",26,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Cost,Actual,"Honiara, Solomon Islands",114,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Cost,Actual,"Auckland, New Zealand",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Cost,Actual,"Nukualofa, Tonga",215,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Cost,Actual,"Koror, Palau",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Cost,Actual,"Suva, Fiji",51,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Cost,Actual,"Tarawa, Kiribati",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Cost,Actual,"Apia, Samoa",303,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Cost,Actual,"43000 Subang, Selangor, Malaysia",2597,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Cost,Actual,"Funafuti, Tuvalu",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Cost,Actual,"Sydney, Australia",27,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Time,Optimal,"Majuro, Marshall Islands",1,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Time,Optimal,"Rarotonga, Cook Islands",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Time,Optimal,"Pohnpei, Federated States of Micronesia",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Time,Optimal,"Lae, Papua New Guinea",343,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Time,Optimal,"Noumea, New Caledonia",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Time,Optimal,"Brisbane, Australia",250,1106.4
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Time,Optimal,"Port Vila, Vanuatu",26,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Time,Optimal,"Honiara, Solomon Islands",114,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Time,Optimal,"Auckland, New Zealand",0,1111.6
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Time,Optimal,"Nukualofa, Tonga",215,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Time,Optimal,"Koror, Palau",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Time,Optimal,"Suva, Fiji",51,1709.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Time,Optimal,"Tarawa, Kiribati",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Time,Optimal,"Apia, Samoa",303,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Time,Optimal,"43000 Subang, Selangor, Malaysia",2597,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Time,Optimal,"Funafuti, Tuvalu",0,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Time,Optimal,"Sydney, Australia",27,0.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Time,Actual,"Majuro, Marshall Islands",1,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Time,Actual,"Rarotonga, Cook Islands",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Time,Actual,"Pohnpei, Federated States of Micronesia",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Time,Actual,"Lae, Papua New Guinea",343,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Time,Actual,"Noumea, New Caledonia",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Time,Actual,"Brisbane, Australia",250,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Time,Actual,"Port Vila, Vanuatu",26,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Time,Actual,"Honiara, Solomon Islands",114,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Time,Actual,"Auckland, New Zealand",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Time,Actual,"Nukualofa, Tonga",215,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Time,Actual,"Koror, Palau",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Time,Actual,"Suva, Fiji",51,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Time,Actual,"Tarawa, Kiribati",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Time,Actual,"Apia, Samoa",303,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Time,Actual,"43000 Subang, Selangor, Malaysia",2597,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Time,Actual,"Funafuti, Tuvalu",0,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,Tent,3927,Time,Actual,"Sydney, Australia",27,

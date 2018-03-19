@@ -1,0 +1,216 @@
+gglCountry,item,capacityToRespond
+Afghanistan,DEFAULT,100
+Albania,DEFAULT,100
+Algeria,DEFAULT,100
+American Samoa,DEFAULT,100
+Angola,DEFAULT,100
+Anguilla,DEFAULT,100
+Antigua and Barbuda,DEFAULT,100
+Argentina,DEFAULT,100
+Armenia,DEFAULT,100
+Australia,DEFAULT,100
+Austria,DEFAULT,2.00E+15
+Azerbaijan,DEFAULT,100
+Bahrain,DEFAULT,100
+Bangladesh,DEFAULT,100
+Barbados,DEFAULT,100
+Belarus,DEFAULT,100
+Belgium,DEFAULT,2.00E+15
+Belize,DEFAULT,100
+Benin,DEFAULT,100
+Bermuda,DEFAULT,100
+Bhutan,DEFAULT,100
+Bolivia,DEFAULT,100
+Bosnia and Herzegovina,DEFAULT,100
+Botswana,DEFAULT,100
+Brazil,DEFAULT,100
+British Virgin Islands,DEFAULT,100
+Brunei,DEFAULT,100
+Bulgaria,DEFAULT,2.00E+15
+Burkina Faso,DEFAULT,100
+Burundi,DEFAULT,100
+Cambodia,DEFAULT,100
+Cameroon,DEFAULT,100
+Canada,DEFAULT,2.00E+15
+Cape Verde,DEFAULT,100
+Cayman Islands,DEFAULT,100
+Central African Republic,DEFAULT,100
+Chad,DEFAULT,100
+Chile,DEFAULT,100
+China,DEFAULT,100
+Colombia,DEFAULT,100
+Comoros,DEFAULT,100
+Congo,DEFAULT,100
+Cook Islands,DEFAULT,100
+Costa Rica,DEFAULT,100
+Cote d'Ivoire,DEFAULT,100
+Croatia,DEFAULT,2.00E+15
+Cuba,DEFAULT,100
+Curacao,DEFAULT,100
+Czech Republic,DEFAULT,2.00E+15
+Democratic Republic of the Congo,DEFAULT,100
+Denmark,DEFAULT,2.00E+15
+Djibouti,DEFAULT,100
+Dominica,DEFAULT,100
+Dominican Republic,DEFAULT,100
+Ecuador,DEFAULT,100
+Egypt,DEFAULT,100
+El Salvador,DEFAULT,100
+Equatorial Guinea,DEFAULT,100
+Eritrea,DEFAULT,100
+Estonia,DEFAULT,2.00E+15
+Ethiopia,DEFAULT,100
+Fiji,DEFAULT,100
+Finland,DEFAULT,2.00E+15
+France,DEFAULT,2.00E+15
+French Guiana,DEFAULT,100
+French Polynesia,DEFAULT,100
+Gabon,DEFAULT,100
+Georgia,DEFAULT,100
+Germany,DEFAULT,2.00E+15
+Ghana,DEFAULT,100
+Greece,DEFAULT,2.00E+15
+Grenada,DEFAULT,100
+Guadeloupe,DEFAULT,100
+Guam,DEFAULT,100
+Guatemala,DEFAULT,100
+Guinea,DEFAULT,100
+Guinea-Bissau,DEFAULT,100
+Guyana,DEFAULT,100
+Haiti,DEFAULT,100
+Honduras,DEFAULT,100
+Hong Kong,DEFAULT,100
+Hungary,DEFAULT,2.00E+15
+Iceland,DEFAULT,2.00E+15
+India,DEFAULT,100
+Indonesia,DEFAULT,100
+Iran,DEFAULT,100
+Iraq,DEFAULT,100
+Ireland,DEFAULT,2.00E+15
+Israel,DEFAULT,100
+Italy,DEFAULT,2.00E+15
+Jamaica,DEFAULT,100
+Japan,DEFAULT,100
+Jordan,DEFAULT,100
+Kazakhstan,DEFAULT,100
+Kenya,DEFAULT,100
+Kiribati,DEFAULT,100
+Kuwait,DEFAULT,100
+Kyrgyzstan,DEFAULT,100
+Laos,DEFAULT,100
+Latvia,DEFAULT,2.00E+15
+Lebanon,DEFAULT,100
+Lesotho,DEFAULT,100
+Liberia,DEFAULT,100
+Libya,DEFAULT,100
+Lithuania,DEFAULT,2.00E+15
+Luxembourg,DEFAULT,2.00E+15
+Macau,DEFAULT,100
+Macedonia (FYROM),DEFAULT,100
+Madagascar,DEFAULT,100
+Malawi,DEFAULT,100
+Malaysia,DEFAULT,100
+Maldives,DEFAULT,100
+Mali,DEFAULT,100
+Malta,DEFAULT,2.00E+15
+Marshall Islands,DEFAULT,100
+Martinique,DEFAULT,100
+Mauritania,DEFAULT,100
+Mauritius,DEFAULT,100
+Mayotte,DEFAULT,100
+Mexico,DEFAULT,100
+Micronesia,DEFAULT,100
+Moldova,DEFAULT,100
+Mongolia,DEFAULT,100
+Montenegro,DEFAULT,100
+Montserrat,DEFAULT,100
+Morocco,DEFAULT,100
+Mozambique,DEFAULT,100
+Namibia,DEFAULT,100
+Nepal,DEFAULT,100
+New Caledonia,DEFAULT,100
+New Zealand,DEFAULT,100
+Nicaragua,DEFAULT,100
+Nicosia,DEFAULT,2.00E+15
+Niger,DEFAULT,100
+Nigeria,DEFAULT,100
+Niue,DEFAULT,100
+North Korea,DEFAULT,100
+Northern Mariana Islands,DEFAULT,100
+Norway,DEFAULT,2.00E+15
+Oman,DEFAULT,100
+Pakistan,DEFAULT,100
+Palau,DEFAULT,100
+Panama,DEFAULT,100
+Papua New Guinea,DEFAULT,100
+Paraguay,DEFAULT,100
+Peru,DEFAULT,100
+Philippines,DEFAULT,100
+Poland,DEFAULT,2.00E+15
+Portugal,DEFAULT,2.00E+15
+Puerto Rico,DEFAULT,100
+Qatar,DEFAULT,100
+Republic of the Union of Myanmar,DEFAULT,100
+Reunion,DEFAULT,100
+Romania,DEFAULT,2.00E+15
+Russia,DEFAULT,100
+Rwanda,DEFAULT,100
+Saint Helena,DEFAULT,100
+Saint Kitts and Nevis,DEFAULT,100
+Saint Lucia,DEFAULT,100
+Saint Vincent and the Grenadines,DEFAULT,100
+Samoa,DEFAULT,100
+Sao Tome and Principe,DEFAULT,100
+Saudi Arabia,DEFAULT,100
+Senegal,DEFAULT,100
+Serbia,DEFAULT,100
+Seychelles,DEFAULT,100
+Sierra Leone,DEFAULT,100
+Singapore,DEFAULT,100
+Slovakia,DEFAULT,2.00E+15
+Slovenia,DEFAULT,2.00E+15
+Solomon Islands,DEFAULT,100
+Somalia,DEFAULT,100
+South Africa,DEFAULT,100
+South Korea,DEFAULT,100
+South Sudan,DEFAULT,100
+Spain,DEFAULT,2.00E+15
+Sri Lanka,DEFAULT,100
+Sudan,DEFAULT,100
+Suriname,DEFAULT,100
+Swaziland,DEFAULT,100
+Sweden,DEFAULT,2.00E+15
+Switzerland,DEFAULT,2.00E+15
+Syria,DEFAULT,100
+Taiwan,DEFAULT,100
+Tajikistan,DEFAULT,100
+Tanzania,DEFAULT,100
+Thailand,DEFAULT,100
+The Bahamas,DEFAULT,100
+The Gambia,DEFAULT,100
+The Netherlands,DEFAULT,2.00E+15
+Timor-Leste,DEFAULT,100
+Togo,DEFAULT,100
+Tokelau,DEFAULT,100
+Tonga,DEFAULT,100
+Trinidad and Tobago,DEFAULT,100
+Tunisia,DEFAULT,100
+Turkey,DEFAULT,100
+Turkmenistan,DEFAULT,100
+Turks and Caicos Islands,DEFAULT,100
+Tuvalu,DEFAULT,100
+U.S. Virgin Islands,DEFAULT,100
+Uganda,DEFAULT,100
+Ukraine,DEFAULT,100
+United Arab Emirates,DEFAULT,100
+United Kingdom,DEFAULT,2.00E+15
+United States,DEFAULT,2.00E+15
+Uruguay,DEFAULT,100
+Uzbekistan,DEFAULT,100
+Vanuatu,DEFAULT,100
+Venezuela,DEFAULT,100
+Vietnam,DEFAULT,100
+Wallis and Futuna,DEFAULT,100
+Yemen,DEFAULT,100
+Zambia,DEFAULT,100
+Zimbabwe,DEFAULT,100

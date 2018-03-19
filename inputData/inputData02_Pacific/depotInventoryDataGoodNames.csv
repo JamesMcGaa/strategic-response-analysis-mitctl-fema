@@ -1,0 +1,137 @@
+ItemName,Warehouse(Region),gglAddress,gglCountry,Total
+BlanketGen,Oceania,"Brisbane, Australia",Australia,49767.3
+BlanketGen,Oceania,"Sydney, Australia",Australia,5529.7
+BlanketGen,Oceania,"Auckland, New Zealand",New Zealand,5660
+BlanketGen,Oceania,"Noumea, New Caledonia",New Caledonia,0
+BlanketGen,Oceania,"Port Vila, Vanuatu",Vanuatu,11006
+BlanketGen,Oceania,"Suva, Fiji",Fiji,1070
+BlanketGen,Oceania,"Honiara, Solomon Islands",Solomon Islands,3495
+BlanketGen,Oceania,"Nukualofa, Tonga",Tonga,10060
+BlanketGen,Oceania,"Apia, Samoa",Samoa,4165
+BlanketGen,Oceania,"Funafuti, Tuvalu",Tuvalu,1047
+BlanketGen,Oceania,"Rarotonga, Cook Islands",Cook Islands,762
+BlanketGen,Oceania,"Lae, Papua New Guinea",Papua New Guinea,6881
+BlanketGen,Oceania,"Pohnpei, Federated States of Micronesia",Micronesia,267
+BlanketGen,Oceania,"Tarawa, Kiribati",Kiribati,614
+BlanketGen,Oceania,"Koror, Palau",Palau,500
+BlanketGen,Oceania,"Majuro, Marshall Islands",Marshall Islands,0
+BlanketGen,Asia,"43000 Subang, Selangor, Malaysia",Malaysia,24718
+JerryCanGen,Oceania,"Brisbane, Australia",Australia,12130.2
+JerryCanGen,Oceania,"Sydney, Australia",Australia,1347.8
+JerryCanGen,Oceania,"Auckland, New Zealand",New Zealand,9500
+JerryCanGen,Oceania,"Noumea, New Caledonia",New Caledonia,1000
+JerryCanGen,Oceania,"Port Vila, Vanuatu",Vanuatu,5722
+JerryCanGen,Oceania,"Suva, Fiji",Fiji,19749
+JerryCanGen,Oceania,"Honiara, Solomon Islands",Solomon Islands,11796
+JerryCanGen,Oceania,"Nukualofa, Tonga",Tonga,7894
+JerryCanGen,Oceania,"Apia, Samoa",Samoa,3591
+JerryCanGen,Oceania,"Funafuti, Tuvalu",Tuvalu,1185
+JerryCanGen,Oceania,"Rarotonga, Cook Islands",Cook Islands,2391
+JerryCanGen,Oceania,"Lae, Papua New Guinea",Papua New Guinea,12727
+JerryCanGen,Oceania,"Pohnpei, Federated States of Micronesia",Federated States of Micronesia,6080
+JerryCanGen,Oceania,"Tarawa, Kiribati",Kiribati,600
+JerryCanGen,Oceania,"Koror, Palau",Palau,714
+JerryCanGen,Oceania,"Majuro, Marshall Islands",Marshall Islands,1200
+JerryCanGen,Asia,"43000 Subang, Selangor, Malaysia",Malaysia,45950
+KitchenSetGen,Oceania,"Brisbane, Australia",Australia,11214
+KitchenSetGen,Oceania,"Sydney, Australia",Australia,1246
+KitchenSetGen,Oceania,"Auckland, New Zealand",New Zealand,600
+KitchenSetGen,Oceania,"Noumea, New Caledonia",New Caledonia,279
+KitchenSetGen,Oceania,"Port Vila, Vanuatu",Vanuatu,3020
+KitchenSetGen,Oceania,"Suva, Fiji",Fiji,2478
+KitchenSetGen,Oceania,"Honiara, Solomon Islands",Solomon Islands,1880
+KitchenSetGen,Oceania,"Nukualofa, Tonga",Tonga,3589
+KitchenSetGen,Oceania,"Apia, Samoa",Samoa,3105
+KitchenSetGen,Oceania,"Funafuti, Tuvalu",Tuvalu,312
+KitchenSetGen,Oceania,"Rarotonga, Cook Islands",Cook Islands,418
+KitchenSetGen,Oceania,"Lae, Papua New Guinea",Papua New Guinea,2676
+KitchenSetGen,Oceania,"Pohnpei, Federated States of Micronesia",Federated States of Micronesia,0
+KitchenSetGen,Oceania,"Tarawa, Kiribati",Kiribati,298
+KitchenSetGen,Oceania,"Koror, Palau",Palau,100
+KitchenSetGen,Oceania,"Majuro, Marshall Islands",Marshall Islands,0
+KitchenSetGen,Asia,"43000 Subang, Selangor, Malaysia",Malaysia,6666
+MosquitoNetGen,Oceania,"Brisbane, Australia",Australia,19640.7
+MosquitoNetGen,Oceania,"Sydney, Australia",Australia,2182.3
+MosquitoNetGen,Oceania,"Auckland, New Zealand",New Zealand,1100
+MosquitoNetGen,Oceania,"Noumea, New Caledonia",New Caledonia,480
+MosquitoNetGen,Oceania,"Port Vila, Vanuatu",Vanuatu,3536
+MosquitoNetGen,Oceania,"Suva, Fiji",Fiji,16306
+MosquitoNetGen,Oceania,"Honiara, Solomon Islands",Solomon Islands,3350
+MosquitoNetGen,Oceania,"Nukualofa, Tonga",Tonga,2344
+MosquitoNetGen,Oceania,"Apia, Samoa",Samoa,1602
+MosquitoNetGen,Oceania,"Funafuti, Tuvalu",Tuvalu,652
+MosquitoNetGen,Oceania,"Rarotonga, Cook Islands",Cook Islands,95
+MosquitoNetGen,Oceania,"Lae, Papua New Guinea",Papua New Guinea,4963
+MosquitoNetGen,Oceania,"Pohnpei, Federated States of Micronesia",Federated States of Micronesia,0
+MosquitoNetGen,Oceania,"Tarawa, Kiribati",Kiribati,216
+MosquitoNetGen,Oceania,"Koror, Palau",Palau,0
+MosquitoNetGen,Oceania,"Majuro, Marshall Islands",Marshall Islands,0
+MosquitoNetGen,Asia,"43000 Subang, Selangor, Malaysia",Malaysia,49800
+ShelterKit,Oceania,"Brisbane, Australia",Australia,10344.6
+ShelterKit,Oceania,"Sydney, Australia",Australia,1149.4
+ShelterKit,Oceania,"Auckland, New Zealand",New Zealand,1006
+ShelterKit,Oceania,"Noumea, New Caledonia",New Caledonia,320
+ShelterKit,Oceania,"Port Vila, Vanuatu",Vanuatu,3003
+ShelterKit,Oceania,"Suva, Fiji",Fiji,1913
+ShelterKit,Oceania,"Honiara, Solomon Islands",Solomon Islands,552
+ShelterKit,Oceania,"Nukualofa, Tonga",Tonga,312
+ShelterKit,Oceania,"Apia, Samoa",Samoa,814
+ShelterKit,Oceania,"Funafuti, Tuvalu",Tuvalu,295
+ShelterKit,Oceania,"Rarotonga, Cook Islands",Cook Islands,313
+ShelterKit,Oceania,"Lae, Papua New Guinea",Papua New Guinea,68
+ShelterKit,Oceania,"Pohnpei, Federated States of Micronesia",Federated States of Micronesia,0
+ShelterKit,Oceania,"Tarawa, Kiribati",Kiribati,0
+ShelterKit,Oceania,"Koror, Palau",Palau,50
+ShelterKit,Oceania,"Majuro, Marshall Islands",Marshall Islands,0
+ShelterKit,Asia,"43000 Subang, Selangor, Malaysia",Malaysia,756
+SleepingMats,Oceania,"Brisbane, Australia",Australia,45020.7
+SleepingMats,Oceania,"Sydney, Australia",Australia,5002.3
+SleepingMats,Oceania,"Auckland, New Zealand",New Zealand,0
+SleepingMats,Oceania,"Noumea, New Caledonia",New Caledonia,625
+SleepingMats,Oceania,"Port Vila, Vanuatu",Vanuatu,1234
+SleepingMats,Oceania,"Suva, Fiji",Fiji,0
+SleepingMats,Oceania,"Honiara, Solomon Islands",Solomon Islands,104
+SleepingMats,Oceania,"Nukualofa, Tonga",Tonga,0
+SleepingMats,Oceania,"Apia, Samoa",Samoa,0
+SleepingMats,Oceania,"Funafuti, Tuvalu",Tuvalu,0
+SleepingMats,Oceania,"Rarotonga, Cook Islands",Cook Islands,0
+SleepingMats,Oceania,"Lae, Papua New Guinea",Papua New Guinea,600
+SleepingMats,Oceania,"Pohnpei, Federated States of Micronesia",Federated States of Micronesia,0
+SleepingMats,Oceania,"Tarawa, Kiribati",Kiribati,0
+SleepingMats,Oceania,"Koror, Palau",Palau,0
+SleepingMats,Oceania,"Majuro, Marshall Islands",Marshall Islands,0
+SleepingMats,Asia,"43000 Subang, Selangor, Malaysia",Malaysia,0
+Tarpaulin4x6,Oceania,"Brisbane, Australia",Australia,28097.1
+Tarpaulin4x6,Oceania,"Sydney, Australia",Australia,3121.9
+Tarpaulin4x6,Oceania,"Auckland, New Zealand",New Zealand,9364
+Tarpaulin4x6,Oceania,"Noumea, New Caledonia",New Caledonia,585
+Tarpaulin4x6,Oceania,"Port Vila, Vanuatu",Vanuatu,5116
+Tarpaulin4x6,Oceania,"Suva, Fiji",Fiji,4604
+Tarpaulin4x6,Oceania,"Honiara, Solomon Islands",Solomon Islands,3373
+Tarpaulin4x6,Oceania,"Nukualofa, Tonga",Tonga,5015
+Tarpaulin4x6,Oceania,"Apia, Samoa",Samoa,2681
+Tarpaulin4x6,Oceania,"Funafuti, Tuvalu",Tuvalu,0
+Tarpaulin4x6,Oceania,"Rarotonga, Cook Islands",Cook Islands,2068
+Tarpaulin4x6,Oceania,"Lae, Papua New Guinea",Papua New Guinea,6206
+Tarpaulin4x6,Oceania,"Pohnpei, Federated States of Micronesia",Federated States of Micronesia,31
+Tarpaulin4x6,Oceania,"Tarawa, Kiribati",Kiribati,306
+Tarpaulin4x6,Oceania,"Koror, Palau",Palau,324
+Tarpaulin4x6,Oceania,"Majuro, Marshall Islands",Marshall Islands,75
+Tarpaulin4x6,Asia,"43000 Subang, Selangor, Malaysia",Malaysia,39680
+Tent,Oceania,"Brisbane, Australia",Australia,250.2
+Tent,Oceania,"Sydney, Australia",Australia,27.8
+Tent,Oceania,"Auckland, New Zealand",New Zealand,0
+Tent,Oceania,"Noumea, New Caledonia",New Caledonia,0
+Tent,Oceania,"Port Vila, Vanuatu",Vanuatu,26
+Tent,Oceania,"Suva, Fiji",Fiji,51
+Tent,Oceania,"Honiara, Solomon Islands",Solomon Islands,114
+Tent,Oceania,"Nukualofa, Tonga",Tonga,215
+Tent,Oceania,"Apia, Samoa",Samoa,303
+Tent,Oceania,"Funafuti, Tuvalu",Tuvalu,0
+Tent,Oceania,"Rarotonga, Cook Islands",Cook Islands,0
+Tent,Oceania,"Lae, Papua New Guinea",Papua New Guinea,343
+Tent,Oceania,"Pohnpei, Federated States of Micronesia",Federated States of Micronesia,0
+Tent,Oceania,"Tarawa, Kiribati",Kiribati,0
+Tent,Oceania,"Koror, Palau",Palau,0
+Tent,Oceania,"Majuro, Marshall Islands",Marshall Islands,1
+Tent,Asia,"43000 Subang, Selangor, Malaysia",Malaysia,2597

@@ -1,0 +1,460 @@
+Agency,NameCity,depotGglCountryAscii,depotGglAddressAscii,depotGglLat,depotGglLong,Order,disasterGglCountryAscii,disasterGglAddressAscii,disasterGglLat,disasterGglLong,drivingTime_hrs,distance_km
+WORLD VISION,Port Vila,Vanuatu,"Port Vila, Vanuatu",-17.745611,168.318139,0,Wallis and Futuna,"Mata'utu, Wallis and Futuna",-13.2825091,-176.1764475,1000000,1000000
+WORLD VISION,Port Vila,Vanuatu,"Port Vila, Vanuatu",-17.745611,168.318139,0,Marshall Islands,"Majuro Atoll, RMI",7.1164214,171.1857736,1000000,1000000
+WORLD VISION,Port Vila,Vanuatu,"Port Vila, Vanuatu",-17.745611,168.318139,0,Wallis and Futuna,"Mata'utu, Wallis and Futuna",-13.2825091,-176.1764475,1000000,1000000
+WORLD VISION,Port Vila,Vanuatu,"Port Vila, Vanuatu",-17.745611,168.318139,0,Timor-Leste,"Dili, Timor-Leste",-8.5568557,125.5603143,1000000,1000000
+WORLD VISION,Port Vila,Vanuatu,"Port Vila, Vanuatu",-17.745611,168.318139,0,Cook Islands,"Avarua District, Cook Islands",-21.2129007,-159.7823059,1000000,1000000
+WORLD VISION,Port Vila,Vanuatu,"Port Vila, Vanuatu",-17.745611,168.318139,0,Brunei,"Bandar Seri Begawan, Brunei",4.890278,114.942222,1000000,1000000
+WORLD VISION,Port Vila,Vanuatu,"Port Vila, Vanuatu",-17.745611,168.318139,0,Northern Mariana Islands,"Saipan, 96950, CNMI",15.177801,145.750967,1000000,1000000
+WORLD VISION,Port Vila,Vanuatu,"Port Vila, Vanuatu",-17.745611,168.318139,0,Tokelau,Tokelau,-9.2002,-171.8484,1000000,1000000
+WORLD VISION,Port Vila,Vanuatu,"Port Vila, Vanuatu",-17.745611,168.318139,0,Solomon Islands,"Honiara, Solomon Islands",-9.4456381,159.9728999,1000000,1000000
+WORLD VISION,Port Vila,Vanuatu,"Port Vila, Vanuatu",-17.745611,168.318139,0,Micronesia,"Palikir, Pohnpei, Micronesia",6.917222,158.158889,1000000,1000000
+WORLD VISION,Port Vila,Vanuatu,"Port Vila, Vanuatu",-17.745611,168.318139,0,American Samoa,"Pago Pago, Eastern, American Samoa",-14.279444,-170.700556,1000000,1000000
+WORLD VISION,Port Vila,Vanuatu,"Port Vila, Vanuatu",-17.745611,168.318139,0,Australia,"Canberra ACT 2601, Australia",-35.2819998,149.1286843,1000000,1000000
+WORLD VISION,Port Vila,Vanuatu,"Port Vila, Vanuatu",-17.745611,168.318139,0,Fiji,"Suva, Fiji",-18.1416,178.4419,1000000,1000000
+WORLD VISION,Port Vila,Vanuatu,"Port Vila, Vanuatu",-17.745611,168.318139,0,French Polynesia,"Pape'ete, French Polynesia",-17.535,-149.5696,1000000,1000000
+WORLD VISION,Port Vila,Vanuatu,"Port Vila, Vanuatu",-17.745611,168.318139,0,Guam,"Hagatna, Guam",13.4708908,144.7512782,1000000,1000000
+WORLD VISION,Port Vila,Vanuatu,"Port Vila, Vanuatu",-17.745611,168.318139,0,Indonesia,"Jakarta, Indonesia",-6.2087634,106.845599,1000000,1000000
+WORLD VISION,Port Vila,Vanuatu,"Port Vila, Vanuatu",-17.745611,168.318139,0,Kiribati,"Bairiki, Kiribati",1.3290526,172.9790528,1000000,1000000
+WORLD VISION,Port Vila,Vanuatu,"Port Vila, Vanuatu",-17.745611,168.318139,0,New Caledonia,"Noumea, New Caledonia",-22.2758,166.458,1000000,1000000
+WORLD VISION,Port Vila,Vanuatu,"Port Vila, Vanuatu",-17.745611,168.318139,0,New Zealand,"Wellington, New Zealand",-41.2864603,174.776236,1000000,1000000
+WORLD VISION,Port Vila,Vanuatu,"Port Vila, Vanuatu",-17.745611,168.318139,0,Niue,"Alofi, Niue",-19.0553711,-169.9178709,1000000,1000000
+WORLD VISION,Port Vila,Vanuatu,"Port Vila, Vanuatu",-17.745611,168.318139,0,Palau,Palau,7.51498,134.58252,1000000,1000000
+WORLD VISION,Port Vila,Vanuatu,"Port Vila, Vanuatu",-17.745611,168.318139,0,Papua New Guinea,"Port Moresby, Papua New Guinea",-9.4438004,147.1802671,1000000,1000000
+WORLD VISION,Port Vila,Vanuatu,"Port Vila, Vanuatu",-17.745611,168.318139,0,Philippines,"Manila, Philippines",14.5995124,120.9842195,1000000,1000000
+WORLD VISION,Port Vila,Vanuatu,"Port Vila, Vanuatu",-17.745611,168.318139,0,Samoa,"Apia, Samoa",-13.833333,-171.75,1000000,1000000
+WORLD VISION,Port Vila,Vanuatu,"Port Vila, Vanuatu",-17.745611,168.318139,0,Tonga,"Nuku'alofa, Tonga",-21.133333,-175.2,1000000,1000000
+WORLD VISION,Port Vila,Vanuatu,"Port Vila, Vanuatu",-17.745611,168.318139,0,Tuvalu,"Funafuti, Tuvalu",-8.516667,179.216667,1000000,1000000
+WORLD VISION,Port Vila,Vanuatu,"Port Vila, Vanuatu",-17.745611,168.318139,0,Vanuatu,"Port Vila, Vanuatu",-17.7332512,168.3273245,0,0
+DFAT,Brisbane,Australia,"Brisbane, Australia",-27.383333,153.133333,1,Wallis and Futuna,"Mata'utu, Wallis and Futuna",-13.2825091,-176.1764475,1000000,1000000
+DFAT,Brisbane,Australia,"Brisbane, Australia",-27.383333,153.133333,1,Marshall Islands,"Majuro Atoll, RMI",7.1164214,171.1857736,1000000,1000000
+DFAT,Brisbane,Australia,"Brisbane, Australia",-27.383333,153.133333,1,Wallis and Futuna,"Mata'utu, Wallis and Futuna",-13.2825091,-176.1764475,1000000,1000000
+DFAT,Brisbane,Australia,"Brisbane, Australia",-27.383333,153.133333,1,Timor-Leste,"Dili, Timor-Leste",-8.5568557,125.5603143,1000000,1000000
+DFAT,Brisbane,Australia,"Brisbane, Australia",-27.383333,153.133333,1,Cook Islands,"Avarua District, Cook Islands",-21.2129007,-159.7823059,1000000,1000000
+DFAT,Brisbane,Australia,"Brisbane, Australia",-27.383333,153.133333,1,Brunei,"Bandar Seri Begawan, Brunei",4.890278,114.942222,1000000,1000000
+DFAT,Brisbane,Australia,"Brisbane, Australia",-27.383333,153.133333,1,Northern Mariana Islands,"Saipan, 96950, CNMI",15.177801,145.750967,1000000,1000000
+DFAT,Brisbane,Australia,"Brisbane, Australia",-27.383333,153.133333,1,Tokelau,Tokelau,-9.2002,-171.8484,1000000,1000000
+DFAT,Brisbane,Australia,"Brisbane, Australia",-27.383333,153.133333,1,Solomon Islands,"Honiara, Solomon Islands",-9.4456381,159.9728999,1000000,1000000
+DFAT,Brisbane,Australia,"Brisbane, Australia",-27.383333,153.133333,1,Micronesia,"Palikir, Pohnpei, Micronesia",6.917222,158.158889,1000000,1000000
+DFAT,Brisbane,Australia,"Brisbane, Australia",-27.383333,153.133333,1,American Samoa,"Pago Pago, Eastern, American Samoa",-14.279444,-170.700556,1000000,1000000
+DFAT,Brisbane,Australia,"Brisbane, Australia",-27.383333,153.133333,1,Australia,"Canberra ACT 2601, Australia",-35.2819998,149.1286843,0,0
+DFAT,Brisbane,Australia,"Brisbane, Australia",-27.383333,153.133333,1,Fiji,"Suva, Fiji",-18.1416,178.4419,1000000,1000000
+DFAT,Brisbane,Australia,"Brisbane, Australia",-27.383333,153.133333,1,French Polynesia,"Pape'ete, French Polynesia",-17.535,-149.5696,1000000,1000000
+DFAT,Brisbane,Australia,"Brisbane, Australia",-27.383333,153.133333,1,Guam,"Hagatna, Guam",13.4708908,144.7512782,1000000,1000000
+DFAT,Brisbane,Australia,"Brisbane, Australia",-27.383333,153.133333,1,Indonesia,"Jakarta, Indonesia",-6.2087634,106.845599,1000000,1000000
+DFAT,Brisbane,Australia,"Brisbane, Australia",-27.383333,153.133333,1,Kiribati,"Bairiki, Kiribati",1.3290526,172.9790528,1000000,1000000
+DFAT,Brisbane,Australia,"Brisbane, Australia",-27.383333,153.133333,1,New Caledonia,"Noumea, New Caledonia",-22.2758,166.458,1000000,1000000
+DFAT,Brisbane,Australia,"Brisbane, Australia",-27.383333,153.133333,1,New Zealand,"Wellington, New Zealand",-41.2864603,174.776236,1000000,1000000
+DFAT,Brisbane,Australia,"Brisbane, Australia",-27.383333,153.133333,1,Niue,"Alofi, Niue",-19.0553711,-169.9178709,1000000,1000000
+DFAT,Brisbane,Australia,"Brisbane, Australia",-27.383333,153.133333,1,Palau,Palau,7.51498,134.58252,1000000,1000000
+DFAT,Brisbane,Australia,"Brisbane, Australia",-27.383333,153.133333,1,Papua New Guinea,"Port Moresby, Papua New Guinea",-9.4438004,147.1802671,1000000,1000000
+DFAT,Brisbane,Australia,"Brisbane, Australia",-27.383333,153.133333,1,Philippines,"Manila, Philippines",14.5995124,120.9842195,1000000,1000000
+DFAT,Brisbane,Australia,"Brisbane, Australia",-27.383333,153.133333,1,Samoa,"Apia, Samoa",-13.833333,-171.75,1000000,1000000
+DFAT,Brisbane,Australia,"Brisbane, Australia",-27.383333,153.133333,1,Tonga,"Nuku'alofa, Tonga",-21.133333,-175.2,1000000,1000000
+DFAT,Brisbane,Australia,"Brisbane, Australia",-27.383333,153.133333,1,Tuvalu,"Funafuti, Tuvalu",-8.516667,179.216667,1000000,1000000
+DFAT,Brisbane,Australia,"Brisbane, Australia",-27.383333,153.133333,1,Vanuatu,"Port Vila, Vanuatu",-17.7332512,168.3273245,1000000,1000000
+DFAT,Sydney,Australia,"Sydney, Australia",-34.016667,151.116667,2,Wallis and Futuna,"Mata'utu, Wallis and Futuna",-13.2825091,-176.1764475,1000000,1000000
+DFAT,Sydney,Australia,"Sydney, Australia",-34.016667,151.116667,2,Marshall Islands,"Majuro Atoll, RMI",7.1164214,171.1857736,1000000,1000000
+DFAT,Sydney,Australia,"Sydney, Australia",-34.016667,151.116667,2,Wallis and Futuna,"Mata'utu, Wallis and Futuna",-13.2825091,-176.1764475,1000000,1000000
+DFAT,Sydney,Australia,"Sydney, Australia",-34.016667,151.116667,2,Timor-Leste,"Dili, Timor-Leste",-8.5568557,125.5603143,1000000,1000000
+DFAT,Sydney,Australia,"Sydney, Australia",-34.016667,151.116667,2,Cook Islands,"Avarua District, Cook Islands",-21.2129007,-159.7823059,1000000,1000000
+DFAT,Sydney,Australia,"Sydney, Australia",-34.016667,151.116667,2,Brunei,"Bandar Seri Begawan, Brunei",4.890278,114.942222,1000000,1000000
+DFAT,Sydney,Australia,"Sydney, Australia",-34.016667,151.116667,2,Northern Mariana Islands,"Saipan, 96950, CNMI",15.177801,145.750967,1000000,1000000
+DFAT,Sydney,Australia,"Sydney, Australia",-34.016667,151.116667,2,Tokelau,Tokelau,-9.2002,-171.8484,1000000,1000000
+DFAT,Sydney,Australia,"Sydney, Australia",-34.016667,151.116667,2,Solomon Islands,"Honiara, Solomon Islands",-9.4456381,159.9728999,1000000,1000000
+DFAT,Sydney,Australia,"Sydney, Australia",-34.016667,151.116667,2,Micronesia,"Palikir, Pohnpei, Micronesia",6.917222,158.158889,1000000,1000000
+DFAT,Sydney,Australia,"Sydney, Australia",-34.016667,151.116667,2,American Samoa,"Pago Pago, Eastern, American Samoa",-14.279444,-170.700556,1000000,1000000
+DFAT,Sydney,Australia,"Sydney, Australia",-34.016667,151.116667,2,Australia,"Canberra ACT 2601, Australia",-35.2819998,149.1286843,0,0
+DFAT,Sydney,Australia,"Sydney, Australia",-34.016667,151.116667,2,Fiji,"Suva, Fiji",-18.1416,178.4419,1000000,1000000
+DFAT,Sydney,Australia,"Sydney, Australia",-34.016667,151.116667,2,French Polynesia,"Pape'ete, French Polynesia",-17.535,-149.5696,1000000,1000000
+DFAT,Sydney,Australia,"Sydney, Australia",-34.016667,151.116667,2,Guam,"Hagatna, Guam",13.4708908,144.7512782,1000000,1000000
+DFAT,Sydney,Australia,"Sydney, Australia",-34.016667,151.116667,2,Indonesia,"Jakarta, Indonesia",-6.2087634,106.845599,1000000,1000000
+DFAT,Sydney,Australia,"Sydney, Australia",-34.016667,151.116667,2,Kiribati,"Bairiki, Kiribati",1.3290526,172.9790528,1000000,1000000
+DFAT,Sydney,Australia,"Sydney, Australia",-34.016667,151.116667,2,New Caledonia,"Noumea, New Caledonia",-22.2758,166.458,1000000,1000000
+DFAT,Sydney,Australia,"Sydney, Australia",-34.016667,151.116667,2,New Zealand,"Wellington, New Zealand",-41.2864603,174.776236,1000000,1000000
+DFAT,Sydney,Australia,"Sydney, Australia",-34.016667,151.116667,2,Niue,"Alofi, Niue",-19.0553711,-169.9178709,1000000,1000000
+DFAT,Sydney,Australia,"Sydney, Australia",-34.016667,151.116667,2,Palau,Palau,7.51498,134.58252,1000000,1000000
+DFAT,Sydney,Australia,"Sydney, Australia",-34.016667,151.116667,2,Papua New Guinea,"Port Moresby, Papua New Guinea",-9.4438004,147.1802671,1000000,1000000
+DFAT,Sydney,Australia,"Sydney, Australia",-34.016667,151.116667,2,Philippines,"Manila, Philippines",14.5995124,120.9842195,1000000,1000000
+DFAT,Sydney,Australia,"Sydney, Australia",-34.016667,151.116667,2,Samoa,"Apia, Samoa",-13.833333,-171.75,1000000,1000000
+DFAT,Sydney,Australia,"Sydney, Australia",-34.016667,151.116667,2,Tonga,"Nuku'alofa, Tonga",-21.133333,-175.2,1000000,1000000
+DFAT,Sydney,Australia,"Sydney, Australia",-34.016667,151.116667,2,Tuvalu,"Funafuti, Tuvalu",-8.516667,179.216667,1000000,1000000
+DFAT,Sydney,Australia,"Sydney, Australia",-34.016667,151.116667,2,Vanuatu,"Port Vila, Vanuatu",-17.7332512,168.3273245,1000000,1000000
+RED CROSS,Honiara,Solomon Islands,"Honiara, Solomon Islands",-9.427533,159.9316,3,Wallis and Futuna,"Mata'utu, Wallis and Futuna",-13.2825091,-176.1764475,1000000,1000000
+RED CROSS,Honiara,Solomon Islands,"Honiara, Solomon Islands",-9.427533,159.9316,3,Marshall Islands,"Majuro Atoll, RMI",7.1164214,171.1857736,1000000,1000000
+RED CROSS,Honiara,Solomon Islands,"Honiara, Solomon Islands",-9.427533,159.9316,3,Wallis and Futuna,"Mata'utu, Wallis and Futuna",-13.2825091,-176.1764475,1000000,1000000
+RED CROSS,Honiara,Solomon Islands,"Honiara, Solomon Islands",-9.427533,159.9316,3,Timor-Leste,"Dili, Timor-Leste",-8.5568557,125.5603143,1000000,1000000
+RED CROSS,Honiara,Solomon Islands,"Honiara, Solomon Islands",-9.427533,159.9316,3,Cook Islands,"Avarua District, Cook Islands",-21.2129007,-159.7823059,1000000,1000000
+RED CROSS,Honiara,Solomon Islands,"Honiara, Solomon Islands",-9.427533,159.9316,3,Brunei,"Bandar Seri Begawan, Brunei",4.890278,114.942222,1000000,1000000
+RED CROSS,Honiara,Solomon Islands,"Honiara, Solomon Islands",-9.427533,159.9316,3,Northern Mariana Islands,"Saipan, 96950, CNMI",15.177801,145.750967,1000000,1000000
+RED CROSS,Honiara,Solomon Islands,"Honiara, Solomon Islands",-9.427533,159.9316,3,Tokelau,Tokelau,-9.2002,-171.8484,1000000,1000000
+RED CROSS,Honiara,Solomon Islands,"Honiara, Solomon Islands",-9.427533,159.9316,3,Solomon Islands,"Honiara, Solomon Islands",-9.4456381,159.9728999,0,0
+RED CROSS,Honiara,Solomon Islands,"Honiara, Solomon Islands",-9.427533,159.9316,3,Micronesia,"Palikir, Pohnpei, Micronesia",6.917222,158.158889,1000000,1000000
+RED CROSS,Honiara,Solomon Islands,"Honiara, Solomon Islands",-9.427533,159.9316,3,American Samoa,"Pago Pago, Eastern, American Samoa",-14.279444,-170.700556,1000000,1000000
+RED CROSS,Honiara,Solomon Islands,"Honiara, Solomon Islands",-9.427533,159.9316,3,Australia,"Canberra ACT 2601, Australia",-35.2819998,149.1286843,1000000,1000000
+RED CROSS,Honiara,Solomon Islands,"Honiara, Solomon Islands",-9.427533,159.9316,3,Fiji,"Suva, Fiji",-18.1416,178.4419,1000000,1000000
+RED CROSS,Honiara,Solomon Islands,"Honiara, Solomon Islands",-9.427533,159.9316,3,French Polynesia,"Pape'ete, French Polynesia",-17.535,-149.5696,1000000,1000000
+RED CROSS,Honiara,Solomon Islands,"Honiara, Solomon Islands",-9.427533,159.9316,3,Guam,"Hagatna, Guam",13.4708908,144.7512782,1000000,1000000
+RED CROSS,Honiara,Solomon Islands,"Honiara, Solomon Islands",-9.427533,159.9316,3,Indonesia,"Jakarta, Indonesia",-6.2087634,106.845599,1000000,1000000
+RED CROSS,Honiara,Solomon Islands,"Honiara, Solomon Islands",-9.427533,159.9316,3,Kiribati,"Bairiki, Kiribati",1.3290526,172.9790528,1000000,1000000
+RED CROSS,Honiara,Solomon Islands,"Honiara, Solomon Islands",-9.427533,159.9316,3,New Caledonia,"Noumea, New Caledonia",-22.2758,166.458,1000000,1000000
+RED CROSS,Honiara,Solomon Islands,"Honiara, Solomon Islands",-9.427533,159.9316,3,New Zealand,"Wellington, New Zealand",-41.2864603,174.776236,1000000,1000000
+RED CROSS,Honiara,Solomon Islands,"Honiara, Solomon Islands",-9.427533,159.9316,3,Niue,"Alofi, Niue",-19.0553711,-169.9178709,1000000,1000000
+RED CROSS,Honiara,Solomon Islands,"Honiara, Solomon Islands",-9.427533,159.9316,3,Palau,Palau,7.51498,134.58252,1000000,1000000
+RED CROSS,Honiara,Solomon Islands,"Honiara, Solomon Islands",-9.427533,159.9316,3,Papua New Guinea,"Port Moresby, Papua New Guinea",-9.4438004,147.1802671,1000000,1000000
+RED CROSS,Honiara,Solomon Islands,"Honiara, Solomon Islands",-9.427533,159.9316,3,Philippines,"Manila, Philippines",14.5995124,120.9842195,1000000,1000000
+RED CROSS,Honiara,Solomon Islands,"Honiara, Solomon Islands",-9.427533,159.9316,3,Samoa,"Apia, Samoa",-13.833333,-171.75,1000000,1000000
+RED CROSS,Honiara,Solomon Islands,"Honiara, Solomon Islands",-9.427533,159.9316,3,Tonga,"Nuku'alofa, Tonga",-21.133333,-175.2,1000000,1000000
+RED CROSS,Honiara,Solomon Islands,"Honiara, Solomon Islands",-9.427533,159.9316,3,Tuvalu,"Funafuti, Tuvalu",-8.516667,179.216667,1000000,1000000
+RED CROSS,Honiara,Solomon Islands,"Honiara, Solomon Islands",-9.427533,159.9316,3,Vanuatu,"Port Vila, Vanuatu",-17.7332512,168.3273245,1000000,1000000
+RED CROSS,Pohnpei,Federated States of Micronesia,"Pohnpei, Federated States of Micronesia",6.960506,158.211436,4,Wallis and Futuna,"Mata'utu, Wallis and Futuna",-13.2825091,-176.1764475,1000000,1000000
+RED CROSS,Pohnpei,Federated States of Micronesia,"Pohnpei, Federated States of Micronesia",6.960506,158.211436,4,Marshall Islands,"Majuro Atoll, RMI",7.1164214,171.1857736,1000000,1000000
+RED CROSS,Pohnpei,Federated States of Micronesia,"Pohnpei, Federated States of Micronesia",6.960506,158.211436,4,Wallis and Futuna,"Mata'utu, Wallis and Futuna",-13.2825091,-176.1764475,1000000,1000000
+RED CROSS,Pohnpei,Federated States of Micronesia,"Pohnpei, Federated States of Micronesia",6.960506,158.211436,4,Timor-Leste,"Dili, Timor-Leste",-8.5568557,125.5603143,1000000,1000000
+RED CROSS,Pohnpei,Federated States of Micronesia,"Pohnpei, Federated States of Micronesia",6.960506,158.211436,4,Cook Islands,"Avarua District, Cook Islands",-21.2129007,-159.7823059,1000000,1000000
+RED CROSS,Pohnpei,Federated States of Micronesia,"Pohnpei, Federated States of Micronesia",6.960506,158.211436,4,Brunei,"Bandar Seri Begawan, Brunei",4.890278,114.942222,1000000,1000000
+RED CROSS,Pohnpei,Federated States of Micronesia,"Pohnpei, Federated States of Micronesia",6.960506,158.211436,4,Northern Mariana Islands,"Saipan, 96950, CNMI",15.177801,145.750967,1000000,1000000
+RED CROSS,Pohnpei,Federated States of Micronesia,"Pohnpei, Federated States of Micronesia",6.960506,158.211436,4,Tokelau,Tokelau,-9.2002,-171.8484,1000000,1000000
+RED CROSS,Pohnpei,Federated States of Micronesia,"Pohnpei, Federated States of Micronesia",6.960506,158.211436,4,Solomon Islands,"Honiara, Solomon Islands",-9.4456381,159.9728999,1000000,1000000
+RED CROSS,Pohnpei,Federated States of Micronesia,"Pohnpei, Federated States of Micronesia",6.960506,158.211436,4,Micronesia,"Palikir, Pohnpei, Micronesia",6.917222,158.158889,0,0
+RED CROSS,Pohnpei,Federated States of Micronesia,"Pohnpei, Federated States of Micronesia",6.960506,158.211436,4,American Samoa,"Pago Pago, Eastern, American Samoa",-14.279444,-170.700556,1000000,1000000
+RED CROSS,Pohnpei,Federated States of Micronesia,"Pohnpei, Federated States of Micronesia",6.960506,158.211436,4,Australia,"Canberra ACT 2601, Australia",-35.2819998,149.1286843,1000000,1000000
+RED CROSS,Pohnpei,Federated States of Micronesia,"Pohnpei, Federated States of Micronesia",6.960506,158.211436,4,Fiji,"Suva, Fiji",-18.1416,178.4419,1000000,1000000
+RED CROSS,Pohnpei,Federated States of Micronesia,"Pohnpei, Federated States of Micronesia",6.960506,158.211436,4,French Polynesia,"Pape'ete, French Polynesia",-17.535,-149.5696,1000000,1000000
+RED CROSS,Pohnpei,Federated States of Micronesia,"Pohnpei, Federated States of Micronesia",6.960506,158.211436,4,Guam,"Hagatna, Guam",13.4708908,144.7512782,1000000,1000000
+RED CROSS,Pohnpei,Federated States of Micronesia,"Pohnpei, Federated States of Micronesia",6.960506,158.211436,4,Indonesia,"Jakarta, Indonesia",-6.2087634,106.845599,1000000,1000000
+RED CROSS,Pohnpei,Federated States of Micronesia,"Pohnpei, Federated States of Micronesia",6.960506,158.211436,4,Kiribati,"Bairiki, Kiribati",1.3290526,172.9790528,1000000,1000000
+RED CROSS,Pohnpei,Federated States of Micronesia,"Pohnpei, Federated States of Micronesia",6.960506,158.211436,4,New Caledonia,"Noumea, New Caledonia",-22.2758,166.458,1000000,1000000
+RED CROSS,Pohnpei,Federated States of Micronesia,"Pohnpei, Federated States of Micronesia",6.960506,158.211436,4,New Zealand,"Wellington, New Zealand",-41.2864603,174.776236,1000000,1000000
+RED CROSS,Pohnpei,Federated States of Micronesia,"Pohnpei, Federated States of Micronesia",6.960506,158.211436,4,Niue,"Alofi, Niue",-19.0553711,-169.9178709,1000000,1000000
+RED CROSS,Pohnpei,Federated States of Micronesia,"Pohnpei, Federated States of Micronesia",6.960506,158.211436,4,Palau,Palau,7.51498,134.58252,1000000,1000000
+RED CROSS,Pohnpei,Federated States of Micronesia,"Pohnpei, Federated States of Micronesia",6.960506,158.211436,4,Papua New Guinea,"Port Moresby, Papua New Guinea",-9.4438004,147.1802671,1000000,1000000
+RED CROSS,Pohnpei,Federated States of Micronesia,"Pohnpei, Federated States of Micronesia",6.960506,158.211436,4,Philippines,"Manila, Philippines",14.5995124,120.9842195,1000000,1000000
+RED CROSS,Pohnpei,Federated States of Micronesia,"Pohnpei, Federated States of Micronesia",6.960506,158.211436,4,Samoa,"Apia, Samoa",-13.833333,-171.75,1000000,1000000
+RED CROSS,Pohnpei,Federated States of Micronesia,"Pohnpei, Federated States of Micronesia",6.960506,158.211436,4,Tonga,"Nuku'alofa, Tonga",-21.133333,-175.2,1000000,1000000
+RED CROSS,Pohnpei,Federated States of Micronesia,"Pohnpei, Federated States of Micronesia",6.960506,158.211436,4,Tuvalu,"Funafuti, Tuvalu",-8.516667,179.216667,1000000,1000000
+RED CROSS,Pohnpei,Federated States of Micronesia,"Pohnpei, Federated States of Micronesia",6.960506,158.211436,4,Vanuatu,"Port Vila, Vanuatu",-17.7332512,168.3273245,1000000,1000000
+WORLD VISION,Lae,Papua New Guinea,"Lae, Papua New Guinea",-6.716667,146.983333,5,Wallis and Futuna,"Mata'utu, Wallis and Futuna",-13.2825091,-176.1764475,1000000,1000000
+WORLD VISION,Lae,Papua New Guinea,"Lae, Papua New Guinea",-6.716667,146.983333,5,Marshall Islands,"Majuro Atoll, RMI",7.1164214,171.1857736,1000000,1000000
+WORLD VISION,Lae,Papua New Guinea,"Lae, Papua New Guinea",-6.716667,146.983333,5,Wallis and Futuna,"Mata'utu, Wallis and Futuna",-13.2825091,-176.1764475,1000000,1000000
+WORLD VISION,Lae,Papua New Guinea,"Lae, Papua New Guinea",-6.716667,146.983333,5,Timor-Leste,"Dili, Timor-Leste",-8.5568557,125.5603143,1000000,1000000
+WORLD VISION,Lae,Papua New Guinea,"Lae, Papua New Guinea",-6.716667,146.983333,5,Cook Islands,"Avarua District, Cook Islands",-21.2129007,-159.7823059,1000000,1000000
+WORLD VISION,Lae,Papua New Guinea,"Lae, Papua New Guinea",-6.716667,146.983333,5,Brunei,"Bandar Seri Begawan, Brunei",4.890278,114.942222,1000000,1000000
+WORLD VISION,Lae,Papua New Guinea,"Lae, Papua New Guinea",-6.716667,146.983333,5,Northern Mariana Islands,"Saipan, 96950, CNMI",15.177801,145.750967,1000000,1000000
+WORLD VISION,Lae,Papua New Guinea,"Lae, Papua New Guinea",-6.716667,146.983333,5,Tokelau,Tokelau,-9.2002,-171.8484,1000000,1000000
+WORLD VISION,Lae,Papua New Guinea,"Lae, Papua New Guinea",-6.716667,146.983333,5,Solomon Islands,"Honiara, Solomon Islands",-9.4456381,159.9728999,1000000,1000000
+WORLD VISION,Lae,Papua New Guinea,"Lae, Papua New Guinea",-6.716667,146.983333,5,Micronesia,"Palikir, Pohnpei, Micronesia",6.917222,158.158889,1000000,1000000
+WORLD VISION,Lae,Papua New Guinea,"Lae, Papua New Guinea",-6.716667,146.983333,5,American Samoa,"Pago Pago, Eastern, American Samoa",-14.279444,-170.700556,1000000,1000000
+WORLD VISION,Lae,Papua New Guinea,"Lae, Papua New Guinea",-6.716667,146.983333,5,Australia,"Canberra ACT 2601, Australia",-35.2819998,149.1286843,1000000,1000000
+WORLD VISION,Lae,Papua New Guinea,"Lae, Papua New Guinea",-6.716667,146.983333,5,Fiji,"Suva, Fiji",-18.1416,178.4419,1000000,1000000
+WORLD VISION,Lae,Papua New Guinea,"Lae, Papua New Guinea",-6.716667,146.983333,5,French Polynesia,"Pape'ete, French Polynesia",-17.535,-149.5696,1000000,1000000
+WORLD VISION,Lae,Papua New Guinea,"Lae, Papua New Guinea",-6.716667,146.983333,5,Guam,"Hagatna, Guam",13.4708908,144.7512782,1000000,1000000
+WORLD VISION,Lae,Papua New Guinea,"Lae, Papua New Guinea",-6.716667,146.983333,5,Indonesia,"Jakarta, Indonesia",-6.2087634,106.845599,1000000,1000000
+WORLD VISION,Lae,Papua New Guinea,"Lae, Papua New Guinea",-6.716667,146.983333,5,Kiribati,"Bairiki, Kiribati",1.3290526,172.9790528,1000000,1000000
+WORLD VISION,Lae,Papua New Guinea,"Lae, Papua New Guinea",-6.716667,146.983333,5,New Caledonia,"Noumea, New Caledonia",-22.2758,166.458,1000000,1000000
+WORLD VISION,Lae,Papua New Guinea,"Lae, Papua New Guinea",-6.716667,146.983333,5,New Zealand,"Wellington, New Zealand",-41.2864603,174.776236,1000000,1000000
+WORLD VISION,Lae,Papua New Guinea,"Lae, Papua New Guinea",-6.716667,146.983333,5,Niue,"Alofi, Niue",-19.0553711,-169.9178709,1000000,1000000
+WORLD VISION,Lae,Papua New Guinea,"Lae, Papua New Guinea",-6.716667,146.983333,5,Palau,Palau,7.51498,134.58252,1000000,1000000
+WORLD VISION,Lae,Papua New Guinea,"Lae, Papua New Guinea",-6.716667,146.983333,5,Papua New Guinea,"Port Moresby, Papua New Guinea",-9.4438004,147.1802671,0,0
+WORLD VISION,Lae,Papua New Guinea,"Lae, Papua New Guinea",-6.716667,146.983333,5,Philippines,"Manila, Philippines",14.5995124,120.9842195,1000000,1000000
+WORLD VISION,Lae,Papua New Guinea,"Lae, Papua New Guinea",-6.716667,146.983333,5,Samoa,"Apia, Samoa",-13.833333,-171.75,1000000,1000000
+WORLD VISION,Lae,Papua New Guinea,"Lae, Papua New Guinea",-6.716667,146.983333,5,Tonga,"Nuku'alofa, Tonga",-21.133333,-175.2,1000000,1000000
+WORLD VISION,Lae,Papua New Guinea,"Lae, Papua New Guinea",-6.716667,146.983333,5,Tuvalu,"Funafuti, Tuvalu",-8.516667,179.216667,1000000,1000000
+WORLD VISION,Lae,Papua New Guinea,"Lae, Papua New Guinea",-6.716667,146.983333,5,Vanuatu,"Port Vila, Vanuatu",-17.7332512,168.3273245,1000000,1000000
+RED CROSS,Suva,Fiji,"Suva, Fiji",-18.227417,178.165483,6,Wallis and Futuna,"Mata'utu, Wallis and Futuna",-13.2825091,-176.1764475,1000000,1000000
+RED CROSS,Suva,Fiji,"Suva, Fiji",-18.227417,178.165483,6,Marshall Islands,"Majuro Atoll, RMI",7.1164214,171.1857736,1000000,1000000
+RED CROSS,Suva,Fiji,"Suva, Fiji",-18.227417,178.165483,6,Wallis and Futuna,"Mata'utu, Wallis and Futuna",-13.2825091,-176.1764475,1000000,1000000
+RED CROSS,Suva,Fiji,"Suva, Fiji",-18.227417,178.165483,6,Timor-Leste,"Dili, Timor-Leste",-8.5568557,125.5603143,1000000,1000000
+RED CROSS,Suva,Fiji,"Suva, Fiji",-18.227417,178.165483,6,Cook Islands,"Avarua District, Cook Islands",-21.2129007,-159.7823059,1000000,1000000
+RED CROSS,Suva,Fiji,"Suva, Fiji",-18.227417,178.165483,6,Brunei,"Bandar Seri Begawan, Brunei",4.890278,114.942222,1000000,1000000
+RED CROSS,Suva,Fiji,"Suva, Fiji",-18.227417,178.165483,6,Northern Mariana Islands,"Saipan, 96950, CNMI",15.177801,145.750967,1000000,1000000
+RED CROSS,Suva,Fiji,"Suva, Fiji",-18.227417,178.165483,6,Tokelau,Tokelau,-9.2002,-171.8484,1000000,1000000
+RED CROSS,Suva,Fiji,"Suva, Fiji",-18.227417,178.165483,6,Solomon Islands,"Honiara, Solomon Islands",-9.4456381,159.9728999,1000000,1000000
+RED CROSS,Suva,Fiji,"Suva, Fiji",-18.227417,178.165483,6,Micronesia,"Palikir, Pohnpei, Micronesia",6.917222,158.158889,1000000,1000000
+RED CROSS,Suva,Fiji,"Suva, Fiji",-18.227417,178.165483,6,American Samoa,"Pago Pago, Eastern, American Samoa",-14.279444,-170.700556,1000000,1000000
+RED CROSS,Suva,Fiji,"Suva, Fiji",-18.227417,178.165483,6,Australia,"Canberra ACT 2601, Australia",-35.2819998,149.1286843,1000000,1000000
+RED CROSS,Suva,Fiji,"Suva, Fiji",-18.227417,178.165483,6,Fiji,"Suva, Fiji",-18.1416,178.4419,0,0
+RED CROSS,Suva,Fiji,"Suva, Fiji",-18.227417,178.165483,6,French Polynesia,"Pape'ete, French Polynesia",-17.535,-149.5696,1000000,1000000
+RED CROSS,Suva,Fiji,"Suva, Fiji",-18.227417,178.165483,6,Guam,"Hagatna, Guam",13.4708908,144.7512782,1000000,1000000
+RED CROSS,Suva,Fiji,"Suva, Fiji",-18.227417,178.165483,6,Indonesia,"Jakarta, Indonesia",-6.2087634,106.845599,1000000,1000000
+RED CROSS,Suva,Fiji,"Suva, Fiji",-18.227417,178.165483,6,Kiribati,"Bairiki, Kiribati",1.3290526,172.9790528,1000000,1000000
+RED CROSS,Suva,Fiji,"Suva, Fiji",-18.227417,178.165483,6,New Caledonia,"Noumea, New Caledonia",-22.2758,166.458,1000000,1000000
+RED CROSS,Suva,Fiji,"Suva, Fiji",-18.227417,178.165483,6,New Zealand,"Wellington, New Zealand",-41.2864603,174.776236,1000000,1000000
+RED CROSS,Suva,Fiji,"Suva, Fiji",-18.227417,178.165483,6,Niue,"Alofi, Niue",-19.0553711,-169.9178709,1000000,1000000
+RED CROSS,Suva,Fiji,"Suva, Fiji",-18.227417,178.165483,6,Palau,Palau,7.51498,134.58252,1000000,1000000
+RED CROSS,Suva,Fiji,"Suva, Fiji",-18.227417,178.165483,6,Papua New Guinea,"Port Moresby, Papua New Guinea",-9.4438004,147.1802671,1000000,1000000
+RED CROSS,Suva,Fiji,"Suva, Fiji",-18.227417,178.165483,6,Philippines,"Manila, Philippines",14.5995124,120.9842195,1000000,1000000
+RED CROSS,Suva,Fiji,"Suva, Fiji",-18.227417,178.165483,6,Samoa,"Apia, Samoa",-13.833333,-171.75,1000000,1000000
+RED CROSS,Suva,Fiji,"Suva, Fiji",-18.227417,178.165483,6,Tonga,"Nuku'alofa, Tonga",-21.133333,-175.2,1000000,1000000
+RED CROSS,Suva,Fiji,"Suva, Fiji",-18.227417,178.165483,6,Tuvalu,"Funafuti, Tuvalu",-8.516667,179.216667,1000000,1000000
+RED CROSS,Suva,Fiji,"Suva, Fiji",-18.227417,178.165483,6,Vanuatu,"Port Vila, Vanuatu",-17.7332512,168.3273245,1000000,1000000
+RED CROSS,Tarawa,Kiribati,"Tarawa, Kiribati",-17.826067,179.322683,7,Wallis and Futuna,"Mata'utu, Wallis and Futuna",-13.2825091,-176.1764475,1000000,1000000
+RED CROSS,Tarawa,Kiribati,"Tarawa, Kiribati",-17.826067,179.322683,7,Marshall Islands,"Majuro Atoll, RMI",7.1164214,171.1857736,1000000,1000000
+RED CROSS,Tarawa,Kiribati,"Tarawa, Kiribati",-17.826067,179.322683,7,Wallis and Futuna,"Mata'utu, Wallis and Futuna",-13.2825091,-176.1764475,1000000,1000000
+RED CROSS,Tarawa,Kiribati,"Tarawa, Kiribati",-17.826067,179.322683,7,Timor-Leste,"Dili, Timor-Leste",-8.5568557,125.5603143,1000000,1000000
+RED CROSS,Tarawa,Kiribati,"Tarawa, Kiribati",-17.826067,179.322683,7,Cook Islands,"Avarua District, Cook Islands",-21.2129007,-159.7823059,1000000,1000000
+RED CROSS,Tarawa,Kiribati,"Tarawa, Kiribati",-17.826067,179.322683,7,Brunei,"Bandar Seri Begawan, Brunei",4.890278,114.942222,1000000,1000000
+RED CROSS,Tarawa,Kiribati,"Tarawa, Kiribati",-17.826067,179.322683,7,Northern Mariana Islands,"Saipan, 96950, CNMI",15.177801,145.750967,1000000,1000000
+RED CROSS,Tarawa,Kiribati,"Tarawa, Kiribati",-17.826067,179.322683,7,Tokelau,Tokelau,-9.2002,-171.8484,1000000,1000000
+RED CROSS,Tarawa,Kiribati,"Tarawa, Kiribati",-17.826067,179.322683,7,Solomon Islands,"Honiara, Solomon Islands",-9.4456381,159.9728999,1000000,1000000
+RED CROSS,Tarawa,Kiribati,"Tarawa, Kiribati",-17.826067,179.322683,7,Micronesia,"Palikir, Pohnpei, Micronesia",6.917222,158.158889,1000000,1000000
+RED CROSS,Tarawa,Kiribati,"Tarawa, Kiribati",-17.826067,179.322683,7,American Samoa,"Pago Pago, Eastern, American Samoa",-14.279444,-170.700556,1000000,1000000
+RED CROSS,Tarawa,Kiribati,"Tarawa, Kiribati",-17.826067,179.322683,7,Australia,"Canberra ACT 2601, Australia",-35.2819998,149.1286843,1000000,1000000
+RED CROSS,Tarawa,Kiribati,"Tarawa, Kiribati",-17.826067,179.322683,7,Fiji,"Suva, Fiji",-18.1416,178.4419,1000000,1000000
+RED CROSS,Tarawa,Kiribati,"Tarawa, Kiribati",-17.826067,179.322683,7,French Polynesia,"Pape'ete, French Polynesia",-17.535,-149.5696,1000000,1000000
+RED CROSS,Tarawa,Kiribati,"Tarawa, Kiribati",-17.826067,179.322683,7,Guam,"Hagatna, Guam",13.4708908,144.7512782,1000000,1000000
+RED CROSS,Tarawa,Kiribati,"Tarawa, Kiribati",-17.826067,179.322683,7,Indonesia,"Jakarta, Indonesia",-6.2087634,106.845599,1000000,1000000
+RED CROSS,Tarawa,Kiribati,"Tarawa, Kiribati",-17.826067,179.322683,7,Kiribati,"Bairiki, Kiribati",1.3290526,172.9790528,0,0
+RED CROSS,Tarawa,Kiribati,"Tarawa, Kiribati",-17.826067,179.322683,7,New Caledonia,"Noumea, New Caledonia",-22.2758,166.458,1000000,1000000
+RED CROSS,Tarawa,Kiribati,"Tarawa, Kiribati",-17.826067,179.322683,7,New Zealand,"Wellington, New Zealand",-41.2864603,174.776236,1000000,1000000
+RED CROSS,Tarawa,Kiribati,"Tarawa, Kiribati",-17.826067,179.322683,7,Niue,"Alofi, Niue",-19.0553711,-169.9178709,1000000,1000000
+RED CROSS,Tarawa,Kiribati,"Tarawa, Kiribati",-17.826067,179.322683,7,Palau,Palau,7.51498,134.58252,1000000,1000000
+RED CROSS,Tarawa,Kiribati,"Tarawa, Kiribati",-17.826067,179.322683,7,Papua New Guinea,"Port Moresby, Papua New Guinea",-9.4438004,147.1802671,1000000,1000000
+RED CROSS,Tarawa,Kiribati,"Tarawa, Kiribati",-17.826067,179.322683,7,Philippines,"Manila, Philippines",14.5995124,120.9842195,1000000,1000000
+RED CROSS,Tarawa,Kiribati,"Tarawa, Kiribati",-17.826067,179.322683,7,Samoa,"Apia, Samoa",-13.833333,-171.75,1000000,1000000
+RED CROSS,Tarawa,Kiribati,"Tarawa, Kiribati",-17.826067,179.322683,7,Tonga,"Nuku'alofa, Tonga",-21.133333,-175.2,1000000,1000000
+RED CROSS,Tarawa,Kiribati,"Tarawa, Kiribati",-17.826067,179.322683,7,Tuvalu,"Funafuti, Tuvalu",-8.516667,179.216667,1000000,1000000
+RED CROSS,Tarawa,Kiribati,"Tarawa, Kiribati",-17.826067,179.322683,7,Vanuatu,"Port Vila, Vanuatu",-17.7332512,168.3273245,1000000,1000000
+NDMO,Apia,Samoa,"Apia, Samoa",-13.841539,-171.810883,8,Wallis and Futuna,"Mata'utu, Wallis and Futuna",-13.2825091,-176.1764475,1000000,1000000
+NDMO,Apia,Samoa,"Apia, Samoa",-13.841539,-171.810883,8,Marshall Islands,"Majuro Atoll, RMI",7.1164214,171.1857736,1000000,1000000
+NDMO,Apia,Samoa,"Apia, Samoa",-13.841539,-171.810883,8,Wallis and Futuna,"Mata'utu, Wallis and Futuna",-13.2825091,-176.1764475,1000000,1000000
+NDMO,Apia,Samoa,"Apia, Samoa",-13.841539,-171.810883,8,Timor-Leste,"Dili, Timor-Leste",-8.5568557,125.5603143,1000000,1000000
+NDMO,Apia,Samoa,"Apia, Samoa",-13.841539,-171.810883,8,Cook Islands,"Avarua District, Cook Islands",-21.2129007,-159.7823059,1000000,1000000
+NDMO,Apia,Samoa,"Apia, Samoa",-13.841539,-171.810883,8,Brunei,"Bandar Seri Begawan, Brunei",4.890278,114.942222,1000000,1000000
+NDMO,Apia,Samoa,"Apia, Samoa",-13.841539,-171.810883,8,Northern Mariana Islands,"Saipan, 96950, CNMI",15.177801,145.750967,1000000,1000000
+NDMO,Apia,Samoa,"Apia, Samoa",-13.841539,-171.810883,8,Tokelau,Tokelau,-9.2002,-171.8484,1000000,1000000
+NDMO,Apia,Samoa,"Apia, Samoa",-13.841539,-171.810883,8,Solomon Islands,"Honiara, Solomon Islands",-9.4456381,159.9728999,1000000,1000000
+NDMO,Apia,Samoa,"Apia, Samoa",-13.841539,-171.810883,8,Micronesia,"Palikir, Pohnpei, Micronesia",6.917222,158.158889,1000000,1000000
+NDMO,Apia,Samoa,"Apia, Samoa",-13.841539,-171.810883,8,American Samoa,"Pago Pago, Eastern, American Samoa",-14.279444,-170.700556,1000000,1000000
+NDMO,Apia,Samoa,"Apia, Samoa",-13.841539,-171.810883,8,Australia,"Canberra ACT 2601, Australia",-35.2819998,149.1286843,1000000,1000000
+NDMO,Apia,Samoa,"Apia, Samoa",-13.841539,-171.810883,8,Fiji,"Suva, Fiji",-18.1416,178.4419,1000000,1000000
+NDMO,Apia,Samoa,"Apia, Samoa",-13.841539,-171.810883,8,French Polynesia,"Pape'ete, French Polynesia",-17.535,-149.5696,1000000,1000000
+NDMO,Apia,Samoa,"Apia, Samoa",-13.841539,-171.810883,8,Guam,"Hagatna, Guam",13.4708908,144.7512782,1000000,1000000
+NDMO,Apia,Samoa,"Apia, Samoa",-13.841539,-171.810883,8,Indonesia,"Jakarta, Indonesia",-6.2087634,106.845599,1000000,1000000
+NDMO,Apia,Samoa,"Apia, Samoa",-13.841539,-171.810883,8,Kiribati,"Bairiki, Kiribati",1.3290526,172.9790528,1000000,1000000
+NDMO,Apia,Samoa,"Apia, Samoa",-13.841539,-171.810883,8,New Caledonia,"Noumea, New Caledonia",-22.2758,166.458,1000000,1000000
+NDMO,Apia,Samoa,"Apia, Samoa",-13.841539,-171.810883,8,New Zealand,"Wellington, New Zealand",-41.2864603,174.776236,1000000,1000000
+NDMO,Apia,Samoa,"Apia, Samoa",-13.841539,-171.810883,8,Niue,"Alofi, Niue",-19.0553711,-169.9178709,1000000,1000000
+NDMO,Apia,Samoa,"Apia, Samoa",-13.841539,-171.810883,8,Palau,Palau,7.51498,134.58252,1000000,1000000
+NDMO,Apia,Samoa,"Apia, Samoa",-13.841539,-171.810883,8,Papua New Guinea,"Port Moresby, Papua New Guinea",-9.4438004,147.1802671,1000000,1000000
+NDMO,Apia,Samoa,"Apia, Samoa",-13.841539,-171.810883,8,Philippines,"Manila, Philippines",14.5995124,120.9842195,1000000,1000000
+NDMO,Apia,Samoa,"Apia, Samoa",-13.841539,-171.810883,8,Samoa,"Apia, Samoa",-13.833333,-171.75,0,8
+NDMO,Apia,Samoa,"Apia, Samoa",-13.841539,-171.810883,8,Tonga,"Nuku'alofa, Tonga",-21.133333,-175.2,1000000,1000000
+NDMO,Apia,Samoa,"Apia, Samoa",-13.841539,-171.810883,8,Tuvalu,"Funafuti, Tuvalu",-8.516667,179.216667,1000000,1000000
+NDMO,Apia,Samoa,"Apia, Samoa",-13.841539,-171.810883,8,Vanuatu,"Port Vila, Vanuatu",-17.7332512,168.3273245,1000000,1000000
+RED CROSS,Nukualofa,Tonga,"Nukualofa, Tonga",-21.2412,-175.141367,9,Wallis and Futuna,"Mata'utu, Wallis and Futuna",-13.2825091,-176.1764475,1000000,1000000
+RED CROSS,Nukualofa,Tonga,"Nukualofa, Tonga",-21.2412,-175.141367,9,Marshall Islands,"Majuro Atoll, RMI",7.1164214,171.1857736,1000000,1000000
+RED CROSS,Nukualofa,Tonga,"Nukualofa, Tonga",-21.2412,-175.141367,9,Wallis and Futuna,"Mata'utu, Wallis and Futuna",-13.2825091,-176.1764475,1000000,1000000
+RED CROSS,Nukualofa,Tonga,"Nukualofa, Tonga",-21.2412,-175.141367,9,Timor-Leste,"Dili, Timor-Leste",-8.5568557,125.5603143,1000000,1000000
+RED CROSS,Nukualofa,Tonga,"Nukualofa, Tonga",-21.2412,-175.141367,9,Cook Islands,"Avarua District, Cook Islands",-21.2129007,-159.7823059,1000000,1000000
+RED CROSS,Nukualofa,Tonga,"Nukualofa, Tonga",-21.2412,-175.141367,9,Brunei,"Bandar Seri Begawan, Brunei",4.890278,114.942222,1000000,1000000
+RED CROSS,Nukualofa,Tonga,"Nukualofa, Tonga",-21.2412,-175.141367,9,Northern Mariana Islands,"Saipan, 96950, CNMI",15.177801,145.750967,1000000,1000000
+RED CROSS,Nukualofa,Tonga,"Nukualofa, Tonga",-21.2412,-175.141367,9,Tokelau,Tokelau,-9.2002,-171.8484,1000000,1000000
+RED CROSS,Nukualofa,Tonga,"Nukualofa, Tonga",-21.2412,-175.141367,9,Solomon Islands,"Honiara, Solomon Islands",-9.4456381,159.9728999,1000000,1000000
+RED CROSS,Nukualofa,Tonga,"Nukualofa, Tonga",-21.2412,-175.141367,9,Micronesia,"Palikir, Pohnpei, Micronesia",6.917222,158.158889,1000000,1000000
+RED CROSS,Nukualofa,Tonga,"Nukualofa, Tonga",-21.2412,-175.141367,9,American Samoa,"Pago Pago, Eastern, American Samoa",-14.279444,-170.700556,1000000,1000000
+RED CROSS,Nukualofa,Tonga,"Nukualofa, Tonga",-21.2412,-175.141367,9,Australia,"Canberra ACT 2601, Australia",-35.2819998,149.1286843,1000000,1000000
+RED CROSS,Nukualofa,Tonga,"Nukualofa, Tonga",-21.2412,-175.141367,9,Fiji,"Suva, Fiji",-18.1416,178.4419,1000000,1000000
+RED CROSS,Nukualofa,Tonga,"Nukualofa, Tonga",-21.2412,-175.141367,9,French Polynesia,"Pape'ete, French Polynesia",-17.535,-149.5696,1000000,1000000
+RED CROSS,Nukualofa,Tonga,"Nukualofa, Tonga",-21.2412,-175.141367,9,Guam,"Hagatna, Guam",13.4708908,144.7512782,1000000,1000000
+RED CROSS,Nukualofa,Tonga,"Nukualofa, Tonga",-21.2412,-175.141367,9,Indonesia,"Jakarta, Indonesia",-6.2087634,106.845599,1000000,1000000
+RED CROSS,Nukualofa,Tonga,"Nukualofa, Tonga",-21.2412,-175.141367,9,Kiribati,"Bairiki, Kiribati",1.3290526,172.9790528,1000000,1000000
+RED CROSS,Nukualofa,Tonga,"Nukualofa, Tonga",-21.2412,-175.141367,9,New Caledonia,"Noumea, New Caledonia",-22.2758,166.458,1000000,1000000
+RED CROSS,Nukualofa,Tonga,"Nukualofa, Tonga",-21.2412,-175.141367,9,New Zealand,"Wellington, New Zealand",-41.2864603,174.776236,1000000,1000000
+RED CROSS,Nukualofa,Tonga,"Nukualofa, Tonga",-21.2412,-175.141367,9,Niue,"Alofi, Niue",-19.0553711,-169.9178709,1000000,1000000
+RED CROSS,Nukualofa,Tonga,"Nukualofa, Tonga",-21.2412,-175.141367,9,Palau,Palau,7.51498,134.58252,1000000,1000000
+RED CROSS,Nukualofa,Tonga,"Nukualofa, Tonga",-21.2412,-175.141367,9,Papua New Guinea,"Port Moresby, Papua New Guinea",-9.4438004,147.1802671,1000000,1000000
+RED CROSS,Nukualofa,Tonga,"Nukualofa, Tonga",-21.2412,-175.141367,9,Philippines,"Manila, Philippines",14.5995124,120.9842195,1000000,1000000
+RED CROSS,Nukualofa,Tonga,"Nukualofa, Tonga",-21.2412,-175.141367,9,Samoa,"Apia, Samoa",-13.833333,-171.75,1000000,1000000
+RED CROSS,Nukualofa,Tonga,"Nukualofa, Tonga",-21.2412,-175.141367,9,Tonga,"Nuku'alofa, Tonga",-21.133333,-175.2,0,0
+RED CROSS,Nukualofa,Tonga,"Nukualofa, Tonga",-21.2412,-175.141367,9,Tuvalu,"Funafuti, Tuvalu",-8.516667,179.216667,1000000,1000000
+RED CROSS,Nukualofa,Tonga,"Nukualofa, Tonga",-21.2412,-175.141367,9,Vanuatu,"Port Vila, Vanuatu",-17.7332512,168.3273245,1000000,1000000
+RED CROSS,Rarotonga,Cook Islands,"Rarotonga, Cook Islands",-21.2065,-159.755417,10,Wallis and Futuna,"Mata'utu, Wallis and Futuna",-13.2825091,-176.1764475,1000000,1000000
+RED CROSS,Rarotonga,Cook Islands,"Rarotonga, Cook Islands",-21.2065,-159.755417,10,Marshall Islands,"Majuro Atoll, RMI",7.1164214,171.1857736,1000000,1000000
+RED CROSS,Rarotonga,Cook Islands,"Rarotonga, Cook Islands",-21.2065,-159.755417,10,Wallis and Futuna,"Mata'utu, Wallis and Futuna",-13.2825091,-176.1764475,1000000,1000000
+RED CROSS,Rarotonga,Cook Islands,"Rarotonga, Cook Islands",-21.2065,-159.755417,10,Timor-Leste,"Dili, Timor-Leste",-8.5568557,125.5603143,1000000,1000000
+RED CROSS,Rarotonga,Cook Islands,"Rarotonga, Cook Islands",-21.2065,-159.755417,10,Cook Islands,"Avarua District, Cook Islands",-21.2129007,-159.7823059,0,0
+RED CROSS,Rarotonga,Cook Islands,"Rarotonga, Cook Islands",-21.2065,-159.755417,10,Brunei,"Bandar Seri Begawan, Brunei",4.890278,114.942222,1000000,1000000
+RED CROSS,Rarotonga,Cook Islands,"Rarotonga, Cook Islands",-21.2065,-159.755417,10,Northern Mariana Islands,"Saipan, 96950, CNMI",15.177801,145.750967,1000000,1000000
+RED CROSS,Rarotonga,Cook Islands,"Rarotonga, Cook Islands",-21.2065,-159.755417,10,Tokelau,Tokelau,-9.2002,-171.8484,1000000,1000000
+RED CROSS,Rarotonga,Cook Islands,"Rarotonga, Cook Islands",-21.2065,-159.755417,10,Solomon Islands,"Honiara, Solomon Islands",-9.4456381,159.9728999,1000000,1000000
+RED CROSS,Rarotonga,Cook Islands,"Rarotonga, Cook Islands",-21.2065,-159.755417,10,Micronesia,"Palikir, Pohnpei, Micronesia",6.917222,158.158889,1000000,1000000
+RED CROSS,Rarotonga,Cook Islands,"Rarotonga, Cook Islands",-21.2065,-159.755417,10,American Samoa,"Pago Pago, Eastern, American Samoa",-14.279444,-170.700556,1000000,1000000
+RED CROSS,Rarotonga,Cook Islands,"Rarotonga, Cook Islands",-21.2065,-159.755417,10,Australia,"Canberra ACT 2601, Australia",-35.2819998,149.1286843,1000000,1000000
+RED CROSS,Rarotonga,Cook Islands,"Rarotonga, Cook Islands",-21.2065,-159.755417,10,Fiji,"Suva, Fiji",-18.1416,178.4419,1000000,1000000
+RED CROSS,Rarotonga,Cook Islands,"Rarotonga, Cook Islands",-21.2065,-159.755417,10,French Polynesia,"Pape'ete, French Polynesia",-17.535,-149.5696,1000000,1000000
+RED CROSS,Rarotonga,Cook Islands,"Rarotonga, Cook Islands",-21.2065,-159.755417,10,Guam,"Hagatna, Guam",13.4708908,144.7512782,1000000,1000000
+RED CROSS,Rarotonga,Cook Islands,"Rarotonga, Cook Islands",-21.2065,-159.755417,10,Indonesia,"Jakarta, Indonesia",-6.2087634,106.845599,1000000,1000000
+RED CROSS,Rarotonga,Cook Islands,"Rarotonga, Cook Islands",-21.2065,-159.755417,10,Kiribati,"Bairiki, Kiribati",1.3290526,172.9790528,1000000,1000000
+RED CROSS,Rarotonga,Cook Islands,"Rarotonga, Cook Islands",-21.2065,-159.755417,10,New Caledonia,"Noumea, New Caledonia",-22.2758,166.458,1000000,1000000
+RED CROSS,Rarotonga,Cook Islands,"Rarotonga, Cook Islands",-21.2065,-159.755417,10,New Zealand,"Wellington, New Zealand",-41.2864603,174.776236,1000000,1000000
+RED CROSS,Rarotonga,Cook Islands,"Rarotonga, Cook Islands",-21.2065,-159.755417,10,Niue,"Alofi, Niue",-19.0553711,-169.9178709,1000000,1000000
+RED CROSS,Rarotonga,Cook Islands,"Rarotonga, Cook Islands",-21.2065,-159.755417,10,Palau,Palau,7.51498,134.58252,1000000,1000000
+RED CROSS,Rarotonga,Cook Islands,"Rarotonga, Cook Islands",-21.2065,-159.755417,10,Papua New Guinea,"Port Moresby, Papua New Guinea",-9.4438004,147.1802671,1000000,1000000
+RED CROSS,Rarotonga,Cook Islands,"Rarotonga, Cook Islands",-21.2065,-159.755417,10,Philippines,"Manila, Philippines",14.5995124,120.9842195,1000000,1000000
+RED CROSS,Rarotonga,Cook Islands,"Rarotonga, Cook Islands",-21.2065,-159.755417,10,Samoa,"Apia, Samoa",-13.833333,-171.75,1000000,1000000
+RED CROSS,Rarotonga,Cook Islands,"Rarotonga, Cook Islands",-21.2065,-159.755417,10,Tonga,"Nuku'alofa, Tonga",-21.133333,-175.2,1000000,1000000
+RED CROSS,Rarotonga,Cook Islands,"Rarotonga, Cook Islands",-21.2065,-159.755417,10,Tuvalu,"Funafuti, Tuvalu",-8.516667,179.216667,1000000,1000000
+RED CROSS,Rarotonga,Cook Islands,"Rarotonga, Cook Islands",-21.2065,-159.755417,10,Vanuatu,"Port Vila, Vanuatu",-17.7332512,168.3273245,1000000,1000000
+RED CROSS,Funafuti,Tuvalu,"Funafuti, Tuvalu",-8.515583,179.199444,11,Wallis and Futuna,"Mata'utu, Wallis and Futuna",-13.2825091,-176.1764475,1000000,1000000
+RED CROSS,Funafuti,Tuvalu,"Funafuti, Tuvalu",-8.515583,179.199444,11,Marshall Islands,"Majuro Atoll, RMI",7.1164214,171.1857736,1000000,1000000
+RED CROSS,Funafuti,Tuvalu,"Funafuti, Tuvalu",-8.515583,179.199444,11,Wallis and Futuna,"Mata'utu, Wallis and Futuna",-13.2825091,-176.1764475,1000000,1000000
+RED CROSS,Funafuti,Tuvalu,"Funafuti, Tuvalu",-8.515583,179.199444,11,Timor-Leste,"Dili, Timor-Leste",-8.5568557,125.5603143,1000000,1000000
+RED CROSS,Funafuti,Tuvalu,"Funafuti, Tuvalu",-8.515583,179.199444,11,Cook Islands,"Avarua District, Cook Islands",-21.2129007,-159.7823059,1000000,1000000
+RED CROSS,Funafuti,Tuvalu,"Funafuti, Tuvalu",-8.515583,179.199444,11,Brunei,"Bandar Seri Begawan, Brunei",4.890278,114.942222,1000000,1000000
+RED CROSS,Funafuti,Tuvalu,"Funafuti, Tuvalu",-8.515583,179.199444,11,Northern Mariana Islands,"Saipan, 96950, CNMI",15.177801,145.750967,1000000,1000000
+RED CROSS,Funafuti,Tuvalu,"Funafuti, Tuvalu",-8.515583,179.199444,11,Tokelau,Tokelau,-9.2002,-171.8484,1000000,1000000
+RED CROSS,Funafuti,Tuvalu,"Funafuti, Tuvalu",-8.515583,179.199444,11,Solomon Islands,"Honiara, Solomon Islands",-9.4456381,159.9728999,1000000,1000000
+RED CROSS,Funafuti,Tuvalu,"Funafuti, Tuvalu",-8.515583,179.199444,11,Micronesia,"Palikir, Pohnpei, Micronesia",6.917222,158.158889,1000000,1000000
+RED CROSS,Funafuti,Tuvalu,"Funafuti, Tuvalu",-8.515583,179.199444,11,American Samoa,"Pago Pago, Eastern, American Samoa",-14.279444,-170.700556,1000000,1000000
+RED CROSS,Funafuti,Tuvalu,"Funafuti, Tuvalu",-8.515583,179.199444,11,Australia,"Canberra ACT 2601, Australia",-35.2819998,149.1286843,1000000,1000000
+RED CROSS,Funafuti,Tuvalu,"Funafuti, Tuvalu",-8.515583,179.199444,11,Fiji,"Suva, Fiji",-18.1416,178.4419,1000000,1000000
+RED CROSS,Funafuti,Tuvalu,"Funafuti, Tuvalu",-8.515583,179.199444,11,French Polynesia,"Pape'ete, French Polynesia",-17.535,-149.5696,1000000,1000000
+RED CROSS,Funafuti,Tuvalu,"Funafuti, Tuvalu",-8.515583,179.199444,11,Guam,"Hagatna, Guam",13.4708908,144.7512782,1000000,1000000
+RED CROSS,Funafuti,Tuvalu,"Funafuti, Tuvalu",-8.515583,179.199444,11,Indonesia,"Jakarta, Indonesia",-6.2087634,106.845599,1000000,1000000
+RED CROSS,Funafuti,Tuvalu,"Funafuti, Tuvalu",-8.515583,179.199444,11,Kiribati,"Bairiki, Kiribati",1.3290526,172.9790528,1000000,1000000
+RED CROSS,Funafuti,Tuvalu,"Funafuti, Tuvalu",-8.515583,179.199444,11,New Caledonia,"Noumea, New Caledonia",-22.2758,166.458,1000000,1000000
+RED CROSS,Funafuti,Tuvalu,"Funafuti, Tuvalu",-8.515583,179.199444,11,New Zealand,"Wellington, New Zealand",-41.2864603,174.776236,1000000,1000000
+RED CROSS,Funafuti,Tuvalu,"Funafuti, Tuvalu",-8.515583,179.199444,11,Niue,"Alofi, Niue",-19.0553711,-169.9178709,1000000,1000000
+RED CROSS,Funafuti,Tuvalu,"Funafuti, Tuvalu",-8.515583,179.199444,11,Palau,Palau,7.51498,134.58252,1000000,1000000
+RED CROSS,Funafuti,Tuvalu,"Funafuti, Tuvalu",-8.515583,179.199444,11,Papua New Guinea,"Port Moresby, Papua New Guinea",-9.4438004,147.1802671,1000000,1000000
+RED CROSS,Funafuti,Tuvalu,"Funafuti, Tuvalu",-8.515583,179.199444,11,Philippines,"Manila, Philippines",14.5995124,120.9842195,1000000,1000000
+RED CROSS,Funafuti,Tuvalu,"Funafuti, Tuvalu",-8.515583,179.199444,11,Samoa,"Apia, Samoa",-13.833333,-171.75,1000000,1000000
+RED CROSS,Funafuti,Tuvalu,"Funafuti, Tuvalu",-8.515583,179.199444,11,Tonga,"Nuku'alofa, Tonga",-21.133333,-175.2,1000000,1000000
+RED CROSS,Funafuti,Tuvalu,"Funafuti, Tuvalu",-8.515583,179.199444,11,Tuvalu,"Funafuti, Tuvalu",-8.516667,179.216667,0,0
+RED CROSS,Funafuti,Tuvalu,"Funafuti, Tuvalu",-8.515583,179.199444,11,Vanuatu,"Port Vila, Vanuatu",-17.7332512,168.3273245,1000000,1000000
+RED CROSS,Koror,Palau,"Koror, Palau",7.340881,134.472214,12,Wallis and Futuna,"Mata'utu, Wallis and Futuna",-13.2825091,-176.1764475,1000000,1000000
+RED CROSS,Koror,Palau,"Koror, Palau",7.340881,134.472214,12,Marshall Islands,"Majuro Atoll, RMI",7.1164214,171.1857736,1000000,1000000
+RED CROSS,Koror,Palau,"Koror, Palau",7.340881,134.472214,12,Wallis and Futuna,"Mata'utu, Wallis and Futuna",-13.2825091,-176.1764475,1000000,1000000
+RED CROSS,Koror,Palau,"Koror, Palau",7.340881,134.472214,12,Timor-Leste,"Dili, Timor-Leste",-8.5568557,125.5603143,1000000,1000000
+RED CROSS,Koror,Palau,"Koror, Palau",7.340881,134.472214,12,Cook Islands,"Avarua District, Cook Islands",-21.2129007,-159.7823059,1000000,1000000
+RED CROSS,Koror,Palau,"Koror, Palau",7.340881,134.472214,12,Brunei,"Bandar Seri Begawan, Brunei",4.890278,114.942222,1000000,1000000
+RED CROSS,Koror,Palau,"Koror, Palau",7.340881,134.472214,12,Northern Mariana Islands,"Saipan, 96950, CNMI",15.177801,145.750967,1000000,1000000
+RED CROSS,Koror,Palau,"Koror, Palau",7.340881,134.472214,12,Tokelau,Tokelau,-9.2002,-171.8484,1000000,1000000
+RED CROSS,Koror,Palau,"Koror, Palau",7.340881,134.472214,12,Solomon Islands,"Honiara, Solomon Islands",-9.4456381,159.9728999,1000000,1000000
+RED CROSS,Koror,Palau,"Koror, Palau",7.340881,134.472214,12,Micronesia,"Palikir, Pohnpei, Micronesia",6.917222,158.158889,1000000,1000000
+RED CROSS,Koror,Palau,"Koror, Palau",7.340881,134.472214,12,American Samoa,"Pago Pago, Eastern, American Samoa",-14.279444,-170.700556,1000000,1000000
+RED CROSS,Koror,Palau,"Koror, Palau",7.340881,134.472214,12,Australia,"Canberra ACT 2601, Australia",-35.2819998,149.1286843,1000000,1000000
+RED CROSS,Koror,Palau,"Koror, Palau",7.340881,134.472214,12,Fiji,"Suva, Fiji",-18.1416,178.4419,1000000,1000000
+RED CROSS,Koror,Palau,"Koror, Palau",7.340881,134.472214,12,French Polynesia,"Pape'ete, French Polynesia",-17.535,-149.5696,1000000,1000000
+RED CROSS,Koror,Palau,"Koror, Palau",7.340881,134.472214,12,Guam,"Hagatna, Guam",13.4708908,144.7512782,1000000,1000000
+RED CROSS,Koror,Palau,"Koror, Palau",7.340881,134.472214,12,Indonesia,"Jakarta, Indonesia",-6.2087634,106.845599,1000000,1000000
+RED CROSS,Koror,Palau,"Koror, Palau",7.340881,134.472214,12,Kiribati,"Bairiki, Kiribati",1.3290526,172.9790528,1000000,1000000
+RED CROSS,Koror,Palau,"Koror, Palau",7.340881,134.472214,12,New Caledonia,"Noumea, New Caledonia",-22.2758,166.458,1000000,1000000
+RED CROSS,Koror,Palau,"Koror, Palau",7.340881,134.472214,12,New Zealand,"Wellington, New Zealand",-41.2864603,174.776236,1000000,1000000
+RED CROSS,Koror,Palau,"Koror, Palau",7.340881,134.472214,12,Niue,"Alofi, Niue",-19.0553711,-169.9178709,1000000,1000000
+RED CROSS,Koror,Palau,"Koror, Palau",7.340881,134.472214,12,Palau,Palau,7.51498,134.58252,0,0
+RED CROSS,Koror,Palau,"Koror, Palau",7.340881,134.472214,12,Papua New Guinea,"Port Moresby, Papua New Guinea",-9.4438004,147.1802671,1000000,1000000
+RED CROSS,Koror,Palau,"Koror, Palau",7.340881,134.472214,12,Philippines,"Manila, Philippines",14.5995124,120.9842195,1000000,1000000
+RED CROSS,Koror,Palau,"Koror, Palau",7.340881,134.472214,12,Samoa,"Apia, Samoa",-13.833333,-171.75,1000000,1000000
+RED CROSS,Koror,Palau,"Koror, Palau",7.340881,134.472214,12,Tonga,"Nuku'alofa, Tonga",-21.133333,-175.2,1000000,1000000
+RED CROSS,Koror,Palau,"Koror, Palau",7.340881,134.472214,12,Tuvalu,"Funafuti, Tuvalu",-8.516667,179.216667,1000000,1000000
+RED CROSS,Koror,Palau,"Koror, Palau",7.340881,134.472214,12,Vanuatu,"Port Vila, Vanuatu",-17.7332512,168.3273245,1000000,1000000
+RED CROSS,Auckland,New Zealand,"Auckland, New Zealand",-37.002139,174.850667,13,Wallis and Futuna,"Mata'utu, Wallis and Futuna",-13.2825091,-176.1764475,1000000,1000000
+RED CROSS,Auckland,New Zealand,"Auckland, New Zealand",-37.002139,174.850667,13,Marshall Islands,"Majuro Atoll, RMI",7.1164214,171.1857736,1000000,1000000
+RED CROSS,Auckland,New Zealand,"Auckland, New Zealand",-37.002139,174.850667,13,Wallis and Futuna,"Mata'utu, Wallis and Futuna",-13.2825091,-176.1764475,1000000,1000000
+RED CROSS,Auckland,New Zealand,"Auckland, New Zealand",-37.002139,174.850667,13,Timor-Leste,"Dili, Timor-Leste",-8.5568557,125.5603143,1000000,1000000
+RED CROSS,Auckland,New Zealand,"Auckland, New Zealand",-37.002139,174.850667,13,Cook Islands,"Avarua District, Cook Islands",-21.2129007,-159.7823059,1000000,1000000
+RED CROSS,Auckland,New Zealand,"Auckland, New Zealand",-37.002139,174.850667,13,Brunei,"Bandar Seri Begawan, Brunei",4.890278,114.942222,1000000,1000000
+RED CROSS,Auckland,New Zealand,"Auckland, New Zealand",-37.002139,174.850667,13,Northern Mariana Islands,"Saipan, 96950, CNMI",15.177801,145.750967,1000000,1000000
+RED CROSS,Auckland,New Zealand,"Auckland, New Zealand",-37.002139,174.850667,13,Tokelau,Tokelau,-9.2002,-171.8484,1000000,1000000
+RED CROSS,Auckland,New Zealand,"Auckland, New Zealand",-37.002139,174.850667,13,Solomon Islands,"Honiara, Solomon Islands",-9.4456381,159.9728999,1000000,1000000
+RED CROSS,Auckland,New Zealand,"Auckland, New Zealand",-37.002139,174.850667,13,Micronesia,"Palikir, Pohnpei, Micronesia",6.917222,158.158889,1000000,1000000
+RED CROSS,Auckland,New Zealand,"Auckland, New Zealand",-37.002139,174.850667,13,American Samoa,"Pago Pago, Eastern, American Samoa",-14.279444,-170.700556,1000000,1000000
+RED CROSS,Auckland,New Zealand,"Auckland, New Zealand",-37.002139,174.850667,13,Australia,"Canberra ACT 2601, Australia",-35.2819998,149.1286843,1000000,1000000
+RED CROSS,Auckland,New Zealand,"Auckland, New Zealand",-37.002139,174.850667,13,Fiji,"Suva, Fiji",-18.1416,178.4419,1000000,1000000
+RED CROSS,Auckland,New Zealand,"Auckland, New Zealand",-37.002139,174.850667,13,French Polynesia,"Pape'ete, French Polynesia",-17.535,-149.5696,1000000,1000000
+RED CROSS,Auckland,New Zealand,"Auckland, New Zealand",-37.002139,174.850667,13,Guam,"Hagatna, Guam",13.4708908,144.7512782,1000000,1000000
+RED CROSS,Auckland,New Zealand,"Auckland, New Zealand",-37.002139,174.850667,13,Indonesia,"Jakarta, Indonesia",-6.2087634,106.845599,1000000,1000000
+RED CROSS,Auckland,New Zealand,"Auckland, New Zealand",-37.002139,174.850667,13,Kiribati,"Bairiki, Kiribati",1.3290526,172.9790528,1000000,1000000
+RED CROSS,Auckland,New Zealand,"Auckland, New Zealand",-37.002139,174.850667,13,New Caledonia,"Noumea, New Caledonia",-22.2758,166.458,1000000,1000000
+RED CROSS,Auckland,New Zealand,"Auckland, New Zealand",-37.002139,174.850667,13,New Zealand,"Wellington, New Zealand",-41.2864603,174.776236,0,0
+RED CROSS,Auckland,New Zealand,"Auckland, New Zealand",-37.002139,174.850667,13,Niue,"Alofi, Niue",-19.0553711,-169.9178709,1000000,1000000
+RED CROSS,Auckland,New Zealand,"Auckland, New Zealand",-37.002139,174.850667,13,Palau,Palau,7.51498,134.58252,1000000,1000000
+RED CROSS,Auckland,New Zealand,"Auckland, New Zealand",-37.002139,174.850667,13,Papua New Guinea,"Port Moresby, Papua New Guinea",-9.4438004,147.1802671,1000000,1000000
+RED CROSS,Auckland,New Zealand,"Auckland, New Zealand",-37.002139,174.850667,13,Philippines,"Manila, Philippines",14.5995124,120.9842195,1000000,1000000
+RED CROSS,Auckland,New Zealand,"Auckland, New Zealand",-37.002139,174.850667,13,Samoa,"Apia, Samoa",-13.833333,-171.75,1000000,1000000
+RED CROSS,Auckland,New Zealand,"Auckland, New Zealand",-37.002139,174.850667,13,Tonga,"Nuku'alofa, Tonga",-21.133333,-175.2,1000000,1000000
+RED CROSS,Auckland,New Zealand,"Auckland, New Zealand",-37.002139,174.850667,13,Tuvalu,"Funafuti, Tuvalu",-8.516667,179.216667,1000000,1000000
+RED CROSS,Auckland,New Zealand,"Auckland, New Zealand",-37.002139,174.850667,13,Vanuatu,"Port Vila, Vanuatu",-17.7332512,168.3273245,1000000,1000000
+Unknown,Noumea,New Caledonia,"Noumea, New Caledonia",-22.268337,166.449861,14,Wallis and Futuna,"Mata'utu, Wallis and Futuna",-13.2825091,-176.1764475,1000000,1000000
+Unknown,Noumea,New Caledonia,"Noumea, New Caledonia",-22.268337,166.449861,14,Marshall Islands,"Majuro Atoll, RMI",7.1164214,171.1857736,1000000,1000000
+Unknown,Noumea,New Caledonia,"Noumea, New Caledonia",-22.268337,166.449861,14,Wallis and Futuna,"Mata'utu, Wallis and Futuna",-13.2825091,-176.1764475,1000000,1000000
+Unknown,Noumea,New Caledonia,"Noumea, New Caledonia",-22.268337,166.449861,14,Timor-Leste,"Dili, Timor-Leste",-8.5568557,125.5603143,1000000,1000000
+Unknown,Noumea,New Caledonia,"Noumea, New Caledonia",-22.268337,166.449861,14,Cook Islands,"Avarua District, Cook Islands",-21.2129007,-159.7823059,1000000,1000000
+Unknown,Noumea,New Caledonia,"Noumea, New Caledonia",-22.268337,166.449861,14,Brunei,"Bandar Seri Begawan, Brunei",4.890278,114.942222,1000000,1000000
+Unknown,Noumea,New Caledonia,"Noumea, New Caledonia",-22.268337,166.449861,14,Northern Mariana Islands,"Saipan, 96950, CNMI",15.177801,145.750967,1000000,1000000
+Unknown,Noumea,New Caledonia,"Noumea, New Caledonia",-22.268337,166.449861,14,Tokelau,Tokelau,-9.2002,-171.8484,1000000,1000000
+Unknown,Noumea,New Caledonia,"Noumea, New Caledonia",-22.268337,166.449861,14,Solomon Islands,"Honiara, Solomon Islands",-9.4456381,159.9728999,1000000,1000000
+Unknown,Noumea,New Caledonia,"Noumea, New Caledonia",-22.268337,166.449861,14,Micronesia,"Palikir, Pohnpei, Micronesia",6.917222,158.158889,1000000,1000000
+Unknown,Noumea,New Caledonia,"Noumea, New Caledonia",-22.268337,166.449861,14,American Samoa,"Pago Pago, Eastern, American Samoa",-14.279444,-170.700556,1000000,1000000
+Unknown,Noumea,New Caledonia,"Noumea, New Caledonia",-22.268337,166.449861,14,Australia,"Canberra ACT 2601, Australia",-35.2819998,149.1286843,1000000,1000000
+Unknown,Noumea,New Caledonia,"Noumea, New Caledonia",-22.268337,166.449861,14,Fiji,"Suva, Fiji",-18.1416,178.4419,1000000,1000000
+Unknown,Noumea,New Caledonia,"Noumea, New Caledonia",-22.268337,166.449861,14,French Polynesia,"Pape'ete, French Polynesia",-17.535,-149.5696,1000000,1000000
+Unknown,Noumea,New Caledonia,"Noumea, New Caledonia",-22.268337,166.449861,14,Guam,"Hagatna, Guam",13.4708908,144.7512782,1000000,1000000
+Unknown,Noumea,New Caledonia,"Noumea, New Caledonia",-22.268337,166.449861,14,Indonesia,"Jakarta, Indonesia",-6.2087634,106.845599,1000000,1000000
+Unknown,Noumea,New Caledonia,"Noumea, New Caledonia",-22.268337,166.449861,14,Kiribati,"Bairiki, Kiribati",1.3290526,172.9790528,1000000,1000000
+Unknown,Noumea,New Caledonia,"Noumea, New Caledonia",-22.268337,166.449861,14,New Caledonia,"Noumea, New Caledonia",-22.2758,166.458,0,0
+Unknown,Noumea,New Caledonia,"Noumea, New Caledonia",-22.268337,166.449861,14,New Zealand,"Wellington, New Zealand",-41.2864603,174.776236,1000000,1000000
+Unknown,Noumea,New Caledonia,"Noumea, New Caledonia",-22.268337,166.449861,14,Niue,"Alofi, Niue",-19.0553711,-169.9178709,1000000,1000000
+Unknown,Noumea,New Caledonia,"Noumea, New Caledonia",-22.268337,166.449861,14,Palau,Palau,7.51498,134.58252,1000000,1000000
+Unknown,Noumea,New Caledonia,"Noumea, New Caledonia",-22.268337,166.449861,14,Papua New Guinea,"Port Moresby, Papua New Guinea",-9.4438004,147.1802671,1000000,1000000
+Unknown,Noumea,New Caledonia,"Noumea, New Caledonia",-22.268337,166.449861,14,Philippines,"Manila, Philippines",14.5995124,120.9842195,1000000,1000000
+Unknown,Noumea,New Caledonia,"Noumea, New Caledonia",-22.268337,166.449861,14,Samoa,"Apia, Samoa",-13.833333,-171.75,1000000,1000000
+Unknown,Noumea,New Caledonia,"Noumea, New Caledonia",-22.268337,166.449861,14,Tonga,"Nuku'alofa, Tonga",-21.133333,-175.2,1000000,1000000
+Unknown,Noumea,New Caledonia,"Noumea, New Caledonia",-22.268337,166.449861,14,Tuvalu,"Funafuti, Tuvalu",-8.516667,179.216667,1000000,1000000
+Unknown,Noumea,New Caledonia,"Noumea, New Caledonia",-22.268337,166.449861,14,Vanuatu,"Port Vila, Vanuatu",-17.7332512,168.3273245,1000000,1000000
+Unknown,Majuro,Marshall Islands,"Majuro, Marshall Islands",7.068667,171.282184,15,Wallis and Futuna,"Mata'utu, Wallis and Futuna",-13.2825091,-176.1764475,1000000,1000000
+Unknown,Majuro,Marshall Islands,"Majuro, Marshall Islands",7.068667,171.282184,15,Marshall Islands,"Majuro Atoll, RMI",7.1164214,171.1857736,0,0
+Unknown,Majuro,Marshall Islands,"Majuro, Marshall Islands",7.068667,171.282184,15,Wallis and Futuna,"Mata'utu, Wallis and Futuna",-13.2825091,-176.1764475,1000000,1000000
+Unknown,Majuro,Marshall Islands,"Majuro, Marshall Islands",7.068667,171.282184,15,Timor-Leste,"Dili, Timor-Leste",-8.5568557,125.5603143,1000000,1000000
+Unknown,Majuro,Marshall Islands,"Majuro, Marshall Islands",7.068667,171.282184,15,Cook Islands,"Avarua District, Cook Islands",-21.2129007,-159.7823059,1000000,1000000
+Unknown,Majuro,Marshall Islands,"Majuro, Marshall Islands",7.068667,171.282184,15,Brunei,"Bandar Seri Begawan, Brunei",4.890278,114.942222,1000000,1000000
+Unknown,Majuro,Marshall Islands,"Majuro, Marshall Islands",7.068667,171.282184,15,Northern Mariana Islands,"Saipan, 96950, CNMI",15.177801,145.750967,1000000,1000000
+Unknown,Majuro,Marshall Islands,"Majuro, Marshall Islands",7.068667,171.282184,15,Tokelau,Tokelau,-9.2002,-171.8484,1000000,1000000
+Unknown,Majuro,Marshall Islands,"Majuro, Marshall Islands",7.068667,171.282184,15,Solomon Islands,"Honiara, Solomon Islands",-9.4456381,159.9728999,1000000,1000000
+Unknown,Majuro,Marshall Islands,"Majuro, Marshall Islands",7.068667,171.282184,15,Micronesia,"Palikir, Pohnpei, Micronesia",6.917222,158.158889,1000000,1000000
+Unknown,Majuro,Marshall Islands,"Majuro, Marshall Islands",7.068667,171.282184,15,American Samoa,"Pago Pago, Eastern, American Samoa",-14.279444,-170.700556,1000000,1000000
+Unknown,Majuro,Marshall Islands,"Majuro, Marshall Islands",7.068667,171.282184,15,Australia,"Canberra ACT 2601, Australia",-35.2819998,149.1286843,1000000,1000000
+Unknown,Majuro,Marshall Islands,"Majuro, Marshall Islands",7.068667,171.282184,15,Fiji,"Suva, Fiji",-18.1416,178.4419,1000000,1000000
+Unknown,Majuro,Marshall Islands,"Majuro, Marshall Islands",7.068667,171.282184,15,French Polynesia,"Pape'ete, French Polynesia",-17.535,-149.5696,1000000,1000000
+Unknown,Majuro,Marshall Islands,"Majuro, Marshall Islands",7.068667,171.282184,15,Guam,"Hagatna, Guam",13.4708908,144.7512782,1000000,1000000
+Unknown,Majuro,Marshall Islands,"Majuro, Marshall Islands",7.068667,171.282184,15,Indonesia,"Jakarta, Indonesia",-6.2087634,106.845599,1000000,1000000
+Unknown,Majuro,Marshall Islands,"Majuro, Marshall Islands",7.068667,171.282184,15,Kiribati,"Bairiki, Kiribati",1.3290526,172.9790528,1000000,1000000
+Unknown,Majuro,Marshall Islands,"Majuro, Marshall Islands",7.068667,171.282184,15,New Caledonia,"Noumea, New Caledonia",-22.2758,166.458,1000000,1000000
+Unknown,Majuro,Marshall Islands,"Majuro, Marshall Islands",7.068667,171.282184,15,New Zealand,"Wellington, New Zealand",-41.2864603,174.776236,1000000,1000000
+Unknown,Majuro,Marshall Islands,"Majuro, Marshall Islands",7.068667,171.282184,15,Niue,"Alofi, Niue",-19.0553711,-169.9178709,1000000,1000000
+Unknown,Majuro,Marshall Islands,"Majuro, Marshall Islands",7.068667,171.282184,15,Palau,Palau,7.51498,134.58252,1000000,1000000
+Unknown,Majuro,Marshall Islands,"Majuro, Marshall Islands",7.068667,171.282184,15,Papua New Guinea,"Port Moresby, Papua New Guinea",-9.4438004,147.1802671,1000000,1000000
+Unknown,Majuro,Marshall Islands,"Majuro, Marshall Islands",7.068667,171.282184,15,Philippines,"Manila, Philippines",14.5995124,120.9842195,1000000,1000000
+Unknown,Majuro,Marshall Islands,"Majuro, Marshall Islands",7.068667,171.282184,15,Samoa,"Apia, Samoa",-13.833333,-171.75,1000000,1000000
+Unknown,Majuro,Marshall Islands,"Majuro, Marshall Islands",7.068667,171.282184,15,Tonga,"Nuku'alofa, Tonga",-21.133333,-175.2,1000000,1000000
+Unknown,Majuro,Marshall Islands,"Majuro, Marshall Islands",7.068667,171.282184,15,Tuvalu,"Funafuti, Tuvalu",-8.516667,179.216667,1000000,1000000
+Unknown,Majuro,Marshall Islands,"Majuro, Marshall Islands",7.068667,171.282184,15,Vanuatu,"Port Vila, Vanuatu",-17.7332512,168.3273245,1000000,1000000
+UNHRD,Subang,Malaysia,"43000 Subang, Selangor, Malaysia",3.130442,101.5518262,16,Wallis and Futuna,"Mata'utu, Wallis and Futuna",-13.2825091,-176.1764475,1000000,1000000
+UNHRD,Subang,Malaysia,"43000 Subang, Selangor, Malaysia",3.130442,101.5518262,16,Marshall Islands,"Majuro Atoll, RMI",7.1164214,171.1857736,1000000,1000000
+UNHRD,Subang,Malaysia,"43000 Subang, Selangor, Malaysia",3.130442,101.5518262,16,Wallis and Futuna,"Mata'utu, Wallis and Futuna",-13.2825091,-176.1764475,1000000,1000000
+UNHRD,Subang,Malaysia,"43000 Subang, Selangor, Malaysia",3.130442,101.5518262,16,Timor-Leste,"Dili, Timor-Leste",-8.5568557,125.5603143,1000000,1000000
+UNHRD,Subang,Malaysia,"43000 Subang, Selangor, Malaysia",3.130442,101.5518262,16,Cook Islands,"Avarua District, Cook Islands",-21.2129007,-159.7823059,1000000,1000000
+UNHRD,Subang,Malaysia,"43000 Subang, Selangor, Malaysia",3.130442,101.5518262,16,Brunei,"Bandar Seri Begawan, Brunei",4.890278,114.942222,1000000,1000000
+UNHRD,Subang,Malaysia,"43000 Subang, Selangor, Malaysia",3.130442,101.5518262,16,Northern Mariana Islands,"Saipan, 96950, CNMI",15.177801,145.750967,1000000,1000000
+UNHRD,Subang,Malaysia,"43000 Subang, Selangor, Malaysia",3.130442,101.5518262,16,Tokelau,Tokelau,-9.2002,-171.8484,1000000,1000000
+UNHRD,Subang,Malaysia,"43000 Subang, Selangor, Malaysia",3.130442,101.5518262,16,Solomon Islands,"Honiara, Solomon Islands",-9.4456381,159.9728999,1000000,1000000
+UNHRD,Subang,Malaysia,"43000 Subang, Selangor, Malaysia",3.130442,101.5518262,16,Micronesia,"Palikir, Pohnpei, Micronesia",6.917222,158.158889,1000000,1000000
+UNHRD,Subang,Malaysia,"43000 Subang, Selangor, Malaysia",3.130442,101.5518262,16,American Samoa,"Pago Pago, Eastern, American Samoa",-14.279444,-170.700556,1000000,1000000
+UNHRD,Subang,Malaysia,"43000 Subang, Selangor, Malaysia",3.130442,101.5518262,16,Australia,"Canberra ACT 2601, Australia",-35.2819998,149.1286843,1000000,1000000
+UNHRD,Subang,Malaysia,"43000 Subang, Selangor, Malaysia",3.130442,101.5518262,16,Fiji,"Suva, Fiji",-18.1416,178.4419,1000000,1000000
+UNHRD,Subang,Malaysia,"43000 Subang, Selangor, Malaysia",3.130442,101.5518262,16,French Polynesia,"Pape'ete, French Polynesia",-17.535,-149.5696,1000000,1000000
+UNHRD,Subang,Malaysia,"43000 Subang, Selangor, Malaysia",3.130442,101.5518262,16,Guam,"Hagatna, Guam",13.4708908,144.7512782,1000000,1000000
+UNHRD,Subang,Malaysia,"43000 Subang, Selangor, Malaysia",3.130442,101.5518262,16,Indonesia,"Jakarta, Indonesia",-6.2087634,106.845599,1000000,1000000
+UNHRD,Subang,Malaysia,"43000 Subang, Selangor, Malaysia",3.130442,101.5518262,16,Kiribati,"Bairiki, Kiribati",1.3290526,172.9790528,1000000,1000000
+UNHRD,Subang,Malaysia,"43000 Subang, Selangor, Malaysia",3.130442,101.5518262,16,New Caledonia,"Noumea, New Caledonia",-22.2758,166.458,1000000,1000000
+UNHRD,Subang,Malaysia,"43000 Subang, Selangor, Malaysia",3.130442,101.5518262,16,New Zealand,"Wellington, New Zealand",-41.2864603,174.776236,1000000,1000000
+UNHRD,Subang,Malaysia,"43000 Subang, Selangor, Malaysia",3.130442,101.5518262,16,Niue,"Alofi, Niue",-19.0553711,-169.9178709,1000000,1000000
+UNHRD,Subang,Malaysia,"43000 Subang, Selangor, Malaysia",3.130442,101.5518262,16,Palau,Palau,7.51498,134.58252,1000000,1000000
+UNHRD,Subang,Malaysia,"43000 Subang, Selangor, Malaysia",3.130442,101.5518262,16,Papua New Guinea,"Port Moresby, Papua New Guinea",-9.4438004,147.1802671,1000000,1000000
+UNHRD,Subang,Malaysia,"43000 Subang, Selangor, Malaysia",3.130442,101.5518262,16,Philippines,"Manila, Philippines",14.5995124,120.9842195,1000000,1000000
+UNHRD,Subang,Malaysia,"43000 Subang, Selangor, Malaysia",3.130442,101.5518262,16,Samoa,"Apia, Samoa",-13.833333,-171.75,1000000,1000000
+UNHRD,Subang,Malaysia,"43000 Subang, Selangor, Malaysia",3.130442,101.5518262,16,Tonga,"Nuku'alofa, Tonga",-21.133333,-175.2,1000000,1000000
+UNHRD,Subang,Malaysia,"43000 Subang, Selangor, Malaysia",3.130442,101.5518262,16,Tuvalu,"Funafuti, Tuvalu",-8.516667,179.216667,1000000,1000000
+UNHRD,Subang,Malaysia,"43000 Subang, Selangor, Malaysia",3.130442,101.5518262,16,Vanuatu,"Port Vila, Vanuatu",-17.7332512,168.3273245,1000000,1000000

@@ -1,0 +1,19 @@
+Attribute,Mode,gglAddress,Number
+FixedAddlTime_Hrs,Truck,DEFAULT,10
+FixedAddlTime_Hrs,Air,DEFAULT,2000000
+StretchTimeFactor,Truck,DEFAULT,1
+StretchTimeFactor,Air,DEFAULT,1
+AirSpeed_km_hr,Air,DEFAULT,600
+FixedAddlCost_USD,Truck,DEFAULT,2640
+FixedAddlCost_USD,Air,DEFAULT,4500
+VarCost_USD_ton_km,Truck,DEFAULT,120
+VarCost_USD_ton_km,Air,DEFAULT,1.21
+StretchDistanceFactor,Truck,DEFAULT,1
+StretchDistanceFactor,Air,DEFAULT,1
+TruckRoadKm_per_CrowKm,Truck,DEFAULT,1
+TruckKmPerHrOnRoad,Truck,DEFAULT,30
+FixedAddlTime_Hrs,Air,"San Francisco, California",2000000
+FixedAddlTime_Hrs,Air,"Dallas, Texas",2000000
+FixedAddlTime_Hrs,Air,"Atlanta, Georgia",2000000
+FixedAddlTime_Hrs,Air,"Washington D.C., District of Columbia",2000000
+FixedAddlTime_Hrs,Air,"Philadelphia, Pensylvania",2000000

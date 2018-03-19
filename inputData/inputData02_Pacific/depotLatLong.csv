@@ -1,0 +1,18 @@
+Agency,NameCity,gglCountryAscii,gglAddressAscii,gglLat,gglLong,Order
+WORLD VISION,Port Vila,Vanuatu,"Port Vila, Vanuatu",-17.745611,168.318139,0
+DFAT,Brisbane,Australia,"Brisbane, Australia",-27.383333,153.133333,1
+DFAT,Sydney,Australia,"Sydney, Australia",-34.016667,151.116667,2
+RED CROSS,Honiara,Solomon Islands,"Honiara, Solomon Islands",-9.427533,159.9316,3
+RED CROSS,Pohnpei,Federated States of Micronesia,"Pohnpei, Federated States of Micronesia",6.960506,158.211436,4
+WORLD VISION,Lae,Papua New Guinea,"Lae, Papua New Guinea",-6.716667,146.983333,5
+RED CROSS,Suva,Fiji,"Suva, Fiji",-18.227417,178.165483,6
+RED CROSS,Tarawa,Kiribati,"Tarawa, Kiribati",-17.826067,179.322683,7
+NDMO,Apia,Samoa,"Apia, Samoa",-13.841539,-171.810883,8
+RED CROSS,Nukualofa,Tonga,"Nukualofa, Tonga",-21.2412,-175.141367,9
+RED CROSS,Rarotonga,Cook Islands,"Rarotonga, Cook Islands",-21.2065,-159.755417,10
+RED CROSS,Funafuti,Tuvalu,"Funafuti, Tuvalu",-8.515583,179.199444,11
+RED CROSS,Koror,Palau,"Koror, Palau",7.340881,134.472214,12
+RED CROSS,Auckland,New Zealand,"Auckland, New Zealand",-37.002139,174.850667,13
+Unknown,Noumea,New Caledonia,"Noumea, New Caledonia",-22.268337,166.449861,14
+Unknown,Majuro,Marshall Islands,"Majuro, Marshall Islands",7.068667,171.282184,15
+UNHRD,Subang,Malaysia,"43000 Subang, Selangor, Malaysia",3.130442,101.5518262,16

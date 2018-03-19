@@ -1,0 +1,18 @@
+Attribute,Mode,gglAddress,Number
+FixedAddlTime_Hrs,Truck,DEFAULT,6
+FixedAddlTime_Hrs,Truck,"Accra, Ghana",6
+FixedAddlTime_Hrs,Truck,"Brindisi, Italy",6
+FixedAddlTime_Hrs,Air,DEFAULT,12
+FixedAddlTime_Hrs,Air,"Accra, Ghana",12
+FixedAddlTime_Hrs,Air,Dubai - United Arab Emirates,12
+StretchTimeFactor,Truck,DEFAULT,1
+StretchTimeFactor,Air,DEFAULT,1
+AirSpeed_km_hr,Air,DEFAULT,600
+FixedAddlCost_USD,Truck,DEFAULT,10
+FixedAddlCost_USD,Air,DEFAULT,25
+VarCost_USD_ton_km,Truck,DEFAULT,0.2
+VarCost_USD_ton_km,Air,DEFAULT,0.5
+StretchDistanceFactor,Truck,DEFAULT,1
+StretchDistanceFactor,Air,DEFAULT,1
+TruckRoadKm_per_CrowKm,Truck,DEFAULT,1.2
+TruckKmPerHrOnRoad,Truck,DEFAULT,60

@@ -1,0 +1,75 @@
+ItemName,Warehouse(Region),gglAddress,gglCountry,Total
+BlanketGen,Asia,"43000 Subang, Selangor, Malaysia",Malaysia,2220
+BlanketGen,Africa,"Accra, Ghana",Ghana,24660
+BlanketGen,Asia,"Ankara/Ankara Province, Turkey",Turkey,322369
+BlanketGen,Oceania,"Auckland, New Zealand",New Zealand,500
+BlanketGen,Europe,"Brindisi, Italy",Italy,41100
+BlanketGen,Oceania,"Brisbane QLD, Australia",Australia,16784
+BlanketGen,Asia,Dubai - United Arab Emirates,United Arab Emirates,225024
+BlanketGen,Europe,"Frankfurt, Germany",Germany,2
+BlanketGen,Asia,"Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia",Malaysia,62936
+BlanketGen,Oceania,"Lae, Papua New Guinea",Papua New Guinea,600
+BlanketGen,Europe,"Las Palmas, Spain",Spain,12799
+BlanketGen,Europe,"Madrid, Spain",Spain,9600
+BlanketGen,Americas,"Miami, FL, USA",United States,3025
+BlanketGen,Americas,"Ottawa, ON, Canada",Canada,30000
+BlanketGen,Americas,Panama,Panama,75791
+BlanketGen,Europe,"Roissy-en-France, France",France,18960
+BlanketGen,Oceania,"Taren Point NSW, Australia",Australia,4025
+BlanketGen,Europe,"Vienna, Austria",Austria,2168
+BucketGen,Africa,"Accra, Ghana",Ghana,19681
+BucketGen,Europe,"Bicester, Oxfordshire, UK",United Kingdom,100
+BucketGen,Oceania,"Brisbane QLD, Australia",Australia,80
+BucketGen,Asia,Dubai - United Arab Emirates,United Arab Emirates,59507
+BucketGen,Asia,"Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia",Malaysia,5520
+BucketGen,Americas,"Les Abymes, Guadeloupe",Guadeloupe,1000
+BucketGen,Americas,"Ottawa, ON, Canada",Canada,4900
+BucketGen,Americas,Panama,Panama,16056
+JerryCanGen,Asia,"43000 Subang, Selangor, Malaysia",Malaysia,15011
+JerryCanGen,Africa,"Accra, Ghana",Ghana,52250
+JerryCanGen,Europe,"Brindisi, Italy",Italy,27190
+JerryCanGen,Oceania,"Brisbane QLD, Australia",Australia,8533
+JerryCanGen,Asia,Dubai - United Arab Emirates,United Arab Emirates,123496
+JerryCanGen,Asia,"Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia",Malaysia,74850
+JerryCanGen,Europe,"Las Palmas, Spain",Spain,13275
+JerryCanGen,Americas,"Les Abymes, Guadeloupe",Guadeloupe,3793
+JerryCanGen,Europe,"Madrid, Spain",Spain,8395
+JerryCanGen,Americas,"Miami, FL, USA",United States,3000
+JerryCanGen,Americas,"Ottawa, ON, Canada",Canada,19996
+JerryCanGen,Americas,Panama,Panama,77741
+JerryCanGen,Europe,"Roissy-en-France, France",France,10000
+KitchenSetGen,Asia,"43000 Subang, Selangor, Malaysia",Malaysia,3000
+KitchenSetGen,Africa,"Accra, Ghana",Ghana,23926
+KitchenSetGen,Europe,"Brindisi, Italy",Italy,5217
+KitchenSetGen,Oceania,"Brisbane QLD, Australia",Australia,389
+KitchenSetGen,Asia,Dubai - United Arab Emirates,United Arab Emirates,33815
+KitchenSetGen,Asia,"Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia",Malaysia,30901
+KitchenSetGen,Europe,"Las Palmas, Spain",Spain,2329
+KitchenSetGen,Americas,"Les Abymes, Guadeloupe",Guadeloupe,997
+KitchenSetGen,Europe,"Madrid, Spain",Spain,3000
+KitchenSetGen,Americas,"Ottawa, ON, Canada",Canada,5000
+KitchenSetGen,Americas,Panama,Panama,16552
+KitchenSetGen,Europe,"Roissy-en-France, France",France,1017
+LatrinePlateGen,Asia,"43000 Subang, Selangor, Malaysia",Malaysia,300
+LatrinePlateGen,Europe,"Bicester, Oxfordshire, UK",United Kingdom,65
+LatrinePlateGen,Europe,"Brindisi, Italy",Italy,3260
+LatrinePlateGen,Asia,Dubai - United Arab Emirates,United Arab Emirates,808
+LatrinePlateGen,Americas,Panama,Panama,217
+MosquitoNetGen,Africa,"Accra, Ghana",Ghana,34730
+MosquitoNetGen,Europe,"Brindisi, Italy",Italy,2000
+MosquitoNetGen,Oceania,"Brisbane QLD, Australia",Australia,500
+MosquitoNetGen,Asia,Dubai - United Arab Emirates,United Arab Emirates,206835
+MosquitoNetGen,Europe,"Igualada, Barcelona, Spain",Spain,10
+MosquitoNetGen,Asia,"Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia",Malaysia,49190
+MosquitoNetGen,Oceania,"Lae, Papua New Guinea",Papua New Guinea,1600
+MosquitoNetGen,Europe,"Las Palmas, Spain",Spain,24195
+MosquitoNetGen,Americas,"Les Abymes, Guadeloupe",Guadeloupe,4530
+MosquitoNetGen,Europe,"Madrid, Spain",Spain,5850
+MosquitoNetGen,Americas,"Ottawa, ON, Canada",Canada,10000
+MosquitoNetGen,Americas,Panama,Panama,56148
+SoapBarGen,Asia,"43000 Subang, Selangor, Malaysia",Malaysia,34200
+SoapBarGen,Africa,"Accra, Ghana",Ghana,36210
+SoapBarGen,Europe,"Brindisi, Italy",Italy,2200
+SoapBarGen,Asia,Dubai - United Arab Emirates,United Arab Emirates,10187
+SoapBarGen,Europe,"Igualada, Barcelona, Spain",Spain,2500
+SoapBarGen,Americas,Panama,Panama,26298

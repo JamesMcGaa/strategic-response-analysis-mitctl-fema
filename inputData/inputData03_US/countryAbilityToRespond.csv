@@ -1,0 +1,49 @@
+gglCountry,item,capacityToRespond
+California,DEFAULT,10
+Nevada,DEFAULT,10
+Washington,DEFAULT,10
+Oregon,DEFAULT,10
+Montana,DEFAULT,10
+Alabama,DEFAULT,10
+Arizona,DEFAULT,10
+North Carolina,DEFAULT,10
+Illinois,DEFAULT,10
+Florida,DEFAULT,10
+West Virginia,DEFAULT,10
+North Dakota,DEFAULT,10
+Missouri,DEFAULT,10
+Texas,DEFAULT,10
+New York,DEFAULT,10
+Alaska,DEFAULT,10
+Pennsylvania,DEFAULT,10
+South Dakota,DEFAULT,10
+Maryland,DEFAULT,10
+New Hampshire,DEFAULT,10
+New Jersey,DEFAULT,10
+Wisconsin,DEFAULT,10
+Tennessee,DEFAULT,10
+Iowa,DEFAULT,10
+Georgia,DEFAULT,10
+Minnesota,DEFAULT,10
+Ohio,DEFAULT,10
+Oklahoma,DEFAULT,10
+Kentucky,DEFAULT,10
+Kansas,DEFAULT,10
+Colorado,DEFAULT,10
+Mississippi,DEFAULT,10
+Louisiana,DEFAULT,10
+Virginia,DEFAULT,10
+Massachusetts,DEFAULT,10
+Connecticut,DEFAULT,10
+Rhode Island,DEFAULT,10
+Nebraska,DEFAULT,10
+Arkansas,DEFAULT,10
+Maine,DEFAULT,10
+South Carolina,DEFAULT,10
+Michigan,DEFAULT,10
+Wyoming,DEFAULT,10
+Indiana,DEFAULT,10
+Utah,DEFAULT,10
+Marshall Islands,DEFAULT,10
+New Mexico,DEFAULT,10
+French Polynesia,DEFAULT,10

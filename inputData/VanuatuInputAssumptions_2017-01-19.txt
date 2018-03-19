@@ -1,0 +1,16 @@
+10-12 hours port villa to tanna by boat
+
+142 miles
+229 km
+
+km/hr = 229/11 = 20 km/hr
+
+
+truck costs = 120 USD / Cubic Meter
+
+average cuibc meter / metric ton = 3.67 (ration of simple averages of 8 items)
+
+Thus, truck costs = 120usd/CBM * 3.67CBM/1MetricTon = 440USD/metric ton per hour
+
+Assumption: 6 hours back and forth per trip (given flood conditions)
+cost = 440USD * 6 = 2640 per metric ton

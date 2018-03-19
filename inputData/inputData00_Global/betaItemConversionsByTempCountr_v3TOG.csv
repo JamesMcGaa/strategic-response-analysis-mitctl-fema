@@ -1,0 +1,3451 @@
+Item,Disaster Type,Month,gglCountry,PersonsPerItem
+MosquitoNetGen,DEFAULT,DEFAULT,Central African Republic,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Sao Tome and Principe,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Cote d'Ivoire,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Libya,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Democratic Republic of the Congo,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,The Gambia,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Guinea-Bissau,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Cape Verde,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Reunion,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Saint Helena,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Mayotte,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Tanzania,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,South Sudan,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Congo,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Algeria,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Angola,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Benin,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Botswana,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Burkina Faso,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Burundi,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Cameroon,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Chad,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Comoros,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Djibouti,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Egypt,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Equatorial Guinea,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Eritrea,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Ethiopia,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Gabon,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Ghana,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Guinea,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Kenya,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Lesotho,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Liberia,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Madagascar,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Malawi,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Mali,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Mauritania,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Mauritius,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Morocco,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Mozambique,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Namibia,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Niger,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Nigeria,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Rwanda,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Senegal,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Seychelles,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Sierra Leone,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Somalia,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,South Africa,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Sudan,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Swaziland,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Togo,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Tunisia,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Uganda,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Zambia,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Zimbabwe,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Taiwan,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Macau,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,North Korea,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Vietnam,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Timor-Leste,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Syria,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Brunei,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Iran,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,South Korea,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Israel,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Yemen,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Hong Kong,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Laos,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,China,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Russia,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Afghanistan,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Bahrain,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Bangladesh,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Bhutan,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Cambodia,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,India,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Indonesia,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Iraq,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Japan,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Jordan,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Kazakhstan,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Kuwait,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Kyrgyzstan,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Lebanon,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Malaysia,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Maldives,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Mongolia,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Republic of the Union of Myanmar,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Nepal,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Oman,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Pakistan,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Philippines,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Qatar,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Saudi Arabia,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Singapore,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Sri Lanka,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Tajikistan,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Thailand,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Turkey,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Turkmenistan,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,United Arab Emirates,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Uzbekistan,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Germany,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Portugal,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Czech Republic,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Moldova,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Macedonia (FYROM),1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Bosnia and Herzegovina,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Spain,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,United Kingdom,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Serbia,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Albania,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Armenia,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Austria,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Azerbaijan,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Belarus,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Belgium,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Bulgaria,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Croatia,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Nicosia,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Denmark,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Estonia,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Finland,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,France,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Georgia,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Greece,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Hungary,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Iceland,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Ireland,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Italy,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Latvia,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Lithuania,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Luxembourg,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Malta,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Montenegro,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,The Netherlands,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Norway,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Poland,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Romania,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Slovakia,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Slovenia,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Sweden,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Switzerland,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Ukraine,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Saint Vincent and the Grenadines,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,British Virgin Islands,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Dominican Republic,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,U.S. Virgin Islands,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Curacao,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Turks and Caicos Islands,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Saint Kitts and Nevis,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Martinique,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Saint Lucia,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Guadeloupe,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Anguilla,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Antigua and Barbuda,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,The Bahamas,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Barbados,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Belize,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Bermuda,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Canada,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Cayman Islands,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Costa Rica,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Cuba,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Dominica,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,El Salvador,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Grenada,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Guatemala,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Haiti,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Honduras,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Jamaica,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Mexico,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Montserrat,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Nicaragua,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Panama,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Puerto Rico,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Trinidad and Tobago,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,United States,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Wallis and Futuna,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Marshall Islands,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Cook Islands,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Northern Mariana Islands,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Tokelau,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Solomon Islands,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Micronesia,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,American Samoa,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Australia,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Fiji,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,French Polynesia,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Guam,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Kiribati,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,New Caledonia,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,New Zealand,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Niue,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Palau,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Papua New Guinea,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Samoa,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Tonga,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Tuvalu,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Vanuatu,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Argentina,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Bolivia,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Brazil,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Chile,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Colombia,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Ecuador,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,French Guiana,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Guyana,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Paraguay,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Peru,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Suriname,2.5
+MosquitoNetGen,DEFAULT,DEFAULT,Uruguay,1.00E+15
+MosquitoNetGen,DEFAULT,DEFAULT,Venezuela,2.5
+MosquitoNetGen,DEFAULT,-1,Central African Republic,2.5
+MosquitoNetGen,DEFAULT,-1,Sao Tome and Principe,2.5
+MosquitoNetGen,DEFAULT,-1,Cote d'Ivoire,2.5
+MosquitoNetGen,DEFAULT,-1,Libya,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Democratic Republic of the Congo,2.5
+MosquitoNetGen,DEFAULT,-1,The Gambia,2.5
+MosquitoNetGen,DEFAULT,-1,Guinea-Bissau,2.5
+MosquitoNetGen,DEFAULT,-1,Cape Verde,2.5
+MosquitoNetGen,DEFAULT,-1,Reunion,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Saint Helena,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Mayotte,2.5
+MosquitoNetGen,DEFAULT,-1,Tanzania,2.5
+MosquitoNetGen,DEFAULT,-1,South Sudan,2.5
+MosquitoNetGen,DEFAULT,-1,Congo,2.5
+MosquitoNetGen,DEFAULT,-1,Algeria,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Angola,2.5
+MosquitoNetGen,DEFAULT,-1,Benin,2.5
+MosquitoNetGen,DEFAULT,-1,Botswana,2.5
+MosquitoNetGen,DEFAULT,-1,Burkina Faso,2.5
+MosquitoNetGen,DEFAULT,-1,Burundi,2.5
+MosquitoNetGen,DEFAULT,-1,Cameroon,2.5
+MosquitoNetGen,DEFAULT,-1,Chad,2.5
+MosquitoNetGen,DEFAULT,-1,Comoros,2.5
+MosquitoNetGen,DEFAULT,-1,Djibouti,2.5
+MosquitoNetGen,DEFAULT,-1,Egypt,2.5
+MosquitoNetGen,DEFAULT,-1,Equatorial Guinea,2.5
+MosquitoNetGen,DEFAULT,-1,Eritrea,2.5
+MosquitoNetGen,DEFAULT,-1,Ethiopia,2.5
+MosquitoNetGen,DEFAULT,-1,Gabon,2.5
+MosquitoNetGen,DEFAULT,-1,Ghana,2.5
+MosquitoNetGen,DEFAULT,-1,Guinea,2.5
+MosquitoNetGen,DEFAULT,-1,Kenya,2.5
+MosquitoNetGen,DEFAULT,-1,Lesotho,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Liberia,2.5
+MosquitoNetGen,DEFAULT,-1,Madagascar,2.5
+MosquitoNetGen,DEFAULT,-1,Malawi,2.5
+MosquitoNetGen,DEFAULT,-1,Mali,2.5
+MosquitoNetGen,DEFAULT,-1,Mauritania,2.5
+MosquitoNetGen,DEFAULT,-1,Mauritius,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Morocco,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Mozambique,2.5
+MosquitoNetGen,DEFAULT,-1,Namibia,2.5
+MosquitoNetGen,DEFAULT,-1,Niger,2.5
+MosquitoNetGen,DEFAULT,-1,Nigeria,2.5
+MosquitoNetGen,DEFAULT,-1,Rwanda,2.5
+MosquitoNetGen,DEFAULT,-1,Senegal,2.5
+MosquitoNetGen,DEFAULT,-1,Seychelles,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Sierra Leone,2.5
+MosquitoNetGen,DEFAULT,-1,Somalia,2.5
+MosquitoNetGen,DEFAULT,-1,South Africa,2.5
+MosquitoNetGen,DEFAULT,-1,Sudan,2.5
+MosquitoNetGen,DEFAULT,-1,Swaziland,2.5
+MosquitoNetGen,DEFAULT,-1,Togo,2.5
+MosquitoNetGen,DEFAULT,-1,Tunisia,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Uganda,2.5
+MosquitoNetGen,DEFAULT,-1,Zambia,2.5
+MosquitoNetGen,DEFAULT,-1,Zimbabwe,2.5
+MosquitoNetGen,DEFAULT,-1,Taiwan,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Macau,1.00E+15
+MosquitoNetGen,DEFAULT,-1,North Korea,2.5
+MosquitoNetGen,DEFAULT,-1,Vietnam,2.5
+MosquitoNetGen,DEFAULT,-1,Timor-Leste,2.5
+MosquitoNetGen,DEFAULT,-1,Syria,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Brunei,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Iran,2.5
+MosquitoNetGen,DEFAULT,-1,South Korea,2.5
+MosquitoNetGen,DEFAULT,-1,Israel,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Yemen,2.5
+MosquitoNetGen,DEFAULT,-1,Hong Kong,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Laos,2.5
+MosquitoNetGen,DEFAULT,-1,China,2.5
+MosquitoNetGen,DEFAULT,-1,Russia,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Afghanistan,2.5
+MosquitoNetGen,DEFAULT,-1,Bahrain,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Bangladesh,2.5
+MosquitoNetGen,DEFAULT,-1,Bhutan,2.5
+MosquitoNetGen,DEFAULT,-1,Cambodia,2.5
+MosquitoNetGen,DEFAULT,-1,India,2.5
+MosquitoNetGen,DEFAULT,-1,Indonesia,2.5
+MosquitoNetGen,DEFAULT,-1,Iraq,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Japan,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Jordan,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Kazakhstan,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Kuwait,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Kyrgyzstan,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Lebanon,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Malaysia,2.5
+MosquitoNetGen,DEFAULT,-1,Maldives,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Mongolia,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Republic of the Union of Myanmar,2.5
+MosquitoNetGen,DEFAULT,-1,Nepal,2.5
+MosquitoNetGen,DEFAULT,-1,Oman,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Pakistan,2.5
+MosquitoNetGen,DEFAULT,-1,Philippines,2.5
+MosquitoNetGen,DEFAULT,-1,Qatar,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Saudi Arabia,2.5
+MosquitoNetGen,DEFAULT,-1,Singapore,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Sri Lanka,2.5
+MosquitoNetGen,DEFAULT,-1,Tajikistan,2.5
+MosquitoNetGen,DEFAULT,-1,Thailand,2.5
+MosquitoNetGen,DEFAULT,-1,Turkey,2.5
+MosquitoNetGen,DEFAULT,-1,Turkmenistan,1.00E+15
+MosquitoNetGen,DEFAULT,-1,United Arab Emirates,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Uzbekistan,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Germany,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Portugal,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Czech Republic,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Moldova,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Macedonia (FYROM),1.00E+15
+MosquitoNetGen,DEFAULT,-1,Bosnia and Herzegovina,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Spain,1.00E+15
+MosquitoNetGen,DEFAULT,-1,United Kingdom,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Serbia,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Albania,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Armenia,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Austria,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Azerbaijan,2.5
+MosquitoNetGen,DEFAULT,-1,Belarus,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Belgium,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Bulgaria,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Croatia,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Nicosia,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Denmark,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Estonia,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Finland,1.00E+15
+MosquitoNetGen,DEFAULT,-1,France,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Georgia,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Greece,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Hungary,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Iceland,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Ireland,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Italy,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Latvia,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Lithuania,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Luxembourg,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Malta,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Montenegro,1.00E+15
+MosquitoNetGen,DEFAULT,-1,The Netherlands,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Norway,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Poland,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Romania,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Slovakia,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Slovenia,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Sweden,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Switzerland,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Ukraine,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Saint Vincent and the Grenadines,1.00E+15
+MosquitoNetGen,DEFAULT,-1,British Virgin Islands,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Dominican Republic,2.5
+MosquitoNetGen,DEFAULT,-1,U.S. Virgin Islands,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Curacao,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Turks and Caicos Islands,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Saint Kitts and Nevis,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Martinique,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Saint Lucia,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Guadeloupe,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Anguilla,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Antigua and Barbuda,1.00E+15
+MosquitoNetGen,DEFAULT,-1,The Bahamas,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Barbados,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Belize,2.5
+MosquitoNetGen,DEFAULT,-1,Bermuda,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Canada,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Cayman Islands,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Costa Rica,2.5
+MosquitoNetGen,DEFAULT,-1,Cuba,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Dominica,1.00E+15
+MosquitoNetGen,DEFAULT,-1,El Salvador,2.5
+MosquitoNetGen,DEFAULT,-1,Grenada,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Guatemala,2.5
+MosquitoNetGen,DEFAULT,-1,Haiti,2.5
+MosquitoNetGen,DEFAULT,-1,Honduras,2.5
+MosquitoNetGen,DEFAULT,-1,Jamaica,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Mexico,2.5
+MosquitoNetGen,DEFAULT,-1,Montserrat,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Nicaragua,2.5
+MosquitoNetGen,DEFAULT,-1,Panama,2.5
+MosquitoNetGen,DEFAULT,-1,Puerto Rico,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Trinidad and Tobago,1.00E+15
+MosquitoNetGen,DEFAULT,-1,United States,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Wallis and Futuna,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Marshall Islands,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Cook Islands,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Northern Mariana Islands,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Tokelau,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Solomon Islands,2.5
+MosquitoNetGen,DEFAULT,-1,Micronesia,1.00E+15
+MosquitoNetGen,DEFAULT,-1,American Samoa,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Australia,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Fiji,1.00E+15
+MosquitoNetGen,DEFAULT,-1,French Polynesia,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Guam,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Kiribati,1.00E+15
+MosquitoNetGen,DEFAULT,-1,New Caledonia,1.00E+15
+MosquitoNetGen,DEFAULT,-1,New Zealand,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Niue,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Palau,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Papua New Guinea,2.5
+MosquitoNetGen,DEFAULT,-1,Samoa,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Tonga,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Tuvalu,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Vanuatu,2.5
+MosquitoNetGen,DEFAULT,-1,Argentina,2.5
+MosquitoNetGen,DEFAULT,-1,Bolivia,2.5
+MosquitoNetGen,DEFAULT,-1,Brazil,2.5
+MosquitoNetGen,DEFAULT,-1,Chile,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Colombia,2.5
+MosquitoNetGen,DEFAULT,-1,Ecuador,2.5
+MosquitoNetGen,DEFAULT,-1,French Guiana,2.5
+MosquitoNetGen,DEFAULT,-1,Guyana,2.5
+MosquitoNetGen,DEFAULT,-1,Paraguay,2.5
+MosquitoNetGen,DEFAULT,-1,Peru,2.5
+MosquitoNetGen,DEFAULT,-1,Suriname,2.5
+MosquitoNetGen,DEFAULT,-1,Uruguay,1.00E+15
+MosquitoNetGen,DEFAULT,-1,Venezuela,2.5
+BlanketGen,DEFAULT,1,Afghanistan,0.45
+BlanketGen,DEFAULT,2,Afghanistan,0.49
+BlanketGen,DEFAULT,3,Afghanistan,0.62
+BlanketGen,DEFAULT,4,Afghanistan,0.83
+BlanketGen,DEFAULT,5,Afghanistan,1.14
+BlanketGen,DEFAULT,6,Afghanistan,1.99
+BlanketGen,DEFAULT,7,Afghanistan,3.17
+BlanketGen,DEFAULT,8,Afghanistan,2.21
+BlanketGen,DEFAULT,9,Afghanistan,1.15
+BlanketGen,DEFAULT,10,Afghanistan,0.74
+BlanketGen,DEFAULT,11,Afghanistan,0.56
+BlanketGen,DEFAULT,12,Afghanistan,0.48
+BlanketGen,DEFAULT,1,Albania,0.63
+BlanketGen,DEFAULT,2,Albania,0.64
+BlanketGen,DEFAULT,3,Albania,0.69
+BlanketGen,DEFAULT,4,Albania,0.86
+BlanketGen,DEFAULT,5,Albania,1.17
+BlanketGen,DEFAULT,6,Albania,1.68
+BlanketGen,DEFAULT,7,Albania,2.42
+BlanketGen,DEFAULT,8,Albania,2.45
+BlanketGen,DEFAULT,9,Albania,1.56
+BlanketGen,DEFAULT,10,Albania,1.08
+BlanketGen,DEFAULT,11,Albania,0.84
+BlanketGen,DEFAULT,12,Albania,0.68
+BlanketGen,DEFAULT,1,Algeria,0.64
+BlanketGen,DEFAULT,2,Algeria,0.68
+BlanketGen,DEFAULT,3,Algeria,0.75
+BlanketGen,DEFAULT,4,Algeria,0.9
+BlanketGen,DEFAULT,5,Algeria,1.2
+BlanketGen,DEFAULT,6,Algeria,1.99
+BlanketGen,DEFAULT,7,Algeria,3.75
+BlanketGen,DEFAULT,8,Algeria,3.81
+BlanketGen,DEFAULT,9,Algeria,2.1
+BlanketGen,DEFAULT,10,Algeria,1.2
+BlanketGen,DEFAULT,11,Algeria,0.83
+BlanketGen,DEFAULT,12,Algeria,0.68
+BlanketGen,DEFAULT,1,American Samoa,1E+15
+BlanketGen,DEFAULT,2,American Samoa,1E+15
+BlanketGen,DEFAULT,3,American Samoa,1.26
+BlanketGen,DEFAULT,4,American Samoa,1E+15
+BlanketGen,DEFAULT,5,American Samoa,2.47
+BlanketGen,DEFAULT,6,American Samoa,1.22
+BlanketGen,DEFAULT,7,American Samoa,45
+BlanketGen,DEFAULT,8,American Samoa,28.13
+BlanketGen,DEFAULT,9,American Samoa,45
+BlanketGen,DEFAULT,10,American Samoa,225
+BlanketGen,DEFAULT,11,American Samoa,56.25
+BlanketGen,DEFAULT,12,American Samoa,1E+15
+BlanketGen,DEFAULT,1,Angola,2.03
+BlanketGen,DEFAULT,2,Angola,2.14
+BlanketGen,DEFAULT,3,Angola,2.21
+BlanketGen,DEFAULT,4,Angola,1.88
+BlanketGen,DEFAULT,5,Angola,1.34
+BlanketGen,DEFAULT,6,Angola,1.02
+BlanketGen,DEFAULT,7,Angola,0.97
+BlanketGen,DEFAULT,8,Angola,1.14
+BlanketGen,DEFAULT,9,Angola,1.47
+BlanketGen,DEFAULT,10,Angola,1.86
+BlanketGen,DEFAULT,11,Angola,1.94
+BlanketGen,DEFAULT,12,Angola,2.03
+BlanketGen,DEFAULT,1,Anguilla,112.5
+BlanketGen,DEFAULT,2,Anguilla,18.75
+BlanketGen,DEFAULT,3,Anguilla,112.5
+BlanketGen,DEFAULT,4,Anguilla,1E+15
+BlanketGen,DEFAULT,5,Anguilla,1E+15
+BlanketGen,DEFAULT,6,Anguilla,1E+15
+BlanketGen,DEFAULT,7,Anguilla,1E+15
+BlanketGen,DEFAULT,8,Anguilla,1E+15
+BlanketGen,DEFAULT,9,Anguilla,1E+15
+BlanketGen,DEFAULT,10,Anguilla,1E+15
+BlanketGen,DEFAULT,11,Anguilla,1E+15
+BlanketGen,DEFAULT,12,Anguilla,1E+15
+BlanketGen,DEFAULT,1,Antigua and Barbuda,7.5
+BlanketGen,DEFAULT,2,Antigua and Barbuda,7.5
+BlanketGen,DEFAULT,3,Antigua and Barbuda,11.25
+BlanketGen,DEFAULT,4,Antigua and Barbuda,11.84
+BlanketGen,DEFAULT,5,Antigua and Barbuda,1E+15
+BlanketGen,DEFAULT,6,Antigua and Barbuda,1E+15
+BlanketGen,DEFAULT,7,Antigua and Barbuda,1E+15
+BlanketGen,DEFAULT,8,Antigua and Barbuda,1E+15
+BlanketGen,DEFAULT,9,Antigua and Barbuda,1E+15
+BlanketGen,DEFAULT,10,Antigua and Barbuda,1E+15
+BlanketGen,DEFAULT,11,Antigua and Barbuda,1E+15
+BlanketGen,DEFAULT,12,Antigua and Barbuda,11.25
+BlanketGen,DEFAULT,1,Argentina,1.62
+BlanketGen,DEFAULT,2,Argentina,1.5
+BlanketGen,DEFAULT,3,Argentina,1.22
+BlanketGen,DEFAULT,4,Argentina,0.93
+BlanketGen,DEFAULT,5,Argentina,0.75
+BlanketGen,DEFAULT,6,Argentina,0.64
+BlanketGen,DEFAULT,7,Argentina,0.62
+BlanketGen,DEFAULT,8,Argentina,0.66
+BlanketGen,DEFAULT,9,Argentina,0.74
+BlanketGen,DEFAULT,10,Argentina,0.91
+BlanketGen,DEFAULT,11,Argentina,1.13
+BlanketGen,DEFAULT,12,Argentina,1.42
+BlanketGen,DEFAULT,1,Armenia,0.35
+BlanketGen,DEFAULT,2,Armenia,0.36
+BlanketGen,DEFAULT,3,Armenia,0.41
+BlanketGen,DEFAULT,4,Armenia,0.52
+BlanketGen,DEFAULT,5,Armenia,0.66
+BlanketGen,DEFAULT,6,Armenia,0.82
+BlanketGen,DEFAULT,7,Armenia,1.05
+BlanketGen,DEFAULT,8,Armenia,1.06
+BlanketGen,DEFAULT,9,Armenia,0.76
+BlanketGen,DEFAULT,10,Armenia,0.57
+BlanketGen,DEFAULT,11,Armenia,0.45
+BlanketGen,DEFAULT,12,Armenia,0.38
+BlanketGen,DEFAULT,1,Australia,1.73
+BlanketGen,DEFAULT,2,Australia,1.76
+BlanketGen,DEFAULT,3,Australia,1.43
+BlanketGen,DEFAULT,4,Australia,1.07
+BlanketGen,DEFAULT,5,Australia,0.86
+BlanketGen,DEFAULT,6,Australia,0.74
+BlanketGen,DEFAULT,7,Australia,0.69
+BlanketGen,DEFAULT,8,Australia,0.73
+BlanketGen,DEFAULT,9,Australia,0.82
+BlanketGen,DEFAULT,10,Australia,0.98
+BlanketGen,DEFAULT,11,Australia,1.2
+BlanketGen,DEFAULT,12,Australia,1.49
+BlanketGen,DEFAULT,1,Austria,0.42
+BlanketGen,DEFAULT,2,Austria,0.44
+BlanketGen,DEFAULT,3,Austria,0.49
+BlanketGen,DEFAULT,4,Austria,0.57
+BlanketGen,DEFAULT,5,Austria,0.71
+BlanketGen,DEFAULT,6,Austria,0.87
+BlanketGen,DEFAULT,7,Austria,1
+BlanketGen,DEFAULT,8,Austria,0.99
+BlanketGen,DEFAULT,9,Austria,0.79
+BlanketGen,DEFAULT,10,Austria,0.62
+BlanketGen,DEFAULT,11,Austria,0.5
+BlanketGen,DEFAULT,12,Austria,0.44
+BlanketGen,DEFAULT,1,Azerbaijan,0.44
+BlanketGen,DEFAULT,2,Azerbaijan,0.46
+BlanketGen,DEFAULT,3,Azerbaijan,0.53
+BlanketGen,DEFAULT,4,Azerbaijan,0.69
+BlanketGen,DEFAULT,5,Azerbaijan,0.95
+BlanketGen,DEFAULT,6,Azerbaijan,1.4
+BlanketGen,DEFAULT,7,Azerbaijan,2.21
+BlanketGen,DEFAULT,8,Azerbaijan,1.99
+BlanketGen,DEFAULT,9,Azerbaijan,1.23
+BlanketGen,DEFAULT,10,Azerbaijan,0.78
+BlanketGen,DEFAULT,11,Azerbaijan,0.6
+BlanketGen,DEFAULT,12,Azerbaijan,0.49
+BlanketGen,DEFAULT,1,Bahrain,1.27
+BlanketGen,DEFAULT,2,Bahrain,1.43
+BlanketGen,DEFAULT,3,Bahrain,1.92
+BlanketGen,DEFAULT,4,Bahrain,5.36
+BlanketGen,DEFAULT,5,Bahrain,1E+15
+BlanketGen,DEFAULT,6,Bahrain,1E+15
+BlanketGen,DEFAULT,7,Bahrain,1E+15
+BlanketGen,DEFAULT,8,Bahrain,1E+15
+BlanketGen,DEFAULT,9,Bahrain,1E+15
+BlanketGen,DEFAULT,10,Bahrain,1E+15
+BlanketGen,DEFAULT,11,Bahrain,4.79
+BlanketGen,DEFAULT,12,Bahrain,1.84
+BlanketGen,DEFAULT,1,Bangladesh,1.06
+BlanketGen,DEFAULT,2,Bangladesh,1.34
+BlanketGen,DEFAULT,3,Bangladesh,2.65
+BlanketGen,DEFAULT,4,Bangladesh,11.25
+BlanketGen,DEFAULT,5,Bangladesh,1E+15
+BlanketGen,DEFAULT,6,Bangladesh,1E+15
+BlanketGen,DEFAULT,7,Bangladesh,1E+15
+BlanketGen,DEFAULT,8,Bangladesh,1E+15
+BlanketGen,DEFAULT,9,Bangladesh,1E+15
+BlanketGen,DEFAULT,10,Bangladesh,20.45
+BlanketGen,DEFAULT,11,Bangladesh,2.34
+BlanketGen,DEFAULT,12,Bangladesh,1.23
+BlanketGen,DEFAULT,1,Barbados,7.26
+BlanketGen,DEFAULT,2,Barbados,5.36
+BlanketGen,DEFAULT,3,Barbados,7.76
+BlanketGen,DEFAULT,4,Barbados,14.06
+BlanketGen,DEFAULT,5,Barbados,225
+BlanketGen,DEFAULT,6,Barbados,1E+15
+BlanketGen,DEFAULT,7,Barbados,225
+BlanketGen,DEFAULT,8,Barbados,1E+15
+BlanketGen,DEFAULT,9,Barbados,225
+BlanketGen,DEFAULT,10,Barbados,1E+15
+BlanketGen,DEFAULT,11,Barbados,112.5
+BlanketGen,DEFAULT,12,Barbados,12.5
+BlanketGen,DEFAULT,1,Belarus,0.39
+BlanketGen,DEFAULT,2,Belarus,0.39
+BlanketGen,DEFAULT,3,Belarus,0.46
+BlanketGen,DEFAULT,4,Belarus,0.57
+BlanketGen,DEFAULT,5,Belarus,0.76
+BlanketGen,DEFAULT,6,Belarus,0.96
+BlanketGen,DEFAULT,7,Belarus,1.09
+BlanketGen,DEFAULT,8,Belarus,1
+BlanketGen,DEFAULT,9,Belarus,0.76
+BlanketGen,DEFAULT,10,Belarus,0.6
+BlanketGen,DEFAULT,11,Belarus,0.5
+BlanketGen,DEFAULT,12,Belarus,0.43
+BlanketGen,DEFAULT,1,Belgium,0.51
+BlanketGen,DEFAULT,2,Belgium,0.5
+BlanketGen,DEFAULT,3,Belgium,0.56
+BlanketGen,DEFAULT,4,Belgium,0.61
+BlanketGen,DEFAULT,5,Belgium,0.76
+BlanketGen,DEFAULT,6,Belgium,0.92
+BlanketGen,DEFAULT,7,Belgium,1.06
+BlanketGen,DEFAULT,8,Belgium,1.05
+BlanketGen,DEFAULT,9,Belgium,0.88
+BlanketGen,DEFAULT,10,Belgium,0.71
+BlanketGen,DEFAULT,11,Belgium,0.6
+BlanketGen,DEFAULT,12,Belgium,0.54
+BlanketGen,DEFAULT,1,Belize,2.53
+BlanketGen,DEFAULT,2,Belize,3.26
+BlanketGen,DEFAULT,3,Belize,5.36
+BlanketGen,DEFAULT,4,Belize,10.23
+BlanketGen,DEFAULT,5,Belize,1E+15
+BlanketGen,DEFAULT,6,Belize,1E+15
+BlanketGen,DEFAULT,7,Belize,1E+15
+BlanketGen,DEFAULT,8,Belize,45
+BlanketGen,DEFAULT,9,Belize,1E+15
+BlanketGen,DEFAULT,10,Belize,10.23
+BlanketGen,DEFAULT,11,Belize,4.59
+BlanketGen,DEFAULT,12,Belize,3
+BlanketGen,DEFAULT,1,Benin,4.33
+BlanketGen,DEFAULT,2,Benin,12.5
+BlanketGen,DEFAULT,3,Benin,1E+15
+BlanketGen,DEFAULT,4,Benin,1E+15
+BlanketGen,DEFAULT,5,Benin,25
+BlanketGen,DEFAULT,6,Benin,9
+BlanketGen,DEFAULT,7,Benin,6.62
+BlanketGen,DEFAULT,8,Benin,5.92
+BlanketGen,DEFAULT,9,Benin,6.08
+BlanketGen,DEFAULT,10,Benin,6.62
+BlanketGen,DEFAULT,11,Benin,5.36
+BlanketGen,DEFAULT,12,Benin,4.02
+BlanketGen,DEFAULT,1,Bermuda,1.68
+BlanketGen,DEFAULT,2,Bermuda,1.52
+BlanketGen,DEFAULT,3,Bermuda,1.52
+BlanketGen,DEFAULT,4,Bermuda,1.91
+BlanketGen,DEFAULT,5,Bermuda,2.96
+BlanketGen,DEFAULT,6,Bermuda,8.65
+BlanketGen,DEFAULT,7,Bermuda,1E+15
+BlanketGen,DEFAULT,8,Bermuda,1E+15
+BlanketGen,DEFAULT,9,Bermuda,1E+15
+BlanketGen,DEFAULT,10,Bermuda,8.04
+BlanketGen,DEFAULT,11,Bermuda,2.88
+BlanketGen,DEFAULT,12,Bermuda,1.91
+BlanketGen,DEFAULT,1,Bhutan,0.54
+BlanketGen,DEFAULT,2,Bhutan,0.61
+BlanketGen,DEFAULT,3,Bhutan,0.72
+BlanketGen,DEFAULT,4,Bhutan,0.85
+BlanketGen,DEFAULT,5,Bhutan,1.23
+BlanketGen,DEFAULT,6,Bhutan,1.73
+BlanketGen,DEFAULT,7,Bhutan,1.6
+BlanketGen,DEFAULT,8,Bhutan,1.86
+BlanketGen,DEFAULT,9,Bhutan,1.65
+BlanketGen,DEFAULT,10,Bhutan,1.05
+BlanketGen,DEFAULT,11,Bhutan,0.73
+BlanketGen,DEFAULT,12,Bhutan,0.6
+BlanketGen,DEFAULT,1,Bolivia,1.17
+BlanketGen,DEFAULT,2,Bolivia,1.15
+BlanketGen,DEFAULT,3,Bolivia,1.09
+BlanketGen,DEFAULT,4,Bolivia,0.93
+BlanketGen,DEFAULT,5,Bolivia,0.78
+BlanketGen,DEFAULT,6,Bolivia,0.7
+BlanketGen,DEFAULT,7,Bolivia,0.7
+BlanketGen,DEFAULT,8,Bolivia,0.75
+BlanketGen,DEFAULT,9,Bolivia,0.89
+BlanketGen,DEFAULT,10,Bolivia,1
+BlanketGen,DEFAULT,11,Bolivia,1.09
+BlanketGen,DEFAULT,12,Bolivia,1.15
+BlanketGen,DEFAULT,1,Bosnia and Herzegovina,0.47
+BlanketGen,DEFAULT,2,Bosnia and Herzegovina,0.49
+BlanketGen,DEFAULT,3,Bosnia and Herzegovina,0.56
+BlanketGen,DEFAULT,4,Bosnia and Herzegovina,0.66
+BlanketGen,DEFAULT,5,Bosnia and Herzegovina,0.86
+BlanketGen,DEFAULT,6,Bosnia and Herzegovina,1.11
+BlanketGen,DEFAULT,7,Bosnia and Herzegovina,1.33
+BlanketGen,DEFAULT,8,Bosnia and Herzegovina,1.29
+BlanketGen,DEFAULT,9,Bosnia and Herzegovina,0.99
+BlanketGen,DEFAULT,10,Bosnia and Herzegovina,0.74
+BlanketGen,DEFAULT,11,Bosnia and Herzegovina,0.58
+BlanketGen,DEFAULT,12,Bosnia and Herzegovina,0.5
+BlanketGen,DEFAULT,1,Botswana,2.78
+BlanketGen,DEFAULT,2,Botswana,2.47
+BlanketGen,DEFAULT,3,Botswana,1.92
+BlanketGen,DEFAULT,4,Botswana,1.26
+BlanketGen,DEFAULT,5,Botswana,0.84
+BlanketGen,DEFAULT,6,Botswana,0.68
+BlanketGen,DEFAULT,7,Botswana,0.67
+BlanketGen,DEFAULT,8,Botswana,0.79
+BlanketGen,DEFAULT,9,Botswana,1.12
+BlanketGen,DEFAULT,10,Botswana,1.7
+BlanketGen,DEFAULT,11,Botswana,2.18
+BlanketGen,DEFAULT,12,Botswana,2.47
+BlanketGen,DEFAULT,1,Brazil,4.25
+BlanketGen,DEFAULT,2,Brazil,4.17
+BlanketGen,DEFAULT,3,Brazil,4.02
+BlanketGen,DEFAULT,4,Brazil,3.46
+BlanketGen,DEFAULT,5,Brazil,2.78
+BlanketGen,DEFAULT,6,Brazil,2.27
+BlanketGen,DEFAULT,7,Brazil,2.06
+BlanketGen,DEFAULT,8,Brazil,2.16
+BlanketGen,DEFAULT,9,Brazil,2.68
+BlanketGen,DEFAULT,10,Brazil,3.36
+BlanketGen,DEFAULT,11,Brazil,3.75
+BlanketGen,DEFAULT,12,Brazil,4.09
+BlanketGen,DEFAULT,1,British Virgin Islands,4.79
+BlanketGen,DEFAULT,2,British Virgin Islands,4.79
+BlanketGen,DEFAULT,3,British Virgin Islands,4.79
+BlanketGen,DEFAULT,4,British Virgin Islands,8.33
+BlanketGen,DEFAULT,5,British Virgin Islands,18.75
+BlanketGen,DEFAULT,6,British Virgin Islands,1E+15
+BlanketGen,DEFAULT,7,British Virgin Islands,1E+15
+BlanketGen,DEFAULT,8,British Virgin Islands,1E+15
+BlanketGen,DEFAULT,9,British Virgin Islands,112.5
+BlanketGen,DEFAULT,10,British Virgin Islands,112.5
+BlanketGen,DEFAULT,11,British Virgin Islands,10.23
+BlanketGen,DEFAULT,12,British Virgin Islands,8.33
+BlanketGen,DEFAULT,1,Brunei,32.14
+BlanketGen,DEFAULT,2,Brunei,32.14
+BlanketGen,DEFAULT,3,Brunei,32.14
+BlanketGen,DEFAULT,4,Brunei,112.5
+BlanketGen,DEFAULT,5,Brunei,112.5
+BlanketGen,DEFAULT,6,Brunei,32.14
+BlanketGen,DEFAULT,7,Brunei,18.75
+BlanketGen,DEFAULT,8,Brunei,18.75
+BlanketGen,DEFAULT,9,Brunei,18.75
+BlanketGen,DEFAULT,10,Brunei,18.75
+BlanketGen,DEFAULT,11,Brunei,18.75
+BlanketGen,DEFAULT,12,Brunei,18.75
+BlanketGen,DEFAULT,1,Bulgaria,0.46
+BlanketGen,DEFAULT,2,Bulgaria,0.45
+BlanketGen,DEFAULT,3,Bulgaria,0.54
+BlanketGen,DEFAULT,4,Bulgaria,0.66
+BlanketGen,DEFAULT,5,Bulgaria,0.89
+BlanketGen,DEFAULT,6,Bulgaria,1.21
+BlanketGen,DEFAULT,7,Bulgaria,1.48
+BlanketGen,DEFAULT,8,Bulgaria,1.42
+BlanketGen,DEFAULT,9,Bulgaria,1.05
+BlanketGen,DEFAULT,10,Bulgaria,0.78
+BlanketGen,DEFAULT,11,Bulgaria,0.6
+BlanketGen,DEFAULT,12,Bulgaria,0.51
+BlanketGen,DEFAULT,1,Burkina Faso,2.12
+BlanketGen,DEFAULT,2,Burkina Faso,3.95
+BlanketGen,DEFAULT,3,Burkina Faso,1E+15
+BlanketGen,DEFAULT,4,Burkina Faso,1E+15
+BlanketGen,DEFAULT,5,Burkina Faso,1E+15
+BlanketGen,DEFAULT,6,Burkina Faso,1E+15
+BlanketGen,DEFAULT,7,Burkina Faso,12.5
+BlanketGen,DEFAULT,8,Burkina Faso,8.33
+BlanketGen,DEFAULT,9,Burkina Faso,8.65
+BlanketGen,DEFAULT,10,Burkina Faso,9.38
+BlanketGen,DEFAULT,11,Burkina Faso,3.31
+BlanketGen,DEFAULT,12,Burkina Faso,2.18
+BlanketGen,DEFAULT,1,Burundi,1.49
+BlanketGen,DEFAULT,2,Burundi,1.49
+BlanketGen,DEFAULT,3,Burundi,1.49
+BlanketGen,DEFAULT,4,Burundi,1.55
+BlanketGen,DEFAULT,5,Burundi,1.46
+BlanketGen,DEFAULT,6,Burundi,1.25
+BlanketGen,DEFAULT,7,Burundi,1.17
+BlanketGen,DEFAULT,8,Burundi,1.27
+BlanketGen,DEFAULT,9,Burundi,1.43
+BlanketGen,DEFAULT,10,Burundi,1.5
+BlanketGen,DEFAULT,11,Burundi,1.48
+BlanketGen,DEFAULT,12,Burundi,1.48
+BlanketGen,DEFAULT,1,Cambodia,3.46
+BlanketGen,DEFAULT,2,Cambodia,5.23
+BlanketGen,DEFAULT,3,Cambodia,18.75
+BlanketGen,DEFAULT,4,Cambodia,1E+15
+BlanketGen,DEFAULT,5,Cambodia,1E+15
+BlanketGen,DEFAULT,6,Cambodia,1E+15
+BlanketGen,DEFAULT,7,Cambodia,1E+15
+BlanketGen,DEFAULT,8,Cambodia,1E+15
+BlanketGen,DEFAULT,9,Cambodia,1E+15
+BlanketGen,DEFAULT,10,Cambodia,37.5
+BlanketGen,DEFAULT,11,Cambodia,8.65
+BlanketGen,DEFAULT,12,Cambodia,3.81
+BlanketGen,DEFAULT,1,Cameroon,1.92
+BlanketGen,DEFAULT,2,Cameroon,2.3
+BlanketGen,DEFAULT,3,Cameroon,3.04
+BlanketGen,DEFAULT,4,Cameroon,3.46
+BlanketGen,DEFAULT,5,Cameroon,3.17
+BlanketGen,DEFAULT,6,Cameroon,2.74
+BlanketGen,DEFAULT,7,Cameroon,2.5
+BlanketGen,DEFAULT,8,Cameroon,2.45
+BlanketGen,DEFAULT,9,Cameroon,2.42
+BlanketGen,DEFAULT,10,Cameroon,2.39
+BlanketGen,DEFAULT,11,Cameroon,2.18
+BlanketGen,DEFAULT,12,Cameroon,1.88
+BlanketGen,DEFAULT,1,Canada,0.32
+BlanketGen,DEFAULT,2,Canada,0.33
+BlanketGen,DEFAULT,3,Canada,0.38
+BlanketGen,DEFAULT,4,Canada,0.47
+BlanketGen,DEFAULT,5,Canada,0.6
+BlanketGen,DEFAULT,6,Canada,0.78
+BlanketGen,DEFAULT,7,Canada,0.95
+BlanketGen,DEFAULT,8,Canada,0.9
+BlanketGen,DEFAULT,9,Canada,0.69
+BlanketGen,DEFAULT,10,Canada,0.53
+BlanketGen,DEFAULT,11,Canada,0.42
+BlanketGen,DEFAULT,12,Canada,0.34
+BlanketGen,DEFAULT,1,Cape Verde,2.32
+BlanketGen,DEFAULT,2,Cape Verde,2.1
+BlanketGen,DEFAULT,3,Cape Verde,2.27
+BlanketGen,DEFAULT,4,Cape Verde,2.59
+BlanketGen,DEFAULT,5,Cape Verde,3.13
+BlanketGen,DEFAULT,6,Cape Verde,5
+BlanketGen,DEFAULT,7,Cape Verde,11.25
+BlanketGen,DEFAULT,8,Cape Verde,75
+BlanketGen,DEFAULT,9,Cape Verde,1E+15
+BlanketGen,DEFAULT,10,Cape Verde,37.5
+BlanketGen,DEFAULT,11,Cape Verde,7.03
+BlanketGen,DEFAULT,12,Cape Verde,3.17
+BlanketGen,DEFAULT,1,Cayman Islands,5.77
+BlanketGen,DEFAULT,2,Cayman Islands,5.36
+BlanketGen,DEFAULT,3,Cayman Islands,7.76
+BlanketGen,DEFAULT,4,Cayman Islands,13.24
+BlanketGen,DEFAULT,5,Cayman Islands,1E+15
+BlanketGen,DEFAULT,6,Cayman Islands,1E+15
+BlanketGen,DEFAULT,7,Cayman Islands,1E+15
+BlanketGen,DEFAULT,8,Cayman Islands,1E+15
+BlanketGen,DEFAULT,9,Cayman Islands,1E+15
+BlanketGen,DEFAULT,10,Cayman Islands,1E+15
+BlanketGen,DEFAULT,11,Cayman Islands,112.5
+BlanketGen,DEFAULT,12,Cayman Islands,11.84
+BlanketGen,DEFAULT,1,Central African Republic,1.86
+BlanketGen,DEFAULT,2,Central African Republic,2.53
+BlanketGen,DEFAULT,3,Central African Republic,3.88
+BlanketGen,DEFAULT,4,Central African Republic,4.33
+BlanketGen,DEFAULT,5,Central African Republic,3.81
+BlanketGen,DEFAULT,6,Central African Republic,3.26
+BlanketGen,DEFAULT,7,Central African Republic,2.96
+BlanketGen,DEFAULT,8,Central African Republic,2.92
+BlanketGen,DEFAULT,9,Central African Republic,2.71
+BlanketGen,DEFAULT,10,Central African Republic,2.74
+BlanketGen,DEFAULT,11,Central African Republic,2.27
+BlanketGen,DEFAULT,12,Central African Republic,1.79
+BlanketGen,DEFAULT,1,Chad,1.42
+BlanketGen,DEFAULT,2,Chad,1.8
+BlanketGen,DEFAULT,3,Chad,3.75
+BlanketGen,DEFAULT,4,Chad,32.14
+BlanketGen,DEFAULT,5,Chad,1E+15
+BlanketGen,DEFAULT,6,Chad,1E+15
+BlanketGen,DEFAULT,7,Chad,11.84
+BlanketGen,DEFAULT,8,Chad,7.03
+BlanketGen,DEFAULT,9,Chad,8.33
+BlanketGen,DEFAULT,10,Chad,5.63
+BlanketGen,DEFAULT,11,Chad,2.32
+BlanketGen,DEFAULT,12,Chad,1.45
+BlanketGen,DEFAULT,1,Chile,1.04
+BlanketGen,DEFAULT,2,Chile,1.03
+BlanketGen,DEFAULT,3,Chile,0.91
+BlanketGen,DEFAULT,4,Chile,0.81
+BlanketGen,DEFAULT,5,Chile,0.74
+BlanketGen,DEFAULT,6,Chile,0.68
+BlanketGen,DEFAULT,7,Chile,0.65
+BlanketGen,DEFAULT,8,Chile,0.67
+BlanketGen,DEFAULT,9,Chile,0.71
+BlanketGen,DEFAULT,10,Chile,0.77
+BlanketGen,DEFAULT,11,Chile,0.84
+BlanketGen,DEFAULT,12,Chile,0.95
+BlanketGen,DEFAULT,1,China,0.39
+BlanketGen,DEFAULT,2,China,0.43
+BlanketGen,DEFAULT,3,China,0.53
+BlanketGen,DEFAULT,4,China,0.72
+BlanketGen,DEFAULT,5,China,1.03
+BlanketGen,DEFAULT,6,China,1.6
+BlanketGen,DEFAULT,7,China,2.5
+BlanketGen,DEFAULT,8,China,2.1
+BlanketGen,DEFAULT,9,China,1.19
+BlanketGen,DEFAULT,10,China,0.75
+BlanketGen,DEFAULT,11,China,0.53
+BlanketGen,DEFAULT,12,China,0.43
+BlanketGen,DEFAULT,1,Colombia,3.46
+BlanketGen,DEFAULT,2,Colombia,3.88
+BlanketGen,DEFAULT,3,Colombia,4.25
+BlanketGen,DEFAULT,4,Colombia,4.5
+BlanketGen,DEFAULT,5,Colombia,4.41
+BlanketGen,DEFAULT,6,Colombia,4.25
+BlanketGen,DEFAULT,7,Colombia,4.02
+BlanketGen,DEFAULT,8,Colombia,4.09
+BlanketGen,DEFAULT,9,Colombia,4.09
+BlanketGen,DEFAULT,10,Colombia,3.88
+BlanketGen,DEFAULT,11,Colombia,3.88
+BlanketGen,DEFAULT,12,Colombia,3.04
+BlanketGen,DEFAULT,1,Comoros,7.5
+BlanketGen,DEFAULT,2,Comoros,8.04
+BlanketGen,DEFAULT,3,Comoros,7.26
+BlanketGen,DEFAULT,4,Comoros,6.25
+BlanketGen,DEFAULT,5,Comoros,3.95
+BlanketGen,DEFAULT,6,Comoros,2.59
+BlanketGen,DEFAULT,7,Comoros,2.25
+BlanketGen,DEFAULT,8,Comoros,2.32
+BlanketGen,DEFAULT,9,Comoros,2.59
+BlanketGen,DEFAULT,10,Comoros,3.69
+BlanketGen,DEFAULT,11,Comoros,5.36
+BlanketGen,DEFAULT,12,Comoros,7.5
+BlanketGen,DEFAULT,1,Congo,5.11
+BlanketGen,DEFAULT,2,Congo,5.11
+BlanketGen,DEFAULT,3,Congo,6.08
+BlanketGen,DEFAULT,4,Congo,6.25
+BlanketGen,DEFAULT,5,Congo,5
+BlanketGen,DEFAULT,6,Congo,2.92
+BlanketGen,DEFAULT,7,Congo,2.27
+BlanketGen,DEFAULT,8,Congo,2.42
+BlanketGen,DEFAULT,9,Congo,3.31
+BlanketGen,DEFAULT,10,Congo,4.79
+BlanketGen,DEFAULT,11,Congo,4.89
+BlanketGen,DEFAULT,12,Congo,5
+BlanketGen,DEFAULT,1,Cook Islands,1E+15
+BlanketGen,DEFAULT,2,Cook Islands,1E+15
+BlanketGen,DEFAULT,3,Cook Islands,1E+15
+BlanketGen,DEFAULT,4,Cook Islands,1E+15
+BlanketGen,DEFAULT,5,Cook Islands,1E+15
+BlanketGen,DEFAULT,6,Cook Islands,18.75
+BlanketGen,DEFAULT,7,Cook Islands,10.71
+BlanketGen,DEFAULT,8,Cook Islands,12.5
+BlanketGen,DEFAULT,9,Cook Islands,13.24
+BlanketGen,DEFAULT,10,Cook Islands,37.5
+BlanketGen,DEFAULT,11,Cook Islands,1E+15
+BlanketGen,DEFAULT,12,Cook Islands,1E+15
+BlanketGen,DEFAULT,1,Costa Rica,2.65
+BlanketGen,DEFAULT,2,Costa Rica,2.71
+BlanketGen,DEFAULT,3,Costa Rica,3
+BlanketGen,DEFAULT,4,Costa Rica,3.75
+BlanketGen,DEFAULT,5,Costa Rica,4.17
+BlanketGen,DEFAULT,6,Costa Rica,4.09
+BlanketGen,DEFAULT,7,Costa Rica,3.81
+BlanketGen,DEFAULT,8,Costa Rica,3.57
+BlanketGen,DEFAULT,9,Costa Rica,3.46
+BlanketGen,DEFAULT,10,Costa Rica,3.46
+BlanketGen,DEFAULT,11,Costa Rica,3.26
+BlanketGen,DEFAULT,12,Costa Rica,2.92
+BlanketGen,DEFAULT,1,Cote d'Ivoire,3
+BlanketGen,DEFAULT,2,Cote d'Ivoire,5.63
+BlanketGen,DEFAULT,3,Cote d'Ivoire,10.71
+BlanketGen,DEFAULT,4,Cote d'Ivoire,14.06
+BlanketGen,DEFAULT,5,Cote d'Ivoire,10.23
+BlanketGen,DEFAULT,6,Cote d'Ivoire,7.03
+BlanketGen,DEFAULT,7,Cote d'Ivoire,5.11
+BlanketGen,DEFAULT,8,Cote d'Ivoire,4.89
+BlanketGen,DEFAULT,9,Cote d'Ivoire,5
+BlanketGen,DEFAULT,10,Cote d'Ivoire,5.63
+BlanketGen,DEFAULT,11,Cote d'Ivoire,4.89
+BlanketGen,DEFAULT,12,Cote d'Ivoire,3.17
+BlanketGen,DEFAULT,1,Croatia,0.54
+BlanketGen,DEFAULT,2,Croatia,0.55
+BlanketGen,DEFAULT,3,Croatia,0.63
+BlanketGen,DEFAULT,4,Croatia,0.76
+BlanketGen,DEFAULT,5,Croatia,1.03
+BlanketGen,DEFAULT,6,Croatia,1.46
+BlanketGen,DEFAULT,7,Croatia,1.96
+BlanketGen,DEFAULT,8,Croatia,1.84
+BlanketGen,DEFAULT,9,Croatia,1.24
+BlanketGen,DEFAULT,10,Croatia,0.89
+BlanketGen,DEFAULT,11,Croatia,0.66
+BlanketGen,DEFAULT,12,Croatia,0.57
+BlanketGen,DEFAULT,1,Cuba,2.5
+BlanketGen,DEFAULT,2,Cuba,2.47
+BlanketGen,DEFAULT,3,Cuba,3.17
+BlanketGen,DEFAULT,4,Cuba,4.5
+BlanketGen,DEFAULT,5,Cuba,8.65
+BlanketGen,DEFAULT,6,Cuba,56.25
+BlanketGen,DEFAULT,7,Cuba,1E+15
+BlanketGen,DEFAULT,8,Cuba,6.62
+BlanketGen,DEFAULT,9,Cuba,45
+BlanketGen,DEFAULT,10,Cuba,12.5
+BlanketGen,DEFAULT,11,Cuba,5.11
+BlanketGen,DEFAULT,12,Cuba,2.96
+BlanketGen,DEFAULT,1,Curacao,1E+15
+BlanketGen,DEFAULT,2,Curacao,1E+15
+BlanketGen,DEFAULT,3,Curacao,1E+15
+BlanketGen,DEFAULT,4,Curacao,1E+15
+BlanketGen,DEFAULT,5,Curacao,1E+15
+BlanketGen,DEFAULT,6,Curacao,1E+15
+BlanketGen,DEFAULT,7,Curacao,1E+15
+BlanketGen,DEFAULT,8,Curacao,1E+15
+BlanketGen,DEFAULT,9,Curacao,1E+15
+BlanketGen,DEFAULT,10,Curacao,1E+15
+BlanketGen,DEFAULT,11,Curacao,1E+15
+BlanketGen,DEFAULT,12,Curacao,1E+15
+BlanketGen,DEFAULT,1,Czech Republic,0.43
+BlanketGen,DEFAULT,2,Czech Republic,0.43
+BlanketGen,DEFAULT,3,Czech Republic,0.49
+BlanketGen,DEFAULT,4,Czech Republic,0.55
+BlanketGen,DEFAULT,5,Czech Republic,0.7
+BlanketGen,DEFAULT,6,Czech Republic,0.85
+BlanketGen,DEFAULT,7,Czech Republic,0.96
+BlanketGen,DEFAULT,8,Czech Republic,0.95
+BlanketGen,DEFAULT,9,Czech Republic,0.78
+BlanketGen,DEFAULT,10,Czech Republic,0.62
+BlanketGen,DEFAULT,11,Czech Republic,0.51
+BlanketGen,DEFAULT,12,Czech Republic,0.45
+BlanketGen,DEFAULT,1,Democratic Republic of the Congo,2.71
+BlanketGen,DEFAULT,2,Democratic Republic of the Congo,2.85
+BlanketGen,DEFAULT,3,Democratic Republic of the Congo,2.92
+BlanketGen,DEFAULT,4,Democratic Republic of the Congo,2.88
+BlanketGen,DEFAULT,5,Democratic Republic of the Congo,2.37
+BlanketGen,DEFAULT,6,Democratic Republic of the Congo,1.88
+BlanketGen,DEFAULT,7,Democratic Republic of the Congo,1.67
+BlanketGen,DEFAULT,8,Democratic Republic of the Congo,1.86
+BlanketGen,DEFAULT,9,Democratic Republic of the Congo,2.23
+BlanketGen,DEFAULT,10,Democratic Republic of the Congo,2.59
+BlanketGen,DEFAULT,11,Democratic Republic of the Congo,2.68
+BlanketGen,DEFAULT,12,Democratic Republic of the Congo,2.68
+BlanketGen,DEFAULT,1,Denmark,0.5
+BlanketGen,DEFAULT,2,Denmark,0.49
+BlanketGen,DEFAULT,3,Denmark,0.52
+BlanketGen,DEFAULT,4,Denmark,0.59
+BlanketGen,DEFAULT,5,Denmark,0.74
+BlanketGen,DEFAULT,6,Denmark,0.94
+BlanketGen,DEFAULT,7,Denmark,1.11
+BlanketGen,DEFAULT,8,Denmark,1.09
+BlanketGen,DEFAULT,9,Denmark,0.89
+BlanketGen,DEFAULT,10,Denmark,0.73
+BlanketGen,DEFAULT,11,Denmark,0.6
+BlanketGen,DEFAULT,12,Denmark,0.53
+BlanketGen,DEFAULT,1,Djibouti,2.74
+BlanketGen,DEFAULT,2,Djibouti,3.75
+BlanketGen,DEFAULT,3,Djibouti,6.62
+BlanketGen,DEFAULT,4,Djibouti,56.25
+BlanketGen,DEFAULT,5,Djibouti,1E+15
+BlanketGen,DEFAULT,6,Djibouti,1E+15
+BlanketGen,DEFAULT,7,Djibouti,1E+15
+BlanketGen,DEFAULT,8,Djibouti,1E+15
+BlanketGen,DEFAULT,9,Djibouti,1E+15
+BlanketGen,DEFAULT,10,Djibouti,22.5
+BlanketGen,DEFAULT,11,Djibouti,4.5
+BlanketGen,DEFAULT,12,Djibouti,2.81
+BlanketGen,DEFAULT,1,Dominica,3.31
+BlanketGen,DEFAULT,2,Dominica,3.31
+BlanketGen,DEFAULT,3,Dominica,3.88
+BlanketGen,DEFAULT,4,Dominica,6.25
+BlanketGen,DEFAULT,5,Dominica,16.07
+BlanketGen,DEFAULT,6,Dominica,1E+15
+BlanketGen,DEFAULT,7,Dominica,1E+15
+BlanketGen,DEFAULT,8,Dominica,75
+BlanketGen,DEFAULT,9,Dominica,32.14
+BlanketGen,DEFAULT,10,Dominica,14.06
+BlanketGen,DEFAULT,11,Dominica,6.82
+BlanketGen,DEFAULT,12,Dominica,4.17
+BlanketGen,DEFAULT,1,Dominican Republic,2.78
+BlanketGen,DEFAULT,2,Dominican Republic,2.74
+BlanketGen,DEFAULT,3,Dominican Republic,3.26
+BlanketGen,DEFAULT,4,Dominican Republic,4.02
+BlanketGen,DEFAULT,5,Dominican Republic,6.43
+BlanketGen,DEFAULT,6,Dominican Republic,8.65
+BlanketGen,DEFAULT,7,Dominican Republic,12.5
+BlanketGen,DEFAULT,8,Dominican Republic,11.84
+BlanketGen,DEFAULT,9,Dominican Republic,9
+BlanketGen,DEFAULT,10,Dominican Republic,7.5
+BlanketGen,DEFAULT,11,Dominican Republic,4.79
+BlanketGen,DEFAULT,12,Dominican Republic,4.02
+BlanketGen,DEFAULT,1,Ecuador,3.41
+BlanketGen,DEFAULT,2,Ecuador,3.75
+BlanketGen,DEFAULT,3,Ecuador,3.81
+BlanketGen,DEFAULT,4,Ecuador,3.57
+BlanketGen,DEFAULT,5,Ecuador,3.13
+BlanketGen,DEFAULT,6,Ecuador,2.65
+BlanketGen,DEFAULT,7,Ecuador,2.37
+BlanketGen,DEFAULT,8,Ecuador,2.16
+BlanketGen,DEFAULT,9,Ecuador,2.27
+BlanketGen,DEFAULT,10,Ecuador,2.42
+BlanketGen,DEFAULT,11,Ecuador,2.47
+BlanketGen,DEFAULT,12,Ecuador,2.92
+BlanketGen,DEFAULT,1,Egypt,0.81
+BlanketGen,DEFAULT,2,Egypt,0.86
+BlanketGen,DEFAULT,3,Egypt,1.02
+BlanketGen,DEFAULT,4,Egypt,1.42
+BlanketGen,DEFAULT,5,Egypt,2.34
+BlanketGen,DEFAULT,6,Egypt,4.89
+BlanketGen,DEFAULT,7,Egypt,10.23
+BlanketGen,DEFAULT,8,Egypt,12.5
+BlanketGen,DEFAULT,9,Egypt,4.69
+BlanketGen,DEFAULT,10,Egypt,2.39
+BlanketGen,DEFAULT,11,Egypt,1.31
+BlanketGen,DEFAULT,12,Egypt,0.92
+BlanketGen,DEFAULT,1,El Salvador,2.32
+BlanketGen,DEFAULT,2,El Salvador,2.53
+BlanketGen,DEFAULT,3,El Salvador,3.13
+BlanketGen,DEFAULT,4,El Salvador,4.33
+BlanketGen,DEFAULT,5,El Salvador,5.36
+BlanketGen,DEFAULT,6,El Salvador,4.59
+BlanketGen,DEFAULT,7,El Salvador,3.81
+BlanketGen,DEFAULT,8,El Salvador,4.17
+BlanketGen,DEFAULT,9,El Salvador,3.95
+BlanketGen,DEFAULT,10,El Salvador,3.63
+BlanketGen,DEFAULT,11,El Salvador,2.92
+BlanketGen,DEFAULT,12,El Salvador,2.53
+BlanketGen,DEFAULT,1,Equatorial Guinea,2.92
+BlanketGen,DEFAULT,2,Equatorial Guinea,3.31
+BlanketGen,DEFAULT,3,Equatorial Guinea,3.46
+BlanketGen,DEFAULT,4,Equatorial Guinea,3.69
+BlanketGen,DEFAULT,5,Equatorial Guinea,3.75
+BlanketGen,DEFAULT,6,Equatorial Guinea,3.08
+BlanketGen,DEFAULT,7,Equatorial Guinea,3.04
+BlanketGen,DEFAULT,8,Equatorial Guinea,3.04
+BlanketGen,DEFAULT,9,Equatorial Guinea,3
+BlanketGen,DEFAULT,10,Equatorial Guinea,3.36
+BlanketGen,DEFAULT,11,Equatorial Guinea,3.81
+BlanketGen,DEFAULT,12,Equatorial Guinea,3.46
+BlanketGen,DEFAULT,1,Eritrea,2.06
+BlanketGen,DEFAULT,2,Eritrea,2.01
+BlanketGen,DEFAULT,3,Eritrea,2.39
+BlanketGen,DEFAULT,4,Eritrea,4.79
+BlanketGen,DEFAULT,5,Eritrea,32.14
+BlanketGen,DEFAULT,6,Eritrea,1E+15
+BlanketGen,DEFAULT,7,Eritrea,1E+15
+BlanketGen,DEFAULT,8,Eritrea,1E+15
+BlanketGen,DEFAULT,9,Eritrea,56.25
+BlanketGen,DEFAULT,10,Eritrea,9.38
+BlanketGen,DEFAULT,11,Eritrea,3.52
+BlanketGen,DEFAULT,12,Eritrea,2.32
+BlanketGen,DEFAULT,1,Estonia,0.41
+BlanketGen,DEFAULT,2,Estonia,0.39
+BlanketGen,DEFAULT,3,Estonia,0.44
+BlanketGen,DEFAULT,4,Estonia,0.53
+BlanketGen,DEFAULT,5,Estonia,0.67
+BlanketGen,DEFAULT,6,Estonia,0.89
+BlanketGen,DEFAULT,7,Estonia,1.07
+BlanketGen,DEFAULT,8,Estonia,1.03
+BlanketGen,DEFAULT,9,Estonia,0.75
+BlanketGen,DEFAULT,10,Estonia,0.61
+BlanketGen,DEFAULT,11,Estonia,0.5
+BlanketGen,DEFAULT,12,Estonia,0.44
+BlanketGen,DEFAULT,1,Ethiopia,1.09
+BlanketGen,DEFAULT,2,Ethiopia,1.19
+BlanketGen,DEFAULT,3,Ethiopia,1.4
+BlanketGen,DEFAULT,4,Ethiopia,1.49
+BlanketGen,DEFAULT,5,Ethiopia,1.53
+BlanketGen,DEFAULT,6,Ethiopia,1.47
+BlanketGen,DEFAULT,7,Ethiopia,1.36
+BlanketGen,DEFAULT,8,Ethiopia,1.31
+BlanketGen,DEFAULT,9,Ethiopia,1.31
+BlanketGen,DEFAULT,10,Ethiopia,1.23
+BlanketGen,DEFAULT,11,Ethiopia,1.09
+BlanketGen,DEFAULT,12,Ethiopia,1.05
+BlanketGen,DEFAULT,1,Fiji,56.25
+BlanketGen,DEFAULT,2,Fiji,56.25
+BlanketGen,DEFAULT,3,Fiji,75
+BlanketGen,DEFAULT,4,Fiji,14.06
+BlanketGen,DEFAULT,5,Fiji,7.03
+BlanketGen,DEFAULT,6,Fiji,4.41
+BlanketGen,DEFAULT,7,Fiji,3.81
+BlanketGen,DEFAULT,8,Fiji,3.95
+BlanketGen,DEFAULT,9,Fiji,4.69
+BlanketGen,DEFAULT,10,Fiji,5.92
+BlanketGen,DEFAULT,11,Fiji,7.76
+BlanketGen,DEFAULT,12,Fiji,16.07
+BlanketGen,DEFAULT,1,Finland,0.35
+BlanketGen,DEFAULT,2,Finland,0.35
+BlanketGen,DEFAULT,3,Finland,0.38
+BlanketGen,DEFAULT,4,Finland,0.46
+BlanketGen,DEFAULT,5,Finland,0.6
+BlanketGen,DEFAULT,6,Finland,0.8
+BlanketGen,DEFAULT,7,Finland,1.01
+BlanketGen,DEFAULT,8,Finland,0.9
+BlanketGen,DEFAULT,9,Finland,0.69
+BlanketGen,DEFAULT,10,Finland,0.55
+BlanketGen,DEFAULT,11,Finland,0.46
+BlanketGen,DEFAULT,12,Finland,0.38
+BlanketGen,DEFAULT,1,France,0.55
+BlanketGen,DEFAULT,2,France,0.56
+BlanketGen,DEFAULT,3,France,0.61
+BlanketGen,DEFAULT,4,France,0.69
+BlanketGen,DEFAULT,5,France,0.85
+BlanketGen,DEFAULT,6,France,1.08
+BlanketGen,DEFAULT,7,France,1.32
+BlanketGen,DEFAULT,8,France,1.29
+BlanketGen,DEFAULT,9,France,1.03
+BlanketGen,DEFAULT,10,France,0.82
+BlanketGen,DEFAULT,11,France,0.65
+BlanketGen,DEFAULT,12,France,0.58
+BlanketGen,DEFAULT,1,French Guiana,8.04
+BlanketGen,DEFAULT,2,French Guiana,9.38
+BlanketGen,DEFAULT,3,French Guiana,13.24
+BlanketGen,DEFAULT,4,French Guiana,14.06
+BlanketGen,DEFAULT,5,French Guiana,17.31
+BlanketGen,DEFAULT,6,French Guiana,7.76
+BlanketGen,DEFAULT,7,French Guiana,5.77
+BlanketGen,DEFAULT,8,French Guiana,6.43
+BlanketGen,DEFAULT,9,French Guiana,6.25
+BlanketGen,DEFAULT,10,French Guiana,7.03
+BlanketGen,DEFAULT,11,French Guiana,7.76
+BlanketGen,DEFAULT,12,French Guiana,8.33
+BlanketGen,DEFAULT,1,French Polynesia,32.14
+BlanketGen,DEFAULT,2,French Polynesia,56.25
+BlanketGen,DEFAULT,3,French Polynesia,112.5
+BlanketGen,DEFAULT,4,French Polynesia,25
+BlanketGen,DEFAULT,5,French Polynesia,16.07
+BlanketGen,DEFAULT,6,French Polynesia,2.32
+BlanketGen,DEFAULT,7,French Polynesia,2.06
+BlanketGen,DEFAULT,8,French Polynesia,4.69
+BlanketGen,DEFAULT,9,French Polynesia,5.11
+BlanketGen,DEFAULT,10,French Polynesia,6.82
+BlanketGen,DEFAULT,11,French Polynesia,10.23
+BlanketGen,DEFAULT,12,French Polynesia,16.07
+BlanketGen,DEFAULT,1,Gabon,8.33
+BlanketGen,DEFAULT,2,Gabon,8.65
+BlanketGen,DEFAULT,3,Gabon,8.04
+BlanketGen,DEFAULT,4,Gabon,8.65
+BlanketGen,DEFAULT,5,Gabon,7.26
+BlanketGen,DEFAULT,6,Gabon,4.25
+BlanketGen,DEFAULT,7,Gabon,3.04
+BlanketGen,DEFAULT,8,Gabon,3.31
+BlanketGen,DEFAULT,9,Gabon,4.79
+BlanketGen,DEFAULT,10,Gabon,6.08
+BlanketGen,DEFAULT,11,Gabon,5.92
+BlanketGen,DEFAULT,12,Gabon,7.5
+BlanketGen,DEFAULT,1,Georgia,0.57
+BlanketGen,DEFAULT,2,Georgia,0.59
+BlanketGen,DEFAULT,3,Georgia,0.65
+BlanketGen,DEFAULT,4,Georgia,0.83
+BlanketGen,DEFAULT,5,Georgia,1.13
+BlanketGen,DEFAULT,6,Georgia,1.7
+BlanketGen,DEFAULT,7,Georgia,2.71
+BlanketGen,DEFAULT,8,Georgia,2.68
+BlanketGen,DEFAULT,9,Georgia,1.54
+BlanketGen,DEFAULT,10,Georgia,1.01
+BlanketGen,DEFAULT,11,Georgia,0.77
+BlanketGen,DEFAULT,12,Georgia,0.63
+BlanketGen,DEFAULT,1,Germany,0.47
+BlanketGen,DEFAULT,2,Germany,0.47
+BlanketGen,DEFAULT,3,Germany,0.52
+BlanketGen,DEFAULT,4,Germany,0.6
+BlanketGen,DEFAULT,5,Germany,0.75
+BlanketGen,DEFAULT,6,Germany,0.93
+BlanketGen,DEFAULT,7,Germany,1.08
+BlanketGen,DEFAULT,8,Germany,1.05
+BlanketGen,DEFAULT,9,Germany,0.85
+BlanketGen,DEFAULT,10,Germany,0.68
+BlanketGen,DEFAULT,11,Germany,0.56
+BlanketGen,DEFAULT,12,Germany,0.51
+BlanketGen,DEFAULT,1,Ghana,1E+15
+BlanketGen,DEFAULT,2,Ghana,1E+15
+BlanketGen,DEFAULT,3,Ghana,1E+15
+BlanketGen,DEFAULT,4,Ghana,1E+15
+BlanketGen,DEFAULT,5,Ghana,1E+15
+BlanketGen,DEFAULT,6,Ghana,1E+15
+BlanketGen,DEFAULT,7,Ghana,75
+BlanketGen,DEFAULT,8,Ghana,25
+BlanketGen,DEFAULT,9,Ghana,112.5
+BlanketGen,DEFAULT,10,Ghana,1E+15
+BlanketGen,DEFAULT,11,Ghana,1E+15
+BlanketGen,DEFAULT,12,Ghana,1E+15
+BlanketGen,DEFAULT,1,Greece,0.67
+BlanketGen,DEFAULT,2,Greece,0.68
+BlanketGen,DEFAULT,3,Greece,0.74
+BlanketGen,DEFAULT,4,Greece,0.88
+BlanketGen,DEFAULT,5,Greece,1.19
+BlanketGen,DEFAULT,6,Greece,1.89
+BlanketGen,DEFAULT,7,Greece,3.04
+BlanketGen,DEFAULT,8,Greece,3.04
+BlanketGen,DEFAULT,9,Greece,1.83
+BlanketGen,DEFAULT,10,Greece,1.21
+BlanketGen,DEFAULT,11,Greece,0.89
+BlanketGen,DEFAULT,12,Greece,0.74
+BlanketGen,DEFAULT,1,Grenada,8.33
+BlanketGen,DEFAULT,2,Grenada,8.33
+BlanketGen,DEFAULT,3,Grenada,8.33
+BlanketGen,DEFAULT,4,Grenada,18.75
+BlanketGen,DEFAULT,5,Grenada,1E+15
+BlanketGen,DEFAULT,6,Grenada,112.5
+BlanketGen,DEFAULT,7,Grenada,112.5
+BlanketGen,DEFAULT,8,Grenada,112.5
+BlanketGen,DEFAULT,9,Grenada,112.5
+BlanketGen,DEFAULT,10,Grenada,112.5
+BlanketGen,DEFAULT,11,Grenada,18.75
+BlanketGen,DEFAULT,12,Grenada,10.23
+BlanketGen,DEFAULT,1,Guadeloupe,3.31
+BlanketGen,DEFAULT,2,Guadeloupe,3.31
+BlanketGen,DEFAULT,3,Guadeloupe,3.88
+BlanketGen,DEFAULT,4,Guadeloupe,6.25
+BlanketGen,DEFAULT,5,Guadeloupe,16.07
+BlanketGen,DEFAULT,6,Guadeloupe,1E+15
+BlanketGen,DEFAULT,7,Guadeloupe,1E+15
+BlanketGen,DEFAULT,8,Guadeloupe,75
+BlanketGen,DEFAULT,9,Guadeloupe,32.14
+BlanketGen,DEFAULT,10,Guadeloupe,14.06
+BlanketGen,DEFAULT,11,Guadeloupe,6.82
+BlanketGen,DEFAULT,12,Guadeloupe,4.17
+BlanketGen,DEFAULT,1,Guam,11.25
+BlanketGen,DEFAULT,2,Guam,10.23
+BlanketGen,DEFAULT,3,Guam,14.06
+BlanketGen,DEFAULT,4,Guam,28.13
+BlanketGen,DEFAULT,5,Guam,225
+BlanketGen,DEFAULT,6,Guam,225
+BlanketGen,DEFAULT,7,Guam,32.14
+BlanketGen,DEFAULT,8,Guam,22.5
+BlanketGen,DEFAULT,9,Guam,22.5
+BlanketGen,DEFAULT,10,Guam,28.13
+BlanketGen,DEFAULT,11,Guam,56.25
+BlanketGen,DEFAULT,12,Guam,28.13
+BlanketGen,DEFAULT,1,Guatemala,2.68
+BlanketGen,DEFAULT,2,Guatemala,2.85
+BlanketGen,DEFAULT,3,Guatemala,3.95
+BlanketGen,DEFAULT,4,Guatemala,5.77
+BlanketGen,DEFAULT,5,Guatemala,7.76
+BlanketGen,DEFAULT,6,Guatemala,8.33
+BlanketGen,DEFAULT,7,Guatemala,6.62
+BlanketGen,DEFAULT,8,Guatemala,6.08
+BlanketGen,DEFAULT,9,Guatemala,5.77
+BlanketGen,DEFAULT,10,Guatemala,5.77
+BlanketGen,DEFAULT,11,Guatemala,3.95
+BlanketGen,DEFAULT,12,Guatemala,3.13
+BlanketGen,DEFAULT,1,Guinea,3.95
+BlanketGen,DEFAULT,2,Guinea,9.38
+BlanketGen,DEFAULT,3,Guinea,1E+15
+BlanketGen,DEFAULT,4,Guinea,1E+15
+BlanketGen,DEFAULT,5,Guinea,1E+15
+BlanketGen,DEFAULT,6,Guinea,28.13
+BlanketGen,DEFAULT,7,Guinea,8.33
+BlanketGen,DEFAULT,8,Guinea,8.04
+BlanketGen,DEFAULT,9,Guinea,9.78
+BlanketGen,DEFAULT,10,Guinea,12.5
+BlanketGen,DEFAULT,11,Guinea,7.03
+BlanketGen,DEFAULT,12,Guinea,3.46
+BlanketGen,DEFAULT,1,Guinea-Bissau,2.62
+BlanketGen,DEFAULT,2,Guinea-Bissau,3.75
+BlanketGen,DEFAULT,3,Guinea-Bissau,5.77
+BlanketGen,DEFAULT,4,Guinea-Bissau,11.25
+BlanketGen,DEFAULT,5,Guinea-Bissau,112.5
+BlanketGen,DEFAULT,6,Guinea-Bissau,1E+15
+BlanketGen,DEFAULT,7,Guinea-Bissau,1E+15
+BlanketGen,DEFAULT,8,Guinea-Bissau,112.5
+BlanketGen,DEFAULT,9,Guinea-Bissau,225
+BlanketGen,DEFAULT,10,Guinea-Bissau,1E+15
+BlanketGen,DEFAULT,11,Guinea-Bissau,11.84
+BlanketGen,DEFAULT,12,Guinea-Bissau,3.08
+BlanketGen,DEFAULT,1,Guyana,5
+BlanketGen,DEFAULT,2,Guyana,4.79
+BlanketGen,DEFAULT,3,Guyana,5.49
+BlanketGen,DEFAULT,4,Guyana,6.62
+BlanketGen,DEFAULT,5,Guyana,6.82
+BlanketGen,DEFAULT,6,Guyana,7.26
+BlanketGen,DEFAULT,7,Guyana,6.43
+BlanketGen,DEFAULT,8,Guyana,6.82
+BlanketGen,DEFAULT,9,Guyana,7.03
+BlanketGen,DEFAULT,10,Guyana,7.76
+BlanketGen,DEFAULT,11,Guyana,7.5
+BlanketGen,DEFAULT,12,Guyana,6.08
+BlanketGen,DEFAULT,1,Haiti,2.21
+BlanketGen,DEFAULT,2,Haiti,2.25
+BlanketGen,DEFAULT,3,Haiti,2.59
+BlanketGen,DEFAULT,4,Haiti,3.26
+BlanketGen,DEFAULT,5,Haiti,4.17
+BlanketGen,DEFAULT,6,Haiti,5.49
+BlanketGen,DEFAULT,7,Haiti,5.49
+BlanketGen,DEFAULT,8,Haiti,5.92
+BlanketGen,DEFAULT,9,Haiti,5.77
+BlanketGen,DEFAULT,10,Haiti,4.79
+BlanketGen,DEFAULT,11,Haiti,3.69
+BlanketGen,DEFAULT,12,Haiti,2.56
+BlanketGen,DEFAULT,1,Honduras,5.63
+BlanketGen,DEFAULT,2,Honduras,5.92
+BlanketGen,DEFAULT,3,Honduras,10.71
+BlanketGen,DEFAULT,4,Honduras,75
+BlanketGen,DEFAULT,5,Honduras,1E+15
+BlanketGen,DEFAULT,6,Honduras,1E+15
+BlanketGen,DEFAULT,7,Honduras,1E+15
+BlanketGen,DEFAULT,8,Honduras,1E+15
+BlanketGen,DEFAULT,9,Honduras,1E+15
+BlanketGen,DEFAULT,10,Honduras,37.5
+BlanketGen,DEFAULT,11,Honduras,11.25
+BlanketGen,DEFAULT,12,Honduras,6.82
+BlanketGen,DEFAULT,1,Hong Kong,1.31
+BlanketGen,DEFAULT,2,Hong Kong,1.39
+BlanketGen,DEFAULT,3,Hong Kong,1.84
+BlanketGen,DEFAULT,4,Hong Kong,3.63
+BlanketGen,DEFAULT,5,Hong Kong,112.5
+BlanketGen,DEFAULT,6,Hong Kong,1E+15
+BlanketGen,DEFAULT,7,Hong Kong,1E+15
+BlanketGen,DEFAULT,8,Hong Kong,1E+15
+BlanketGen,DEFAULT,9,Hong Kong,1E+15
+BlanketGen,DEFAULT,10,Hong Kong,112.5
+BlanketGen,DEFAULT,11,Hong Kong,2.74
+BlanketGen,DEFAULT,12,Hong Kong,1.48
+BlanketGen,DEFAULT,1,Hungary,0.45
+BlanketGen,DEFAULT,2,Hungary,0.46
+BlanketGen,DEFAULT,3,Hungary,0.56
+BlanketGen,DEFAULT,4,Hungary,0.68
+BlanketGen,DEFAULT,5,Hungary,0.91
+BlanketGen,DEFAULT,6,Hungary,1.2
+BlanketGen,DEFAULT,7,Hungary,1.42
+BlanketGen,DEFAULT,8,Hungary,1.36
+BlanketGen,DEFAULT,9,Hungary,1
+BlanketGen,DEFAULT,10,Hungary,0.71
+BlanketGen,DEFAULT,11,Hungary,0.55
+BlanketGen,DEFAULT,12,Hungary,0.49
+BlanketGen,DEFAULT,1,Iceland,0.45
+BlanketGen,DEFAULT,2,Iceland,0.46
+BlanketGen,DEFAULT,3,Iceland,0.47
+BlanketGen,DEFAULT,4,Iceland,0.51
+BlanketGen,DEFAULT,5,Iceland,0.58
+BlanketGen,DEFAULT,6,Iceland,0.68
+BlanketGen,DEFAULT,7,Iceland,0.76
+BlanketGen,DEFAULT,8,Iceland,0.74
+BlanketGen,DEFAULT,9,Iceland,0.65
+BlanketGen,DEFAULT,10,Iceland,0.54
+BlanketGen,DEFAULT,11,Iceland,0.5
+BlanketGen,DEFAULT,12,Iceland,0.47
+BlanketGen,DEFAULT,1,India,0.94
+BlanketGen,DEFAULT,2,India,1.1
+BlanketGen,DEFAULT,3,India,1.7
+BlanketGen,DEFAULT,4,India,3.88
+BlanketGen,DEFAULT,5,India,32.14
+BlanketGen,DEFAULT,6,India,1E+15
+BlanketGen,DEFAULT,7,India,28.13
+BlanketGen,DEFAULT,8,India,15
+BlanketGen,DEFAULT,9,India,7.5
+BlanketGen,DEFAULT,10,India,2.71
+BlanketGen,DEFAULT,11,India,1.35
+BlanketGen,DEFAULT,12,India,0.99
+BlanketGen,DEFAULT,1,Indonesia,9.38
+BlanketGen,DEFAULT,2,Indonesia,9.38
+BlanketGen,DEFAULT,3,Indonesia,10.23
+BlanketGen,DEFAULT,4,Indonesia,12.5
+BlanketGen,DEFAULT,5,Indonesia,11.84
+BlanketGen,DEFAULT,6,Indonesia,7.26
+BlanketGen,DEFAULT,7,Indonesia,5.63
+BlanketGen,DEFAULT,8,Indonesia,5.63
+BlanketGen,DEFAULT,9,Indonesia,6.62
+BlanketGen,DEFAULT,10,Indonesia,9
+BlanketGen,DEFAULT,11,Indonesia,11.25
+BlanketGen,DEFAULT,12,Indonesia,10.23
+BlanketGen,DEFAULT,1,Iran,0.5
+BlanketGen,DEFAULT,2,Iran,0.53
+BlanketGen,DEFAULT,3,Iran,0.66
+BlanketGen,DEFAULT,4,Iran,0.9
+BlanketGen,DEFAULT,5,Iran,1.33
+BlanketGen,DEFAULT,6,Iran,2.3
+BlanketGen,DEFAULT,7,Iran,4.69
+BlanketGen,DEFAULT,8,Iran,3.21
+BlanketGen,DEFAULT,9,Iran,1.6
+BlanketGen,DEFAULT,10,Iran,0.97
+BlanketGen,DEFAULT,11,Iran,0.68
+BlanketGen,DEFAULT,12,Iran,0.55
+BlanketGen,DEFAULT,1,Iraq,0.64
+BlanketGen,DEFAULT,2,Iraq,0.72
+BlanketGen,DEFAULT,3,Iraq,0.93
+BlanketGen,DEFAULT,4,Iraq,1.48
+BlanketGen,DEFAULT,5,Iraq,4.02
+BlanketGen,DEFAULT,6,Iraq,1E+15
+BlanketGen,DEFAULT,7,Iraq,1E+15
+BlanketGen,DEFAULT,8,Iraq,1E+15
+BlanketGen,DEFAULT,9,Iraq,9.38
+BlanketGen,DEFAULT,10,Iraq,1.96
+BlanketGen,DEFAULT,11,Iraq,0.94
+BlanketGen,DEFAULT,12,Iraq,0.72
+BlanketGen,DEFAULT,1,Ireland,0.59
+BlanketGen,DEFAULT,2,Ireland,0.59
+BlanketGen,DEFAULT,3,Ireland,0.62
+BlanketGen,DEFAULT,4,Ireland,0.66
+BlanketGen,DEFAULT,5,Ireland,0.74
+BlanketGen,DEFAULT,6,Ireland,0.88
+BlanketGen,DEFAULT,7,Ireland,1.01
+BlanketGen,DEFAULT,8,Ireland,1
+BlanketGen,DEFAULT,9,Ireland,0.89
+BlanketGen,DEFAULT,10,Ireland,0.77
+BlanketGen,DEFAULT,11,Ireland,0.66
+BlanketGen,DEFAULT,12,Ireland,0.62
+BlanketGen,DEFAULT,1,Israel,0.74
+BlanketGen,DEFAULT,2,Israel,0.75
+BlanketGen,DEFAULT,3,Israel,0.84
+BlanketGen,DEFAULT,4,Israel,1.09
+BlanketGen,DEFAULT,5,Israel,1.54
+BlanketGen,DEFAULT,6,Israel,2.39
+BlanketGen,DEFAULT,7,Israel,4.09
+BlanketGen,DEFAULT,8,Israel,4.59
+BlanketGen,DEFAULT,9,Israel,2.92
+BlanketGen,DEFAULT,10,Israel,1.79
+BlanketGen,DEFAULT,11,Israel,1.09
+BlanketGen,DEFAULT,12,Israel,0.82
+BlanketGen,DEFAULT,1,Italy,0.58
+BlanketGen,DEFAULT,2,Italy,0.6
+BlanketGen,DEFAULT,3,Italy,0.65
+BlanketGen,DEFAULT,4,Italy,0.75
+BlanketGen,DEFAULT,5,Italy,0.98
+BlanketGen,DEFAULT,6,Italy,1.36
+BlanketGen,DEFAULT,7,Italy,1.89
+BlanketGen,DEFAULT,8,Italy,1.92
+BlanketGen,DEFAULT,9,Italy,1.4
+BlanketGen,DEFAULT,10,Italy,0.97
+BlanketGen,DEFAULT,11,Italy,0.73
+BlanketGen,DEFAULT,12,Italy,0.62
+BlanketGen,DEFAULT,1,Jamaica,3.81
+BlanketGen,DEFAULT,2,Jamaica,4.02
+BlanketGen,DEFAULT,3,Jamaica,4.69
+BlanketGen,DEFAULT,4,Jamaica,6.43
+BlanketGen,DEFAULT,5,Jamaica,14.06
+BlanketGen,DEFAULT,6,Jamaica,112.5
+BlanketGen,DEFAULT,7,Jamaica,45
+BlanketGen,DEFAULT,8,Jamaica,112.5
+BlanketGen,DEFAULT,9,Jamaica,25
+BlanketGen,DEFAULT,10,Jamaica,20.45
+BlanketGen,DEFAULT,11,Jamaica,7.26
+BlanketGen,DEFAULT,12,Jamaica,5
+BlanketGen,DEFAULT,1,Japan,0.53
+BlanketGen,DEFAULT,2,Japan,0.53
+BlanketGen,DEFAULT,3,Japan,0.6
+BlanketGen,DEFAULT,4,Japan,0.78
+BlanketGen,DEFAULT,5,Japan,1.08
+BlanketGen,DEFAULT,6,Japan,1.72
+BlanketGen,DEFAULT,7,Japan,3.88
+BlanketGen,DEFAULT,8,Japan,5.63
+BlanketGen,DEFAULT,9,Japan,2.21
+BlanketGen,DEFAULT,10,Japan,1.08
+BlanketGen,DEFAULT,11,Japan,0.75
+BlanketGen,DEFAULT,12,Japan,0.59
+BlanketGen,DEFAULT,1,Jordan,0.64
+BlanketGen,DEFAULT,2,Jordan,0.69
+BlanketGen,DEFAULT,3,Jordan,0.82
+BlanketGen,DEFAULT,4,Jordan,1.14
+BlanketGen,DEFAULT,5,Jordan,1.67
+BlanketGen,DEFAULT,6,Jordan,2.74
+BlanketGen,DEFAULT,7,Jordan,4.89
+BlanketGen,DEFAULT,8,Jordan,5.23
+BlanketGen,DEFAULT,9,Jordan,3
+BlanketGen,DEFAULT,10,Jordan,1.57
+BlanketGen,DEFAULT,11,Jordan,0.93
+BlanketGen,DEFAULT,12,Jordan,0.71
+BlanketGen,DEFAULT,1,Kazakhstan,0.3
+BlanketGen,DEFAULT,2,Kazakhstan,0.3
+BlanketGen,DEFAULT,3,Kazakhstan,0.37
+BlanketGen,DEFAULT,4,Kazakhstan,0.55
+BlanketGen,DEFAULT,5,Kazakhstan,0.8
+BlanketGen,DEFAULT,6,Kazakhstan,1.2
+BlanketGen,DEFAULT,7,Kazakhstan,1.56
+BlanketGen,DEFAULT,8,Kazakhstan,1.2
+BlanketGen,DEFAULT,9,Kazakhstan,0.77
+BlanketGen,DEFAULT,10,Kazakhstan,0.53
+BlanketGen,DEFAULT,11,Kazakhstan,0.4
+BlanketGen,DEFAULT,12,Kazakhstan,0.33
+BlanketGen,DEFAULT,1,Kenya,1.58
+BlanketGen,DEFAULT,2,Kenya,1.68
+BlanketGen,DEFAULT,3,Kenya,1.86
+BlanketGen,DEFAULT,4,Kenya,1.99
+BlanketGen,DEFAULT,5,Kenya,1.79
+BlanketGen,DEFAULT,6,Kenya,1.52
+BlanketGen,DEFAULT,7,Kenya,1.41
+BlanketGen,DEFAULT,8,Kenya,1.41
+BlanketGen,DEFAULT,9,Kenya,1.45
+BlanketGen,DEFAULT,10,Kenya,1.63
+BlanketGen,DEFAULT,11,Kenya,1.72
+BlanketGen,DEFAULT,12,Kenya,1.65
+BlanketGen,DEFAULT,1,Kiribati,1E+15
+BlanketGen,DEFAULT,2,Kiribati,1E+15
+BlanketGen,DEFAULT,3,Kiribati,1E+15
+BlanketGen,DEFAULT,4,Kiribati,1E+15
+BlanketGen,DEFAULT,5,Kiribati,1E+15
+BlanketGen,DEFAULT,6,Kiribati,1E+15
+BlanketGen,DEFAULT,7,Kiribati,1E+15
+BlanketGen,DEFAULT,8,Kiribati,1E+15
+BlanketGen,DEFAULT,9,Kiribati,1E+15
+BlanketGen,DEFAULT,10,Kiribati,1E+15
+BlanketGen,DEFAULT,11,Kiribati,1E+15
+BlanketGen,DEFAULT,12,Kiribati,1E+15
+BlanketGen,DEFAULT,1,Kuwait,0.75
+BlanketGen,DEFAULT,2,Kuwait,0.83
+BlanketGen,DEFAULT,3,Kuwait,1.17
+BlanketGen,DEFAULT,4,Kuwait,2.32
+BlanketGen,DEFAULT,5,Kuwait,1E+15
+BlanketGen,DEFAULT,6,Kuwait,1E+15
+BlanketGen,DEFAULT,7,Kuwait,1E+15
+BlanketGen,DEFAULT,8,Kuwait,1E+15
+BlanketGen,DEFAULT,9,Kuwait,1E+15
+BlanketGen,DEFAULT,10,Kuwait,3.13
+BlanketGen,DEFAULT,11,Kuwait,1.24
+BlanketGen,DEFAULT,12,Kuwait,0.83
+BlanketGen,DEFAULT,1,Kyrgyzstan,0.33
+BlanketGen,DEFAULT,2,Kyrgyzstan,0.35
+BlanketGen,DEFAULT,3,Kyrgyzstan,0.45
+BlanketGen,DEFAULT,4,Kyrgyzstan,0.6
+BlanketGen,DEFAULT,5,Kyrgyzstan,0.76
+BlanketGen,DEFAULT,6,Kyrgyzstan,0.97
+BlanketGen,DEFAULT,7,Kyrgyzstan,1.17
+BlanketGen,DEFAULT,8,Kyrgyzstan,1.03
+BlanketGen,DEFAULT,9,Kyrgyzstan,0.74
+BlanketGen,DEFAULT,10,Kyrgyzstan,0.55
+BlanketGen,DEFAULT,11,Kyrgyzstan,0.43
+BlanketGen,DEFAULT,12,Kyrgyzstan,0.36
+BlanketGen,DEFAULT,1,Laos,1.76
+BlanketGen,DEFAULT,2,Laos,1.56
+BlanketGen,DEFAULT,3,Laos,2.27
+BlanketGen,DEFAULT,4,Laos,5
+BlanketGen,DEFAULT,5,Laos,10.71
+BlanketGen,DEFAULT,6,Laos,17.31
+BlanketGen,DEFAULT,7,Laos,13.24
+BlanketGen,DEFAULT,8,Laos,12.5
+BlanketGen,DEFAULT,9,Laos,7.5
+BlanketGen,DEFAULT,10,Laos,3.52
+BlanketGen,DEFAULT,11,Laos,2.03
+BlanketGen,DEFAULT,12,Laos,1.32
+BlanketGen,DEFAULT,1,Latvia,0.43
+BlanketGen,DEFAULT,2,Latvia,0.42
+BlanketGen,DEFAULT,3,Latvia,0.47
+BlanketGen,DEFAULT,4,Latvia,0.54
+BlanketGen,DEFAULT,5,Latvia,0.71
+BlanketGen,DEFAULT,6,Latvia,0.93
+BlanketGen,DEFAULT,7,Latvia,1.14
+BlanketGen,DEFAULT,8,Latvia,1.13
+BlanketGen,DEFAULT,9,Latvia,0.85
+BlanketGen,DEFAULT,10,Latvia,0.66
+BlanketGen,DEFAULT,11,Latvia,0.54
+BlanketGen,DEFAULT,12,Latvia,0.46
+BlanketGen,DEFAULT,1,Lebanon,0.64
+BlanketGen,DEFAULT,2,Lebanon,0.65
+BlanketGen,DEFAULT,3,Lebanon,0.69
+BlanketGen,DEFAULT,4,Lebanon,0.83
+BlanketGen,DEFAULT,5,Lebanon,1.1
+BlanketGen,DEFAULT,6,Lebanon,1.58
+BlanketGen,DEFAULT,7,Lebanon,2.5
+BlanketGen,DEFAULT,8,Lebanon,2.74
+BlanketGen,DEFAULT,9,Lebanon,1.76
+BlanketGen,DEFAULT,10,Lebanon,1.21
+BlanketGen,DEFAULT,11,Lebanon,0.94
+BlanketGen,DEFAULT,12,Lebanon,0.72
+BlanketGen,DEFAULT,1,Lesotho,1.24
+BlanketGen,DEFAULT,2,Lesotho,1.17
+BlanketGen,DEFAULT,3,Lesotho,1.02
+BlanketGen,DEFAULT,4,Lesotho,0.76
+BlanketGen,DEFAULT,5,Lesotho,0.61
+BlanketGen,DEFAULT,6,Lesotho,0.52
+BlanketGen,DEFAULT,7,Lesotho,0.52
+BlanketGen,DEFAULT,8,Lesotho,0.57
+BlanketGen,DEFAULT,9,Lesotho,0.71
+BlanketGen,DEFAULT,10,Lesotho,0.83
+BlanketGen,DEFAULT,11,Lesotho,0.95
+BlanketGen,DEFAULT,12,Lesotho,1.09
+BlanketGen,DEFAULT,1,Liberia,6.08
+BlanketGen,DEFAULT,2,Liberia,8.04
+BlanketGen,DEFAULT,3,Liberia,10.71
+BlanketGen,DEFAULT,4,Liberia,14.06
+BlanketGen,DEFAULT,5,Liberia,12.5
+BlanketGen,DEFAULT,6,Liberia,9.38
+BlanketGen,DEFAULT,7,Liberia,7.76
+BlanketGen,DEFAULT,8,Liberia,6.25
+BlanketGen,DEFAULT,9,Liberia,7.5
+BlanketGen,DEFAULT,10,Liberia,8.33
+BlanketGen,DEFAULT,11,Liberia,8.65
+BlanketGen,DEFAULT,12,Liberia,6.25
+BlanketGen,DEFAULT,1,Libya,0.73
+BlanketGen,DEFAULT,2,Libya,0.78
+BlanketGen,DEFAULT,3,Libya,0.9
+BlanketGen,DEFAULT,4,Libya,1.15
+BlanketGen,DEFAULT,5,Libya,1.72
+BlanketGen,DEFAULT,6,Libya,2.92
+BlanketGen,DEFAULT,7,Libya,4.5
+BlanketGen,DEFAULT,8,Libya,5.23
+BlanketGen,DEFAULT,9,Libya,3.31
+BlanketGen,DEFAULT,10,Libya,1.8
+BlanketGen,DEFAULT,11,Libya,1.09
+BlanketGen,DEFAULT,12,Libya,0.8
+BlanketGen,DEFAULT,1,Lithuania,0.41
+BlanketGen,DEFAULT,2,Lithuania,0.4
+BlanketGen,DEFAULT,3,Lithuania,0.46
+BlanketGen,DEFAULT,4,Lithuania,0.56
+BlanketGen,DEFAULT,5,Lithuania,0.73
+BlanketGen,DEFAULT,6,Lithuania,0.93
+BlanketGen,DEFAULT,7,Lithuania,1.07
+BlanketGen,DEFAULT,8,Lithuania,1.02
+BlanketGen,DEFAULT,9,Lithuania,0.8
+BlanketGen,DEFAULT,10,Lithuania,0.63
+BlanketGen,DEFAULT,11,Lithuania,0.52
+BlanketGen,DEFAULT,12,Lithuania,0.44
+BlanketGen,DEFAULT,1,Luxembourg,0.48
+BlanketGen,DEFAULT,2,Luxembourg,0.48
+BlanketGen,DEFAULT,3,Luxembourg,0.54
+BlanketGen,DEFAULT,4,Luxembourg,0.61
+BlanketGen,DEFAULT,5,Luxembourg,0.76
+BlanketGen,DEFAULT,6,Luxembourg,0.94
+BlanketGen,DEFAULT,7,Luxembourg,1.09
+BlanketGen,DEFAULT,8,Luxembourg,1.06
+BlanketGen,DEFAULT,9,Luxembourg,0.88
+BlanketGen,DEFAULT,10,Luxembourg,0.7
+BlanketGen,DEFAULT,11,Luxembourg,0.57
+BlanketGen,DEFAULT,12,Luxembourg,0.51
+BlanketGen,DEFAULT,1,Macau,1.11
+BlanketGen,DEFAULT,2,Macau,1.11
+BlanketGen,DEFAULT,3,Macau,1.58
+BlanketGen,DEFAULT,4,Macau,3.13
+BlanketGen,DEFAULT,5,Macau,112.5
+BlanketGen,DEFAULT,6,Macau,1E+15
+BlanketGen,DEFAULT,7,Macau,1E+15
+BlanketGen,DEFAULT,8,Macau,1E+15
+BlanketGen,DEFAULT,9,Macau,1E+15
+BlanketGen,DEFAULT,10,Macau,7.03
+BlanketGen,DEFAULT,11,Macau,2.01
+BlanketGen,DEFAULT,12,Macau,1.24
+BlanketGen,DEFAULT,1,Macedonia (FYROM),0.47
+BlanketGen,DEFAULT,2,Macedonia (FYROM),0.5
+BlanketGen,DEFAULT,3,Macedonia (FYROM),0.57
+BlanketGen,DEFAULT,4,Macedonia (FYROM),0.69
+BlanketGen,DEFAULT,5,Macedonia (FYROM),0.91
+BlanketGen,DEFAULT,6,Macedonia (FYROM),1.24
+BlanketGen,DEFAULT,7,Macedonia (FYROM),1.5
+BlanketGen,DEFAULT,8,Macedonia (FYROM),1.46
+BlanketGen,DEFAULT,9,Macedonia (FYROM),1.04
+BlanketGen,DEFAULT,10,Macedonia (FYROM),0.77
+BlanketGen,DEFAULT,11,Macedonia (FYROM),0.58
+BlanketGen,DEFAULT,12,Macedonia (FYROM),0.5
+BlanketGen,DEFAULT,1,Madagascar,3.81
+BlanketGen,DEFAULT,2,Madagascar,3.81
+BlanketGen,DEFAULT,3,Madagascar,3.36
+BlanketGen,DEFAULT,4,Madagascar,2.59
+BlanketGen,DEFAULT,5,Madagascar,1.83
+BlanketGen,DEFAULT,6,Madagascar,1.44
+BlanketGen,DEFAULT,7,Madagascar,1.33
+BlanketGen,DEFAULT,8,Madagascar,1.35
+BlanketGen,DEFAULT,9,Madagascar,1.5
+BlanketGen,DEFAULT,10,Madagascar,1.91
+BlanketGen,DEFAULT,11,Madagascar,2.53
+BlanketGen,DEFAULT,12,Madagascar,3.26
+BlanketGen,DEFAULT,1,Malawi,2.32
+BlanketGen,DEFAULT,2,Malawi,2.23
+BlanketGen,DEFAULT,3,Malawi,2.08
+BlanketGen,DEFAULT,4,Malawi,1.68
+BlanketGen,DEFAULT,5,Malawi,1.22
+BlanketGen,DEFAULT,6,Malawi,0.99
+BlanketGen,DEFAULT,7,Malawi,0.95
+BlanketGen,DEFAULT,8,Malawi,1.05
+BlanketGen,DEFAULT,9,Malawi,1.35
+BlanketGen,DEFAULT,10,Malawi,1.91
+BlanketGen,DEFAULT,11,Malawi,2.42
+BlanketGen,DEFAULT,12,Malawi,2.42
+BlanketGen,DEFAULT,1,Malaysia,7.03
+BlanketGen,DEFAULT,2,Malaysia,7.03
+BlanketGen,DEFAULT,3,Malaysia,8.65
+BlanketGen,DEFAULT,4,Malaysia,11.84
+BlanketGen,DEFAULT,5,Malaysia,15
+BlanketGen,DEFAULT,6,Malaysia,10.23
+BlanketGen,DEFAULT,7,Malaysia,8.33
+BlanketGen,DEFAULT,8,Malaysia,8.65
+BlanketGen,DEFAULT,9,Malaysia,8.33
+BlanketGen,DEFAULT,10,Malaysia,8.65
+BlanketGen,DEFAULT,11,Malaysia,8.33
+BlanketGen,DEFAULT,12,Malaysia,7.5
+BlanketGen,DEFAULT,1,Maldives,1E+15
+BlanketGen,DEFAULT,2,Maldives,1E+15
+BlanketGen,DEFAULT,3,Maldives,1E+15
+BlanketGen,DEFAULT,4,Maldives,1E+15
+BlanketGen,DEFAULT,5,Maldives,1E+15
+BlanketGen,DEFAULT,6,Maldives,1E+15
+BlanketGen,DEFAULT,7,Maldives,1E+15
+BlanketGen,DEFAULT,8,Maldives,1E+15
+BlanketGen,DEFAULT,9,Maldives,1E+15
+BlanketGen,DEFAULT,10,Maldives,1E+15
+BlanketGen,DEFAULT,11,Maldives,1E+15
+BlanketGen,DEFAULT,12,Maldives,1E+15
+BlanketGen,DEFAULT,1,Mali,2.05
+BlanketGen,DEFAULT,2,Mali,3.36
+BlanketGen,DEFAULT,3,Mali,32.14
+BlanketGen,DEFAULT,4,Mali,1E+15
+BlanketGen,DEFAULT,5,Mali,1E+15
+BlanketGen,DEFAULT,6,Mali,1E+15
+BlanketGen,DEFAULT,7,Mali,1E+15
+BlanketGen,DEFAULT,8,Mali,1E+15
+BlanketGen,DEFAULT,9,Mali,1E+15
+BlanketGen,DEFAULT,10,Mali,1E+15
+BlanketGen,DEFAULT,11,Mali,3.81
+BlanketGen,DEFAULT,12,Mali,1.99
+BlanketGen,DEFAULT,1,Malta,0.87
+BlanketGen,DEFAULT,2,Malta,0.87
+BlanketGen,DEFAULT,3,Malta,0.9
+BlanketGen,DEFAULT,4,Malta,1.06
+BlanketGen,DEFAULT,5,Malta,1.39
+BlanketGen,DEFAULT,6,Malta,2.05
+BlanketGen,DEFAULT,7,Malta,4.41
+BlanketGen,DEFAULT,8,Malta,7.03
+BlanketGen,DEFAULT,9,Malta,3.17
+BlanketGen,DEFAULT,10,Malta,1.86
+BlanketGen,DEFAULT,11,Malta,1.24
+BlanketGen,DEFAULT,12,Malta,0.97
+BlanketGen,DEFAULT,1,Marshall Islands,1E+15
+BlanketGen,DEFAULT,2,Marshall Islands,1E+15
+BlanketGen,DEFAULT,3,Marshall Islands,1.81
+BlanketGen,DEFAULT,4,Marshall Islands,1E+15
+BlanketGen,DEFAULT,5,Marshall Islands,1E+15
+BlanketGen,DEFAULT,6,Marshall Islands,1E+15
+BlanketGen,DEFAULT,7,Marshall Islands,1E+15
+BlanketGen,DEFAULT,8,Marshall Islands,1E+15
+BlanketGen,DEFAULT,9,Marshall Islands,1E+15
+BlanketGen,DEFAULT,10,Marshall Islands,1E+15
+BlanketGen,DEFAULT,11,Marshall Islands,1E+15
+BlanketGen,DEFAULT,12,Marshall Islands,1E+15
+BlanketGen,DEFAULT,1,Martinique,5.63
+BlanketGen,DEFAULT,2,Martinique,5.49
+BlanketGen,DEFAULT,3,Martinique,6.25
+BlanketGen,DEFAULT,4,Martinique,7.76
+BlanketGen,DEFAULT,5,Martinique,45
+BlanketGen,DEFAULT,6,Martinique,1E+15
+BlanketGen,DEFAULT,7,Martinique,1E+15
+BlanketGen,DEFAULT,8,Martinique,1E+15
+BlanketGen,DEFAULT,9,Martinique,37.5
+BlanketGen,DEFAULT,10,Martinique,16.07
+BlanketGen,DEFAULT,11,Martinique,10.23
+BlanketGen,DEFAULT,12,Martinique,7.26
+BlanketGen,DEFAULT,1,Mauritania,1.57
+BlanketGen,DEFAULT,2,Mauritania,2.03
+BlanketGen,DEFAULT,3,Mauritania,3.21
+BlanketGen,DEFAULT,4,Mauritania,8.33
+BlanketGen,DEFAULT,5,Mauritania,1E+15
+BlanketGen,DEFAULT,6,Mauritania,1E+15
+BlanketGen,DEFAULT,7,Mauritania,1E+15
+BlanketGen,DEFAULT,8,Mauritania,1E+15
+BlanketGen,DEFAULT,9,Mauritania,1E+15
+BlanketGen,DEFAULT,10,Mauritania,1E+15
+BlanketGen,DEFAULT,11,Mauritania,4.33
+BlanketGen,DEFAULT,12,Mauritania,1.83
+BlanketGen,DEFAULT,1,Mauritius,20.45
+BlanketGen,DEFAULT,2,Mauritius,18.75
+BlanketGen,DEFAULT,3,Mauritius,15
+BlanketGen,DEFAULT,4,Mauritius,7.5
+BlanketGen,DEFAULT,5,Mauritius,3.88
+BlanketGen,DEFAULT,6,Mauritius,2.78
+BlanketGen,DEFAULT,7,Mauritius,2.32
+BlanketGen,DEFAULT,8,Mauritius,2.32
+BlanketGen,DEFAULT,9,Mauritius,2.42
+BlanketGen,DEFAULT,10,Mauritius,3.08
+BlanketGen,DEFAULT,11,Mauritius,4.25
+BlanketGen,DEFAULT,12,Mauritius,8.33
+BlanketGen,DEFAULT,1,Mayotte,1E+15
+BlanketGen,DEFAULT,2,Mayotte,1E+15
+BlanketGen,DEFAULT,3,Mayotte,1E+15
+BlanketGen,DEFAULT,4,Mayotte,1E+15
+BlanketGen,DEFAULT,5,Mayotte,112.5
+BlanketGen,DEFAULT,6,Mayotte,10.23
+BlanketGen,DEFAULT,7,Mayotte,5.36
+BlanketGen,DEFAULT,8,Mayotte,4.33
+BlanketGen,DEFAULT,9,Mayotte,5.36
+BlanketGen,DEFAULT,10,Mayotte,10.23
+BlanketGen,DEFAULT,11,Mayotte,112.5
+BlanketGen,DEFAULT,12,Mayotte,1E+15
+BlanketGen,DEFAULT,1,Mexico,0.8
+BlanketGen,DEFAULT,2,Mexico,0.84
+BlanketGen,DEFAULT,3,Mexico,0.96
+BlanketGen,DEFAULT,4,Mexico,1.15
+BlanketGen,DEFAULT,5,Mexico,1.42
+BlanketGen,DEFAULT,6,Mexico,1.73
+BlanketGen,DEFAULT,7,Mexico,1.76
+BlanketGen,DEFAULT,8,Mexico,1.73
+BlanketGen,DEFAULT,9,Mexico,1.62
+BlanketGen,DEFAULT,10,Mexico,1.25
+BlanketGen,DEFAULT,11,Mexico,0.96
+BlanketGen,DEFAULT,12,Mexico,0.83
+BlanketGen,DEFAULT,1,Micronesia,112.5
+BlanketGen,DEFAULT,2,Micronesia,225
+BlanketGen,DEFAULT,3,Micronesia,10.71
+BlanketGen,DEFAULT,4,Micronesia,1E+15
+BlanketGen,DEFAULT,5,Micronesia,1E+15
+BlanketGen,DEFAULT,6,Micronesia,56.25
+BlanketGen,DEFAULT,7,Micronesia,32.14
+BlanketGen,DEFAULT,8,Micronesia,28.13
+BlanketGen,DEFAULT,9,Micronesia,25
+BlanketGen,DEFAULT,10,Micronesia,45
+BlanketGen,DEFAULT,11,Micronesia,37.5
+BlanketGen,DEFAULT,12,Micronesia,225
+BlanketGen,DEFAULT,1,Moldova,0.42
+BlanketGen,DEFAULT,2,Moldova,0.44
+BlanketGen,DEFAULT,3,Moldova,0.51
+BlanketGen,DEFAULT,4,Moldova,0.66
+BlanketGen,DEFAULT,5,Moldova,0.93
+BlanketGen,DEFAULT,6,Moldova,1.24
+BlanketGen,DEFAULT,7,Moldova,1.46
+BlanketGen,DEFAULT,8,Moldova,1.37
+BlanketGen,DEFAULT,9,Moldova,0.95
+BlanketGen,DEFAULT,10,Moldova,0.68
+BlanketGen,DEFAULT,11,Moldova,0.54
+BlanketGen,DEFAULT,12,Moldova,0.47
+BlanketGen,DEFAULT,1,Mongolia,0.25
+BlanketGen,DEFAULT,2,Mongolia,0.26
+BlanketGen,DEFAULT,3,Mongolia,0.32
+BlanketGen,DEFAULT,4,Mongolia,0.42
+BlanketGen,DEFAULT,5,Mongolia,0.56
+BlanketGen,DEFAULT,6,Mongolia,0.78
+BlanketGen,DEFAULT,7,Mongolia,0.95
+BlanketGen,DEFAULT,8,Mongolia,0.84
+BlanketGen,DEFAULT,9,Mongolia,0.57
+BlanketGen,DEFAULT,10,Mongolia,0.41
+BlanketGen,DEFAULT,11,Mongolia,0.31
+BlanketGen,DEFAULT,12,Mongolia,0.27
+BlanketGen,DEFAULT,1,Montenegro,0.51
+BlanketGen,DEFAULT,2,Montenegro,0.53
+BlanketGen,DEFAULT,3,Montenegro,0.6
+BlanketGen,DEFAULT,4,Montenegro,0.71
+BlanketGen,DEFAULT,5,Montenegro,0.92
+BlanketGen,DEFAULT,6,Montenegro,1.24
+BlanketGen,DEFAULT,7,Montenegro,1.61
+BlanketGen,DEFAULT,8,Montenegro,1.62
+BlanketGen,DEFAULT,9,Montenegro,1.12
+BlanketGen,DEFAULT,10,Montenegro,0.83
+BlanketGen,DEFAULT,11,Montenegro,0.64
+BlanketGen,DEFAULT,12,Montenegro,0.54
+BlanketGen,DEFAULT,1,Montserrat,3.31
+BlanketGen,DEFAULT,2,Montserrat,3.31
+BlanketGen,DEFAULT,3,Montserrat,3.88
+BlanketGen,DEFAULT,4,Montserrat,6.25
+BlanketGen,DEFAULT,5,Montserrat,16.07
+BlanketGen,DEFAULT,6,Montserrat,1E+15
+BlanketGen,DEFAULT,7,Montserrat,1E+15
+BlanketGen,DEFAULT,8,Montserrat,75
+BlanketGen,DEFAULT,9,Montserrat,32.14
+BlanketGen,DEFAULT,10,Montserrat,14.06
+BlanketGen,DEFAULT,11,Montserrat,6.82
+BlanketGen,DEFAULT,12,Montserrat,4.17
+BlanketGen,DEFAULT,1,Morocco,0.71
+BlanketGen,DEFAULT,2,Morocco,0.77
+BlanketGen,DEFAULT,3,Morocco,0.84
+BlanketGen,DEFAULT,4,Morocco,0.94
+BlanketGen,DEFAULT,5,Morocco,1.17
+BlanketGen,DEFAULT,6,Morocco,1.61
+BlanketGen,DEFAULT,7,Morocco,2.45
+BlanketGen,DEFAULT,8,Morocco,2.62
+BlanketGen,DEFAULT,9,Morocco,1.89
+BlanketGen,DEFAULT,10,Morocco,1.24
+BlanketGen,DEFAULT,11,Morocco,0.92
+BlanketGen,DEFAULT,12,Morocco,0.76
+BlanketGen,DEFAULT,1,Mozambique,5.49
+BlanketGen,DEFAULT,2,Mozambique,5.77
+BlanketGen,DEFAULT,3,Mozambique,5
+BlanketGen,DEFAULT,4,Mozambique,3.31
+BlanketGen,DEFAULT,5,Mozambique,2.06
+BlanketGen,DEFAULT,6,Mozambique,1.52
+BlanketGen,DEFAULT,7,Mozambique,1.46
+BlanketGen,DEFAULT,8,Mozambique,1.57
+BlanketGen,DEFAULT,9,Mozambique,2.03
+BlanketGen,DEFAULT,10,Mozambique,3
+BlanketGen,DEFAULT,11,Mozambique,4.41
+BlanketGen,DEFAULT,12,Mozambique,5.49
+BlanketGen,DEFAULT,1,Namibia,2.1
+BlanketGen,DEFAULT,2,Namibia,1.97
+BlanketGen,DEFAULT,3,Namibia,1.72
+BlanketGen,DEFAULT,4,Namibia,1.31
+BlanketGen,DEFAULT,5,Namibia,0.97
+BlanketGen,DEFAULT,6,Namibia,0.8
+BlanketGen,DEFAULT,7,Namibia,0.77
+BlanketGen,DEFAULT,8,Namibia,0.87
+BlanketGen,DEFAULT,9,Namibia,1.11
+BlanketGen,DEFAULT,10,Namibia,1.48
+BlanketGen,DEFAULT,11,Namibia,1.74
+BlanketGen,DEFAULT,12,Namibia,1.97
+BlanketGen,DEFAULT,1,Nepal,0.56
+BlanketGen,DEFAULT,2,Nepal,0.61
+BlanketGen,DEFAULT,3,Nepal,0.77
+BlanketGen,DEFAULT,4,Nepal,1.1
+BlanketGen,DEFAULT,5,Nepal,1.58
+BlanketGen,DEFAULT,6,Nepal,2.39
+BlanketGen,DEFAULT,7,Nepal,2.74
+BlanketGen,DEFAULT,8,Nepal,2.62
+BlanketGen,DEFAULT,9,Nepal,2.05
+BlanketGen,DEFAULT,10,Nepal,1.15
+BlanketGen,DEFAULT,11,Nepal,0.74
+BlanketGen,DEFAULT,12,Nepal,0.59
+BlanketGen,DEFAULT,1,New Caledonia,10.71
+BlanketGen,DEFAULT,2,New Caledonia,13.24
+BlanketGen,DEFAULT,3,New Caledonia,9.38
+BlanketGen,DEFAULT,4,New Caledonia,4.5
+BlanketGen,DEFAULT,5,New Caledonia,2.65
+BlanketGen,DEFAULT,6,New Caledonia,2.01
+BlanketGen,DEFAULT,7,New Caledonia,1.62
+BlanketGen,DEFAULT,8,New Caledonia,1.57
+BlanketGen,DEFAULT,9,New Caledonia,1.74
+BlanketGen,DEFAULT,10,New Caledonia,2.23
+BlanketGen,DEFAULT,11,New Caledonia,3.17
+BlanketGen,DEFAULT,12,New Caledonia,4.89
+BlanketGen,DEFAULT,1,New Zealand,1.03
+BlanketGen,DEFAULT,2,New Zealand,1.04
+BlanketGen,DEFAULT,3,New Zealand,0.93
+BlanketGen,DEFAULT,4,New Zealand,0.79
+BlanketGen,DEFAULT,5,New Zealand,0.69
+BlanketGen,DEFAULT,6,New Zealand,0.62
+BlanketGen,DEFAULT,7,New Zealand,0.6
+BlanketGen,DEFAULT,8,New Zealand,0.62
+BlanketGen,DEFAULT,9,New Zealand,0.68
+BlanketGen,DEFAULT,10,New Zealand,0.74
+BlanketGen,DEFAULT,11,New Zealand,0.82
+BlanketGen,DEFAULT,12,New Zealand,0.94
+BlanketGen,DEFAULT,1,Nicaragua,7.76
+BlanketGen,DEFAULT,2,Nicaragua,8.33
+BlanketGen,DEFAULT,3,Nicaragua,25
+BlanketGen,DEFAULT,4,Nicaragua,1E+15
+BlanketGen,DEFAULT,5,Nicaragua,1E+15
+BlanketGen,DEFAULT,6,Nicaragua,1E+15
+BlanketGen,DEFAULT,7,Nicaragua,1E+15
+BlanketGen,DEFAULT,8,Nicaragua,1E+15
+BlanketGen,DEFAULT,9,Nicaragua,1E+15
+BlanketGen,DEFAULT,10,Nicaragua,18.75
+BlanketGen,DEFAULT,11,Nicaragua,16.07
+BlanketGen,DEFAULT,12,Nicaragua,13.24
+BlanketGen,DEFAULT,1,Nicosia,0.76
+BlanketGen,DEFAULT,2,Nicosia,0.76
+BlanketGen,DEFAULT,3,Nicosia,0.82
+BlanketGen,DEFAULT,4,Nicosia,1.02
+BlanketGen,DEFAULT,5,Nicosia,1.43
+BlanketGen,DEFAULT,6,Nicosia,2.5
+BlanketGen,DEFAULT,7,Nicosia,5.11
+BlanketGen,DEFAULT,8,Nicosia,5.11
+BlanketGen,DEFAULT,9,Nicosia,2.65
+BlanketGen,DEFAULT,10,Nicosia,1.61
+BlanketGen,DEFAULT,11,Nicosia,1.07
+BlanketGen,DEFAULT,12,Nicosia,0.85
+BlanketGen,DEFAULT,1,Niger,1.44
+BlanketGen,DEFAULT,2,Niger,1.99
+BlanketGen,DEFAULT,3,Niger,6.25
+BlanketGen,DEFAULT,4,Niger,1E+15
+BlanketGen,DEFAULT,5,Niger,1E+15
+BlanketGen,DEFAULT,6,Niger,1E+15
+BlanketGen,DEFAULT,7,Niger,1E+15
+BlanketGen,DEFAULT,8,Niger,32.14
+BlanketGen,DEFAULT,9,Niger,37.5
+BlanketGen,DEFAULT,10,Niger,8.33
+BlanketGen,DEFAULT,11,Niger,2.42
+BlanketGen,DEFAULT,12,Niger,1.53
+BlanketGen,DEFAULT,1,Nigeria,2.56
+BlanketGen,DEFAULT,2,Nigeria,4.69
+BlanketGen,DEFAULT,3,Nigeria,28.13
+BlanketGen,DEFAULT,4,Nigeria,1E+15
+BlanketGen,DEFAULT,5,Nigeria,1E+15
+BlanketGen,DEFAULT,6,Nigeria,17.31
+BlanketGen,DEFAULT,7,Nigeria,7.76
+BlanketGen,DEFAULT,8,Nigeria,6.43
+BlanketGen,DEFAULT,9,Nigeria,6.62
+BlanketGen,DEFAULT,10,Nigeria,6.43
+BlanketGen,DEFAULT,11,Nigeria,3.57
+BlanketGen,DEFAULT,12,Nigeria,2.53
+BlanketGen,DEFAULT,1,Niue,112.5
+BlanketGen,DEFAULT,2,Niue,1E+15
+BlanketGen,DEFAULT,3,Niue,1E+15
+BlanketGen,DEFAULT,4,Niue,18.75
+BlanketGen,DEFAULT,5,Niue,7.03
+BlanketGen,DEFAULT,6,Niue,4.33
+BlanketGen,DEFAULT,7,Niue,3.63
+BlanketGen,DEFAULT,8,Niue,3.63
+BlanketGen,DEFAULT,9,Niue,4.33
+BlanketGen,DEFAULT,10,Niue,5.36
+BlanketGen,DEFAULT,11,Niue,10.23
+BlanketGen,DEFAULT,12,Niue,18.75
+BlanketGen,DEFAULT,1,North Korea,0.35
+BlanketGen,DEFAULT,2,North Korea,0.37
+BlanketGen,DEFAULT,3,North Korea,0.46
+BlanketGen,DEFAULT,4,North Korea,0.61
+BlanketGen,DEFAULT,5,North Korea,0.84
+BlanketGen,DEFAULT,6,North Korea,1.34
+BlanketGen,DEFAULT,7,North Korea,2.42
+BlanketGen,DEFAULT,8,North Korea,2.45
+BlanketGen,DEFAULT,9,North Korea,1.11
+BlanketGen,DEFAULT,10,North Korea,0.68
+BlanketGen,DEFAULT,11,North Korea,0.49
+BlanketGen,DEFAULT,12,North Korea,0.39
+BlanketGen,DEFAULT,1,Northern Mariana Islands,16.07
+BlanketGen,DEFAULT,2,Northern Mariana Islands,11.25
+BlanketGen,DEFAULT,3,Northern Mariana Islands,17.31
+BlanketGen,DEFAULT,4,Northern Mariana Islands,112.5
+BlanketGen,DEFAULT,5,Northern Mariana Islands,1E+15
+BlanketGen,DEFAULT,6,Northern Mariana Islands,1E+15
+BlanketGen,DEFAULT,7,Northern Mariana Islands,1E+15
+BlanketGen,DEFAULT,8,Northern Mariana Islands,1E+15
+BlanketGen,DEFAULT,9,Northern Mariana Islands,1E+15
+BlanketGen,DEFAULT,10,Northern Mariana Islands,1E+15
+BlanketGen,DEFAULT,11,Northern Mariana Islands,225
+BlanketGen,DEFAULT,12,Northern Mariana Islands,112.5
+BlanketGen,DEFAULT,1,Norway,0.41
+BlanketGen,DEFAULT,2,Norway,0.41
+BlanketGen,DEFAULT,3,Norway,0.44
+BlanketGen,DEFAULT,4,Norway,0.5
+BlanketGen,DEFAULT,5,Norway,0.61
+BlanketGen,DEFAULT,6,Norway,0.76
+BlanketGen,DEFAULT,7,Norway,0.87
+BlanketGen,DEFAULT,8,Norway,0.85
+BlanketGen,DEFAULT,9,Norway,0.69
+BlanketGen,DEFAULT,10,Norway,0.58
+BlanketGen,DEFAULT,11,Norway,0.48
+BlanketGen,DEFAULT,12,Norway,0.43
+BlanketGen,DEFAULT,1,Oman,1.32
+BlanketGen,DEFAULT,2,Oman,1.58
+BlanketGen,DEFAULT,3,Oman,2.39
+BlanketGen,DEFAULT,4,Oman,9
+BlanketGen,DEFAULT,5,Oman,1E+15
+BlanketGen,DEFAULT,6,Oman,1E+15
+BlanketGen,DEFAULT,7,Oman,1E+15
+BlanketGen,DEFAULT,8,Oman,1E+15
+BlanketGen,DEFAULT,9,Oman,1E+15
+BlanketGen,DEFAULT,10,Oman,7.03
+BlanketGen,DEFAULT,11,Oman,2.53
+BlanketGen,DEFAULT,12,Oman,1.62
+BlanketGen,DEFAULT,1,Pakistan,0.63
+BlanketGen,DEFAULT,2,Pakistan,0.71
+BlanketGen,DEFAULT,3,Pakistan,0.97
+BlanketGen,DEFAULT,4,Pakistan,1.58
+BlanketGen,DEFAULT,5,Pakistan,3.75
+BlanketGen,DEFAULT,6,Pakistan,1E+15
+BlanketGen,DEFAULT,7,Pakistan,1E+15
+BlanketGen,DEFAULT,8,Pakistan,75
+BlanketGen,DEFAULT,9,Pakistan,4.09
+BlanketGen,DEFAULT,10,Pakistan,1.41
+BlanketGen,DEFAULT,11,Pakistan,0.84
+BlanketGen,DEFAULT,12,Pakistan,0.66
+BlanketGen,DEFAULT,1,Palau,22.5
+BlanketGen,DEFAULT,2,Palau,28.13
+BlanketGen,DEFAULT,3,Palau,2.71
+BlanketGen,DEFAULT,4,Palau,1E+15
+BlanketGen,DEFAULT,5,Palau,1E+15
+BlanketGen,DEFAULT,6,Palau,1E+15
+BlanketGen,DEFAULT,7,Palau,112.5
+BlanketGen,DEFAULT,8,Palau,1E+15
+BlanketGen,DEFAULT,9,Palau,225
+BlanketGen,DEFAULT,10,Palau,1E+15
+BlanketGen,DEFAULT,11,Palau,1E+15
+BlanketGen,DEFAULT,12,Palau,56.25
+BlanketGen,DEFAULT,1,Panama,1.57
+BlanketGen,DEFAULT,2,Panama,1.65
+BlanketGen,DEFAULT,3,Panama,1.65
+BlanketGen,DEFAULT,4,Panama,1.84
+BlanketGen,DEFAULT,5,Panama,2.01
+BlanketGen,DEFAULT,6,Panama,1.92
+BlanketGen,DEFAULT,7,Panama,1.97
+BlanketGen,DEFAULT,8,Panama,1.91
+BlanketGen,DEFAULT,9,Panama,1.99
+BlanketGen,DEFAULT,10,Panama,2.01
+BlanketGen,DEFAULT,11,Panama,1.88
+BlanketGen,DEFAULT,12,Panama,1.63
+BlanketGen,DEFAULT,1,Papua New Guinea,4.5
+BlanketGen,DEFAULT,2,Papua New Guinea,4.41
+BlanketGen,DEFAULT,3,Papua New Guinea,4.59
+BlanketGen,DEFAULT,4,Papua New Guinea,4.25
+BlanketGen,DEFAULT,5,Papua New Guinea,4.17
+BlanketGen,DEFAULT,6,Papua New Guinea,3.63
+BlanketGen,DEFAULT,7,Papua New Guinea,3.36
+BlanketGen,DEFAULT,8,Papua New Guinea,3.36
+BlanketGen,DEFAULT,9,Papua New Guinea,3.52
+BlanketGen,DEFAULT,10,Papua New Guinea,3.75
+BlanketGen,DEFAULT,11,Papua New Guinea,3.95
+BlanketGen,DEFAULT,12,Papua New Guinea,4.25
+BlanketGen,DEFAULT,1,Paraguay,5.92
+BlanketGen,DEFAULT,2,Paraguay,5.23
+BlanketGen,DEFAULT,3,Paraguay,3.41
+BlanketGen,DEFAULT,4,Paraguay,1.89
+BlanketGen,DEFAULT,5,Paraguay,1.36
+BlanketGen,DEFAULT,6,Paraguay,1.11
+BlanketGen,DEFAULT,7,Paraguay,1.09
+BlanketGen,DEFAULT,8,Paraguay,1.19
+BlanketGen,DEFAULT,9,Paraguay,1.39
+BlanketGen,DEFAULT,10,Paraguay,2.01
+BlanketGen,DEFAULT,11,Paraguay,2.68
+BlanketGen,DEFAULT,12,Paraguay,4.02
+BlanketGen,DEFAULT,1,Peru,1.2
+BlanketGen,DEFAULT,2,Peru,1.24
+BlanketGen,DEFAULT,3,Peru,1.21
+BlanketGen,DEFAULT,4,Peru,1.1
+BlanketGen,DEFAULT,5,Peru,0.98
+BlanketGen,DEFAULT,6,Peru,0.88
+BlanketGen,DEFAULT,7,Peru,0.84
+BlanketGen,DEFAULT,8,Peru,0.86
+BlanketGen,DEFAULT,9,Peru,0.91
+BlanketGen,DEFAULT,10,Peru,0.96
+BlanketGen,DEFAULT,11,Peru,1
+BlanketGen,DEFAULT,12,Peru,1.06
+BlanketGen,DEFAULT,1,Philippines,5
+BlanketGen,DEFAULT,2,Philippines,5.36
+BlanketGen,DEFAULT,3,Philippines,7.26
+BlanketGen,DEFAULT,4,Philippines,17.31
+BlanketGen,DEFAULT,5,Philippines,112.5
+BlanketGen,DEFAULT,6,Philippines,75
+BlanketGen,DEFAULT,7,Philippines,22.5
+BlanketGen,DEFAULT,8,Philippines,25
+BlanketGen,DEFAULT,9,Philippines,18.75
+BlanketGen,DEFAULT,10,Philippines,14.06
+BlanketGen,DEFAULT,11,Philippines,9.78
+BlanketGen,DEFAULT,12,Philippines,7.03
+BlanketGen,DEFAULT,1,Poland,0.39
+BlanketGen,DEFAULT,2,Poland,0.39
+BlanketGen,DEFAULT,3,Poland,0.44
+BlanketGen,DEFAULT,4,Poland,0.52
+BlanketGen,DEFAULT,5,Poland,0.64
+BlanketGen,DEFAULT,6,Poland,0.8
+BlanketGen,DEFAULT,7,Poland,0.91
+BlanketGen,DEFAULT,8,Poland,0.88
+BlanketGen,DEFAULT,9,Poland,0.7
+BlanketGen,DEFAULT,10,Poland,0.58
+BlanketGen,DEFAULT,11,Poland,0.48
+BlanketGen,DEFAULT,12,Poland,0.42
+BlanketGen,DEFAULT,1,Portugal,0.77
+BlanketGen,DEFAULT,2,Portugal,0.8
+BlanketGen,DEFAULT,3,Portugal,0.86
+BlanketGen,DEFAULT,4,Portugal,0.92
+BlanketGen,DEFAULT,5,Portugal,1.07
+BlanketGen,DEFAULT,6,Portugal,1.41
+BlanketGen,DEFAULT,7,Portugal,1.79
+BlanketGen,DEFAULT,8,Portugal,1.86
+BlanketGen,DEFAULT,9,Portugal,1.65
+BlanketGen,DEFAULT,10,Portugal,1.24
+BlanketGen,DEFAULT,11,Portugal,0.97
+BlanketGen,DEFAULT,12,Portugal,0.84
+BlanketGen,DEFAULT,1,Puerto Rico,2.14
+BlanketGen,DEFAULT,2,Puerto Rico,2.08
+BlanketGen,DEFAULT,3,Puerto Rico,2.21
+BlanketGen,DEFAULT,4,Puerto Rico,2.68
+BlanketGen,DEFAULT,5,Puerto Rico,3.63
+BlanketGen,DEFAULT,6,Puerto Rico,4.79
+BlanketGen,DEFAULT,7,Puerto Rico,5.11
+BlanketGen,DEFAULT,8,Puerto Rico,5.11
+BlanketGen,DEFAULT,9,Puerto Rico,4.69
+BlanketGen,DEFAULT,10,Puerto Rico,4.09
+BlanketGen,DEFAULT,11,Puerto Rico,3.21
+BlanketGen,DEFAULT,12,Puerto Rico,2.47
+BlanketGen,DEFAULT,1,Qatar,1.17
+BlanketGen,DEFAULT,2,Qatar,1.3
+BlanketGen,DEFAULT,3,Qatar,1.79
+BlanketGen,DEFAULT,4,Qatar,4.41
+BlanketGen,DEFAULT,5,Qatar,1E+15
+BlanketGen,DEFAULT,6,Qatar,1E+15
+BlanketGen,DEFAULT,7,Qatar,1E+15
+BlanketGen,DEFAULT,8,Qatar,1E+15
+BlanketGen,DEFAULT,9,Qatar,1E+15
+BlanketGen,DEFAULT,10,Qatar,1E+15
+BlanketGen,DEFAULT,11,Qatar,3.08
+BlanketGen,DEFAULT,12,Qatar,1.53
+BlanketGen,DEFAULT,1,Republic of the Union of Myanmar,1.26
+BlanketGen,DEFAULT,2,Republic of the Union of Myanmar,1.45
+BlanketGen,DEFAULT,3,Republic of the Union of Myanmar,2.25
+BlanketGen,DEFAULT,4,Republic of the Union of Myanmar,6.82
+BlanketGen,DEFAULT,5,Republic of the Union of Myanmar,32.14
+BlanketGen,DEFAULT,6,Republic of the Union of Myanmar,25
+BlanketGen,DEFAULT,7,Republic of the Union of Myanmar,20.45
+BlanketGen,DEFAULT,8,Republic of the Union of Myanmar,18.75
+BlanketGen,DEFAULT,9,Republic of the Union of Myanmar,14.06
+BlanketGen,DEFAULT,10,Republic of the Union of Myanmar,7.26
+BlanketGen,DEFAULT,11,Republic of the Union of Myanmar,2.62
+BlanketGen,DEFAULT,12,Republic of the Union of Myanmar,1.44
+BlanketGen,DEFAULT,1,Reunion,1E+15
+BlanketGen,DEFAULT,2,Reunion,1E+15
+BlanketGen,DEFAULT,3,Reunion,1E+15
+BlanketGen,DEFAULT,4,Reunion,25
+BlanketGen,DEFAULT,5,Reunion,5.36
+BlanketGen,DEFAULT,6,Reunion,3.46
+BlanketGen,DEFAULT,7,Reunion,2.65
+BlanketGen,DEFAULT,8,Reunion,2.53
+BlanketGen,DEFAULT,9,Reunion,3
+BlanketGen,DEFAULT,10,Reunion,4.59
+BlanketGen,DEFAULT,11,Reunion,10.23
+BlanketGen,DEFAULT,12,Reunion,1E+15
+BlanketGen,DEFAULT,1,Romania,0.43
+BlanketGen,DEFAULT,2,Romania,0.44
+BlanketGen,DEFAULT,3,Romania,0.52
+BlanketGen,DEFAULT,4,Romania,0.65
+BlanketGen,DEFAULT,5,Romania,0.87
+BlanketGen,DEFAULT,6,Romania,1.13
+BlanketGen,DEFAULT,7,Romania,1.32
+BlanketGen,DEFAULT,8,Romania,1.24
+BlanketGen,DEFAULT,9,Romania,0.94
+BlanketGen,DEFAULT,10,Romania,0.68
+BlanketGen,DEFAULT,11,Romania,0.54
+BlanketGen,DEFAULT,12,Romania,0.46
+BlanketGen,DEFAULT,1,Russia,0.27
+BlanketGen,DEFAULT,2,Russia,0.28
+BlanketGen,DEFAULT,3,Russia,0.32
+BlanketGen,DEFAULT,4,Russia,0.42
+BlanketGen,DEFAULT,5,Russia,0.56
+BlanketGen,DEFAULT,6,Russia,0.77
+BlanketGen,DEFAULT,7,Russia,0.97
+BlanketGen,DEFAULT,8,Russia,0.87
+BlanketGen,DEFAULT,9,Russia,0.64
+BlanketGen,DEFAULT,10,Russia,0.46
+BlanketGen,DEFAULT,11,Russia,0.34
+BlanketGen,DEFAULT,12,Russia,0.29
+BlanketGen,DEFAULT,1,Rwanda,1.37
+BlanketGen,DEFAULT,2,Rwanda,1.38
+BlanketGen,DEFAULT,3,Rwanda,1.39
+BlanketGen,DEFAULT,4,Rwanda,1.44
+BlanketGen,DEFAULT,5,Rwanda,1.43
+BlanketGen,DEFAULT,6,Rwanda,1.32
+BlanketGen,DEFAULT,7,Rwanda,1.26
+BlanketGen,DEFAULT,8,Rwanda,1.38
+BlanketGen,DEFAULT,9,Rwanda,1.37
+BlanketGen,DEFAULT,10,Rwanda,1.37
+BlanketGen,DEFAULT,11,Rwanda,1.36
+BlanketGen,DEFAULT,12,Rwanda,1.35
+BlanketGen,DEFAULT,1,Saint Helena,1.35
+BlanketGen,DEFAULT,2,Saint Helena,1.43
+BlanketGen,DEFAULT,3,Saint Helena,1.43
+BlanketGen,DEFAULT,4,Saint Helena,1.35
+BlanketGen,DEFAULT,5,Saint Helena,1.17
+BlanketGen,DEFAULT,6,Saint Helena,1.03
+BlanketGen,DEFAULT,7,Saint Helena,0.98
+BlanketGen,DEFAULT,8,Saint Helena,0.93
+BlanketGen,DEFAULT,9,Saint Helena,0.93
+BlanketGen,DEFAULT,10,Saint Helena,0.95
+BlanketGen,DEFAULT,11,Saint Helena,1.08
+BlanketGen,DEFAULT,12,Saint Helena,1.19
+BlanketGen,DEFAULT,1,Saint Kitts and Nevis,9.38
+BlanketGen,DEFAULT,2,Saint Kitts and Nevis,5.77
+BlanketGen,DEFAULT,3,Saint Kitts and Nevis,9.38
+BlanketGen,DEFAULT,4,Saint Kitts and Nevis,10.23
+BlanketGen,DEFAULT,5,Saint Kitts and Nevis,25
+BlanketGen,DEFAULT,6,Saint Kitts and Nevis,1E+15
+BlanketGen,DEFAULT,7,Saint Kitts and Nevis,1E+15
+BlanketGen,DEFAULT,8,Saint Kitts and Nevis,1E+15
+BlanketGen,DEFAULT,9,Saint Kitts and Nevis,1E+15
+BlanketGen,DEFAULT,10,Saint Kitts and Nevis,1E+15
+BlanketGen,DEFAULT,11,Saint Kitts and Nevis,18.75
+BlanketGen,DEFAULT,12,Saint Kitts and Nevis,10.23
+BlanketGen,DEFAULT,1,Saint Lucia,28.13
+BlanketGen,DEFAULT,2,Saint Lucia,28.13
+BlanketGen,DEFAULT,3,Saint Lucia,75
+BlanketGen,DEFAULT,4,Saint Lucia,1E+15
+BlanketGen,DEFAULT,5,Saint Lucia,1E+15
+BlanketGen,DEFAULT,6,Saint Lucia,1E+15
+BlanketGen,DEFAULT,7,Saint Lucia,1E+15
+BlanketGen,DEFAULT,8,Saint Lucia,1E+15
+BlanketGen,DEFAULT,9,Saint Lucia,1E+15
+BlanketGen,DEFAULT,10,Saint Lucia,1E+15
+BlanketGen,DEFAULT,11,Saint Lucia,1E+15
+BlanketGen,DEFAULT,12,Saint Lucia,1E+15
+BlanketGen,DEFAULT,1,Saint Vincent and the Grenadines,112.5
+BlanketGen,DEFAULT,2,Saint Vincent and the Grenadines,112.5
+BlanketGen,DEFAULT,3,Saint Vincent and the Grenadines,112.5
+BlanketGen,DEFAULT,4,Saint Vincent and the Grenadines,1E+15
+BlanketGen,DEFAULT,5,Saint Vincent and the Grenadines,1E+15
+BlanketGen,DEFAULT,6,Saint Vincent and the Grenadines,112.5
+BlanketGen,DEFAULT,7,Saint Vincent and the Grenadines,112.5
+BlanketGen,DEFAULT,8,Saint Vincent and the Grenadines,1E+15
+BlanketGen,DEFAULT,9,Saint Vincent and the Grenadines,1E+15
+BlanketGen,DEFAULT,10,Saint Vincent and the Grenadines,1E+15
+BlanketGen,DEFAULT,11,Saint Vincent and the Grenadines,1E+15
+BlanketGen,DEFAULT,12,Saint Vincent and the Grenadines,1E+15
+BlanketGen,DEFAULT,1,Samoa,112.5
+BlanketGen,DEFAULT,2,Samoa,1E+15
+BlanketGen,DEFAULT,3,Samoa,18.75
+BlanketGen,DEFAULT,4,Samoa,112.5
+BlanketGen,DEFAULT,5,Samoa,18.75
+BlanketGen,DEFAULT,6,Samoa,18.75
+BlanketGen,DEFAULT,7,Samoa,18.75
+BlanketGen,DEFAULT,8,Samoa,112.5
+BlanketGen,DEFAULT,9,Samoa,18.75
+BlanketGen,DEFAULT,10,Samoa,112.5
+BlanketGen,DEFAULT,11,Samoa,18.75
+BlanketGen,DEFAULT,12,Samoa,18.75
+BlanketGen,DEFAULT,1,Sao Tome and Principe,1E+15
+BlanketGen,DEFAULT,2,Sao Tome and Principe,45
+BlanketGen,DEFAULT,3,Sao Tome and Principe,75
+BlanketGen,DEFAULT,4,Sao Tome and Principe,1E+15
+BlanketGen,DEFAULT,5,Sao Tome and Principe,37.5
+BlanketGen,DEFAULT,6,Sao Tome and Principe,7.26
+BlanketGen,DEFAULT,7,Sao Tome and Principe,4.79
+BlanketGen,DEFAULT,8,Sao Tome and Principe,5
+BlanketGen,DEFAULT,9,Sao Tome and Principe,7.26
+BlanketGen,DEFAULT,10,Sao Tome and Principe,9.38
+BlanketGen,DEFAULT,11,Sao Tome and Principe,15
+BlanketGen,DEFAULT,12,Sao Tome and Principe,18.75
+BlanketGen,DEFAULT,1,Saudi Arabia,0.92
+BlanketGen,DEFAULT,2,Saudi Arabia,1.03
+BlanketGen,DEFAULT,3,Saudi Arabia,1.42
+BlanketGen,DEFAULT,4,Saudi Arabia,2.45
+BlanketGen,DEFAULT,5,Saudi Arabia,9.38
+BlanketGen,DEFAULT,6,Saudi Arabia,1E+15
+BlanketGen,DEFAULT,7,Saudi Arabia,1E+15
+BlanketGen,DEFAULT,8,Saudi Arabia,1E+15
+BlanketGen,DEFAULT,9,Saudi Arabia,112.5
+BlanketGen,DEFAULT,10,Saudi Arabia,3
+BlanketGen,DEFAULT,11,Saudi Arabia,1.43
+BlanketGen,DEFAULT,12,Saudi Arabia,1.02
+BlanketGen,DEFAULT,1,Senegal,1.88
+BlanketGen,DEFAULT,2,Senegal,2.34
+BlanketGen,DEFAULT,3,Senegal,3.26
+BlanketGen,DEFAULT,4,Senegal,4.69
+BlanketGen,DEFAULT,5,Senegal,10.23
+BlanketGen,DEFAULT,6,Senegal,1E+15
+BlanketGen,DEFAULT,7,Senegal,1E+15
+BlanketGen,DEFAULT,8,Senegal,1E+15
+BlanketGen,DEFAULT,9,Senegal,1E+15
+BlanketGen,DEFAULT,10,Senegal,37.5
+BlanketGen,DEFAULT,11,Senegal,3.95
+BlanketGen,DEFAULT,12,Senegal,2.08
+BlanketGen,DEFAULT,1,Serbia,0.46
+BlanketGen,DEFAULT,2,Serbia,0.47
+BlanketGen,DEFAULT,3,Serbia,0.54
+BlanketGen,DEFAULT,4,Serbia,0.67
+BlanketGen,DEFAULT,5,Serbia,0.9
+BlanketGen,DEFAULT,6,Serbia,1.14
+BlanketGen,DEFAULT,7,Serbia,1.34
+BlanketGen,DEFAULT,8,Serbia,1.32
+BlanketGen,DEFAULT,9,Serbia,0.95
+BlanketGen,DEFAULT,10,Serbia,0.71
+BlanketGen,DEFAULT,11,Serbia,0.56
+BlanketGen,DEFAULT,12,Serbia,0.48
+BlanketGen,DEFAULT,1,Seychelles,112.5
+BlanketGen,DEFAULT,2,Seychelles,1E+15
+BlanketGen,DEFAULT,3,Seychelles,1E+15
+BlanketGen,DEFAULT,4,Seychelles,1E+15
+BlanketGen,DEFAULT,5,Seychelles,1E+15
+BlanketGen,DEFAULT,6,Seychelles,1E+15
+BlanketGen,DEFAULT,7,Seychelles,45
+BlanketGen,DEFAULT,8,Seychelles,45
+BlanketGen,DEFAULT,9,Seychelles,1E+15
+BlanketGen,DEFAULT,10,Seychelles,1E+15
+BlanketGen,DEFAULT,11,Seychelles,112.5
+BlanketGen,DEFAULT,12,Seychelles,112.5
+BlanketGen,DEFAULT,1,Sierra Leone,4.33
+BlanketGen,DEFAULT,2,Sierra Leone,8.04
+BlanketGen,DEFAULT,3,Sierra Leone,16.07
+BlanketGen,DEFAULT,4,Sierra Leone,75
+BlanketGen,DEFAULT,5,Sierra Leone,25
+BlanketGen,DEFAULT,6,Sierra Leone,10.71
+BlanketGen,DEFAULT,7,Sierra Leone,7.5
+BlanketGen,DEFAULT,8,Sierra Leone,7.26
+BlanketGen,DEFAULT,9,Sierra Leone,7.76
+BlanketGen,DEFAULT,10,Sierra Leone,8.33
+BlanketGen,DEFAULT,11,Sierra Leone,8.33
+BlanketGen,DEFAULT,12,Sierra Leone,4.69
+BlanketGen,DEFAULT,1,Singapore,10.23
+BlanketGen,DEFAULT,2,Singapore,32.14
+BlanketGen,DEFAULT,3,Singapore,112.5
+BlanketGen,DEFAULT,4,Singapore,1E+15
+BlanketGen,DEFAULT,5,Singapore,1E+15
+BlanketGen,DEFAULT,6,Singapore,1E+15
+BlanketGen,DEFAULT,7,Singapore,1E+15
+BlanketGen,DEFAULT,8,Singapore,1E+15
+BlanketGen,DEFAULT,9,Singapore,56.25
+BlanketGen,DEFAULT,10,Singapore,112.5
+BlanketGen,DEFAULT,11,Singapore,32.14
+BlanketGen,DEFAULT,12,Singapore,16.07
+BlanketGen,DEFAULT,1,Slovakia,0.4
+BlanketGen,DEFAULT,2,Slovakia,0.42
+BlanketGen,DEFAULT,3,Slovakia,0.48
+BlanketGen,DEFAULT,4,Slovakia,0.55
+BlanketGen,DEFAULT,5,Slovakia,0.7
+BlanketGen,DEFAULT,6,Slovakia,0.84
+BlanketGen,DEFAULT,7,Slovakia,0.94
+BlanketGen,DEFAULT,8,Slovakia,0.92
+BlanketGen,DEFAULT,9,Slovakia,0.75
+BlanketGen,DEFAULT,10,Slovakia,0.59
+BlanketGen,DEFAULT,11,Slovakia,0.48
+BlanketGen,DEFAULT,12,Slovakia,0.43
+BlanketGen,DEFAULT,1,Slovenia,0.44
+BlanketGen,DEFAULT,2,Slovenia,0.45
+BlanketGen,DEFAULT,3,Slovenia,0.51
+BlanketGen,DEFAULT,4,Slovenia,0.59
+BlanketGen,DEFAULT,5,Slovenia,0.74
+BlanketGen,DEFAULT,6,Slovenia,0.93
+BlanketGen,DEFAULT,7,Slovenia,1.06
+BlanketGen,DEFAULT,8,Slovenia,1.04
+BlanketGen,DEFAULT,9,Slovenia,0.83
+BlanketGen,DEFAULT,10,Slovenia,0.66
+BlanketGen,DEFAULT,11,Slovenia,0.53
+BlanketGen,DEFAULT,12,Slovenia,0.47
+BlanketGen,DEFAULT,1,Solomon Islands,22.5
+BlanketGen,DEFAULT,2,Solomon Islands,25
+BlanketGen,DEFAULT,3,Solomon Islands,17.31
+BlanketGen,DEFAULT,4,Solomon Islands,16.07
+BlanketGen,DEFAULT,5,Solomon Islands,15
+BlanketGen,DEFAULT,6,Solomon Islands,11.25
+BlanketGen,DEFAULT,7,Solomon Islands,10.23
+BlanketGen,DEFAULT,8,Solomon Islands,9.78
+BlanketGen,DEFAULT,9,Solomon Islands,10.23
+BlanketGen,DEFAULT,10,Solomon Islands,11.84
+BlanketGen,DEFAULT,11,Solomon Islands,15
+BlanketGen,DEFAULT,12,Solomon Islands,16.07
+BlanketGen,DEFAULT,1,Somalia,2.78
+BlanketGen,DEFAULT,2,Somalia,2.96
+BlanketGen,DEFAULT,3,Somalia,4.5
+BlanketGen,DEFAULT,4,Somalia,8.04
+BlanketGen,DEFAULT,5,Somalia,11.84
+BlanketGen,DEFAULT,6,Somalia,11.25
+BlanketGen,DEFAULT,7,Somalia,8.33
+BlanketGen,DEFAULT,8,Somalia,7.76
+BlanketGen,DEFAULT,9,Somalia,8.04
+BlanketGen,DEFAULT,10,Somalia,5
+BlanketGen,DEFAULT,11,Somalia,3.46
+BlanketGen,DEFAULT,12,Somalia,2.96
+BlanketGen,DEFAULT,1,South Africa,1.57
+BlanketGen,DEFAULT,2,South Africa,1.53
+BlanketGen,DEFAULT,3,South Africa,1.32
+BlanketGen,DEFAULT,4,South Africa,0.99
+BlanketGen,DEFAULT,5,South Africa,0.77
+BlanketGen,DEFAULT,6,South Africa,0.66
+BlanketGen,DEFAULT,7,South Africa,0.64
+BlanketGen,DEFAULT,8,South Africa,0.7
+BlanketGen,DEFAULT,9,South Africa,0.84
+BlanketGen,DEFAULT,10,South Africa,1
+BlanketGen,DEFAULT,11,South Africa,1.18
+BlanketGen,DEFAULT,12,South Africa,1.39
+BlanketGen,DEFAULT,1,South Korea,0.43
+BlanketGen,DEFAULT,2,South Korea,0.45
+BlanketGen,DEFAULT,3,South Korea,0.54
+BlanketGen,DEFAULT,4,South Korea,0.7
+BlanketGen,DEFAULT,5,South Korea,0.99
+BlanketGen,DEFAULT,6,South Korea,1.65
+BlanketGen,DEFAULT,7,South Korea,3.95
+BlanketGen,DEFAULT,8,South Korea,4.5
+BlanketGen,DEFAULT,9,South Korea,1.53
+BlanketGen,DEFAULT,10,South Korea,0.83
+BlanketGen,DEFAULT,11,South Korea,0.59
+BlanketGen,DEFAULT,12,South Korea,0.47
+BlanketGen,DEFAULT,1,South Sudan,4.02
+BlanketGen,DEFAULT,2,South Sudan,3.81
+BlanketGen,DEFAULT,3,South Sudan,8.65
+BlanketGen,DEFAULT,4,South Sudan,18.75
+BlanketGen,DEFAULT,5,South Sudan,9
+BlanketGen,DEFAULT,6,South Sudan,5.11
+BlanketGen,DEFAULT,7,South Sudan,4.41
+BlanketGen,DEFAULT,8,South Sudan,4.02
+BlanketGen,DEFAULT,9,South Sudan,4.17
+BlanketGen,DEFAULT,10,South Sudan,4.41
+BlanketGen,DEFAULT,11,South Sudan,3.17
+BlanketGen,DEFAULT,12,South Sudan,2.5
+BlanketGen,DEFAULT,1,Spain,0.69
+BlanketGen,DEFAULT,2,Spain,0.71
+BlanketGen,DEFAULT,3,Spain,0.77
+BlanketGen,DEFAULT,4,Spain,0.84
+BlanketGen,DEFAULT,5,Spain,1.02
+BlanketGen,DEFAULT,6,Spain,1.37
+BlanketGen,DEFAULT,7,Spain,1.86
+BlanketGen,DEFAULT,8,Spain,2.01
+BlanketGen,DEFAULT,9,Spain,1.55
+BlanketGen,DEFAULT,10,Spain,1.11
+BlanketGen,DEFAULT,11,Spain,0.85
+BlanketGen,DEFAULT,12,Spain,0.74
+BlanketGen,DEFAULT,1,Sri Lanka,5.77
+BlanketGen,DEFAULT,2,Sri Lanka,6.43
+BlanketGen,DEFAULT,3,Sri Lanka,13.24
+BlanketGen,DEFAULT,4,Sri Lanka,1E+15
+BlanketGen,DEFAULT,5,Sri Lanka,1E+15
+BlanketGen,DEFAULT,6,Sri Lanka,1E+15
+BlanketGen,DEFAULT,7,Sri Lanka,1E+15
+BlanketGen,DEFAULT,8,Sri Lanka,1E+15
+BlanketGen,DEFAULT,9,Sri Lanka,1E+15
+BlanketGen,DEFAULT,10,Sri Lanka,22.5
+BlanketGen,DEFAULT,11,Sri Lanka,9.38
+BlanketGen,DEFAULT,12,Sri Lanka,7.76
+BlanketGen,DEFAULT,1,Sudan,1.37
+BlanketGen,DEFAULT,2,Sudan,1.58
+BlanketGen,DEFAULT,3,Sudan,2.53
+BlanketGen,DEFAULT,4,Sudan,5.63
+BlanketGen,DEFAULT,5,Sudan,1E+15
+BlanketGen,DEFAULT,6,Sudan,1E+15
+BlanketGen,DEFAULT,7,Sudan,1E+15
+BlanketGen,DEFAULT,8,Sudan,56.25
+BlanketGen,DEFAULT,9,Sudan,16.07
+BlanketGen,DEFAULT,10,Sudan,7.5
+BlanketGen,DEFAULT,11,Sudan,2.65
+BlanketGen,DEFAULT,12,Sudan,1.57
+BlanketGen,DEFAULT,1,Suriname,32.14
+BlanketGen,DEFAULT,2,Suriname,32.14
+BlanketGen,DEFAULT,3,Suriname,32.14
+BlanketGen,DEFAULT,4,Suriname,1E+15
+BlanketGen,DEFAULT,5,Suriname,1E+15
+BlanketGen,DEFAULT,6,Suriname,112.5
+BlanketGen,DEFAULT,7,Suriname,32.14
+BlanketGen,DEFAULT,8,Suriname,1E+15
+BlanketGen,DEFAULT,9,Suriname,1E+15
+BlanketGen,DEFAULT,10,Suriname,1E+15
+BlanketGen,DEFAULT,11,Suriname,1E+15
+BlanketGen,DEFAULT,12,Suriname,112.5
+BlanketGen,DEFAULT,1,Swaziland,1.73
+BlanketGen,DEFAULT,2,Swaziland,2.01
+BlanketGen,DEFAULT,3,Swaziland,2.08
+BlanketGen,DEFAULT,4,Swaziland,1.81
+BlanketGen,DEFAULT,5,Swaziland,1.36
+BlanketGen,DEFAULT,6,Swaziland,1.08
+BlanketGen,DEFAULT,7,Swaziland,0.89
+BlanketGen,DEFAULT,8,Swaziland,0.89
+BlanketGen,DEFAULT,9,Swaziland,0.96
+BlanketGen,DEFAULT,10,Swaziland,1.11
+BlanketGen,DEFAULT,11,Swaziland,1.24
+BlanketGen,DEFAULT,12,Swaziland,1.43
+BlanketGen,DEFAULT,1,Sweden,0.39
+BlanketGen,DEFAULT,2,Sweden,0.38
+BlanketGen,DEFAULT,3,Sweden,0.42
+BlanketGen,DEFAULT,4,Sweden,0.48
+BlanketGen,DEFAULT,5,Sweden,0.61
+BlanketGen,DEFAULT,6,Sweden,0.79
+BlanketGen,DEFAULT,7,Sweden,0.98
+BlanketGen,DEFAULT,8,Sweden,0.91
+BlanketGen,DEFAULT,9,Sweden,0.71
+BlanketGen,DEFAULT,10,Sweden,0.58
+BlanketGen,DEFAULT,11,Sweden,0.48
+BlanketGen,DEFAULT,12,Sweden,0.42
+BlanketGen,DEFAULT,1,Switzerland,0.42
+BlanketGen,DEFAULT,2,Switzerland,0.43
+BlanketGen,DEFAULT,3,Switzerland,0.47
+BlanketGen,DEFAULT,4,Switzerland,0.53
+BlanketGen,DEFAULT,5,Switzerland,0.64
+BlanketGen,DEFAULT,6,Switzerland,0.77
+BlanketGen,DEFAULT,7,Switzerland,0.89
+BlanketGen,DEFAULT,8,Switzerland,0.87
+BlanketGen,DEFAULT,9,Switzerland,0.74
+BlanketGen,DEFAULT,10,Switzerland,0.59
+BlanketGen,DEFAULT,11,Switzerland,0.49
+BlanketGen,DEFAULT,12,Switzerland,0.44
+BlanketGen,DEFAULT,1,Syria,0.6
+BlanketGen,DEFAULT,2,Syria,0.63
+BlanketGen,DEFAULT,3,Syria,0.72
+BlanketGen,DEFAULT,4,Syria,0.94
+BlanketGen,DEFAULT,5,Syria,1.35
+BlanketGen,DEFAULT,6,Syria,2.37
+BlanketGen,DEFAULT,7,Syria,5.11
+BlanketGen,DEFAULT,8,Syria,5.23
+BlanketGen,DEFAULT,9,Syria,2.25
+BlanketGen,DEFAULT,10,Syria,1.25
+BlanketGen,DEFAULT,11,Syria,0.84
+BlanketGen,DEFAULT,12,Syria,0.65
+BlanketGen,DEFAULT,1,Taiwan,1.06
+BlanketGen,DEFAULT,2,Taiwan,1.09
+BlanketGen,DEFAULT,3,Taiwan,1.32
+BlanketGen,DEFAULT,4,Taiwan,2.03
+BlanketGen,DEFAULT,5,Taiwan,4.25
+BlanketGen,DEFAULT,6,Taiwan,25
+BlanketGen,DEFAULT,7,Taiwan,1E+15
+BlanketGen,DEFAULT,8,Taiwan,1E+15
+BlanketGen,DEFAULT,9,Taiwan,18.75
+BlanketGen,DEFAULT,10,Taiwan,3.81
+BlanketGen,DEFAULT,11,Taiwan,1.86
+BlanketGen,DEFAULT,12,Taiwan,1.24
+BlanketGen,DEFAULT,1,Tajikistan,0.4
+BlanketGen,DEFAULT,2,Tajikistan,0.42
+BlanketGen,DEFAULT,3,Tajikistan,0.51
+BlanketGen,DEFAULT,4,Tajikistan,0.68
+BlanketGen,DEFAULT,5,Tajikistan,0.86
+BlanketGen,DEFAULT,6,Tajikistan,1.16
+BlanketGen,DEFAULT,7,Tajikistan,1.47
+BlanketGen,DEFAULT,8,Tajikistan,1.23
+BlanketGen,DEFAULT,9,Tajikistan,0.83
+BlanketGen,DEFAULT,10,Tajikistan,0.62
+BlanketGen,DEFAULT,11,Tajikistan,0.51
+BlanketGen,DEFAULT,12,Tajikistan,0.44
+BlanketGen,DEFAULT,1,Tanzania,2.39
+BlanketGen,DEFAULT,2,Tanzania,2.42
+BlanketGen,DEFAULT,3,Tanzania,2.45
+BlanketGen,DEFAULT,4,Tanzania,2.34
+BlanketGen,DEFAULT,5,Tanzania,1.89
+BlanketGen,DEFAULT,6,Tanzania,1.47
+BlanketGen,DEFAULT,7,Tanzania,1.38
+BlanketGen,DEFAULT,8,Tanzania,1.44
+BlanketGen,DEFAULT,9,Tanzania,1.6
+BlanketGen,DEFAULT,10,Tanzania,1.92
+BlanketGen,DEFAULT,11,Tanzania,2.25
+BlanketGen,DEFAULT,12,Tanzania,2.42
+BlanketGen,DEFAULT,1,Thailand,2.16
+BlanketGen,DEFAULT,2,Thailand,3.17
+BlanketGen,DEFAULT,3,Thailand,6.82
+BlanketGen,DEFAULT,4,Thailand,1E+15
+BlanketGen,DEFAULT,5,Thailand,1E+15
+BlanketGen,DEFAULT,6,Thailand,1E+15
+BlanketGen,DEFAULT,7,Thailand,1E+15
+BlanketGen,DEFAULT,8,Thailand,1E+15
+BlanketGen,DEFAULT,9,Thailand,45
+BlanketGen,DEFAULT,10,Thailand,11.25
+BlanketGen,DEFAULT,11,Thailand,4.25
+BlanketGen,DEFAULT,12,Thailand,2.39
+BlanketGen,DEFAULT,1,The Bahamas,2.3
+BlanketGen,DEFAULT,2,The Bahamas,2.45
+BlanketGen,DEFAULT,3,The Bahamas,2.74
+BlanketGen,DEFAULT,4,The Bahamas,3.69
+BlanketGen,DEFAULT,5,The Bahamas,8.33
+BlanketGen,DEFAULT,6,The Bahamas,1E+15
+BlanketGen,DEFAULT,7,The Bahamas,1E+15
+BlanketGen,DEFAULT,8,The Bahamas,1E+15
+BlanketGen,DEFAULT,9,The Bahamas,1E+15
+BlanketGen,DEFAULT,10,The Bahamas,15
+BlanketGen,DEFAULT,11,The Bahamas,4.79
+BlanketGen,DEFAULT,12,The Bahamas,2.96
+BlanketGen,DEFAULT,1,The Gambia,1.64
+BlanketGen,DEFAULT,2,The Gambia,2.39
+BlanketGen,DEFAULT,3,The Gambia,3.13
+BlanketGen,DEFAULT,4,The Gambia,5.23
+BlanketGen,DEFAULT,5,The Gambia,14.06
+BlanketGen,DEFAULT,6,The Gambia,1E+15
+BlanketGen,DEFAULT,7,The Gambia,75
+BlanketGen,DEFAULT,8,The Gambia,25
+BlanketGen,DEFAULT,9,The Gambia,12.5
+BlanketGen,DEFAULT,10,The Gambia,11.84
+BlanketGen,DEFAULT,11,The Gambia,3.41
+BlanketGen,DEFAULT,12,The Gambia,1.79
+BlanketGen,DEFAULT,1,The Netherlands,0.53
+BlanketGen,DEFAULT,2,The Netherlands,0.52
+BlanketGen,DEFAULT,3,The Netherlands,0.58
+BlanketGen,DEFAULT,4,The Netherlands,0.63
+BlanketGen,DEFAULT,5,The Netherlands,0.77
+BlanketGen,DEFAULT,6,The Netherlands,0.95
+BlanketGen,DEFAULT,7,The Netherlands,1.15
+BlanketGen,DEFAULT,8,The Netherlands,1.14
+BlanketGen,DEFAULT,9,The Netherlands,0.96
+BlanketGen,DEFAULT,10,The Netherlands,0.77
+BlanketGen,DEFAULT,11,The Netherlands,0.63
+BlanketGen,DEFAULT,12,The Netherlands,0.58
+BlanketGen,DEFAULT,1,Timor-Leste,1E+15
+BlanketGen,DEFAULT,2,Timor-Leste,1E+15
+BlanketGen,DEFAULT,3,Timor-Leste,1E+15
+BlanketGen,DEFAULT,4,Timor-Leste,1E+15
+BlanketGen,DEFAULT,5,Timor-Leste,1E+15
+BlanketGen,DEFAULT,6,Timor-Leste,112.5
+BlanketGen,DEFAULT,7,Timor-Leste,10.23
+BlanketGen,DEFAULT,8,Timor-Leste,7.03
+BlanketGen,DEFAULT,9,Timor-Leste,7.03
+BlanketGen,DEFAULT,10,Timor-Leste,18.75
+BlanketGen,DEFAULT,11,Timor-Leste,1E+15
+BlanketGen,DEFAULT,12,Timor-Leste,1E+15
+BlanketGen,DEFAULT,1,Togo,4.69
+BlanketGen,DEFAULT,2,Togo,20.45
+BlanketGen,DEFAULT,3,Togo,1E+15
+BlanketGen,DEFAULT,4,Togo,1E+15
+BlanketGen,DEFAULT,5,Togo,1E+15
+BlanketGen,DEFAULT,6,Togo,12.5
+BlanketGen,DEFAULT,7,Togo,7.76
+BlanketGen,DEFAULT,8,Togo,6.62
+BlanketGen,DEFAULT,9,Togo,6.82
+BlanketGen,DEFAULT,10,Togo,7.03
+BlanketGen,DEFAULT,11,Togo,5
+BlanketGen,DEFAULT,12,Togo,4.09
+BlanketGen,DEFAULT,1,Tokelau,1E+15
+BlanketGen,DEFAULT,2,Tokelau,1E+15
+BlanketGen,DEFAULT,3,Tokelau,1E+15
+BlanketGen,DEFAULT,4,Tokelau,1E+15
+BlanketGen,DEFAULT,5,Tokelau,1E+15
+BlanketGen,DEFAULT,6,Tokelau,18.75
+BlanketGen,DEFAULT,7,Tokelau,10.71
+BlanketGen,DEFAULT,8,Tokelau,12.5
+BlanketGen,DEFAULT,9,Tokelau,13.24
+BlanketGen,DEFAULT,10,Tokelau,37.5
+BlanketGen,DEFAULT,11,Tokelau,1E+15
+BlanketGen,DEFAULT,12,Tokelau,1E+15
+BlanketGen,DEFAULT,1,Tonga,1E+15
+BlanketGen,DEFAULT,2,Tonga,1E+15
+BlanketGen,DEFAULT,3,Tonga,1E+15
+BlanketGen,DEFAULT,4,Tonga,1E+15
+BlanketGen,DEFAULT,5,Tonga,1E+15
+BlanketGen,DEFAULT,6,Tonga,1E+15
+BlanketGen,DEFAULT,7,Tonga,32.14
+BlanketGen,DEFAULT,8,Tonga,28.13
+BlanketGen,DEFAULT,9,Tonga,112.5
+BlanketGen,DEFAULT,10,Tonga,1E+15
+BlanketGen,DEFAULT,11,Tonga,1E+15
+BlanketGen,DEFAULT,12,Tonga,1E+15
+BlanketGen,DEFAULT,1,Trinidad and Tobago,7.03
+BlanketGen,DEFAULT,2,Trinidad and Tobago,7.03
+BlanketGen,DEFAULT,3,Trinidad and Tobago,11.84
+BlanketGen,DEFAULT,4,Trinidad and Tobago,112.5
+BlanketGen,DEFAULT,5,Trinidad and Tobago,1E+15
+BlanketGen,DEFAULT,6,Trinidad and Tobago,1E+15
+BlanketGen,DEFAULT,7,Trinidad and Tobago,112.5
+BlanketGen,DEFAULT,8,Trinidad and Tobago,112.5
+BlanketGen,DEFAULT,9,Trinidad and Tobago,112.5
+BlanketGen,DEFAULT,10,Trinidad and Tobago,75
+BlanketGen,DEFAULT,11,Trinidad and Tobago,32.14
+BlanketGen,DEFAULT,12,Trinidad and Tobago,11.84
+BlanketGen,DEFAULT,1,Tunisia,0.71
+BlanketGen,DEFAULT,2,Tunisia,0.72
+BlanketGen,DEFAULT,3,Tunisia,0.8
+BlanketGen,DEFAULT,4,Tunisia,0.93
+BlanketGen,DEFAULT,5,Tunisia,1.23
+BlanketGen,DEFAULT,6,Tunisia,2.01
+BlanketGen,DEFAULT,7,Tunisia,3.31
+BlanketGen,DEFAULT,8,Tunisia,3.95
+BlanketGen,DEFAULT,9,Tunisia,2.53
+BlanketGen,DEFAULT,10,Tunisia,1.43
+BlanketGen,DEFAULT,11,Tunisia,0.95
+BlanketGen,DEFAULT,12,Tunisia,0.76
+BlanketGen,DEFAULT,1,Turkey,0.49
+BlanketGen,DEFAULT,2,Turkey,0.51
+BlanketGen,DEFAULT,3,Turkey,0.57
+BlanketGen,DEFAULT,4,Turkey,0.69
+BlanketGen,DEFAULT,5,Turkey,0.88
+BlanketGen,DEFAULT,6,Turkey,1.17
+BlanketGen,DEFAULT,7,Turkey,1.62
+BlanketGen,DEFAULT,8,Turkey,1.56
+BlanketGen,DEFAULT,9,Turkey,1.09
+BlanketGen,DEFAULT,10,Turkey,0.79
+BlanketGen,DEFAULT,11,Turkey,0.63
+BlanketGen,DEFAULT,12,Turkey,0.54
+BlanketGen,DEFAULT,1,Turkmenistan,0.48
+BlanketGen,DEFAULT,2,Turkmenistan,0.5
+BlanketGen,DEFAULT,3,Turkmenistan,0.61
+BlanketGen,DEFAULT,4,Turkmenistan,0.88
+BlanketGen,DEFAULT,5,Turkmenistan,1.36
+BlanketGen,DEFAULT,6,Turkmenistan,2.5
+BlanketGen,DEFAULT,7,Turkmenistan,5
+BlanketGen,DEFAULT,8,Turkmenistan,2.85
+BlanketGen,DEFAULT,9,Turkmenistan,1.23
+BlanketGen,DEFAULT,10,Turkmenistan,0.77
+BlanketGen,DEFAULT,11,Turkmenistan,0.59
+BlanketGen,DEFAULT,12,Turkmenistan,0.51
+BlanketGen,DEFAULT,1,Turks and Caicos Islands,10.23
+BlanketGen,DEFAULT,2,Turks and Caicos Islands,10.23
+BlanketGen,DEFAULT,3,Turks and Caicos Islands,18.75
+BlanketGen,DEFAULT,4,Turks and Caicos Islands,112.5
+BlanketGen,DEFAULT,5,Turks and Caicos Islands,1E+15
+BlanketGen,DEFAULT,6,Turks and Caicos Islands,1E+15
+BlanketGen,DEFAULT,7,Turks and Caicos Islands,1E+15
+BlanketGen,DEFAULT,8,Turks and Caicos Islands,1E+15
+BlanketGen,DEFAULT,9,Turks and Caicos Islands,1E+15
+BlanketGen,DEFAULT,10,Turks and Caicos Islands,1E+15
+BlanketGen,DEFAULT,11,Turks and Caicos Islands,1E+15
+BlanketGen,DEFAULT,12,Turks and Caicos Islands,112.5
+BlanketGen,DEFAULT,1,Tuvalu,1E+15
+BlanketGen,DEFAULT,2,Tuvalu,1E+15
+BlanketGen,DEFAULT,3,Tuvalu,1E+15
+BlanketGen,DEFAULT,4,Tuvalu,1E+15
+BlanketGen,DEFAULT,5,Tuvalu,1E+15
+BlanketGen,DEFAULT,6,Tuvalu,1E+15
+BlanketGen,DEFAULT,7,Tuvalu,1E+15
+BlanketGen,DEFAULT,8,Tuvalu,1E+15
+BlanketGen,DEFAULT,9,Tuvalu,1E+15
+BlanketGen,DEFAULT,10,Tuvalu,1E+15
+BlanketGen,DEFAULT,11,Tuvalu,1E+15
+BlanketGen,DEFAULT,12,Tuvalu,1E+15
+BlanketGen,DEFAULT,1,U.S. Virgin Islands,4.09
+BlanketGen,DEFAULT,2,U.S. Virgin Islands,4.02
+BlanketGen,DEFAULT,3,U.S. Virgin Islands,4.33
+BlanketGen,DEFAULT,4,U.S. Virgin Islands,6.43
+BlanketGen,DEFAULT,5,U.S. Virgin Islands,16.07
+BlanketGen,DEFAULT,6,U.S. Virgin Islands,1E+15
+BlanketGen,DEFAULT,7,U.S. Virgin Islands,1E+15
+BlanketGen,DEFAULT,8,U.S. Virgin Islands,1E+15
+BlanketGen,DEFAULT,9,U.S. Virgin Islands,75
+BlanketGen,DEFAULT,10,U.S. Virgin Islands,17.31
+BlanketGen,DEFAULT,11,U.S. Virgin Islands,8.33
+BlanketGen,DEFAULT,12,U.S. Virgin Islands,5.23
+BlanketGen,DEFAULT,1,Uganda,1.47
+BlanketGen,DEFAULT,2,Uganda,1.54
+BlanketGen,DEFAULT,3,Uganda,1.63
+BlanketGen,DEFAULT,4,Uganda,1.65
+BlanketGen,DEFAULT,5,Uganda,1.6
+BlanketGen,DEFAULT,6,Uganda,1.48
+BlanketGen,DEFAULT,7,Uganda,1.4
+BlanketGen,DEFAULT,8,Uganda,1.43
+BlanketGen,DEFAULT,9,Uganda,1.42
+BlanketGen,DEFAULT,10,Uganda,1.49
+BlanketGen,DEFAULT,11,Uganda,1.48
+BlanketGen,DEFAULT,12,Uganda,1.43
+BlanketGen,DEFAULT,1,Ukraine,0.41
+BlanketGen,DEFAULT,2,Ukraine,0.42
+BlanketGen,DEFAULT,3,Ukraine,0.49
+BlanketGen,DEFAULT,4,Ukraine,0.64
+BlanketGen,DEFAULT,5,Ukraine,0.89
+BlanketGen,DEFAULT,6,Ukraine,1.2
+BlanketGen,DEFAULT,7,Ukraine,1.46
+BlanketGen,DEFAULT,8,Ukraine,1.33
+BlanketGen,DEFAULT,9,Ukraine,0.91
+BlanketGen,DEFAULT,10,Ukraine,0.66
+BlanketGen,DEFAULT,11,Ukraine,0.53
+BlanketGen,DEFAULT,12,Ukraine,0.45
+BlanketGen,DEFAULT,1,United Arab Emirates,1.18
+BlanketGen,DEFAULT,2,United Arab Emirates,1.31
+BlanketGen,DEFAULT,3,United Arab Emirates,1.73
+BlanketGen,DEFAULT,4,United Arab Emirates,3.13
+BlanketGen,DEFAULT,5,United Arab Emirates,56.25
+BlanketGen,DEFAULT,6,United Arab Emirates,1E+15
+BlanketGen,DEFAULT,7,United Arab Emirates,1E+15
+BlanketGen,DEFAULT,8,United Arab Emirates,1E+15
+BlanketGen,DEFAULT,9,United Arab Emirates,1E+15
+BlanketGen,DEFAULT,10,United Arab Emirates,7.76
+BlanketGen,DEFAULT,11,United Arab Emirates,2.14
+BlanketGen,DEFAULT,12,United Arab Emirates,1.43
+BlanketGen,DEFAULT,1,United Kingdom,0.56
+BlanketGen,DEFAULT,2,United Kingdom,0.55
+BlanketGen,DEFAULT,3,United Kingdom,0.59
+BlanketGen,DEFAULT,4,United Kingdom,0.63
+BlanketGen,DEFAULT,5,United Kingdom,0.73
+BlanketGen,DEFAULT,6,United Kingdom,0.87
+BlanketGen,DEFAULT,7,United Kingdom,1.02
+BlanketGen,DEFAULT,8,United Kingdom,1.01
+BlanketGen,DEFAULT,9,United Kingdom,0.87
+BlanketGen,DEFAULT,10,United Kingdom,0.74
+BlanketGen,DEFAULT,11,United Kingdom,0.63
+BlanketGen,DEFAULT,12,United Kingdom,0.57
+BlanketGen,DEFAULT,1,United States,0.54
+BlanketGen,DEFAULT,2,United States,0.57
+BlanketGen,DEFAULT,3,United States,0.68
+BlanketGen,DEFAULT,4,United States,0.88
+BlanketGen,DEFAULT,5,United States,1.3
+BlanketGen,DEFAULT,6,United States,2.18
+BlanketGen,DEFAULT,7,United States,3.52
+BlanketGen,DEFAULT,8,United States,3.04
+BlanketGen,DEFAULT,9,United States,1.76
+BlanketGen,DEFAULT,10,United States,0.9
+BlanketGen,DEFAULT,11,United States,0.66
+BlanketGen,DEFAULT,12,United States,0.57
+BlanketGen,DEFAULT,1,Uruguay,1.89
+BlanketGen,DEFAULT,2,Uruguay,1.89
+BlanketGen,DEFAULT,3,Uruguay,1.49
+BlanketGen,DEFAULT,4,Uruguay,1.07
+BlanketGen,DEFAULT,5,Uruguay,0.88
+BlanketGen,DEFAULT,6,Uruguay,0.74
+BlanketGen,DEFAULT,7,Uruguay,0.73
+BlanketGen,DEFAULT,8,Uruguay,0.76
+BlanketGen,DEFAULT,9,Uruguay,0.83
+BlanketGen,DEFAULT,10,Uruguay,0.95
+BlanketGen,DEFAULT,11,Uruguay,1.18
+BlanketGen,DEFAULT,12,Uruguay,1.53
+BlanketGen,DEFAULT,1,Uzbekistan,0.43
+BlanketGen,DEFAULT,2,Uzbekistan,0.45
+BlanketGen,DEFAULT,3,Uzbekistan,0.57
+BlanketGen,DEFAULT,4,Uzbekistan,0.81
+BlanketGen,DEFAULT,5,Uzbekistan,1.17
+BlanketGen,DEFAULT,6,Uzbekistan,1.84
+BlanketGen,DEFAULT,7,Uzbekistan,2.65
+BlanketGen,DEFAULT,8,Uzbekistan,1.74
+BlanketGen,DEFAULT,9,Uzbekistan,1
+BlanketGen,DEFAULT,10,Uzbekistan,0.68
+BlanketGen,DEFAULT,11,Uzbekistan,0.54
+BlanketGen,DEFAULT,12,Uzbekistan,0.47
+BlanketGen,DEFAULT,1,Vanuatu,13.24
+BlanketGen,DEFAULT,2,Vanuatu,18.75
+BlanketGen,DEFAULT,3,Vanuatu,14.06
+BlanketGen,DEFAULT,4,Vanuatu,7.76
+BlanketGen,DEFAULT,5,Vanuatu,5
+BlanketGen,DEFAULT,6,Vanuatu,3.81
+BlanketGen,DEFAULT,7,Vanuatu,3
+BlanketGen,DEFAULT,8,Vanuatu,2.78
+BlanketGen,DEFAULT,9,Vanuatu,3.04
+BlanketGen,DEFAULT,10,Vanuatu,3.63
+BlanketGen,DEFAULT,11,Vanuatu,5.11
+BlanketGen,DEFAULT,12,Vanuatu,7.26
+BlanketGen,DEFAULT,1,Venezuela,2.56
+BlanketGen,DEFAULT,2,Venezuela,2.74
+BlanketGen,DEFAULT,3,Venezuela,3.17
+BlanketGen,DEFAULT,4,Venezuela,4.5
+BlanketGen,DEFAULT,5,Venezuela,5.23
+BlanketGen,DEFAULT,6,Venezuela,4.69
+BlanketGen,DEFAULT,7,Venezuela,4.09
+BlanketGen,DEFAULT,8,Venezuela,4.25
+BlanketGen,DEFAULT,9,Venezuela,4.33
+BlanketGen,DEFAULT,10,Venezuela,4.17
+BlanketGen,DEFAULT,11,Venezuela,3.63
+BlanketGen,DEFAULT,12,Venezuela,2.96
+BlanketGen,DEFAULT,1,Vietnam,1.81
+BlanketGen,DEFAULT,2,Vietnam,2.06
+BlanketGen,DEFAULT,3,Vietnam,3
+BlanketGen,DEFAULT,4,Vietnam,6.25
+BlanketGen,DEFAULT,5,Vietnam,28.13
+BlanketGen,DEFAULT,6,Vietnam,1E+15
+BlanketGen,DEFAULT,7,Vietnam,1E+15
+BlanketGen,DEFAULT,8,Vietnam,1E+15
+BlanketGen,DEFAULT,9,Vietnam,15
+BlanketGen,DEFAULT,10,Vietnam,5.63
+BlanketGen,DEFAULT,11,Vietnam,3.36
+BlanketGen,DEFAULT,12,Vietnam,2.16
+BlanketGen,DEFAULT,1,Wallis and Futuna,1E+15
+BlanketGen,DEFAULT,2,Wallis and Futuna,1E+15
+BlanketGen,DEFAULT,3,Wallis and Futuna,1E+15
+BlanketGen,DEFAULT,4,Wallis and Futuna,1E+15
+BlanketGen,DEFAULT,5,Wallis and Futuna,1E+15
+BlanketGen,DEFAULT,6,Wallis and Futuna,1E+15
+BlanketGen,DEFAULT,7,Wallis and Futuna,112.5
+BlanketGen,DEFAULT,8,Wallis and Futuna,225
+BlanketGen,DEFAULT,9,Wallis and Futuna,1E+15
+BlanketGen,DEFAULT,10,Wallis and Futuna,1E+15
+BlanketGen,DEFAULT,11,Wallis and Futuna,1E+15
+BlanketGen,DEFAULT,12,Wallis and Futuna,1E+15
+BlanketGen,DEFAULT,1,Yemen,3.75
+BlanketGen,DEFAULT,2,Yemen,4.5
+BlanketGen,DEFAULT,3,Yemen,11.25
+BlanketGen,DEFAULT,4,Yemen,1E+15
+BlanketGen,DEFAULT,5,Yemen,1E+15
+BlanketGen,DEFAULT,6,Yemen,1E+15
+BlanketGen,DEFAULT,7,Yemen,1E+15
+BlanketGen,DEFAULT,8,Yemen,1E+15
+BlanketGen,DEFAULT,9,Yemen,1E+15
+BlanketGen,DEFAULT,10,Yemen,1E+15
+BlanketGen,DEFAULT,11,Yemen,5.63
+BlanketGen,DEFAULT,12,Yemen,3.88
+BlanketGen,DEFAULT,1,Zambia,1.84
+BlanketGen,DEFAULT,2,Zambia,1.83
+BlanketGen,DEFAULT,3,Zambia,1.72
+BlanketGen,DEFAULT,4,Zambia,1.4
+BlanketGen,DEFAULT,5,Zambia,1.03
+BlanketGen,DEFAULT,6,Zambia,0.84
+BlanketGen,DEFAULT,7,Zambia,0.82
+BlanketGen,DEFAULT,8,Zambia,0.94
+BlanketGen,DEFAULT,9,Zambia,1.3
+BlanketGen,DEFAULT,10,Zambia,1.81
+BlanketGen,DEFAULT,11,Zambia,1.94
+BlanketGen,DEFAULT,12,Zambia,1.89
+BlanketGen,DEFAULT,1,Zimbabwe,1.83
+BlanketGen,DEFAULT,2,Zimbabwe,1.74
+BlanketGen,DEFAULT,3,Zimbabwe,1.55
+BlanketGen,DEFAULT,4,Zimbabwe,1.2
+BlanketGen,DEFAULT,5,Zimbabwe,0.91
+BlanketGen,DEFAULT,6,Zimbabwe,0.76
+BlanketGen,DEFAULT,7,Zimbabwe,0.74
+BlanketGen,DEFAULT,8,Zimbabwe,0.83
+BlanketGen,DEFAULT,9,Zimbabwe,1.09
+BlanketGen,DEFAULT,10,Zimbabwe,1.44
+BlanketGen,DEFAULT,11,Zimbabwe,1.72
+BlanketGen,DEFAULT,12,Zimbabwe,1.79
+BlanketGen,DEFAULT,-1,Afghanistan,0.78
+BlanketGen,DEFAULT,-1,Albania,0.98
+BlanketGen,DEFAULT,-1,Algeria,1.06
+BlanketGen,DEFAULT,-1,American Samoa,5.82
+BlanketGen,DEFAULT,-1,Angola,1.54
+BlanketGen,DEFAULT,-1,Anguilla,1E+15
+BlanketGen,DEFAULT,-1,Antigua and Barbuda,168.75
+BlanketGen,DEFAULT,-1,Argentina,0.91
+BlanketGen,DEFAULT,-1,Armenia,0.53
+BlanketGen,DEFAULT,-1,Australia,1.01
+BlanketGen,DEFAULT,-1,Austria,0.6
+BlanketGen,DEFAULT,-1,Azerbaijan,0.74
+BlanketGen,DEFAULT,-1,Bahrain,15.98
+BlanketGen,DEFAULT,-1,Bangladesh,4.02
+BlanketGen,DEFAULT,-1,Barbados,24.11
+BlanketGen,DEFAULT,-1,Belarus,0.58
+BlanketGen,DEFAULT,-1,Belgium,0.68
+BlanketGen,DEFAULT,-1,Belize,7.78
+BlanketGen,DEFAULT,-1,Benin,7.96
+BlanketGen,DEFAULT,-1,Bermuda,3.31
+BlanketGen,DEFAULT,-1,Bhutan,0.91
+BlanketGen,DEFAULT,-1,Bolivia,0.92
+BlanketGen,DEFAULT,-1,Bosnia and Herzegovina,0.7
+BlanketGen,DEFAULT,-1,Botswana,1.22
+BlanketGen,DEFAULT,-1,Brazil,3.04
+BlanketGen,DEFAULT,-1,British Virgin Islands,12.92
+BlanketGen,DEFAULT,-1,Brunei,25.96
+BlanketGen,DEFAULT,-1,Bulgaria,0.71
+BlanketGen,DEFAULT,-1,Burkina Faso,8.11
+BlanketGen,DEFAULT,-1,Burundi,1.41
+BlanketGen,DEFAULT,-1,Cambodia,15.25
+BlanketGen,DEFAULT,-1,Cameroon,2.46
+BlanketGen,DEFAULT,-1,Canada,0.48
+BlanketGen,DEFAULT,-1,Cape Verde,4.26
+BlanketGen,DEFAULT,-1,Cayman Islands,108
+BlanketGen,DEFAULT,-1,Central African Republic,2.72
+BlanketGen,DEFAULT,-1,Chad,3.81
+BlanketGen,DEFAULT,-1,Chile,0.8
+BlanketGen,DEFAULT,-1,China,0.7
+BlanketGen,DEFAULT,-1,Colombia,3.94
+BlanketGen,DEFAULT,-1,Comoros,3.94
+BlanketGen,DEFAULT,-1,Congo,3.96
+BlanketGen,DEFAULT,-1,Cook Islands,1E+15
+BlanketGen,DEFAULT,-1,Costa Rica,3.33
+BlanketGen,DEFAULT,-1,Cote d'Ivoire,5.42
+BlanketGen,DEFAULT,-1,Croatia,0.83
+BlanketGen,DEFAULT,-1,Cuba,5.31
+BlanketGen,DEFAULT,-1,Curacao,1E+15
+BlanketGen,DEFAULT,-1,Czech Republic,0.59
+BlanketGen,DEFAULT,-1,Democratic Republic of the Congo,2.36
+BlanketGen,DEFAULT,-1,Denmark,0.67
+BlanketGen,DEFAULT,-1,Djibouti,50.94
+BlanketGen,DEFAULT,-1,Dominica,7.65
+BlanketGen,DEFAULT,-1,Dominican Republic,4.96
+BlanketGen,DEFAULT,-1,Ecuador,2.8
+BlanketGen,DEFAULT,-1,Egypt,1.63
+BlanketGen,DEFAULT,-1,El Salvador,3.38
+BlanketGen,DEFAULT,-1,Equatorial Guinea,3.3
+BlanketGen,DEFAULT,-1,Eritrea,5.18
+BlanketGen,DEFAULT,-1,Estonia,0.57
+BlanketGen,DEFAULT,-1,Ethiopia,1.27
+BlanketGen,DEFAULT,-1,Fiji,7.61
+BlanketGen,DEFAULT,-1,Finland,0.51
+BlanketGen,DEFAULT,-1,France,0.76
+BlanketGen,DEFAULT,-1,French Guiana,8.31
+BlanketGen,DEFAULT,-1,French Polynesia,6.7
+BlanketGen,DEFAULT,-1,Gabon,5.57
+BlanketGen,DEFAULT,-1,Georgia,0.93
+BlanketGen,DEFAULT,-1,Germany,0.65
+BlanketGen,DEFAULT,-1,Ghana,1E+15
+BlanketGen,DEFAULT,-1,Greece,1.06
+BlanketGen,DEFAULT,-1,Grenada,20.93
+BlanketGen,DEFAULT,-1,Guadeloupe,7.65
+BlanketGen,DEFAULT,-1,Guam,23.48
+BlanketGen,DEFAULT,-1,Guatemala,4.55
+BlanketGen,DEFAULT,-1,Guinea,11.54
+BlanketGen,DEFAULT,-1,Guinea-Bissau,9.31
+BlanketGen,DEFAULT,-1,Guyana,6.32
+BlanketGen,DEFAULT,-1,Haiti,3.52
+BlanketGen,DEFAULT,-1,Honduras,20
+BlanketGen,DEFAULT,-1,Hong Kong,4.79
+BlanketGen,DEFAULT,-1,Hungary,0.69
+BlanketGen,DEFAULT,-1,Iceland,0.55
+BlanketGen,DEFAULT,-1,India,2.32
+BlanketGen,DEFAULT,-1,Indonesia,8.46
+BlanketGen,DEFAULT,-1,Iran,0.91
+BlanketGen,DEFAULT,-1,Iraq,1.58
+BlanketGen,DEFAULT,-1,Ireland,0.73
+BlanketGen,DEFAULT,-1,Israel,1.28
+BlanketGen,DEFAULT,-1,Italy,0.87
+BlanketGen,DEFAULT,-1,Jamaica,8.46
+BlanketGen,DEFAULT,-1,Japan,0.92
+BlanketGen,DEFAULT,-1,Jordan,1.21
+BlanketGen,DEFAULT,-1,Kazakhstan,0.51
+BlanketGen,DEFAULT,-1,Kenya,1.62
+BlanketGen,DEFAULT,-1,Kiribati,1E+15
+BlanketGen,DEFAULT,-1,Kuwait,2.43
+BlanketGen,DEFAULT,-1,Kyrgyzstan,0.54
+BlanketGen,DEFAULT,-1,Laos,3.14
+BlanketGen,DEFAULT,-1,Latvia,0.61
+BlanketGen,DEFAULT,-1,Lebanon,1.01
+BlanketGen,DEFAULT,-1,Lesotho,0.76
+BlanketGen,DEFAULT,-1,Liberia,8.23
+BlanketGen,DEFAULT,-1,Libya,1.33
+BlanketGen,DEFAULT,-1,Lithuania,0.59
+BlanketGen,DEFAULT,-1,Luxembourg,0.66
+BlanketGen,DEFAULT,-1,Macau,3.4
+BlanketGen,DEFAULT,-1,Macedonia (FYROM),0.73
+BlanketGen,DEFAULT,-1,Madagascar,2.06
+BlanketGen,DEFAULT,-1,Malawi,1.52
+BlanketGen,DEFAULT,-1,Malaysia,8.74
+BlanketGen,DEFAULT,-1,Maldives,1E+15
+BlanketGen,DEFAULT,-1,Mali,20.45
+BlanketGen,DEFAULT,-1,Malta,1.39
+BlanketGen,DEFAULT,-1,Marshall Islands,1E+15
+BlanketGen,DEFAULT,-1,Martinique,13.43
+BlanketGen,DEFAULT,-1,Mauritania,8.21
+BlanketGen,DEFAULT,-1,Mauritius,4.17
+BlanketGen,DEFAULT,-1,Mayotte,18.75
+BlanketGen,DEFAULT,-1,Mexico,1.15
+BlanketGen,DEFAULT,-1,Micronesia,42.19
+BlanketGen,DEFAULT,-1,Moldova,0.67
+BlanketGen,DEFAULT,-1,Mongolia,0.4
+BlanketGen,DEFAULT,-1,Montenegro,0.77
+BlanketGen,DEFAULT,-1,Montserrat,7.65
+BlanketGen,DEFAULT,-1,Morocco,1.09
+BlanketGen,DEFAULT,-1,Mozambique,2.63
+BlanketGen,DEFAULT,-1,Namibia,1.24
+BlanketGen,DEFAULT,-1,Nepal,1.02
+BlanketGen,DEFAULT,-1,New Caledonia,2.88
+BlanketGen,DEFAULT,-1,New Zealand,0.76
+BlanketGen,DEFAULT,-1,Nicaragua,46.55
+BlanketGen,DEFAULT,-1,Nicosia,1.27
+BlanketGen,DEFAULT,-1,Niger,5.7
+BlanketGen,DEFAULT,-1,Nigeria,6.37
+BlanketGen,DEFAULT,-1,Niue,8.08
+BlanketGen,DEFAULT,-1,North Korea,0.63
+BlanketGen,DEFAULT,-1,Northern Mariana Islands,122.73
+BlanketGen,DEFAULT,-1,Norway,0.54
+BlanketGen,DEFAULT,-1,Oman,5.71
+BlanketGen,DEFAULT,-1,Pakistan,1.41
+BlanketGen,DEFAULT,-1,Palau,26.21
+BlanketGen,DEFAULT,-1,Panama,1.82
+BlanketGen,DEFAULT,-1,Papua New Guinea,3.93
+BlanketGen,DEFAULT,-1,Paraguay,1.87
+BlanketGen,DEFAULT,-1,Peru,1
+BlanketGen,DEFAULT,-1,Philippines,11.34
+BlanketGen,DEFAULT,-1,Poland,0.54
+BlanketGen,DEFAULT,-1,Portugal,1.07
+BlanketGen,DEFAULT,-1,Puerto Rico,3.14
+BlanketGen,DEFAULT,-1,Qatar,6.55
+BlanketGen,DEFAULT,-1,Republic of the Union of Myanmar,3.4
+BlanketGen,DEFAULT,-1,Reunion,6.92
+BlanketGen,DEFAULT,-1,Romania,0.66
+BlanketGen,DEFAULT,-1,Russia,0.43
+BlanketGen,DEFAULT,-1,Rwanda,1.37
+BlanketGen,DEFAULT,-1,Saint Helena,1.12
+BlanketGen,DEFAULT,-1,Saint Kitts and Nevis,23.68
+BlanketGen,DEFAULT,-1,Saint Lucia,1E+15
+BlanketGen,DEFAULT,-1,Saint Vincent and the Grenadines,1E+15
+BlanketGen,DEFAULT,-1,Samoa,32.14
+BlanketGen,DEFAULT,-1,Sao Tome and Principe,12.56
+BlanketGen,DEFAULT,-1,Saudi Arabia,2.45
+BlanketGen,DEFAULT,-1,Senegal,5.34
+BlanketGen,DEFAULT,-1,Serbia,0.69
+BlanketGen,DEFAULT,-1,Seychelles,1E+15
+BlanketGen,DEFAULT,-1,Sierra Leone,8.46
+BlanketGen,DEFAULT,-1,Singapore,93.1
+BlanketGen,DEFAULT,-1,Slovakia,0.57
+BlanketGen,DEFAULT,-1,Slovenia,0.62
+BlanketGen,DEFAULT,-1,Solomon Islands,13.78
+BlanketGen,DEFAULT,-1,Somalia,4.96
+BlanketGen,DEFAULT,-1,South Africa,0.95
+BlanketGen,DEFAULT,-1,South Korea,0.77
+BlanketGen,DEFAULT,-1,South Sudan,4.54
+BlanketGen,DEFAULT,-1,Spain,0.98
+BlanketGen,DEFAULT,-1,Sri Lanka,25.23
+BlanketGen,DEFAULT,-1,Sudan,3.9
+BlanketGen,DEFAULT,-1,Suriname,1E+15
+BlanketGen,DEFAULT,-1,Swaziland,1.27
+BlanketGen,DEFAULT,-1,Sweden,0.54
+BlanketGen,DEFAULT,-1,Switzerland,0.57
+BlanketGen,DEFAULT,-1,Syria,1.07
+BlanketGen,DEFAULT,-1,Taiwan,2.43
+BlanketGen,DEFAULT,-1,Tajikistan,0.64
+BlanketGen,DEFAULT,-1,Tanzania,1.91
+BlanketGen,DEFAULT,-1,Thailand,7.65
+BlanketGen,DEFAULT,-1,The Bahamas,5.93
+BlanketGen,DEFAULT,-1,The Gambia,4.5
+BlanketGen,DEFAULT,-1,The Netherlands,0.71
+BlanketGen,DEFAULT,-1,Timor-Leste,1E+15
+BlanketGen,DEFAULT,-1,Togo,9.89
+BlanketGen,DEFAULT,-1,Tokelau,1E+15
+BlanketGen,DEFAULT,-1,Tonga,1E+15
+BlanketGen,DEFAULT,-1,Trinidad and Tobago,26.21
+BlanketGen,DEFAULT,-1,Tunisia,1.15
+BlanketGen,DEFAULT,-1,Turkey,0.75
+BlanketGen,DEFAULT,-1,Turkmenistan,0.84
+BlanketGen,DEFAULT,-1,Turks and Caicos Islands,1E+15
+BlanketGen,DEFAULT,-1,Tuvalu,1E+15
+BlanketGen,DEFAULT,-1,U.S. Virgin Islands,9.28
+BlanketGen,DEFAULT,-1,Uganda,1.5
+BlanketGen,DEFAULT,-1,Ukraine,0.65
+BlanketGen,DEFAULT,-1,United Arab Emirates,4.56
+BlanketGen,DEFAULT,-1,United Kingdom,0.7
+BlanketGen,DEFAULT,-1,United States,0.92
+BlanketGen,DEFAULT,-1,Uruguay,1.04
+BlanketGen,DEFAULT,-1,Uzbekistan,0.73
+BlanketGen,DEFAULT,-1,Vanuatu,4.95
+BlanketGen,DEFAULT,-1,Venezuela,3.68
+BlanketGen,DEFAULT,-1,Vietnam,4.73
+BlanketGen,DEFAULT,-1,Wallis and Futuna,1E+15
+BlanketGen,DEFAULT,-1,Yemen,1E+15
+BlanketGen,DEFAULT,-1,Zambia,1.3
+BlanketGen,DEFAULT,-1,Zimbabwe,1.16
+BlanketGen,DEFAULT,DEFAULT,Afghanistan,0.78
+BlanketGen,DEFAULT,DEFAULT,Albania,0.98
+BlanketGen,DEFAULT,DEFAULT,Algeria,1.06
+BlanketGen,DEFAULT,DEFAULT,American Samoa,5.82
+BlanketGen,DEFAULT,DEFAULT,Angola,1.54
+BlanketGen,DEFAULT,DEFAULT,Anguilla,1E+15
+BlanketGen,DEFAULT,DEFAULT,Antigua and Barbuda,168.75
+BlanketGen,DEFAULT,DEFAULT,Argentina,0.91
+BlanketGen,DEFAULT,DEFAULT,Armenia,0.53
+BlanketGen,DEFAULT,DEFAULT,Australia,1.01
+BlanketGen,DEFAULT,DEFAULT,Austria,0.6
+BlanketGen,DEFAULT,DEFAULT,Azerbaijan,0.74
+BlanketGen,DEFAULT,DEFAULT,Bahrain,15.98
+BlanketGen,DEFAULT,DEFAULT,Bangladesh,4.02
+BlanketGen,DEFAULT,DEFAULT,Barbados,24.11
+BlanketGen,DEFAULT,DEFAULT,Belarus,0.58
+BlanketGen,DEFAULT,DEFAULT,Belgium,0.68
+BlanketGen,DEFAULT,DEFAULT,Belize,7.78
+BlanketGen,DEFAULT,DEFAULT,Benin,7.96
+BlanketGen,DEFAULT,DEFAULT,Bermuda,3.31
+BlanketGen,DEFAULT,DEFAULT,Bhutan,0.91
+BlanketGen,DEFAULT,DEFAULT,Bolivia,0.92
+BlanketGen,DEFAULT,DEFAULT,Bosnia and Herzegovina,0.7
+BlanketGen,DEFAULT,DEFAULT,Botswana,1.22
+BlanketGen,DEFAULT,DEFAULT,Brazil,3.04
+BlanketGen,DEFAULT,DEFAULT,British Virgin Islands,12.92
+BlanketGen,DEFAULT,DEFAULT,Brunei,25.96
+BlanketGen,DEFAULT,DEFAULT,Bulgaria,0.71
+BlanketGen,DEFAULT,DEFAULT,Burkina Faso,8.11
+BlanketGen,DEFAULT,DEFAULT,Burundi,1.41
+BlanketGen,DEFAULT,DEFAULT,Cambodia,15.25
+BlanketGen,DEFAULT,DEFAULT,Cameroon,2.46
+BlanketGen,DEFAULT,DEFAULT,Canada,0.48
+BlanketGen,DEFAULT,DEFAULT,Cape Verde,4.26
+BlanketGen,DEFAULT,DEFAULT,Cayman Islands,108
+BlanketGen,DEFAULT,DEFAULT,Central African Republic,2.72
+BlanketGen,DEFAULT,DEFAULT,Chad,3.81
+BlanketGen,DEFAULT,DEFAULT,Chile,0.8
+BlanketGen,DEFAULT,DEFAULT,China,0.7
+BlanketGen,DEFAULT,DEFAULT,Colombia,3.94
+BlanketGen,DEFAULT,DEFAULT,Comoros,3.94
+BlanketGen,DEFAULT,DEFAULT,Congo,3.96
+BlanketGen,DEFAULT,DEFAULT,Cook Islands,1E+15
+BlanketGen,DEFAULT,DEFAULT,Costa Rica,3.33
+BlanketGen,DEFAULT,DEFAULT,Cote d'Ivoire,5.42
+BlanketGen,DEFAULT,DEFAULT,Croatia,0.83
+BlanketGen,DEFAULT,DEFAULT,Cuba,5.31
+BlanketGen,DEFAULT,DEFAULT,Curacao,1E+15
+BlanketGen,DEFAULT,DEFAULT,Czech Republic,0.59
+BlanketGen,DEFAULT,DEFAULT,Democratic Republic of the Congo,2.36
+BlanketGen,DEFAULT,DEFAULT,Denmark,0.67
+BlanketGen,DEFAULT,DEFAULT,Djibouti,50.94
+BlanketGen,DEFAULT,DEFAULT,Dominica,7.65
+BlanketGen,DEFAULT,DEFAULT,Dominican Republic,4.96
+BlanketGen,DEFAULT,DEFAULT,Ecuador,2.8
+BlanketGen,DEFAULT,DEFAULT,Egypt,1.63
+BlanketGen,DEFAULT,DEFAULT,El Salvador,3.38
+BlanketGen,DEFAULT,DEFAULT,Equatorial Guinea,3.3
+BlanketGen,DEFAULT,DEFAULT,Eritrea,5.18
+BlanketGen,DEFAULT,DEFAULT,Estonia,0.57
+BlanketGen,DEFAULT,DEFAULT,Ethiopia,1.27
+BlanketGen,DEFAULT,DEFAULT,Fiji,7.61
+BlanketGen,DEFAULT,DEFAULT,Finland,0.51
+BlanketGen,DEFAULT,DEFAULT,France,0.76
+BlanketGen,DEFAULT,DEFAULT,French Guiana,8.31
+BlanketGen,DEFAULT,DEFAULT,French Polynesia,6.7
+BlanketGen,DEFAULT,DEFAULT,Gabon,5.57
+BlanketGen,DEFAULT,DEFAULT,Georgia,0.93
+BlanketGen,DEFAULT,DEFAULT,Germany,0.65
+BlanketGen,DEFAULT,DEFAULT,Ghana,1E+15
+BlanketGen,DEFAULT,DEFAULT,Greece,1.06
+BlanketGen,DEFAULT,DEFAULT,Grenada,20.93
+BlanketGen,DEFAULT,DEFAULT,Guadeloupe,7.65
+BlanketGen,DEFAULT,DEFAULT,Guam,23.48
+BlanketGen,DEFAULT,DEFAULT,Guatemala,4.55
+BlanketGen,DEFAULT,DEFAULT,Guinea,11.54
+BlanketGen,DEFAULT,DEFAULT,Guinea-Bissau,9.31
+BlanketGen,DEFAULT,DEFAULT,Guyana,6.32
+BlanketGen,DEFAULT,DEFAULT,Haiti,3.52
+BlanketGen,DEFAULT,DEFAULT,Honduras,20
+BlanketGen,DEFAULT,DEFAULT,Hong Kong,4.79
+BlanketGen,DEFAULT,DEFAULT,Hungary,0.69
+BlanketGen,DEFAULT,DEFAULT,Iceland,0.55
+BlanketGen,DEFAULT,DEFAULT,India,2.32
+BlanketGen,DEFAULT,DEFAULT,Indonesia,8.46
+BlanketGen,DEFAULT,DEFAULT,Iran,0.91
+BlanketGen,DEFAULT,DEFAULT,Iraq,1.58
+BlanketGen,DEFAULT,DEFAULT,Ireland,0.73
+BlanketGen,DEFAULT,DEFAULT,Israel,1.28
+BlanketGen,DEFAULT,DEFAULT,Italy,0.87
+BlanketGen,DEFAULT,DEFAULT,Jamaica,8.46
+BlanketGen,DEFAULT,DEFAULT,Japan,0.92
+BlanketGen,DEFAULT,DEFAULT,Jordan,1.21
+BlanketGen,DEFAULT,DEFAULT,Kazakhstan,0.51
+BlanketGen,DEFAULT,DEFAULT,Kenya,1.62
+BlanketGen,DEFAULT,DEFAULT,Kiribati,1E+15
+BlanketGen,DEFAULT,DEFAULT,Kuwait,2.43
+BlanketGen,DEFAULT,DEFAULT,Kyrgyzstan,0.54
+BlanketGen,DEFAULT,DEFAULT,Laos,3.14
+BlanketGen,DEFAULT,DEFAULT,Latvia,0.61
+BlanketGen,DEFAULT,DEFAULT,Lebanon,1.01
+BlanketGen,DEFAULT,DEFAULT,Lesotho,0.76
+BlanketGen,DEFAULT,DEFAULT,Liberia,8.23
+BlanketGen,DEFAULT,DEFAULT,Libya,1.33
+BlanketGen,DEFAULT,DEFAULT,Lithuania,0.59
+BlanketGen,DEFAULT,DEFAULT,Luxembourg,0.66
+BlanketGen,DEFAULT,DEFAULT,Macau,3.4
+BlanketGen,DEFAULT,DEFAULT,Macedonia (FYROM),0.73
+BlanketGen,DEFAULT,DEFAULT,Madagascar,2.06
+BlanketGen,DEFAULT,DEFAULT,Malawi,1.52
+BlanketGen,DEFAULT,DEFAULT,Malaysia,8.74
+BlanketGen,DEFAULT,DEFAULT,Maldives,1E+15
+BlanketGen,DEFAULT,DEFAULT,Mali,20.45
+BlanketGen,DEFAULT,DEFAULT,Malta,1.39
+BlanketGen,DEFAULT,DEFAULT,Marshall Islands,1E+15
+BlanketGen,DEFAULT,DEFAULT,Martinique,13.43
+BlanketGen,DEFAULT,DEFAULT,Mauritania,8.21
+BlanketGen,DEFAULT,DEFAULT,Mauritius,4.17
+BlanketGen,DEFAULT,DEFAULT,Mayotte,18.75
+BlanketGen,DEFAULT,DEFAULT,Mexico,1.15
+BlanketGen,DEFAULT,DEFAULT,Micronesia,42.19
+BlanketGen,DEFAULT,DEFAULT,Moldova,0.67
+BlanketGen,DEFAULT,DEFAULT,Mongolia,0.4
+BlanketGen,DEFAULT,DEFAULT,Montenegro,0.77
+BlanketGen,DEFAULT,DEFAULT,Montserrat,7.65
+BlanketGen,DEFAULT,DEFAULT,Morocco,1.09
+BlanketGen,DEFAULT,DEFAULT,Mozambique,2.63
+BlanketGen,DEFAULT,DEFAULT,Namibia,1.24
+BlanketGen,DEFAULT,DEFAULT,Nepal,1.02
+BlanketGen,DEFAULT,DEFAULT,New Caledonia,2.88
+BlanketGen,DEFAULT,DEFAULT,New Zealand,0.76
+BlanketGen,DEFAULT,DEFAULT,Nicaragua,46.55
+BlanketGen,DEFAULT,DEFAULT,Nicosia,1.27
+BlanketGen,DEFAULT,DEFAULT,Niger,5.7
+BlanketGen,DEFAULT,DEFAULT,Nigeria,6.37
+BlanketGen,DEFAULT,DEFAULT,Niue,8.08
+BlanketGen,DEFAULT,DEFAULT,North Korea,0.63
+BlanketGen,DEFAULT,DEFAULT,Northern Mariana Islands,122.73
+BlanketGen,DEFAULT,DEFAULT,Norway,0.54
+BlanketGen,DEFAULT,DEFAULT,Oman,5.71
+BlanketGen,DEFAULT,DEFAULT,Pakistan,1.41
+BlanketGen,DEFAULT,DEFAULT,Palau,26.21
+BlanketGen,DEFAULT,DEFAULT,Panama,1.82
+BlanketGen,DEFAULT,DEFAULT,Papua New Guinea,3.93
+BlanketGen,DEFAULT,DEFAULT,Paraguay,1.87
+BlanketGen,DEFAULT,DEFAULT,Peru,1
+BlanketGen,DEFAULT,DEFAULT,Philippines,11.34
+BlanketGen,DEFAULT,DEFAULT,Poland,0.54
+BlanketGen,DEFAULT,DEFAULT,Portugal,1.07
+BlanketGen,DEFAULT,DEFAULT,Puerto Rico,3.14
+BlanketGen,DEFAULT,DEFAULT,Qatar,6.55
+BlanketGen,DEFAULT,DEFAULT,Republic of the Union of Myanmar,3.4
+BlanketGen,DEFAULT,DEFAULT,Reunion,6.92
+BlanketGen,DEFAULT,DEFAULT,Romania,0.66
+BlanketGen,DEFAULT,DEFAULT,Russia,0.43
+BlanketGen,DEFAULT,DEFAULT,Rwanda,1.37
+BlanketGen,DEFAULT,DEFAULT,Saint Helena,1.12
+BlanketGen,DEFAULT,DEFAULT,Saint Kitts and Nevis,23.68
+BlanketGen,DEFAULT,DEFAULT,Saint Lucia,1E+15
+BlanketGen,DEFAULT,DEFAULT,Saint Vincent and the Grenadines,1E+15
+BlanketGen,DEFAULT,DEFAULT,Samoa,32.14
+BlanketGen,DEFAULT,DEFAULT,Sao Tome and Principe,12.56
+BlanketGen,DEFAULT,DEFAULT,Saudi Arabia,2.45
+BlanketGen,DEFAULT,DEFAULT,Senegal,5.34
+BlanketGen,DEFAULT,DEFAULT,Serbia,0.69
+BlanketGen,DEFAULT,DEFAULT,Seychelles,1E+15
+BlanketGen,DEFAULT,DEFAULT,Sierra Leone,8.46
+BlanketGen,DEFAULT,DEFAULT,Singapore,93.1
+BlanketGen,DEFAULT,DEFAULT,Slovakia,0.57
+BlanketGen,DEFAULT,DEFAULT,Slovenia,0.62
+BlanketGen,DEFAULT,DEFAULT,Solomon Islands,13.78
+BlanketGen,DEFAULT,DEFAULT,Somalia,4.96
+BlanketGen,DEFAULT,DEFAULT,South Africa,0.95
+BlanketGen,DEFAULT,DEFAULT,South Korea,0.77
+BlanketGen,DEFAULT,DEFAULT,South Sudan,4.54
+BlanketGen,DEFAULT,DEFAULT,Spain,0.98
+BlanketGen,DEFAULT,DEFAULT,Sri Lanka,25.23
+BlanketGen,DEFAULT,DEFAULT,Sudan,3.9
+BlanketGen,DEFAULT,DEFAULT,Suriname,1E+15
+BlanketGen,DEFAULT,DEFAULT,Swaziland,1.27
+BlanketGen,DEFAULT,DEFAULT,Sweden,0.54
+BlanketGen,DEFAULT,DEFAULT,Switzerland,0.57
+BlanketGen,DEFAULT,DEFAULT,Syria,1.07
+BlanketGen,DEFAULT,DEFAULT,Taiwan,2.43
+BlanketGen,DEFAULT,DEFAULT,Tajikistan,0.64
+BlanketGen,DEFAULT,DEFAULT,Tanzania,1.91
+BlanketGen,DEFAULT,DEFAULT,Thailand,7.65
+BlanketGen,DEFAULT,DEFAULT,The Bahamas,5.93
+BlanketGen,DEFAULT,DEFAULT,The Gambia,4.5
+BlanketGen,DEFAULT,DEFAULT,The Netherlands,0.71
+BlanketGen,DEFAULT,DEFAULT,Timor-Leste,1E+15
+BlanketGen,DEFAULT,DEFAULT,Togo,9.89
+BlanketGen,DEFAULT,DEFAULT,Tokelau,1E+15
+BlanketGen,DEFAULT,DEFAULT,Tonga,1E+15
+BlanketGen,DEFAULT,DEFAULT,Trinidad and Tobago,26.21
+BlanketGen,DEFAULT,DEFAULT,Tunisia,1.15
+BlanketGen,DEFAULT,DEFAULT,Turkey,0.75
+BlanketGen,DEFAULT,DEFAULT,Turkmenistan,0.84
+BlanketGen,DEFAULT,DEFAULT,Turks and Caicos Islands,1E+15
+BlanketGen,DEFAULT,DEFAULT,Tuvalu,1E+15
+BlanketGen,DEFAULT,DEFAULT,U.S. Virgin Islands,9.28
+BlanketGen,DEFAULT,DEFAULT,Uganda,1.5
+BlanketGen,DEFAULT,DEFAULT,Ukraine,0.65
+BlanketGen,DEFAULT,DEFAULT,United Arab Emirates,4.56
+BlanketGen,DEFAULT,DEFAULT,United Kingdom,0.7
+BlanketGen,DEFAULT,DEFAULT,United States,0.92
+BlanketGen,DEFAULT,DEFAULT,Uruguay,1.04
+BlanketGen,DEFAULT,DEFAULT,Uzbekistan,0.73
+BlanketGen,DEFAULT,DEFAULT,Vanuatu,4.95
+BlanketGen,DEFAULT,DEFAULT,Venezuela,3.68
+BlanketGen,DEFAULT,DEFAULT,Vietnam,4.73
+BlanketGen,DEFAULT,DEFAULT,Wallis and Futuna,1E+15
+BlanketGen,DEFAULT,DEFAULT,Yemen,1E+15
+BlanketGen,DEFAULT,DEFAULT,Zambia,1.3
+BlanketGen,DEFAULT,DEFAULT,Zimbabwe,1.16
+SoapBarGen,DEFAULT,DEFAULT,DEFAULT,1
+JerryCanGen,DEFAULT,DEFAULT,DEFAULT,2.5
+KitchenSetGen,DEFAULT,DEFAULT,DEFAULT,5
+LatrinePlateGen,DEFAULT,DEFAULT,DEFAULT,50
+BucketGen,DEFAULT,DEFAULT,DEFAULT,5
+SoapBarGen,DEFAULT,-1,DEFAULT,1
+JerryCanGen,DEFAULT,-1,DEFAULT,2.5
+KitchenSetGen,DEFAULT,-1,DEFAULT,5
+LatrinePlateGen,DEFAULT,-1,DEFAULT,50
+BucketGen,DEFAULT,-1,DEFAULT,5
