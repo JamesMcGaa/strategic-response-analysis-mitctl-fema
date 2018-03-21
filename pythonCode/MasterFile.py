@@ -28,7 +28,7 @@ runOnPCOrLionXF = 'MyPC' # 'LionXF' 'MyPC'
 myLionThreads = 1
 
 # This dictates the suffix for the param file, the outerloop file, and the output folder
-myPBSBatch_outputFolder = '_017_testRun'
+myPBSBatch_outputFolder = '_016_testRun'
 myPBSBatch_paramSuffix = 'Master'
 myPBSBatch_outerLoopSuffix = 'Master'
 myPBSBatch_runDescription = 'testRun'
@@ -61,6 +61,7 @@ os.chdir(myMasterFilePath)
 # Environment
 # Where is your data stored, and where do you want new data saved
 outputPath = os.path.join(myMasterFilePath, 'outputData', 'output' + myPBSBatch_outputFolder)
+print(outputPath)
 inputPath = os.path.join(myMasterFilePath, 'inputData/' + 'inputData03_US/' )
 inputPathPickle_Cost = os.path.join(inputPath, 'pickled/' + myPBSBatch_outputFolder + "/a")
 inputPathPickle_Beta = inputPath + 'pickled/'
