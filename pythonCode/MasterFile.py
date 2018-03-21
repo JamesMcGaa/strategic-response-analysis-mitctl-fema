@@ -55,7 +55,7 @@ print 'Master File Path'
 print myMasterFilePath
 os.chdir(myMasterFilePath)
 
-
+print "I added some stuff here"
 
 # ------------------------------------------------------------------------------
 # Environment
