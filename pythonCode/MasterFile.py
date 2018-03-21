@@ -54,6 +54,9 @@ print 'Master File Path'
 print myMasterFilePath
 os.chdir(myMasterFilePath)
 
+
+print "I added some stuff here"
+
 # ------------------------------------------------------------------------------
 # Environment
 # Where is your data stored, and where do you want new data saved
