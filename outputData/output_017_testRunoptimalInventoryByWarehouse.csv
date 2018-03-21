@@ -1,0 +1,129 @@
+myDescription,careAboutMonthDemand_Beta_01,t_month_Disaster,numMonthsToAvg,setScenarioProbabilitiesTo1OverN_Flag,minDisasterYear,maxDisasterYear,minYearSubset,maxYearSubset,truckDistanceMethod,expandWhichWarehousesCarryItem_01,maxDrivingTimeCutAbove_Hrs,minTimeRequiredToRespond,numDisasters,n_itemIter,initialInventorySum,objCostType,initialSuppliesVarFlag,warehouseID,startingInventory,optimalInventory
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,KitchenSetGen,70758,Cost,Optimal,"Dallas, Texas",8116,42366.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,KitchenSetGen,70758,Cost,Optimal,"Atlanta, Georgia",21406,25883.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,KitchenSetGen,70758,Cost,Optimal,"San Francisco, California",30136,2396.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,KitchenSetGen,70758,Cost,Optimal,"Philadelphia, Pennsylvania",11100,113.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,KitchenSetGen,70758,Cost,Actual,"Dallas, Texas",8116,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,KitchenSetGen,70758,Cost,Actual,"Atlanta, Georgia",21406,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,KitchenSetGen,70758,Cost,Actual,"San Francisco, California",30136,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,KitchenSetGen,70758,Cost,Actual,"Philadelphia, Pennsylvania",11100,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,KitchenSetGen,70758,Time,Optimal,"Dallas, Texas",8116,42366.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,KitchenSetGen,70758,Time,Optimal,"Atlanta, Georgia",21406,25883.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,KitchenSetGen,70758,Time,Optimal,"San Francisco, California",30136,2396.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,KitchenSetGen,70758,Time,Optimal,"Philadelphia, Pennsylvania",11100,113.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,KitchenSetGen,70758,Time,Actual,"Dallas, Texas",8116,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,KitchenSetGen,70758,Time,Actual,"Atlanta, Georgia",21406,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,KitchenSetGen,70758,Time,Actual,"San Francisco, California",30136,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,KitchenSetGen,70758,Time,Actual,"Philadelphia, Pennsylvania",11100,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,BlanketGen,89997,Cost,Optimal,"Dallas, Texas",270,54578.2
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,BlanketGen,89997,Cost,Optimal,"Atlanta, Georgia",34808,31196.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,BlanketGen,89997,Cost,Optimal,"Philadelphia, Pennsylvania",37549,996.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,BlanketGen,89997,Cost,Optimal,"San Francisco, California",17370,3226.8
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,BlanketGen,89997,Cost,Actual,"Dallas, Texas",270,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,BlanketGen,89997,Cost,Actual,"Atlanta, Georgia",34808,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,BlanketGen,89997,Cost,Actual,"Philadelphia, Pennsylvania",37549,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,BlanketGen,89997,Cost,Actual,"San Francisco, California",17370,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,BlanketGen,89997,Time,Optimal,"Dallas, Texas",270,54578.2
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,BlanketGen,89997,Time,Optimal,"Atlanta, Georgia",34808,31196.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,BlanketGen,89997,Time,Optimal,"Philadelphia, Pennsylvania",37549,996.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,BlanketGen,89997,Time,Optimal,"San Francisco, California",17370,3226.8
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,BlanketGen,89997,Time,Actual,"Dallas, Texas",270,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,BlanketGen,89997,Time,Actual,"Atlanta, Georgia",34808,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,BlanketGen,89997,Time,Actual,"Philadelphia, Pennsylvania",37549,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,BlanketGen,89997,Time,Actual,"San Francisco, California",17370,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,ShelterKit,76894,Cost,Optimal,"Dallas, Texas",36518,46769.2
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,ShelterKit,76894,Cost,Optimal,"Atlanta, Georgia",19940,26782.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,ShelterKit,76894,Cost,Optimal,"San Francisco, California",17961,3226.8
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,ShelterKit,76894,Cost,Optimal,"Philadelphia, Pennsylvania",2475,116.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,ShelterKit,76894,Cost,Actual,"Dallas, Texas",36518,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,ShelterKit,76894,Cost,Actual,"Atlanta, Georgia",19940,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,ShelterKit,76894,Cost,Actual,"San Francisco, California",17961,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,ShelterKit,76894,Cost,Actual,"Philadelphia, Pennsylvania",2475,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,ShelterKit,76894,Time,Optimal,"Dallas, Texas",36518,46769.2
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,ShelterKit,76894,Time,Optimal,"Atlanta, Georgia",19940,26782.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,ShelterKit,76894,Time,Optimal,"San Francisco, California",17961,3226.8
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,ShelterKit,76894,Time,Optimal,"Philadelphia, Pennsylvania",2475,116.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,ShelterKit,76894,Time,Actual,"Dallas, Texas",36518,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,ShelterKit,76894,Time,Actual,"Atlanta, Georgia",19940,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,ShelterKit,76894,Time,Actual,"San Francisco, California",17961,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,ShelterKit,76894,Time,Actual,"Philadelphia, Pennsylvania",2475,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,Tarpaulin4x6,110503,Cost,Optimal,"Dallas, Texas",47992,57596.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,Tarpaulin4x6,110503,Cost,Optimal,"Atlanta, Georgia",22843,47851.399999999994
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,Tarpaulin4x6,110503,Cost,Optimal,"San Francisco, California",16412,4059.6
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,Tarpaulin4x6,110503,Cost,Optimal,"Philadelphia, Pennsylvania",23256,996.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,Tarpaulin4x6,110503,Cost,Actual,"Dallas, Texas",47992,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,Tarpaulin4x6,110503,Cost,Actual,"Atlanta, Georgia",22843,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,Tarpaulin4x6,110503,Cost,Actual,"San Francisco, California",16412,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,Tarpaulin4x6,110503,Cost,Actual,"Philadelphia, Pennsylvania",23256,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,Tarpaulin4x6,110503,Time,Optimal,"Dallas, Texas",47992,57596.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,Tarpaulin4x6,110503,Time,Optimal,"Atlanta, Georgia",22843,47515.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,Tarpaulin4x6,110503,Time,Optimal,"San Francisco, California",16412,4396.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,Tarpaulin4x6,110503,Time,Optimal,"Philadelphia, Pennsylvania",23256,996.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,Tarpaulin4x6,110503,Time,Actual,"Dallas, Texas",47992,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,Tarpaulin4x6,110503,Time,Actual,"Atlanta, Georgia",22843,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,Tarpaulin4x6,110503,Time,Actual,"San Francisco, California",16412,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,Tarpaulin4x6,110503,Time,Actual,"Philadelphia, Pennsylvania",23256,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,SleepingMats,135621,Cost,Optimal,"Dallas, Texas",39910,57596.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,SleepingMats,135621,Cost,Optimal,"Atlanta, Georgia",33790,70833.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,SleepingMats,135621,Cost,Optimal,"Philadelphia, Pennsylvania",32047,1196.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,SleepingMats,135621,Cost,Optimal,"San Francisco, California",29874,5996.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,SleepingMats,135621,Cost,Actual,"Dallas, Texas",39910,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,SleepingMats,135621,Cost,Actual,"Atlanta, Georgia",33790,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,SleepingMats,135621,Cost,Actual,"Philadelphia, Pennsylvania",32047,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,SleepingMats,135621,Cost,Actual,"San Francisco, California",29874,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,SleepingMats,135621,Time,Optimal,"Dallas, Texas",39910,57596.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,SleepingMats,135621,Time,Optimal,"Atlanta, Georgia",33790,70833.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,SleepingMats,135621,Time,Optimal,"Philadelphia, Pennsylvania",32047,1196.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,SleepingMats,135621,Time,Optimal,"San Francisco, California",29874,5996.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,SleepingMats,135621,Time,Actual,"Dallas, Texas",39910,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,SleepingMats,135621,Time,Actual,"Atlanta, Georgia",33790,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,SleepingMats,135621,Time,Actual,"Philadelphia, Pennsylvania",32047,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,SleepingMats,135621,Time,Actual,"San Francisco, California",29874,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,JerryCanGen,79413,Cost,Optimal,"Dallas, Texas",15801,46769.2
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,JerryCanGen,79413,Cost,Optimal,"Atlanta, Georgia",4674,29301.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,JerryCanGen,79413,Cost,Optimal,"Philadelphia, Pennsylvania",46308,116.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,JerryCanGen,79413,Cost,Optimal,"San Francisco, California",12630,3226.8
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,JerryCanGen,79413,Cost,Actual,"Dallas, Texas",15801,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,JerryCanGen,79413,Cost,Actual,"Atlanta, Georgia",4674,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,JerryCanGen,79413,Cost,Actual,"Philadelphia, Pennsylvania",46308,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,JerryCanGen,79413,Cost,Actual,"San Francisco, California",12630,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,JerryCanGen,79413,Time,Optimal,"Dallas, Texas",15801,46769.2
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,JerryCanGen,79413,Time,Optimal,"Atlanta, Georgia",4674,29301.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,JerryCanGen,79413,Time,Optimal,"Philadelphia, Pennsylvania",46308,116.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,JerryCanGen,79413,Time,Optimal,"San Francisco, California",12630,3226.8
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,JerryCanGen,79413,Time,Actual,"Dallas, Texas",15801,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,JerryCanGen,79413,Time,Actual,"Atlanta, Georgia",4674,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,JerryCanGen,79413,Time,Actual,"Philadelphia, Pennsylvania",46308,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,JerryCanGen,79413,Time,Actual,"San Francisco, California",12630,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,MosquitoNetGen,129853,Cost,Optimal,"Dallas, Texas",45621,57596.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,MosquitoNetGen,129853,Cost,Optimal,"Atlanta, Georgia",37835,65065.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,MosquitoNetGen,129853,Cost,Optimal,"San Francisco, California",17614,5996.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,MosquitoNetGen,129853,Cost,Optimal,"Philadelphia, Pennsylvania",28783,1196.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,MosquitoNetGen,129853,Cost,Actual,"Dallas, Texas",45621,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,MosquitoNetGen,129853,Cost,Actual,"Atlanta, Georgia",37835,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,MosquitoNetGen,129853,Cost,Actual,"San Francisco, California",17614,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,MosquitoNetGen,129853,Cost,Actual,"Philadelphia, Pennsylvania",28783,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,MosquitoNetGen,129853,Time,Optimal,"Dallas, Texas",45621,57596.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,MosquitoNetGen,129853,Time,Optimal,"Atlanta, Georgia",37835,65065.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,MosquitoNetGen,129853,Time,Optimal,"San Francisco, California",17614,5996.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,MosquitoNetGen,129853,Time,Optimal,"Philadelphia, Pennsylvania",28783,1196.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,MosquitoNetGen,129853,Time,Actual,"Dallas, Texas",45621,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,MosquitoNetGen,129853,Time,Actual,"Atlanta, Georgia",37835,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,MosquitoNetGen,129853,Time,Actual,"San Francisco, California",17614,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,MosquitoNetGen,129853,Time,Actual,"Philadelphia, Pennsylvania",28783,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,Tent,112502,Cost,Optimal,"Dallas, Texas",20583,39996.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,Tent,112502,Cost,Optimal,"Atlanta, Georgia",9379,60514.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,Tent,112502,Cost,Optimal,"Philadelphia, Pennsylvania",39179,1196.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,Tent,112502,Cost,Optimal,"San Francisco, California",43361,10796.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,Tent,112502,Cost,Actual,"Dallas, Texas",20583,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,Tent,112502,Cost,Actual,"Atlanta, Georgia",9379,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,Tent,112502,Cost,Actual,"Philadelphia, Pennsylvania",39179,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,Tent,112502,Cost,Actual,"San Francisco, California",43361,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,Tent,112502,Time,Optimal,"Dallas, Texas",20583,57596.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,Tent,112502,Time,Optimal,"Atlanta, Georgia",9379,49514.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,Tent,112502,Time,Optimal,"Philadelphia, Pennsylvania",39179,996.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,Tent,112502,Time,Optimal,"San Francisco, California",43361,4396.0
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,Tent,112502,Time,Actual,"Dallas, Texas",20583,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,Tent,112502,Time,Actual,"Atlanta, Georgia",9379,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,Tent,112502,Time,Actual,"Philadelphia, Pennsylvania",39179,
+testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,292,Tent,112502,Time,Actual,"San Francisco, California",43361,
