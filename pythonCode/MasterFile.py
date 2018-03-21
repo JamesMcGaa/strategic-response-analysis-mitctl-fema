@@ -47,7 +47,6 @@ elif runOnPCOrLionXF == 'LionXF':
   myMasterFilePath = '/gpfs/home/jaa26/work/humanJarrod/pythonCode/version01/'
 
 
-
 # Where all of your scripts are, and the parent folder for your input and output files
 myMasterFilePath = os.path.dirname(os.getcwd()) #Parent code location
 codePath = os.getcwd() #Current location
@@ -55,13 +54,11 @@ print 'Master File Path'
 print myMasterFilePath
 os.chdir(myMasterFilePath)
 
-
-
 # ------------------------------------------------------------------------------
 # Environment
 # Where is your data stored, and where do you want new data saved
 outputPath = os.path.join(myMasterFilePath, 'outputData', 'output' + myPBSBatch_outputFolder)
-print(outputPath)
+
 inputPath = os.path.join(myMasterFilePath, 'inputData/' + 'inputData03_US/' )
 inputPathPickle_Cost = os.path.join(inputPath, 'pickled/' + myPBSBatch_outputFolder + "/a")
 inputPathPickle_Beta = inputPath + 'pickled/'
