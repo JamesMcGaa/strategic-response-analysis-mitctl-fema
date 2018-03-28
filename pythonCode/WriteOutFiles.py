@@ -107,7 +107,7 @@ if writeOutFlowFile:
         if myVal != 0:
           myFileToWrite.append(myRow)
            
-  f_appendOrWriteCsv(outputPath + 'allDemandFlows.csv', myFileToWrite, writeOverOrAppendFiles)                  
+  f_appendOrWriteCsv(os.path.join(outputPath,'allDemandFlows.csv'), myFileToWrite, writeOverOrAppendFiles)                  
   print str(datetime.now()) + indent + '  Finished writing out flow file'                
                   
                   
@@ -139,7 +139,7 @@ if 1 == 1:
                            )    
         myFileToWrite.append(myRow)
            
-  f_appendOrWriteCsv(outputPath + 'sumShippingInfoByMode.csv', myFileToWrite, writeOverOrAppendFiles) 
+  f_appendOrWriteCsv(os.path.join(outputPath,'sumShippingInfoByMode.csv'), myFileToWrite, writeOverOrAppendFiles) 
 
 
 if 'Actual' in myLPInitialSuppliesVariables_FlagD.keys() and 'Optimal' in myLPInitialSuppliesVariables_FlagD.keys() and 'Worst' in myLPInitialSuppliesVariables_FlagD.keys():
@@ -165,7 +165,7 @@ if 'Actual' in myLPInitialSuppliesVariables_FlagD.keys() and 'Optimal' in myLPIn
                             , myLPSuperDict[(i_costType, 'Worst')]['myObjNoDum']
                             , myBalMetricD[i_costType]])
     myFileToWrite.append(myRow)
-  f_appendOrWriteCsv(outputPath + 'sumBalanceMetric.csv', myFileToWrite, writeOverOrAppendFiles)
+  f_appendOrWriteCsv(os.path.join(outputPath, 'sumBalanceMetric.csv'), myFileToWrite, writeOverOrAppendFiles)
       
 elif 'Actual' in myLPInitialSuppliesVariables_FlagD.keys() and 'Optimal' in myLPInitialSuppliesVariables_FlagD.keys():
   print str(datetime.now()) + indent + '  Writing out balance metric file'
@@ -190,7 +190,7 @@ elif 'Actual' in myLPInitialSuppliesVariables_FlagD.keys() and 'Optimal' in myLP
                             , -1
                             , myBalMetricD[i_costType]])
     myFileToWrite.append(myRow)
-  f_appendOrWriteCsv(outputPath + 'sumBalanceMetric.csv', myFileToWrite, writeOverOrAppendFiles)      
+  f_appendOrWriteCsv(os.path.join(outputPath, 'sumBalanceMetric.csv'), myFileToWrite, writeOverOrAppendFiles)      
 
 if 1 == 2:
   print str(datetime.now()) + indent + '  Writing out summary stats file about fraction of demand met'
@@ -216,7 +216,7 @@ if 1 == 2:
                             , myPeopleServedPerItemShipped
                             , myPeopleServedPerItemAll]
                             )       
-  f_appendOrWriteCsv(outputPath + 'sumDemandMetAndPerCapita.csv', myFileToWrite, writeOverOrAppendFiles) 
+  f_appendOrWriteCsv(os.path.join(outputPath, 'sumDemandMetAndPerCapita.csv'), myFileToWrite, writeOverOrAppendFiles) 
 
 
 
@@ -273,7 +273,7 @@ if 1 == 1:
                           [impactOfCostOnOtherCosts[(i_costType, i_initSupVar, k)] 
                                     for k in myTmpKeys] 
                             )       
-  f_appendOrWriteCsv(outputPath + 'summaryAll.csv', myFileToWrite, writeOverOrAppendFiles) 
+  f_appendOrWriteCsv(os.path.join(outputPath, 'summaryAll.csv'), myFileToWrite, writeOverOrAppendFiles) 
 
 
 if 'Actual' in myLPInitialSuppliesVariables_FlagD.keys():
@@ -306,7 +306,7 @@ if 'Actual' in myLPInitialSuppliesVariables_FlagD.keys():
                               , myLPSuperDict[(i_costType, 'Actual')]['dualsInvNoDum_PlusDummyCost'][i_warehouse] \
                           ]
                             )       
-  f_appendOrWriteCsv(outputPath + 'dualsByWarehouse.csv', myFileToWrite, writeOverOrAppendFiles) 
+  f_appendOrWriteCsv(os.path.join(outputPath, 'dualsByWarehouse.csv'), myFileToWrite, writeOverOrAppendFiles) 
 
 
 if 'Actual' in myLPInitialSuppliesVariables_FlagD.keys() and writeOutDualsByWarehouseAndDisaster:
@@ -339,7 +339,7 @@ if 'Actual' in myLPInitialSuppliesVariables_FlagD.keys() and writeOutDualsByWare
                                    , bigMCostDummy ] + \
                                 [myVal] \
                                  )        
-  f_appendOrWriteCsv(outputPath + 'dualsByWarehouseAndDisaster.csv', myFileToWrite, writeOverOrAppendFiles) 
+  f_appendOrWriteCsv(os.path.join(outputPath, 'dualsByWarehouseAndDisaster.csv'), myFileToWrite, writeOverOrAppendFiles) 
 
 if 1 == 1:
   print str(datetime.now()) + indent + '  Writing out optimal inventory location by warehouse'
@@ -368,7 +368,7 @@ if 1 == 1:
                                 , myLPSuperDict[(i_costType, i_initSupVar)]['myOptInvNoDum'][i_warehouse] \
                             ]
                               )       
-  f_appendOrWriteCsv(outputPath + 'optimalInventoryByWarehouse.csv', myFileToWrite, writeOverOrAppendFiles) 
+  f_appendOrWriteCsv(os.path.join(outputPath, 'optimalInventoryByWarehouse.csv'), myFileToWrite, writeOverOrAppendFiles) 
   
 
 
@@ -409,7 +409,7 @@ if plotEffFront_01 == 1:
                             [myTmpX
                                , myTmpY] \
                              )        
-  f_appendOrWriteCsv(outputPath + 'ef_frontierData.csv', myFileToWrite, writeOverOrAppendFiles) 
+  f_appendOrWriteCsv(os.path.join(outputPath, 'ef_frontierData.csv'), myFileToWrite, writeOverOrAppendFiles) 
 
 print 'Samoa min required is manual'
 print 'Palau and other countries with no disasters are manually removed in the StochLP function itself'
