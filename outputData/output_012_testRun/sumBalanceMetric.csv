@@ -1,5 +1,0 @@
-myDescription,careAboutMonthDemand_Beta_01,t_month_Disaster,numMonthsToAvg,setScenarioProbabilitiesTo1OverN_Flag,minDisasterYear,maxDisasterYear,minYearSubset,maxYearSubset,truckDistanceMethod,expandWhichWarehousesCarryItem_01,maxDrivingTimeCutAbove_Hrs,minTimeRequiredToRespond,numDisasters,n_itemIter,initialInventorySum,objCostType,actualObjVal,optimalObjVal,worstObjVal,Balance Metric
-testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Cost,70957.01124915507,30598.065841310054,-1,2.319003155850623
-testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,138,KitchenSetGen,37881,Time,72844.41046050725,49926.96622801939,-1,1.4590193629566164
-testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Cost,6103.30578660394,3412.41609799745,-1,1.7885584908612882
-testRun,1,-1,3,1,1900,2017,1900,2017,google,0,100,1000000.0,100,BlanketGen,125541,Time,18849.04747760324,10205.45247758829,-1,1.8469585272002433
