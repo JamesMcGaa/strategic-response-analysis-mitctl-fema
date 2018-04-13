@@ -153,6 +153,79 @@ for i_c in countriesOfDisastersDisaster:
 print str(datetime.now()) + indent + '  Getting Inventory Data'
 # Read in the depot "which to use" data
 [depotWhichToUseHeaderRow, depotWhichToUseRead] = f_myReadCsv(inputPath + depotWhichToUseReadInvFileName)
+
+##################################JAMESSTART##########################
+[contractorHead, contractorData] = f_myReadCsv(inputPath + "fakeContractorDataJames.csv")
+
+contractor_depotWhichToUseHeaderRow = []
+contractor_depotWhichToUseRead = []
+
+contractor_depotWhichToUseHeaderRow = deepcopy(depotWhichToUseHeaderRow)
+contractor_depotWhichToUseHeaderRow.append(contractorHead[0]) #Alter city names
+
+
+for original_row in depotWhichToUseRead:
+  no_contractor_row = deepcopy(original_row)
+  no_contractor_row.append("None")
+  contractor_depotWhichToUseRead.append(no_contractor_row)
+
+
+  for contractor_row in contractorData:
+    contractorCity = contractor_row[5]
+    originalCity = original_row[1].split(",")[0]
+
+
+    if contractorCity == originalCity:
+      new_row = deepcopy(original_row)
+      new_row.append(contractor_row[0]) 
+      contractor_depotWhichToUseRead.append(new_row)
+
+
+depotWhichToUseHeaderRow = contractor_depotWhichToUseHeaderRow #Remap original data to altered data
+depotWhichToUseRead = contractor_depotWhichToUseRead
+
+
+
+
+
+
+
+
+
+
+
+
+print(contractor_depotWhichToUseHeaderRow)
+for row in contractor_depotWhichToUseRead:
+  print(row)
+#sys.exit()
+
+#Notes
+
+##################################JAMESEND##########################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 depotWhichToUseNames = columnByName(depotWhichToUseRead, depotWhichToUseHeaderRow, 'gglAddressAscii')
 depotWhichToUseID = columnByName(depotWhichToUseRead, depotWhichToUseHeaderRow, 'include')
 depotWhichToUseSubset = [depotWhichToUseNames[i] for i in range(len(depotWhichToUseNames)) if depotWhichToUseID[i] == '1']
@@ -231,12 +304,225 @@ if createLargeDictionariesFromScratch_Cost:
   print str(datetime.now()) + indent + indent + '  CreatingCostMatrix'
   # Read in the files
   [gglDistancesHeaderRow, gglDistancesDataRead] = f_myReadCsv(inputPath + drivingDistanceMatrixFileName)
+
+
+##################################JAMESSTART##########################
+  [contractorHead, contractorData] = f_myReadCsv(inputPath + "fakeContractorDataJames.csv")
+  mapOriginalToCopies = {}
+  
+  contractor_gglDistancesHeaderRow = [] #Alter distanceDrivingmatrix data
+  contractor_gglDistancesDataRead = []
+
+  contractor_gglDistancesHeaderRow = deepcopy(gglDistancesHeaderRow)
+  #contractor_gglDistancesHeaderRow.append("Contractor")  # Add Contractor Row
+  contractor_gglDistancesHeaderRow[1] = contractor_gglDistancesHeaderRow[1] + "_" + contractorHead[0] #Alter city names
+
+  contractor_depotWhichToUseHeaderRow = []
+  contractor_depotWhichToUseRead = []
+  [depotWhichToUseHeaderRow, depotWhichToUseRead]
+
+
+  for original_row in gglDistancesDataRead:
+    no_contractor_row = deepcopy(original_row)
+    no_contractor_row.append("None")
+    contractor_gglDistancesDataRead.append(no_contractor_row)
+
+
+    for contractor_row in contractorData:
+      contractorCity = contractor_row[5]
+      
+
+      if contractorCity == original_row[1]:
+        new_row = deepcopy(original_row)
+        new_row[12] += contractor_row[2]
+        new_row[1] += "_" + contractor_row[0] #Alter city names
+        #new_row.append(contractor_row[0]) # Add Contractor Row
+        contractor_gglDistancesDataRead.append(new_row)
+
+
+  gglDistancesHeaderRow = contractor_gglDistancesHeaderRow #Remap original data to altered data
+  gglDistancesDataRead = contractor_gglDistancesDataRead
+
+
+
+
+
+
+
+
+
+
+
+
+  print(contractor_gglDistancesHeaderRow)
+  for row in contractor_gglDistancesDataRead:
+    print(row)
+  #sys.exit()
+
+#Notes
+
+#Altering distance driving matrix does not seem to effect output
+
+
+
+
+
+
+
+
+# Base node for noncontractor transportation? Or assign internal transportation as its own contractor?
+
+##################################JAMESEND##########################
+
+
+
   depotNamesDistances = list(set(columnByName(gglDistancesDataRead, gglDistancesHeaderRow, 'depotGglAddressAscii')))
   disasterLocationsDistances = list(set(columnByName(gglDistancesDataRead, gglDistancesHeaderRow, 'disasterGglAddressAscii')))
   [transParamsHeaderRow, transParamsDataRead] = f_myReadCsv(inputPath + transporationParametersFileName)
   transModesTransParams = list(set(columnByName(transParamsDataRead, transParamsHeaderRow, 'Mode')))
   [latLongDepotsHeaderRow, latLongDepotsRead] = f_myReadCsv(inputPath + depotLatLongFileName)
+  
+
+
+
+
+
+
+##################################JAMESSTART##########################
+  [contractorHead, contractorData] = f_myReadCsv(inputPath + "fakeContractorDataJames.csv")
+  mapOriginalToCopies = {}
+  
+  contractor_gglDistancesHeaderRow = [] #Alter distanceDrivingmatrix data
+  contractor_gglDistancesDataRead = []
+
+  contractor_gglDistancesHeaderRow = deepcopy(gglDistancesHeaderRow)
+  #contractor_gglDistancesHeaderRow.append("Contractor")  # Add Contractor Row
+  contractor_gglDistancesHeaderRow[1] = contractor_gglDistancesHeaderRow[1] + "_" + contractorHead[0] #Alter city names
+
+  contractor_depotWhichToUseHeaderRow = []
+  contractor_depotWhichToUseRead = []
+  [depotWhichToUseHeaderRow, depotWhichToUseRead]
+
+
+  for original_row in gglDistancesDataRead:
+    no_contractor_row = deepcopy(original_row)
+    no_contractor_row.append("None")
+    contractor_gglDistancesDataRead.append(no_contractor_row)
+
+
+    for contractor_row in contractorData:
+      contractorCity = contractor_row[5]
+      
+
+      if contractorCity == original_row[1]:
+        new_row = deepcopy(original_row)
+        new_row[12] += contractor_row[2]
+        new_row[1] += "_" + contractor_row[0] #Alter city names
+        #new_row.append(contractor_row[0]) # Add Contractor Row
+        contractor_gglDistancesDataRead.append(new_row)
+
+
+  gglDistancesHeaderRow = contractor_gglDistancesHeaderRow #Remap original data to altered data
+  gglDistancesDataRead = contractor_gglDistancesDataRead
+
+
+
+
+
+
+
+
+
+
+
+  contractor_latLongDepotsHeaderRow = []
+  contractor_latLongDepotsRead = []
+
+
+  contractor_latLongDepotsHeaderRow = deepcopy(latLongDepotsHeaderRow)
+  contractor_latLongDepotsHeaderRow[1] = latLongDepotsHeaderRow[1] + "_" + contractorHead[0] #Alter city names
+
+
+  for original_row in contractor_latLongDepotsRead:
+    no_contractor_row = deepcopy(original_row)
+    no_contractor_row[1] += "None"
+    contractor_latLongDepotsRead.append(no_contractor_row)
+
+
+    for contractor_row in contractorData:
+      contractorCity = contractor_row[5]
+      
+
+      if contractorCity == original_row[1]:
+        new_row = deepcopy(original_row)
+        new_row[1] += "_" + contractor_row[0] #Alter city names
+        contractor_latLongDepotsRead.append(new_row)
+
+
+
+
+
+
+  for row in contractor_latLongDepotsRead:
+    print(row)
+  #sys.exit()
+
+#Notes
+
+#Altering distance driving matrix does not seem to effect output
+
+
+
+
+
+
+
+
+# Base node for noncontractor transportation? Or assign internal transportation as its own contractor?
+
+##################################JAMESEND##########################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   [latLongDisastersHeaderRow, latLongDisastersRead] = f_myReadCsv(inputPath + disasterLatLongFileName)
+
+
+
+
+
+
+
+
 
   # This converts many of the columns to actual numbers
   indent = '        '
