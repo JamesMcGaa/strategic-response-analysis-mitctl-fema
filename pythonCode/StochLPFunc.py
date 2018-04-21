@@ -1260,7 +1260,7 @@ def f_solveStochLPDisasterGurobiSubLoc2(demand_tmpD
   return myOutDict
      
 
-def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
+def f_solveStochLPDisasterGurobiSubLoc3_old(demand_tmpD
                                   , demandAddress_tmpD
                                   , probs_tmpD
                                   , disasterIDsUnq_tmp
@@ -1295,7 +1295,8 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
   # for i in costD.keys():
     # if i[0] == 'Moffett Field Historical Society Museum, Severyns Avenue, Mountain View, CA 94043, USA': 
       # costD[('Moffett', i[1], i[2])] = costD.pop(i)
-  
+  print("Function Call!")
+
 
   supplyTotalConstraint = sum(inventory_tmpD.values())
   maxDemand = demand_tmpD[f_keyWithMaxVal(demand_tmpD)]
@@ -1635,8 +1636,384 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                 , 'dualTotInv': dualTotInv
               }
 
-  
   return myOutDict
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#JAMESSTART
+def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
+                                  , demandAddress_tmpD
+                                  , probs_tmpD
+                                  , disasterIDsUnq_tmp
+                                  , disasterIDsWithSubLocUnq_tmp
+                                  , inventory_tmpD
+                                  , transModesTransParams
+                                  , bigMCostElim
+                                  , bigMCostDummy
+                                  , costD
+                                  , dummyNodeName
+                                  , areInitialSuppliesVariables_Flag
+                                  , depotWhichFixedSubset
+                                  , minInvItemD
+                                  , depotInWhichCountry
+                                  ):
+
+  indent = '        '
+  print("demand_tmpD")
+  print(demand_tmpD)
+  print("demandAddress_tmpD")
+  print(demandAddress_tmpD)
+  print("probs_tmpD")
+  print(probs_tmpD)
+  [contractorHead, contractorData] = f_myReadCsv(inputPath + "fakeContractorDataJames.csv")
+
+
+
+
+
+
+
+
+
+
+
+  supplyTotalConstraint = sum(inventory_tmpD.values())
+  maxDemand = demand_tmpD[f_keyWithMaxVal(demand_tmpD)]
+  inventory_tmpDDum = deepcopy(dict(inventory_tmpD.items()))
+  inventory_tmpDDum.update({dummyNodeName: maxDemand + 1})
+  inventory_tmpDTmp = deepcopy(inventory_tmpD)
+  inventory_tmpDBad = deepcopy(inventory_tmpD)
+  
+  if sum(minInvItemD.values()) > supplyTotalConstraint:
+    minDemandScale = sum(minInvItemD.values()) / supplyTotalConstraint
+    minInvItemD_tmp = {}
+    for i in minInvItemD.keys():
+      minInvItemD_tmp.update({i: int(numpy.floor(minInvItemD[i] / minDemandScale * 0.99))})
+  else:  
+    minInvItemD_tmp = {}
+    for i in minInvItemD.keys():
+      minInvItemD_tmp.update({i: int(numpy.floor(minInvItemD[i] ))})
+
+ 
+  costDDum = deepcopy(dict(costD.items()))
+  for jn_disaster in demandAddress_tmpD.values():
+    for vn_mode in transModesTransParams:
+      costDDum.update({(dummyNodeName, jn_disaster, vn_mode): bigMCostDummy  })
+
+  
+
+  myArcs_SatDemand = tuplelist([(k, i, j, v)
+                      for i in inventory_tmpDDum.keys()
+                      for ((k, XJUNK), j) in demandAddress_tmpD.items()
+                      for v in transModesTransParams
+                      if costDDum[(i, j, v)] < bigMCostElim or i == dummyNodeName
+                      ])
+  
+  myArcs_SetDemandNoDummy = tuplelist([(k, i, j, v)
+                      for i in inventory_tmpDTmp.keys()
+                      for ((k, XJUNK), j) in demandAddress_tmpD.items()
+                      for v in transModesTransParams
+                      if costD[(i, j, v)] < bigMCostElim 
+                      ])
+
+  m = Model('StochLP')
+  x_satDemand = {}
+  print(myArcs_SatDemand)
+  sys.exit()
+  for (k, i, j, v) in myArcs_SatDemand:
+        x_satDemand[(k, i, j, v)] = m.addVar(lb = 0, obj = costDDum[(i, j, v)] * probs_tmpD[k], \
+                               name='xSatFlow_%s_%s_%s_%s' % (k, i, j, v))
+ 
+  x_howToAllocateInitialInventory = {}
+  for i in inventory_tmpDTmp.keys():
+    x_howToAllocateInitialInventory[i] = m.addVar(lb = 0, name = 'x_howToAllocateInitialInventory_%s' % (i)) #, vtype = 'I')
+
+  m.update()
+
+  # RIGHT NOW SET UP JUST TO DO ONE DEMAND NODE PER SCENARIO
+
+  pi_meetDemand = {}
+  pi_inventoryBalance = {}
+  for k in disasterIDsUnq_tmp:
+    disasterIDsWithSubLocUnq_tmp_subset = deepcopy([ii for ii in disasterIDsWithSubLocUnq_tmp if ii[0] == k])
+    for kSubLoc in disasterIDsWithSubLocUnq_tmp_subset:
+      #pi_meetDemand[k] = m.addConstr(quicksum(x_satDemand[(k, i, j, v)] for (k, i, j, v) in myArcs_SatDemand.select(k, '*', demandAddress_tmpD[k], '*')) == min(demand_tmpD[k],supplyTotalConstraint - 1e-6), name = 'EnsureDemandSat_%s' %(k))
+      pi_meetDemand[kSubLoc] = m.addConstr(quicksum(x_satDemand[(k, i, j, v)] for (k, i, j, v) in myArcs_SatDemand.select(k, '*', demandAddress_tmpD[kSubLoc], '*')) == demand_tmpD[kSubLoc], name = 'EnsureDemandSat_%s' %(k))
+      #print 'wrong'
+      #print inventory_tmpDTmp.keys()
+      
+    for i in inventory_tmpDTmp.keys():
+      # Added if statement on 9/19/2014 because with cutoffs, some depots had no demands.
+      if len([costDDum[(i, demandAddress_tmpD[kSubLocTmp], v1)] for v1 in transModesTransParams for kSubLocTmp in disasterIDsWithSubLocUnq_tmp_subset if costDDum[(i, demandAddress_tmpD[kSubLocTmp], v1)] < bigMCostElim]) > 0:
+        if areInitialSuppliesVariables_Flag == 1 or areInitialSuppliesVariables_Flag == 2:
+          pi_inventoryBalance[(k, i)] = m.addConstr(quicksum(x_satDemand[k, i, j, v] for (k, i, j, v) in myArcs_SatDemand.select(k, i, '*', '*')) <= x_howToAllocateInitialInventory[i], name = 'EnsureShipLessInv_%s' %(i))
+        elif areInitialSuppliesVariables_Flag == 0:
+          try:
+            pi_inventoryBalance[(k, i)] = m.addConstr(quicksum(x_satDemand[k, i, j, v] for (k, i, j, v) in myArcs_SatDemand.select(k, i, '*', '*')) <= inventory_tmpDTmp[i], name = 'EnsureShipLessInv_%s' %(i))
+          except:
+            m.addConstr(quicksum(x_satDemand[k, i, j, v] for (k, i, j, v) in myArcs_SatDemand.select(k, i, '*', '*')) <= inventory_tmpDTmp[i], name = 'EnsureShipLessInv_%s' %(i))
+            raise NameError('stop')
+          # Went to substring on 9/8/2014 due to gurobi error
+          #pi_inventoryBalance[(k, i)] = m.addConstr(quicksum(x_satDemand[k, i, j, v] for (k, i, j, v) in myArcs_SatDemand.select(k, i, '*', '*')) <= inventory_tmpDTmp[i]) #, name = 'EnsureShipLessInv_%s' %(i[:20]))
+        elif areInitialSuppliesVariables_Flag == 3:
+          pi_inventoryBalance[(k, i)] = m.addConstr(quicksum(x_satDemand[k, i, j, v] for (k, i, j, v) in myArcs_SatDemand.select(k, i, '*', '*')) <= inventory_tmpDBad[i], name = 'EnsureShipLessInv_%s' %(i))
+        else:
+          raise NameError('You do not kave a valid areInitialSuppliesVariables_Flag within the optimization function')
+
+
+  if areInitialSuppliesVariables_Flag == 1 or areInitialSuppliesVariables_Flag == 2:  
+    pi_minInvPerCountry = {}  
+    print '***%&%^$&$&$&$&^$ You are excluding Palau manually'
+    for i_ctry in list(set(depotInWhichCountry.values())):
+      
+      if i_ctry not in ['Palau', 'Malaysia', 'Papua New Guinea']:
+
+        #print 'country', i_ctry
+        #print 'depots', [i for i in depotInWhichCountry.keys() if depotInWhichCountry[i] == i_ctry]
+        pi_minInvPerCountry[i_ctry] = m.addConstr(
+                                        sum(
+                                            [x_howToAllocateInitialInventory[i] for i in depotInWhichCountry.keys() if depotInWhichCountry[i] == i_ctry]
+                                            ) >= minInvItemD_tmp[i_ctry]
+                                        , "EnsureMinInvEachCntry"
+                                        )
+  
+  if areInitialSuppliesVariables_Flag == 1 or areInitialSuppliesVariables_Flag == 2:        
+    pi_totalSystemInventory = m.addConstr(quicksum(x_howToAllocateInitialInventory[i] for i in  inventory_tmpDTmp.keys()) == supplyTotalConstraint
+          , "EnsureTotalInitialSupplyMatchesTotal")
+    
+    for i in depotWhichFixedSubset:
+        pi_fixed_inv = m.addConstr(x_howToAllocateInitialInventory[i] == inventory_tmpDTmp[i])
+     
+  # Added 9/19
+    
+      
+  m.update()  
+
+  
+  
+  if areInitialSuppliesVariables_Flag == 2:
+    m.ModelSense = -1
+  elif areInitialSuppliesVariables_Flag == 3:
+    print str(datetime.now()) + indent * 2 +  '  About to Solve worst depot'
+    tmpWorstObj = -1
+    tmpWorstDepot = None
+    for i in inventory_tmpDBad.keys():
+      #print str(datetime.now()) + indent +  ' -- Testing depot' + str(i)
+      for j in inventory_tmpDBad.keys():
+        inventory_tmpDBad[j] = 0
+      inventory_tmpDBad[i] = supplyTotalConstraint
+      #print 'inventory vect'
+      #print inventory_tmpDBad
+      for k in disasterIDsUnq_tmp:
+        disasterIDsWithSubLocUnq_tmp_subset = deepcopy([ii for ii in disasterIDsWithSubLocUnq_tmp if ii[0] == k])
+        for i2 in inventory_tmpDTmp.keys():
+          if len([costDDum[(i2, demandAddress_tmpD[kSubLocTmp], v1)] for v1 in transModesTransParams for kSubLocTmp in disasterIDsWithSubLocUnq_tmp_subset if costDDum[(i2, demandAddress_tmpD[kSubLocTmp], v1)] < bigMCostElim]) > 0:
+            m.remove(pi_inventoryBalance[(k, i2)])
+            pi_inventoryBalance[(k, i2)] = m.addConstr(quicksum(x_satDemand[k, i2, j, v] for (k, i2, j, v) in myArcs_SatDemand.select(k, i2, '*', '*')) <= inventory_tmpDBad[i2], name = 'EnsureShipLessInv_%s' %(i2))
+      m.update()
+      m.optimize()
+
+      if m.status != GRB.status.OPTIMAL:
+        print m.status
+        raise NameError('Non-optimal LP')
+      tmpTmpObj = deepcopy(quicksum([x_satDemand[(k1, i1, j1, v1)].x * costD[(i1, j1, v1)] * probs_tmpD[k1] for (k1, i1, j1, v1) in myArcs_SatDemand if i1 != dummyNodeName]))
+      #print 'tmpTmpObj = ' + str(tmpTmpObj)
+      #print 'tmpWOrst  = ' + str(tmpWorstObj)
+      #print 'old worst depot = ' + str(tmpWorstDepot)
+      #print 'i = ' + str(i)
+      if tmpTmpObj > tmpWorstObj:
+        #print 'found new bad depot'
+        tmpWorstObj = deepcopy(tmpTmpObj)
+        tmpWorstDepot = deepcopy(i)
+        #print 'newWorstObj = ' + str(tmpWorstObj)
+        #print 'newWOrstDepot = ' + str(tmpWorstDepot)
+    #print 'old Inv vect'
+    #print inventory_tmpDTmp    
+    for i2 in inventory_tmpDTmp.keys():
+      inventory_tmpDTmp[i2] = 0
+    inventory_tmpDTmp[tmpWorstDepot] = supplyTotalConstraint    
+    for k in disasterIDsUnq_tmp:
+      disasterIDsWithSubLocUnq_tmp_subset = deepcopy([ii for ii in disasterIDsWithSubLocUnq_tmp if ii[0] == k])
+      for i2 in inventory_tmpDTmp.keys():
+        if len([costDDum[(i2, demandAddress_tmpD[kSubLocTmp], v1)] for v1 in transModesTransParams for kSubLocTmp in disasterIDsWithSubLocUnq_tmp_subset if costDDum[(i2, demandAddress_tmpD[kSubLocTmp], v1)] < bigMCostElim]) > 0:
+          m.remove(pi_inventoryBalance[(k, i2)])
+          pi_inventoryBalance[(k, i2)] = m.addConstr(quicksum(x_satDemand[k, i2, j, v] for (k, i2, j, v) in myArcs_SatDemand.select(k, i2, '*', '*')) <= inventory_tmpDTmp[i2], name = 'EnsureShipLessInv_%s' %(i2))      
+    #print 'new Inv vect'
+    #print inventory_tmpDTmp   
+    print str(datetime.now()) + indent * 2 +  '  Just Solved worst depot'  
+    
+      
+  print str(datetime.now()) + indent * 2 +  '  About to Solve'    
+  m.update()
+  m.optimize()
+  print str(datetime.now()) + indent * 2 +  '  Just Solved'
+  #print 'sum from accra'
+  #print quicksum(x_satDemand[k, 'Accra, Ghana', j, v].x for (k, i2, j, v) in myArcs_SatDemand.select(k, 'Accra, Ghana', '*', '*'))
+  #print 'just solved'
+  if m.status != GRB.status.OPTIMAL:
+    print m.status
+    raise NameError('Non-optimal LP')
+
+    
+  #print str(datetime.now()) + indent +  '  Doing Test'    
+  #for   (k, i, j, v) in myArcs_SatDemand.select('ID:9841', '*', '*', '*'):
+  #  print 'k = ' + str(k) + ';i = ' + str(i) + ';j = ' + str(j) + ';v = ' + str(v) + ';flow = ' + str(x_satDemand[(k, i, j, v)].x)
+  #raise NameError('vvv')  
+    
+    
+    
+  #print str(datetime.now()) + indent +  '  part 1'  
+  myObj = quicksum([x_satDemand[(k, i, j, v)].x * costDDum[(i, j, v)] * probs_tmpD[k] for (k, i, j, v) in myArcs_SatDemand])
+  #print myObj
+  #print str(datetime.now()) + indent +  '  part 2'  
+  myObjNoDum = quicksum([x_satDemand[(k, i, j, v)].x * costD[(i, j, v)] * probs_tmpD[k] for (k, i, j, v) in myArcs_SatDemand if i != dummyNodeName])
+  #print myObjNoDum
+  #print str(datetime.now()) + indent +  '  part 3'  
+  myWeightedDemand = quicksum([x_satDemand[(k, i, j, v)].x * probs_tmpD[k] for (k, i, j, v) in myArcs_SatDemand])
+  # quicksum(demand_tmpD[k] *  probs_tmpD[k] for k in disasterIDs_tmp)
+  #print str(datetime.now()) + indent +  '  part 4'  
+  myWeightedDemandMetNoDum = quicksum([x_satDemand[(k, i, j, v)].x * probs_tmpD[k] for (k, i, j, v) in myArcs_SatDemand if i != dummyNodeName])
+  
+  #print str(datetime.now()) + indent +  '  part 5'  
+  # This is pre multiple locs per disastser #myFractionOfDisastersUsingDummy = sum([1 for k in disasterIDs_tmp if demand_tmpD[k] > supplyTotalConstraint]) * 1. / len(disasterIDs_tmp)
+  #myFractionOfDisastersUsingDummy = sum([1 for k1 in disasterIDsUnq_tmp if quicksum([x_satDemand[(k, i, j, v)].x for (k, i, j, v) in myArcs_SatDemand if i == dummyNodeName and k == k1]) > 0]) * 1. / len(disasterIDsUnq_tmp)
+  myFractionOfDisastersUsingDummy = sum([1 for k1 in disasterIDsUnq_tmp if quicksum([x_satDemand[(k, i, j, v)].x for (k, i, j, v) in myArcs_SatDemand.select(k1, dummyNodeName, '*', '*')]).getConstant() > 0]) * 1. / len(disasterIDsUnq_tmp)
+
+  print str(datetime.now()) + indent * 2 +  '  Doing duals'  
+  disasterIDsWithSubLocUnq_tmpD = {}
+  for k in disasterIDsUnq_tmp:
+    disasterIDsWithSubLocUnq_tmpD.update({k: [ii for ii in disasterIDsWithSubLocUnq_tmp if ii[0] == k]})  
+
+
+  dualsInvNoDum_PlusDummyCost = {}
+  #kCount = 0
+  for i in inventory_tmpDTmp.keys():
+    myTmpDual = myFractionOfDisastersUsingDummy * bigMCostDummy
+    for k in disasterIDsUnq_tmp:
+      if len([1 for v1 in transModesTransParams for kSubLocTmp in disasterIDsWithSubLocUnq_tmpD[k] if costDDum[(i, demandAddress_tmpD[kSubLocTmp], v1)] < bigMCostElim]) > 0:
+        myTmpDual += pi_inventoryBalance[(k, i)].Pi
+        #kCount += 1
+    dualsInvNoDum_PlusDummyCost.update(deepcopy({i: myTmpDual}))
+
+  dualsInvNoDum_UnAdj = deepcopy(dualsInvNoDum_PlusDummyCost)
+  for i in dualsInvNoDum_PlusDummyCost.keys():
+    dualsInvNoDum_UnAdj.update({i: dualsInvNoDum_PlusDummyCost[i] - myFractionOfDisastersUsingDummy * bigMCostDummy})
+
+  dualsInvNoDum_All = {}
+  for i in inventory_tmpDTmp.keys():
+    for k in disasterIDsUnq_tmp:
+      if len([1 for v1 in transModesTransParams for kSubLocTmp in disasterIDsWithSubLocUnq_tmpD[k] if costDDum[(i, demandAddress_tmpD[kSubLocTmp], v1)] < bigMCostElim]) > 0:
+        dualsInvNoDum_All.update(deepcopy({(k, i): pi_inventoryBalance[(k, i)].Pi}))
+
+  print str(datetime.now()) + indent * 2 +  '  Doing myFlow'    
+  myFlow = {}
+  for   (k, i, j, v) in myArcs_SatDemand:
+    if x_satDemand[(k, i, j, v)].x > 0:
+      myFlow.update({(k, i, j, v): x_satDemand[(k, i, j, v)].x})
+
+  print str(datetime.now()) + indent * 2 +  '  Doing myFlowNoDum'  
+  myFlowNoDum = {}
+  for (k, i, j, v) in myArcs_SatDemand:
+    if i != dummyNodeName and x_satDemand[(k, i, j, v)].x > 0:
+      myFlowNoDum.update({(k, i, j, v): x_satDemand[(k, i, j, v)].x})
+
+  print str(datetime.now()) + indent * 2 +  '  Doing myOptInvNoDum'  
+  myOptInvNoDum = {}
+  for i in inventory_tmpDTmp.keys():
+    if areInitialSuppliesVariables_Flag == 1 or areInitialSuppliesVariables_Flag == 2:
+      myOptInvNoDum.update({i: x_howToAllocateInitialInventory[i].x})
+    elif areInitialSuppliesVariables_Flag == 3:
+      myOptInvNoDum.update({i: inventory_tmpDTmp[i]})
+    else:
+      myOptInvNoDum.update({i: None})
+      
+  if areInitialSuppliesVariables_Flag == 1 or areInitialSuppliesVariables_Flag == 2:
+    dualTotInv = pi_totalSystemInventory.Pi
+  else:
+    dualTotInv = None  
+
+  myOutDict = {'myObj': myObj.getConstant()
+                , 'myObjNoDum': myObjNoDum.getConstant()
+                , 'myWeightedDemand': myWeightedDemand.getConstant()
+                , 'myWeightedDemandMetNoDum': myWeightedDemandMetNoDum.getConstant()
+                , 'myFractionOfDisastersUsingDummy': myFractionOfDisastersUsingDummy
+                , 'dualsInvNoDum_PlusDummyCost': dualsInvNoDum_PlusDummyCost
+                , 'dualsInvNoDum_UnAdj': dualsInvNoDum_UnAdj
+                , 'dualsInvNoDum_All': dualsInvNoDum_All
+                , 'myFlowNoDum': myFlowNoDum
+                , 'myFlow': myFlow
+                , 'myOptInvNoDum': myOptInvNoDum
+                , 'dualTotInv': dualTotInv
+              }
+
+  #JAMESSTART
+  print("Function Call End!")
+  m.write("jamesmodel.lp")
+  sys.exit()
+  return myOutDict
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
      
      
      
@@ -1663,19 +2040,6 @@ def f_solveStochLPDisasterGurobiSubLocScaleDemand(demand_tmpD
   #bigMCostDummy = 10000000
 
   indent = '        '
-  #------------------------------------------------------------------------------
-  # Adds a dummy node to the inventory dictionary, the cost dictionary, and the time dictionary
-  #inventory_tmpD['Accra, Ghana'] += 1
-  # myMaxKeyLength = 40
-  # for i in inventory_tmpD.keys():
-    # if i == 'Moffett Field Historical Society Museum, Severyns Avenue, Mountain View, CA 94043, USA': 
-      # #> myMaxKeyLength:
-      # inventory_tmpD['Moffett'] = inventory_tmpD.pop(i)
-  
-  # for i in costD.keys():
-    # if i[0] == 'Moffett Field Historical Society Museum, Severyns Avenue, Mountain View, CA 94043, USA': 
-      # costD[('Moffett', i[1], i[2])] = costD.pop(i)
-  
 
   supplyTotalConstraint = sum(inventory_tmpD.values())
   maxDemand = demand_tmpD[f_keyWithMaxVal(demand_tmpD)]
@@ -1800,18 +2164,12 @@ def f_solveStochLPDisasterGurobiSubLocScaleDemand(demand_tmpD
         print m.status
         raise NameError('Non-optimal LP')
       tmpTmpObj = deepcopy(quicksum([x_satDemand[(k1, i1, j1, v1)].x * costD[(i1, j1, v1)] * probs_tmpD[k1] for (k1, i1, j1, v1) in myArcs_SatDemand if i1 != dummyNodeName]))
-      #print 'tmpTmpObj = ' + str(tmpTmpObj)
-      #print 'tmpWOrst  = ' + str(tmpWorstObj)
-      #print 'old worst depot = ' + str(tmpWorstDepot)
-      #print 'i = ' + str(i)
+
       if tmpTmpObj > tmpWorstObj:
         #print 'found new bad depot'
         tmpWorstObj = deepcopy(tmpTmpObj)
         tmpWorstDepot = deepcopy(i)
-        #print 'newWorstObj = ' + str(tmpWorstObj)
-        #print 'newWOrstDepot = ' + str(tmpWorstDepot)
-    #print 'old Inv vect'
-    #print inventory_tmpDTmp    
+
     for i2 in inventory_tmpDTmp.keys():
       inventory_tmpDTmp[i2] = 0
     inventory_tmpDTmp[tmpWorstDepot] = supplyTotalConstraint    
@@ -1821,142 +2179,58 @@ def f_solveStochLPDisasterGurobiSubLocScaleDemand(demand_tmpD
         if len([costDDum[(i2, demandAddress_tmpD[kSubLocTmp], v1)] for v1 in transModesTransParams for kSubLocTmp in disasterIDsWithSubLocUnq_tmp_subset if costDDum[(i2, demandAddress_tmpD[kSubLocTmp], v1)] < bigMCostElim]) > 0:
           m.remove(pi_inventoryBalance[(k, i2)])
           pi_inventoryBalance[(k, i2)] = m.addConstr(quicksum(x_satDemand[k, i2, j, v] for (k, i2, j, v) in myArcs_SatDemand.select(k, i2, '*', '*')) <= inventory_tmpDTmp[i2], name = 'EnsureShipLessInv_%s' %(i2))      
-    #print 'new Inv vect'
-    #print inventory_tmpDTmp   
+
     print str(datetime.now()) + indent * 2 +  '  Just Solved worst depot'  
-    
       
   print str(datetime.now()) + indent * 2 +  '  About to Solve'    
   m.update()
   m.optimize()
   print str(datetime.now()) + indent * 2 +  '  Just Solved'
-  #print 'sum from accra'
-  #print quicksum(x_satDemand[k, 'Accra, Ghana', j, v].x for (k, i2, j, v) in myArcs_SatDemand.select(k, 'Accra, Ghana', '*', '*'))
-  #print 'just solved'
+
   if m.status != GRB.status.OPTIMAL:
     print m.status
     raise NameError('Non-optimal LP')
 
-    
-  #print str(datetime.now()) + indent +  '  Doing Test'    
-  #for   (k, i, j, v) in myArcs_SatDemand.select('ID:9841', '*', '*', '*'):
-  #  print 'k = ' + str(k) + ';i = ' + str(i) + ';j = ' + str(j) + ';v = ' + str(v) + ';flow = ' + str(x_satDemand[(k, i, j, v)].x)
-  #raise NameError('vvv')  
-    
-    
-    
-  #print str(datetime.now()) + indent +  '  part 1'  
   myObj = quicksum([x_satDemand[(k, i, j, v)].x * costDDum[(i, j, v)] * probs_tmpD[k] for (k, i, j, v) in myArcs_SatDemand])
-  #print myObj
-  #print str(datetime.now()) + indent +  '  part 2'  
+
   myObjNoDum = quicksum([x_satDemand[(k, i, j, v)].x * costD[(i, j, v)] * probs_tmpD[k] for (k, i, j, v) in myArcs_SatDemand if i != dummyNodeName])
-  #print myObjNoDum
-  #print str(datetime.now()) + indent +  '  part 3'  
-  myWeightedDemand = totWeightedDemand_1 #quicksum([x_satDemand[(k, i, j, v)].x * probs_tmpD[k] for (k, i, j, v) in myArcs_SatDemand])
-  # quicksum(demand_tmpD_scaled[k] *  probs_tmpD[k] for k in disasterIDs_tmp)
-  #print str(datetime.now()) + indent +  '  part 4'  
+
+  myWeightedDemand = totWeightedDemand_1 
+
   myWeightedDemandMetNoDum = quicksum([x_satDemand[(k, i, j, v)].x * probs_tmpD[k] for (k, i, j, v) in myArcs_SatDemand if i != dummyNodeName])
-  
-  #print str(datetime.now()) + indent +  '  part 5'  
-  # This is pre multiple locs per disastser #myFractionOfDisastersUsingDummy = sum([1 for k in disasterIDs_tmp if demand_tmpD_scaled[k] > supplyTotalConstraint]) * 1. / len(disasterIDs_tmp)
-  #myFractionOfDisastersUsingDummy = sum([1 for k1 in disasterIDsUnq_tmp if quicksum([x_satDemand[(k, i, j, v)].x for (k, i, j, v) in myArcs_SatDemand if i == dummyNodeName and k == k1]) > 0]) * 1. / len(disasterIDsUnq_tmp)
+
   myFractionOfDisastersUsingDummy = sum([probs_tmpD[k1] for k1 in disasterIDsUnq_tmp if scaleFactorD[k1] < 0.99999 * 1.])
-  #print 'myFractionOfDisastersUsingDummy = ', myFractionOfDisastersUsingDummy
-  #print str(datetime.now()) + indent +  '  part 5 faster'  
-  #myFractionOfDisastersUsingDummy = len([1 for k1 in disasterIDsUnq_tmp if quicksum([x_satDemand[(k1, dummyNodeName, j, v)].x for (k1, dummyNodeName, j, v) in myArcs_SatDemand]) > 0]) * 1. / len(disasterIDsUnq_tmp)
-  #print 'myFractionOfDisastersUsingDummy = ', myFractionOfDisastersUsingDummy
-  #print str(datetime.now()) + indent +  '  part 5 fastest 1'  
-  #myFractionOfDisastersUsingDummy = len([1 for k1 in disasterIDsUnq_tmp if x_satDemand[(k1, dummyNodeName, j, v)].x > 0 for (k1, dummyNodeName, j, v) in myArcs_SatDemand]) * 1. / len(disasterIDsUnq_tmp)
-  #print 'myFractionOfDisastersUsingDummy = ', myFractionOfDisastersUsingDummy
-  
-  #print str(datetime.now()) + indent +  '  part 5 ended'  
-  #print myFractionOfDisastersUsingDummy
-  #print myWeightedDemandMetNoDum
-  #print myWeightedDemand
-  
-  
-  
-  #sum([1 for k in disasterIDs_tmp if demand_tmpD_scaled[k] > sum(inventory_tmpDTmp.values())]) * 1. / len(disasterIDs_tmp)
+
   print str(datetime.now()) + indent * 2 +  '  Doing duals'  
   disasterIDsWithSubLocUnq_tmpD = {}
   for k in disasterIDsUnq_tmp:
     disasterIDsWithSubLocUnq_tmpD.update({k: [ii for ii in disasterIDsWithSubLocUnq_tmp if ii[0] == k]})  
   
-  #print str(datetime.now()) + indent +  '  Just made dict'  
-  
-  
-  # dualsInvNoDum_PlusDummyCost = {}
-  # kCount = 0
-  # for i in inventory_tmpDTmp.keys():
-    # myTmpDual = myFractionOfDisastersUsingDummy * bigMCostDummy
-    # for k in disasterIDsUnq_tmp:
-      # disasterIDsWithSubLocUnq_tmp_subset = deepcopy([ii for ii in disasterIDsWithSubLocUnq_tmp if ii[0] == k])
-      # if len([costDDum[(i, demandAddress_tmpD[kSubLocTmp], v1)] for v1 in transModesTransParams for kSubLocTmp in disasterIDsWithSubLocUnq_tmp_subset if costDDum[(i, demandAddress_tmpD[kSubLocTmp], v1)] < bigMCostElim]) > 0:
-        # myTmpDual += pi_inventoryBalance[(k, i)].Pi
-        # kCount += 1
-    # dualsInvNoDum_PlusDummyCost.update(deepcopy({i: myTmpDual}))
-
 
   dualsInvNoDum_PlusDummyCost = {}
-  #kCount = 0
+
   for i in inventory_tmpDTmp.keys():
     myTmpDual = myFractionOfDisastersUsingDummy * bigMCostDummy
     for k in disasterIDsUnq_tmp:
       if len([1 for v1 in transModesTransParams for kSubLocTmp in disasterIDsWithSubLocUnq_tmpD[k] if costDDum[(i, demandAddress_tmpD[kSubLocTmp], v1)] < bigMCostElim]) > 0:
         myTmpDual += pi_inventoryBalance[(k, i)].Pi
-        #kCount += 1
+
     dualsInvNoDum_PlusDummyCost.update(deepcopy({i: myTmpDual}))
-
-
-
-    
-  # print str(datetime.now()) + indent +  '  kCount = ' + str(kCount)  
-  
-  # print str(datetime.now()) + indent +  '  Doing duals part 2'  
-  # dualsInvNoDum_UnAdj = {}
-  # for i in inventory_tmpDTmp.keys():
-    # myTmpDual = 0
-    # for k in disasterIDsUnq_tmp:
-      # disasterIDsWithSubLocUnq_tmp_subset = deepcopy([ii for ii in disasterIDsWithSubLocUnq_tmp if ii[0] == k])
-      # if len([costDDum[(i, demandAddress_tmpD[kSubLocTmp], v1)] for v1 in transModesTransParams for kSubLocTmp in disasterIDsWithSubLocUnq_tmp_subset if costDDum[(i, demandAddress_tmpD[kSubLocTmp], v1)] < bigMCostElim]) > 0:
-        # myTmpDual += pi_inventoryBalance[(k, i)].Pi
-    # dualsInvNoDum_UnAdj.update(deepcopy({i: myTmpDual}))
-  # print ''
-  # print 'Old duals are = ' + str(dualsInvNoDum_UnAdj)  
-  # print ''
-  # print ''  
-  
   dualsInvNoDum_UnAdj = deepcopy(dualsInvNoDum_PlusDummyCost)
   for i in dualsInvNoDum_PlusDummyCost.keys():
     dualsInvNoDum_UnAdj.update({i: dualsInvNoDum_PlusDummyCost[i] - myFractionOfDisastersUsingDummy * bigMCostDummy})
-  #print 'Old duals are = ' + str(dualsInvNoDum_UnAdj)    
-  #print str(datetime.now()) + indent +  '  Doing duals part 3'    
-  # dualsInvNoDum_All = {}
-  # for i in inventory_tmpDTmp.keys():
-    # for k in disasterIDsUnq_tmp:
-      # disasterIDsWithSubLocUnq_tmp_subset = deepcopy([ii for ii in disasterIDsWithSubLocUnq_tmp if ii[0] == k])
-      # if len([costDDum[(i, demandAddress_tmpD[kSubLocTmp], v1)] for v1 in transModesTransParams for kSubLocTmp in disasterIDsWithSubLocUnq_tmp_subset if costDDum[(i, demandAddress_tmpD[kSubLocTmp], v1)] < bigMCostElim]) > 0:
-        # dualsInvNoDum_All.update(deepcopy({(k, i): pi_inventoryBalance[(k, i)].Pi}))
-        
+
   dualsInvNoDum_All = {}
   for i in inventory_tmpDTmp.keys():
     for k in disasterIDsUnq_tmp:
       if len([1 for v1 in transModesTransParams for kSubLocTmp in disasterIDsWithSubLocUnq_tmpD[k] if costDDum[(i, demandAddress_tmpD[kSubLocTmp], v1)] < bigMCostElim]) > 0:
         dualsInvNoDum_All.update(deepcopy({(k, i): pi_inventoryBalance[(k, i)].Pi}))
 
-
-  #print str(datetime.now()) + indent +  '  Doing duals done'      
-  #assert False
-
   print str(datetime.now()) + indent * 2 +  '  Doing myFlow'    
   myFlow = {}
   for   (k, i, j, v) in myArcs_SatDemand:
     if x_satDemand[(k, i, j, v)].x > 0:
       myFlow.update({(k, i, j, v): x_satDemand[(k, i, j, v)].x})
-
-  #for   (k, i, j, v) in myArcs_SatDemand:
-  #  print str(k) + ';' + str(i) + ';' + str(j) + ';' + str(v) + ';' + str(x_satDemand[(k, i, j, v)].x)
-  #raise NameError('UUU')
 
   print str(datetime.now()) + indent * 2 +  '  Doing myFlowNoDum'  
   myFlowNoDum = {}
@@ -1978,14 +2252,7 @@ def f_solveStochLPDisasterGurobiSubLocScaleDemand(demand_tmpD
     dualTotInv = pi_totalSystemInventory.Pi
   else:
     dualTotInv = None  
-  #assert False  
-  #print ''
-  #print 'myObjNoDum = ', myObjNoDum
-  #m.update()
-  #print 'myObjNoDum = ', myObjNoDum
-  #print 'myObjNoDum.const = ', myObjNoDum.getConstant()
-  #print ''
-  #assert False
+  
   myOutDict = {'myObj': myObj.getConstant()
                 , 'myObjNoDum': myObjNoDum.getConstant()
                 , 'myWeightedDemand': myWeightedDemand
@@ -2002,6 +2269,8 @@ def f_solveStochLPDisasterGurobiSubLocScaleDemand(demand_tmpD
 
   
   return myOutDict
+
+
       
 
 
@@ -2024,7 +2293,20 @@ def f_solveStochLPDisasterGurobiCostConstraintSubLoc(demand_tmpD
                                   , dummyNodeName
                                   , areInitialSuppliesVariables_Flag
                                   ):
-                                  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   #costD = timePerItem_tmpD
   #costConstraintsD = costPerItem_tmpD
   #bigMCostElim = 1000000
@@ -2198,7 +2480,6 @@ def f_solveStochLPDisasterGurobiCostConstraintSubLoc(demand_tmpD
                 , 'constrainedNumber': pi_constrainedCost.Pi
               }
 
-  
   return myOutDict  
   
   
@@ -2463,3 +2744,381 @@ def f_solveStochLPDisasterGurobiCostConstraint(demand_tmpD
  
 """        
         
+
+# def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
+#                                   , demandAddress_tmpD
+#                                   , probs_tmpD
+#                                   , disasterIDsUnq_tmp
+#                                   , disasterIDsWithSubLocUnq_tmp
+#                                   , inventory_tmpD
+#                                   , transModesTransParams
+#                                   , bigMCostElim
+#                                   , bigMCostDummy
+#                                   , costD
+#                                   , dummyNodeName
+#                                   , areInitialSuppliesVariables_Flag
+#                                   , depotWhichFixedSubset
+#                                   , minInvItemD
+#                                   , depotInWhichCountry
+#                                   ):
+
+#   #costD = myCostsToIterateD['Cost']
+#   #areInitialSuppliesVariables_Flag = myLPInitialSuppliesVariables_FlagD['Optimal']
+#   #bigMCostElim = 1000000
+#   #bigMCostDummy = 10000000
+
+#   indent = '        '
+#   #------------------------------------------------------------------------------
+#   # Adds a dummy node to the inventory dictionary, the cost dictionary, and the time dictionary
+#   #inventory_tmpD['Accra, Ghana'] += 1
+#   # myMaxKeyLength = 40
+#   # for i in inventory_tmpD.keys():
+#     # if i == 'Moffett Field Historical Society Museum, Severyns Avenue, Mountain View, CA 94043, USA': 
+#       # #> myMaxKeyLength:
+#       # inventory_tmpD['Moffett'] = inventory_tmpD.pop(i)
+  
+#   # for i in costD.keys():
+#     # if i[0] == 'Moffett Field Historical Society Museum, Severyns Avenue, Mountain View, CA 94043, USA': 
+#       # costD[('Moffett', i[1], i[2])] = costD.pop(i)
+#   print("Function Call!")
+
+
+#   supplyTotalConstraint = sum(inventory_tmpD.values())
+#   maxDemand = demand_tmpD[f_keyWithMaxVal(demand_tmpD)]
+#   inventory_tmpDDum = deepcopy(dict(inventory_tmpD.items()))
+#   inventory_tmpDDum.update({dummyNodeName: maxDemand + 1})
+#   inventory_tmpDTmp = deepcopy(inventory_tmpD)
+#   inventory_tmpDBad = deepcopy(inventory_tmpD)
+  
+#   if sum(minInvItemD.values()) > supplyTotalConstraint:
+#     minDemandScale = sum(minInvItemD.values()) / supplyTotalConstraint
+#     minInvItemD_tmp = {}
+#     for i in minInvItemD.keys():
+#       minInvItemD_tmp.update({i: int(numpy.floor(minInvItemD[i] / minDemandScale * 0.99))})
+#   else:  
+#     minInvItemD_tmp = {}
+#     for i in minInvItemD.keys():
+#       minInvItemD_tmp.update({i: int(numpy.floor(minInvItemD[i] ))})
+
+ 
+#   costDDum = deepcopy(dict(costD.items()))
+#   for jn_disaster in demandAddress_tmpD.values():
+#     for vn_mode in transModesTransParams:
+#       costDDum.update({(dummyNodeName, jn_disaster, vn_mode): bigMCostDummy  })
+
+  
+
+#   myArcs_SatDemand = tuplelist([(k, i, j, v)
+#                       for i in inventory_tmpDDum.keys()
+#                       for ((k, XJUNK), j) in demandAddress_tmpD.items()
+#                       for v in transModesTransParams
+#                       if costDDum[(i, j, v)] < bigMCostElim or i == dummyNodeName
+#                       ])
+  
+#   myArcs_SetDemandNoDummy = tuplelist([(k, i, j, v)
+#                       for i in inventory_tmpDTmp.keys()
+#                       for ((k, XJUNK), j) in demandAddress_tmpD.items()
+#                       for v in transModesTransParams
+#                       if costD[(i, j, v)] < bigMCostElim 
+#                       ])
+
+#   m = Model('StochLP')
+
+#   x_satDemand = {}
+#   for (k, i, j, v) in myArcs_SatDemand:
+#         x_satDemand[(k, i, j, v)] = m.addVar(lb = 0, obj = costDDum[(i, j, v)] * probs_tmpD[k], \
+#                                name='xSatFlow_%s_%s_%s_%s' % (k, i, j, v))
+ 
+#   x_howToAllocateInitialInventory = {}
+#   for i in inventory_tmpDTmp.keys():
+#     x_howToAllocateInitialInventory[i] = m.addVar(lb = 0, name = 'x_howToAllocateInitialInventory_%s' % (i)) #, vtype = 'I')
+
+#   m.update()
+
+#   # RIGHT NOW SET UP JUST TO DO ONE DEMAND NODE PER SCENARIO
+
+#   pi_meetDemand = {}
+#   pi_inventoryBalance = {}
+#   for k in disasterIDsUnq_tmp:
+#     disasterIDsWithSubLocUnq_tmp_subset = deepcopy([ii for ii in disasterIDsWithSubLocUnq_tmp if ii[0] == k])
+#     for kSubLoc in disasterIDsWithSubLocUnq_tmp_subset:
+#       #pi_meetDemand[k] = m.addConstr(quicksum(x_satDemand[(k, i, j, v)] for (k, i, j, v) in myArcs_SatDemand.select(k, '*', demandAddress_tmpD[k], '*')) == min(demand_tmpD[k],supplyTotalConstraint - 1e-6), name = 'EnsureDemandSat_%s' %(k))
+#       pi_meetDemand[kSubLoc] = m.addConstr(quicksum(x_satDemand[(k, i, j, v)] for (k, i, j, v) in myArcs_SatDemand.select(k, '*', demandAddress_tmpD[kSubLoc], '*')) == demand_tmpD[kSubLoc], name = 'EnsureDemandSat_%s' %(k))
+#       #print 'wrong'
+#       #print inventory_tmpDTmp.keys()
+      
+#     for i in inventory_tmpDTmp.keys():
+#       # Added if statement on 9/19/2014 because with cutoffs, some depots had no demands.
+#       if len([costDDum[(i, demandAddress_tmpD[kSubLocTmp], v1)] for v1 in transModesTransParams for kSubLocTmp in disasterIDsWithSubLocUnq_tmp_subset if costDDum[(i, demandAddress_tmpD[kSubLocTmp], v1)] < bigMCostElim]) > 0:
+#         if areInitialSuppliesVariables_Flag == 1 or areInitialSuppliesVariables_Flag == 2:
+#           pi_inventoryBalance[(k, i)] = m.addConstr(quicksum(x_satDemand[k, i, j, v] for (k, i, j, v) in myArcs_SatDemand.select(k, i, '*', '*')) <= x_howToAllocateInitialInventory[i], name = 'EnsureShipLessInv_%s' %(i))
+#         elif areInitialSuppliesVariables_Flag == 0:
+#           try:
+#             pi_inventoryBalance[(k, i)] = m.addConstr(quicksum(x_satDemand[k, i, j, v] for (k, i, j, v) in myArcs_SatDemand.select(k, i, '*', '*')) <= inventory_tmpDTmp[i], name = 'EnsureShipLessInv_%s' %(i))
+#           except:
+#             m.addConstr(quicksum(x_satDemand[k, i, j, v] for (k, i, j, v) in myArcs_SatDemand.select(k, i, '*', '*')) <= inventory_tmpDTmp[i], name = 'EnsureShipLessInv_%s' %(i))
+#             raise NameError('stop')
+#           # Went to substring on 9/8/2014 due to gurobi error
+#           #pi_inventoryBalance[(k, i)] = m.addConstr(quicksum(x_satDemand[k, i, j, v] for (k, i, j, v) in myArcs_SatDemand.select(k, i, '*', '*')) <= inventory_tmpDTmp[i]) #, name = 'EnsureShipLessInv_%s' %(i[:20]))
+#         elif areInitialSuppliesVariables_Flag == 3:
+#           pi_inventoryBalance[(k, i)] = m.addConstr(quicksum(x_satDemand[k, i, j, v] for (k, i, j, v) in myArcs_SatDemand.select(k, i, '*', '*')) <= inventory_tmpDBad[i], name = 'EnsureShipLessInv_%s' %(i))
+#         else:
+#           raise NameError('You do not kave a valid areInitialSuppliesVariables_Flag within the optimization function')
+
+
+#   if areInitialSuppliesVariables_Flag == 1 or areInitialSuppliesVariables_Flag == 2:  
+#     pi_minInvPerCountry = {}  
+#     print '***%&%^$&$&$&$&^$ You are excluding Palau manually'
+#     for i_ctry in list(set(depotInWhichCountry.values())):
+      
+#       if i_ctry not in ['Palau', 'Malaysia', 'Papua New Guinea']:
+
+#         #print 'country', i_ctry
+#         #print 'depots', [i for i in depotInWhichCountry.keys() if depotInWhichCountry[i] == i_ctry]
+#         pi_minInvPerCountry[i_ctry] = m.addConstr(
+#                                         sum(
+#                                             [x_howToAllocateInitialInventory[i] for i in depotInWhichCountry.keys() if depotInWhichCountry[i] == i_ctry]
+#                                             ) >= minInvItemD_tmp[i_ctry]
+#                                         , "EnsureMinInvEachCntry"
+#                                         )
+  
+#   if areInitialSuppliesVariables_Flag == 1 or areInitialSuppliesVariables_Flag == 2:        
+#     pi_totalSystemInventory = m.addConstr(quicksum(x_howToAllocateInitialInventory[i] for i in  inventory_tmpDTmp.keys()) == supplyTotalConstraint
+#           , "EnsureTotalInitialSupplyMatchesTotal")
+    
+#     for i in depotWhichFixedSubset:
+#         pi_fixed_inv = m.addConstr(x_howToAllocateInitialInventory[i] == inventory_tmpDTmp[i])
+     
+#   # Added 9/19
+    
+      
+#   m.update()  
+
+  
+  
+#   if areInitialSuppliesVariables_Flag == 2:
+#     m.ModelSense = -1
+#   elif areInitialSuppliesVariables_Flag == 3:
+#     print str(datetime.now()) + indent * 2 +  '  About to Solve worst depot'
+#     tmpWorstObj = -1
+#     tmpWorstDepot = None
+#     for i in inventory_tmpDBad.keys():
+#       #print str(datetime.now()) + indent +  ' -- Testing depot' + str(i)
+#       for j in inventory_tmpDBad.keys():
+#         inventory_tmpDBad[j] = 0
+#       inventory_tmpDBad[i] = supplyTotalConstraint
+#       #print 'inventory vect'
+#       #print inventory_tmpDBad
+#       for k in disasterIDsUnq_tmp:
+#         disasterIDsWithSubLocUnq_tmp_subset = deepcopy([ii for ii in disasterIDsWithSubLocUnq_tmp if ii[0] == k])
+#         for i2 in inventory_tmpDTmp.keys():
+#           if len([costDDum[(i2, demandAddress_tmpD[kSubLocTmp], v1)] for v1 in transModesTransParams for kSubLocTmp in disasterIDsWithSubLocUnq_tmp_subset if costDDum[(i2, demandAddress_tmpD[kSubLocTmp], v1)] < bigMCostElim]) > 0:
+#             m.remove(pi_inventoryBalance[(k, i2)])
+#             pi_inventoryBalance[(k, i2)] = m.addConstr(quicksum(x_satDemand[k, i2, j, v] for (k, i2, j, v) in myArcs_SatDemand.select(k, i2, '*', '*')) <= inventory_tmpDBad[i2], name = 'EnsureShipLessInv_%s' %(i2))
+#       m.update()
+#       m.optimize()
+#       if m.status != GRB.status.OPTIMAL:
+#         print m.status
+#         raise NameError('Non-optimal LP')
+#       tmpTmpObj = deepcopy(quicksum([x_satDemand[(k1, i1, j1, v1)].x * costD[(i1, j1, v1)] * probs_tmpD[k1] for (k1, i1, j1, v1) in myArcs_SatDemand if i1 != dummyNodeName]))
+#       #print 'tmpTmpObj = ' + str(tmpTmpObj)
+#       #print 'tmpWOrst  = ' + str(tmpWorstObj)
+#       #print 'old worst depot = ' + str(tmpWorstDepot)
+#       #print 'i = ' + str(i)
+#       if tmpTmpObj > tmpWorstObj:
+#         #print 'found new bad depot'
+#         tmpWorstObj = deepcopy(tmpTmpObj)
+#         tmpWorstDepot = deepcopy(i)
+#         #print 'newWorstObj = ' + str(tmpWorstObj)
+#         #print 'newWOrstDepot = ' + str(tmpWorstDepot)
+#     #print 'old Inv vect'
+#     #print inventory_tmpDTmp    
+#     for i2 in inventory_tmpDTmp.keys():
+#       inventory_tmpDTmp[i2] = 0
+#     inventory_tmpDTmp[tmpWorstDepot] = supplyTotalConstraint    
+#     for k in disasterIDsUnq_tmp:
+#       disasterIDsWithSubLocUnq_tmp_subset = deepcopy([ii for ii in disasterIDsWithSubLocUnq_tmp if ii[0] == k])
+#       for i2 in inventory_tmpDTmp.keys():
+#         if len([costDDum[(i2, demandAddress_tmpD[kSubLocTmp], v1)] for v1 in transModesTransParams for kSubLocTmp in disasterIDsWithSubLocUnq_tmp_subset if costDDum[(i2, demandAddress_tmpD[kSubLocTmp], v1)] < bigMCostElim]) > 0:
+#           m.remove(pi_inventoryBalance[(k, i2)])
+#           pi_inventoryBalance[(k, i2)] = m.addConstr(quicksum(x_satDemand[k, i2, j, v] for (k, i2, j, v) in myArcs_SatDemand.select(k, i2, '*', '*')) <= inventory_tmpDTmp[i2], name = 'EnsureShipLessInv_%s' %(i2))      
+#     #print 'new Inv vect'
+#     #print inventory_tmpDTmp   
+#     print str(datetime.now()) + indent * 2 +  '  Just Solved worst depot'  
+    
+      
+#   print str(datetime.now()) + indent * 2 +  '  About to Solve'    
+#   m.update()
+#   m.optimize()
+#   print str(datetime.now()) + indent * 2 +  '  Just Solved'
+#   #print 'sum from accra'
+#   #print quicksum(x_satDemand[k, 'Accra, Ghana', j, v].x for (k, i2, j, v) in myArcs_SatDemand.select(k, 'Accra, Ghana', '*', '*'))
+#   #print 'just solved'
+#   if m.status != GRB.status.OPTIMAL:
+#     print m.status
+#     raise NameError('Non-optimal LP')
+
+    
+#   #print str(datetime.now()) + indent +  '  Doing Test'    
+#   #for   (k, i, j, v) in myArcs_SatDemand.select('ID:9841', '*', '*', '*'):
+#   #  print 'k = ' + str(k) + ';i = ' + str(i) + ';j = ' + str(j) + ';v = ' + str(v) + ';flow = ' + str(x_satDemand[(k, i, j, v)].x)
+#   #raise NameError('vvv')  
+    
+    
+    
+#   #print str(datetime.now()) + indent +  '  part 1'  
+#   myObj = quicksum([x_satDemand[(k, i, j, v)].x * costDDum[(i, j, v)] * probs_tmpD[k] for (k, i, j, v) in myArcs_SatDemand])
+#   #print myObj
+#   #print str(datetime.now()) + indent +  '  part 2'  
+#   myObjNoDum = quicksum([x_satDemand[(k, i, j, v)].x * costD[(i, j, v)] * probs_tmpD[k] for (k, i, j, v) in myArcs_SatDemand if i != dummyNodeName])
+#   #print myObjNoDum
+#   #print str(datetime.now()) + indent +  '  part 3'  
+#   myWeightedDemand = quicksum([x_satDemand[(k, i, j, v)].x * probs_tmpD[k] for (k, i, j, v) in myArcs_SatDemand])
+#   # quicksum(demand_tmpD[k] *  probs_tmpD[k] for k in disasterIDs_tmp)
+#   #print str(datetime.now()) + indent +  '  part 4'  
+#   myWeightedDemandMetNoDum = quicksum([x_satDemand[(k, i, j, v)].x * probs_tmpD[k] for (k, i, j, v) in myArcs_SatDemand if i != dummyNodeName])
+  
+#   #print str(datetime.now()) + indent +  '  part 5'  
+#   # This is pre multiple locs per disastser #myFractionOfDisastersUsingDummy = sum([1 for k in disasterIDs_tmp if demand_tmpD[k] > supplyTotalConstraint]) * 1. / len(disasterIDs_tmp)
+#   #myFractionOfDisastersUsingDummy = sum([1 for k1 in disasterIDsUnq_tmp if quicksum([x_satDemand[(k, i, j, v)].x for (k, i, j, v) in myArcs_SatDemand if i == dummyNodeName and k == k1]) > 0]) * 1. / len(disasterIDsUnq_tmp)
+#   myFractionOfDisastersUsingDummy = sum([1 for k1 in disasterIDsUnq_tmp if quicksum([x_satDemand[(k, i, j, v)].x for (k, i, j, v) in myArcs_SatDemand.select(k1, dummyNodeName, '*', '*')]).getConstant() > 0]) * 1. / len(disasterIDsUnq_tmp)
+#   #print 'myFractionOfDisastersUsingDummy = ', myFractionOfDisastersUsingDummy
+#   #print str(datetime.now()) + indent +  '  part 5 faster'  
+#   #myFractionOfDisastersUsingDummy = len([1 for k1 in disasterIDsUnq_tmp if quicksum([x_satDemand[(k1, dummyNodeName, j, v)].x for (k1, dummyNodeName, j, v) in myArcs_SatDemand]) > 0]) * 1. / len(disasterIDsUnq_tmp)
+#   #print 'myFractionOfDisastersUsingDummy = ', myFractionOfDisastersUsingDummy
+#   #print str(datetime.now()) + indent +  '  part 5 fastest 1'  
+#   #myFractionOfDisastersUsingDummy = len([1 for k1 in disasterIDsUnq_tmp if x_satDemand[(k1, dummyNodeName, j, v)].x > 0 for (k1, dummyNodeName, j, v) in myArcs_SatDemand]) * 1. / len(disasterIDsUnq_tmp)
+#   #print 'myFractionOfDisastersUsingDummy = ', myFractionOfDisastersUsingDummy
+  
+#   #print str(datetime.now()) + indent +  '  part 5 ended'  
+#   #print myFractionOfDisastersUsingDummy
+#   #print myWeightedDemandMetNoDum
+#   #print myWeightedDemand
+  
+  
+  
+#   #sum([1 for k in disasterIDs_tmp if demand_tmpD[k] > sum(inventory_tmpDTmp.values())]) * 1. / len(disasterIDs_tmp)
+#   print str(datetime.now()) + indent * 2 +  '  Doing duals'  
+#   disasterIDsWithSubLocUnq_tmpD = {}
+#   for k in disasterIDsUnq_tmp:
+#     disasterIDsWithSubLocUnq_tmpD.update({k: [ii for ii in disasterIDsWithSubLocUnq_tmp if ii[0] == k]})  
+  
+#   #print str(datetime.now()) + indent +  '  Just made dict'  
+  
+  
+#   # dualsInvNoDum_PlusDummyCost = {}
+#   # kCount = 0
+#   # for i in inventory_tmpDTmp.keys():
+#     # myTmpDual = myFractionOfDisastersUsingDummy * bigMCostDummy
+#     # for k in disasterIDsUnq_tmp:
+#       # disasterIDsWithSubLocUnq_tmp_subset = deepcopy([ii for ii in disasterIDsWithSubLocUnq_tmp if ii[0] == k])
+#       # if len([costDDum[(i, demandAddress_tmpD[kSubLocTmp], v1)] for v1 in transModesTransParams for kSubLocTmp in disasterIDsWithSubLocUnq_tmp_subset if costDDum[(i, demandAddress_tmpD[kSubLocTmp], v1)] < bigMCostElim]) > 0:
+#         # myTmpDual += pi_inventoryBalance[(k, i)].Pi
+#         # kCount += 1
+#     # dualsInvNoDum_PlusDummyCost.update(deepcopy({i: myTmpDual}))
+
+
+#   dualsInvNoDum_PlusDummyCost = {}
+#   #kCount = 0
+#   for i in inventory_tmpDTmp.keys():
+#     myTmpDual = myFractionOfDisastersUsingDummy * bigMCostDummy
+#     for k in disasterIDsUnq_tmp:
+#       if len([1 for v1 in transModesTransParams for kSubLocTmp in disasterIDsWithSubLocUnq_tmpD[k] if costDDum[(i, demandAddress_tmpD[kSubLocTmp], v1)] < bigMCostElim]) > 0:
+#         myTmpDual += pi_inventoryBalance[(k, i)].Pi
+#         #kCount += 1
+#     dualsInvNoDum_PlusDummyCost.update(deepcopy({i: myTmpDual}))
+
+
+
+    
+#   # print str(datetime.now()) + indent +  '  kCount = ' + str(kCount)  
+  
+#   # print str(datetime.now()) + indent +  '  Doing duals part 2'  
+#   # dualsInvNoDum_UnAdj = {}
+#   # for i in inventory_tmpDTmp.keys():
+#     # myTmpDual = 0
+#     # for k in disasterIDsUnq_tmp:
+#       # disasterIDsWithSubLocUnq_tmp_subset = deepcopy([ii for ii in disasterIDsWithSubLocUnq_tmp if ii[0] == k])
+#       # if len([costDDum[(i, demandAddress_tmpD[kSubLocTmp], v1)] for v1 in transModesTransParams for kSubLocTmp in disasterIDsWithSubLocUnq_tmp_subset if costDDum[(i, demandAddress_tmpD[kSubLocTmp], v1)] < bigMCostElim]) > 0:
+#         # myTmpDual += pi_inventoryBalance[(k, i)].Pi
+#     # dualsInvNoDum_UnAdj.update(deepcopy({i: myTmpDual}))
+#   # print ''
+#   # print 'Old duals are = ' + str(dualsInvNoDum_UnAdj)  
+#   # print ''
+#   # print ''  
+  
+#   dualsInvNoDum_UnAdj = deepcopy(dualsInvNoDum_PlusDummyCost)
+#   for i in dualsInvNoDum_PlusDummyCost.keys():
+#     dualsInvNoDum_UnAdj.update({i: dualsInvNoDum_PlusDummyCost[i] - myFractionOfDisastersUsingDummy * bigMCostDummy})
+#   #print 'Old duals are = ' + str(dualsInvNoDum_UnAdj)    
+#   #print str(datetime.now()) + indent +  '  Doing duals part 3'    
+#   # dualsInvNoDum_All = {}
+#   # for i in inventory_tmpDTmp.keys():
+#     # for k in disasterIDsUnq_tmp:
+#       # disasterIDsWithSubLocUnq_tmp_subset = deepcopy([ii for ii in disasterIDsWithSubLocUnq_tmp if ii[0] == k])
+#       # if len([costDDum[(i, demandAddress_tmpD[kSubLocTmp], v1)] for v1 in transModesTransParams for kSubLocTmp in disasterIDsWithSubLocUnq_tmp_subset if costDDum[(i, demandAddress_tmpD[kSubLocTmp], v1)] < bigMCostElim]) > 0:
+#         # dualsInvNoDum_All.update(deepcopy({(k, i): pi_inventoryBalance[(k, i)].Pi}))
+        
+#   dualsInvNoDum_All = {}
+#   for i in inventory_tmpDTmp.keys():
+#     for k in disasterIDsUnq_tmp:
+#       if len([1 for v1 in transModesTransParams for kSubLocTmp in disasterIDsWithSubLocUnq_tmpD[k] if costDDum[(i, demandAddress_tmpD[kSubLocTmp], v1)] < bigMCostElim]) > 0:
+#         dualsInvNoDum_All.update(deepcopy({(k, i): pi_inventoryBalance[(k, i)].Pi}))
+
+
+#   #print str(datetime.now()) + indent +  '  Doing duals done'      
+#   #assert False
+
+#   print str(datetime.now()) + indent * 2 +  '  Doing myFlow'    
+#   myFlow = {}
+#   for   (k, i, j, v) in myArcs_SatDemand:
+#     if x_satDemand[(k, i, j, v)].x > 0:
+#       myFlow.update({(k, i, j, v): x_satDemand[(k, i, j, v)].x})
+
+#   #for   (k, i, j, v) in myArcs_SatDemand:
+#   #  print str(k) + ';' + str(i) + ';' + str(j) + ';' + str(v) + ';' + str(x_satDemand[(k, i, j, v)].x)
+#   #raise NameError('UUU')
+
+#   print str(datetime.now()) + indent * 2 +  '  Doing myFlowNoDum'  
+#   myFlowNoDum = {}
+#   for (k, i, j, v) in myArcs_SatDemand:
+#     if i != dummyNodeName and x_satDemand[(k, i, j, v)].x > 0:
+#       myFlowNoDum.update({(k, i, j, v): x_satDemand[(k, i, j, v)].x})
+
+#   print str(datetime.now()) + indent * 2 +  '  Doing myOptInvNoDum'  
+#   myOptInvNoDum = {}
+#   for i in inventory_tmpDTmp.keys():
+#     if areInitialSuppliesVariables_Flag == 1 or areInitialSuppliesVariables_Flag == 2:
+#       myOptInvNoDum.update({i: x_howToAllocateInitialInventory[i].x})
+#     elif areInitialSuppliesVariables_Flag == 3:
+#       myOptInvNoDum.update({i: inventory_tmpDTmp[i]})
+#     else:
+#       myOptInvNoDum.update({i: None})
+      
+#   if areInitialSuppliesVariables_Flag == 1 or areInitialSuppliesVariables_Flag == 2:
+#     dualTotInv = pi_totalSystemInventory.Pi
+#   else:
+#     dualTotInv = None  
+#   #assert False  
+#   #print ''
+#   #print 'myObjNoDum = ', myObjNoDum
+#   #m.update()
+#   #print 'myObjNoDum = ', myObjNoDum
+#   #print 'myObjNoDum.const = ', myObjNoDum.getConstant()
+#   #print ''
+#   #assert False
+#   myOutDict = {'myObj': myObj.getConstant()
+#                 , 'myObjNoDum': myObjNoDum.getConstant()
+#                 , 'myWeightedDemand': myWeightedDemand.getConstant()
+#                 , 'myWeightedDemandMetNoDum': myWeightedDemandMetNoDum.getConstant()
+#                 , 'myFractionOfDisastersUsingDummy': myFractionOfDisastersUsingDummy
+#                 , 'dualsInvNoDum_PlusDummyCost': dualsInvNoDum_PlusDummyCost
+#                 , 'dualsInvNoDum_UnAdj': dualsInvNoDum_UnAdj
+#                 , 'dualsInvNoDum_All': dualsInvNoDum_All
+#                 , 'myFlowNoDum': myFlowNoDum
+#                 , 'myFlow': myFlow
+#                 , 'myOptInvNoDum': myOptInvNoDum
+#                 , 'dualTotInv': dualTotInv
+#               }
+
+#   return myOutDict

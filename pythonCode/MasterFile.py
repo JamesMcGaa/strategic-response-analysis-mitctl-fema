@@ -28,7 +28,7 @@ runOnPCOrLionXF = 'MyPC' # 'LionXF' 'MyPC'
 myLionThreads = 1
 
 # This dictates the suffix for the param file, the outerloop file, and the output folder
-myPBSBatch_outputFolder = '_017_testRun'
+myPBSBatch_outputFolder = '_016_testRun'
 myPBSBatch_paramSuffix = 'Master'
 myPBSBatch_outerLoopSuffix = 'Master'
 myPBSBatch_runDescription = 'testRun'

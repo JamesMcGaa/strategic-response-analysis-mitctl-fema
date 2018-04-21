@@ -162,6 +162,21 @@ for i_costType in myCostsToIterateD.keys():
                                               , minInvItemD = minInvItem_tmp
                                               , depotInWhichCountry = depotInWhichCountry
                                               )
+
+#######################################################JAMESSTART
+    # for row in myLPDictTmp:
+    #   print(row)
+    #   print(myLPDictTmp[row])
+    # sys.exit()
+
+
+
+
+    
+
+
+
+
     myLPSuperDict.update({(i_costType, i_initSupVar): myLPDictTmp}) 
     
     print str(datetime.now()) + indent + ' Finished LP cost: ' + i_costType + '  InitSuplyFlag: ' +  i_initSupVar
