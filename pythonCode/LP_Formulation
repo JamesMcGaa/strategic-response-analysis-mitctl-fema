@@ -1,0 +1,36 @@
+Variables:
+	(Depot, Carrier)
+	(Depot, Carrier, DisasterLocation)
+
+	Input: Carriers I read myself, demand_tmpD (keys), inventory_tmpD (keys)
+
+Objective Function:
+	Probability * Time * (Depot, Carrier, DisasterLocation) product-sum
+	+ Rampup_(Carrier) * (Depot, Carrier, DisasterLocation) product-sum
+
+	Inputs: probs_tmpD, costD (be careful for infeasible values), rampup myself
+
+Constraints:
+	For fixed DisasterLocation 
+		sum of (Depot, Carrier, DisasterLocation) = disaster magnitude
+
+		Inputs: demand_tmpD
+
+	For fixed Depot 
+		sum of (Depot, Carrier) <= depot inventory
+
+		Input: inventory_tmpD
+
+	For fixed Depot & Carrier
+		(Depot, Carrier) = sum (Depot, Carrier, DisasterLocation)
+
+		Inputs: None
+
+	for fixed Carrier
+		(Depot, Carrier) < Carrier capacity
+
+		Inputs: I read carrier capacity myself
+
+	Nonnegativity 
+		
+		Inputs: None
