@@ -1688,9 +1688,20 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                                   , minInvItemD
                                   , depotInWhichCountry
                                   ):
+  #Does not consider fleet capacity
+  #Does not consider carrier capacity 
+  #Does not consider fixed cost
+  #Handle dummy nodes
+  #TEST  demand_tmpD = {('0000-0000', 'SubLoc_00000'): 130,('0000-0001', 'SubLoc_00000'): 80,('0000-0002', 'SubLoc_00000'): 50}
+  probs_tmpD = {'0000-0000':.5, '0000-0001':.99, '0000-0002':.1}
+  demandAddress_tmpD = {('0000-0000', 'SubLoc_00000'): "DisasterCity0", ('0000-0001', 'SubLoc_00000'): "DisasterCity1", ('0000-0002', 'SubLoc_00000'): "DisasterCity2"}
+  costD = {('San Francisco, California', 'DisasterCity0', 'Truck'):10, ('Dallas, Texas', 'DisasterCity0', 'Truck'):70, ("Philadelphia, Pennsylvania", 'DisasterCity0', 'Truck'):1,
+           ('San Francisco, California', 'DisasterCity1', 'Truck'):10, ('Dallas, Texas', 'DisasterCity1', 'Truck'):70, ("Philadelphia, Pennsylvania", 'DisasterCity1', 'Truck'):1,
+           ('San Francisco, California', 'DisasterCity2', 'Truck'):20, ('Dallas, Texas', 'DisasterCity2', 'Truck'):70, ("Philadelphia, Pennsylvania", 'DisasterCity2', 'Truck'):1,}
+  inventory_tmpD = {'Dallas, Texas': 700, 'San Francisco, California': 200, 'Philadelphia, Pennsylvania': 30}
+  #TEST
 
   m = Model('StochLP')
-  #DOES NOT CONSIDER RAMPUP TIME
 
 
 
@@ -1741,7 +1752,14 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
     ID = triVar.VarName.split(":")[2].split("SubLoc")[0]
     ID2 = "SubLoc" + triVar.VarName.split(":")[2].split("SubLoc")[1]
     depotLoc = triVar.VarName.split(":")[0]
-    weights.append(probs_tmpD[ID]*costD[(depotLoc, demandAddress_tmpD[(ID,ID2)],"Truck")]) #Check order preservation?
+    for key in carrierDict: #Identify proper element
+      elements = carrierDict[key]
+      for element in elements:
+        if element[0] == triVar.VarName.split(":")[1]:
+          extraCost = element[2]
+          break
+          break
+    weights.append(probs_tmpD[ID]*(extraCost + costD[(depotLoc, demandAddress_tmpD[(ID,ID2)],"Truck")])) #Check order preservation?
   expr = LinExpr()
   expr.addTerms(weights, [triVars[key] for key in triVars]) 
   m.setObjective(expr, GRB.MINIMIZE)
