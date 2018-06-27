@@ -19,6 +19,9 @@ Minimize
    + 0.5 Philadelphia,_Pennsylvania_carrier3_0000-0000SubLoc_00000
    + 0.99 Philadelphia,_Pennsylvania_carrier3_0000-0001SubLoc_00000
    + 0.1 Philadelphia,_Pennsylvania_carrier3_0000-0002SubLoc_00000
+   + 5000 dummy_dummycarrier_0000-0000SubLoc_00000
+   + 9900 dummy_dummycarrier_0000-0001SubLoc_00000
+   + 1000 dummy_dummycarrier_0000-0002SubLoc_00000
 Subject To
  DEMAND<0000-0000SubLoc_00000>:
    - Dallas,_Texas_carrier1_0000-0000SubLoc_00000
@@ -26,21 +29,28 @@ Subject To
    - San_Francisco,_California_carrier4_0000-0000SubLoc_00000
    - San_Francisco,_California_carrier5_0000-0000SubLoc_00000
    - San_Francisco,_California_carrier6_0000-0000SubLoc_00000
-   - Philadelphia,_Pennsylvania_carrier3_0000-0000SubLoc_00000 = -13000
+   - Philadelphia,_Pennsylvania_carrier3_0000-0000SubLoc_00000
+   - dummy_dummycarrier_0000-0000SubLoc_00000 = -13000
  DEMAND<0000-0001SubLoc_00000>:
    - Dallas,_Texas_carrier1_0000-0001SubLoc_00000
    - Dallas,_Texas_carrier2_0000-0001SubLoc_00000
    - San_Francisco,_California_carrier4_0000-0001SubLoc_00000
    - San_Francisco,_California_carrier5_0000-0001SubLoc_00000
    - San_Francisco,_California_carrier6_0000-0001SubLoc_00000
-   - Philadelphia,_Pennsylvania_carrier3_0000-0001SubLoc_00000 = -80
+   - Philadelphia,_Pennsylvania_carrier3_0000-0001SubLoc_00000
+   - dummy_dummycarrier_0000-0001SubLoc_00000 = -80
  DEMAND<0000-0002SubLoc_00000>:
    - Dallas,_Texas_carrier1_0000-0002SubLoc_00000
    - Dallas,_Texas_carrier2_0000-0002SubLoc_00000
    - San_Francisco,_California_carrier4_0000-0002SubLoc_00000
    - San_Francisco,_California_carrier5_0000-0002SubLoc_00000
    - San_Francisco,_California_carrier6_0000-0002SubLoc_00000
-   - Philadelphia,_Pennsylvania_carrier3_0000-0002SubLoc_00000 = -50
+   - Philadelphia,_Pennsylvania_carrier3_0000-0002SubLoc_00000
+   - dummy_dummycarrier_0000-0002SubLoc_00000 = -50
+ FLOW<dummy_dummycarrier>: dummy_dummycarrier
+   - dummy_dummycarrier_0000-0000SubLoc_00000
+   - dummy_dummycarrier_0000-0001SubLoc_00000
+   - dummy_dummycarrier_0000-0002SubLoc_00000 = 0
  FLOW<Dallas,_Texas_carrier1>: Dallas,_Texas_carrier1
    - Dallas,_Texas_carrier1_0000-0000SubLoc_00000
    - Dallas,_Texas_carrier1_0000-0001SubLoc_00000
@@ -69,6 +79,7 @@ Subject To
    - Philadelphia,_Pennsylvania_carrier3_0000-0000SubLoc_00000
    - Philadelphia,_Pennsylvania_carrier3_0000-0001SubLoc_00000
    - Philadelphia,_Pennsylvania_carrier3_0000-0002SubLoc_00000 = 0
+ DEPOT<dummy_dummycarrier>: - dummy_dummycarrier >= -1e+09
  DEPOT<Dallas,_Texas_carrier2>: - Dallas,_Texas_carrier1
    - Dallas,_Texas_carrier2 >= -700
  DEPOT<San_Francisco,_California_carrier6>:
