@@ -26,7 +26,7 @@ Subject To
    - San_Francisco,_California_carrier4_0000-0000SubLoc_00000
    - San_Francisco,_California_carrier5_0000-0000SubLoc_00000
    - San_Francisco,_California_carrier6_0000-0000SubLoc_00000
-   - Philadelphia,_Pennsylvania_carrier3_0000-0000SubLoc_00000 = -13000
+   - Philadelphia,_Pennsylvania_carrier3_0000-0000SubLoc_00000 = -100
  DEMAND<0000-0001SubLoc_00000>:
    - Dallas,_Texas_carrier1_0000-0001SubLoc_00000
    - Dallas,_Texas_carrier2_0000-0001SubLoc_00000
