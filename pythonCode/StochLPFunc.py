@@ -1732,7 +1732,7 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
   'San Francisco, California': 200, 
   'Philadelphia, Pennsylvania': 30}
 
-  #DUMMY TEST  
+  #Test 1 - dummy  
   # demand_tmpD = {
   # ('0000-0000', 'SubLoc_00000'): 1000,
   # ('0000-0001', 'SubLoc_00000'): 80,
@@ -1784,11 +1784,20 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
 
 
   #Initialize duo variables
+  carrierConstrs = []
   duoVars = {}
   for depot in carrierDict:
     depotCarriers = carrierDict[depot]
     for carrier in depotCarriers:
-      duoVars[depot+":"+carrier[0]] = m.addVar(lb=0.0, ub=carrier[1], vtype=GRB.CONTINUOUS, name=depot+":"+carrier[0]) 
+      key = depot+":"+carrier[0]
+      duoVars[key] = m.addVar(lb=0.0, vtype=GRB.CONTINUOUS, name=depot+":"+carrier[0]) 
+      LHS = LinExpr()
+      LHS.addConstant(carrier[1])
+      RHS = LinExpr()
+      RHS.addTerms(1,duoVars[key])
+      carrierConstrs.append(m.addConstr(LHS, GRB.GREATER_EQUAL, RHS, name="CARRIERCAPACITY<"+key+">"))
+      # duoVars[depot+":"+carrier[0]] = m.addVar(lb=0.0, ub=carrier[1], vtype=GRB.CONTINUOUS, name=depot+":"+carrier[0]) 
+      #EXPLICITLY MAKE CONSTRAINT
 
 
 
@@ -1830,6 +1839,7 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
 
 
   #Satisfy demand
+  demandConstrs = []
   for disasterTuple in demand_tmpD:
     disasterString = disasterTuple[0]+disasterTuple[1]
     demandQuantity = demand_tmpD[disasterTuple]
@@ -1841,11 +1851,12 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
       for carrier in depotCarriers:
         if depot+":"+carrier[0]+":"+disasterString in triVars:
           RHS.addTerms(1,triVars[depot+":"+carrier[0]+":"+disasterString])
-    m.addConstr(LHS, GRB.EQUAL, RHS, name="DEMAND<"+disasterString+">")
+    demandConstrs.append(m.addConstr(LHS, GRB.EQUAL, RHS, name="DEMAND<"+disasterString+">"))
 
 
 
   #Flow constraint
+  flowConstrs = []
   for depot in carrierDict:
     depotCarriers = carrierDict[depot]
     for carrier in depotCarriers:
@@ -1854,11 +1865,12 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
           RHS = LinExpr()
           for tri in duoToTris[depot+":"+carrier[0]]:
             RHS.addTerms(1, tri)
-          m.addConstr(LHS, GRB.EQUAL, RHS, name="FLOW<"+depot+":"+carrier[0]+">")
+          flowConstrs.append(m.addConstr(LHS, GRB.EQUAL, RHS, name="FLOW<"+depot+":"+carrier[0]+">"))
 
 
 
   #Depot capacity
+  depotConstrs = []
   for depot in carrierDict:
     depotCarriers = carrierDict[depot]
     inventoryCapacity = inventory_tmpD[depot]
@@ -1867,9 +1879,7 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
     RHS = LinExpr()
     for carrier in depotCarriers:
       RHS.addTerms(1,duoVars[depot+":"+carrier[0]])
-
-
-    m.addConstr(LHS, GRB.GREATER_EQUAL, RHS, name="DEPOT<"+depot+":"+carrier[0]+">")
+    depotConstrs.append(m.addConstr(LHS, GRB.GREATER_EQUAL, RHS, name="DEPOT<"+depot+":"+carrier[0]+">"))
 
 
 
@@ -1891,6 +1901,14 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
         for tri in [triVars[key] for key in triVars]:
             if tri.x > 0.0001:
               print(tri.VarName, tri.x)
+
+        print('\nDuals:')
+        for demandConstr in demandConstrs:
+          print(demandConstr.ConstrName, demandConstr.Pi)
+        for depotConstr in depotConstrs:
+          print(depotConstr.ConstrName, depotConstr.Pi)
+        for carrierConstr in carrierConstrs:
+          print(carrierConstr.ConstrName, carrierConstr.Pi)
     else:
         print('No solution')
   
