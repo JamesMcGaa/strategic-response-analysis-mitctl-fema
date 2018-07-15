@@ -94,5 +94,5 @@ Bounds
  San_Francisco,_California_carrier4 <= 400000
  San_Francisco,_California_carrier5 <= 500000
  San_Francisco,_California_carrier6 <= 6e+07
- Philadelphia,_Pennsylvania_carrier3 <= 16
+ Philadelphia,_Pennsylvania_carrier3 <= 15
 End

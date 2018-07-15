@@ -88,7 +88,7 @@ Bounds
  San_Francisco,_California_carrier4 <= 400000
  San_Francisco,_California_carrier5 <= 500000
  San_Francisco,_California_carrier6 <= 6e+07
- Philadelphia,_Pennsylvania_carrier3 <= 16
+ Philadelphia,_Pennsylvania_carrier3 <= 15
  Dallas,_Texas_NONFIXEDCAPACITY <= 930
  San_Francisco,_California_NONFIXEDCAPACITY <= 930
  Philadelphia,_Pennsylvania_NONFIXEDCAPACITY <= 930

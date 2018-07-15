@@ -31,7 +31,7 @@ Subject To
  CARRIERCAPACITY<San_Francisco,_California_carrier6>:
    - San_Francisco,_California_carrier6 >= -6e+07
  CARRIERCAPACITY<Philadelphia,_Pennsylvania_carrier3>:
-   - Philadelphia,_Pennsylvania_carrier3 >= -16
+   - Philadelphia,_Pennsylvania_carrier3 >= -15
  DEMAND<0000-0000SubLoc_00000>:
    - Dallas,_Texas_carrier1_0000-0000SubLoc_00000
    - Dallas,_Texas_carrier2_0000-0000SubLoc_00000
@@ -81,13 +81,12 @@ Subject To
    - Philadelphia,_Pennsylvania_carrier3_0000-0000SubLoc_00000
    - Philadelphia,_Pennsylvania_carrier3_0000-0001SubLoc_00000
    - Philadelphia,_Pennsylvania_carrier3_0000-0002SubLoc_00000 = 0
- DEPOT<Dallas,_Texas_carrier2>: - Dallas,_Texas_carrier1
-   - Dallas,_Texas_carrier2 >= -700
- DEPOT<San_Francisco,_California_carrier6>:
-   - San_Francisco,_California_carrier4
+ DEPOT<Dallas,_Texas>: - Dallas,_Texas_carrier1 - Dallas,_Texas_carrier2
+   >= -700
+ DEPOT<San_Francisco,_California>: - San_Francisco,_California_carrier4
    - San_Francisco,_California_carrier5
    - San_Francisco,_California_carrier6 >= -200
- DEPOT<Philadelphia,_Pennsylvania_carrier3>:
-   - Philadelphia,_Pennsylvania_carrier3 >= -30
+ DEPOT<Philadelphia,_Pennsylvania>: - Philadelphia,_Pennsylvania_carrier3
+   >= -30
 Bounds
 End
