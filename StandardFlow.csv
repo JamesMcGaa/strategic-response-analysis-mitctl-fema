@@ -1,19 +1,1 @@
 ,Depot City,Carrier,Disaster Location,Allocation
-0,"Dallas, Texas",carrier1,0000-0000SubLoc_00000,0.0
-1,"San Francisco, California",carrier4,0000-0000SubLoc_00000,100.0
-2,"Dallas, Texas",carrier2,0000-0001SubLoc_00000,0.0
-3,"Dallas, Texas",carrier1,0000-0001SubLoc_00000,0.0
-4,"San Francisco, California",carrier5,0000-0001SubLoc_00000,65.0
-5,"Philadelphia, Pennsylvania",carrier3,0000-0001SubLoc_00000,15.0
-6,"Philadelphia, Pennsylvania",carrier3,0000-0000SubLoc_00000,0.0
-7,"San Francisco, California",carrier5,0000-0002SubLoc_00000,0.0
-8,"San Francisco, California",carrier4,0000-0002SubLoc_00000,0.0
-9,"Philadelphia, Pennsylvania",carrier3,0000-0002SubLoc_00000,0.0
-10,"San Francisco, California",carrier6,0000-0001SubLoc_00000,0.0
-11,"Dallas, Texas",carrier2,0000-0000SubLoc_00000,0.0
-12,"San Francisco, California",carrier4,0000-0001SubLoc_00000,0.0
-13,"Dallas, Texas",carrier2,0000-0002SubLoc_00000,15.0
-14,"San Francisco, California",carrier6,0000-0000SubLoc_00000,0.0
-15,"San Francisco, California",carrier6,0000-0002SubLoc_00000,35.0
-16,"San Francisco, California",carrier5,0000-0000SubLoc_00000,0.0
-17,"Dallas, Texas",carrier1,0000-0002SubLoc_00000,0.0

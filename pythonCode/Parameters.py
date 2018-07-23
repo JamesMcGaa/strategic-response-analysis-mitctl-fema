@@ -13,6 +13,8 @@ drivingDistanceMatrixFileName = 'drivingDistanceMatrix.csv'
 gglCountryContinentLkupFileName = 'gglCountryContinentLkup.csv'
 transporationParametersFileName = 'transporationParameters.csv'
 itemAttributesFileName = 'itemAttributes.csv'
+carrierListFileName = 'fakeCarrierDataJames.csv'
+itemCarrierConversionFileName = 'fakeCarrierItemConversionRates.csv'
 
 
 # Are all scenario probabilities set to 1/n?  (Possible values are 0 or 1)

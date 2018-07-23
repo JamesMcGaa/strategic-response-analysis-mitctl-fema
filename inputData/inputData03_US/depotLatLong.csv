@@ -1,5 +1,6 @@
 Agency,NameCity,gglCountryAscii,gglAddressAscii,gglLat,gglLong,Order
 FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.79698789999999,1
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1
 FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2
 FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4

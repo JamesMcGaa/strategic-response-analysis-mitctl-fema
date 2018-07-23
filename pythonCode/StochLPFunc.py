@@ -30,7 +30,7 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
 
   #Test 1
   demand_tmpD = {
-  ('0000-0000', 'SubLoc_00000'): 100,
+  ('0000-0000', 'SubLoc_00000'): 1000,
   ('0000-0001', 'SubLoc_00000'): 80,
   ('0000-0002', 'SubLoc_00000'): 50,}
   probs_tmpD = {'0000-0000':.5, '0000-0001':.99, '0000-0002':.1,}
@@ -93,15 +93,33 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
 
 
   #Create a mapping from depot city names to (contractor, capacity, cost) triplets
+  #------james code start-----
   #Populate carrierList
+#  carrierDict = {}
+#  carrierParse = f_myReadCsv(inputPath + carrierListFileName)
+#  carrierDataParse = carrierParse[1]
+#  for row in carrierDataParse:
+#    if row[5] not in carrierDict:
+#      carrierDict[row[5]] = []
+#    carrierDict[row[5]].append((row[0], int(row[1]), int(row[2])))
+  #------james code end-----
+  #------axr code start-----
+  #Populate carrierList
+  #Convert number trucks to capacity *I pick from file conversion rate and multiple number of trucks by conversion rate which yields carrier capacity
+  itemCarrierConversionParse0 = f_myReadCsv(inputPath + itemCarrierConversionFileName)
+  itemCarrierConversionParse = itemCarrierConversionParse0[1]
+  for row in itemCarrierConversionParse:
+      if row[0] == n_itemIter:
+          itemCarrierConversionRatio = int(row[1])
+  
   carrierDict = {}
-  carrierParse = f_myReadCsv(inputPath + "fakeCarrierDataJames.csv")
+  carrierParse = f_myReadCsv(inputPath + carrierListFileName)
   carrierDataParse = carrierParse[1]
   for row in carrierDataParse:
     if row[5] not in carrierDict:
       carrierDict[row[5]] = []
-    carrierDict[row[5]].append((row[0], int(row[1]), int(row[2])))
-  
+    carrierDict[row[5]].append((row[0], int(row[1])*itemCarrierConversionRatio, int(row[2])))
+  #------axr code ends-----
 
 
   #Initialize duo variables
@@ -278,6 +296,8 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
 
 
   print("-------------------------------METRICS------------------------------\n")
+  print 'Printing metrics for ' + n_itemIter
+  print dummy_solution
   if m.status == GRB.Status.OPTIMAL:
     obj = m.objVal
   else:
@@ -343,10 +363,10 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
   flow = pd.DataFrame(grid, columns = ['Depot City', 'Carrier', 'Disaster Location', 'Allocation'])
   flow.to_csv("StandardFlow.csv")
 
->>> writer = pd.ExcelWriter('output.xlsx')
->>> df1.to_excel(writer,'Sheet1')
->>> df2.to_excel(writer,'Sheet2')
->>> writer.save()
+#>>> writer = pd.ExcelWriter('output.xlsx')
+#>>> df1.to_excel(writer,'Sheet1')
+#>>> df2.to_excel(writer,'Sheet2')
+#>>> writer.save()
 
 
 
@@ -402,15 +422,33 @@ def nonfixedinventoryhelper(demand_tmpD
 
 
   #Create a mapping from depot city names to (contractor, capacity, cost) triplets
+  #------james code start-----
   #Populate carrierList
+#  carrierDict = {}
+#  carrierParse = f_myReadCsv(inputPath + carrierListFileName)
+#  carrierDataParse = carrierParse[1]
+#  for row in carrierDataParse:
+#    if row[5] not in carrierDict:
+#      carrierDict[row[5]] = []
+#    carrierDict[row[5]].append((row[0], int(row[1]), int(row[2])))
+  #------james code end-----
+  #------axr code start-----
+  #Populate carrierList
+  #Convert number trucks to capacity
+  itemCarrierConversionParse0 = f_myReadCsv(inputPath + itemCarrierConversionFileName)
+  itemCarrierConversionParse = itemCarrierConversionParse0[1]
+  for row in itemCarrierConversionParse:
+      if row[0] == n_itemIter:
+          itemCarrierConversionRatio = int(row[1])
+  
   carrierDict = {}
-  carrierParse = f_myReadCsv(inputPath + "fakeCarrierDataJames.csv")
+  carrierParse = f_myReadCsv(inputPath + carrierListFileName)
   carrierDataParse = carrierParse[1]
   for row in carrierDataParse:
     if row[5] not in carrierDict:
       carrierDict[row[5]] = []
-    carrierDict[row[5]].append((row[0], int(row[1]), int(row[2])))
-  
+    carrierDict[row[5]].append((row[0], int(row[1])*itemCarrierConversionRatio, int(row[2])))
+  #------axr code ends-----
 
 
   #Initialize duo variables
@@ -572,14 +610,33 @@ def dummyhelper(demand_tmpD
   carrierList = []
 
   #Create a mapping from depot city names to (contractor, capacity, cost) triplets
+  #------james code start-----
   #Populate carrierList
+#  carrierDict = {}
+#  carrierParse = f_myReadCsv(inputPath + carrierListFileName)
+#  carrierDataParse = carrierParse[1]
+#  for row in carrierDataParse:
+#    if row[5] not in carrierDict:
+#      carrierDict[row[5]] = []
+#    carrierDict[row[5]].append((row[0], int(row[1]), int(row[2])))
+  #------james code end-----
+  #------axr code start-----
+  #Populate carrierList
+  #Convert number trucks to capacity
+  itemCarrierConversionParse0 = f_myReadCsv(inputPath + itemCarrierConversionFileName)
+  itemCarrierConversionParse = itemCarrierConversionParse0[1]
+  for row in itemCarrierConversionParse:
+      if row[0] == n_itemIter:
+          itemCarrierConversionRatio = int(row[1])
+  
   carrierDict = {}
-  carrierParse = f_myReadCsv(inputPath + "fakeCarrierDataJames.csv")
+  carrierParse = f_myReadCsv(inputPath + carrierListFileName)
   carrierDataParse = carrierParse[1]
   for row in carrierDataParse:
     if row[5] not in carrierDict:
       carrierDict[row[5]] = []
-    carrierDict[row[5]].append((row[0], int(row[1]), int(row[2])))
+    carrierDict[row[5]].append((row[0], int(row[1])*itemCarrierConversionRatio, int(row[2])))
+  #------axr code ends-----
   
   #Initialize duo variables
   duoVars = {}
@@ -706,7 +763,6 @@ def dummyhelper(demand_tmpD
   for dummyVar in dummyTris:
     disasterID = dummyVar.VarName.split(':')[2][:9]
     weighted_dummy_demand += probs_tmpD[disasterID] * dummyVar.x
-
 
 
   flow = printSolution()
