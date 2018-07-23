@@ -30,10 +30,10 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
 
   #Test 1
   demand_tmpD = {
-  ('0000-0000', 'SubLoc_00000'): 1000,
+  ('0000-0000', 'SubLoc_00000'): 801,
   ('0000-0001', 'SubLoc_00000'): 80,
   ('0000-0002', 'SubLoc_00000'): 50,}
-  probs_tmpD = {'0000-0000':.5, '0000-0001':.99, '0000-0002':.1,}
+  probs_tmpD = {'0000-0000':.5, '0000-0001':.3, '0000-0002':.2,}
   demandAddress_tmpD = {
   ('0000-0000', 'SubLoc_00000'): "DisasterCity0", 
   ('0000-0001', 'SubLoc_00000'): "DisasterCity1", 
@@ -119,6 +119,7 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
     if row[5] not in carrierDict:
       carrierDict[row[5]] = []
     carrierDict[row[5]].append((row[0], int(row[1])*itemCarrierConversionRatio, int(row[2])))
+
   #------axr code ends-----
 
 
@@ -297,7 +298,6 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
 
   print("-------------------------------METRICS------------------------------\n")
   print 'Printing metrics for ' + n_itemIter
-  print dummy_solution
   if m.status == GRB.Status.OPTIMAL:
     obj = m.objVal
   else:
@@ -316,12 +316,25 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
   weighted_dummy_demand = dummy_solution['weightedDummyDemand']
   weight_av_demand_met = weight_av_demand - weighted_dummy_demand
   print("\n\nWeighted Av. Demand Met: " + str(weight_av_demand_met))
- 
+  
   print("\n\nFraction Demand Served: " + str(weight_av_demand_met / weight_av_demand))
+  
+  #AXR 18/23/7: identifying number of disasters completely served
+  dummyFlowFiltered = {k:v for k,v in dummy_solution['dummyFlow'].iteritems() if 'dummy' in k}
+#  for dummyVar in dummyFlowFiltered:
+#    print dummyVar.split(':')[2][:9]
+  WeightedFractionCompletelyServed = 1 - float(len(dummyFlowFiltered))/float(len(probs_tmpD))
 
+  print("\n\nWeighted Fraction Completely Served: " + str(WeightedFractionCompletelyServed))
 
-  print("\n\nWeighted Fraction Completely Served:-----------")
-
+  #AXR 18/23/7: correcting objective value for dummy load on objective function
+  dummyFlow2 = dummy_solution['dummyFlow']
+  dummysum = 0
+  for dummykey, dummyvalue in dummyFlow2.iteritems():    
+      if 'dummy' in dummykey:
+          dummysum = dummysum + dummyvalue * bigMCostDummy * probs_tmpD[key[0]]
+  print("\n\n Response Time (Cost) adjusted for dummy: " + str(dummy_solution['dummyObj'] - dummysum))
+  
 
 
   if obj == 'No Solution':
@@ -674,7 +687,8 @@ def dummyhelper(demand_tmpD
     duoToTris["dummy:dummycarrier"].append(var)
     dummyTris.append(var)
   for disasterID in demandAddress_tmpD:
-    costD[('dummy', demandAddress_tmpD[disasterID], 'Truck')] = 10000 #Dummy cost
+  #AXR 18/23/7 substituted specific number for bigCostDummy variable
+    costD[('dummy', demandAddress_tmpD[disasterID], 'Truck')] = bigMCostDummy #Dummy cost
   inventory_tmpD['dummy'] = 1000
   m.update()
 
