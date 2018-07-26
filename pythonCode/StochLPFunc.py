@@ -29,36 +29,11 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
   #Monetary cost support 
 
   #Test 1
-  # demand_tmpD = {
-  # ('0000-0000', 'SubLoc_00000'): 100,
-  # ('0000-0001', 'SubLoc_00000'): 80,
-  # ('0000-0002', 'SubLoc_00000'): 50,}
-  # probs_tmpD = {'0000-0000':.5, '0000-0001':.99, '0000-0002':.1,}
-  # demandAddress_tmpD = {
-  # ('0000-0000', 'SubLoc_00000'): "DisasterCity0", 
-  # ('0000-0001', 'SubLoc_00000'): "DisasterCity1", 
-  # ('0000-0002', 'SubLoc_00000'): "DisasterCity2",}
-  # costD = {
-  # ('San Francisco, California', 'DisasterCity0', 'Truck'):10, 
-  # ('Dallas, Texas', 'DisasterCity0', 'Truck'):70, 
-  # ("Philadelphia, Pennsylvania", 'DisasterCity0', 'Truck'):1,
-  # ('San Francisco, California', 'DisasterCity1', 'Truck'):10, 
-  # ('Dallas, Texas', 'DisasterCity1', 'Truck'):70, 
-  # ("Philadelphia, Pennsylvania", 'DisasterCity1', 'Truck'):1,
-  # ('San Francisco, California', 'DisasterCity2', 'Truck'):20, 
-  # ('Dallas, Texas', 'DisasterCity2', 'Truck'):70, 
-  # ("Philadelphia, Pennsylvania", 'DisasterCity2', 'Truck'):1,}
-  # inventory_tmpD = {
-  # 'Dallas, Texas': 700, 
-  # 'San Francisco, California': 200, 
-  # 'Philadelphia, Pennsylvania': 30}
- 
- #Test 2
   demand_tmpD = {
-  ('0000-0000', 'SubLoc_00000'): 940,
+  ('0000-0000', 'SubLoc_00000'): 100,
   ('0000-0001', 'SubLoc_00000'): 80,
   ('0000-0002', 'SubLoc_00000'): 50,}
-  probs_tmpD = {'0000-0000':.33333, '0000-0001':.333333, '0000-0002':.33333,}
+  probs_tmpD = {'0000-0000':.5, '0000-0001':.99, '0000-0002':.1,}
   demandAddress_tmpD = {
   ('0000-0000', 'SubLoc_00000'): "DisasterCity0", 
   ('0000-0001', 'SubLoc_00000'): "DisasterCity1", 
@@ -77,8 +52,33 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
   'Dallas, Texas': 700, 
   'San Francisco, California': 200, 
   'Philadelphia, Pennsylvania': 30}
+ 
+ #Test 2
+  # demand_tmpD = {
+  # ('0000-0000', 'SubLoc_00000'): 940,
+  # ('0000-0001', 'SubLoc_00000'): 80,
+  # ('0000-0002', 'SubLoc_00000'): 50,}
+  # probs_tmpD = {'0000-0000':.33333, '0000-0001':.333333, '0000-0002':.33333,}
+  # demandAddress_tmpD = {
+  # ('0000-0000', 'SubLoc_00000'): "DisasterCity0", 
+  # ('0000-0001', 'SubLoc_00000'): "DisasterCity1", 
+  # ('0000-0002', 'SubLoc_00000'): "DisasterCity2",}
+  # costD = {
+  # ('San Francisco, California', 'DisasterCity0', 'Truck'):10, 
+  # ('Dallas, Texas', 'DisasterCity0', 'Truck'):70, 
+  # ("Philadelphia, Pennsylvania", 'DisasterCity0', 'Truck'):1,
+  # ('San Francisco, California', 'DisasterCity1', 'Truck'):10, 
+  # ('Dallas, Texas', 'DisasterCity1', 'Truck'):70, 
+  # ("Philadelphia, Pennsylvania", 'DisasterCity1', 'Truck'):1,
+  # ('San Francisco, California', 'DisasterCity2', 'Truck'):20, 
+  # ('Dallas, Texas', 'DisasterCity2', 'Truck'):70, 
+  # ("Philadelphia, Pennsylvania", 'DisasterCity2', 'Truck'):1,}
+  # inventory_tmpD = {
+  # 'Dallas, Texas': 700, 
+  # 'San Francisco, California': 200, 
+  # 'Philadelphia, Pennsylvania': 30}
 
-  #Test 1 - dummy  
+  #Test 3 - dummy  
   # demand_tmpD = {
   # ('0000-0000', 'SubLoc_00000'): 1000,
   # ('0000-0001', 'SubLoc_00000'): 80,
@@ -196,10 +196,18 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
           break
     if (ID,ID2) in demandAddress_tmpD:
       if (depotLoc, demandAddress_tmpD[(ID,ID2)],"Truck") in costD:
-        weights.append(probs_tmpD[ID]*(extraCost + costD[(depotLoc, demandAddress_tmpD[(ID,ID2)],"Truck")])) #Check order preservation?
+        total_cost = (extraCost + costD[(depotLoc, demandAddress_tmpD[(ID,ID2)],"Truck")])
+        weights.append(probs_tmpD[ID]*total_cost) #Check order preservation?
   expr = LinExpr()
   expr.addTerms(weights, [triVars[key] for key in triVars]) 
   m.setObjective(expr, GRB.MINIMIZE)
+
+  triToDistanceMap = {}
+  triVarList = [triVars[key] for key in triVars]
+  for i in range(len(weights)):
+    triToDistanceMap[triVarList[i]] = weights[i]
+  print(triToDistanceMap)
+
 
 
 
@@ -346,6 +354,27 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                                   , minInvItemD
                                   , depotInWhichCountry
                                   )
+  print("----------------------------------DEMAND SERVED ------------------------------------")
+  timeDemandTuples = []
+  for var in triToDistanceMap:
+    if var.X > .01:
+      timeDemandTuples.append((var.X, triToDistanceMap[var]))
+  timeDemandTuples.sort(key = lambda x: x[1]) #Sort based on time
+  times = [e[1] for e in timeDemandTuples]
+  satisfied = [e[0] for e in timeDemandTuples]
+  cumulative_satisfied = []
+  for i in range(len(satisfied)):
+    cumulative_satisfied.append(sum(satisfied[:i+1]))
+  
+  import matplotlib.pyplot as plt
+
+  plt.plot(times, cumulative_satisfied)
+  plt.xlabel('Time')
+  plt.ylabel('Fraction of Total Demand Served')
+  plt.title('Demand Served Metric')
+  plt.show()
+
+
 
   print("-------------------------------METRICS------------------------------\n")
   print 'Printing metrics for ' + n_itemIter
@@ -366,7 +395,7 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
 
   weighted_dummy_demand = dummy_solution['weightedDummyDemand']
   weight_av_demand_met = weight_av_demand - weighted_dummy_demand
-<<<<<<< HEAD
+
   print("\n\nWeighted Av. Demand Met: " + str(weight_av_demand_met))
  
   print("\n\nFraction Demand Served: " + str(weight_av_demand_met / weight_av_demand))
@@ -376,38 +405,38 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
 
 
 
-  if obj == 'No Solution':
-    average_time = "No Solution"
-  else:
-    average_time = str(obj / weight_av_demand_met)
-  print("\n\nAverage Time (Cost): " + average_time)
+  # if obj == 'No Solution':
+  #   average_time = "No Solution"
+  # else:
+  #   average_time = str(obj / weight_av_demand_met)
+  # print("\n\nAverage Time (Cost): " + average_time)
 
 
 
-  if obj == 'No Solution':
-    print("\n\nDepot Duals: No Solution")
-  else:
-    print("\n\nDepot Duals: ")
-    average_time = str(obj / weight_av_demand_met)
-    values = []
-    for depotConstr in depotConstrs:
-      print(depotConstr.ConstrName + ": " + str(depotConstr.Pi))
-      values.append([depotConstr.ConstrName[:-1][6:], depotConstr.Pi])
-    pd.DataFrame(values, columns=["Depot City", "Sensitivity"]).to_csv("Depot_Duals.csv", index=False)
+  # if obj == 'No Solution':
+  #   print("\n\nDepot Duals: No Solution")
+  # else:
+  #   print("\n\nDepot Duals: ")
+  #   average_time = str(obj / weight_av_demand_met)
+  #   values = []
+  #   for depotConstr in depotConstrs:
+  #     print(depotConstr.ConstrName + ": " + str(depotConstr.Pi))
+  #     values.append([depotConstr.ConstrName[:-1][6:], depotConstr.Pi])
+  #   pd.DataFrame(values, columns=["Depot City", "Sensitivity"]).to_csv("Depot_Duals.csv", index=False)
 
 
-  print("\n\nAdjusted Depot Duals: ")
-  print("\n\nT hours -----------------")
+  # print("\n\nAdjusted Depot Duals: ")
+  # print("\n\nT hours -----------------")
 
-  if obj == 'No Solution':
-    print("\n\nCarrier Duals: No Solution")
-  else:
-    print("\n\nCarrier Duals: ")
-    values = []
-    for carrierConstr in carrierConstrs:
-      print(carrierConstr.ConstrName + ": " + str(carrierConstr.Pi))
-      values.append([carrierConstr.ConstrName[:-1][16:].split(":")[0], carrierConstr.ConstrName[:-1][16:].split(":")[1] , carrierConstr.Pi])
-    pd.DataFrame(values, columns=["Depot City", "Carrier", "Sensitivity"]).to_csv("Carrier_Duals.csv", index=False)
+  # if obj == 'No Solution':
+  #   print("\n\nCarrier Duals: No Solution")
+  # else:
+  #   print("\n\nCarrier Duals: ")
+  #   values = []
+  #   for carrierConstr in carrierConstrs:
+  #     print(carrierConstr.ConstrName + ": " + str(carrierConstr.Pi))
+  #     values.append([carrierConstr.ConstrName[:-1][16:].split(":")[0], carrierConstr.ConstrName[:-1][16:].split(":")[1] , carrierConstr.Pi])
+  #   pd.DataFrame(values, columns=["Depot City", "Carrier", "Sensitivity"]).to_csv("Carrier_Duals.csv", index=False)
 
 
 
@@ -1040,18 +1069,7 @@ def nonfixeddummyinventoryhelper(demand_tmpD
 
 
 
-<<<<<<< HEAD
-  import pandas as pd
-  grid = []
-  if m.status == GRB.Status.OPTIMAL:
-      for tri in [triVars[key] for key in triVars]:
-            grid.append(tri.VarName.split(":") + [tri.x])
-      flow = pd.DataFrame(grid, columns = ['Depot City', 'Carrier', 'Disaster Location', 'Allocation'])
-      flow.to_csv("DummyFlow.csv", index=False)
 
-
-  return {'dummyObj': m.objVal, 'dummyFlow': flow, 'weightedDummyDemand': weighted_dummy_demand}
-=======
   #Initialize triplet variables
   triVars = {}
   duoToTris = {}
@@ -1261,7 +1279,7 @@ def nonfixeddummyinventoryhelper(demand_tmpD
   adjobjVal = m.objVal - dummysum
 
   return {'dummyObj': obj, 'adjdummyObj': adjobjVal, 'dummyFlow': flow, 'weightedDummyDemand': weighted_dummy_demand, 'optimalInv': OptInv}
->>>>>>> ad972016baa402123a545ff76ed16f8ea90b49e4
+
 #BOT----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #BOT----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #BOT----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
