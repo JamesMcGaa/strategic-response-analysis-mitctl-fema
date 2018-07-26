@@ -5,7 +5,6 @@
 #TOP----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #TOP----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #TOP----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#JAMESSTART
 def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                                   , demandAddress_tmpD
                                   , probs_tmpD
@@ -22,6 +21,7 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                                   , minInvItemD
                                   , depotInWhichCountry
                                   ):
+  import pandas as pd
   print("-------------------------------MAIN------------------------------")
   #Does not output
   #Does not consider fleet capacity
@@ -29,29 +29,29 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
   #Monetary cost support 
 
   #Test 1
-  demand_tmpD = {
-  ('0000-0000', 'SubLoc_00000'): 100,
-  ('0000-0001', 'SubLoc_00000'): 80,
-  ('0000-0002', 'SubLoc_00000'): 50,}
-  probs_tmpD = {'0000-0000':.5, '0000-0001':.99, '0000-0002':.1,}
-  demandAddress_tmpD = {
-  ('0000-0000', 'SubLoc_00000'): "DisasterCity0", 
-  ('0000-0001', 'SubLoc_00000'): "DisasterCity1", 
-  ('0000-0002', 'SubLoc_00000'): "DisasterCity2",}
-  costD = {
-  ('San Francisco, California', 'DisasterCity0', 'Truck'):10, 
-  ('Dallas, Texas', 'DisasterCity0', 'Truck'):70, 
-  ("Philadelphia, Pennsylvania", 'DisasterCity0', 'Truck'):1,
-  ('San Francisco, California', 'DisasterCity1', 'Truck'):10, 
-  ('Dallas, Texas', 'DisasterCity1', 'Truck'):70, 
-  ("Philadelphia, Pennsylvania", 'DisasterCity1', 'Truck'):1,
-  ('San Francisco, California', 'DisasterCity2', 'Truck'):20, 
-  ('Dallas, Texas', 'DisasterCity2', 'Truck'):70, 
-  ("Philadelphia, Pennsylvania", 'DisasterCity2', 'Truck'):1,}
-  inventory_tmpD = {
-  'Dallas, Texas': 700, 
-  'San Francisco, California': 200, 
-  'Philadelphia, Pennsylvania': 30}
+  # demand_tmpD = {
+  # ('0000-0000', 'SubLoc_00000'): 100,
+  # ('0000-0001', 'SubLoc_00000'): 80,
+  # ('0000-0002', 'SubLoc_00000'): 50,}
+  # probs_tmpD = {'0000-0000':.5, '0000-0001':.99, '0000-0002':.1,}
+  # demandAddress_tmpD = {
+  # ('0000-0000', 'SubLoc_00000'): "DisasterCity0", 
+  # ('0000-0001', 'SubLoc_00000'): "DisasterCity1", 
+  # ('0000-0002', 'SubLoc_00000'): "DisasterCity2",}
+  # costD = {
+  # ('San Francisco, California', 'DisasterCity0', 'Truck'):10, 
+  # ('Dallas, Texas', 'DisasterCity0', 'Truck'):70, 
+  # ("Philadelphia, Pennsylvania", 'DisasterCity0', 'Truck'):1,
+  # ('San Francisco, California', 'DisasterCity1', 'Truck'):10, 
+  # ('Dallas, Texas', 'DisasterCity1', 'Truck'):70, 
+  # ("Philadelphia, Pennsylvania", 'DisasterCity1', 'Truck'):1,
+  # ('San Francisco, California', 'DisasterCity2', 'Truck'):20, 
+  # ('Dallas, Texas', 'DisasterCity2', 'Truck'):70, 
+  # ("Philadelphia, Pennsylvania", 'DisasterCity2', 'Truck'):1,}
+  # inventory_tmpD = {
+  # 'Dallas, Texas': 700, 
+  # 'San Francisco, California': 200, 
+  # 'Philadelphia, Pennsylvania': 30}
 
   #Test 1 - dummy  
   # demand_tmpD = {
@@ -222,14 +222,6 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
         for tri in [triVars[key] for key in triVars]:
             if tri.x > 0.0001:
               print(tri.VarName, tri.x)
-
-        # print('\nDuals:')
-        # for demandConstr in demandConstrs:
-        #   print(demandConstr.ConstrName, demandConstr.Pi)
-        # for depotConstr in depotConstrs:
-        #   print(depotConstr.ConstrName, depotConstr.Pi)
-        # for carrierConstr in carrierConstrs:
-        #   print(carrierConstr.ConstrName, carrierConstr.Pi)
     else:
         print('No solution')
   
@@ -317,8 +309,11 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
   else:
     print("\n\nDepot Duals: ")
     average_time = str(obj / weight_av_demand_met)
+    values = []
     for depotConstr in depotConstrs:
       print(depotConstr.ConstrName + ": " + str(depotConstr.Pi))
+      values.append([depotConstr.ConstrName[:-1][6:], depotConstr.Pi])
+    pd.DataFrame(values, columns=["Depot City", "Sensitivity"]).to_csv("Depot_Duals.csv", index=False)
 
 
   print("\n\nAdjusted Depot Duals: ")
@@ -328,25 +323,26 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
     print("\n\nCarrier Duals: No Solution")
   else:
     print("\n\nCarrier Duals: ")
+    values = []
     for carrierConstr in carrierConstrs:
       print(carrierConstr.ConstrName + ": " + str(carrierConstr.Pi))
+      values.append([carrierConstr.ConstrName[:-1][16:].split(":")[0], carrierConstr.ConstrName[:-1][16:].split(":")[1] , carrierConstr.Pi])
+    pd.DataFrame(values, columns=["Depot City", "Carrier", "Sensitivity"]).to_csv("Carrier_Duals.csv", index=False)
 
 
 
   print("\n\nAdjusted Carrier Duals: ")
 
   import pandas as pd
+
   grid = []
   if m.status == GRB.Status.OPTIMAL:
       for tri in [triVars[key] for key in triVars]:
             grid.append(tri.VarName.split(":") + [tri.x])
-  flow = pd.DataFrame(grid, columns = ['Depot City', 'Carrier', 'Disaster Location', 'Allocation'])
-  flow.to_csv("StandardFlow.csv")
+      flow = pd.DataFrame(grid, columns = ['Depot City', 'Carrier', 'Disaster Location', 'Allocation'])
+      flow.to_csv("StandardFlow.csv", index=False)
 
->>> writer = pd.ExcelWriter('output.xlsx')
->>> df1.to_excel(writer,'Sheet1')
->>> df2.to_excel(writer,'Sheet2')
->>> writer.save()
+
 
 
 
@@ -393,6 +389,7 @@ def nonfixedinventoryhelper(demand_tmpD
                                   , minInvItemD
                                   , depotInWhichCountry
                                   ):
+  import pandas as pd
   print("-------------------------------NONFIXED------------------------------")
   m = Model('StochLPNonfixed')
   #Generate list of string names
@@ -523,6 +520,7 @@ def nonfixedinventoryhelper(demand_tmpD
   def printSolution():
     solution_flow = {}
     if m.status == GRB.Status.OPTIMAL:
+        values = []
         print('\nTotal Response Time: %g' % m.objVal)
         print('\nDispatch:')
         assignments = m.getAttr('x', [triVars[key] for key in triVars])
@@ -530,6 +528,13 @@ def nonfixedinventoryhelper(demand_tmpD
             if tri.x > 0.0001:
               print(tri.VarName, tri.x)
               solution_flow[tri.VarName] = tri.x
+        for depotVar in depotVars:
+          depotVar = depotVars[depotVar]
+          print(depotVar.VarName, depotVar.x)
+          values.append([depotVar.VarName.split(":")[0], depotVar.x])
+        total_inventory = str(sum([e[1] for e in values]))
+        pd.DataFrame(data=values, columns = ["Depot", ("Allocation (Total Inventory: " + total_inventory + ")")]).to_csv("Nonfixed_Inventory_Assignments.csv", index=False)
+
     else:
         print('No solution')
     return solution_flow
@@ -540,6 +545,16 @@ def nonfixedinventoryhelper(demand_tmpD
     obj = m.objVal
   else:
     obj = 'No Solution'
+
+
+  
+  grid = []
+  if m.status == GRB.Status.OPTIMAL:
+      for tri in [triVars[key] for key in triVars]:
+            grid.append(tri.VarName.split(":") + [tri.x])
+      flow = pd.DataFrame(grid, columns = ['Depot City', 'Carrier', 'Disaster Location', 'Allocation'])
+      flow.to_csv("NonfixedFlow.csv", index=False)
+
   return {'nonfixedObj': obj, 'nonfixedFlow': flow}
 
 
@@ -710,6 +725,15 @@ def dummyhelper(demand_tmpD
 
 
   flow = printSolution()
+
+  import pandas as pd
+  grid = []
+  if m.status == GRB.Status.OPTIMAL:
+      for tri in [triVars[key] for key in triVars]:
+            grid.append(tri.VarName.split(":") + [tri.x])
+      flow = pd.DataFrame(grid, columns = ['Depot City', 'Carrier', 'Disaster Location', 'Allocation'])
+      flow.to_csv("DummyFlow.csv", index=False)
+
 
   return {'dummyObj': m.objVal, 'dummyFlow': flow, 'weightedDummyDemand': weighted_dummy_demand}
 #BOT----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
