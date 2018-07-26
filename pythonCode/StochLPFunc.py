@@ -52,6 +52,31 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
   # 'Dallas, Texas': 700, 
   # 'San Francisco, California': 200, 
   # 'Philadelphia, Pennsylvania': 30}
+ 
+ #Test 2
+  demand_tmpD = {
+  ('0000-0000', 'SubLoc_00000'): 940,
+  ('0000-0001', 'SubLoc_00000'): 80,
+  ('0000-0002', 'SubLoc_00000'): 50,}
+  probs_tmpD = {'0000-0000':.33333, '0000-0001':.333333, '0000-0002':.33333,}
+  demandAddress_tmpD = {
+  ('0000-0000', 'SubLoc_00000'): "DisasterCity0", 
+  ('0000-0001', 'SubLoc_00000'): "DisasterCity1", 
+  ('0000-0002', 'SubLoc_00000'): "DisasterCity2",}
+  costD = {
+  ('San Francisco, California', 'DisasterCity0', 'Truck'):10, 
+  ('Dallas, Texas', 'DisasterCity0', 'Truck'):70, 
+  ("Philadelphia, Pennsylvania", 'DisasterCity0', 'Truck'):1,
+  ('San Francisco, California', 'DisasterCity1', 'Truck'):10, 
+  ('Dallas, Texas', 'DisasterCity1', 'Truck'):70, 
+  ("Philadelphia, Pennsylvania", 'DisasterCity1', 'Truck'):1,
+  ('San Francisco, California', 'DisasterCity2', 'Truck'):20, 
+  ('Dallas, Texas', 'DisasterCity2', 'Truck'):70, 
+  ("Philadelphia, Pennsylvania", 'DisasterCity2', 'Truck'):1,}
+  inventory_tmpD = {
+  'Dallas, Texas': 700, 
+  'San Francisco, California': 200, 
+  'Philadelphia, Pennsylvania': 30}
 
   #Test 1 - dummy  
   # demand_tmpD = {
@@ -93,15 +118,34 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
 
 
   #Create a mapping from depot city names to (contractor, capacity, cost) triplets
+  #------james code start-----
   #Populate carrierList
+#  carrierDict = {}
+#  carrierParse = f_myReadCsv(inputPath + carrierListFileName)
+#  carrierDataParse = carrierParse[1]
+#  for row in carrierDataParse:
+#    if row[5] not in carrierDict:
+#      carrierDict[row[5]] = []
+#    carrierDict[row[5]].append((row[0], int(row[1]), int(row[2])))
+  #------james code end-----
+  #------axr code start-----
+  #Populate carrierList
+  #Convert number trucks to capacity *I pick from file conversion rate and multiple number of trucks by conversion rate which yields carrier capacity
+  itemCarrierConversionParse0 = f_myReadCsv(inputPath + itemCarrierConversionFileName)
+  itemCarrierConversionParse = itemCarrierConversionParse0[1]
+  for row in itemCarrierConversionParse:
+      if row[0] == n_itemIter:
+          itemCarrierConversionRatio = int(row[1])
+  
   carrierDict = {}
-  carrierParse = f_myReadCsv(inputPath + "fakeCarrierDataJames.csv")
+  carrierParse = f_myReadCsv(inputPath + carrierListFileName)
   carrierDataParse = carrierParse[1]
   for row in carrierDataParse:
     if row[5] not in carrierDict:
       carrierDict[row[5]] = []
-    carrierDict[row[5]].append((row[0], int(row[1]), int(row[2])))
-  
+    carrierDict[row[5]].append((row[0], int(row[1])*itemCarrierConversionRatio, int(row[2])))
+
+  #------axr code ends-----
 
 
   #Initialize duo variables
@@ -191,16 +235,33 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
 
 
   #Depot capacity
-  depotConstrs = []
-  for depot in carrierDict:
-    depotCarriers = carrierDict[depot]
-    inventoryCapacity = inventory_tmpD[depot]
-    LHS = LinExpr()
-    LHS.addConstant(inventoryCapacity)
-    RHS = LinExpr()
-    for carrier in depotCarriers:
-      RHS.addTerms(1,duoVars[depot+":"+carrier[0]])
-    depotConstrs.append(m.addConstr(LHS, GRB.GREATER_EQUAL, RHS, name="DEPOT<"+depot+">"))
+  #---------------AXR 18/24/7 modification starts
+  for disasterTuple in demand_tmpD:
+      disasterString = disasterTuple[0]+disasterTuple[1] 
+      for depot in carrierDict:
+          depotCarriers = carrierDict[depot]
+          inventoryCapacity = inventory_tmpD[depot]
+          LHS = LinExpr()
+          LHS.addConstant(inventoryCapacity)
+          RHS = LinExpr()
+          for carrier in depotCarriers:
+               if depot+":"+carrier[0]+":"+disasterString in triVars:
+                   RHS.addTerms(1,triVars[depot+":"+carrier[0]+":"+disasterString])
+          m.addConstr(LHS, GRB.GREATER_EQUAL, RHS, name="DEPOT<"+depot+":"+carrier[0]+">")
+#---------------AXR 18/24/7 modification ends
+
+#---------------James code begins
+#  depotConstrs = []
+#  for depot in carrierDict:
+#    depotCarriers = carrierDict[depot]
+#    inventoryCapacity = inventory_tmpD[depot]
+#    LHS = LinExpr()
+#    LHS.addConstant(inventoryCapacity)
+#    RHS = LinExpr()
+#    for carrier in depotCarriers:
+#      RHS.addTerms(1,duoVars[depot+":"+carrier[0]])
+#    depotConstrs.append(m.addConstr(LHS, GRB.GREATER_EQUAL, RHS, name="DEPOT<"+depot+">"))
+#---------------James code ends
 
 
 
@@ -234,22 +295,23 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
   #   key_components = key.split(":")
   #   myFlow[(key_components[2], key_components[0], key_components[2], key_components[1])] = triVars[key].X #Need to change
 
-  nonfixed_solution = nonfixedinventoryhelper(demand_tmpD
-                                  , demandAddress_tmpD
-                                  , probs_tmpD
-                                  , disasterIDsUnq_tmp
-                                  , disasterIDsWithSubLocUnq_tmp
-                                  , inventory_tmpD
-                                  , transModesTransParams
-                                  , bigMCostElim
-                                  , bigMCostDummy
-                                  , costD
-                                  , dummyNodeName
-                                  , areInitialSuppliesVariables_Flag
-                                  , depotWhichFixedSubset
-                                  , minInvItemD
-                                  , depotInWhichCountry
-                                  )
+#non-fixed solution without dummy is disabled
+#  nonfixed_solution = nonfixedinventoryhelper(demand_tmpD
+#                                  , demandAddress_tmpD
+#                                  , probs_tmpD
+#                                  , disasterIDsUnq_tmp
+#                                  , disasterIDsWithSubLocUnq_tmp
+#                                  , inventory_tmpD
+#                                  , transModesTransParams
+#                                  , bigMCostElim
+#                                  , bigMCostDummy
+#                                  , costD
+#                                  , dummyNodeName
+#                                  , areInitialSuppliesVariables_Flag
+#                                  , depotWhichFixedSubset
+#                                  , minInvItemD
+#                                  , depotInWhichCountry
+#                                  )
 
   dummy_solution = dummyhelper(demand_tmpD
                                   , demandAddress_tmpD
@@ -267,17 +329,34 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                                   , minInvItemD
                                   , depotInWhichCountry
                                   )
-
+  
+  nonfixed_dummy_solution = nonfixeddummyinventoryhelper(demand_tmpD
+                                  , demandAddress_tmpD
+                                  , probs_tmpD
+                                  , disasterIDsUnq_tmp
+                                  , disasterIDsWithSubLocUnq_tmp
+                                  , inventory_tmpD
+                                  , transModesTransParams
+                                  , bigMCostElim
+                                  , bigMCostDummy
+                                  , costD
+                                  , dummyNodeName
+                                  , areInitialSuppliesVariables_Flag
+                                  , depotWhichFixedSubset
+                                  , minInvItemD
+                                  , depotInWhichCountry
+                                  )
 
   print("-------------------------------METRICS------------------------------\n")
-  if m.status == GRB.Status.OPTIMAL:
-    obj = m.objVal
-  else:
-    obj = 'No Solution'
-  if obj == 'No Solution' or nonfixed_solution['nonfixedObj'] == 'No Solution':
-    balance_metric = "No Solution"
-  else:
-    balance_metric = obj / nonfixed_solution['nonfixedObj']
+  print 'Printing metrics for ' + n_itemIter
+  print dummy_solution
+  print ""
+  print nonfixed_dummy_solution
+  
+  print("\nTotal Response Time (Cost) for current inventory: " + str(dummy_solution['adjdummyObj']))
+  print("Total Response Time (Cost) for optimal inventory: " + str(nonfixed_dummy_solution['adjdummyObj']))
+  
+  balance_metric = dummy_solution['adjdummyObj'] / float(nonfixed_dummy_solution['adjdummyObj'])
   print("\nBalance Metric: " + str(balance_metric))
 
   weight_av_demand = 0
@@ -287,6 +366,7 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
 
   weighted_dummy_demand = dummy_solution['weightedDummyDemand']
   weight_av_demand_met = weight_av_demand - weighted_dummy_demand
+<<<<<<< HEAD
   print("\n\nWeighted Av. Demand Met: " + str(weight_av_demand_met))
  
   print("\n\nFraction Demand Served: " + str(weight_av_demand_met / weight_av_demand))
@@ -344,6 +424,66 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
 
 
 
+  weighted_dummy_demand_nonfixed = nonfixed_dummy_solution['weightedDummyDemand']
+  weight_av_demand_met_nonfixed = weight_av_demand - weighted_dummy_demand_nonfixed
+  print("\n\nWeighted Av. Demand Met with current inventory: " + str(weight_av_demand_met))
+  print("Weighted Av. Demand Met with optimal inventory: " + str(weight_av_demand_met_nonfixed))
+  
+  print("\n\nFraction Demand Served with current inventory: " + str(weight_av_demand_met / weight_av_demand))
+  print("Fraction Demand Served with optimal inventory: " + str(weight_av_demand_met_nonfixed / weight_av_demand))
+  
+  #AXR 18/23/7: identifying number of disasters completely served
+  dummyFlowFiltered = {k:v for k,v in dummy_solution['dummyFlow'].iteritems() if 'dummy' in k}
+  WeightedFractionCompletelyServed = 1 - float(len(dummyFlowFiltered))/float(len(probs_tmpD))
+  
+  dummyFlowFilterednonFixed = {k:v for k,v in nonfixed_dummy_solution['dummyFlow'].iteritems() if 'dummy' in k}
+  WeightedFractionCompletelyServednonFixed = 1 - float(len(dummyFlowFilterednonFixed))/float(len(probs_tmpD))
+
+  print("\n\nWeighted Fraction Completely Served with current inventory: " + str(WeightedFractionCompletelyServed))
+  print("Weighted Fraction Completely Served with optimal inventory: " + str(WeightedFractionCompletelyServed))
+
+  average_time = dummy_solution['adjdummyObj'] / weight_av_demand_met
+  average_time = nonfixed_dummy_solution['adjdummyObj'] / weight_av_demand_met_nonfixed
+  print("\n\nAverage Time (Cost) with current inventory: " + str(average_time))
+  print("Average Time (Cost) with optimal inventory: " + str(average_time))
+
+
+#  if obj == 'No Solution':
+#    print("\n\nDepot Duals: No Solution")
+#  else:
+#    print("\n\nDepot Duals: ")
+#    average_time = str(obj / weight_av_demand_met)
+#    for depotConstr in depotConstrs:
+#      print(depotConstr.ConstrName + ": " + str(depotConstr.Pi))
+#
+#  print("\n\nAdjusted Depot Duals: ")
+#  print("\n\nT hours -----------------")
+#
+#  if obj == 'No Solution':
+#    print("\n\nCarrier Duals: No Solution")
+#  else:
+#    print("\n\nCarrier Duals: ")
+#    for carrierConstr in carrierConstrs:
+#      print(carrierConstr.ConstrName + ": " + str(carrierConstr.Pi))
+#
+#
+#
+#  print("\n\nAdjusted Carrier Duals: ")
+#
+#  import pandas as pd
+#  grid = []
+#  if m.status == GRB.Status.OPTIMAL:
+#      for tri in [triVars[key] for key in triVars]:
+#            grid.append(tri.VarName.split(":") + [tri.x])
+#  flow = pd.DataFrame(grid, columns = ['Depot City', 'Carrier', 'Disaster Location', 'Allocation'])
+#  flow.to_csv("StandardFlow.csv")
+
+#>>> writer = pd.ExcelWriter('output.xlsx')
+#>>> df1.to_excel(writer,'Sheet1')
+#>>> df2.to_excel(writer,'Sheet2')
+#>>> writer.save()
+
+
 
 
 
@@ -399,15 +539,33 @@ def nonfixedinventoryhelper(demand_tmpD
 
 
   #Create a mapping from depot city names to (contractor, capacity, cost) triplets
+  #------james code start-----
   #Populate carrierList
+#  carrierDict = {}
+#  carrierParse = f_myReadCsv(inputPath + carrierListFileName)
+#  carrierDataParse = carrierParse[1]
+#  for row in carrierDataParse:
+#    if row[5] not in carrierDict:
+#      carrierDict[row[5]] = []
+#    carrierDict[row[5]].append((row[0], int(row[1]), int(row[2])))
+  #------james code end-----
+  #------axr code start-----
+  #Populate carrierList
+  #Convert number trucks to capacity
+  itemCarrierConversionParse0 = f_myReadCsv(inputPath + itemCarrierConversionFileName)
+  itemCarrierConversionParse = itemCarrierConversionParse0[1]
+  for row in itemCarrierConversionParse:
+      if row[0] == n_itemIter:
+          itemCarrierConversionRatio = int(row[1])
+  
   carrierDict = {}
-  carrierParse = f_myReadCsv(inputPath + "fakeCarrierDataJames.csv")
+  carrierParse = f_myReadCsv(inputPath + carrierListFileName)
   carrierDataParse = carrierParse[1]
   for row in carrierDataParse:
     if row[5] not in carrierDict:
       carrierDict[row[5]] = []
-    carrierDict[row[5]].append((row[0], int(row[1]), int(row[2])))
-  
+    carrierDict[row[5]].append((row[0], int(row[1])*itemCarrierConversionRatio, int(row[2])))
+  #------axr code ends-----
 
 
   #Initialize duo variables
@@ -484,32 +642,69 @@ def nonfixedinventoryhelper(demand_tmpD
 
   #THIS IS THE ONLY MODIFIED SECTION
   #Depot capacity
+  
+#---------------AXR 18/24/7 modification starts
   totalCapacity = 0
-  for depotName in inventory_tmpD:
+  for depotName in inventory_tmpD: #Cycle through all depots to find entire inventory
     totalCapacity += inventory_tmpD[depotName]
+
 
   depotVars = {}
   for depotName in carrierDict:
     depotVars[depotName] = m.addVar(lb=0.0, ub=totalCapacity, vtype=GRB.CONTINUOUS, name=depotName+":NONFIXEDCAPACITY") 
-
   LHS = LinExpr()
   for depot in depotVars:
     inventoryCapacity = depotVars[depot]
     LHS.addTerms(1.0, inventoryCapacity)
+
+    
   RHS = LinExpr()
   RHS.addConstant(totalCapacity)
-  m.addConstr(RHS, GRB.EQUAL, LHS, name="TOTALINVENTORY<>") #Can also use GREATER_EQUAL
+  m.addConstr(RHS, GRB.EQUAL, LHS, name="TOTALINVENTORY<>")
 
-  for depotName in carrierDict:
-    depotCarriers = carrierDict[depotName]
-    inventoryCapacity = depotVars[depotName]
-    LHS = LinExpr()
-    LHS.addTerms(1.0, inventoryCapacity)
-    RHS = LinExpr()
-    for carrier in depotCarriers:
-      RHS.addTerms(1,duoVars[depotName+":"+carrier[0]])
 
-    m.addConstr(LHS, GRB.GREATER_EQUAL, RHS, name="DEPOT<"+depotName+":"+carrier[0]+">")
+  for disasterTuple in demand_tmpD:
+      disasterString = disasterTuple[0]+disasterTuple[1] 
+      for depot in carrierDict:
+          depotCarriers = carrierDict[depot]
+          inventoryCapacity = depotVars[depot]
+          LHS = LinExpr()
+          LHS.addTerms(1.0, inventoryCapacity)
+          RHS = LinExpr()
+          for carrier in depotCarriers:
+               if depot+":"+carrier[0]+":"+disasterString in triVars:
+                   RHS.addTerms(1,triVars[depot+":"+carrier[0]+":"+disasterString])
+          m.addConstr(LHS, GRB.GREATER_EQUAL, RHS, name="DEPOT<"+depot+":"+carrier[0]+">")
+#---------------AXR 18/24/7 modification ends
+          
+#---------------James code begins------------
+#  totalCapacity = 0
+#  for depotName in inventory_tmpD:
+#    totalCapacity += inventory_tmpD[depotName]
+#
+#  depotVars = {}
+#  for depotName in carrierDict:
+#    depotVars[depotName] = m.addVar(lb=0.0, ub=totalCapacity, vtype=GRB.CONTINUOUS, name=depotName+":NONFIXEDCAPACITY") 
+#
+#  LHS = LinExpr()
+#  for depot in depotVars:
+#    inventoryCapacity = depotVars[depot]
+#    LHS.addTerms(1.0, inventoryCapacity)
+#  RHS = LinExpr()
+#  RHS.addConstant(totalCapacity)
+#  m.addConstr(RHS, GRB.EQUAL, LHS, name="TOTALINVENTORY<>") #Can also use GREATER_EQUAL
+#
+#  for depotName in carrierDict:
+#    depotCarriers = carrierDict[depotName]
+#    inventoryCapacity = depotVars[depotName]
+#    LHS = LinExpr()
+#    LHS.addTerms(1.0, inventoryCapacity)
+#    RHS = LinExpr()
+#    for carrier in depotCarriers:
+#      RHS.addTerms(1,duoVars[depotName+":"+carrier[0]])
+#
+#    m.addConstr(LHS, GRB.GREATER_EQUAL, RHS, name="DEPOT<"+depotName+":"+carrier[0]+">")
+#---------------James code ends------------
 
 
 
@@ -587,23 +782,44 @@ def dummyhelper(demand_tmpD
   carrierList = []
 
   #Create a mapping from depot city names to (contractor, capacity, cost) triplets
+  #------james code start-----
   #Populate carrierList
+#  carrierDict = {}
+#  carrierParse = f_myReadCsv(inputPath + carrierListFileName)
+#  carrierDataParse = carrierParse[1]
+#  for row in carrierDataParse:
+#    if row[5] not in carrierDict:
+#      carrierDict[row[5]] = []
+#    carrierDict[row[5]].append((row[0], int(row[1]), int(row[2])))
+  #------james code end-----
+  #------axr code start-----
+  #Populate carrierList
+  #Convert number trucks to capacity
+  itemCarrierConversionParse0 = f_myReadCsv(inputPath + itemCarrierConversionFileName)
+  itemCarrierConversionParse = itemCarrierConversionParse0[1]
+  for row in itemCarrierConversionParse:
+      if row[0] == n_itemIter:
+          itemCarrierConversionRatio = int(row[1])
+  
   carrierDict = {}
-  carrierParse = f_myReadCsv(inputPath + "fakeCarrierDataJames.csv")
+  carrierParse = f_myReadCsv(inputPath + carrierListFileName)
   carrierDataParse = carrierParse[1]
   for row in carrierDataParse:
     if row[5] not in carrierDict:
       carrierDict[row[5]] = []
-    carrierDict[row[5]].append((row[0], int(row[1]), int(row[2])))
+    carrierDict[row[5]].append((row[0], int(row[1])*itemCarrierConversionRatio, int(row[2])))
+  #------axr code ends-----
   
   #Initialize duo variables
+  #AXR: Duo variables are all inventory-carrier pairs
   duoVars = {}
   for depot in carrierDict:
     depotCarriers = carrierDict[depot]
     for carrier in depotCarriers:
       duoVars[depot+":"+carrier[0]] = m.addVar(lb=0.0, ub=carrier[1], vtype=GRB.CONTINUOUS, name=depot+":"+carrier[0]) 
-
+  
   #Initialize triplet variables
+  #AXR: triVars are all inventory=carrier-disaster pairs
   triVars = {}
   duoToTris = {}
   for depot in carrierDict:
@@ -615,9 +831,7 @@ def dummyhelper(demand_tmpD
           var = m.addVar(lb=0.0, vtype=GRB.CONTINUOUS, name=depot+":"+carrier[0]+":"+disaster[0]+disaster[1]) 
           triVars[depot+":"+carrier[0]+":"+disaster[0]+disaster[1]] = var
           duoToTris[depot+":"+carrier[0]].append(var)
-  m.update()
-
-
+    m.update()
 
 
 
@@ -632,8 +846,10 @@ def dummyhelper(demand_tmpD
     duoToTris["dummy:dummycarrier"].append(var)
     dummyTris.append(var)
   for disasterID in demandAddress_tmpD:
-    costD[('dummy', demandAddress_tmpD[disasterID], 'Truck')] = 10000 #Dummy cost
-  inventory_tmpD['dummy'] = 1000
+  #AXR 18/23/7 substituted specific number for bigCostDummy variable
+    costD[('dummy', demandAddress_tmpD[disasterID], 'Truck')] = bigMCostDummy #Dummy cost
+  #AXR 18/23/7 substituetd specific number for bigInventoryDummy variable
+  inventory_tmpD['dummy'] = bigInventoryDummy
   m.update()
 
 
@@ -657,8 +873,238 @@ def dummyhelper(demand_tmpD
       if (depotLoc, demandAddress_tmpD[(ID,ID2)],"Truck") in costD:
         weights.append(probs_tmpD[ID]*(extraCost + costD[(depotLoc, demandAddress_tmpD[(ID,ID2)],"Truck")])) #Check order preservation?
   expr = LinExpr()
+  expr.addTerms(weights, [triVars[key] for key in triVars])
+  m.setObjective(expr, GRB.MINIMIZE)
+
+  #Satisfy demand
+  for disasterTuple in demand_tmpD:
+    disasterString = disasterTuple[0]+disasterTuple[1]
+    demandQuantity = demand_tmpD[disasterTuple]
+    LHS = LinExpr()
+    LHS.addConstant(demandQuantity)
+    RHS = LinExpr()
+    for depot in carrierDict:
+      depotCarriers = carrierDict[depot]
+      for carrier in depotCarriers:
+        if depot+":"+carrier[0]+":"+disasterString in triVars:
+          RHS.addTerms(1,triVars[depot+":"+carrier[0]+":"+disasterString])
+    m.addConstr(LHS, GRB.EQUAL, RHS, name="DEMAND<"+disasterString+">")
+
+  #Flow constraint
+  for depot in carrierDict:
+    depotCarriers = carrierDict[depot]
+    for carrier in depotCarriers:
+          LHS = LinExpr()
+          LHS.addTerms(1, duoVars[depot+":"+carrier[0]])
+          RHS = LinExpr()
+          for tri in duoToTris[depot+":"+carrier[0]]:            
+            RHS.addTerms(1, tri)
+##            print ("A step to create the RHS: \n" + str(RHS) + "\n")
+          m.addConstr(LHS, GRB.EQUAL, RHS, name="FLOW<"+depot+":"+carrier[0]+">")
+##          print("DuoToTriVars: " +str(RHS)+"/n")
+          
+  #Depot capacity
+#---------------AXR 18/24/7 modification starts
+  for disasterTuple in demand_tmpD:
+      disasterString = disasterTuple[0]+disasterTuple[1] 
+      for depot in carrierDict:
+          depotCarriers = carrierDict[depot]
+          inventoryCapacity = inventory_tmpD[depot]
+          LHS = LinExpr()
+          LHS.addConstant(inventoryCapacity)
+          RHS = LinExpr()
+          for carrier in depotCarriers:
+               if depot+":"+carrier[0]+":"+disasterString in triVars:
+                   RHS.addTerms(1,triVars[depot+":"+carrier[0]+":"+disasterString])
+          m.addConstr(LHS, GRB.GREATER_EQUAL, RHS, name="DEPOT<"+depot+":"+carrier[0]+">")
+#---------------AXR 18/24/7 modification ends
+
+#---------------James code starts
+#  for depot in carrierDict: 
+#    depotCarriers = carrierDict[depot]
+#    inventoryCapacity = inventory_tmpD[depot]
+#    LHS = LinExpr()
+#    LHS.addConstant(inventoryCapacity)
+#    RHS = LinExpr()
+#    for carrier in depotCarriers:
+#      RHS.addTerms(1,duoVars[depot+":"+carrier[0]])
+#    m.addConstr(LHS, GRB.GREATER_EQUAL, RHS, name="DEPOT<"+depot+":"+carrier[0]+">")
+#---------------James code starts
+    
+  #Carrier capacity
+  #Nonnegativity
+  #These two are taken care of by bounds placed on respective variables
+  m.update()
+  m.optimize()
+  m.write("dummymodel.lp")
+  def printSolution():
+    solution_flow = {}
+    if m.status == GRB.Status.OPTIMAL:
+        print('\nTotal Response Time: %g' % m.objVal)
+        print('\nDispatch:')
+        assignments = m.getAttr('x', [triVars[key] for key in triVars])
+        for tri in [triVars[key] for key in triVars]:
+            if tri.x > 0.0001:
+              print(tri.VarName, tri.x)
+              solution_flow[tri.VarName] = tri.x
+    else:
+        print('No solution')
+    return solution_flow
+
+  
+
+  weighted_dummy_demand = 0
+  for dummyVar in dummyTris:
+    disasterID = dummyVar.VarName.split(':')[2][:9]
+    weighted_dummy_demand += probs_tmpD[disasterID] * dummyVar.x
+    
+
+  dualx = m.getAttr('Pi') 
+  print dualx
+
+  flow = printSolution()
+  
+  
+  
+  #axr: adjusting objective value for dummy
+  dummysum = 0
+  for dummykey, dummyvalue in flow.iteritems():    
+      if 'dummy' in dummykey:
+          dummysum = dummysum + dummyvalue * bigMCostDummy * probs_tmpD[next(iter(probs_tmpD))]
+  adjobjVal = m.objVal - dummysum
+  
+  return {'dummyObj': m.objVal, 'adjdummyObj': adjobjVal, 'dummyFlow': flow, 'weightedDummyDemand': weighted_dummy_demand}
+
+
+
+def nonfixeddummyinventoryhelper(demand_tmpD
+                                  , demandAddress_tmpD
+                                  , probs_tmpD
+                                  , disasterIDsUnq_tmp
+                                  , disasterIDsWithSubLocUnq_tmp
+                                  , inventory_tmpD
+                                  , transModesTransParams
+                                  , bigMCostElim
+                                  , bigMCostDummy
+                                  , costD
+                                  , dummyNodeName
+                                  , areInitialSuppliesVariables_Flag
+                                  , depotWhichFixedSubset
+                                  , minInvItemD
+                                  , depotInWhichCountry
+                                  ):
+  print("-------------------------------NONFIXED-DUMMY------------------------------")
+  m = Model('StochLPNonfixedDummy')
+  #Generate list of string names
+  disasterList = demand_tmpD.keys()
+  carrierList = []
+
+
+
+  #Create a mapping from depot city names to (contractor, capacity, cost) triplets
+  #------james code start-----
+  #Populate carrierList
+#  carrierDict = {}
+#  carrierParse = f_myReadCsv(inputPath + carrierListFileName)
+#  carrierDataParse = carrierParse[1]
+#  for row in carrierDataParse:
+#    if row[5] not in carrierDict:
+#      carrierDict[row[5]] = []
+#    carrierDict[row[5]].append((row[0], int(row[1]), int(row[2])))
+  #------james code end-----
+  #------axr code start-----
+  #Populate carrierList
+  #Convert number trucks to capacity
+  itemCarrierConversionParse0 = f_myReadCsv(inputPath + itemCarrierConversionFileName)
+  itemCarrierConversionParse = itemCarrierConversionParse0[1]
+  for row in itemCarrierConversionParse:
+      if row[0] == n_itemIter:
+          itemCarrierConversionRatio = int(row[1])
+  
+  carrierDict = {}
+  carrierParse = f_myReadCsv(inputPath + carrierListFileName)
+  carrierDataParse = carrierParse[1]
+  for row in carrierDataParse:
+    if row[5] not in carrierDict:
+      carrierDict[row[5]] = []
+    carrierDict[row[5]].append((row[0], int(row[1])*itemCarrierConversionRatio, int(row[2])))
+  #------axr code ends-----
+
+
+  #Initialize duo variables
+  duoVars = {}
+  for depot in carrierDict:
+    depotCarriers = carrierDict[depot]
+    for carrier in depotCarriers:
+      duoVars[depot+":"+carrier[0]] = m.addVar(lb=0.0, ub=carrier[1], vtype=GRB.CONTINUOUS, name=depot+":"+carrier[0]) 
+
+
+
+<<<<<<< HEAD
+  import pandas as pd
+  grid = []
+  if m.status == GRB.Status.OPTIMAL:
+      for tri in [triVars[key] for key in triVars]:
+            grid.append(tri.VarName.split(":") + [tri.x])
+      flow = pd.DataFrame(grid, columns = ['Depot City', 'Carrier', 'Disaster Location', 'Allocation'])
+      flow.to_csv("DummyFlow.csv", index=False)
+
+
+  return {'dummyObj': m.objVal, 'dummyFlow': flow, 'weightedDummyDemand': weighted_dummy_demand}
+=======
+  #Initialize triplet variables
+  triVars = {}
+  duoToTris = {}
+  for depot in carrierDict:
+    depotCarriers = carrierDict[depot]
+    for carrier in depotCarriers:
+      duoToTris[depot+":"+carrier[0]] = []
+      for disaster in disasterList:
+        if (depot, demandAddress_tmpD[disaster], 'Truck') in costD:
+          var = m.addVar(lb=0.0, vtype=GRB.CONTINUOUS, name=depot+":"+carrier[0]+":"+disaster[0]+disaster[1]) 
+          triVars[depot+":"+carrier[0]+":"+disaster[0]+disaster[1]] = var
+          duoToTris[depot+":"+carrier[0]].append(var)
+  m.update()
+
+  #Introducing a fake dummy node across all variables
+  carrierDict["dummy"] = [("dummycarrier",1000000,0)]
+  duoVars["dummy:dummycarrier"] = m.addVar(lb=0.0, vtype=GRB.CONTINUOUS, name="dummy:dummycarrier") 
+  duoToTris["dummy:dummycarrier"] = []
+  dummyTris = []
+  for disasterName in disasterList:
+    var =  m.addVar(lb=0.0, vtype=GRB.CONTINUOUS, name="dummy:dummycarrier:" + disasterName[0]+disasterName[1]) 
+    triVars["dummy:dummycarrier:" + disasterName[0]+disasterName[1]] = var
+    duoToTris["dummy:dummycarrier"].append(var)
+    dummyTris.append(var)
+  for disasterID in demandAddress_tmpD:
+  #AXR 18/23/7 substituted specific number for bigCostDummy variable
+    costD[('dummy', demandAddress_tmpD[disasterID], 'Truck')] = bigMCostDummy #Dummy cost
+  #AXR 18/23/7 substituetd specific number for bigInventoryDummy variable
+  inventory_tmpD['dummy'] = bigInventoryDummy
+  m.update()
+
+  
+  #Minimize expected time
+  weights = []
+  for triVar in [triVars[key] for key in triVars]:
+    ID = triVar.VarName.split(":")[2].split("SubLoc")[0]
+    ID2 = "SubLoc" + triVar.VarName.split(":")[2].split("SubLoc")[1]
+    depotLoc = triVar.VarName.split(":")[0]
+    for key in carrierDict: #Identify proper element
+      elements = carrierDict[key]
+      for element in elements:
+        if element[0] == triVar.VarName.split(":")[1]:
+          extraCost = element[2]
+          break
+          break
+    if (ID,ID2) in demandAddress_tmpD:
+      if (depotLoc, demandAddress_tmpD[(ID,ID2)],"Truck") in costD:
+        weights.append(probs_tmpD[ID]*(extraCost + costD[(depotLoc, demandAddress_tmpD[(ID,ID2)],"Truck")])) #Check order preservation?
+  expr = LinExpr()
   expr.addTerms(weights, [triVars[key] for key in triVars]) 
   m.setObjective(expr, GRB.MINIMIZE)
+
+
 
   #Satisfy demand
   for disasterTuple in demand_tmpD:
@@ -685,24 +1131,94 @@ def dummyhelper(demand_tmpD
             RHS.addTerms(1, tri)
           m.addConstr(LHS, GRB.EQUAL, RHS, name="FLOW<"+depot+":"+carrier[0]+">")
 
+
+  #THIS IS THE ONLY MODIFIED SECTION
   #Depot capacity
-  for depot in carrierDict:
-    depotCarriers = carrierDict[depot]
-    inventoryCapacity = inventory_tmpD[depot]
-    LHS = LinExpr()
-    LHS.addConstant(inventoryCapacity)
-    RHS = LinExpr()
-    for carrier in depotCarriers:
-      RHS.addTerms(1,duoVars[depot+":"+carrier[0]])
+  
+#---------------AXR 18/24/7 modification starts
+  totalCapacity = 0
+  for depotName in inventory_tmpD: #Cycle through all depots to find entire inventory corrected for dummy inventory
+    if depotName != 'dummy':
+        totalCapacity += inventory_tmpD[depotName]
+  
+  #assigning all depots except dummy to depotVars and adding it to the LHS. Then setting right hand side of each constraint to entire inventory
+  depotVars = {}
+  for depotName in carrierDict:
+    if depotName != 'dummy':
+        depotVars[depotName] = m.addVar(lb=0.0, ub=totalCapacity, vtype=GRB.CONTINUOUS, name=depotName+":NONFIXEDCAPACITY")
+  LHS = LinExpr()
+  for depot in depotVars:
+    inventoryCapacity = depotVars[depot]
+    LHS.addTerms(1.0, inventoryCapacity)
 
-    m.addConstr(LHS, GRB.GREATER_EQUAL, RHS, name="DEPOT<"+depot+":"+carrier[0]+">")
+    
+  RHS = LinExpr()
+  RHS.addConstant(totalCapacity)
+  m.addConstr(RHS, GRB.EQUAL, LHS, name="TOTALINVENTORY<>")
+  
+  #now assiging the dummy to depotVars and creating another constraint with dummy inventory level
+  for depotName in carrierDict:
+    if depotName == 'dummy':
+        depotVars[depotName] = m.addVar(lb=0.0, ub=bigInventoryDummy, vtype=GRB.CONTINUOUS, name=depotName+":NONFIXEDCAPACITY")
+  LHS = LinExpr()
+  for depot in depotVars:
+      if depot == 'dummy':
+          inventoryCapacity = depotVars[depot]
+          LHS.addTerms(1.0, inventoryCapacity)
+  RHS = LinExpr()
+  RHS.addConstant(bigInventoryDummy)
+  m.addConstr(RHS, GRB.EQUAL, LHS, name="TOTALINVENTORYDummy<>")
 
-  #Carrier capacity
-  #Nonnegativity
-  #These two are taken care of by bounds placed on respective variables
+  for disasterTuple in demand_tmpD:
+      disasterString = disasterTuple[0]+disasterTuple[1] 
+      for depot in carrierDict:
+          depotCarriers = carrierDict[depot]
+          inventoryCapacity = depotVars[depot]
+          LHS = LinExpr()
+          LHS.addTerms(1.0, inventoryCapacity)
+          RHS = LinExpr()
+          for carrier in depotCarriers:
+               if depot+":"+carrier[0]+":"+disasterString in triVars:
+                   RHS.addTerms(1,triVars[depot+":"+carrier[0]+":"+disasterString])
+          m.addConstr(LHS, GRB.GREATER_EQUAL, RHS, name="DEPOT<"+depot+":"+carrier[0]+">")
+#---------------AXR 18/24/7 modification ends
+          
+          
+#---------------James code begins------------
+#  totalCapacity = 0
+#  for depotName in inventory_tmpD:
+#    totalCapacity += inventory_tmpD[depotName]
+#
+#  depotVars = {}
+#  for depotName in carrierDict:
+#    depotVars[depotName] = m.addVar(lb=0.0, ub=totalCapacity, vtype=GRB.CONTINUOUS, name=depotName+":NONFIXEDCAPACITY") 
+#
+#  LHS = LinExpr()
+#  for depot in depotVars:
+#    inventoryCapacity = depotVars[depot]
+#    LHS.addTerms(1.0, inventoryCapacity)
+#  RHS = LinExpr()
+#  RHS.addConstant(totalCapacity)
+#  m.addConstr(RHS, GRB.EQUAL, LHS, name="TOTALINVENTORY<>") #Can also use GREATER_EQUAL
+#
+#  for depotName in carrierDict:
+#    depotCarriers = carrierDict[depotName]
+#    inventoryCapacity = depotVars[depotName]
+#    LHS = LinExpr()
+#    LHS.addTerms(1.0, inventoryCapacity)
+#    RHS = LinExpr()
+#    for carrier in depotCarriers:
+#      RHS.addTerms(1,duoVars[depotName+":"+carrier[0]])
+#
+#    m.addConstr(LHS, GRB.GREATER_EQUAL, RHS, name="DEPOT<"+depotName+":"+carrier[0]+">")
+#---------------James code ends------------
+
+
+
   m.update()
   m.optimize()
-  m.write("dummymodel.lp")
+  m.write("jamesmodelnonfixeddummy.lp")
+
   def printSolution():
     solution_flow = {}
     if m.status == GRB.Status.OPTIMAL:
@@ -716,26 +1232,36 @@ def dummyhelper(demand_tmpD
     else:
         print('No solution')
     return solution_flow
-
+  
+  flow = printSolution()
+  
+  print('\nOptimal Inventory Allocation')
+  for depot, value in depotVars.iteritems():
+      OptInv = {}
+      if depot != 'dummy':
+          #print(m.getAttr('x', [depotVars[value] for key,value in depotVars))
+          print(str(depot) + ": " + str(value.getAttr('x')))
+          
+  
+  if m.status == GRB.Status.OPTIMAL:
+    obj = m.objVal
+  else:
+    obj = 'No Solution'
+    
   weighted_dummy_demand = 0
   for dummyVar in dummyTris:
     disasterID = dummyVar.VarName.split(':')[2][:9]
     weighted_dummy_demand += probs_tmpD[disasterID] * dummyVar.x
+    
+  #axr: adjusting objective value for dummy
+  dummysum = 0
+  for dummykey, dummyvalue in flow.iteritems():    
+      if 'dummy' in dummykey:
+          dummysum = dummysum + dummyvalue * bigMCostDummy * probs_tmpD[next(iter(probs_tmpD))]
+  adjobjVal = m.objVal - dummysum
 
-
-
-  flow = printSolution()
-
-  import pandas as pd
-  grid = []
-  if m.status == GRB.Status.OPTIMAL:
-      for tri in [triVars[key] for key in triVars]:
-            grid.append(tri.VarName.split(":") + [tri.x])
-      flow = pd.DataFrame(grid, columns = ['Depot City', 'Carrier', 'Disaster Location', 'Allocation'])
-      flow.to_csv("DummyFlow.csv", index=False)
-
-
-  return {'dummyObj': m.objVal, 'dummyFlow': flow, 'weightedDummyDemand': weighted_dummy_demand}
+  return {'dummyObj': obj, 'adjdummyObj': adjobjVal, 'dummyFlow': flow, 'weightedDummyDemand': weighted_dummy_demand, 'optimalInv': OptInv}
+>>>>>>> ad972016baa402123a545ff76ed16f8ea90b49e4
 #BOT----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #BOT----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #BOT----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -1,12 +1,22 @@
 disasterType,include
-Earthquake (seismic activity) ,1
-Epidemic ,1
-Extreme temperature ,1
-Flood ,1
-Industrial Accident ,0
-Mass movement wet ,1
-Miscellaneous accident ,1
-Storm ,1
-Transport accident ,0
-Transport Accident ,0
-Wildfire ,1
+Flood,1
+Severe Storm(s),1
+Severe Ice Storm,1
+Fire,1
+Tornado,1
+Freezing,1
+Snow,1
+Hurricane,1
+Coastal Storm,1
+Earthquake,1
+Human Cause,1
+Fishing Losses,1
+Mud/Landslide,1
+Terrorist,1
+Dam/Levee Break,1
+Tsunami,1
+Toxic Substances,1
+Drought,1
+Other,1
+Chemical,1
+Volcano,1

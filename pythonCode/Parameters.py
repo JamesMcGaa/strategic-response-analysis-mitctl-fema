@@ -13,6 +13,8 @@ drivingDistanceMatrixFileName = 'drivingDistanceMatrix.csv'
 gglCountryContinentLkupFileName = 'gglCountryContinentLkup.csv'
 transporationParametersFileName = 'transporationParameters.csv'
 itemAttributesFileName = 'itemAttributes.csv'
+carrierListFileName = 'fakeCarrierDataJames.csv'
+itemCarrierConversionFileName = 'fakeCarrierItemConversionRates.csv'
 
 
 # Are all scenario probabilities set to 1/n?  (Possible values are 0 or 1)
@@ -47,6 +49,7 @@ maxDrivingTimeCutAbove_Hrs = 100
 
 # When the optimization routine sets up the dummy supply node, how much should that cost?
 bigMCostDummy = 10000
+bigInventoryDummy = 1000000
 
 # In the original files, we set the time and cost to be 1e6 if it is infeasible (i.e., for the road link from
 #    Canada to Australia)  This parameter is necessary so that the optimization routine can identify infeasible

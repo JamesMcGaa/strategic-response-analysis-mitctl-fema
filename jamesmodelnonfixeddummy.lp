@@ -1,24 +1,27 @@
-\ Model StochLPNonfixed
+\ Model StochLPNonfixedDummy
 \ LP format - for model browsing. Use MPS format to capture full model detail.
 Minimize
-  40 Dallas,_Texas_carrier1_0000-0000SubLoc_00000
-   + 24 Dallas,_Texas_carrier1_0000-0001SubLoc_00000
-   + 16 Dallas,_Texas_carrier1_0000-0002SubLoc_00000
-   + 45 Dallas,_Texas_carrier2_0000-0000SubLoc_00000
-   + 27 Dallas,_Texas_carrier2_0000-0001SubLoc_00000
-   + 18 Dallas,_Texas_carrier2_0000-0002SubLoc_00000
-   + 10 San_Francisco,_California_carrier4_0000-0000SubLoc_00000
-   + 6 San_Francisco,_California_carrier4_0000-0001SubLoc_00000
-   + 6 San_Francisco,_California_carrier4_0000-0002SubLoc_00000
-   + 15 San_Francisco,_California_carrier5_0000-0000SubLoc_00000
-   + 9 San_Francisco,_California_carrier5_0000-0001SubLoc_00000
-   + 8 San_Francisco,_California_carrier5_0000-0002SubLoc_00000
-   + 20 San_Francisco,_California_carrier6_0000-0000SubLoc_00000
-   + 12 San_Francisco,_California_carrier6_0000-0001SubLoc_00000
-   + 10 San_Francisco,_California_carrier6_0000-0002SubLoc_00000
-   + 4.5 Philadelphia,_Pennsylvania_carrier3_0000-0000SubLoc_00000
-   + 2.7 Philadelphia,_Pennsylvania_carrier3_0000-0001SubLoc_00000
-   + 1.8 Philadelphia,_Pennsylvania_carrier3_0000-0002SubLoc_00000
+  26.6664 Dallas,_Texas_carrier1_0000-0000SubLoc_00000
+   + 26.66664 Dallas,_Texas_carrier1_0000-0001SubLoc_00000
+   + 26.6664 Dallas,_Texas_carrier1_0000-0002SubLoc_00000
+   + 29.9997 Dallas,_Texas_carrier2_0000-0000SubLoc_00000
+   + 29.99997 Dallas,_Texas_carrier2_0000-0001SubLoc_00000
+   + 29.9997 Dallas,_Texas_carrier2_0000-0002SubLoc_00000
+   + 6.6666 San_Francisco,_California_carrier4_0000-0000SubLoc_00000
+   + 6.66666 San_Francisco,_California_carrier4_0000-0001SubLoc_00000
+   + 9.9999 San_Francisco,_California_carrier4_0000-0002SubLoc_00000
+   + 9.9999 San_Francisco,_California_carrier5_0000-0000SubLoc_00000
+   + 9.99999 San_Francisco,_California_carrier5_0000-0001SubLoc_00000
+   + 13.3332 San_Francisco,_California_carrier5_0000-0002SubLoc_00000
+   + 13.3332 San_Francisco,_California_carrier6_0000-0000SubLoc_00000
+   + 13.33332 San_Francisco,_California_carrier6_0000-0001SubLoc_00000
+   + 16.6665 San_Francisco,_California_carrier6_0000-0002SubLoc_00000
+   + 2.99997 Philadelphia,_Pennsylvania_carrier3_0000-0000SubLoc_00000
+   + 2.999997 Philadelphia,_Pennsylvania_carrier3_0000-0001SubLoc_00000
+   + 2.99997 Philadelphia,_Pennsylvania_carrier3_0000-0002SubLoc_00000
+   + 3333.3 dummy_dummycarrier_0000-0000SubLoc_00000
+   + 3333.33 dummy_dummycarrier_0000-0001SubLoc_00000
+   + 3333.3 dummy_dummycarrier_0000-0002SubLoc_00000
 Subject To
  DEMAND<0000-0000SubLoc_00000>:
    - Dallas,_Texas_carrier1_0000-0000SubLoc_00000
@@ -26,21 +29,28 @@ Subject To
    - San_Francisco,_California_carrier4_0000-0000SubLoc_00000
    - San_Francisco,_California_carrier5_0000-0000SubLoc_00000
    - San_Francisco,_California_carrier6_0000-0000SubLoc_00000
-   - Philadelphia,_Pennsylvania_carrier3_0000-0000SubLoc_00000 = -940
+   - Philadelphia,_Pennsylvania_carrier3_0000-0000SubLoc_00000
+   - dummy_dummycarrier_0000-0000SubLoc_00000 = -940
  DEMAND<0000-0001SubLoc_00000>:
    - Dallas,_Texas_carrier1_0000-0001SubLoc_00000
    - Dallas,_Texas_carrier2_0000-0001SubLoc_00000
    - San_Francisco,_California_carrier4_0000-0001SubLoc_00000
    - San_Francisco,_California_carrier5_0000-0001SubLoc_00000
    - San_Francisco,_California_carrier6_0000-0001SubLoc_00000
-   - Philadelphia,_Pennsylvania_carrier3_0000-0001SubLoc_00000 = -8000
+   - Philadelphia,_Pennsylvania_carrier3_0000-0001SubLoc_00000
+   - dummy_dummycarrier_0000-0001SubLoc_00000 = -80
  DEMAND<0000-0002SubLoc_00000>:
    - Dallas,_Texas_carrier1_0000-0002SubLoc_00000
    - Dallas,_Texas_carrier2_0000-0002SubLoc_00000
    - San_Francisco,_California_carrier4_0000-0002SubLoc_00000
    - San_Francisco,_California_carrier5_0000-0002SubLoc_00000
    - San_Francisco,_California_carrier6_0000-0002SubLoc_00000
-   - Philadelphia,_Pennsylvania_carrier3_0000-0002SubLoc_00000 = -50
+   - Philadelphia,_Pennsylvania_carrier3_0000-0002SubLoc_00000
+   - dummy_dummycarrier_0000-0002SubLoc_00000 = -50
+ FLOW<dummy_dummycarrier>: dummy_dummycarrier
+   - dummy_dummycarrier_0000-0000SubLoc_00000
+   - dummy_dummycarrier_0000-0001SubLoc_00000
+   - dummy_dummycarrier_0000-0002SubLoc_00000 = 0
  FLOW<Dallas,_Texas_carrier1>: Dallas,_Texas_carrier1
    - Dallas,_Texas_carrier1_0000-0000SubLoc_00000
    - Dallas,_Texas_carrier1_0000-0001SubLoc_00000
@@ -72,6 +82,9 @@ Subject To
  TOTALINVENTORY<>: - Dallas,_Texas_NONFIXEDCAPACITY
    - San_Francisco,_California_NONFIXEDCAPACITY
    - Philadelphia,_Pennsylvania_NONFIXEDCAPACITY = -930
+ TOTALINVENTORYDummy<>: - dummy_NONFIXEDCAPACITY = -1e+06
+ DEPOT<dummy_dummycarrier>: - dummy_dummycarrier_0000-0000SubLoc_00000
+   + dummy_NONFIXEDCAPACITY >= 0
  DEPOT<Dallas,_Texas_carrier2>:
    - Dallas,_Texas_carrier1_0000-0000SubLoc_00000
    - Dallas,_Texas_carrier2_0000-0000SubLoc_00000
@@ -84,6 +97,8 @@ Subject To
  DEPOT<Philadelphia,_Pennsylvania_carrier3>:
    - Philadelphia,_Pennsylvania_carrier3_0000-0000SubLoc_00000
    + Philadelphia,_Pennsylvania_NONFIXEDCAPACITY >= 0
+ DEPOT<dummy_dummycarrier>: - dummy_dummycarrier_0000-0001SubLoc_00000
+   + dummy_NONFIXEDCAPACITY >= 0
  DEPOT<Dallas,_Texas_carrier2>:
    - Dallas,_Texas_carrier1_0000-0001SubLoc_00000
    - Dallas,_Texas_carrier2_0000-0001SubLoc_00000
@@ -96,6 +111,8 @@ Subject To
  DEPOT<Philadelphia,_Pennsylvania_carrier3>:
    - Philadelphia,_Pennsylvania_carrier3_0000-0001SubLoc_00000
    + Philadelphia,_Pennsylvania_NONFIXEDCAPACITY >= 0
+ DEPOT<dummy_dummycarrier>: - dummy_dummycarrier_0000-0002SubLoc_00000
+   + dummy_NONFIXEDCAPACITY >= 0
  DEPOT<Dallas,_Texas_carrier2>:
    - Dallas,_Texas_carrier1_0000-0002SubLoc_00000
    - Dallas,_Texas_carrier2_0000-0002SubLoc_00000
@@ -118,4 +135,5 @@ Bounds
  Dallas,_Texas_NONFIXEDCAPACITY <= 930
  San_Francisco,_California_NONFIXEDCAPACITY <= 930
  Philadelphia,_Pennsylvania_NONFIXEDCAPACITY <= 930
+ dummy_NONFIXEDCAPACITY <= 1e+06
 End

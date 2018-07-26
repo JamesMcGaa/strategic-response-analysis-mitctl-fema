@@ -15,6 +15,7 @@ disasterWhichToUseSubset = [disasterTypeNames[i] for i in range(len(disasterType
 
 
 [disasterWhichCountryHeaderRow, disasterWhichCountryRead] = f_myReadCsv(inputPath + disasterCountryWhichToUseReadInFileName)
+#print disasterWhichCountryRead
 disasterCountryNames = columnByName(disasterWhichCountryRead, disasterWhichCountryHeaderRow, 'gglCountry')
 disasterCountryUseID = columnByName(disasterWhichCountryRead, disasterWhichCountryHeaderRow, 'UseMe')
 disasterWhichCountrySubset = [disasterCountryNames[i] for i in range(len(disasterCountryNames)) if disasterCountryUseID[i] == '1']
@@ -34,6 +35,7 @@ if 1 == 1:
 if 1 == 1:
   #Filter out results with null tot affected
   subTotAffAll = columnByName(disasterTotAffSubRead,disasterTotAffHeaderRow, 'TotAffected')
+  subTotAffAll = pd.to_numeric(subTotAffAll, errors='coerce')
   subTotAffNotNull = []
   for i in range(len(subTotAffAll)):
     try:
@@ -41,6 +43,7 @@ if 1 == 1:
       subTotAffNotNull.append(i)
     except ValueError:
       pass    
+
   disasterTotAffSubRead = deepcopy([disasterTotAffSubRead[i] for i in subTotAffNotNull])
   #Change Tot Affected to int
   disasterTotAffSubRead = deepcopy(changeColType(disasterTotAffSubRead, disasterTotAffHeaderRow, 'TotAffected', 'int'))
@@ -48,7 +51,6 @@ if 1 == 1:
   disasterTotAffSubRead = deepcopy(changeColType(disasterTotAffSubRead, disasterTotAffHeaderRow, 'Day', 'int'))
   disasterTotAffSubRead = deepcopy(changeColType(disasterTotAffSubRead, disasterTotAffHeaderRow, 'Month', 'int'))
   disasterTotAffSubRead = deepcopy(changeColType(disasterTotAffSubRead, disasterTotAffHeaderRow, 'Year', 'int'))
-
 
 """
   The way the file reads in data is faulty.
@@ -103,6 +105,7 @@ disasterGglCountryD = dict(zip(zip(disasterIDVect, disasterIDVect_SubLoc), colum
 disasterDistTypeD = dict(zip(disasterIDVect, columnByName(disasterTotAffSubRead, disasterTotAffHeaderRow, 'Type')))
 disasterMonthD = dict(zip(disasterIDVect, columnByName(disasterTotAffSubRead, disasterTotAffHeaderRow, 'Month')))
 disasterYearD = dict(zip(disasterIDVect, columnByName(disasterTotAffSubRead, disasterTotAffHeaderRow, 'Year')))
+
 disasterProbD = dict(zip(disasterIDVect, [1. / len(disasterIDVect)] * len(disasterIDVect)))
 
 
@@ -529,8 +532,12 @@ if 1 == 1:
     print set(disasterLocationsDisaster) - set(disasterLocationsDistances)
     raise NameError('Youve read in costs and initial supplies, but youve read in disaters with demands that are not in cost matrix (see last printed objects for discrepency)')
   if len(set(depotNamesInventory) - set(columnByName(latLongDepotsRead, latLongDepotsHeaderRow, 'gglAddressAscii'))) > 0:
+    print set(depotNamesInventory)
+    print set(columnByName(latLongDepotsRead, latLongDepotsHeaderRow, 'gglAddressAscii'))
     raise NameError('You\'re missing some lat longs in your depots')
   if len(set(disasterLocationsDisaster) - set(columnByName(latLongDisastersRead, latLongDisastersHeaderRow, 'gglAddressAscii'))) > 0:
+    print set(disasterLocationsDisaster)
+    print set(columnByName(latLongDisastersRead, latLongDisastersHeaderRow, 'gglAddressAscii'))
     raise NameError('You\'re missing some lat longs in your disasters')
     
   if len(set(itemNamesInventory) - set(itemNamesAttribute)) > 0:

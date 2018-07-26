@@ -13,6 +13,7 @@ from gurobipy import *
 import matplotlib
 import matplotlib.pyplot as plt
 import os.path
+import pandas as pd
 #import random
 #import subprocess
 #from pylab import *
