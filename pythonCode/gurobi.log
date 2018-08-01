@@ -2281,6 +2281,7 @@ Gurobi 7.5.2 (win32, Python) logging started 07/25/18 23:47:07
 
 Academic license - for non-commercial use only
 
+<<<<<<< HEAD
 Gurobi 7.5.2 (win32, Python) logging started 07/30/18 10:35:32
 
 Academic license - for non-commercial use only
@@ -2307,5 +2308,32 @@ Gurobi 7.5.2 (win32, Python) logging started 07/30/18 11:32:40
 Academic license - for non-commercial use only
 
 Gurobi 7.5.2 (win32, Python) logging started 07/31/18 23:39:02
+=======
+Gurobi 7.5.2 (win64, Python) logging started 07/26/18 10:15:12
+
+Academic license - for non-commercial use only
+
+Gurobi 7.5.2 (win64, Python) logging started 07/27/18 14:52:16
+>>>>>>> 7bc14bf730078e28a52312621489f67d10edf4c4
+
+Academic license - for non-commercial use only
+
+Gurobi 7.5.2 (win32, Python) logging started 08/01/18 00:20:04
+
+Academic license - for non-commercial use only
+
+Gurobi 7.5.2 (win32, Python) logging started 08/01/18 00:21:10
+
+Academic license - for non-commercial use only
+
+Gurobi 7.5.2 (win32, Python) logging started 08/01/18 00:22:34
+
+Academic license - for non-commercial use only
+
+Gurobi 7.5.2 (win32, Python) logging started 08/01/18 00:23:01
+
+Academic license - for non-commercial use only
+
+Gurobi 7.5.2 (win32, Python) logging started 08/01/18 00:24:39
 
 Academic license - for non-commercial use only

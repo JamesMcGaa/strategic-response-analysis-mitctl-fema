@@ -15,7 +15,6 @@ disasterWhichToUseSubset = [disasterTypeNames[i] for i in range(len(disasterType
 
 
 [disasterWhichCountryHeaderRow, disasterWhichCountryRead] = f_myReadCsv(inputPath + disasterCountryWhichToUseReadInFileName)
-#print disasterWhichCountryRead
 disasterCountryNames = columnByName(disasterWhichCountryRead, disasterWhichCountryHeaderRow, 'gglCountry')
 disasterCountryUseID = columnByName(disasterWhichCountryRead, disasterWhichCountryHeaderRow, 'UseMe')
 disasterWhichCountrySubset = [disasterCountryNames[i] for i in range(len(disasterCountryNames)) if disasterCountryUseID[i] == '1']

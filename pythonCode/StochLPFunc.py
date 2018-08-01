@@ -26,7 +26,7 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
 
   #Test 1
   demand_tmpD = {
-  ('0000-0000', 'SubLoc_00000'): 100,
+  ('0000-0000', 'SubLoc_00000'): 930,
   ('0000-0001', 'SubLoc_00000'): 80,
   ('0000-0002', 'SubLoc_00000'): 50,}
   probs_tmpD = {'0000-0000':.5, '0000-0001':.99, '0000-0002':.1,}
@@ -266,6 +266,7 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
   #                                  , depotInWhichCountry
   #                                  )
 
+
   dummy_solution = dummyhelper(demand_tmpD
                                   , demandAddress_tmpD
                                   , probs_tmpD
@@ -299,6 +300,7 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                                   , minInvItemD
                                   , depotInWhichCountry
                                   )
+
   print("----------------------------------DEMAND SERVED ------------------------------------")
   # timeDemandTuples = []
   # for var in triToDistanceMap:
@@ -318,6 +320,7 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
   # plt.ylabel('Fraction of Total Demand Served')
   # plt.title('Demand Served Metric')
   # plt.show()
+
 
 
 
@@ -808,7 +811,6 @@ def dummyhelper(demand_tmpD
     m.update()
 
 
-
   #Introducing a fake dummy node across all variables
   #1000000 Capacity for dummy carrier, 0 cost
   carrierDict["dummy"] = [("dummycarrier",1000000,0)]
@@ -826,7 +828,6 @@ def dummyhelper(demand_tmpD
   #AXR 18/23/7 substituetd specific number for bigInventoryDummy variable
   inventory_tmpD['dummy'] = bigInventoryDummy
   m.update()
-
 
 
 
@@ -926,29 +927,39 @@ def dummyhelper(demand_tmpD
         print('No solution')
     return solution_flow
 
-  
 
-  weighted_dummy_demand = 0
-  for dummyVar in dummyTris:
-    disasterID = dummyVar.VarName.split(':')[2][:9]
-    weighted_dummy_demand += probs_tmpD[disasterID] * dummyVar.x
-    
 
-  dualx = m.getAttr('Pi') 
-  print dualx
 
   flow = printSolution()
-  
-  
-  
-  #axr: adjusting objective value for dummy
-  dummysum = 0
-  for dummykey, dummyvalue in flow.iteritems():    
-      if 'dummy' in dummykey:
-          dummysum = dummysum + dummyvalue * bigMCostDummy * probs_tmpD[next(iter(probs_tmpD))]
-  adjobjVal = m.objVal - dummysum
-  
-  return {'dummyObj': m.objVal, 'adjdummyObj': adjobjVal, 'dummyFlow': flow, 'weightedDummyDemand': weighted_dummy_demand}
+
+
+  if m.status == GRB.Status.OPTIMAL:
+      #axr: adjusting objective value for dummy
+      dummysum = 0
+      for dummykey, dummyvalue in flow.iteritems():    
+          if 'dummy' in dummykey:
+              dummysum = dummysum + dummyvalue * bigMCostDummy * probs_tmpD[next(iter(probs_tmpD))]
+      adjobjVal = m.objVal - dummysum
+      dummyObj = m.objVal
+          
+      weighted_dummy_demand = 0
+      for dummyVar in dummyTris:
+        disasterID = dummyVar.VarName.split(':')[2][:9]
+        weighted_dummy_demand += probs_tmpD[disasterID] * dummyVar.x
+        
+      constrs = m.getConstrs()
+      print constrs
+      constr_coeffs = m.getAttr('x', )
+      print constr_coeffs
+    
+    
+      dualx = m.getAttr('Pi') 
+      print dualx
+  else:
+      adjobjVal = 'error - no solution'
+      dummyObj = 'error - no solution'
+      weighted_dummy_demand = 0
+  return {'dummyObj': dummyObj, 'adjdummyObj': adjobjVal, 'dummyFlow': flow, 'weightedDummyDemand': weighted_dummy_demand}
 
 
 
@@ -1186,32 +1197,48 @@ def nonfixeddummyinventoryhelper(demand_tmpD
   
   flow = printSolution()
   
-  print('\nOptimal Inventory Allocation')
-  for depot, value in depotVars.iteritems():
-      OptInv = {}
-      if depot != 'dummy':
-          #print(m.getAttr('x', [depotVars[value] for key,value in depotVars))
-          print(str(depot) + ": " + str(value.getAttr('x')))
-          
+  
+    
   
   if m.status == GRB.Status.OPTIMAL:
-    obj = m.objVal
+      #axr: adjusting objective value for dummy
+      dummysum = 0
+      for dummykey, dummyvalue in flow.iteritems():    
+          if 'dummy' in dummykey:
+              dummysum = dummysum + dummyvalue * bigMCostDummy * probs_tmpD[next(iter(probs_tmpD))]
+      adjobjVal = m.objVal - dummysum
+      dummyObj = m.objVal
+          
+      weighted_dummy_demand = 0
+      for dummyVar in dummyTris:
+        disasterID = dummyVar.VarName.split(':')[2][:9]
+        weighted_dummy_demand += probs_tmpD[disasterID] * dummyVar.x
+      
+    #Axr: collecting optimal inventory allocation
+      print('\nOptimal Inventory Allocation:')
+    #  for depot, value in depotVars.iteritems():
+    #      OptInv = {}
+    #      if depot != 'dummy':
+    #            print(m.getAttr('x', [depotVars[value] for key,value in depotVars))
+      for depot, value in depotVars.iteritems():
+          if depot != 'dummy':
+              print(depot + ": " + str(depotVars[depot].X))
+        
+        
+      constrs = m.getConstrs()
+      print constrs
+      constr_coeffs = m.getAttr('x', )
+      print constr_coeffs
+    
+    
+      dualx = m.getAttr('Pi') 
+      print dualx
   else:
-    obj = 'No Solution'
-    
-  weighted_dummy_demand = 0
-  for dummyVar in dummyTris:
-    disasterID = dummyVar.VarName.split(':')[2][:9]
-    weighted_dummy_demand += probs_tmpD[disasterID] * dummyVar.x
-    
-  #axr: adjusting objective value for dummy
-  dummysum = 0
-  for dummykey, dummyvalue in flow.iteritems():    
-      if 'dummy' in dummykey:
-          dummysum = dummysum + dummyvalue * bigMCostDummy * probs_tmpD[next(iter(probs_tmpD))]
-  adjobjVal = m.objVal - dummysum
+      adjobjVal = 'error - no solution'
+      dummyObj = 'error - no solution'
+      weighted_dummy_demand = 0
 
-  return {'dummyObj': obj, 'adjdummyObj': adjobjVal, 'dummyFlow': flow, 'weightedDummyDemand': weighted_dummy_demand, 'optimalInv': OptInv}
+  return {'dummyObj': dummyObj, 'adjdummyObj': adjobjVal, 'dummyFlow': flow, 'weightedDummyDemand': weighted_dummy_demand}
 
 #BOT----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #BOT----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

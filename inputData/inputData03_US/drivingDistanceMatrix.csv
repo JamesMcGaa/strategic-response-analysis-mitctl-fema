@@ -1,246 +1,246 @@
 Agency,NameCity,depotGglCountryAscii,depotGglAddressAscii,depotGglLat,depotGglLong,Order,disasterGglCountryAscii,disasterGglAddressAscii,disasterGglLat,disasterGglLong,distance_km,drivingTime_hrs
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Oregon,"Salem, Oregon",42.51954,-70.8967155,5018,45
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Washington,"Olympia, Washington",47.0378741,-122.9006951,1204,11
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Alabama,"Montgomery, Alabama",32.3668052,-86.2999689,3826,35
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,3980,36
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Mississippi,"Jackson, Mississippi",32.2987573,-90.1848103,3436,31
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Tennessee,"Nashville, Tennessee",36.1626638,-86.7816016,3706,33
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Illinois,"Springfield, Illinois",42.1014831,-72.589811,4856,44
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Florida,"Tallahassee, Florida",30.4382559,-84.2807329,4242,37
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Texas,"Austin, Texas",30.267153,-97.7430608,2830,25
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Arkansas,"Little Rock, Arkansas",34.7464809,-92.2895948,3160,28
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Oklahoma,"Oklahoma City, Oklahoma",35.4675602,-97.5164276,2618,23
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Iowa,"Des Moines, Iowa",41.6005448,-93.6091064,2896,26
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Missouri,"Jefferson City, Missouri",38.5767017,-92.1735164,3157,28
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Indiana,"Indianapolis, Indiana",39.768403,-86.158068,3662,33
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Ohio,"Columbus, Ohio",39.9611755,-82.9987942,3939,35
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Nebraska,"Lincoln, Nebraska",40.813616,-96.7025955,2595,23
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,California,"Sacramento, California",38.5815719,-121.4943996,141,1
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Wisconsin,"Madison, Wisconsin",43.0730517,-89.4012302,3368,30
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,New Hampshire,"Concord, New Hampshire",43.2081366,-71.5375718,4955,45
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Vermont,"Montpelier, Vermont",44.2600593,-72.5753869,4933,45
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,South Carolina,"Columbia, South Carolina",34.0007104,-81.0348144,4323,39
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Arizona,"Phoenix, Arizona",33.4483771,-112.0740373,1213,11
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Kentucky,"Frankfort, Kentucky",38.2009055,-84.8732835,3806,34
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,New York,"Albany, New York",42.6525793,-73.7562317,4723,42
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Louisiana,"Baton Rouge, Louisiana",30.4514677,-91.1871466,3534,31
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Kansas,"Topeka, Kansas",39.0473451,-95.6751576,2869,25
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Maine,"Augusta, Maine",33.4734978,-82.0105148,4212,38
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Alaska,"Juneau, Alaska",58.3019444,-134.4197221,4048,51
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Massachusetts,"Boston, Massachusetts",42.3600825,-71.0588801,4988,45
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Rhode Island,"Providence, Rhode Island",41.8239891,-71.4128343,4964,45
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Connecticut,"Hartford, Connecticut",41.7658043,-72.6733723,4858,44
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Minnesota,"Saint Paul, Minnesota",44.9537029,-93.0899578,3196,29
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,New Jersey,"Trenton, New Jersey",40.2205824,-74.759717,4659,42
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Delaware,"Dover, Delaware",39.158168,-75.5243682,4666,42
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Virginia,"Richmond, Virginia",37.5407246,-77.4360481,4623,42
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,South Dakota,"Pierre, South Dakota",44.3667876,-100.3537522,2496,22
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,New Mexico,"Santa Fe, New Mexico",35.6869752,-105.937799,1846,16
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,North Dakota,"Bismarck, North Dakota",46.8083268,-100.7837392,2537,23
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,North Carolina,"Raleigh, North Carolina",35.7795897,-78.6381787,4571,41
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Pennsylvania,"Harrisburg, Pennsylvania",40.2731911,-76.8867008,4465,40
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Maryland,"Annapolis, Maryland",38.9784453,-76.4921829,4568,41
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Michigan,"Lansing, Michigan",42.732535,-84.5555347,3755,33
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,West Virginia,"Charleston, West Virginia",32.7764749,-79.9310512,4470,40
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Idaho,"Boise, Idaho",43.6150186,-116.2023137,1028,9
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Montana,"Helena, Montana",46.5891452,-112.0391057,1766,16
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Nevada,"Carson City, Nevada",39.1637984,-119.7674034,347,3
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Colorado,"Denver, Colorado",39.7392358,-104.990251,2018,18
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Wyoming,"Cheyenne, Wyoming",41.1399814,-104.8202462,1888,17
-FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Utah,"Salt Lake City, Utah",40.7607793,-111.8910474,1184,10
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Oregon,"Salem, Oregon",42.51954,-70.8967155,2874,26
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Washington,"Olympia, Washington",47.0378741,-122.9006951,3444,31
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Alabama,"Montgomery, Alabama",32.3668052,-86.2999689,1042,9
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,1257,11
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Mississippi,"Jackson, Mississippi",32.2987573,-90.1848103,652,5
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Tennessee,"Nashville, Tennessee",36.1626638,-86.7816016,1067,9
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Illinois,"Springfield, Illinois",42.1014831,-72.589811,2727,25
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Florida,"Tallahassee, Florida",30.4382559,-84.2807329,1395,12
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Texas,"Austin, Texas",30.267153,-97.7430608,313,2
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Arkansas,"Little Rock, Arkansas",34.7464809,-92.2895948,513,4
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Oklahoma,"Oklahoma City, Oklahoma",35.4675602,-97.5164276,331,3
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Iowa,"Des Moines, Iowa",41.6005448,-93.6091064,1124,10
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Missouri,"Jefferson City, Missouri",38.5767017,-92.1735164,888,8
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Indiana,"Indianapolis, Indiana",39.768403,-86.158068,1446,13
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Ohio,"Columbus, Ohio",39.9611755,-82.9987942,1671,15
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Nebraska,"Lincoln, Nebraska",40.813616,-96.7025955,1024,9
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,California,"Sacramento, California",38.5815719,-121.4943996,2778,25
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Wisconsin,"Madison, Wisconsin",43.0730517,-89.4012302,1593,15
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,New Hampshire,"Concord, New Hampshire",43.2081366,-71.5375718,2925,26
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Vermont,"Montpelier, Vermont",44.2600593,-72.5753869,2865,26
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,South Carolina,"Columbia, South Carolina",34.0007104,-81.0348144,1600,14
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Arizona,"Phoenix, Arizona",33.4483771,-112.0740373,1712,15
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Kentucky,"Frankfort, Kentucky",38.2009055,-84.8732835,1400,12
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,New York,"Albany, New York",42.6525793,-73.7562317,2654,24
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Louisiana,"Baton Rouge, Louisiana",30.4514677,-91.1871466,686,6
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Kansas,"Topeka, Kansas",39.0473451,-95.6751576,796,7
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Maine,"Augusta, Maine",33.4734978,-82.0105148,1489,13
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Alaska,"Juneau, Alaska",58.3019444,-134.4197221,5364,61
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Massachusetts,"Boston, Massachusetts",42.3600825,-71.0588801,2845,26
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Rhode Island,"Providence, Rhode Island",41.8239891,-71.4128343,2793,25
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Connecticut,"Hartford, Connecticut",41.7658043,-72.6733723,2686,24
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Minnesota,"Saint Paul, Minnesota",44.9537029,-93.0899578,1522,14
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,New Jersey,"Trenton, New Jersey",40.2205824,-74.759717,2408,22
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Delaware,"Dover, Delaware",39.158168,-75.5243682,2297,21
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Virginia,"Richmond, Virginia",37.5407246,-77.4360481,2054,18
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,South Dakota,"Pierre, South Dakota",44.3667876,-100.3537522,1505,14
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,New Mexico,"Santa Fe, New Mexico",35.6869752,-105.937799,1029,9
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,North Dakota,"Bismarck, North Dakota",46.8083268,-100.7837392,1827,17
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,North Carolina,"Raleigh, North Carolina",35.7795897,-78.6381787,1908,17
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Pennsylvania,"Harrisburg, Pennsylvania",40.2731911,-76.8867008,2224,20
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Maryland,"Annapolis, Maryland",38.9784453,-76.4921829,2198,20
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Michigan,"Lansing, Michigan",42.732535,-84.5555347,1850,16
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,West Virginia,"Charleston, West Virginia",32.7764749,-79.9310512,1747,15
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Idaho,"Boise, Idaho",43.6150186,-116.2023137,2588,23
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Montana,"Helena, Montana",46.5891452,-112.0391057,2549,23
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Nevada,"Carson City, Nevada",39.1637984,-119.7674034,2652,24
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Colorado,"Denver, Colorado",39.7392358,-104.990251,1278,11
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Wyoming,"Cheyenne, Wyoming",41.1399814,-104.8202462,1438,13
-FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Utah,"Salt Lake City, Utah",40.7607793,-111.8910474,1999,19
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Oregon,"Salem, Oregon",42.51954,-70.8967155,1761,16
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Washington,"Olympia, Washington",47.0378741,-122.9006951,4308,39
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Alabama,"Montgomery, Alabama",32.3668052,-86.2999689,258,2
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,0,0
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Mississippi,"Jackson, Mississippi",32.2987573,-90.1848103,613,5
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Tennessee,"Nashville, Tennessee",36.1626638,-86.7816016,401,3
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Illinois,"Springfield, Illinois",42.1014831,-72.589811,1613,15
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Florida,"Tallahassee, Florida",30.4382559,-84.2807329,419,4
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Texas,"Austin, Texas",30.267153,-97.7430608,1539,13
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Arkansas,"Little Rock, Arkansas",34.7464809,-92.2895948,836,7
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Oklahoma,"Oklahoma City, Oklahoma",35.4675602,-97.5164276,1365,12
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Iowa,"Des Moines, Iowa",41.6005448,-93.6091064,1450,13
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Missouri,"Jefferson City, Missouri",38.5767017,-92.1735164,1103,10
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Indiana,"Indianapolis, Indiana",39.768403,-86.158068,859,7
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Ohio,"Columbus, Ohio",39.9611755,-82.9987942,912,8
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Nebraska,"Lincoln, Nebraska",40.813616,-96.7025955,1601,14
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,California,"Sacramento, California",38.5815719,-121.4943996,3971,36
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Wisconsin,"Madison, Wisconsin",43.0730517,-89.4012302,1397,12
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,New Hampshire,"Concord, New Hampshire",43.2081366,-71.5375718,1812,17
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Vermont,"Montpelier, Vermont",44.2600593,-72.5753869,1892,17
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,South Carolina,"Columbia, South Carolina",34.0007104,-81.0348144,344,3
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Arizona,"Phoenix, Arizona",33.4483771,-112.0740373,2970,26
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Kentucky,"Frankfort, Kentucky",38.2009055,-84.8732835,655,6
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,New York,"Albany, New York",42.6525793,-73.7562317,1614,14
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Louisiana,"Baton Rouge, Louisiana",30.4514677,-91.1871466,847,7
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Kansas,"Topeka, Kansas",39.0473451,-95.6751576,1388,12
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Maine,"Augusta, Maine",33.4734978,-82.0105148,233,2
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Alaska,"Juneau, Alaska",58.3019444,-134.4197221,6014,66
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Massachusetts,"Boston, Massachusetts",42.3600825,-71.0588801,1732,16
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Rhode Island,"Providence, Rhode Island",41.8239891,-71.4128343,1679,15
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Connecticut,"Hartford, Connecticut",41.7658043,-72.6733723,1573,14
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Minnesota,"Saint Paul, Minnesota",44.9537029,-93.0899578,1805,16
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,New Jersey,"Trenton, New Jersey",40.2205824,-74.759717,1299,12
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Delaware,"Dover, Delaware",39.158168,-75.5243682,1178,11
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Virginia,"Richmond, Virginia",37.5407246,-77.4360481,852,7
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,South Dakota,"Pierre, South Dakota",44.3667876,-100.3537522,2225,19
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,New Mexico,"Santa Fe, New Mexico",35.6869752,-105.937799,2223,20
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,North Dakota,"Bismarck, North Dakota",46.8083268,-100.7837392,2502,22
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,North Carolina,"Raleigh, North Carolina",35.7795897,-78.6381787,651,6
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Pennsylvania,"Harrisburg, Pennsylvania",40.2731911,-76.8867008,1150,10
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Maryland,"Annapolis, Maryland",38.9784453,-76.4921829,1080,10
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Michigan,"Lansing, Michigan",42.732535,-84.5555347,1247,11
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,West Virginia,"Charleston, West Virginia",32.7764749,-79.9310512,491,4
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Idaho,"Boise, Idaho",43.6150186,-116.2023137,3489,31
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Montana,"Helena, Montana",46.5891452,-112.0391057,3311,30
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Nevada,"Carson City, Nevada",39.1637984,-119.7674034,3884,35
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Colorado,"Denver, Colorado",39.7392358,-104.990251,2259,20
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Wyoming,"Cheyenne, Wyoming",41.1399814,-104.8202462,2310,20
-FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Utah,"Salt Lake City, Utah",40.7607793,-111.8910474,3014,27
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Oregon,"Salem, Oregon",42.51954,-70.8967155,527,5
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Washington,"Olympia, Washington",47.0378741,-122.9006951,4606,42
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Alabama,"Montgomery, Alabama",32.3668052,-86.2999689,1522,14
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,1265,11
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Mississippi,"Jackson, Mississippi",32.2987573,-90.1848103,1798,16
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Tennessee,"Nashville, Tennessee",36.1626638,-86.7816016,1294,12
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Illinois,"Springfield, Illinois",42.1014831,-72.589811,379,3
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Florida,"Tallahassee, Florida",30.4382559,-84.2807329,1631,14
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Texas,"Austin, Texas",30.267153,-97.7430608,2675,24
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Arkansas,"Little Rock, Arkansas",34.7464809,-92.2895948,1853,17
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Oklahoma,"Oklahoma City, Oklahoma",35.4675602,-97.5164276,2225,20
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Iowa,"Des Moines, Iowa",41.6005448,-93.6091064,1733,16
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Missouri,"Jefferson City, Missouri",38.5767017,-92.1735164,1625,15
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Indiana,"Indianapolis, Indiana",39.768403,-86.158068,1035,9
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Ohio,"Columbus, Ohio",39.9611755,-82.9987942,754,7
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Nebraska,"Lincoln, Nebraska",40.813616,-96.7025955,2038,18
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,California,"Sacramento, California",38.5815719,-121.4943996,4482,40
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Wisconsin,"Madison, Wisconsin",43.0730517,-89.4012302,1456,13
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,New Hampshire,"Concord, New Hampshire",43.2081366,-71.5375718,578,5
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Vermont,"Montpelier, Vermont",44.2600593,-72.5753869,658,6
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,South Carolina,"Columbia, South Carolina",34.0007104,-81.0348144,1006,9
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Arizona,"Phoenix, Arizona",33.4483771,-112.0740373,3769,34
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Kentucky,"Frankfort, Kentucky",38.2009055,-84.8732835,1066,9
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,New York,"Albany, New York",42.6525793,-73.7562317,377,3
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Louisiana,"Baton Rouge, Louisiana",30.4514677,-91.1871466,2060,18
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Kansas,"Topeka, Kansas",39.0473451,-95.6751576,1910,17
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Maine,"Augusta, Maine",33.4734978,-82.0105148,1120,10
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Alaska,"Juneau, Alaska",58.3019444,-134.4197221,6073,67
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Massachusetts,"Boston, Massachusetts",42.3600825,-71.0588801,498,5
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Rhode Island,"Providence, Rhode Island",41.8239891,-71.4128343,445,4
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Connecticut,"Hartford, Connecticut",41.7658043,-72.6733723,339,3
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Minnesota,"Saint Paul, Minnesota",44.9537029,-93.0899578,1864,17
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,New Jersey,"Trenton, New Jersey",40.2205824,-74.759717,52,0
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Delaware,"Dover, Delaware",39.158168,-75.5243682,131,1
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Virginia,"Richmond, Virginia",37.5407246,-77.4360481,410,4
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,South Dakota,"Pierre, South Dakota",44.3667876,-100.3537522,2489,22
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,New Mexico,"Santa Fe, New Mexico",35.6869752,-105.937799,3085,28
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,North Dakota,"Bismarck, North Dakota",46.8083268,-100.7837392,2561,23
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,North Carolina,"Raleigh, North Carolina",35.7795897,-78.6381787,683,6
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Pennsylvania,"Harrisburg, Pennsylvania",40.2731911,-76.8867008,171,1
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Maryland,"Annapolis, Maryland",38.9784453,-76.4921829,206,2
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Michigan,"Lansing, Michigan",42.732535,-84.5555347,1042,9
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,West Virginia,"Charleston, West Virginia",32.7764749,-79.9310512,1091,10
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Idaho,"Boise, Idaho",43.6150186,-116.2023137,3923,35
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Montana,"Helena, Montana",46.5891452,-112.0391057,3545,33
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Nevada,"Carson City, Nevada",39.1637984,-119.7674034,4317,39
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Colorado,"Denver, Colorado",39.7392358,-104.990251,2781,25
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Wyoming,"Cheyenne, Wyoming",41.1399814,-104.8202462,2743,25
-FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Utah,"Salt Lake City, Utah",40.7607793,-111.8910474,3447,31
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Oregon,"Salem, Oregon",42.51954,-70.8967155,737,7
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Washington,"Olympia, Washington",47.0378741,-122.9006951,4512,41
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Alabama,"Montgomery, Alabama",32.3668052,-86.2999689,1286,11
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,1028,9
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Mississippi,"Jackson, Mississippi",32.2987573,-90.1848103,1579,14
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Tennessee,"Nashville, Tennessee",36.1626638,-86.7816016,1075,9
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Illinois,"Springfield, Illinois",42.1014831,-72.589811,589,5
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Florida,"Tallahassee, Florida",30.4382559,-84.2807329,1394,12
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Texas,"Austin, Texas",30.267153,-97.7430608,2456,22
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Arkansas,"Little Rock, Arkansas",34.7464809,-92.2895948,1634,15
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Oklahoma,"Oklahoma City, Oklahoma",35.4675602,-97.5164276,2163,19
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Iowa,"Des Moines, Iowa",41.6005448,-93.6091064,1640,15
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Missouri,"Jefferson City, Missouri",38.5767017,-92.1735164,1520,14
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Indiana,"Indianapolis, Indiana",39.768403,-86.158068,930,9
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Ohio,"Columbus, Ohio",39.9611755,-82.9987942,649,6
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Nebraska,"Lincoln, Nebraska",40.813616,-96.7025955,1945,18
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,California,"Sacramento, California",38.5815719,-121.4943996,4389,40
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Wisconsin,"Madison, Wisconsin",43.0730517,-89.4012302,1363,13
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,New Hampshire,"Concord, New Hampshire",43.2081366,-71.5375718,788,7
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Vermont,"Montpelier, Vermont",44.2600593,-72.5753869,868,8
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,South Carolina,"Columbia, South Carolina",34.0007104,-81.0348144,770,7
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Arizona,"Phoenix, Arizona",33.4483771,-112.0740373,3705,33
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Kentucky,"Frankfort, Kentucky",38.2009055,-84.8732835,901,8
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,New York,"Albany, New York",42.6525793,-73.7562317,588,5
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Louisiana,"Baton Rouge, Louisiana",30.4514677,-91.1871466,1841,16
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Kansas,"Topeka, Kansas",39.0473451,-95.6751576,1805,16
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Maine,"Augusta, Maine",33.4734978,-82.0105148,883,8
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Alaska,"Juneau, Alaska",58.3019444,-134.4197221,5979,66
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Massachusetts,"Boston, Massachusetts",42.3600825,-71.0588801,708,7
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Rhode Island,"Providence, Rhode Island",41.8239891,-71.4128343,655,6
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Connecticut,"Hartford, Connecticut",41.7658043,-72.6733723,549,5
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Minnesota,"Saint Paul, Minnesota",44.9537029,-93.0899578,1771,16
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,New Jersey,"Trenton, New Jersey",40.2205824,-74.759717,274,2
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Delaware,"Dover, Delaware",39.158168,-75.5243682,153,1
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Virginia,"Richmond, Virginia",37.5407246,-77.4360481,174,1
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,South Dakota,"Pierre, South Dakota",44.3667876,-100.3537522,2396,22
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,New Mexico,"Santa Fe, New Mexico",35.6869752,-105.937799,3021,27
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,North Dakota,"Bismarck, North Dakota",46.8083268,-100.7837392,2468,22
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,North Carolina,"Raleigh, North Carolina",35.7795897,-78.6381787,446,4
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Pennsylvania,"Harrisburg, Pennsylvania",40.2731911,-76.8867008,197,2
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Maryland,"Annapolis, Maryland",38.9784453,-76.4921829,54,0
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Michigan,"Lansing, Michigan",42.732535,-84.5555347,949,8
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,West Virginia,"Charleston, West Virginia",32.7764749,-79.9310512,855,7
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Idaho,"Boise, Idaho",43.6150186,-116.2023137,3829,34
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Montana,"Helena, Montana",46.5891452,-112.0391057,3452,32
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Nevada,"Carson City, Nevada",39.1637984,-119.7674034,4224,38
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Colorado,"Denver, Colorado",39.7392358,-104.990251,2676,24
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Wyoming,"Cheyenne, Wyoming",41.1399814,-104.8202462,2650,24
-FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Utah,"Salt Lake City, Utah",40.7607793,-111.8910474,3354,30
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Oregon,Salem,42.51954,-70.8967155,5018.0,45.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Washington,Olympia,47.0378741,-122.9006951,1204.0,11.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Alabama,Montgomery,32.3792233,-86.3077368,3826.0,35.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Georgia,Atlanta,33.7489954,-84.3879824,3980.0,36.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Mississippi,Jackson,32.298757300000005,-90.1848103,3436.0,31.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Tennessee,Nashville,36.1626638,-86.78160159999999,3706.0,33.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Illinois,Springfield,42.1014831,-72.589811,4856.0,44.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Florida,Tallahassee,30.4382559,-84.28073289999998,4242.0,37.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Texas,Austin,30.267153000000004,-97.7430608,2830.0,25.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Arkansas,Little Rock,34.7464809,-92.2895948,3160.0,28.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Oklahoma,Oklahoma City,35.4675602,-97.5164276,2618.0,23.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Iowa,Des Moines,41.5868353,-93.6249593,2895.0,26.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Missouri,Jefferson City,38.57670170000001,-92.17351640000001,3157.0,28.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Indiana,Indianapolis,39.768403,-86.158068,3662.0,32.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Ohio,Columbus,39.9611755,-82.99879419999998,3939.0,35.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Nebraska,Lincoln,40.813615999999996,-96.7025955,2595.0,23.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,California,Sacramento,38.5815719,-121.49439960000001,141.0,1.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Wisconsin,Madison,43.07305170000001,-89.4012302,3368.0,30.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,New Hampshire,Concord,43.2081366,-71.5375718,4955.0,45.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Vermont,Montpelier,44.26005929999999,-72.57538690000001,4933.0,45.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,South Carolina,Columbia,34.0007104,-81.0348144,4323.0,39.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Arizona,Phoenix,33.4483771,-112.07403729999999,1213.0,11.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Kentucky,Frankfort,38.2009055,-84.87328350000001,3806.0,34.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,New York,Albany,42.65257929999999,-73.7562317,4723.0,42.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Louisiana,Baton Rouge,30.451467699999995,-91.1871466,3534.0,31.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Kansas,Topeka,39.0473451,-95.6751576,2869.0,25.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Maine,Augusta,33.4734978,-82.0105148,4212.0,38.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Alaska,Juneau,58.301944400000004,-134.4197221,4048.0,51.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Massachusetts,Boston,42.360082500000004,-71.0588801,4988.0,45.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Rhode Island,Providence,41.8239891,-71.4128343,4964.0,45.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Connecticut,Hartford,41.76580429999999,-72.6733723,4841.0,44.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Minnesota,Saint Paul,44.953702899999996,-93.0899578,3196.0,29.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,New Jersey,Trenton,40.2205824,-74.75971700000001,4659.0,42.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Delaware,Dover,39.158167999999996,-75.5243682,4666.0,42.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Virginia,Richmond,37.540724600000004,-77.4360481,4623.0,41.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,South Dakota,Pierre,44.36678759999999,-100.3537522,2496.0,22.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,New Mexico,Santa Fe,35.686975200000006,-105.937799,1846.0,16.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,North Dakota,Bismarck,46.808326799999996,-100.7837392,2537.0,23.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,North Carolina,Raleigh,35.7795897,-78.6381787,4571.0,41.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Pennsylvania,Harrisburg,40.273191100000005,-76.88670079999999,4465.0,40.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Maryland,Annapolis,38.9784453,-76.4921829,4568.0,41.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Michigan,Lansing,42.732535,-84.55553470000001,3755.0,33.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,West Virginia,Charleston,32.776474900000004,-79.93105120000001,4470.0,40.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Idaho,Boise,43.6150186,-116.2023137,1028.0,9.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Montana,Helena,46.589145200000004,-112.03910570000001,1766.0,16.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Nevada,Carson City,39.1637984,-119.76740339999999,347.0,3.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Colorado,Denver,39.739235799999996,-104.990251,2018.0,18.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Wyoming,Cheyenne,41.1399814,-104.8202462,1888.0,17.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Utah,Salt Lake City,40.760779299999996,-111.89104740000002,1184.0,10.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Oregon,Salem,42.51954,-70.8967155,2875.0,26.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Washington,Olympia,47.0378741,-122.9006951,3444.0,31.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Alabama,Montgomery,32.3792233,-86.3077368,1042.0,9.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Georgia,Atlanta,33.7489954,-84.3879824,1257.0,11.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Mississippi,Jackson,32.298757300000005,-90.1848103,652.0,5.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Tennessee,Nashville,36.1626638,-86.78160159999999,1068.0,9.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Illinois,Springfield,42.1014831,-72.589811,2727.0,25.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Florida,Tallahassee,30.4382559,-84.28073289999998,1395.0,12.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Texas,Austin,30.267153000000004,-97.7430608,313.0,2.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Arkansas,Little Rock,34.7464809,-92.2895948,514.0,4.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Oklahoma,Oklahoma City,35.4675602,-97.5164276,331.0,3.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Iowa,Des Moines,41.5868353,-93.6249593,1126.0,10.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Missouri,Jefferson City,38.57670170000001,-92.17351640000001,888.0,8.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Indiana,Indianapolis,39.768403,-86.158068,1446.0,13.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Ohio,Columbus,39.9611755,-82.99879419999998,1672.0,15.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Nebraska,Lincoln,40.813615999999996,-96.7025955,1024.0,9.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,California,Sacramento,38.5815719,-121.49439960000001,2778.0,25.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Wisconsin,Madison,43.07305170000001,-89.4012302,1594.0,15.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,New Hampshire,Concord,43.2081366,-71.5375718,2926.0,26.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Vermont,Montpelier,44.26005929999999,-72.57538690000001,2865.0,26.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,South Carolina,Columbia,34.0007104,-81.0348144,1601.0,14.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Arizona,Phoenix,33.4483771,-112.07403729999999,1712.0,15.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Kentucky,Frankfort,38.2009055,-84.87328350000001,1401.0,12.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,New York,Albany,42.65257929999999,-73.7562317,2655.0,24.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Louisiana,Baton Rouge,30.451467699999995,-91.1871466,687.0,6.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Kansas,Topeka,39.0473451,-95.6751576,796.0,7.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Maine,Augusta,33.4734978,-82.0105148,1490.0,13.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Alaska,Juneau,58.301944400000004,-134.4197221,5364.0,61.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Massachusetts,Boston,42.360082500000004,-71.0588801,2846.0,26.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Rhode Island,Providence,41.8239891,-71.4128343,2793.0,25.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Connecticut,Hartford,41.76580429999999,-72.6733723,2687.0,24.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Minnesota,Saint Paul,44.953702899999996,-93.0899578,1525.0,14.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,New Jersey,Trenton,40.2205824,-74.75971700000001,2408.0,22.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Delaware,Dover,39.158167999999996,-75.5243682,2297.0,21.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Virginia,Richmond,37.540724600000004,-77.4360481,2054.0,18.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,South Dakota,Pierre,44.36678759999999,-100.3537522,1505.0,14.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,New Mexico,Santa Fe,35.686975200000006,-105.937799,1029.0,9.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,North Dakota,Bismarck,46.808326799999996,-100.7837392,1827.0,17.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,North Carolina,Raleigh,35.7795897,-78.6381787,1908.0,17.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Pennsylvania,Harrisburg,40.273191100000005,-76.88670079999999,2224.0,20.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Maryland,Annapolis,38.9784453,-76.4921829,2199.0,20.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Michigan,Lansing,42.732535,-84.55553470000001,1851.0,16.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,West Virginia,Charleston,32.776474900000004,-79.93105120000001,1748.0,15.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Idaho,Boise,43.6150186,-116.2023137,2588.0,23.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Montana,Helena,46.589145200000004,-112.03910570000001,2549.0,23.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Nevada,Carson City,39.1637984,-119.76740339999999,2652.0,24.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Colorado,Denver,39.739235799999996,-104.990251,1278.0,11.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Wyoming,Cheyenne,41.1399814,-104.8202462,1438.0,13.0
+FEMA,Dallas,Texas,"Dallas, Texas",32.7766642,-96.7969879,1,Utah,Salt Lake City,40.760779299999996,-111.89104740000002,1999.0,19.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Oregon,Salem,42.51954,-70.8967155,1761.0,16.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Washington,Olympia,47.0378741,-122.9006951,4308.0,39.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Alabama,Montgomery,32.3792233,-86.3077368,259.0,2.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Georgia,Atlanta,33.7489954,-84.3879824,0.0,0.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Mississippi,Jackson,32.298757300000005,-90.1848103,613.0,5.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Tennessee,Nashville,36.1626638,-86.78160159999999,401.0,3.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Illinois,Springfield,42.1014831,-72.589811,1613.0,15.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Florida,Tallahassee,30.4382559,-84.28073289999998,419.0,4.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Texas,Austin,30.267153000000004,-97.7430608,1539.0,13.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Arkansas,Little Rock,34.7464809,-92.2895948,836.0,7.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Oklahoma,Oklahoma City,35.4675602,-97.5164276,1365.0,12.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Iowa,Des Moines,41.5868353,-93.6249593,1453.0,13.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Missouri,Jefferson City,38.57670170000001,-92.17351640000001,1103.0,10.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Indiana,Indianapolis,39.768403,-86.158068,859.0,7.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Ohio,Columbus,39.9611755,-82.99879419999998,912.0,8.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Nebraska,Lincoln,40.813615999999996,-96.7025955,1601.0,14.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,California,Sacramento,38.5815719,-121.49439960000001,3971.0,36.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Wisconsin,Madison,43.07305170000001,-89.4012302,1397.0,12.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,New Hampshire,Concord,43.2081366,-71.5375718,1812.0,17.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Vermont,Montpelier,44.26005929999999,-72.57538690000001,1892.0,17.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,South Carolina,Columbia,34.0007104,-81.0348144,344.0,3.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Arizona,Phoenix,33.4483771,-112.07403729999999,2970.0,26.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Kentucky,Frankfort,38.2009055,-84.87328350000001,655.0,6.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,New York,Albany,42.65257929999999,-73.7562317,1614.0,14.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Louisiana,Baton Rouge,30.451467699999995,-91.1871466,847.0,7.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Kansas,Topeka,39.0473451,-95.6751576,1388.0,12.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Maine,Augusta,33.4734978,-82.0105148,233.0,2.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Alaska,Juneau,58.301944400000004,-134.4197221,6014.0,66.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Massachusetts,Boston,42.360082500000004,-71.0588801,1732.0,16.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Rhode Island,Providence,41.8239891,-71.4128343,1679.0,15.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Connecticut,Hartford,41.76580429999999,-72.6733723,1573.0,14.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Minnesota,Saint Paul,44.953702899999996,-93.0899578,1805.0,16.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,New Jersey,Trenton,40.2205824,-74.75971700000001,1299.0,12.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Delaware,Dover,39.158167999999996,-75.5243682,1178.0,11.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Virginia,Richmond,37.540724600000004,-77.4360481,852.0,7.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,South Dakota,Pierre,44.36678759999999,-100.3537522,2225.0,19.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,New Mexico,Santa Fe,35.686975200000006,-105.937799,2223.0,20.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,North Dakota,Bismarck,46.808326799999996,-100.7837392,2502.0,22.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,North Carolina,Raleigh,35.7795897,-78.6381787,651.0,6.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Pennsylvania,Harrisburg,40.273191100000005,-76.88670079999999,1150.0,10.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Maryland,Annapolis,38.9784453,-76.4921829,1080.0,10.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Michigan,Lansing,42.732535,-84.55553470000001,1260.0,11.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,West Virginia,Charleston,32.776474900000004,-79.93105120000001,491.0,4.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Idaho,Boise,43.6150186,-116.2023137,3489.0,31.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Montana,Helena,46.589145200000004,-112.03910570000001,3311.0,30.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Nevada,Carson City,39.1637984,-119.76740339999999,3884.0,35.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Colorado,Denver,39.739235799999996,-104.990251,2259.0,20.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Wyoming,Cheyenne,41.1399814,-104.8202462,2310.0,20.0
+FEMA,Atlanta,Georgia,"Atlanta, Georgia",33.7489954,-84.3879824,2,Utah,Salt Lake City,40.760779299999996,-111.89104740000002,3014.0,27.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Oregon,Salem,42.51954,-70.8967155,527.0,5.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Washington,Olympia,47.0378741,-122.9006951,4622.0,42.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Alabama,Montgomery,32.3792233,-86.3077368,1523.0,14.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Georgia,Atlanta,33.7489954,-84.3879824,1265.0,11.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Mississippi,Jackson,32.298757300000005,-90.1848103,1798.0,16.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Tennessee,Nashville,36.1626638,-86.78160159999999,1294.0,12.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Illinois,Springfield,42.1014831,-72.589811,379.0,3.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Florida,Tallahassee,30.4382559,-84.28073289999998,1631.0,14.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Texas,Austin,30.267153000000004,-97.7430608,2675.0,24.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Arkansas,Little Rock,34.7464809,-92.2895948,1853.0,17.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Oklahoma,Oklahoma City,35.4675602,-97.5164276,2225.0,20.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Iowa,Des Moines,41.5868353,-93.6249593,1735.0,16.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Missouri,Jefferson City,38.57670170000001,-92.17351640000001,1625.0,15.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Indiana,Indianapolis,39.768403,-86.158068,1035.0,9.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Ohio,Columbus,39.9611755,-82.99879419999998,754.0,7.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Nebraska,Lincoln,40.813615999999996,-96.7025955,2038.0,18.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,California,Sacramento,38.5815719,-121.49439960000001,4482.0,40.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Wisconsin,Madison,43.07305170000001,-89.4012302,1473.0,13.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,New Hampshire,Concord,43.2081366,-71.5375718,578.0,5.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Vermont,Montpelier,44.26005929999999,-72.57538690000001,658.0,6.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,South Carolina,Columbia,34.0007104,-81.0348144,1006.0,9.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Arizona,Phoenix,33.4483771,-112.07403729999999,3769.0,34.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Kentucky,Frankfort,38.2009055,-84.87328350000001,1066.0,9.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,New York,Albany,42.65257929999999,-73.7562317,377.0,3.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Louisiana,Baton Rouge,30.451467699999995,-91.1871466,2060.0,18.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Kansas,Topeka,39.0473451,-95.6751576,1910.0,17.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Maine,Augusta,33.4734978,-82.0105148,1120.0,10.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Alaska,Juneau,58.301944400000004,-134.4197221,6089.0,67.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Massachusetts,Boston,42.360082500000004,-71.0588801,498.0,5.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Rhode Island,Providence,41.8239891,-71.4128343,445.0,4.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Connecticut,Hartford,41.76580429999999,-72.6733723,339.0,3.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Minnesota,Saint Paul,44.953702899999996,-93.0899578,1881.0,17.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,New Jersey,Trenton,40.2205824,-74.75971700000001,52.0,0.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Delaware,Dover,39.158167999999996,-75.5243682,131.0,1.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Virginia,Richmond,37.540724600000004,-77.4360481,410.0,4.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,South Dakota,Pierre,44.36678759999999,-100.3537522,2505.0,22.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,New Mexico,Santa Fe,35.686975200000006,-105.937799,3085.0,28.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,North Dakota,Bismarck,46.808326799999996,-100.7837392,2577.0,23.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,North Carolina,Raleigh,35.7795897,-78.6381787,683.0,6.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Pennsylvania,Harrisburg,40.273191100000005,-76.88670079999999,171.0,1.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Maryland,Annapolis,38.9784453,-76.4921829,206.0,2.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Michigan,Lansing,42.732535,-84.55553470000001,1042.0,9.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,West Virginia,Charleston,32.776474900000004,-79.93105120000001,1091.0,10.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Idaho,Boise,43.6150186,-116.2023137,3923.0,35.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Montana,Helena,46.589145200000004,-112.03910570000001,3561.0,32.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Nevada,Carson City,39.1637984,-119.76740339999999,4317.0,39.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Colorado,Denver,39.739235799999996,-104.990251,2781.0,25.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Wyoming,Cheyenne,41.1399814,-104.8202462,2743.0,25.0
+FEMA,Philadelphia,Pennsylvania,"Philadelphia, Pennsylvania",39.9525839,-75.1652215,3,Utah,Salt Lake City,40.760779299999996,-111.89104740000002,3447.0,31.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Oregon,Salem,42.51954,-70.8967155,737.0,7.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Washington,Olympia,47.0378741,-122.9006951,4529.0,41.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Alabama,Montgomery,32.3792233,-86.3077368,1287.0,11.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Georgia,Atlanta,33.7489954,-84.3879824,1028.0,9.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Mississippi,Jackson,32.298757300000005,-90.1848103,1579.0,14.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Tennessee,Nashville,36.1626638,-86.78160159999999,1075.0,9.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Illinois,Springfield,42.1014831,-72.589811,589.0,5.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Florida,Tallahassee,30.4382559,-84.28073289999998,1394.0,12.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Texas,Austin,30.267153000000004,-97.7430608,2456.0,22.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Arkansas,Little Rock,34.7464809,-92.2895948,1634.0,15.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Oklahoma,Oklahoma City,35.4675602,-97.5164276,2163.0,19.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Iowa,Des Moines,41.5868353,-93.6249593,1642.0,15.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Missouri,Jefferson City,38.57670170000001,-92.17351640000001,1520.0,14.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Indiana,Indianapolis,39.768403,-86.158068,930.0,9.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Ohio,Columbus,39.9611755,-82.99879419999998,649.0,6.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Nebraska,Lincoln,40.813615999999996,-96.7025955,1945.0,18.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,California,Sacramento,38.5815719,-121.49439960000001,4389.0,40.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Wisconsin,Madison,43.07305170000001,-89.4012302,1379.0,13.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,New Hampshire,Concord,43.2081366,-71.5375718,788.0,7.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Vermont,Montpelier,44.26005929999999,-72.57538690000001,868.0,8.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,South Carolina,Columbia,34.0007104,-81.0348144,770.0,7.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Arizona,Phoenix,33.4483771,-112.07403729999999,3705.0,33.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Kentucky,Frankfort,38.2009055,-84.87328350000001,901.0,8.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,New York,Albany,42.65257929999999,-73.7562317,588.0,5.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Louisiana,Baton Rouge,30.451467699999995,-91.1871466,1841.0,16.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Kansas,Topeka,39.0473451,-95.6751576,1805.0,16.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Maine,Augusta,33.4734978,-82.0105148,883.0,8.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Alaska,Juneau,58.301944400000004,-134.4197221,5996.0,66.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Massachusetts,Boston,42.360082500000004,-71.0588801,708.0,7.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Rhode Island,Providence,41.8239891,-71.4128343,655.0,6.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Connecticut,Hartford,41.76580429999999,-72.6733723,549.0,5.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Minnesota,Saint Paul,44.953702899999996,-93.0899578,1788.0,16.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,New Jersey,Trenton,40.2205824,-74.75971700000001,274.0,2.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Delaware,Dover,39.158167999999996,-75.5243682,153.0,1.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Virginia,Richmond,37.540724600000004,-77.4360481,174.0,1.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,South Dakota,Pierre,44.36678759999999,-100.3537522,2412.0,22.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,New Mexico,Santa Fe,35.686975200000006,-105.937799,3021.0,27.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,North Dakota,Bismarck,46.808326799999996,-100.7837392,2484.0,22.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,North Carolina,Raleigh,35.7795897,-78.6381787,446.0,4.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Pennsylvania,Harrisburg,40.273191100000005,-76.88670079999999,197.0,2.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Maryland,Annapolis,38.9784453,-76.4921829,54.0,0.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Michigan,Lansing,42.732535,-84.55553470000001,949.0,8.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,West Virginia,Charleston,32.776474900000004,-79.93105120000001,855.0,7.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Idaho,Boise,43.6150186,-116.2023137,3829.0,34.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Montana,Helena,46.589145200000004,-112.03910570000001,3468.0,32.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Nevada,Carson City,39.1637984,-119.76740339999999,4224.0,38.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Colorado,Denver,39.739235799999996,-104.990251,2676.0,24.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Wyoming,Cheyenne,41.1399814,-104.8202462,2650.0,24.0
+FEMA,Washington D.C.,Washington D.C.,"Washington D.C., Washington D.C.",38.899187,-77.025564,4,Utah,Salt Lake City,40.760779299999996,-111.89104740000002,3354.0,30.0

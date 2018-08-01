@@ -1,50 +1,50 @@
-gglCountry,Continent,UseMe
-Oregon,United States,1
-Alabama,United States,1
-Georgia,United States,1
-Mississippi,United States,1
-Tennessee,United States,1
-Illinois,United States,1
-Florida,United States,1
-Texas,United States,1
-Arkansas,United States,1
-Oklahoma,United States,1
-Iowa,United States,1
-Missouri,United States,1
-Indiana,United States,1
-Ohio,United States,1
-Nebraska,United States,1
-California,United States,1
-Wisconsin,United States,1
-New Hampshire,United States,1
-Vermont,United States,1
-South Carolina,United States,1
-Arizona,United States,1
-Kentucky,United States,1
-New York,United States,1
-Louisiana,United States,1
-Kansas,United States,1
-Maine,United States,1
-Alaska,United States,1
-Massachusetts,United States,1
-Rhode Island,United States,1
-Connecticut,United States,1
-Minnesota,United States,1
-New Jersey,United States,1
-Delaware,United States,1
-Virginia,United States,1
-South Dakota,United States,1
-New Mexico,United States,1
-North Dakota,United States,1
-North Carolina,United States,1
-Pennsylvania,United States,1
-Maryland,United States,1
-Michigan,United States,1
-West Virginia,United States,1
-Idaho,United States,1
-Montana,United States,1
-Nevada,United States,1
-Colorado,United States,1
-Wyoming,United States,1
-Utah,United States,1
-Washington,United States,1
+gglCountry,Continent,UseMe,gglLat,gglLong
+Oregon,United States,1,42.51954,-70.8967155
+Washington,United States,1,47.0378741,-122.9006951
+Alabama,United States,1,32.3792233,-86.3077368
+Georgia,United States,1,33.7489954,-84.3879824
+Mississippi,United States,1,32.2987573,-90.1848103
+Tennessee,United States,1,36.1626638,-86.7816016
+Illinois,United States,1,42.1014831,-72.589811
+Florida,United States,1,30.4382559,-84.2807329
+Texas,United States,1,30.267153,-97.7430608
+Arkansas,United States,1,34.7464809,-92.2895948
+Oklahoma,United States,1,35.4675602,-97.5164276
+Iowa,United States,1,41.5868353,-93.6249593
+Missouri,United States,1,38.5767017,-92.1735164
+Indiana,United States,1,39.768403,-86.158068
+Ohio,United States,1,39.9611755,-82.9987942
+Nebraska,United States,1,40.813616,-96.7025955
+California,United States,1,38.5815719,-121.4943996
+Wisconsin,United States,1,43.0730517,-89.4012302
+New Hampshire,United States,1,43.2081366,-71.5375718
+Vermont,United States,1,44.2600593,-72.5753869
+South Carolina,United States,1,34.0007104,-81.0348144
+Arizona,United States,1,33.4483771,-112.0740373
+Kentucky,United States,1,38.2009055,-84.8732835
+New York,United States,1,42.6525793,-73.7562317
+Louisiana,United States,1,30.4514677,-91.1871466
+Kansas,United States,1,39.0473451,-95.6751576
+Maine,United States,1,33.4734978,-82.0105148
+Alaska,United States,1,58.3019444,-134.4197221
+Massachusetts,United States,1,42.3600825,-71.0588801
+Rhode Island,United States,1,41.8239891,-71.4128343
+Connecticut,United States,1,41.7658043,-72.6733723
+Minnesota,United States,1,44.9537029,-93.0899578
+New Jersey,United States,1,40.2205824,-74.759717
+Delaware,United States,1,39.158168,-75.5243682
+Virginia,United States,1,37.5407246,-77.4360481
+South Dakota,United States,1,44.3667876,-100.3537522
+New Mexico,United States,1,35.6869752,-105.937799
+North Dakota,United States,1,46.8083268,-100.7837392
+North Carolina,United States,1,35.7795897,-78.6381787
+Pennsylvania,United States,1,40.2731911,-76.8867008
+Maryland,United States,1,38.9784453,-76.4921829
+Michigan,United States,1,42.732535,-84.5555347
+West Virginia,United States,1,32.7764749,-79.9310512
+Idaho,United States,1,43.6150186,-116.2023137
+Montana,United States,1,46.5891452,-112.0391057
+Nevada,United States,1,39.1637984,-119.7674034
+Colorado,United States,1,39.7392358,-104.990251
+Wyoming,United States,1,41.1399814,-104.8202462
+Utah,United States,1,40.7607793,-111.8910474

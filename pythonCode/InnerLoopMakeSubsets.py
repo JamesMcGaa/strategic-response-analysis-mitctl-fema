@@ -43,9 +43,7 @@ inventoryNames = column(inventory_tmpD_tmp.keys(), 0)
 disasterIDsUnq = list(set(column(demand_tmpD_tmp.keys(), 0)))
 disasterIDsWithSubLocUnq = list(set(zip(column(demand_tmpD_tmp.keys(), 0), column(demand_tmpD_tmp.keys(), 1)) ))
 
-
 demandAddressesUnq = list(set([disasterGglAddressD[i] for i in disasterIDsWithSubLocUnq]))
-
 
 costPerItem_tmpD = {}
 timePerItem_tmpD = {}

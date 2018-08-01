@@ -1,6 +1,6 @@
 Depot City,Carrier,Disaster Location,Allocation
-"Dallas, Texas",carrier1,0000-0000SubLoc_00000,0.0
-"San Francisco, California",carrier4,0000-0000SubLoc_00000,70.0
+"Dallas, Texas",carrier1,0000-0000SubLoc_00000,700.0
+"San Francisco, California",carrier4,0000-0000SubLoc_00000,200.0
 "Dallas, Texas",carrier2,0000-0001SubLoc_00000,0.0
 "Dallas, Texas",carrier1,0000-0001SubLoc_00000,0.0
 "San Francisco, California",carrier5,0000-0001SubLoc_00000,0.0
