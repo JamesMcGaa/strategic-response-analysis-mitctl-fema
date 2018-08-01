@@ -1,0 +1,388 @@
+Day,Month,Year,gglCountry,gglAddress,Type,SubType,TotAffected,DisasterID
+10,1,2010,California,"Sacramento, California",Earthquake (seismic activity) ,Earthquake (ground shaking) ,630,2010-0027
+20,2,2008,Nevada,"Carson City, Nevada",Earthquake (seismic activity) ,Earthquake (ground shaking) ,2103,2008-0099
+22,12,2003,California,"Sacramento, California",Earthquake (seismic activity) ,Earthquake (ground shaking) ,160,2003-0623
+28,2,2001,Washington,"Olympia, Washington",Earthquake (seismic activity) ,Earthquake (ground shaking) ,400,2001-0099
+3,9,2000,California,"Sacramento, California",Earthquake (seismic activity) ,Earthquake (ground shaking) ,25174,2000-0598
+26,12,1994,California,"Sacramento, California",Earthquake (seismic activity) ,Earthquake (ground shaking) ,225,1994-0599
+17,1,1994,California,"Sacramento, California",Earthquake (seismic activity) ,Earthquake (ground shaking) ,27000,1994-0002
+21,9,1993,Oregon,"Salem, Oregon",Earthquake (seismic activity) ,Earthquake (ground shaking) ,3000,1993-0480
+28,6,1992,California,"Sacramento, California",Earthquake (seismic activity) ,Earthquake (ground shaking) ,300,1992-0215
+25,4,1992,Washington,"Olympia, Washington",Earthquake (seismic activity) ,Earthquake (ground shaking) ,94,1992-0120
+28,6,1991,California,"Sacramento, California",Earthquake (seismic activity) ,Earthquake (ground shaking) ,100,1991-0192
+30,3,1990,Montana,"Helena, Montana",Earthquake (seismic activity) ,Earthquake (ground shaking) ,120,1990-0703
+28,2,1990,California,"Sacramento, California",Earthquake (seismic activity) ,Earthquake (ground shaking) ,30,1990-0187
+13,7,2003,Alabama,"Montgomery, Alabama",Epidemic ,Viral Infectious Diseases ,29,2002-0858
+26,11,2002,Alabama,"Montgomery, Alabama",Epidemic ,Viral Infectious Diseases ,3523,2002-0502
+30,7,2005,Arizona,"Phoenix, Arizona",Extreme temperature ,Heat wave ,31,2005-0687
+30,6,2011,Montana,"Helena, Montana",Flood ,General Flood ,11000,2011-0646
+9,8,2011,North Carolina,"Raleigh, North Carolina",Flood ,General Flood ,100,2011-0425
+24,5,2011,Illinois,"Springfield, Illinois",Flood ,General Flood ,25000,2011-0166
+19,12,2010,California,"Sacramento, California",Flood ,General Flood ,1000,2010-0651
+21,9,2009,Arizona,"Phoenix, Arizona",Flood ,General Flood ,3000,2009-0405
+9,4,2009,Florida,"Tallahassee, Florida",Flood ,General Flood ,1000,2009-0190
+10,5,2009,West Virginia,"Charleston, West Virginia",Flood ,General Flood ,900,2009-0184
+20,4,2009,North Dakota,"Bismarck, North Dakota",Flood ,General Flood ,5060,2009-0106
+16,1,2009,Washington,"Olympia, Washington",Flood ,General Flood ,30000,2008-0638
+30,6,2008,Illinois,"Springfield, Illinois",Flood ,General Flood ,11000148,2008-0627
+20,4,2008,Missouri,"Jefferson City, Missouri",Flood ,General Flood ,1000,2008-0131
+9,1,2008,California,"Sacramento, California",Flood ,General Flood ,1500,2008-0010
+27,8,2007,Illinois,"Springfield, Illinois",Flood ,General flood ,2840,2007-0383
+22,6,2007,Texas,"Austin, Texas",Flood ,General flood ,750,2007-0254
+20,6,2007,New York,"Albany, New York",Flood ,Flash flood ,120,2007-0251
+6,7,2007,Texas,"Austin, Texas",Flood ,General flood ,5000,2007-0244
+29,5,2007,Texas,"Austin, Texas",Flood ,General flood ,100,2007-0173
+10,11,2006,Washington,"Olympia, Washington",Flood ,General flood ,1500,2006-0598
+14,10,2006,Alaska,"Juneau, Alaska",Flood ,General flood ,100,2006-0566
+26,9,2006,Pennsylvania,"Harrisburg, Pennsylvania",Flood ,General flood ,1210,2006-0546
+24,8,2006,Alaska,"Juneau, Alaska",Flood ,General flood ,150,2006-0461
+30,7,2006,Illinois,"Springfield, Illinois",Flood ,General flood ,600,2006-0418
+25,6,2006,South Dakota,"Pierre, South Dakota",Flood ,General flood ,2400,2006-0344
+1,7,2006,Maryland,"Annapolis, Maryland",Flood ,General flood ,65000,2006-0341
+22,5,2006,New Hampshire,"Concord, New Hampshire",Flood ,General flood ,2500,2006-0260
+17,4,2006,California,"Sacramento, California",Flood ,General flood ,600,2006-0180
+18,1,2006,California,"Sacramento, California",Flood ,General flood ,3600,2005-0716
+16,10,2005,New Hampshire,"Concord, New Hampshire",Flood ,General flood ,3000,2005-0583
+6,4,2005,New Jersey,"Trenton, New Jersey",Flood ,General flood ,11000,2005-0203
+23,2,2005,California,"Sacramento, California",Flood ,General flood ,150,2005-0103
+11,1,2005,California,"Sacramento, California",Flood ,General flood ,508,2005-0015
+28,5,2004,New Jersey,"Trenton, New Jersey",Flood ,General flood ,4929,2004-0248
+11,4,2004,Wisconsin,"Madison, Wisconsin",Flood ,General flood ,306,2004-0146
+14,5,2003,Tennessee,"Nashville, Tennessee",Flood ,General flood ,2000,2003-0756
+21,7,2003,Iowa,"Des Moines, Iowa",Flood ,General flood ,1200,2003-0334
+24,9,2002,Georgia,"Atlanta, Georgia",Flood ,General flood ,750,2002-0600
+23,7,2002,Texas,"Austin, Texas",Flood ,General flood ,144000,2002-0411
+19,11,2001,Texas,"Austin, Texas",Flood ,General flood ,600,2001-0724
+9,7,2001,West Virginia,"Charleston, West Virginia",Flood ,General flood ,15000,2001-0460
+15,5,2001,Minnesota,"Saint Paul, Minnesota",Flood ,General flood ,4400,2001-0268
+1,3,2001,Ohio,"Columbus, Ohio",Flood ,General flood ,200,2001-0262
+30,7,2000,Pennsylvania,"Harrisburg, Pennsylvania",Flood ,  ,300,2000-0502
+14,8,2000,New Jersey,"Trenton, New Jersey",Flood ,General flood ,175,2000-0500
+23,5,2000,Tennessee,"Nashville, Tennessee",Flood ,  ,300,2000-0297
+19,5,2000,Texas,"Austin, Texas",Flood ,  ,240,2000-0296
+9,5,2000,Oklahoma,"Oklahoma City, Oklahoma",Flood ,Flash flood ,300,2000-0271
+9,5,2000,Tennessee,"Nashville, Tennessee",Flood ,Flash flood ,2000,2000-0232
+22,2,2000,Kentucky,"Frankfort, Kentucky",Flood ,General flood ,231,2000-0080
+28,11,1999,Oregon,"Salem, Oregon",Flood ,  ,100,1999-0740
+17,6,1998,Iowa,"Des Moines, Iowa",Flood ,General flood ,1000,1998-0606
+6,8,1998,Illinois,"Springfield, Illinois",Flood ,Flash flood ,600,1998-0605
+7,8,1998,Wisconsin,"Madison, Wisconsin",Flood ,General flood ,1200,1998-0256
+1,7,1998,Kansas,"Topeka, Kansas",Flood ,Flash flood ,14000,1998-0199
+13,3,1998,Alabama,"Montgomery, Alabama",Flood ,General flood ,18000,1998-0066
+8,1,1998,Alabama,"Montgomery, Alabama",Flood ,  ,2200,1998-0008
+1,8,1997,Colorado,"Denver, Colorado",Flood ,General flood ,424,1997-0347
+21,8,1997,Illinois,"Springfield, Illinois",Flood ,  ,15000,1997-0215
+12,8,1997,California,"Sacramento, California",Flood ,General flood ,350,1997-0172
+13,6,1997,Montana,"Helena, Montana",Flood ,  ,200,1997-0127
+7,5,1997,North Dakota,"Bismarck, North Dakota",Flood ,  ,50400,1997-0083
+7,2,1997,Nevada,"Carson City, Nevada",Flood ,General flood ,125000,1997-0008
+21,7,1996,Pennsylvania,"Harrisburg, Pennsylvania",Flood ,General flood ,115,1996-0494
+3,1,1997,Washington,"Olympia, Washington",Flood ,General flood ,18100,1996-0295
+13,2,1996,Washington,"Olympia, Washington",Flood ,General flood ,24900,1996-0031
+21,1,1996,Nevada,"Carson City, Nevada",Flood ,General flood ,200000,1996-0015
+1,6,1995,Mississippi,"Jackson, Mississippi",Flood ,General flood ,5000,1995-0488
+16,10,1995,Alaska,"Juneau, Alaska",Flood ,General flood ,300,1995-0483
+10,12,1995,Washington,"Olympia, Washington",Flood ,General flood ,15000,1995-0481
+8,5,1995,South Dakota,"Pierre, South Dakota",Flood ,  ,75000,1995-0046
+13,5,1995,Louisiana,"Baton Rouge, Louisiana",Flood ,General flood ,20000,1995-0045
+23,10,1994,Texas,"Austin, Texas",Flood ,General flood ,14070,1994-0361
+21,1,1993,Louisiana,"Baton Rouge, Louisiana",Flood ,Flash flood ,200,1993-0421
+20,1,1993,California,"Sacramento, California",Flood ,General flood ,6000,1993-0420
+12,3,1993,Texas,"Austin, Texas",Flood ,General flood ,1500,1993-0126
+23,8,1993,Oklahoma,"Oklahoma City, Oklahoma",Flood ,General flood ,31000,1993-0043
+2,6,1990,Mississippi,"Jackson, Mississippi",Flood ,Flash flood ,200,1990-0713
+27,1,1990,Louisiana,"Baton Rouge, Louisiana",Flood ,General flood ,150,1990-0708
+11,1,1990,Washington,"Olympia, Washington",Flood ,General flood ,3000,1990-0707
+20,4,2010,New York,"Albany, New York",Industrial Accident ,Explosion ,17,2010-0167
+5,4,2010,West Virginia,"Charleston, West Virginia",Industrial Accident ,Explosion ,2,2010-0151
+2,1,2006,West Virginia,"Charleston, West Virginia",Industrial Accident ,Explosion ,7,2006-0005
+23,3,2005,Texas,"Austin, Texas",Industrial Accident ,Explosion ,170,2005-0148
+28,2,2004,Virginia,"Richmond, Virginia",Industrial Accident ,Explosion ,6,2004-0086
+29,1,2003,North Carolina,"Raleigh, North Carolina",Industrial Accident ,Explosion ,9,2003-0070
+23,9,2001,Alabama,"Montgomery, Alabama",Industrial Accident ,Explosion ,3,2001-0569
+8,12,1998,North Carolina,"Raleigh, North Carolina",Industrial Accident ,Chemical Spill ,100,1998-0412
+19,10,1998,Illinois,"Springfield, Illinois",Industrial Accident ,Chemical Spill ,200,1998-0318
+7,10,1998,Oregon,"Salem, Oregon",Industrial Accident ,Chemical Spill ,100,1998-0305
+2,9,1998,Kansas,"Topeka, Kansas",Industrial Accident ,Chemical Spill ,350,1998-0285
+2,7,1998,Alaska,"Juneau, Alaska",Industrial Accident ,Explosion ,1500,1998-0202
+1,7,1998,Louisiana,"Baton Rouge, Louisiana",Industrial Accident ,Gas Leak ,400,1998-0196
+22,6,1998,Florida,"Tallahassee, Florida",Industrial Accident ,Chemical Spill ,512,1998-0195
+26,2,1998,Massachusetts,"Boston, Massachusetts",Industrial Accident ,Fire ,500,1998-0058
+10,9,1997,Ohio,"Columbus, Ohio",Industrial Accident ,Explosion ,8,1997-0370
+19,7,1997,Illinois,"Springfield, Illinois",Industrial Accident ,Chemical Spill ,6000,1997-0198
+11,4,1996,Montana,"Helena, Montana",Industrial Accident ,Gas Leak ,1092,1996-0076
+25,7,1995,Texas,"Austin, Texas",Industrial Accident ,Explosion ,105,1995-0160
+28,2,1995,Minnesota,"Saint Paul, Minnesota",Industrial Accident ,Fire ,200,1995-0039
+6,12,1994,Texas,"Austin, Texas",Industrial Accident ,Fire ,3000,1994-0592
+21,10,1994,Texas,"Austin, Texas",Industrial Accident ,Gas Leak ,530,1994-0544
+13,6,1994,Pennsylvania,"Harrisburg, Pennsylvania",Industrial Accident ,Explosion ,379,1994-0141
+27,5,1994,Ohio,"Columbus, Ohio",Industrial Accident ,Explosion ,1700,1994-0136
+14,4,1994,Texas,"Austin, Texas",Industrial Accident ,Explosion ,4000,1994-0109
+24,3,1994,New Jersey,"Trenton, New Jersey",Industrial Accident ,Explosion ,58,1994-0085
+26,7,1993,Virginia,"Richmond, Virginia",Industrial Accident ,Gas Leak ,3000,1993-0450
+3,9,1991,North Carolina,"Raleigh, North Carolina",Industrial Accident ,Explosion ,41,1991-0590
+20,11,1991,Kentucky,"Frankfort, Kentucky",Industrial Accident ,Chemical Spill ,1000,1991-0424
+6,5,1991,Nevada,"Carson City, Nevada",Industrial Accident ,Gas Leak ,15055,1991-0151
+26,12,2003,California,"Sacramento, California",Mass movement wet ,Landslide ,15,2003-0633
+20,2,1994,California,"Sacramento, California",Mass movement wet ,Landslide ,125,1994-0045
+9,9,2010,California,"Sacramento, California",Miscellaneous accident ,Explosion ,171,2010-0474
+3,4,2008,Pennsylvania,"Harrisburg, Pennsylvania",Miscellaneous accident ,Fire ,2,2008-0143
+2,8,2007,Minnesota,"Saint Paul, Minnesota",Miscellaneous accident ,Collapse ,60,2007-0336
+27,11,2006,California,"Sacramento, California",Miscellaneous accident ,Fire ,19,2006-0637
+23,7,2004,Pennsylvania,"Harrisburg, Pennsylvania",Miscellaneous accident ,Other ,289,2004-0716
+18,7,2004,California,"Sacramento, California",Miscellaneous accident ,Fire ,100,2004-0405
+28,6,2003,Illinois,"Springfield, Illinois",Miscellaneous accident ,Collapse ,57,2003-0317
+14,3,2003,New York,"Albany, New York",Miscellaneous accident ,Fire ,103,2003-0165
+26,2,2003,Connecticut,"Hartford, Connecticut",Miscellaneous accident ,Fire ,120,2003-0108
+20,2,2003,Rhode Island,"Providence, Rhode Island",Miscellaneous accident ,Fire ,150,2003-0095
+17,2,2003,Illinois,"Springfield, Illinois",Miscellaneous accident ,Other ,30,2003-0088
+19,11,2002,New York,"Albany, New York",Miscellaneous accident ,Fire ,212,2002-0775
+25,10,2001,New York,"Albany, New York",Miscellaneous accident ,Collapse ,10,2001-0647
+28,10,2000,Massachusetts,"Boston, Massachusetts",Miscellaneous accident ,Fire ,120,2000-0745
+19,8,2000,California,"Sacramento, California",Miscellaneous accident ,Explosion ,2,2000-0512
+1,7,2000,Ohio,"Columbus, Ohio",Miscellaneous accident ,Collapse ,100,2000-0395
+20,5,2000,New Hampshire,"Concord, New Hampshire",Miscellaneous accident ,Collapse ,107,2000-0263
+18,11,1999,Texas,"Austin, Texas",Miscellaneous accident ,Collapse ,28,1999-0459
+29,7,1998,Washington,"Olympia, Washington",Miscellaneous accident ,Other ,260,1998-0243
+28,9,1997,Oregon,"Salem, Oregon",Miscellaneous accident ,Fire ,1000,1997-0241
+21,11,1996,Texas,"Austin, Texas",Miscellaneous accident ,Fire ,90,1996-0332
+24,8,1996,Oregon,"Salem, Oregon",Miscellaneous accident ,Fire ,200,1996-0193
+6,7,1995,Missouri,"Jefferson City, Missouri",Miscellaneous accident ,Collapse ,200,1995-0144
+13,6,2012,Texas,"Austin, Texas",Storm ,Local storm ,9003,2012-0614
+7,6,2012,Colorado,"Denver, Colorado",Storm ,Local storm ,2,2012-0613
+29,4,2012,Missouri,"Jefferson City, Missouri",Storm ,Local storm ,100,2012-0601
+29,8,2012,Mississippi,"Jackson, Mississippi",Storm ,Tropical cyclone ,60000,2012-0313
+27,6,2012,Florida,"Tallahassee, Florida",Storm ,Tropical cyclone ,17001,2012-0176
+15,4,2012,Oklahoma,"Oklahoma City, Oklahoma",Storm ,Local storm ,297,2012-0156
+3,4,2012,Texas,"Austin, Texas",Storm ,Local storm ,3300,2012-0122
+29,2,2012,Nebraska,"Lincoln, Nebraska",Storm ,Local storm ,200,2012-0055
+23,1,2012,Georgia,"Atlanta, Georgia",Storm ,Local storm ,100,2012-0010
+9,9,2011,Louisiana,"Baton Rouge, Louisiana",Storm ,Tropical cyclone ,600,2011-0456
+13,9,2011,New York,"Albany, New York",Storm ,Tropical cyclone ,370000,2011-0328
+1,6,2011,Illinois,"Springfield, Illinois",Storm ,Local storm ,200,2011-0195
+25,5,2011,Missouri,"Jefferson City, Missouri",Storm ,Local storm ,1150,2011-0172
+29,4,2011,Alabama,"Montgomery, Alabama",Storm ,Local storm ,17200,2011-0145
+16,4,2011,Mississippi,"Jackson, Mississippi",Storm ,Local storm ,43,2011-0134
+1,1,2011,Arkansas,"Little Rock, Arkansas",Storm ,Local storm ,13,2010-0663
+16,5,2010,Oklahoma,"Oklahoma City, Oklahoma",Storm ,Local storm ,58,2010-0196
+3,5,2010,Alabama,"Montgomery, Alabama",Storm ,Local storm ,8000,2010-0187
+24,4,2010,Mississippi,"Jackson, Mississippi",Storm ,Local storm ,2770,2010-0163
+28,3,2009,Texas,"Austin, Texas",Storm ,Local storm ,25,2009-0644
+18,6,2009,Texas,"Austin, Texas",Storm ,Local storm ,2,2009-0601
+23,8,2009,Maine,"Augusta, Maine",Storm ,Tropical cyclone ,9,2009-0342
+13,2,2009,Ohio,"Columbus, Ohio",Storm ,Local storm ,50,2009-0287
+10,4,2009,Texas,"Austin, Texas",Storm ,Local storm ,822,2009-0140
+28,4,2008,Virginia,"Richmond, Virginia",Storm ,Local storm ,200,2008-0645
+16,9,2008,Texas,"Austin, Texas",Storm ,Tropical cyclone ,200000,2008-0384
+1,9,2008,Louisiana,"Baton Rouge, Louisiana",Storm ,Tropical cyclone ,2100000,2008-0352
+28,8,2008,Florida,"Tallahassee, Florida",Storm ,Tropical cyclone ,400,2008-0338
+26,5,2008,Iowa,"Des Moines, Iowa",Storm ,Local storm ,70,2008-0210
+12,5,2008,Kansas,"Topeka, Kansas",Storm ,Local storm ,150,2008-0194
+14,3,2008,Georgia,"Atlanta, Georgia",Storm ,Local storm ,177,2008-0115
+6,2,2008,Tennessee,"Nashville, Tennessee",Storm ,Local storm ,150,2008-0039
+25,2,2007,Arkansas,"Little Rock, Arkansas",Storm ,  ,27,2007-0689
+8,5,2007,Colorado,"Denver, Colorado",Storm ,Local storm ,40,2007-0662
+11,12,2007,Oklahoma,"Oklahoma City, Oklahoma",Storm ,  ,2,2007-0641
+7,12,2007,Washington,"Olympia, Washington",Storm ,  ,1128,2007-0581
+2,3,2007,Alabama,"Montgomery, Alabama",Storm ,Local storm ,20,2007-0083
+2,2,2007,Florida,"Tallahassee, Florida",Storm ,Local storm ,6600,2007-0048
+17,1,2007,California,"Sacramento, California",Storm ,  ,220,2007-0026
+25,12,2006,Florida,"Tallahassee, Florida",Storm ,Local storm ,600,2006-0706
+16,11,2006,North Carolina,"Raleigh, North Carolina",Storm ,Local storm ,20,2006-0595
+7,9,2006,South Carolina,"Columbia, South Carolina",Storm ,Tropical cyclone ,140,2006-0466
+7,5,2006,Texas,"Austin, Texas",Storm ,Local storm ,600,2006-0257
+8,4,2006,Washington,"Olympia, Washington",Storm ,Local storm ,625,2006-0171
+3,4,2006,Tennessee,"Nashville, Tennessee",Storm ,Local storm ,3636,2006-0161
+13,3,2006,Missouri,"Jefferson City, Missouri",Storm ,Local storm ,42,2006-0128
+24,10,2005,Florida,"Tallahassee, Florida",Storm ,Tropical cyclone ,30000,2005-0585
+1,10,2005,Louisiana,"Baton Rouge, Louisiana",Storm ,Tropical cyclone ,300000,2005-0547
+18,8,2005,Wisconsin,"Madison, Wisconsin",Storm ,Local storm ,201,2005-0530
+19,9,2005,Alabama,"Montgomery, Alabama",Storm ,Tropical cyclone ,500000,2005-0467
+8,4,2005,Mississippi,"Jackson, Mississippi",Storm ,Local storm ,104,2005-0219
+21,3,2004,Arkansas,"Little Rock, Arkansas",Storm ,Local storm ,14,2004-0731
+8,9,2004,Virginia,"Richmond, Virginia",Storm ,Local storm ,189,2004-0502
+26,9,2004,Florida,"Tallahassee, Florida",Storm ,Tropical cyclone ,40000,2004-0473
+5,9,2004,Tennessee,"Nashville, Tennessee",Storm ,Tropical cyclone ,5000000,2004-0455
+13,8,2004,Florida,"Tallahassee, Florida",Storm ,Tropical cyclone ,30000,2004-0415
+28,6,2004,Texas,"Austin, Texas",Storm ,Local storm ,216,2004-0338
+24,6,2004,Wisconsin,"Madison, Wisconsin",Storm ,Local storm ,81,2004-0337
+27,5,2004,Kentucky,"Frankfort, Kentucky",Storm ,Local storm ,6408,2004-0295
+2,6,2004,Arkansas,"Little Rock, Arkansas",Storm ,Local storm ,1000,2004-0249
+27,5,2004,Illinois,"Springfield, Illinois",Storm ,Local storm ,337,2004-0245
+7,3,2004,Arkansas,"Little Rock, Arkansas",Storm ,Local storm ,1749,2004-0121
+30,6,2003,Louisiana,"Baton Rouge, Louisiana",Storm ,Tropical cyclone ,4,2003-0782
+30,5,2003,Ohio,"Columbus, Ohio",Storm ,Local storm ,195,2003-0780
+23,2,2003,Connecticut,"Hartford, Connecticut",Storm ,  ,118,2003-0741
+22,9,2003,North Carolina,"Raleigh, North Carolina",Storm ,Tropical cyclone ,225000,2003-0468
+8,8,2003,Florida,"Tallahassee, Florida",Storm ,Local storm ,1500,2003-0413
+10,5,2003,Alabama,"Montgomery, Alabama",Storm ,Local storm ,15145,2003-0210
+20,3,2003,Georgia,"Atlanta, Georgia",Storm ,Local storm ,386,2003-0139
+18,2,2003,Alabama,"Montgomery, Alabama",Storm ,Local storm ,120,2003-0085
+1,6,2002,Connecticut,"Hartford, Connecticut",Storm ,  ,47,2002-0880
+10,11,2002,Tennessee,"Nashville, Tennessee",Storm ,Local storm ,4151,2002-0700
+27,9,2002,Louisiana,"Baton Rouge, Louisiana",Storm ,Tropical cyclone ,13200,2002-0652
+5,9,2002,Wisconsin,"Madison, Wisconsin",Storm ,Local storm ,537,2002-0569
+3,5,2002,Kentucky,"Frankfort, Kentucky",Storm ,Local storm ,100,2002-0310
+21,4,2002,Michigan,"Lansing, Michigan",Storm ,Local storm ,12,2002-0287
+5,5,2002,Arkansas,"Little Rock, Arkansas",Storm ,Local storm ,183,2002-0283
+19,3,2002,Tennessee,"Nashville, Tennessee",Storm ,  ,754,2002-0165
+20,8,2001,Wyoming,"Cheyenne, Wyoming",Storm ,Local storm ,200,2001-0773
+13,10,2001,Texas,"Austin, Texas",Storm ,Local storm ,1952,2001-0602
+11,10,2001,California,"Sacramento, California",Storm ,Local storm ,360,2001-0601
+24,9,2001,Texas,"Austin, Texas",Storm ,Local storm ,1050,2001-0566
+10,10,2001,Oklahoma,"Oklahoma City, Oklahoma",Storm ,Local storm ,307,2001-0564
+21,6,2001,Colorado,"Denver, Colorado",Storm ,  ,122,2001-0477
+13,6,2001,Minnesota,"Saint Paul, Minnesota",Storm ,Local storm ,225,2001-0474
+18,6,2001,Wisconsin,"Madison, Wisconsin",Storm ,Local storm ,368,2001-0473
+14,6,2001,Iowa,"Des Moines, Iowa",Storm ,Local storm ,93,2001-0351
+21,4,2001,Kansas,"Topeka, Kansas",Storm ,Local storm ,1739,2001-0270
+20,3,2001,New Hampshire,"Concord, New Hampshire",Storm ,  ,100,2001-0266
+17,6,2001,Texas,"Austin, Texas",Storm ,Tropical cyclone ,172000,2001-0242
+29,3,2001,Indiana,"Indianapolis, Indiana",Storm ,Local storm ,492,2001-0194
+10,4,2001,Missouri,"Jefferson City, Missouri",Storm ,Local storm ,150,2001-0145
+22,2,2001,Virginia,"Richmond, Virginia",Storm ,Local storm ,100,2001-0106
+24,2,2001,Mississippi,"Jackson, Mississippi",Storm ,Local storm ,930,2001-0102
+24,12,2000,Texas,"Austin, Texas",Storm ,  ,34,2000-0838
+16,11,2000,Alabama,"Montgomery, Alabama",Storm ,Local storm ,312,2000-0801
+4,10,2000,Florida,"Tallahassee, Florida",Storm ,  ,17433,2000-0652
+20,9,2000,Ohio,"Columbus, Ohio",Storm ,Local storm ,115,2000-0614
+28,3,2000,Texas,"Austin, Texas",Storm ,Local storm ,3300,2000-0175
+14,2,2000,Alabama,"Montgomery, Alabama",Storm ,Local storm ,1000,2000-0067
+17,9,1999,North Carolina,"Raleigh, North Carolina",Storm ,Tropical cyclone ,3000010,1999-0327
+11,8,1999,Utah,"Salt Lake City, Utah",Storm ,Local storm ,442,1999-0266
+16,5,1999,Iowa,"Des Moines, Iowa",Storm ,Local storm ,914,1999-0179
+7,5,1999,Oklahoma,"Oklahoma City, Oklahoma",Storm ,Local storm ,8466,1999-0167
+15,4,1999,Georgia,"Atlanta, Georgia",Storm ,Local storm ,325,1999-0109
+15,4,1999,Mississippi,"Jackson, Mississippi",Storm ,Local storm ,183,1999-0108
+10,4,1999,Indiana,"Indianapolis, Indiana",Storm ,Local storm ,1242,1999-0107
+4,4,1999,Louisiana,"Baton Rouge, Louisiana",Storm ,Local storm ,600,1999-0098
+4,3,1999,North Carolina,"Raleigh, North Carolina",Storm ,  ,45040,1999-0088
+22,1,1999,Tennessee,"Nashville, Tennessee",Storm ,Local storm ,1648,1999-0042
+13,9,1998,Texas,"Austin, Texas",Storm ,Tropical cyclone ,6,1998-0611
+30,8,1998,North Carolina,"Raleigh, North Carolina",Storm ,Tropical cyclone ,17000,1998-0610
+17,4,1998,Arkansas,"Little Rock, Arkansas",Storm ,  ,1219,1998-0600
+28,12,1998,Texas,"Austin, Texas",Storm ,  ,100000,1998-0420
+29,9,1998,Florida,"Tallahassee, Florida",Storm ,Tropical cyclone ,5127,1998-0380
+3,11,1998,Kansas,"Topeka, Kansas",Storm ,  ,1000,1998-0366
+19,10,1998,Colorado,"Denver, Colorado",Storm ,  ,7000,1998-0315
+4,10,1998,Oklahoma,"Oklahoma City, Oklahoma",Storm ,Local storm ,163,1998-0304
+24,8,1998,Texas,"Austin, Texas",Storm ,Tropical cyclone ,545,1998-0277
+21,7,1998,Nevada,"Carson City, Nevada",Storm ,Local storm ,2200,1998-0228
+1,6,1998,Iowa,"Des Moines, Iowa",Storm ,Local storm ,750,1998-0180
+16,5,1998,Wisconsin,"Madison, Wisconsin",Storm ,Local storm ,23,1998-0168
+9,4,1998,Alabama,"Montgomery, Alabama",Storm ,Local storm ,1035,1998-0097
+3,4,1998,Illinois,"Springfield, Illinois",Storm ,Local storm ,138,1998-0092
+9,3,1998,Georgia,"Atlanta, Georgia",Storm ,Local storm ,665,1998-0067
+10,2,1998,Texas,"Austin, Texas",Storm ,Local storm ,4000,1998-0031
+3,2,1998,California,"Sacramento, California",Storm ,  ,10000,1998-0025
+23,2,1998,Iowa,"Des Moines, Iowa",Storm ,Local storm ,550,1998-0024
+6,4,1997,Iowa,"Des Moines, Iowa",Storm ,Local storm ,24,1997-0571
+24,1,1997,Alabama,"Montgomery, Alabama",Storm ,Local storm ,18,1997-0317
+27,5,1997,Texas,"Austin, Texas",Storm ,Local storm ,600,1997-0112
+3,3,1997,Arkansas,"Little Rock, Arkansas",Storm ,Local storm ,3650,1997-0034
+19,4,1996,Texas,"Austin, Texas",Storm ,Local storm ,107,1996-0454
+5,3,1996,Arkansas,"Little Rock, Arkansas",Storm ,Local storm ,24,1996-0453
+11,9,1996,North Carolina,"Raleigh, North Carolina",Storm ,Tropical cyclone ,4000,1996-0199
+6,8,1995,Florida,"Tallahassee, Florida",Storm ,Tropical cyclone ,6000,1995-0404
+8,10,1995,Florida,"Tallahassee, Florida",Storm ,Tropical cyclone ,78000,1995-0245
+19,5,1995,Alabama,"Montgomery, Alabama",Storm ,Local storm ,60,1995-0083
+6,5,1995,Texas,"Austin, Texas",Storm ,  ,100,1995-0073
+20,3,1995,California,"Sacramento, California",Storm ,  ,2000,1995-0041
+27,6,1994,Georgia,"Atlanta, Georgia",Storm ,  ,318,1994-0146
+26,4,1994,Texas,"Austin, Texas",Storm ,  ,60,1994-0106
+15,4,1994,Texas,"Austin, Texas",Storm ,Local storm ,1000,1994-0100
+26,3,1994,Georgia,"Atlanta, Georgia",Storm ,Local storm ,350,1994-0019
+5,5,1993,Minnesota,"Saint Paul, Minnesota",Storm ,Tropical cyclone ,60,1993-0431
+6,8,1993,Virginia,"Richmond, Virginia",Storm ,  ,150,1993-0193
+25,4,1993,Oklahoma,"Oklahoma City, Oklahoma",Storm ,Local storm ,390,1993-0151
+7,1,1992,Marshall Islands,"None, Marshall Islands",Storm ,Tropical cyclone ,20000,1992-0106
+24,8,1992,Florida,"Tallahassee, Florida",Storm ,Tropical cyclone ,250055,1992-0066
+30,11,1991,California,"Sacramento, California",Storm ,Local storm ,100,1991-0422
+15,12,1991,Texas,"Austin, Texas",Storm ,  ,200,1991-0406
+20,8,1991,North Carolina,"Raleigh, North Carolina",Storm ,Tropical cyclone ,1200,1991-0218
+9,5,1990,Texas,"Austin, Texas",Storm ,Local storm ,4668,1990-0357
+17,3,1990,Oklahoma,"Oklahoma City, Oklahoma",Storm ,Local storm ,6000,1990-0346
+19,9,2011,Nevada,"Carson City, Nevada",Transport accident ,Air ,60,2011-0375
+12,3,2011,New York,"Albany, New York",Transport accident ,Road ,20,2011-0118
+13,5,2009,Florida,"Tallahassee, Florida",Transport accident ,Water ,16,2009-0180
+5,10,2008,Arizona,"Phoenix, Arizona",Transport accident ,Road ,30,2008-0474
+13,9,2008,California,"Sacramento, California",Transport accident ,Rail ,135,2008-0404
+8,8,2008,Texas,"Austin, Texas",Transport accident ,Road ,26,2008-0330
+27,8,2006,Kentucky,"Frankfort, Kentucky",Transport Accident ,Air ,1,2006-0478
+18,7,2006,Florida,"Tallahassee, Florida",Transport Accident ,Water ,100,2006-0399
+2,10,2005,New York,"Albany, New York",Transport Accident ,Water ,28,2005-0562
+23,9,2005,Texas,"Austin, Texas",Transport Accident ,Road ,17,2005-0546
+26,1,2005,California,"Sacramento, California",Transport Accident ,Rail ,180,2005-0052
+7,1,2005,South Carolina,"Columbia, South Carolina",Transport Accident ,Rail ,950,2005-0009
+19,4,2004,New York,"Albany, New York",Transport Accident ,Rail ,130,2004-0697
+9,3,2003,California,"Sacramento, California",Transport Accident ,Road ,100,2003-0806
+15,10,2003,New York,"Albany, New York",Transport Accident ,Water ,65,2003-0502
+16,7,2003,California,"Sacramento, California",Transport Accident ,Road ,50,2003-0340
+11,3,2003,New York,"Albany, New York",Transport Accident ,Air ,2,2003-0126
+29,7,2002,Maryland,"Annapolis, Maryland",Transport Accident ,Rail ,101,2002-0460
+18,4,2002,California,"Sacramento, California",Transport Accident ,Rail ,150,2002-0288
+23,4,2002,California,"Sacramento, California",Transport Accident ,Rail ,150,2002-0230
+12,11,2001,New York,"Albany, New York",Transport Accident ,Air ,16,2001-0623
+3,8,2001,Illinois,"Springfield, Illinois",Transport Accident ,Rail ,117,2001-0466
+27,5,2000,Louisiana,"Baton Rouge, Louisiana",Transport Accident ,Rail ,2500,2000-0319
+4,12,1999,New Mexico,"Santa Fe, New Mexico",Transport Accident ,Road ,4,1999-0544
+21,11,1999,Pennsylvania,"Harrisburg, Pennsylvania",Transport Accident ,Road ,106,1999-0461
+1,6,1999,Arkansas,"Little Rock, Arkansas",Transport Accident ,Air ,80,1999-0335
+9,8,1999,California,"Sacramento, California",Transport Accident ,Road ,2,1999-0256
+9,5,1999,Louisiana,"Baton Rouge, Louisiana",Transport Accident ,Road ,22,1999-0168
+16,3,1999,Illinois,"Springfield, Illinois",Transport Accident ,Rail ,100,1999-0093
+28,12,1996,Louisiana,"Baton Rouge, Louisiana",Transport Accident ,Water ,111,1996-0384
+9,2,1996,New Jersey,"Trenton, New Jersey",Transport Accident ,Rail ,200,1996-0037
+9,10,1995,Arizona,"Phoenix, Arizona",Transport Accident ,Rail ,100,1995-0405
+5,6,1995,New York,"Albany, New York",Transport Accident ,Rail ,80,1995-0120
+2,7,1994,North Carolina,"Raleigh, North Carolina",Transport Accident ,Air ,20,1994-0158
+23,3,1994,North Carolina,"Raleigh, North Carolina",Transport Accident ,Air ,122,1994-0084
+6,4,1993,Alaska,"Juneau, Alaska",Transport Accident ,Air ,156,1993-0443
+23,3,1992,New York,"Albany, New York",Transport Accident ,Air ,24,1992-0040
+27,8,1991,New York,"Albany, New York",Transport Accident ,Rail ,150,1991-0427
+19,4,1991,French Polynesia,"None, French Polynesia",Transport Accident ,Air ,5,1991-0149
+28,12,1990,New York,"Albany, New York",Transport Accident ,Rail ,100,1990-0174
+3,12,1990,Michigan,"Lansing, Michigan",Transport Accident ,Air ,185,1990-0159
+13,12,1990,Tennessee,"Nashville, Tennessee",Transport Accident ,Road ,50,1990-0156
+12,12,1990,Massachusetts,"Boston, Massachusetts",Transport Accident ,Rail ,186,1990-0154
+8,8,2012,Ohio,"Columbus, Ohio",Wildfire ,  ,1809,2012-0542
+10,7,2012,Colorado,"Denver, Colorado",Wildfire ,  ,1038,2012-0232
+9,9,2011,Texas,"Austin, Texas",Wildfire ,Forest fire ,4800,2011-0349
+30,4,2011,Texas,"Austin, Texas",Wildfire ,Bush/Brush fire ,1305,2011-0140
+27,10,2009,California,"Sacramento, California",Wildfire ,Scrub/Grassland fire ,192,2009-0349
+11,5,2009,California,"Sacramento, California",Wildfire ,Scrub/Grassland fire ,263,2009-0178
+18,11,2008,California,"Sacramento, California",Wildfire ,  ,55020,2008-0524
+9,7,2008,California,"Sacramento, California",Wildfire ,Forest fire ,300,2008-0253
+27,11,2007,California,"Sacramento, California",Wildfire ,Forest fire ,10159,2007-0579
+24,10,2007,California,"Sacramento, California",Wildfire ,Scrub/grassland fire ,640064,2007-0519
+6,12,2006,California,"Sacramento, California",Wildfire ,Scrub/grassland fire ,15,2006-0662
+27,10,2006,California,"Sacramento, California",Wildfire ,Scrub/grassland fire ,103,2006-0576
+14,7,2006,California,"Sacramento, California",Wildfire ,  ,167,2006-0374
+4,1,2006,Texas,"Austin, Texas",Wildfire ,Forest fire ,1410,2005-0724
+14,8,2004,California,"Sacramento, California",Wildfire ,Forest fire ,245,2004-0446
+16,7,2004,Nevada,"Carson City, Nevada",Wildfire ,Forest fire ,242,2004-0348
+4,5,2004,California,"Sacramento, California",Wildfire ,Forest fire ,15000,2004-0196
+4,11,2003,California,"Sacramento, California",Wildfire ,Forest fire ,40,2003-0786
+4,11,2003,California,"Sacramento, California",Wildfire ,Forest fire ,27104,2003-0518
+20,6,2003,Arizona,"Phoenix, Arizona",Wildfire ,Forest fire ,750,2003-0299
+22,9,2002,California,"Sacramento, California",Wildfire ,Forest fire ,2213,2002-0618
+20,6,2002,Arizona,"Phoenix, Arizona",Wildfire ,Forest fire ,1269,2002-0379
+8,6,2002,Colorado,"Denver, Colorado",Wildfire ,Forest fire ,1572,2002-0351
+10,2,2002,California,"Sacramento, California",Wildfire ,Forest fire ,134,2002-0092
+27,6,2000,California,"Sacramento, California",Wildfire ,Forest fire ,8077,2000-0406
+26,2,2000,Florida,"Tallahassee, Florida",Wildfire ,Forest fire ,600,2000-0128
+24,8,1999,California,"Sacramento, California",Wildfire ,Forest fire ,90,1999-0297
+15,4,1999,Florida,"Tallahassee, Florida",Wildfire ,Forest fire ,629,1999-0112
+19,3,1999,Nebraska,"Lincoln, Nebraska",Wildfire ,Scrub/grassland fire ,300,1999-0094
+20,10,1998,California,"Sacramento, California",Wildfire ,Scrub/grassland fire ,365,1998-0319
+5,10,1998,California,"Sacramento, California",Wildfire ,Scrub/grassland fire ,600,1998-0306
+31,8,1998,California,"Sacramento, California",Wildfire ,Scrub/grassland fire ,132,1998-0286
+5,7,1998,Florida,"Tallahassee, Florida",Wildfire ,Scrub/grassland fire ,40124,1998-0185
+14,9,1997,California,"Sacramento, California",Wildfire ,Forest fire ,300,1997-0219
+9,8,1997,California,"Sacramento, California",Wildfire ,Forest fire ,700,1997-0174
+24,2,1996,Texas,"Austin, Texas",Wildfire ,Scrub/grassland fire ,50,1996-0452
+6,8,1994,California,"Sacramento, California",Wildfire ,Forest fire ,1200,1994-0192
+27,6,1994,California,"Sacramento, California",Wildfire ,Forest fire ,232,1994-0149
+3,11,1993,California,"Sacramento, California",Wildfire ,Forest fire ,130,1993-0440
+17,8,1992,California,"Sacramento, California",Wildfire ,Forest fire ,990,1992-0269
+17,10,1991,Washington,"Olympia, Washington",Wildfire ,Forest fire ,300,1991-0425

@@ -1,50 +1,50 @@
 gglCountryAscii,gglAddressAscii,gglLat,gglLong
-Oregon,"Salem, Oregon",42.51954,-70.8967155
-Washington,"Olympia, Washington",47.0378741,-122.9006951
-Alabama,"Montgomery, Alabama",32.3668052,-86.2999689
-Georgia,"Atlanta, Georgia",33.7489954,-84.3879824
-Mississippi,"Jackson, Mississippi",32.2987573,-90.1848103
-Tennessee,"Nashville, Tennessee",36.1626638,-86.7816016
-Illinois,"Springfield, Illinois",42.1014831,-72.589811
-Florida,"Tallahassee, Florida",30.4382559,-84.2807329
-Texas,"Austin, Texas",30.267153,-97.7430608
-Arkansas,"Little Rock, Arkansas",34.7464809,-92.2895948
-Oklahoma,"Oklahoma City, Oklahoma",35.4675602,-97.5164276
-Iowa,"Des Moines, Iowa",41.6005448,-93.6091064
-Missouri,"Jefferson City, Missouri",38.5767017,-92.1735164
-Indiana,"Indianapolis, Indiana",39.768403,-86.158068
-Ohio,"Columbus, Ohio",39.9611755,-82.9987942
-Nebraska,"Lincoln, Nebraska",40.813616,-96.7025955
-California,"Sacramento, California",38.5815719,-121.4943996
-Wisconsin,"Madison, Wisconsin",43.0730517,-89.4012302
-New Hampshire,"Concord, New Hampshire",43.2081366,-71.5375718
-Vermont,"Montpelier, Vermont",44.2600593,-72.5753869
-South Carolina,"Columbia, South Carolina",34.0007104,-81.0348144
-Arizona,"Phoenix, Arizona",33.4483771,-112.0740373
-Kentucky,"Frankfort, Kentucky",38.2009055,-84.8732835
-New York,"Albany, New York",42.6525793,-73.7562317
-Louisiana,"Baton Rouge, Louisiana",30.4514677,-91.1871466
-Kansas,"Topeka, Kansas",39.0473451,-95.6751576
-Maine,"Augusta, Maine",33.4734978,-82.0105148
-Alaska,"Juneau, Alaska",58.3019444,-134.4197221
-Massachusetts,"Boston, Massachusetts",42.3600825,-71.0588801
-Rhode Island,"Providence, Rhode Island",41.8239891,-71.4128343
-Connecticut,"Hartford, Connecticut",41.7658043,-72.6733723
-Minnesota,"Saint Paul, Minnesota",44.9537029,-93.0899578
-New Jersey,"Trenton, New Jersey",40.2205824,-74.759717
-Delaware,"Dover, Delaware",39.158168,-75.5243682
-Virginia,"Richmond, Virginia",37.5407246,-77.4360481
-South Dakota,"Pierre, South Dakota",44.3667876,-100.3537522
-New Mexico,"Santa Fe, New Mexico",35.6869752,-105.937799
-North Dakota,"Bismarck, North Dakota",46.8083268,-100.7837392
-North Carolina,"Raleigh, North Carolina",35.7795897,-78.6381787
-Pennsylvania,"Harrisburg, Pennsylvania",40.2731911,-76.8867008
-Maryland,"Annapolis, Maryland",38.9784453,-76.4921829
-Michigan,"Lansing, Michigan",42.732535,-84.5555347
-West Virginia,"Charleston, West Virginia",32.7764749,-79.9310512
-Idaho,"Boise, Idaho",43.6150186,-116.2023137
-Montana,"Helena, Montana",46.5891452,-112.0391057
-Nevada,"Carson City, Nevada",39.1637984,-119.7674034
-Colorado,"Denver, Colorado",39.7392358,-104.990251
-Wyoming,"Cheyenne, Wyoming",41.1399814,-104.8202462
-Utah,"Salt Lake City, Utah",40.7607793,-111.8910474
+Oregon,Salem,42.51954,-70.8967155
+Washington,Olympia,47.0378741,-122.9006951
+Alabama,Montgomery,32.3792233,-86.3077368
+Georgia,Atlanta,33.7489954,-84.3879824
+Mississippi,Jackson,32.2987573,-90.1848103
+Tennessee,Nashville,36.1626638,-86.7816016
+Illinois,Springfield,42.1014831,-72.589811
+Florida,Tallahassee,30.4382559,-84.28073289999999
+Texas,Austin,30.267153,-97.7430608
+Arkansas,Little Rock,34.7464809,-92.28959479999999
+Oklahoma,Oklahoma City,35.4675602,-97.5164276
+Iowa,Des Moines,41.5868353,-93.6249593
+Missouri,Jefferson City,38.57670170000001,-92.1735164
+Indiana,Indianapolis,39.768403,-86.158068
+Ohio,Columbus,39.9611755,-82.99879419999999
+Nebraska,Lincoln,40.813616,-96.7025955
+California,Sacramento,38.5815719,-121.4943996
+Wisconsin,Madison,43.0730517,-89.4012302
+New Hampshire,Concord,43.2081366,-71.5375718
+Vermont,Montpelier,44.26005929999999,-72.5753869
+South Carolina,Columbia,34.0007104,-81.0348144
+Arizona,Phoenix,33.4483771,-112.0740373
+Kentucky,Frankfort,38.2009055,-84.87328350000001
+New York,Albany,42.6525793,-73.7562317
+Louisiana,Baton Rouge,30.4514677,-91.18714659999999
+Kansas,Topeka,39.0473451,-95.67515759999999
+Maine,Augusta,33.4734978,-82.0105148
+Alaska,Juneau,58.3019444,-134.4197221
+Massachusetts,Boston,42.3600825,-71.0588801
+Rhode Island,Providence,41.8239891,-71.4128343
+Connecticut,Hartford,41.7658043,-72.6733723
+Minnesota,Saint Paul,44.9537029,-93.0899578
+New Jersey,Trenton,40.2205824,-74.759717
+Delaware,Dover,39.158168,-75.5243682
+Virginia,Richmond,37.5407246,-77.4360481
+South Dakota,Pierre,44.36678759999999,-100.3537522
+New Mexico,Santa Fe,35.6869752,-105.937799
+North Dakota,Bismarck,46.8083268,-100.7837392
+North Carolina,Raleigh,35.7795897,-78.6381787
+Pennsylvania,Harrisburg,40.2731911,-76.8867008
+Maryland,Annapolis,38.9784453,-76.4921829
+Michigan,Lansing,42.732535,-84.5555347
+West Virginia,Charleston,32.7764749,-79.93105120000001
+Idaho,Boise,43.6150186,-116.2023137
+Montana,Helena,46.5891452,-112.0391057
+Nevada,Carson City,39.1637984,-119.7674034
+Colorado,Denver,39.7392358,-104.990251
+Wyoming,Cheyenne,41.1399814,-104.8202462
+Utah,Salt Lake City,40.7607793,-111.8910474

@@ -29,29 +29,29 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
   #Monetary cost support 
 
   #Test 1
-  demand_tmpD = {
-  ('0000-0000', 'SubLoc_00000'): 100,
-  ('0000-0001', 'SubLoc_00000'): 80,
-  ('0000-0002', 'SubLoc_00000'): 50,}
-  probs_tmpD = {'0000-0000':.5, '0000-0001':.99, '0000-0002':.1,}
-  demandAddress_tmpD = {
-  ('0000-0000', 'SubLoc_00000'): "DisasterCity0", 
-  ('0000-0001', 'SubLoc_00000'): "DisasterCity1", 
-  ('0000-0002', 'SubLoc_00000'): "DisasterCity2",}
-  costD = {
-  ('San Francisco, California', 'DisasterCity0', 'Truck'):10, 
-  ('Dallas, Texas', 'DisasterCity0', 'Truck'):70, 
-  ("Philadelphia, Pennsylvania", 'DisasterCity0', 'Truck'):1,
-  ('San Francisco, California', 'DisasterCity1', 'Truck'):10, 
-  ('Dallas, Texas', 'DisasterCity1', 'Truck'):70, 
-  ("Philadelphia, Pennsylvania", 'DisasterCity1', 'Truck'):1,
-  ('San Francisco, California', 'DisasterCity2', 'Truck'):20, 
-  ('Dallas, Texas', 'DisasterCity2', 'Truck'):70, 
-  ("Philadelphia, Pennsylvania", 'DisasterCity2', 'Truck'):1,}
-  inventory_tmpD = {
-  'Dallas, Texas': 700, 
-  'San Francisco, California': 200, 
-  'Philadelphia, Pennsylvania': 30}
+#  demand_tmpD = {
+#  ('0000-0000', 'SubLoc_00000'): 930,
+#  ('0000-0001', 'SubLoc_00000'): 80,
+#  ('0000-0002', 'SubLoc_00000'): 50,}
+#  probs_tmpD = {'0000-0000':.5, '0000-0001':.99, '0000-0002':.1,}
+#  demandAddress_tmpD = {
+#  ('0000-0000', 'SubLoc_00000'): "DisasterCity0", 
+#  ('0000-0001', 'SubLoc_00000'): "DisasterCity1", 
+#  ('0000-0002', 'SubLoc_00000'): "DisasterCity2",}
+#  costD = {
+#  ('San Francisco, California', 'DisasterCity0', 'Truck'):10, 
+#  ('Dallas, Texas', 'DisasterCity0', 'Truck'):70, 
+#  ("Philadelphia, Pennsylvania", 'DisasterCity0', 'Truck'):1,
+#  ('San Francisco, California', 'DisasterCity1', 'Truck'):10, 
+#  ('Dallas, Texas', 'DisasterCity1', 'Truck'):70, 
+#  ("Philadelphia, Pennsylvania", 'DisasterCity1', 'Truck'):1,
+#  ('San Francisco, California', 'DisasterCity2', 'Truck'):20, 
+#  ('Dallas, Texas', 'DisasterCity2', 'Truck'):70, 
+#  ("Philadelphia, Pennsylvania", 'DisasterCity2', 'Truck'):1,}
+#  inventory_tmpD = {
+#  'Dallas, Texas': 700, 
+#  'San Francisco, California': 200, 
+#  'Philadelphia, Pennsylvania': 30}
  
  #Test 2
   # demand_tmpD = {
@@ -206,7 +206,6 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
   triVarList = [triVars[key] for key in triVars]
   for i in range(len(weights)):
     triToDistanceMap[triVarList[i]] = weights[i]
-  print(triToDistanceMap)
 
 
 
@@ -239,7 +238,6 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
           for tri in duoToTris[depot+":"+carrier[0]]:
             RHS.addTerms(1, tri)
           flowConstrs.append(m.addConstr(LHS, GRB.EQUAL, RHS, name="FLOW<"+depot+":"+carrier[0]+">"))
-
 
 
   #Depot capacity
@@ -354,158 +352,162 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                                   , minInvItemD
                                   , depotInWhichCountry
                                   )
-  print("----------------------------------DEMAND SERVED ------------------------------------")
-  timeDemandTuples = []
-  for var in triToDistanceMap:
-    if var.X > .01:
-      timeDemandTuples.append((var.X, triToDistanceMap[var]))
-  timeDemandTuples.sort(key = lambda x: x[1]) #Sort based on time
-  times = [e[1] for e in timeDemandTuples]
-  satisfied = [e[0] for e in timeDemandTuples]
-  cumulative_satisfied = []
-  for i in range(len(satisfied)):
-    cumulative_satisfied.append(sum(satisfied[:i+1]))
-  
-  import matplotlib.pyplot as plt
-
-  plt.plot(times, cumulative_satisfied)
-  plt.xlabel('Time')
-  plt.ylabel('Fraction of Total Demand Served')
-  plt.title('Demand Served Metric')
-  plt.show()
+  print("-------------------------------Demand Served in T-------------------\n")
+  if m.status ==  GRB.Status.OPTIMAL:
+      timeDemandTuples = []
+      for var in triToDistanceMap:
+        if var.X > .01:
+          timeDemandTuples.append((var.X, triToDistanceMap[var]))
+          
+      timeDemandTuples.sort(key = lambda x: x[1]) #Sort based on time
+      times = [e[1] for e in timeDemandTuples]
+      satisfied = [e[0] for e in timeDemandTuples]
+      cumulative_satisfied = []
+      for i in range(len(satisfied)):
+        cumulative_satisfied.append(sum(satisfied[:i+1]))
+      
+      import matplotlib.pyplot as plt
+    
+      plt.plot(times, cumulative_satisfied)
+      plt.xlabel('Time')
+      plt.ylabel('Fraction of Total Demand Served')
+      plt.title('Demand Served Metric')
+      plt.show()
 
 
 
   print("-------------------------------METRICS------------------------------\n")
   print 'Printing metrics for ' + n_itemIter
-  print dummy_solution
-  print ""
-  print nonfixed_dummy_solution
-  
-  print("\nTotal Response Time (Cost) for current inventory: " + str(dummy_solution['adjdummyObj']))
-  print("Total Response Time (Cost) for optimal inventory: " + str(nonfixed_dummy_solution['adjdummyObj']))
-  
-  balance_metric = dummy_solution['adjdummyObj'] / float(nonfixed_dummy_solution['adjdummyObj'])
-  print("\nBalance Metric: " + str(balance_metric))
-
-  weight_av_demand = 0
-  for key in demand_tmpD:
-    weight_av_demand += probs_tmpD[key[0]]*demand_tmpD[key]
-  print("\n\nWeighted Av. Demand: " + str(weight_av_demand))
-
-  weighted_dummy_demand = dummy_solution['weightedDummyDemand']
-  weight_av_demand_met = weight_av_demand - weighted_dummy_demand
-
-  print("\n\nWeighted Av. Demand Met: " + str(weight_av_demand_met))
- 
-  print("\n\nFraction Demand Served: " + str(weight_av_demand_met / weight_av_demand))
-
-
-  print("\n\nWeighted Fraction Completely Served:-----------")
-
-
-
-  # if obj == 'No Solution':
-  #   average_time = "No Solution"
-  # else:
-  #   average_time = str(obj / weight_av_demand_met)
-  # print("\n\nAverage Time (Cost): " + average_time)
-
-
-
-  # if obj == 'No Solution':
-  #   print("\n\nDepot Duals: No Solution")
-  # else:
-  #   print("\n\nDepot Duals: ")
-  #   average_time = str(obj / weight_av_demand_met)
-  #   values = []
-  #   for depotConstr in depotConstrs:
-  #     print(depotConstr.ConstrName + ": " + str(depotConstr.Pi))
-  #     values.append([depotConstr.ConstrName[:-1][6:], depotConstr.Pi])
-  #   pd.DataFrame(values, columns=["Depot City", "Sensitivity"]).to_csv("Depot_Duals.csv", index=False)
-
-
-  # print("\n\nAdjusted Depot Duals: ")
-  # print("\n\nT hours -----------------")
-
-  # if obj == 'No Solution':
-  #   print("\n\nCarrier Duals: No Solution")
-  # else:
-  #   print("\n\nCarrier Duals: ")
-  #   values = []
-  #   for carrierConstr in carrierConstrs:
-  #     print(carrierConstr.ConstrName + ": " + str(carrierConstr.Pi))
-  #     values.append([carrierConstr.ConstrName[:-1][16:].split(":")[0], carrierConstr.ConstrName[:-1][16:].split(":")[1] , carrierConstr.Pi])
-  #   pd.DataFrame(values, columns=["Depot City", "Carrier", "Sensitivity"]).to_csv("Carrier_Duals.csv", index=False)
-
-
-
-  print("\n\nAdjusted Carrier Duals: ")
-
-  import pandas as pd
-
-  grid = []
-  if m.status == GRB.Status.OPTIMAL:
-      for tri in [triVars[key] for key in triVars]:
-            grid.append(tri.VarName.split(":") + [tri.x])
-      flow = pd.DataFrame(grid, columns = ['Depot City', 'Carrier', 'Disaster Location', 'Allocation'])
-      flow.to_csv("StandardFlow.csv", index=False)
-
-
-
-  weighted_dummy_demand_nonfixed = nonfixed_dummy_solution['weightedDummyDemand']
-  weight_av_demand_met_nonfixed = weight_av_demand - weighted_dummy_demand_nonfixed
-  print("\n\nWeighted Av. Demand Met with current inventory: " + str(weight_av_demand_met))
-  print("Weighted Av. Demand Met with optimal inventory: " + str(weight_av_demand_met_nonfixed))
-  
-  print("\n\nFraction Demand Served with current inventory: " + str(weight_av_demand_met / weight_av_demand))
-  print("Fraction Demand Served with optimal inventory: " + str(weight_av_demand_met_nonfixed / weight_av_demand))
-  
-  #AXR 18/23/7: identifying number of disasters completely served
-  dummyFlowFiltered = {k:v for k,v in dummy_solution['dummyFlow'].iteritems() if 'dummy' in k}
-  WeightedFractionCompletelyServed = 1 - float(len(dummyFlowFiltered))/float(len(probs_tmpD))
-  
-  dummyFlowFilterednonFixed = {k:v for k,v in nonfixed_dummy_solution['dummyFlow'].iteritems() if 'dummy' in k}
-  WeightedFractionCompletelyServednonFixed = 1 - float(len(dummyFlowFilterednonFixed))/float(len(probs_tmpD))
-
-  print("\n\nWeighted Fraction Completely Served with current inventory: " + str(WeightedFractionCompletelyServed))
-  print("Weighted Fraction Completely Served with optimal inventory: " + str(WeightedFractionCompletelyServed))
-
-  average_time = dummy_solution['adjdummyObj'] / weight_av_demand_met
-  average_time = nonfixed_dummy_solution['adjdummyObj'] / weight_av_demand_met_nonfixed
-  print("\n\nAverage Time (Cost) with current inventory: " + str(average_time))
-  print("Average Time (Cost) with optimal inventory: " + str(average_time))
-
-
-#  if obj == 'No Solution':
-#    print("\n\nDepot Duals: No Solution")
-#  else:
-#    print("\n\nDepot Duals: ")
-#    average_time = str(obj / weight_av_demand_met)
-#    for depotConstr in depotConstrs:
-#      print(depotConstr.ConstrName + ": " + str(depotConstr.Pi))
-#
-#  print("\n\nAdjusted Depot Duals: ")
-#  print("\n\nT hours -----------------")
-#
-#  if obj == 'No Solution':
-#    print("\n\nCarrier Duals: No Solution")
-#  else:
-#    print("\n\nCarrier Duals: ")
-#    for carrierConstr in carrierConstrs:
-#      print(carrierConstr.ConstrName + ": " + str(carrierConstr.Pi))
-#
-#
-#
-#  print("\n\nAdjusted Carrier Duals: ")
-#
-#  import pandas as pd
-#  grid = []
-#  if m.status == GRB.Status.OPTIMAL:
-#      for tri in [triVars[key] for key in triVars]:
-#            grid.append(tri.VarName.split(":") + [tri.x])
-#  flow = pd.DataFrame(grid, columns = ['Depot City', 'Carrier', 'Disaster Location', 'Allocation'])
-#  flow.to_csv("StandardFlow.csv")
+#  print dummy_solution
+#  print ""
+#  print nonfixed_dummy_solution
+  if m.status !=  GRB.Status.OPTIMAL:
+      print 'no solution'
+  else:
+      print("\nTotal Response Time (Cost) for current inventory: " + str(dummy_solution['adjdummyObj']))
+      print("Total Response Time (Cost) for optimal inventory: " + str(nonfixed_dummy_solution['adjdummyObj']))
+      
+      balance_metric = dummy_solution['adjdummyObj'] / float(nonfixed_dummy_solution['adjdummyObj'])
+      print("Balance Metric: " + str(balance_metric))
+    
+      weight_av_demand = 0
+      for key in demand_tmpD:
+        weight_av_demand += probs_tmpD[key[0]]*demand_tmpD[key]
+      print("\n\nWeighted Av. Demand: " + str(weight_av_demand))
+    
+      weighted_dummy_demand = dummy_solution['weightedDummyDemand']
+      weight_av_demand_met = weight_av_demand - weighted_dummy_demand
+    
+      print("\n\nWeighted Av. Demand Met: " + str(weight_av_demand_met))
+     
+      print("\n\nFraction Demand Served: " + str(weight_av_demand_met / weight_av_demand))
+    
+    
+      print("\n\nWeighted Fraction Completely Served:-----------")
+    
+    
+    
+      # if obj == 'No Solution':
+      #   average_time = "No Solution"
+      # else:
+      #   average_time = str(obj / weight_av_demand_met)
+      # print("\n\nAverage Time (Cost): " + average_time)
+    
+    
+    
+      # if obj == 'No Solution':
+      #   print("\n\nDepot Duals: No Solution")
+      # else:
+      #   print("\n\nDepot Duals: ")
+      #   average_time = str(obj / weight_av_demand_met)
+      #   values = []
+      #   for depotConstr in depotConstrs:
+      #     print(depotConstr.ConstrName + ": " + str(depotConstr.Pi))
+      #     values.append([depotConstr.ConstrName[:-1][6:], depotConstr.Pi])
+      #   pd.DataFrame(values, columns=["Depot City", "Sensitivity"]).to_csv("Depot_Duals.csv", index=False)
+    
+    
+      # print("\n\nAdjusted Depot Duals: ")
+      # print("\n\nT hours -----------------")
+    
+      # if obj == 'No Solution':
+      #   print("\n\nCarrier Duals: No Solution")
+      # else:
+      #   print("\n\nCarrier Duals: ")
+      #   values = []
+      #   for carrierConstr in carrierConstrs:
+      #     print(carrierConstr.ConstrName + ": " + str(carrierConstr.Pi))
+      #     values.append([carrierConstr.ConstrName[:-1][16:].split(":")[0], carrierConstr.ConstrName[:-1][16:].split(":")[1] , carrierConstr.Pi])
+      #   pd.DataFrame(values, columns=["Depot City", "Carrier", "Sensitivity"]).to_csv("Carrier_Duals.csv", index=False)
+    
+    
+    
+      print("\n\nAdjusted Carrier Duals: ")
+    
+      import pandas as pd
+    
+      grid = []
+      if m.status == GRB.Status.OPTIMAL:
+          for tri in [triVars[key] for key in triVars]:
+                grid.append(tri.VarName.split(":") + [tri.x])
+          flow = pd.DataFrame(grid, columns = ['Depot City', 'Carrier', 'Disaster Location', 'Allocation'])
+          flow.to_csv("StandardFlow.csv", index=False)
+    
+    
+    
+      weighted_dummy_demand_nonfixed = nonfixed_dummy_solution['weightedDummyDemand']
+      weight_av_demand_met_nonfixed = weight_av_demand - weighted_dummy_demand_nonfixed
+      print("Weighted Av. Demand Met with current inventory: " + str(weight_av_demand_met))
+      print("Weighted Av. Demand Met with optimal inventory: " + str(weight_av_demand_met_nonfixed))
+      
+      print("\n\nFraction Demand Served with current inventory: " + str(weight_av_demand_met / weight_av_demand))
+      print("Fraction Demand Served with optimal inventory: " + str(weight_av_demand_met_nonfixed / weight_av_demand))
+      
+      #AXR 18/23/7: identifying number of disasters completely served
+      dummyFlowFiltered = {k:v for k,v in dummy_solution['dummyFlow'].iteritems() if 'dummy' in k}
+      WeightedFractionCompletelyServed = 1 - float(len(dummyFlowFiltered))/float(len(probs_tmpD))
+      
+      dummyFlowFilterednonFixed = {k:v for k,v in nonfixed_dummy_solution['dummyFlow'].iteritems() if 'dummy' in k}
+      WeightedFractionCompletelyServednonFixed = 1 - float(len(dummyFlowFilterednonFixed))/float(len(probs_tmpD))
+    
+      print("\n\nWeighted Fraction Completely Served with current inventory: " + str(WeightedFractionCompletelyServed))
+      print("Weighted Fraction Completely Served with optimal inventory: " + str(WeightedFractionCompletelyServed))
+    
+      average_time = dummy_solution['adjdummyObj'] / weight_av_demand_met
+      average_time = nonfixed_dummy_solution['adjdummyObj'] / weight_av_demand_met_nonfixed
+      print("\n\nAverage Time (Cost) with current inventory: " + str(average_time))
+      print("Average Time (Cost) with optimal inventory: " + str(average_time))
+    
+    
+    #  if obj == 'No Solution':
+    #    print("\n\nDepot Duals: No Solution")
+    #  else:
+    #    print("\n\nDepot Duals: ")
+    #    average_time = str(obj / weight_av_demand_met)
+    #    for depotConstr in depotConstrs:
+    #      print(depotConstr.ConstrName + ": " + str(depotConstr.Pi))
+    #
+    #  print("\n\nAdjusted Depot Duals: ")
+    #  print("\n\nT hours -----------------")
+    #
+    #  if obj == 'No Solution':
+    #    print("\n\nCarrier Duals: No Solution")
+    #  else:
+    #    print("\n\nCarrier Duals: ")
+    #    for carrierConstr in carrierConstrs:
+    #      print(carrierConstr.ConstrName + ": " + str(carrierConstr.Pi))
+    #
+    #
+    #
+    #  print("\n\nAdjusted Carrier Duals: ")
+    #
+    #  import pandas as pd
+    #  grid = []
+    #  if m.status == GRB.Status.OPTIMAL:
+    #      for tri in [triVars[key] for key in triVars]:
+    #            grid.append(tri.VarName.split(":") + [tri.x])
+    #  flow = pd.DataFrame(grid, columns = ['Depot City', 'Carrier', 'Disaster Location', 'Allocation'])
+    #  flow.to_csv("StandardFlow.csv")
 
 #>>> writer = pd.ExcelWriter('output.xlsx')
 #>>> df1.to_excel(writer,'Sheet1')
@@ -863,7 +865,6 @@ def dummyhelper(demand_tmpD
     m.update()
 
 
-
   #Introducing a fake dummy node across all variables
   carrierDict["dummy"] = [("dummycarrier",1000000,0)]
   duoVars["dummy:dummycarrier"] = m.addVar(lb=0.0, vtype=GRB.CONTINUOUS, name="dummy:dummycarrier") 
@@ -880,7 +881,6 @@ def dummyhelper(demand_tmpD
   #AXR 18/23/7 substituetd specific number for bigInventoryDummy variable
   inventory_tmpD['dummy'] = bigInventoryDummy
   m.update()
-
 
 
 
@@ -980,29 +980,39 @@ def dummyhelper(demand_tmpD
         print('No solution')
     return solution_flow
 
-  
 
-  weighted_dummy_demand = 0
-  for dummyVar in dummyTris:
-    disasterID = dummyVar.VarName.split(':')[2][:9]
-    weighted_dummy_demand += probs_tmpD[disasterID] * dummyVar.x
-    
 
-  dualx = m.getAttr('Pi') 
-  print dualx
 
   flow = printSolution()
-  
-  
-  
-  #axr: adjusting objective value for dummy
-  dummysum = 0
-  for dummykey, dummyvalue in flow.iteritems():    
-      if 'dummy' in dummykey:
-          dummysum = dummysum + dummyvalue * bigMCostDummy * probs_tmpD[next(iter(probs_tmpD))]
-  adjobjVal = m.objVal - dummysum
-  
-  return {'dummyObj': m.objVal, 'adjdummyObj': adjobjVal, 'dummyFlow': flow, 'weightedDummyDemand': weighted_dummy_demand}
+
+
+  if m.status == GRB.Status.OPTIMAL:
+      #axr: adjusting objective value for dummy
+      dummysum = 0
+      for dummykey, dummyvalue in flow.iteritems():    
+          if 'dummy' in dummykey:
+              dummysum = dummysum + dummyvalue * bigMCostDummy * probs_tmpD[next(iter(probs_tmpD))]
+      adjobjVal = m.objVal - dummysum
+      dummyObj = m.objVal
+          
+      weighted_dummy_demand = 0
+      for dummyVar in dummyTris:
+        disasterID = dummyVar.VarName.split(':')[2][:9]
+        weighted_dummy_demand += probs_tmpD[disasterID] * dummyVar.x
+        
+      constrs = m.getConstrs()
+      print constrs
+      constr_coeffs = m.getAttr('x', )
+      print constr_coeffs
+    
+    
+      dualx = m.getAttr('Pi') 
+      print dualx
+  else:
+      adjobjVal = 'error - no solution'
+      dummyObj = 'error - no solution'
+      weighted_dummy_demand = 0
+  return {'dummyObj': dummyObj, 'adjdummyObj': adjobjVal, 'dummyFlow': flow, 'weightedDummyDemand': weighted_dummy_demand}
 
 
 
@@ -1253,32 +1263,48 @@ def nonfixeddummyinventoryhelper(demand_tmpD
   
   flow = printSolution()
   
-  print('\nOptimal Inventory Allocation')
-  for depot, value in depotVars.iteritems():
-      OptInv = {}
-      if depot != 'dummy':
-          #print(m.getAttr('x', [depotVars[value] for key,value in depotVars))
-          print(str(depot) + ": " + str(value.getAttr('x')))
-          
+  
+    
   
   if m.status == GRB.Status.OPTIMAL:
-    obj = m.objVal
+      #axr: adjusting objective value for dummy
+      dummysum = 0
+      for dummykey, dummyvalue in flow.iteritems():    
+          if 'dummy' in dummykey:
+              dummysum = dummysum + dummyvalue * bigMCostDummy * probs_tmpD[next(iter(probs_tmpD))]
+      adjobjVal = m.objVal - dummysum
+      dummyObj = m.objVal
+          
+      weighted_dummy_demand = 0
+      for dummyVar in dummyTris:
+        disasterID = dummyVar.VarName.split(':')[2][:9]
+        weighted_dummy_demand += probs_tmpD[disasterID] * dummyVar.x
+      
+    #Axr: collecting optimal inventory allocation
+      print('\nOptimal Inventory Allocation:')
+    #  for depot, value in depotVars.iteritems():
+    #      OptInv = {}
+    #      if depot != 'dummy':
+    #            print(m.getAttr('x', [depotVars[value] for key,value in depotVars))
+      for depot, value in depotVars.iteritems():
+          if depot != 'dummy':
+              print(depot + ": " + str(depotVars[depot].X))
+        
+        
+      constrs = m.getConstrs()
+      print constrs
+      constr_coeffs = m.getAttr('x', )
+      print constr_coeffs
+    
+    
+      dualx = m.getAttr('Pi') 
+      print dualx
   else:
-    obj = 'No Solution'
-    
-  weighted_dummy_demand = 0
-  for dummyVar in dummyTris:
-    disasterID = dummyVar.VarName.split(':')[2][:9]
-    weighted_dummy_demand += probs_tmpD[disasterID] * dummyVar.x
-    
-  #axr: adjusting objective value for dummy
-  dummysum = 0
-  for dummykey, dummyvalue in flow.iteritems():    
-      if 'dummy' in dummykey:
-          dummysum = dummysum + dummyvalue * bigMCostDummy * probs_tmpD[next(iter(probs_tmpD))]
-  adjobjVal = m.objVal - dummysum
+      adjobjVal = 'error - no solution'
+      dummyObj = 'error - no solution'
+      weighted_dummy_demand = 0
 
-  return {'dummyObj': obj, 'adjdummyObj': adjobjVal, 'dummyFlow': flow, 'weightedDummyDemand': weighted_dummy_demand, 'optimalInv': OptInv}
+  return {'dummyObj': dummyObj, 'adjdummyObj': adjobjVal, 'dummyFlow': flow, 'weightedDummyDemand': weighted_dummy_demand}
 
 #BOT----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #BOT----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
