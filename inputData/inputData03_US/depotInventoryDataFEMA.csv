@@ -1,0 +1,26 @@
+ItemName,Warehouse(Region),gglAddress,gglCountry,Total
+BlanketGen,California,"San Francisco, California",California,17370
+BlanketGen,Texas,"Dallas, Texas",Texas,270
+BlanketGen,Georgia,"Atlanta, Georgia",Georgia,34808
+BlanketGen,Pennsylvania,"Philadelphia, Pennsylvania",Pennsylvania,37549
+BlanketGen,Washington D.C.,"Washington D.C., Washington D.C.",Washington D.C.,40000
+Cots,California,"San Francisco, California",California,29874
+Cots,Texas,"Dallas, Texas",Texas,39910
+Cots,Georgia,"Atlanta, Georgia",Georgia,33790
+Cots,Pennsylvania,"Philadelphia, Pennsylvania",Pennsylvania,32047
+Cots,Washington D.C.,"Washington D.C., Washington D.C.",Washington D.C.,56487
+Tarps,California,"San Francisco, California",California,16412
+Tarps,Texas,"Dallas, Texas",Texas,47992
+Tarps,Georgia,"Atlanta, Georgia",Georgia,22843
+Tarps,Pennsylvania,"Philadelphia, Pennsylvania",Pennsylvania,23256
+Tarps,Washington D.C.,"Washington D.C., Washington D.C.",Washington D.C.,35465
+Water,California,"San Francisco, California",California,43361650
+Water,Texas,"Dallas, Texas",Texas,10583210
+Water,Georgia,"Atlanta, Georgia",Georgia,12354850
+Water,Pennsylvania,"Philadelphia, Pennsylvania",Pennsylvania,2354658
+Water,Washington D.C.,"Washington D.C., Washington D.C.",Washington D.C.,1032546
+Meals,California,"San Francisco, California",California,1849521
+Meals,Texas,"Dallas, Texas",Texas,1254658
+Meals,Georgia,"Atlanta, Georgia",Georgia,2016540
+Meals,Pennsylvania,"Philadelphia, Pennsylvania",Pennsylvania,1645713
+Meals,Washington D.C.,"Washington D.C., Washington D.C.",Washington D.C.,1846521

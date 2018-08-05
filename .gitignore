@@ -2,4 +2,9 @@
 jamesmodelnonfixeddummy.lp
 dummymodel.lp
 jamesmodel.lp
-
+Carrier_Duals.csv
+Depot_Duals.csv
+DummyFlow.csv
+NonfixedFlow.csv
+Nonfixed_Inventory_Assignments.csv
+OtherFiles/
