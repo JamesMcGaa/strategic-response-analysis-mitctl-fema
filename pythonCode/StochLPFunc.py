@@ -25,29 +25,29 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
     # print("-------------------------------MAIN------------------------------")
 
     #Test 1
-#    demand_tmpD = {
-#    ('0000-0000', 'SubLoc_00000'): 930,
-#    ('0000-0001', 'SubLoc_00000'): 80,
-#    ('0000-0002', 'SubLoc_00000'): 50,}
-#    probs_tmpD = {'0000-0000':.5, '0000-0001':.99, '0000-0002':.1,}
-#    demandAddress_tmpD = {
-#    ('0000-0000', 'SubLoc_00000'): "DisasterCity0", 
-#    ('0000-0001', 'SubLoc_00000'): "DisasterCity1", 
-#    ('0000-0002', 'SubLoc_00000'): "DisasterCity2",}
-#    costD = {
-#    ('San Francisco, California', 'DisasterCity0', 'Truck'):10, 
-#    ('Dallas, Texas', 'DisasterCity0', 'Truck'):70, 
-#    ("Philadelphia, Pennsylvania", 'DisasterCity0', 'Truck'):1,
-#    ('San Francisco, California', 'DisasterCity1', 'Truck'):10, 
-#    ('Dallas, Texas', 'DisasterCity1', 'Truck'):70, 
-#    ("Philadelphia, Pennsylvania", 'DisasterCity1', 'Truck'):1,
-#    ('San Francisco, California', 'DisasterCity2', 'Truck'):20, 
-#    ('Dallas, Texas', 'DisasterCity2', 'Truck'):70, 
-#    ("Philadelphia, Pennsylvania", 'DisasterCity2', 'Truck'):1,}
-#    inventory_tmpD = {
-#    'Dallas, Texas': 700, 
-#    'San Francisco, California': 200, 
-#    'Philadelphia, Pennsylvania': 30}
+    demand_tmpD = {
+    ('0000-0000', 'SubLoc_00000'): 931,
+    ('0000-0001', 'SubLoc_00000'): 80,
+    ('0000-0002', 'SubLoc_00000'): 50,}
+    probs_tmpD = {'0000-0000':.5, '0000-0001':.99, '0000-0002':.1,}
+    demandAddress_tmpD = {
+    ('0000-0000', 'SubLoc_00000'): "DisasterCity0", 
+    ('0000-0001', 'SubLoc_00000'): "DisasterCity1", 
+    ('0000-0002', 'SubLoc_00000'): "DisasterCity2",}
+    costD = {
+    ('San Francisco, California', 'DisasterCity0', 'Truck'):10, 
+    ('Dallas, Texas', 'DisasterCity0', 'Truck'):70, 
+    ("Philadelphia, Pennsylvania", 'DisasterCity0', 'Truck'):1,
+    ('San Francisco, California', 'DisasterCity1', 'Truck'):10, 
+    ('Dallas, Texas', 'DisasterCity1', 'Truck'):70, 
+    ("Philadelphia, Pennsylvania", 'DisasterCity1', 'Truck'):1,
+    ('San Francisco, California', 'DisasterCity2', 'Truck'):20, 
+    ('Dallas, Texas', 'DisasterCity2', 'Truck'):70, 
+    ("Philadelphia, Pennsylvania", 'DisasterCity2', 'Truck'):1,}
+    inventory_tmpD = {
+    'Dallas, Texas': 700, 
+    'San Francisco, California': 200, 
+    'Philadelphia, Pennsylvania': 30}
 
     #Test 2
     # demand_tmpD = {
@@ -279,7 +279,7 @@ def dummyhelper(demand_tmpD
             duoVars[depot+":"+carrier[0]] = m.addVar(lb=0.0, ub=carrier[1], vtype=GRB.CONTINUOUS, name=depot+":"+carrier[0]) 
     
     #Initialize triplet variables
-    #AXR: triVars are all inventory=carrier-disaster pairs
+    #AXR: triVars are all inventory-carrier-disaster pairs
     triVars = {}
     duoToTris = {}
     for depot in carrierDict:
@@ -355,15 +355,35 @@ def dummyhelper(demand_tmpD
         m.addConstr(LHS, GRB.EQUAL, RHS, name="DEMAND<"+disasterString+">")
 
     #Flow constraint
-    for depot in carrierDict:
-        depotCarriers = carrierDict[depot]
-        for carrier in depotCarriers:
-                    LHS = LinExpr()
-                    LHS.addTerms(1, duoVars[depot+":"+carrier[0]])
-                    RHS = LinExpr()
-                    for tri in duoToTris[depot+":"+carrier[0]]:            
-                        RHS.addTerms(1, tri)
-                    m.addConstr(LHS, GRB.EQUAL, RHS, name="FLOW<"+depot+":"+carrier[0]+">")
+#-------18/8/6 Alex code begins
+    #Flow should be limited to each disaster (not aggregating across multiple disasters)
+    for disasterTuple in demand_tmpD:
+        for depot in carrierDict:
+            depotCarriers = carrierDict[depot]
+            for carrier in depotCarriers:
+                        LHS = LinExpr()
+                        LHS.addTerms(1, duoVars[depot+":"+carrier[0]])
+                        RHS = LinExpr()
+#                        print duoToTris
+                        for tri in duoToTris[depot+":"+carrier[0]]:
+                            if str(disasterTuple[0]) == tri.VarName.split(":")[2].split("SubLoc")[0]:
+                                RHS.addTerms(1, tri)
+                                print str(RHS)
+                                m.addConstr(LHS, GRB.EQUAL, RHS, name="FLOW<"+depot+":"+carrier[0]+">")
+#-------18/8/6 Alex code ends
+#-------James code begins                    
+#    for depot in carrierDict:
+#        depotCarriers = carrierDict[depot]
+#        for carrier in depotCarriers:
+#                    LHS = LinExpr()
+#                    LHS.addTerms(1, duoVars[depot+":"+carrier[0]])
+#                    RHS = LinExpr()
+#                    for tri in duoToTris[depot+":"+carrier[0]]:
+#                        RHS.addTerms(1, tri)
+#                    print str(RHS)
+#                    m.addConstr(LHS, GRB.EQUAL, RHS, name="FLOW<"+depot+":"+carrier[0]+">")
+#-------James code ends
+                    
                     
     #Depot capacity
     for disasterTuple in demand_tmpD:
@@ -378,7 +398,7 @@ def dummyhelper(demand_tmpD
                     for carrier in depotCarriers:
                              if depot+":"+carrier[0]+":"+disasterString in triVars:
                                      RHS.addTerms(1,triVars[depot+":"+carrier[0]+":"+disasterString])
-                    m.addConstr(LHS, GRB.GREATER_EQUAL, RHS, name="DEPOT<"+depot+":"+carrier[0]+">")
+                    m.addConstr(LHS, GRB.GREATER_EQUAL, RHS, name="DEPOT<"+depot+":"+disasterString+">")
 
         
     #Carrier capacity
@@ -395,7 +415,7 @@ def dummyhelper(demand_tmpD
                 assignments = m.getAttr('x', [triVars[key] for key in triVars])
                 for tri in [triVars[key] for key in triVars]:
                         if tri.x > 0.0001:
-                            print(tri.VarName, tri.x)
+#                            print(tri.VarName, tri.x)
                             solution_flow[tri.VarName] = tri.x
         else:
                 print('No solution')
@@ -421,14 +441,14 @@ def dummyhelper(demand_tmpD
                 disasterID = dummyVar.VarName.split(':')[2][:9]
                 weighted_dummy_demand += probs_tmpD[disasterID] * dummyVar.x
                 
-            constrs = m.getConstrs()
-            print constrs
-            constr_coeffs = m.getAttr('x', )
-            print constr_coeffs
-        
-        
-            dualx = m.getAttr('Pi') 
-            print dualx
+#            constrs = m.getConstrs()
+#            print constrs
+#            constr_coeffs = m.getAttr('x', )
+#            print constr_coeffs
+#        
+#        
+#            dualx = m.getAttr('Pi') 
+#            print dualx
     else:
             adjobjVal = 'error - no solution'
             dummyObj = 'error - no solution'
@@ -641,7 +661,7 @@ def nonfixeddummyinventoryhelper(demand_tmpD
                     for carrier in depotCarriers:
                              if depot+":"+carrier[0]+":"+disasterString in triVars:
                                      RHS.addTerms(1,triVars[depot+":"+carrier[0]+":"+disasterString])
-                    m.addConstr(LHS, GRB.GREATER_EQUAL, RHS, name="DEPOT<"+depot+":"+carrier[0]+">")
+                    m.addConstr(LHS, GRB.GREATER_EQUAL, RHS, name="DEPOT<"+depot+":"+disasterString+">")
 
 
 
@@ -657,7 +677,7 @@ def nonfixeddummyinventoryhelper(demand_tmpD
                 assignments = m.getAttr('x', [triVars[key] for key in triVars])
                 for tri in [triVars[key] for key in triVars]:
                         if tri.x > 0.0001:
-                            print(tri.VarName, tri.x)
+#                            print(tri.VarName, tri.x)
                             solution_flow[tri.VarName] = tri.x
         else:
                 print('No solution')
@@ -689,14 +709,14 @@ def nonfixeddummyinventoryhelper(demand_tmpD
                             print(depot + ": " + str(depotVars[depot].X))
                 
                 
-            constrs = m.getConstrs()
-            print constrs
-            constr_coeffs = m.getAttr('x', )
-            print constr_coeffs
-        
-        
-            dualx = m.getAttr('Pi') 
-            print dualx
+#            constrs = m.getConstrs()
+#            print constrs
+#            constr_coeffs = m.getAttr('x', )
+#            print constr_coeffs
+#        
+#        
+#            dualx = m.getAttr('Pi') 
+#            print dualx
     else:
             adjobjVal = 'error - no solution'
             dummyObj = 'error - no solution'
