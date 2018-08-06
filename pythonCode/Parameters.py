@@ -1,20 +1,20 @@
 # File Names
-betaItemConversionsFileName = 'betaItemConversions.csv'
+betaItemConversionsFileName = 'betaItemConversionsFEMA.csv' #'betaItemConversions.csv'
 countryAbilityToRespondFileName = 'countryAbilityToRespond.csv'
-depotInventoryFileName = 'depotInventoryData.csv'
+depotInventoryFileName = 'depotInventoryDataFEMA.csv' #'depotInventoryData.csv'
 depotLatLongFileName = 'depotLatLong.csv'
 depotWhichToUseReadInvFileName = 'depotsWhichToInclude.csv'
 disasterCountryWhichToUseReadInFileName = 'disasterCountryWhichToInclude.csv'
 depotWhichToMapToFileName = 'depotsWhichToMapTo.csv'
 disasterLatLongFileName = 'disasterLatLong.csv'
-disasterTotAffectedFileName = 'disasterAffectedDataFEMA.csv'
+disasterTotAffectedFileName = 'disasterAffectedDataFEMA.csv' #disasterAffectedDataFEMA.csv
 disasterWhichTypeToUseFileName = 'disasterTypeWhichToUse.csv'
 drivingDistanceMatrixFileName = 'drivingDistanceMatrix.csv'
 gglCountryContinentLkupFileName = 'gglCountryContinentLkup.csv'
 transporationParametersFileName = 'transporationParameters.csv'
-itemAttributesFileName = 'itemAttributes.csv'
-carrierListFileName = 'fakeCarrierDataFEMA.csv'
-itemCarrierConversionFileName = 'fakeCarrierItemConversionRates.csv'
+itemAttributesFileName =  'itemAttributesFEMA.csv' # 'itemAttributes.csv'
+carrierListFileName = 'fakeCarrierDataFEMA.csv' #fakeCarrierDataFEMA.csv
+itemCarrierConversionFileName =  'fakeCarrierItemConversionRatesFEMA.csv' # 'fakeCarrierItemConversionRates.csv'
 
 
 # Are all scenario probabilities set to 1/n?  (Possible values are 0 or 1)
@@ -49,7 +49,7 @@ maxDrivingTimeCutAbove_Hrs = 100
 
 # When the optimization routine sets up the dummy supply node, how much should that cost?
 bigMCostDummy = 10000
-bigInventoryDummy = 1000000
+bigInventoryDummy = 10000000
 
 # In the original files, we set the time and cost to be 1e6 if it is infeasible (i.e., for the road link from
 #    Canada to Australia)  This parameter is necessary so that the optimization routine can identify infeasible
