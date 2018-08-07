@@ -24,7 +24,7 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
 	import pandas as pd
 	# print("-------------------------------MAIN------------------------------")
 
-	#Test 1
+	# Test 1
 	demand_tmpD = {
 	('0000-0000', 'SubLoc_00000'): 930,
 	('0000-0001', 'SubLoc_00000'): 80,
@@ -243,6 +243,7 @@ def dummyhelper(demand_tmpD
 																, minInvItemD
 																, depotInWhichCountry
 																):
+	print(costD)
 	print("-------------------------------DUMMY------------------------------")
 
 	m = Model('StochLP')
@@ -316,6 +317,7 @@ def dummyhelper(demand_tmpD
 
 	#Minimize expected time
 	weights = []
+	distances = []
 	for triVar in [triVars[key] for key in triVars]:
 		ID = triVar.VarName.split(":")[2].split("SubLoc")[0]
 		ID2 = "SubLoc" + triVar.VarName.split(":")[2].split("SubLoc")[1]
@@ -329,15 +331,17 @@ def dummyhelper(demand_tmpD
 					break
 		if (ID,ID2) in demandAddress_tmpD:
 			if (depotLoc, demandAddress_tmpD[(ID,ID2)],"Truck") in costD:
-				weights.append(probs_tmpD[ID]*(extraCost + costD[(depotLoc, demandAddress_tmpD[(ID,ID2)],"Truck")])) 
+				distance = (extraCost + costD[(depotLoc, demandAddress_tmpD[(ID,ID2)],"Truck")])
+				distances.append(distance)
+				weights.append(probs_tmpD[ID]*distance) 
 	expr = LinExpr()
 	expr.addTerms(weights, [triVars[key] for key in triVars])
 	m.setObjective(expr, GRB.MINIMIZE)
 
 	triToDistanceMap = {}
 	triVarList = [triVars[key] for key in triVars]
-	for i in range(len(weights)):
-		triToDistanceMap[triVarList[i]] = weights[i]
+	for i in range(len(distances)):
+		triToDistanceMap[triVarList[i]] = distances[i]
 
 	#Satisfy demand
 	for disasterTuple in demand_tmpD:
@@ -440,8 +444,9 @@ def dummyhelper(demand_tmpD
 			disasterID = var.VarName.split(':')[2][:9]
 			sublocID = var.VarName.split(':')[2][9:]
 			#timeDemandTuples.append((var.X * probs_tmpD[disasterID] / float(demand_tmpD[(disasterID, sublocID)]), triToDistanceMap[var]))
-			timeDemandTuples.append((var.X * 1.0 / (len(probs_tmpD) * float(demand_tmpD[(disasterID, sublocID)])), triToDistanceMap[var]))
+			timeDemandTuples.append((var.X * 1.0 / (len(probs_tmpD) * float(demand_tmpD[(disasterID, sublocID)])), triToDistanceMap[var])) #Time, distance
 	timeDemandTuples.sort(key = lambda x: x[1]) #Sort based on time
+	print(timeDemandTuples)
 	times = [e[1] for e in timeDemandTuples]
 	satisfied = [e[0] for e in timeDemandTuples]
 	cumulative_satisfied = []
