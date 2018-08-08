@@ -404,7 +404,7 @@ def dummyhelper(demand_tmpD
 								assignments = m.getAttr('x', [triVars[key] for key in triVars])
 								for tri in [triVars[key] for key in triVars]:
 												if tri.x > 0.0001:
-                            #print(tri.VarName, tri.x)
+														#print(tri.VarName, tri.x)
 														solution_flow[tri.VarName] = tri.x
 				else:
 								print('No solution')
@@ -437,27 +437,46 @@ def dummyhelper(demand_tmpD
 						weighted_dummy_demand = 0
 
 
-#    timeDemandTuples = []
-#    for var in triToDistanceMap:
-#        if var.X > .01:
-#            disasterID = var.VarName.split(':')[2][:9]
-#            sublocID = var.VarName.split(':')[2][9:]
-#            #timeDemandTuples.append((var.X * probs_tmpD[disasterID] / float(demand_tmpD[(disasterID, sublocID)]), triToDistanceMap[var]))
-#            timeDemandTuples.append((var.X * 1.0 / (len(probs_tmpD) * float(demand_tmpD[(disasterID, sublocID)])), triToDistanceMap[var]))
-#    timeDemandTuples.sort(key = lambda x: x[1]) #Sort based on time
-#    times = [e[1] for e in timeDemandTuples]
-#    satisfied = [e[0] for e in timeDemandTuples]
-#    cumulative_satisfied = []
-#    for i in range(len(satisfied)):
-#        cumulative_satisfied.append(sum(satisfied[:i+1]))
-#    
-#    import matplotlib.pyplot as plt
-#
-#    plt.step(times, cumulative_satisfied)
-#    plt.xlabel('Time')
-#    plt.ylabel('Fraction of Total Demand Served')
-#    plt.title('Demand Served Metric')
-#    plt.show()
+		timeDemandTuples = []
+		for var in triToDistanceMap:
+			 if var.X > .01:
+					 disasterID = var.VarName.split(':')[2]
+					 sublocID = var.VarName.split(':')[3]
+					 #timeDemandTuples.append((var.X * probs_tmpD[disasterID] / float(demand_tmpD[(disasterID, sublocID)]), triToDistanceMap[var]))
+					 timeDemandTuples.append((var.X * 1.0 / (len(probs_tmpD) * float(demand_tmpD[(disasterID, sublocID)])), triToDistanceMap[var]))
+		timeDemandTuples.sort(key = lambda x: x[1]) #Sort based on time
+		times = [e[1] for e in timeDemandTuples]
+		satisfied = [e[0] for e in timeDemandTuples]
+		cumulative_satisfied = []
+		for i in range(len(satisfied)):
+			 cumulative_satisfied.append(sum(satisfied[:i+1]))
+
+
+		for i in range(len(times)):
+			print((times[i], cumulative_satisfied[i]))
+		print("-------")
+		adjustedTimes = [0]
+		adjustedSatisfied = [0]
+		for i in range(len(cumulative_satisfied)):
+			adjustedTimes.append(times[i])
+			adjustedTimes.append(times[i])
+			if i == 0:
+				adjustedSatisfied.append(0)
+			else:
+				adjustedSatisfied.append(cumulative_satisfied[i-1])
+			adjustedSatisfied.append(cumulative_satisfied[i])
+		for i in range(len(adjustedTimes)):
+			print((adjustedTimes[i],adjustedSatisfied[i]))
+			
+
+		import matplotlib.pyplot as plt
+
+		plt.step(adjustedTimes, adjustedSatisfied)
+		plt.xlabel('Time')
+		plt.ylabel('Fraction of Total Demand Served')
+		plt.xlim(xmin=0, xmax=24)
+		plt.title('Demand Served Metric')
+		plt.show()
 
 
 
