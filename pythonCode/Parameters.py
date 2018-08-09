@@ -49,7 +49,7 @@ maxDrivingTimeCutAbove_Hrs = 100
 
 # When the optimization routine sets up the dummy supply node, how much should that cost?
 bigMCostDummy = 10000
-bigInventoryDummy = 10000000
+bigInventoryDummy = 100000000
 
 # In the original files, we set the time and cost to be 1e6 if it is infeasible (i.e., for the road link from
 #    Canada to Australia)  This parameter is necessary so that the optimization routine can identify infeasible
