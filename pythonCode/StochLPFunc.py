@@ -201,10 +201,18 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
 
 				print("\n\nAverage Time (Cost) with current inventory: " + str(average_time))
 				print("Average Time (Cost) with optimal inventory: " + str(average_time))
+				print("\n\n")
 				
-				#What metrics are missing?
-				#(1) T-Metric for non fixed dummy model
-				#(2) adjusted duals for depots and carriers for dummy and no-fixed dummy model
+				dummyDepotDuals = dummy_solution['depotDuals']
+				for depotName in dummyDepotDuals:
+					if depotName != "dummy":
+						print("Adjusted Dummy Dual " + depotName + ": " + str(dummyDepotDuals[depotName] + (1-WeightedFractionCompletelyServed) * bigInventoryDummy))
+
+				dummyCarrierDuals = dummy_solution['carrierDuals']
+				for carrier in dummyCarrierDuals:
+					if carrier != "dummycarrier":
+						print("Adjusted Dummy Dual " + carrier + ": " + str(dummyCarrierDuals[carrier] + (1-WeightedFractionCompletelyServed) * bigInventoryDummy))				
+
 				
 
 				sys.exit()
@@ -251,6 +259,7 @@ def dummyhelper(demand_tmpD
 				#Generate list of string names
 				disasterList = demand_tmpD.keys()
 				carrierList = []
+				constrs = {}
 				
 
 				#Create a mapping from depot city names to (contractor, capacity, cost) triplets
@@ -268,7 +277,7 @@ def dummyhelper(demand_tmpD
 				for row in carrierDataParse:
 								if row[5] not in carrierDict:
 												carrierDict[row[5]] = []
-								carrierDict[row[5]].append((row[0], int(row[1])*itemCarrierConversionRatio, int(row[2])))
+								carrierDict[row[5]].append((row[0], int(row[1])*itemCarrierConversionRatio, int(row[2]))) #FLOAT?
 				#------axr code ends-----
 				
 				#Initialize duo variables
@@ -279,12 +288,19 @@ def dummyhelper(demand_tmpD
 								for carrier in depotCarriers:
 										for disasterName in disasterList:
 												disasterName = disasterName[0]
-												triVars[depot+":"+carrier[0]+":"+disasterName] = m.addVar(lb=0.0, ub=carrier[1], vtype=GRB.CONTINUOUS, name=depot+":"+carrier[0]+disasterName) 
+												triVars[depot+":"+carrier[0]+":"+disasterName] = m.addVar(lb=0.0, vtype=GRB.CONTINUOUS, name=depot+":"+carrier[0]+disasterName) 
+												LHS = LinExpr()
+												LHS.addConstant(carrier[1])
+												RHS = LinExpr()
+												RHS.addTerms(1,triVars[depot+":"+carrier[0]+":"+disasterName])
+												constrs["CARRIER<"+depot+":"+carrier[0]+":"+disasterName+">"] = m.addConstr(LHS, GRB.GREATER_EQUAL, RHS, name="CARRIER<"+depot+":"+carrier[0]+":"+disasterName+">"+">")
+
+
 				
 				#Initialize triplet variables
 				#AXR: quadVars are all inventory-carrier-disaster pairs
 				quadVars = {}
-				duoToTris = {}
+				triToQuads = {}
 				for depot in carrierDict:
 								depotCarriers = carrierDict[depot]
 								for carrier in depotCarriers:
@@ -292,9 +308,9 @@ def dummyhelper(demand_tmpD
 																if (depot, demandAddress_tmpD[disaster], 'Truck') in costD:
 																				var = m.addVar(lb=0.0, vtype=GRB.CONTINUOUS, name=depot+":"+carrier[0]+":"+disaster[0]+":"+disaster[1]) 
 																				quadVars[depot+":"+carrier[0]+":"+disaster[0]+":"+disaster[1]] = var
-																				if depot+":"+carrier[0]+":"+disaster[0] not in duoToTris:
-																						duoToTris[depot+":"+carrier[0]+":"+disaster[0]] = []
-																				duoToTris[depot+":"+carrier[0]+":"+disaster[0]].append(var)
+																				if depot+":"+carrier[0]+":"+disaster[0] not in triToQuads:
+																						triToQuads[depot+":"+carrier[0]+":"+disaster[0]] = []
+																				triToQuads[depot+":"+carrier[0]+":"+disaster[0]].append(var)
 								m.update()
 
 
@@ -303,12 +319,12 @@ def dummyhelper(demand_tmpD
 				carrierDict["dummy"] = [("dummycarrier",1000000,0)]
 				for disasterName in disasterList:
 						triVars["dummy:dummycarrier:"+disasterName[0]] = m.addVar(lb=0.0, vtype=GRB.CONTINUOUS, name="dummy:dummycarrier:"+disasterName[0]) 
-						duoToTris["dummy:dummycarrier:"+disasterName[0]] = []
+						triToQuads["dummy:dummycarrier:"+disasterName[0]] = []
 				dummyTris = []
 				for disasterName in disasterList:
 								var =  m.addVar(lb=0.0, vtype=GRB.CONTINUOUS, name="dummy:dummycarrier:" + disasterName[0]+":"+disasterName[1]) 
 								quadVars["dummy:dummycarrier:" + disasterName[0]+":"+disasterName[1]] = var
-								duoToTris["dummy:dummycarrier:"+ disasterName[0]].append(var)
+								triToQuads["dummy:dummycarrier:"+ disasterName[0]].append(var)
 								dummyTris.append(var)
 				for disasterID in demandAddress_tmpD:
 				#AXR 18/23/7 substituted specific number for bigCostDummy variable
@@ -371,8 +387,8 @@ def dummyhelper(demand_tmpD
 																								LHS = LinExpr()
 																								LHS.addTerms(1, triVars[depot+":"+carrier[0]+":"+disasterTuple[0]])
 																								RHS = LinExpr()
-																								if depot+":"+carrier[0]+":"+disasterTuple[0] in duoToTris:
-																										for tri in duoToTris[depot+":"+carrier[0]+":"+disasterTuple[0]]:
+																								if depot+":"+carrier[0]+":"+disasterTuple[0] in triToQuads:
+																										for tri in triToQuads[depot+":"+carrier[0]+":"+disasterTuple[0]]:
 																														if str(disasterTuple[0]) == tri.VarName.split(":")[2]:
 																																		RHS.addTerms(1, tri)
 																																		m.addConstr(LHS, GRB.EQUAL, RHS, name="FLOW<"+depot+":"+carrier[0]+":"+disasterTuple[0]+">")
@@ -391,7 +407,7 @@ def dummyhelper(demand_tmpD
 																				for carrier in depotCarriers:
 																												 if depot+":"+carrier[0]+":"+disasterTuple[0] in triVars:
 																																				 RHS.addTerms(1,triVars[depot+":"+carrier[0]+":"+disasterTuple[0]])
-																				m.addConstr(LHS, GRB.GREATER_EQUAL, RHS, name="DEPOT<"+depot+":"+disasterTuple[0]+">")
+																				constrs["DEPOT<"+depot+":"+disasterTuple[0]+">"] = m.addConstr(LHS, GRB.GREATER_EQUAL, RHS, name="DEPOT<"+depot+":"+disasterTuple[0]+">")
 
 								
 				#Carrier capacity
@@ -478,11 +494,29 @@ def dummyhelper(demand_tmpD
 				plt.xlim(xmin=0, xmax=72)
 				plt.title('Demand Served Metric')
 				plt.show()
-		
+			
+				depotDuals = {}
+				carrierDuals = {}
+				for depotName in inventory_tmpD:
+					depotDuals[depotName] = 0
+					for disasterTuple in demand_tmpD:
+						depotDuals[depotName] += constrs["DEPOT<"+depotName+":"+disasterTuple[0]+">"].Pi * probs_tmpD[disasterTuple[0]]
+
+				for depot in carrierDict:
+					for carrier in carrierDict[depot]:
+						if carrier[0] not in carrierDuals:
+							carrierDuals[carrier[0]] = 0
+						for disasterTuple in demand_tmpD:
+							if "CARRIER<"+depot+":"+carrier[0]+":"+disasterTuple[0]+">" in constrs:
+								carrierDuals[carrier[0]] += constrs["CARRIER<"+depot+":"+carrier[0]+":"+disasterTuple[0]+">"].Pi * probs_tmpD[disasterTuple[0]]
+				print(carrierDuals)
+
+				
 
 
 
-				return {'dummyObj': dummyObj, 'adjdummyObj': adjobjVal, 'dummyFlow': flow, 'weightedDummyDemand': weighted_dummy_demand}
+
+				return {'dummyObj': dummyObj, 'adjdummyObj': adjobjVal, 'dummyFlow': flow, 'weightedDummyDemand': weighted_dummy_demand, 'depotDuals': depotDuals, 'carrierDuals':carrierDuals}
 
 
 
@@ -526,8 +560,7 @@ def nonfixeddummyinventoryhelper(demand_tmpD
 				for row in carrierDataParse:
 								if row[5] not in carrierDict:
 												carrierDict[row[5]] = []
-								carrierDict[row[5]].append((row[0], int(row[1])*itemCarrierConversionRatio, int(row[2])))
-				#------axr code ends-----
+								carrierDict[row[5]].append((row[0], int(row[1])*itemCarrierConversionRatio, int(row[2]))) #FLOAT?
 
 
 				#Initialize duo variables
@@ -543,7 +576,7 @@ def nonfixeddummyinventoryhelper(demand_tmpD
 
 				#Initialize triplet variables
 				quadVars = {}
-				duoToTris = {}
+				triToQuads = {}
 				for depot in carrierDict:
 						depotCarriers = carrierDict[depot]
 						for carrier in depotCarriers:
@@ -551,9 +584,9 @@ def nonfixeddummyinventoryhelper(demand_tmpD
 										if (depot, demandAddress_tmpD[disaster], 'Truck') in costD:
 												var = m.addVar(lb=0.0, vtype=GRB.CONTINUOUS, name=depot+":"+carrier[0]+":"+disaster[0]+":"+disaster[1]) 
 												quadVars[depot+":"+carrier[0]+":"+disaster[0]+":"+disaster[1]] = var
-												if depot+":"+carrier[0]+":"+disaster[0] not in duoToTris:
-														duoToTris[depot+":"+carrier[0]+":"+disaster[0]] = []
-												duoToTris[depot+":"+carrier[0]+":"+disaster[0]].append(var)
+												if depot+":"+carrier[0]+":"+disaster[0] not in triToQuads:
+														triToQuads[depot+":"+carrier[0]+":"+disaster[0]] = []
+												triToQuads[depot+":"+carrier[0]+":"+disaster[0]].append(var)
 								m.update()        
 
 
@@ -561,13 +594,13 @@ def nonfixeddummyinventoryhelper(demand_tmpD
 				carrierDict["dummy"] = [("dummycarrier",1000000,0)]
 				for disasterName in disasterList:
 						triVars["dummy:dummycarrier:"+disasterName[0]] = m.addVar(lb=0.0, vtype=GRB.CONTINUOUS, name="dummy:dummycarrier:"+disasterName[0]) 
-						duoToTris["dummy:dummycarrier:"+disasterName[0]] = []
-				duoToTris["dummy:dummycarrier"] = []
+						triToQuads["dummy:dummycarrier:"+disasterName[0]] = []
+				triToQuads["dummy:dummycarrier"] = []
 				dummyTris = []
 				for disasterName in disasterList:
 								var =  m.addVar(lb=0.0, vtype=GRB.CONTINUOUS, name="dummy:dummycarrier:" + disasterName[0]+":"+disasterName[1]) 
 								quadVars["dummy:dummycarrier:" + disasterName[0]+":"+disasterName[1]] = var
-								duoToTris["dummy:dummycarrier:"+ disasterName[0]].append(var)
+								triToQuads["dummy:dummycarrier:"+ disasterName[0]].append(var)
 								dummyTris.append(var)
 				for disasterID in demandAddress_tmpD:
 				#AXR 18/23/7 substituted specific number for bigCostDummy variable
@@ -629,8 +662,8 @@ def nonfixeddummyinventoryhelper(demand_tmpD
 										LHS = LinExpr()
 										LHS.addTerms(1, triVars[depot+":"+carrier[0]+":"+disasterTuple[0]])
 										RHS = LinExpr()
-										if depot+":"+carrier[0]+":"+disasterTuple[0] in duoToTris:
-												for tri in duoToTris[depot+":"+carrier[0]+":"+disasterTuple[0]]:
+										if depot+":"+carrier[0]+":"+disasterTuple[0] in triToQuads:
+												for tri in triToQuads[depot+":"+carrier[0]+":"+disasterTuple[0]]:
 														if str(disasterTuple[0]) == tri.VarName.split(":")[2]:
 																RHS.addTerms(1, tri)
 																m.addConstr(LHS, GRB.EQUAL, RHS, name="FLOW<"+depot+":"+carrier[0]+":"+disasterTuple[0]+">")
@@ -771,6 +804,8 @@ def nonfixeddummyinventoryhelper(demand_tmpD
 				plt.title('Demand Served Metric')
 				plt.show()
 
+
+
 				return {'dummyObj': dummyObj, 'adjdummyObj': adjobjVal, 'dummyFlow': flow, 'weightedDummyDemand': weighted_dummy_demand}
 
 
@@ -827,16 +862,16 @@ def nonfixeddummyinventoryhelper(demand_tmpD
 
 				# #Initialize triplet variables
 				# quadVars = {}
-				# duoToTris = {}
+				# triToQuads = {}
 				# for depot in carrierDict:
 				#   depotCarriers = carrierDict[depot]
 				#   for carrier in depotCarriers:
-				#     duoToTris[depot+":"+carrier[0]] = []
+				#     triToQuads[depot+":"+carrier[0]] = []
 				#     for disaster in disasterList:
 				#       if (depot, demandAddress_tmpD[disaster], 'Truck') in costD:
 				#         var = m.addVar(lb=0.0, vtype=GRB.CONTINUOUS, name=depot+":"+carrier[0]+":"+disaster[0]+disaster[1]) 
 				#         quadVars[depot+":"+carrier[0]+":"+disaster[0]+disaster[1]] = var
-				#         duoToTris[depot+":"+carrier[0]].append(var)
+				#         triToQuads[depot+":"+carrier[0]].append(var)
 				# m.update()
 
 				
@@ -892,7 +927,7 @@ def nonfixeddummyinventoryhelper(demand_tmpD
 				#         LHS = LinExpr()
 				#         LHS.addTerms(1, triVars[depot+":"+carrier[0]])
 				#         RHS = LinExpr()
-				#         for tri in duoToTris[depot+":"+carrier[0]]:
+				#         for tri in triToQuads[depot+":"+carrier[0]]:
 				#           RHS.addTerms(1, tri)
 				#         flowConstrs.append(m.addConstr(LHS, GRB.EQUAL, RHS, name="FLOW<"+depot+":"+carrier[0]+">"))
 
@@ -1016,16 +1051,16 @@ def nonfixeddummyinventoryhelper(demand_tmpD
 
 				#   #Initialize triplet variables
 				#   quadVars = {}
-				#   duoToTris = {}
+				#   triToQuads = {}
 				#   for depot in carrierDict:
 				#     depotCarriers = carrierDict[depot]
 				#     for carrier in depotCarriers:
-				#       duoToTris[depot+":"+carrier[0]] = []
+				#       triToQuads[depot+":"+carrier[0]] = []
 				#       for disaster in disasterList:
 				#         if (depot, demandAddress_tmpD[disaster], 'Truck') in costD:
 				#           var = m.addVar(lb=0.0, vtype=GRB.CONTINUOUS, name=depot+":"+carrier[0]+":"+disaster[0]+disaster[1]) 
 				#           quadVars[depot+":"+carrier[0]+":"+disaster[0]+disaster[1]] = var
-				#           duoToTris[depot+":"+carrier[0]].append(var)
+				#           triToQuads[depot+":"+carrier[0]].append(var)
 				#   m.update()
 
 								
@@ -1072,7 +1107,7 @@ def nonfixeddummyinventoryhelper(demand_tmpD
 				#           LHS = LinExpr()
 				#           LHS.addTerms(1, triVars[depot+":"+carrier[0]])
 				#           RHS = LinExpr()
-				#           for tri in duoToTris[depot+":"+carrier[0]]:
+				#           for tri in triToQuads[depot+":"+carrier[0]]:
 				#             RHS.addTerms(1, tri)
 				#           m.addConstr(LHS, GRB.EQUAL, RHS, name="FLOW<"+depot+":"+carrier[0]+">")
 
