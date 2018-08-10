@@ -13,7 +13,7 @@ drivingDistanceMatrixFileName = 'drivingDistanceMatrix.csv'
 gglCountryContinentLkupFileName = 'gglCountryContinentLkup.csv'
 transporationParametersFileName = 'transporationParameters.csv'
 itemAttributesFileName =  'itemAttributesFEMA.csv' # 'itemAttributes.csv'
-carrierListFileName = 'fakeCarrierDataJames.csv' #fakeCarrierDataFEMA.csv
+carrierListFileName = 'fakeCarrierDataFEMA.csv' #fakeCarrierDataFEMA.csv
 itemCarrierConversionFileName =  'fakeCarrierItemConversionRatesFEMA.csv' # 'fakeCarrierItemConversionRates.csv'
 
 

@@ -77,7 +77,6 @@ inputPathPickle_Beta = inputPath + 'pickled/'
 createLargeDictionariesFromScratch_Cost = True
 createLargeDictionariesFromScratch_Beta = False
 
-
 writeOutFlowFile = True
 writeOutDualsByWarehouseAndDisaster = False
 

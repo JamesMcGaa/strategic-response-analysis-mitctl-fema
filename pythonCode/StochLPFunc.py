@@ -26,29 +26,29 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
 
 
                 #Test 1
-                demand_tmpD = {
-                ('0000-0000', 'SubLoc_00000'): 9300,
-                ('0000-0001', 'SubLoc_00000'): 800,
-                ('0000-0002', 'SubLoc_00000'): 500,}
-                probs_tmpD = {'0000-0000':.33333, '0000-0001':.33333, '0000-0002':.33333,}
-                demandAddress_tmpD = {
-                ('0000-0000', 'SubLoc_00000'): "DisasterCity0", 
-                ('0000-0001', 'SubLoc_00000'): "DisasterCity1", 
-                ('0000-0002', 'SubLoc_00000'): "DisasterCity2",}
-                costD = {
-                ('San Francisco, California', 'DisasterCity0', 'Truck'):10, 
-                ('Dallas, Texas', 'DisasterCity0', 'Truck'):50, 
-                ("Philadelphia, Pennsylvania", 'DisasterCity0', 'Truck'):1,
-                ('San Francisco, California', 'DisasterCity1', 'Truck'):10, 
-                ('Dallas, Texas', 'DisasterCity1', 'Truck'):50, 
-                ("Philadelphia, Pennsylvania", 'DisasterCity1', 'Truck'):1,
-                ('San Francisco, California', 'DisasterCity2', 'Truck'):70, 
-                ('Dallas, Texas', 'DisasterCity2', 'Truck'):1, 
-                ("Philadelphia, Pennsylvania", 'DisasterCity2', 'Truck'):70,}
-                inventory_tmpD = {
-                'Dallas, Texas': 7000, 
-                'San Francisco, California': 800, 
-                'Philadelphia, Pennsylvania': 1500}
+#                demand_tmpD = {
+#                ('0000-0000', 'SubLoc_00000'): 9300,
+#                ('0000-0001', 'SubLoc_00000'): 800,
+#                ('0000-0002', 'SubLoc_00000'): 500,}
+#                probs_tmpD = {'0000-0000':.33333, '0000-0001':.33333, '0000-0002':.33333,}
+#                demandAddress_tmpD = {
+#                ('0000-0000', 'SubLoc_00000'): "DisasterCity0", 
+#                ('0000-0001', 'SubLoc_00000'): "DisasterCity1", 
+#                ('0000-0002', 'SubLoc_00000'): "DisasterCity2",}
+#                costD = {
+#                ('San Francisco, California', 'DisasterCity0', 'Truck'):10, 
+#                ('Dallas, Texas', 'DisasterCity0', 'Truck'):50, 
+#                ("Philadelphia, Pennsylvania", 'DisasterCity0', 'Truck'):1,
+#                ('San Francisco, California', 'DisasterCity1', 'Truck'):10, 
+#                ('Dallas, Texas', 'DisasterCity1', 'Truck'):50, 
+#                ("Philadelphia, Pennsylvania", 'DisasterCity1', 'Truck'):1,
+#                ('San Francisco, California', 'DisasterCity2', 'Truck'):70, 
+#                ('Dallas, Texas', 'DisasterCity2', 'Truck'):1, 
+#                ("Philadelphia, Pennsylvania", 'DisasterCity2', 'Truck'):70,}
+#                inventory_tmpD = {
+#                'Dallas, Texas': 7000, 
+#                'San Francisco, California': 800, 
+#                'Philadelphia, Pennsylvania': 1500}
 
                 #Test 2
                 # demand_tmpD = {
@@ -204,26 +204,37 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                 print("Average Time (Cost) with optimal inventory: " + str(average_time))
                 print("\n\n")
                 
+                DualsDF = pd.DataFrame(columns=['City, Dual'])
                 dummyDepotDuals = dummy_solution['depotDuals']
                 for depotName in dummyDepotDuals:
                     if depotName != "dummy":
                         if dummyDepotDuals[depotName] > 0.001:
-                            print("Adjusted Dummy Dual " + depotName + ": " + str(dummyDepotDuals[depotName] - (1-WeightedFractionCompletelyServed) * bigMCostDummy))
+#                            print("Adjusted Dummy Dual " + depotName + ": " + str(dummyDepotDuals[depotName] - (1-WeightedFractionCompletelyServed) * bigMCostDummy))
+                            DualsDF.loc[len(DualsDF)] = str(depotName) + ', ' + str(dummyDepotDuals[depotName] - (1-WeightedFractionCompletelyServed) * bigMCostDummy)
                         else:
-                            print("Adjusted Dummy Dual " + depotName + ": " + str(dummyDepotDuals[depotName]))
+#                            print("Adjusted Dummy Dual " + depotName + ": " + str(dummyDepotDuals[depotName]))
+                            DualsDF.loc[len(DualsDF)] = str(depotName) + ', ' + str(dummyDepotDuals[depotName])
+                
 
+                
                 dummyCarrierDuals = dummy_solution['carrierDuals']
                 for carrier in dummyCarrierDuals:
                     if carrier != "dummycarrier":
                         if dummyCarrierDuals[carrier] > 0.001:
-                            print("Adjusted Dummy Dual " + carrier + ": " + str(dummyCarrierDuals[carrier] - (1-WeightedFractionCompletelyServed) * bigMCostDummy))                
+#                            print("Adjusted Dummy Dual " + carrier + ": " + str(dummyCarrierDuals[carrier] - (1-WeightedFractionCompletelyServed) * bigMCostDummy))                
+                            DualsDF.loc[len(DualsDF)] = str(carrier) + ', ' + str(dummyCarrierDuals[carrier] - (1-WeightedFractionCompletelyServed) * bigMCostDummy)
                         else:
-                            print("Adjusted Dummy Dual " + carrier + ": " + str(dummyCarrierDuals[carrier]))                
+#                            print("Adjusted Dummy Dual " + carrier + ": " + str(dummyCarrierDuals[carrier]))
+                            DualsDF.loc[len(DualsDF)] = str(carrier) + ', ' + str(dummyCarrierDuals[carrier])
 
+               print DualsDF
+                DualsFileName =  str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_") + "_duals_" + n_itemIter + ".csv"
+                DualsDF.to_csv(DualsFileName, index=False)                
+                
 
                 
 
-#                sys.exit()
+                sys.exit()
                 myOutDict = {'myObj': myObj.getConstant() #Objective value with dummy (might be huge)
                                                                                                                                 , 'myObjNoDum': myObjNoDum.getConstant() #Objective value without dummy 
                                                                                                                                 , 'myWeightedDemand': myWeightedDemand.getConstant() #Total flow (weighted by probability not cost)
@@ -459,6 +470,7 @@ def dummyhelper(demand_tmpD
                                                     weighted_dummy_demand += probs_tmpD[disasterID] * dummyVar.x
                                                     
 
+
     else:
                                     adjobjVal = 'error - no solution'
                                     dummyObj = 'error - no solution'
@@ -499,7 +511,7 @@ def dummyhelper(demand_tmpD
     plt.step(adjustedTimes, adjustedSatisfied)
     plt.xlabel('Time (hours)')
     plt.ylabel('Cumulative Exp. Fraction of Demand Served')
-    plt.xlim(xmin=0, xmax=72)
+    plt.xlim(xmin=0, xmax=200)
     plt.title('Demand Served Metric')
     plt.show()
 
@@ -521,6 +533,7 @@ def dummyhelper(demand_tmpD
 #                    print 'Singular Carrier Dual ' + str(depot+":"+carrier[0]+":"+disasterTuple[0]) + "= "  + str(constrs["CARRIER<"+depot+":"+carrier[0]+":"+disasterTuple[0]+">"].Pi)
                     carrierDuals[carrier[0]] += constrs["CARRIER<"+depot+":"+carrier[0]+":"+disasterTuple[0]+">"].Pi
     print(carrierDuals)
+
 
 
     return {'dummyObj': dummyObj, 'adjdummyObj': adjobjVal, 'dummyFlow': flow, 'weightedDummyDemand': weighted_dummy_demand, 'depotDuals': depotDuals, 'carrierDuals':carrierDuals}
@@ -807,9 +820,28 @@ def nonfixeddummyinventoryhelper(demand_tmpD
                 plt.step(adjustedTimes, adjustedSatisfied)
                 plt.xlabel('Time (hours)')
                 plt.ylabel('Cumulative Exp. Fraction of Demand Served')
-                plt.xlim(xmin=0, xmax=72)
+                plt.xlim(xmin=0, xmax=200)
                 plt.title('Demand Served Metric')
                 plt.show()
+
+##                depotDuals = {}
+#                carrierDuals = {}
+##                for depotName in inventory_tmpD:
+##                    depotDuals[depotName] = 0
+##                    for disasterTuple in demand_tmpD:
+###                        print 'Singular Depot Dual ' + depotName + '= ' + str(constrs["DEPOT<"+depotName+":"+disasterTuple[0]+">"].Pi)
+##                        depotDuals[depotName] += constrs["DEPOT<"+depotName+":"+disasterTuple[0]+">"].Pi
+##                print(depotDuals)
+#              
+#                for depot in carrierDict:
+#                    for carrier in carrierDict[depot]:
+#                        if carrier[0] not in carrierDuals:
+#                            carrierDuals[carrier[0]] = 0
+#                        for disasterTuple in demand_tmpD:
+#                            if "CARRIER<"+depot+":"+carrier[0]+":"+disasterTuple[0]+">" in constrs:
+##                                print 'Singular Carrier Dual ' + str(depot+":"+carrier[0]+":"+disasterTuple[0]) + "= "  + str(constrs["CARRIER<"+depot+":"+carrier[0]+":"+disasterTuple[0]+">"].Pi)
+#                                carrierDuals[carrier[0]] += constrs["CARRIER<"+depot+":"+carrier[0]+":"+disasterTuple[0]+">"].Pi
+#                print(carrierDuals)
 
 
                 return {'dummyObj': dummyObj, 'adjdummyObj': adjobjVal, 'dummyFlow': flow, 'weightedDummyDemand': weighted_dummy_demand}
