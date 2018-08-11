@@ -13,7 +13,7 @@ drivingDistanceMatrixFileName = 'drivingDistanceMatrix.csv'
 gglCountryContinentLkupFileName = 'gglCountryContinentLkup.csv'
 transporationParametersFileName = 'transporationParameters.csv'
 itemAttributesFileName =  'itemAttributesFEMA.csv' # 'itemAttributes.csv'
-carrierListFileName = 'fakeCarrierDataFEMA.csv' #fakeCarrierDataFEMA.csv
+carrierListFileName = 'fakeCarrierDataFEMA_nototcaplimit.csv' #fakeCarrierDataFEMA.csv
 itemCarrierConversionFileName =  'fakeCarrierItemConversionRatesFEMA.csv' # 'fakeCarrierItemConversionRates.csv'
 
 
@@ -43,7 +43,7 @@ maxDisasterYear = 2017
 
 
 truckDistanceMethod = 'google' #'google' 'crowScale'
-maxDrivingTimeCutAbove_Hrs = 100
+maxDrivingTimeCutAbove_Hrs = 1000
 
 
 

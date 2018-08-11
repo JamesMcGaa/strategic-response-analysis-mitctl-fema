@@ -228,7 +228,7 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                 DualsDF = pd.Series(dummyCarrierDuals, name='Adjusted Dual')
                 DualsDF.index.name = 'Carrier'
                 DualsFileName =  str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_") + "_dummy_carrier_duals_" + n_itemIter + ".csv"
-                DualsDF.to_csv("outputData//"+DualsFileName, header=True)   
+                DualsDF.to_csv("outputData//"+DualsFileName, header=True)
 
                 dummyCarrierDuals = nonfixed_dummy_solution['carrierDuals']
                 for carrierName in dummyCarrierDuals:
