@@ -105,41 +105,41 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
 
 
 
+                dummy_solution = dummyhelper( "time"
+                                            , demand_tmpD
+                                            , demandAddress_tmpD
+                                            , probs_tmpD
+                                            , disasterIDsUnq_tmp
+                                            , disasterIDsWithSubLocUnq_tmp
+                                            , inventory_tmpD
+                                            , transModesTransParams
+                                            , bigMCostElim
+                                            , bigMCostDummy
+                                            , costD
+                                            , dummyNodeName
+                                            , areInitialSuppliesVariables_Flag
+                                            , depotWhichFixedSubset
+                                            , minInvItemD
+                                            , depotInWhichCountry
+                                            )
 
-
-                dummy_solution = dummyhelper(demand_tmpD
-                                                                                                                                                        , demandAddress_tmpD
-                                                                                                                                                        , probs_tmpD
-                                                                                                                                                        , disasterIDsUnq_tmp
-                                                                                                                                                        , disasterIDsWithSubLocUnq_tmp
-                                                                                                                                                        , inventory_tmpD
-                                                                                                                                                        , transModesTransParams
-                                                                                                                                                        , bigMCostElim
-                                                                                                                                                        , bigMCostDummy
-                                                                                                                                                        , costD
-                                                                                                                                                        , dummyNodeName
-                                                                                                                                                        , areInitialSuppliesVariables_Flag
-                                                                                                                                                        , depotWhichFixedSubset
-                                                                                                                                                        , minInvItemD
-                                                                                                                                                        , depotInWhichCountry
-                                                                                                                                                        )
-
-                nonfixed_dummy_solution = nonfixeddummyinventoryhelper(demand_tmpD
-                                                                                                                                                        , demandAddress_tmpD
-                                                                                                                                                        , probs_tmpD
-                                                                                                                                                        , disasterIDsUnq_tmp
-                                                                                                                                                        , disasterIDsWithSubLocUnq_tmp
-                                                                                                                                                        , inventory_tmpD
-                                                                                                                                                        , transModesTransParams
-                                                                                                                                                        , bigMCostElim
-                                                                                                                                                        , bigMCostDummy
-                                                                                                                                                        , costD
-                                                                                                                                                        , dummyNodeName
-                                                                                                                                                        , areInitialSuppliesVariables_Flag
-                                                                                                                                                        , depotWhichFixedSubset
-                                                                                                                                                        , minInvItemD
-                                                                                                                                                        , depotInWhichCountry
-                                                                                                                                                        )
+                nonfixed_dummy_solution = nonfixeddummyinventoryhelper( "time"
+                                                                      , demand_tmpD
+                                                                      , demandAddress_tmpD
+                                                                      , probs_tmpD
+                                                                      , disasterIDsUnq_tmp
+                                                                      , disasterIDsWithSubLocUnq_tmp
+                                                                      , inventory_tmpD
+                                                                      , transModesTransParams
+                                                                      , bigMCostElim
+                                                                      , bigMCostDummy
+                                                                      , costD
+                                                                      , dummyNodeName
+                                                                      , areInitialSuppliesVariables_Flag
+                                                                      , depotWhichFixedSubset
+                                                                      , minInvItemD
+                                                                      , depotInWhichCountry
+                                                                      )
 
 
 
@@ -204,36 +204,48 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                 print("Average Time (Cost) with optimal inventory: " + str(average_time))
                 print("\n\n")
                 
-                DualsDF = pd.DataFrame(columns=['City, Dual'])
+
+
                 dummyDepotDuals = dummy_solution['depotDuals']
                 for depotName in dummyDepotDuals:
                     if depotName != "dummy":
                         if dummyDepotDuals[depotName] > 0.001:
-#                            print("Adjusted Dummy Dual " + depotName + ": " + str(dummyDepotDuals[depotName] - (1-WeightedFractionCompletelyServed) * bigMCostDummy))
-                            DualsDF.loc[len(DualsDF)] = str(depotName) + ', ' + str(dummyDepotDuals[depotName] - (1-WeightedFractionCompletelyServed) * bigMCostDummy)
-                        else:
-#                            print("Adjusted Dummy Dual " + depotName + ": " + str(dummyDepotDuals[depotName]))
-                            DualsDF.loc[len(DualsDF)] = str(depotName) + ', ' + str(dummyDepotDuals[depotName])
-                
+                            #print("Adjusted Dummy Dual " + depotName + ": " + str(dummyDepotDuals[depotName] - (1-WeightedFractionCompletelyServed) * bigMCostDummy))
+                            dummyDepotDuals[depotName] = dummyDepotDuals[depotName] - (1-WeightedFractionCompletelyServed) * bigMCostDummy
 
-                
+                DualsDF = pd.Series(dummyDepotDuals, name='Adjusted Dual')
+                DualsDF.index.name = 'Depot City'
+                DualsFileName =  str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_") + "_dummy_depot_duals_" + n_itemIter + ".csv"
+                DualsDF.to_csv("outputData//"+DualsFileName, header=True)   
+
+
                 dummyCarrierDuals = dummy_solution['carrierDuals']
-                for carrier in dummyCarrierDuals:
-                    if carrier != "dummycarrier":
-                        if dummyCarrierDuals[carrier] > 0.001:
-#                            print("Adjusted Dummy Dual " + carrier + ": " + str(dummyCarrierDuals[carrier] - (1-WeightedFractionCompletelyServed) * bigMCostDummy))                
-                            DualsDF.loc[len(DualsDF)] = str(carrier) + ', ' + str(dummyCarrierDuals[carrier] - (1-WeightedFractionCompletelyServed) * bigMCostDummy)
-                        else:
-#                            print("Adjusted Dummy Dual " + carrier + ": " + str(dummyCarrierDuals[carrier]))
-                            DualsDF.loc[len(DualsDF)] = str(carrier) + ', ' + str(dummyCarrierDuals[carrier])
+                for carrierName in dummyCarrierDuals:
+                    if carrierName != "dummycarrier":
+                        if dummyCarrierDuals[carrierName] > 0.001:
+                            #print("Adjusted Dummy Dual " + carrierName + ": " + str(dummyCarrierDuals[carrierName] - (1-WeightedFractionCompletelyServed) * bigMCostDummy))
+                            dummyCarrierDuals[carrierName] = dummyCarrierDuals[carrierName] - (1-WeightedFractionCompletelyServed) * bigMCostDummy
+                DualsDF = pd.Series(dummyCarrierDuals, name='Adjusted Dual')
+                DualsDF.index.name = 'Carrier'
+                DualsFileName =  str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_") + "_dummy_carrier_duals_" + n_itemIter + ".csv"
+                DualsDF.to_csv("outputData//"+DualsFileName, header=True)   
 
-               print DualsDF
-                DualsFileName =  str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_") + "_duals_" + n_itemIter + ".csv"
-                DualsDF.to_csv(DualsFileName, index=False)                
+                dummyCarrierDuals = nonfixed_dummy_solution['carrierDuals']
+                for carrierName in dummyCarrierDuals:
+                    if carrierName != "dummycarrier":
+                        if dummyCarrierDuals[carrierName] > 0.001:
+                            #print("Adjusted Dummy Dual " + carrierName + ": " + str(dummyCarrierDuals[carrierName] - (1-WeightedFractionCompletelyServed) * bigMCostDummy))
+                            dummyCarrierDuals[carrierName] = dummyCarrierDuals[carrierName] - (1-WeightedFractionCompletelyServed) * bigMCostDummy
+                DualsDF = pd.Series(dummyCarrierDuals, name='Adjusted Dual')
+                DualsDF.index.name = 'Carrier'
+                DualsFileName =  str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_") + "_nonfixeddummy_carrier_duals_" + n_itemIter + ".csv"
+                DualsDF.to_csv("outputData//"+DualsFileName, header=True)   
+
+
+
                 
 
-                
-
+                print("-------------------------------END------------------------------")
                 sys.exit()
                 myOutDict = {'myObj': myObj.getConstant() #Objective value with dummy (might be huge)
                                                                                                                                 , 'myObjNoDum': myObjNoDum.getConstant() #Objective value without dummy 
@@ -255,23 +267,24 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
 
 #----------------------------------------------------------------------------------------------------------------------------------
 
-def dummyhelper(demand_tmpD
-                                                                                                                                                                                                                                                                , demandAddress_tmpD
-                                                                                                                                                                                                                                                                , probs_tmpD
-                                                                                                                                                                                                                                                                , disasterIDsUnq_tmp
-                                                                                                                                                                                                                                                                , disasterIDsWithSubLocUnq_tmp
-                                                                                                                                                                                                                                                                , inventory_tmpD
-                                                                                                                                                                                                                                                                , transModesTransParams
-                                                                                                                                                                                                                                                                , bigMCostElim
-                                                                                                                                                                                                                                                                , bigMCostDummy
-                                                                                                                                                                                                                                                                , costD
-                                                                                                                                                                                                                                                                , dummyNodeName
-                                                                                                                                                                                                                                                                , areInitialSuppliesVariables_Flag
-                                                                                                                                                                                                                                                                , depotWhichFixedSubset
-                                                                                                                                                                                                                                                                , minInvItemD
-                                                                                                                                                                                                                                                                , depotInWhichCountry
-                                                                                                                                                                                                                                                                ):
-    print("-------------------------------DUMMY------------------------------")
+def dummyhelper( costType
+              , demand_tmpD
+              , demandAddress_tmpD
+              , probs_tmpD
+              , disasterIDsUnq_tmp
+              , disasterIDsWithSubLocUnq_tmp
+              , inventory_tmpD
+              , transModesTransParams
+              , bigMCostElim
+              , bigMCostDummy
+              , costD
+              , dummyNodeName
+              , areInitialSuppliesVariables_Flag
+              , depotWhichFixedSubset
+              , minInvItemD
+              , depotInWhichCountry
+                                                                                                                                                                    ):
+    print("\n\n-------------------------------DUMMY------------------------------")
 
     m = Model('StochLP')
 
@@ -477,61 +490,61 @@ def dummyhelper(demand_tmpD
                                     weighted_dummy_demand = 0
 
     #Collect information for T-metric and plot metric over time
-    timeDemandTuples = []
-    for var in triToDistanceMap:
-             if var.X > .01:
-                             disasterID = var.VarName.split(':')[2]
-                             sublocID = var.VarName.split(':')[3]
-                             #timeDemandTuples.append((var.X * probs_tmpD[disasterID] / float(demand_tmpD[(disasterID, sublocID)]), triToDistanceMap[var]))
-                             timeDemandTuples.append((var.X * 1.0 / (len(probs_tmpD) * float(demand_tmpD[(disasterID, sublocID)])), triToDistanceMap[var]))
-    timeDemandTuples.sort(key = lambda x: x[1]) #Sort based on time
-    times = [e[1] for e in timeDemandTuples]
-    satisfied = [e[0] for e in timeDemandTuples]
-    cumulative_satisfied = []
-    for i in range(len(satisfied)):
-             cumulative_satisfied.append(sum(satisfied[:i+1]))
+    # timeDemandTuples = []
+    # for var in triToDistanceMap:
+    #          if var.X > .01:
+    #                          disasterID = var.VarName.split(':')[2]
+    #                          sublocID = var.VarName.split(':')[3]
+    #                          #timeDemandTuples.append((var.X * probs_tmpD[disasterID] / float(demand_tmpD[(disasterID, sublocID)]), triToDistanceMap[var]))
+    #                          timeDemandTuples.append((var.X * 1.0 / (len(probs_tmpD) * float(demand_tmpD[(disasterID, sublocID)])), triToDistanceMap[var]))
+    # timeDemandTuples.sort(key = lambda x: x[1]) #Sort based on time
+    # times = [e[1] for e in timeDemandTuples]
+    # satisfied = [e[0] for e in timeDemandTuples]
+    # cumulative_satisfied = []
+    # for i in range(len(satisfied)):
+    #          cumulative_satisfied.append(sum(satisfied[:i+1]))
 
+    # adjustedTimes = [0]
+    # adjustedSatisfied = [0]
+    # for i in range(len(cumulative_satisfied)):
+    #         adjustedTimes.append(times[i])
+    #         adjustedTimes.append(times[i])
+    #         if i == 0:
+    #                 adjustedSatisfied.append(0)
+    #         else:
+    #                 adjustedSatisfied.append(cumulative_satisfied[i-1])
+    #         adjustedSatisfied.append(cumulative_satisfied[i])
 
+    # import matplotlib.pyplot as plt
 
-    adjustedTimes = [0]
-    adjustedSatisfied = [0]
-    for i in range(len(cumulative_satisfied)):
-            adjustedTimes.append(times[i])
-            adjustedTimes.append(times[i])
-            if i == 0:
-                    adjustedSatisfied.append(0)
-            else:
-                    adjustedSatisfied.append(cumulative_satisfied[i-1])
-            adjustedSatisfied.append(cumulative_satisfied[i])
+    # plt.step(adjustedTimes, adjustedSatisfied)
+    # plt.xlabel('Time (hours)')
+    # plt.ylabel('Cumulative Exp. Fraction of Demand Served')
+    # plt.xlim(xmin=0, xmax=200)
+    # plt.title('Demand Served Metric')
+    # plt.show()
 
-            
-
-    import matplotlib.pyplot as plt
-
-    plt.step(adjustedTimes, adjustedSatisfied)
-    plt.xlabel('Time (hours)')
-    plt.ylabel('Cumulative Exp. Fraction of Demand Served')
-    plt.xlim(xmin=0, xmax=200)
-    plt.title('Demand Served Metric')
-    plt.show()
-
+    #Generate depot duals by summing over all disasters for a fixed depot
     depotDuals = {}
     carrierDuals = {}
     for depotName in inventory_tmpD:
         depotDuals[depotName] = 0
         for disasterTuple in demand_tmpD:
-#            print 'Singular Depot Dual ' + depotName + '= ' + str(constrs["DEPOT<"+depotName+":"+disasterTuple[0]+">"].Pi)
+            #print 'Singular Depot Dual ' + depotName + '= ' + str(constrs["DEPOT<"+depotName+":"+disasterTuple[0]+">"].Pi)
             depotDuals[depotName] += constrs["DEPOT<"+depotName+":"+disasterTuple[0]+">"].Pi
+    print("\nDummy Depot Duals: ")
     print(depotDuals)
   
+    #Generate carrier duals by summing over all disasters for a fixed carrier
     for depot in carrierDict:
         for carrier in carrierDict[depot]:
             if carrier[0] not in carrierDuals:
                 carrierDuals[carrier[0]] = 0
             for disasterTuple in demand_tmpD:
                 if "CARRIER<"+depot+":"+carrier[0]+":"+disasterTuple[0]+">" in constrs:
-#                    print 'Singular Carrier Dual ' + str(depot+":"+carrier[0]+":"+disasterTuple[0]) + "= "  + str(constrs["CARRIER<"+depot+":"+carrier[0]+":"+disasterTuple[0]+">"].Pi)
+                    #print 'Singular Carrier Dual ' + str(depot+":"+carrier[0]+":"+disasterTuple[0]) + "= "  + str(constrs["CARRIER<"+depot+":"+carrier[0]+":"+disasterTuple[0]+">"].Pi)
                     carrierDuals[carrier[0]] += constrs["CARRIER<"+depot+":"+carrier[0]+":"+disasterTuple[0]+">"].Pi
+    print("\nDummy Carrier Duals: ")
     print(carrierDuals)
 
 
@@ -543,27 +556,29 @@ def dummyhelper(demand_tmpD
 #--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-def nonfixeddummyinventoryhelper(demand_tmpD
-                                                                                                        , demandAddress_tmpD
-                                                                                                        , probs_tmpD
-                                                                                                        , disasterIDsUnq_tmp
-                                                                                                        , disasterIDsWithSubLocUnq_tmp
-                                                                                                        , inventory_tmpD
-                                                                                                        , transModesTransParams
-                                                                                                        , bigMCostElim
-                                                                                                        , bigMCostDummy
-                                                                                                        , costD
-                                                                                                        , dummyNodeName
-                                                                                                        , areInitialSuppliesVariables_Flag
-                                                                                                        , depotWhichFixedSubset
-                                                                                                        , minInvItemD
-                                                                                                        , depotInWhichCountry
-                                                                                                                ):
+def nonfixeddummyinventoryhelper( costType
+                                  , demand_tmpD
+                                  , demandAddress_tmpD
+                                  , probs_tmpD
+                                  , disasterIDsUnq_tmp
+                                  , disasterIDsWithSubLocUnq_tmp
+                                  , inventory_tmpD
+                                  , transModesTransParams
+                                  , bigMCostElim
+                                  , bigMCostDummy
+                                  , costD
+                                  , dummyNodeName
+                                  , areInitialSuppliesVariables_Flag
+                                  , depotWhichFixedSubset
+                                  , minInvItemD
+                                  , depotInWhichCountry
+                                          ):
                 print("-------------------------------NONFIXED-DUMMY------------------------------")
                 m = Model('StochLPNonfixedDummy')
                 #Generate list of string names
                 disasterList = demand_tmpD.keys()
                 carrierList = []
+                constrs = {}
 
                 #------axr code start-----
                 #Populate carrierList
@@ -583,15 +598,21 @@ def nonfixeddummyinventoryhelper(demand_tmpD
                                 carrierDict[row[5]].append((row[0], int(row[1])*itemCarrierConversionRatio, int(row[2]))) #FLOAT?
 
 
+
                 #Initialize duo variables
+                #AXR: Duo variables are all inventory-carrier pairs
                 triVars = {}
                 for depot in carrierDict:
                         depotCarriers = carrierDict[depot]
-                        for carrier in depotCarriers:                   
+                        for carrier in depotCarriers:
                                 for disasterName in disasterList:
                                         disasterName = disasterName[0]
-                                        triVars[depot+":"+carrier[0]+":"+disasterName] = m.addVar(lb=0.0, ub=carrier[1], vtype=GRB.CONTINUOUS, name=depot+":"+carrier[0]+disasterName) 
-    
+                                        triVars[depot+":"+carrier[0]+":"+disasterName] = m.addVar(lb=0.0, vtype=GRB.CONTINUOUS, name=depot+":"+carrier[0]+disasterName) 
+                                        LHS = LinExpr()
+                                        LHS.addConstant(carrier[1])
+                                        RHS = LinExpr()
+                                        RHS.addTerms(1,triVars[depot+":"+carrier[0]+":"+disasterName])
+                                        constrs["CARRIER<"+depot+":"+carrier[0]+":"+disasterName+">"] = m.addConstr(LHS, GRB.GREATER_EQUAL, RHS, name="CARRIER<"+depot+":"+carrier[0]+":"+disasterName+">"+">")
 
 
                 #Initialize triplet variables
@@ -787,64 +808,55 @@ def nonfixeddummyinventoryhelper(demand_tmpD
                     weighted_dummy_demand = 0
                                                 
                 #Collect information for T-metric and plot metric over time
-                timeDemandTuples = []
-                for var in triToDistanceMap:
-                         if var.X > .01:
-                                         disasterID = var.VarName.split(':')[2]
-                                         sublocID = var.VarName.split(':')[3]
-                                         #timeDemandTuples.append((var.X * probs_tmpD[disasterID] / float(demand_tmpD[(disasterID, sublocID)]), triToDistanceMap[var]))
-                                         timeDemandTuples.append((var.X * 1.0 / (len(probs_tmpD) * float(demand_tmpD[(disasterID, sublocID)])), triToDistanceMap[var]))
-                timeDemandTuples.sort(key = lambda x: x[1]) #Sort based on time
-                times = [e[1] for e in timeDemandTuples]
-                satisfied = [e[0] for e in timeDemandTuples]
-                cumulative_satisfied = []
-                for i in range(len(satisfied)):
-                         cumulative_satisfied.append(sum(satisfied[:i+1]))
+                # timeDemandTuples = []
+                # for var in triToDistanceMap:
+                #          if var.X > .01:
+                #                          disasterID = var.VarName.split(':')[2]
+                #                          sublocID = var.VarName.split(':')[3]
+                #                          #timeDemandTuples.append((var.X * probs_tmpD[disasterID] / float(demand_tmpD[(disasterID, sublocID)]), triToDistanceMap[var]))
+                #                          timeDemandTuples.append((var.X * 1.0 / (len(probs_tmpD) * float(demand_tmpD[(disasterID, sublocID)])), triToDistanceMap[var]))
+                # timeDemandTuples.sort(key = lambda x: x[1]) #Sort based on time
+                # times = [e[1] for e in timeDemandTuples]
+                # satisfied = [e[0] for e in timeDemandTuples]
+                # cumulative_satisfied = []
+                # for i in range(len(satisfied)):
+                #          cumulative_satisfied.append(sum(satisfied[:i+1]))
+
+                # adjustedTimes = [0]
+                # adjustedSatisfied = [0]
+                # for i in range(len(cumulative_satisfied)):
+                #         adjustedTimes.append(times[i])
+                #         adjustedTimes.append(times[i])
+                #         if i == 0:
+                #                 adjustedSatisfied.append(0)
+                #         else:
+                #                 adjustedSatisfied.append(cumulative_satisfied[i-1])
+                #         adjustedSatisfied.append(cumulative_satisfied[i])
+
+                # import matplotlib.pyplot as plt
+
+                # plt.step(adjustedTimes, adjustedSatisfied)
+                # plt.xlabel('Time (hours)')
+                # plt.ylabel('Cumulative Exp. Fraction of Demand Served')
+                # plt.xlim(xmin=0, xmax=200)
+                # plt.title('Demand Served Metric')
+                # plt.show()
+
+                #Generate carrier duals by summing over all disasters for a fixed carrier
+                carrierDuals = {}
+                for depot in carrierDict:
+                   for carrier in carrierDict[depot]:
+                       if carrier[0] not in carrierDuals:
+                           carrierDuals[carrier[0]] = 0
+                       for disasterTuple in demand_tmpD:
+                           if "CARRIER<"+depot+":"+carrier[0]+":"+disasterTuple[0]+">" in constrs:
+                              #print 'Singular Carrier Dual ' + str(depot+":"+carrier[0]+":"+disasterTuple[0]) + "= "  + str(constrs["CARRIER<"+depot+":"+carrier[0]+":"+disasterTuple[0]+">"].Pi)
+                               carrierDuals[carrier[0]] += constrs["CARRIER<"+depot+":"+carrier[0]+":"+disasterTuple[0]+">"].Pi
+                print("\nNonfixed Dummy Carrier Duals: ")               
+                print(carrierDuals)
 
 
-                adjustedTimes = [0]
-                adjustedSatisfied = [0]
-                for i in range(len(cumulative_satisfied)):
-                        adjustedTimes.append(times[i])
-                        adjustedTimes.append(times[i])
-                        if i == 0:
-                                adjustedSatisfied.append(0)
-                        else:
-                                adjustedSatisfied.append(cumulative_satisfied[i-1])
-                        adjustedSatisfied.append(cumulative_satisfied[i])
-
-                        
-
-                import matplotlib.pyplot as plt
-
-                plt.step(adjustedTimes, adjustedSatisfied)
-                plt.xlabel('Time (hours)')
-                plt.ylabel('Cumulative Exp. Fraction of Demand Served')
-                plt.xlim(xmin=0, xmax=200)
-                plt.title('Demand Served Metric')
-                plt.show()
-
-##                depotDuals = {}
-#                carrierDuals = {}
-##                for depotName in inventory_tmpD:
-##                    depotDuals[depotName] = 0
-##                    for disasterTuple in demand_tmpD:
-###                        print 'Singular Depot Dual ' + depotName + '= ' + str(constrs["DEPOT<"+depotName+":"+disasterTuple[0]+">"].Pi)
-##                        depotDuals[depotName] += constrs["DEPOT<"+depotName+":"+disasterTuple[0]+">"].Pi
-##                print(depotDuals)
-#              
-#                for depot in carrierDict:
-#                    for carrier in carrierDict[depot]:
-#                        if carrier[0] not in carrierDuals:
-#                            carrierDuals[carrier[0]] = 0
-#                        for disasterTuple in demand_tmpD:
-#                            if "CARRIER<"+depot+":"+carrier[0]+":"+disasterTuple[0]+">" in constrs:
-##                                print 'Singular Carrier Dual ' + str(depot+":"+carrier[0]+":"+disasterTuple[0]) + "= "  + str(constrs["CARRIER<"+depot+":"+carrier[0]+":"+disasterTuple[0]+">"].Pi)
-#                                carrierDuals[carrier[0]] += constrs["CARRIER<"+depot+":"+carrier[0]+":"+disasterTuple[0]+">"].Pi
-#                print(carrierDuals)
-
-
-                return {'dummyObj': dummyObj, 'adjdummyObj': adjobjVal, 'dummyFlow': flow, 'weightedDummyDemand': weighted_dummy_demand}
+                return {'dummyObj': dummyObj, 'adjdummyObj': adjobjVal, 'dummyFlow': flow, 'weightedDummyDemand': weighted_dummy_demand, 'carrierDuals':carrierDuals}
 
 
 
