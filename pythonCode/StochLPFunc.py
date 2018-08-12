@@ -111,8 +111,6 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                   timeMatrix[((row.depotGglAddressAscii, row.disasterGglAddressAscii, 'Truck'))] = row.drivingTime_hrs
     
 
-
-
                 for mode in ["TIME", "MONETARY"]:
                   if mode == "MONETARY":
                     dummy_solution = dummyhelper( "MONETARY"
