@@ -111,176 +111,180 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                   timeMatrix[((row.depotGglAddressAscii, row.disasterGglAddressAscii, 'Truck'))] = row.drivingTime_hrs
     
 
-                # dummy_solution = dummyhelper( "time"
-                #                             , demand_tmpD
-                #                             , demandAddress_tmpD
-                #                             , probs_tmpD
-                #                             , disasterIDsUnq_tmp
-                #                             , disasterIDsWithSubLocUnq_tmp
-                #                             , inventory_tmpD
-                #                             , transModesTransParams
-                #                             , bigMCostElim
-                #                             , bigMCostDummy
-                #                             , timeMatrix
-                #                             , dummyNodeName
-                #                             , areInitialSuppliesVariables_Flag
-                #                             , depotWhichFixedSubset
-                #                             , minInvItemD
-                #                             , depotInWhichCountry
-                #                             )
-
-                # nonfixed_dummy_solution = nonfixeddummyinventoryhelper( "time"
-                #                                                       , demand_tmpD
-                #                                                       , demandAddress_tmpD
-                #                                                       , probs_tmpD
-                #                                                       , disasterIDsUnq_tmp
-                #                                                       , disasterIDsWithSubLocUnq_tmp
-                #                                                       , inventory_tmpD
-                #                                                       , transModesTransParams
-                #                                                       , bigMCostElim
-                #                                                       , bigMCostDummy
-                #                                                       , timeMatrix
-                #                                                       , dummyNodeName
-                #                                                       , areInitialSuppliesVariables_Flag
-                #                                                       , depotWhichFixedSubset
-                #                                                       , minInvItemD
-                #                                                       , depotInWhichCountry
-                #                                                       )
-
-                dummy_solution = dummyhelper( "monetary"
-                                            , demand_tmpD
-                                            , demandAddress_tmpD
-                                            , probs_tmpD
-                                            , disasterIDsUnq_tmp
-                                            , disasterIDsWithSubLocUnq_tmp
-                                            , inventory_tmpD
-                                            , transModesTransParams
-                                            , bigMCostElim
-                                            , bigMCostDummy
-                                            , monetaryMatrix
-                                            , dummyNodeName
-                                            , areInitialSuppliesVariables_Flag
-                                            , depotWhichFixedSubset
-                                            , minInvItemD
-                                            , depotInWhichCountry
-                                            )
-
-                nonfixed_dummy_solution = nonfixeddummyinventoryhelper( "monetary"
-                                                                      , demand_tmpD
-                                                                      , demandAddress_tmpD
-                                                                      , probs_tmpD
-                                                                      , disasterIDsUnq_tmp
-                                                                      , disasterIDsWithSubLocUnq_tmp
-                                                                      , inventory_tmpD
-                                                                      , transModesTransParams
-                                                                      , bigMCostElim
-                                                                      , bigMCostDummy
-                                                                      , monetaryMatrix
-                                                                      , dummyNodeName
-                                                                      , areInitialSuppliesVariables_Flag
-                                                                      , depotWhichFixedSubset
-                                                                      , minInvItemD
-                                                                      , depotInWhichCountry
-                                                                      )
 
 
+                for mode in ["TIME", "MONETARY"]:
+                  if mode == "MONETARY":
+                    dummy_solution = dummyhelper( "MONETARY"
+                                                , demand_tmpD
+                                                , demandAddress_tmpD
+                                                , probs_tmpD
+                                                , disasterIDsUnq_tmp
+                                                , disasterIDsWithSubLocUnq_tmp
+                                                , inventory_tmpD
+                                                , transModesTransParams
+                                                , bigMCostElim
+                                                , bigMCostDummy
+                                                , monetaryMatrix
+                                                , dummyNodeName
+                                                , areInitialSuppliesVariables_Flag
+                                                , depotWhichFixedSubset
+                                                , minInvItemD
+                                                , depotInWhichCountry
+                                                )
+
+                    nonfixed_dummy_solution = nonfixeddummyinventoryhelper( "MONETARY"
+                                                                          , demand_tmpD
+                                                                          , demandAddress_tmpD
+                                                                          , probs_tmpD
+                                                                          , disasterIDsUnq_tmp
+                                                                          , disasterIDsWithSubLocUnq_tmp
+                                                                          , inventory_tmpD
+                                                                          , transModesTransParams
+                                                                          , bigMCostElim
+                                                                          , bigMCostDummy
+                                                                          , monetaryMatrix
+                                                                          , dummyNodeName
+                                                                          , areInitialSuppliesVariables_Flag
+                                                                          , depotWhichFixedSubset
+                                                                          , minInvItemD
+                                                                          , depotInWhichCountry
+                                                                          )
+
+                  if mode == "TIME":
+                    dummy_solution = dummyhelper( "TIME"
+                                                , demand_tmpD
+                                                , demandAddress_tmpD
+                                                , probs_tmpD
+                                                , disasterIDsUnq_tmp
+                                                , disasterIDsWithSubLocUnq_tmp
+                                                , inventory_tmpD
+                                                , transModesTransParams
+                                                , bigMCostElim
+                                                , bigMCostDummy
+                                                , timeMatrix
+                                                , dummyNodeName
+                                                , areInitialSuppliesVariables_Flag
+                                                , depotWhichFixedSubset
+                                                , minInvItemD
+                                                , depotInWhichCountry
+                                                )
+
+                    nonfixed_dummy_solution = nonfixeddummyinventoryhelper( "TIME"
+                                                                          , demand_tmpD
+                                                                          , demandAddress_tmpD
+                                                                          , probs_tmpD
+                                                                          , disasterIDsUnq_tmp
+                                                                          , disasterIDsWithSubLocUnq_tmp
+                                                                          , inventory_tmpD
+                                                                          , transModesTransParams
+                                                                          , bigMCostElim
+                                                                          , bigMCostDummy
+                                                                          , timeMatrix
+                                                                          , dummyNodeName
+                                                                          , areInitialSuppliesVariables_Flag
+                                                                          , depotWhichFixedSubset
+                                                                          , minInvItemD
+                                                                          , depotInWhichCountry
+                                                                          )
 
 
 
-                print("-------------------------------METRICS------------------------------\n")
-                print 'Printing metrics for ' + n_itemIter
-#        print dummy_solution
-#        print ""
-#        print nonfixed_dummy_solution
-                weight_av_demand = 0
-                for key in demand_tmpD:
-                        weight_av_demand += probs_tmpD[key[0]]*demand_tmpD[key]
-                
-#       collecting information for dummy model if there is a solution        
-                if dummy_solution['dummyObj'] != 'error - no solution':       
-                        weight_av_demand_met = weight_av_demand - dummy_solution['weightedDummyDemand']
-                        
-                        #AXR 18/23/7: identifying number of disasters completely served
-                        dummyFlowFiltered = {k:v for k,v in dummy_solution['dummyFlow'].iteritems() if 'dummy' in k}
-                        WeightedFractionCompletelyServed = 1 - float(len(dummyFlowFiltered))/float(len(probs_tmpD))
-        
-                        average_time = dummy_solution['adjdummyObj'] / weight_av_demand_met
-                elif dummy_solution['dummyObj'] == 'error - no solution':
-                        print 'dummy model: ' + dummy_solution['dummyObj']
-                        
-#       collecting information for non-fixed dummy model if there is a solution            
-                if nonfixed_dummy_solution['dummyObj'] != 'error - no solution':
-                        weight_av_demand_met_nonfixed = weight_av_demand - nonfixed_dummy_solution['weightedDummyDemand']
-                        
-                        #AXR 18/23/7: identifying number of disasters completely served
-                        dummyFlowFilterednonFixed = {k:v for k,v in nonfixed_dummy_solution['dummyFlow'].iteritems() if 'dummy' in k}
-                        WeightedFractionCompletelyServednonFixed = 1 - float(len(dummyFlowFilterednonFixed))/float(len(probs_tmpD))
-    
-                        average_time = nonfixed_dummy_solution['adjdummyObj'] / weight_av_demand_met_nonfixed                       
-                elif nonfixed_dummy_solution['dummyObj'] == 'error - no solution':
-                        print 'non-fixed dummy model: ' + nonfixed_dummy_solution['dummyObj']
-                        
-#       calculating balance metric if both models solved        
-                if nonfixed_dummy_solution['dummyObj'] != 'error - no solution' and nonfixed_dummy_solution['dummyObj'] != 'error - no solution':
-                        balance_metric = dummy_solution['adjdummyObj'] / float(nonfixed_dummy_solution['adjdummyObj'])
-                else:
-                        balance_metric = 'n/a'
 
-#       just printing the results            
-                print("\nTotal Response Time (Cost) for current inventory: " + str(dummy_solution['adjdummyObj']))
-                print("Total Response Time (Cost) for optimal inventory: " + str(nonfixed_dummy_solution['adjdummyObj']))
-                print("Balance Metric: " + str(balance_metric))
-                
-                print("\nWeighted Av. Demand: " + str(weight_av_demand))        
-                print("Weighted Av. Demand Met with current inventory: " + str(weight_av_demand_met))
-                print("Weighted Av. Demand Met with optimal inventory: " + str(weight_av_demand_met_nonfixed))
-                
-                print("\n\nFraction Demand Served with current inventory: " + str(weight_av_demand_met / weight_av_demand))
-                print("Fraction Demand Served with optimal inventory: " + str(weight_av_demand_met_nonfixed / weight_av_demand))
-                
-                print("\n\nWeighted Fraction Completely Served with current inventory: " + str(WeightedFractionCompletelyServed))
-                print("Weighted Fraction Completely Served with optimal inventory: " + str(WeightedFractionCompletelyServed))
+                  print("-------------------------------"+ mode +" METRICS------------------------------\n")
+                  print 'Printing metrics for ' + n_itemIter
+  #        print dummy_solution
+  #        print ""
+  #        print nonfixed_dummy_solution
+                  weight_av_demand = 0
+                  for key in demand_tmpD:
+                          weight_av_demand += probs_tmpD[key[0]]*demand_tmpD[key]
+                  
+  #       collecting information for dummy model if there is a solution        
+                  if dummy_solution['dummyObj'] != 'error - no solution':       
+                          weight_av_demand_met = weight_av_demand - dummy_solution['weightedDummyDemand']
+                          
+                          #AXR 18/23/7: identifying number of disasters completely served
+                          dummyFlowFiltered = {k:v for k,v in dummy_solution['dummyFlow'].iteritems() if 'dummy' in k}
+                          WeightedFractionCompletelyServed = 1 - float(len(dummyFlowFiltered))/float(len(probs_tmpD))
+          
+                          average_time = dummy_solution['adjdummyObj'] / weight_av_demand_met
+                  elif dummy_solution['dummyObj'] == 'error - no solution':
+                          print 'dummy model: ' + dummy_solution['dummyObj']
+                          
+  #       collecting information for non-fixed dummy model if there is a solution            
+                  if nonfixed_dummy_solution['dummyObj'] != 'error - no solution':
+                          weight_av_demand_met_nonfixed = weight_av_demand - nonfixed_dummy_solution['weightedDummyDemand']
+                          
+                          #AXR 18/23/7: identifying number of disasters completely served
+                          dummyFlowFilterednonFixed = {k:v for k,v in nonfixed_dummy_solution['dummyFlow'].iteritems() if 'dummy' in k}
+                          WeightedFractionCompletelyServednonFixed = 1 - float(len(dummyFlowFilterednonFixed))/float(len(probs_tmpD))
+      
+                          average_time = nonfixed_dummy_solution['adjdummyObj'] / weight_av_demand_met_nonfixed                       
+                  elif nonfixed_dummy_solution['dummyObj'] == 'error - no solution':
+                          print 'non-fixed dummy model: ' + nonfixed_dummy_solution['dummyObj']
+                          
+  #       calculating balance metric if both models solved        
+                  if nonfixed_dummy_solution['dummyObj'] != 'error - no solution' and nonfixed_dummy_solution['dummyObj'] != 'error - no solution':
+                          balance_metric = dummy_solution['adjdummyObj'] / float(nonfixed_dummy_solution['adjdummyObj'])
+                  else:
+                          balance_metric = 'n/a'
 
-                print("\n\nAverage Time (Cost) with current inventory: " + str(average_time))
-                print("Average Time (Cost) with optimal inventory: " + str(average_time))
-                print("\n\n")
-                
+  #       just printing the results            
+                  print("\nTotal Response Time (Cost) for current inventory: " + str(dummy_solution['adjdummyObj']))
+                  print("Total Response Time (Cost) for optimal inventory: " + str(nonfixed_dummy_solution['adjdummyObj']))
+                  print("Balance Metric: " + str(balance_metric))
+                  
+                  print("\nWeighted Av. Demand: " + str(weight_av_demand))        
+                  print("Weighted Av. Demand Met with current inventory: " + str(weight_av_demand_met))
+                  print("Weighted Av. Demand Met with optimal inventory: " + str(weight_av_demand_met_nonfixed))
+                  
+                  print("\n\nFraction Demand Served with current inventory: " + str(weight_av_demand_met / weight_av_demand))
+                  print("Fraction Demand Served with optimal inventory: " + str(weight_av_demand_met_nonfixed / weight_av_demand))
+                  
+                  print("\n\nWeighted Fraction Completely Served with current inventory: " + str(WeightedFractionCompletelyServed))
+                  print("Weighted Fraction Completely Served with optimal inventory: " + str(WeightedFractionCompletelyServed))
 
-
-                dummyDepotDuals = dummy_solution['depotDuals']
-                for depotName in dummyDepotDuals:
-                    if depotName != "dummy":
-                        if dummyDepotDuals[depotName] > 0.001:
-                            #print("Adjusted Dummy Dual " + depotName + ": " + str(dummyDepotDuals[depotName] - (1-WeightedFractionCompletelyServed) * bigMCostDummy))
-                            dummyDepotDuals[depotName] = dummyDepotDuals[depotName] - (1-WeightedFractionCompletelyServed) * bigMCostDummy
-
-                DualsDF = pd.Series(dummyDepotDuals, name='Adjusted Dual')
-                DualsDF.index.name = 'Depot City'
-                DualsFileName =  str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_") + "_dummy_depot_duals_" + n_itemIter + ".csv"
-                DualsDF.to_csv("outputData//"+DualsFileName, header=True)   
+                  print("\n\nAverage Time (Cost) with current inventory: " + str(average_time))
+                  print("Average Time (Cost) with optimal inventory: " + str(average_time))
+                  print("\n\n")
+                  
 
 
-                dummyCarrierDuals = dummy_solution['carrierDuals']
-                for carrierName in dummyCarrierDuals:
-                    if carrierName != "dummycarrier":
-                        if dummyCarrierDuals[carrierName] > 0.001:
-                            #print("Adjusted Dummy Dual " + carrierName + ": " + str(dummyCarrierDuals[carrierName] - (1-WeightedFractionCompletelyServed) * bigMCostDummy))
-                            dummyCarrierDuals[carrierName] = dummyCarrierDuals[carrierName] - (1-WeightedFractionCompletelyServed) * bigMCostDummy
-                DualsDF = pd.Series(dummyCarrierDuals, name='Adjusted Dual')
-                DualsDF.index.name = 'Carrier'
-                DualsFileName =  str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_") + "_dummy_carrier_duals_" + n_itemIter + ".csv"
-                DualsDF.to_csv("outputData//"+DualsFileName, header=True)   
+                  dummyDepotDuals = dummy_solution['depotDuals']
+                  for depotName in dummyDepotDuals:
+                      if depotName != "dummy":
+                          if dummyDepotDuals[depotName] > 0.001:
+                              #print("Adjusted Dummy Dual " + depotName + ": " + str(dummyDepotDuals[depotName] - (1-WeightedFractionCompletelyServed) * bigMCostDummy))
+                              dummyDepotDuals[depotName] = dummyDepotDuals[depotName] - (1-WeightedFractionCompletelyServed) * bigMCostDummy
 
-                dummyCarrierDuals = nonfixed_dummy_solution['carrierDuals']
-                for carrierName in dummyCarrierDuals:
-                    if carrierName != "dummycarrier":
-                        if dummyCarrierDuals[carrierName] > 0.001:
-                            #print("Adjusted Dummy Dual " + carrierName + ": " + str(dummyCarrierDuals[carrierName] - (1-WeightedFractionCompletelyServed) * bigMCostDummy))
-                            dummyCarrierDuals[carrierName] = dummyCarrierDuals[carrierName] - (1-WeightedFractionCompletelyServed) * bigMCostDummy
-                DualsDF = pd.Series(dummyCarrierDuals, name='Adjusted Dual')
-                DualsDF.index.name = 'Carrier'
-                DualsFileName =  str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_") + "_nonfixeddummy_carrier_duals_" + n_itemIter + ".csv"
-                DualsDF.to_csv("outputData//"+DualsFileName, header=True)   
+                  DualsDF = pd.Series(dummyDepotDuals, name='Adjusted Dual')
+                  DualsDF.index.name = 'Depot City'
+                  DualsFileName =  str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_") + "_"+mode+"_dummy_depot_duals_" + n_itemIter + ".csv"
+                  DualsDF.to_csv("outputData//"+DualsFileName, header=True)   
+
+
+                  dummyCarrierDuals = dummy_solution['carrierDuals']
+                  for carrierName in dummyCarrierDuals:
+                      if carrierName != "dummycarrier":
+                          if dummyCarrierDuals[carrierName] > 0.001:
+                              #print("Adjusted Dummy Dual " + carrierName + ": " + str(dummyCarrierDuals[carrierName] - (1-WeightedFractionCompletelyServed) * bigMCostDummy))
+                              dummyCarrierDuals[carrierName] = dummyCarrierDuals[carrierName] - (1-WeightedFractionCompletelyServed) * bigMCostDummy
+                  DualsDF = pd.Series(dummyCarrierDuals, name='Adjusted Dual')
+                  DualsDF.index.name = 'Carrier'
+                  DualsFileName =  str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_") + "_"+mode+"_dummy_carrier_duals_" + n_itemIter + ".csv"
+                  DualsDF.to_csv("outputData//"+DualsFileName, header=True)   
+
+                  dummyCarrierDuals = nonfixed_dummy_solution['carrierDuals']
+                  for carrierName in dummyCarrierDuals:
+                      if carrierName != "dummycarrier":
+                          if dummyCarrierDuals[carrierName] > 0.001:
+                              #print("Adjusted Dummy Dual " + carrierName + ": " + str(dummyCarrierDuals[carrierName] - (1-WeightedFractionCompletelyServed) * bigMCostDummy))
+                              dummyCarrierDuals[carrierName] = dummyCarrierDuals[carrierName] - (1-WeightedFractionCompletelyServed) * bigMCostDummy
+                  DualsDF = pd.Series(dummyCarrierDuals, name='Adjusted Dual')
+                  DualsDF.index.name = 'Carrier'
+                  DualsFileName =  str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_") + "_"+mode+"_nonfixeddummy_carrier_duals_" + n_itemIter + ".csv"
+                  DualsDF.to_csv("outputData//"+DualsFileName, header=True)   
 
 
 
@@ -325,7 +329,7 @@ def dummyhelper( costType
               , minInvItemD
               , depotInWhichCountry
                                                                                                                                                                     ):
-    print("\n\n-------------------------------DUMMY------------------------------")
+    print("\n\n-------------------------------"+ costType+" DUMMY------------------------------")
 
     m = Model('StochLP')
 
@@ -420,20 +424,20 @@ def dummyhelper( costType
                             elements = carrierDict[key]
                             for element in elements:
                                             if element[0] == triVar.VarName.split(":")[1]:
-                                                if costType == "time":
+                                                if costType == "TIME":
                                                     fixed_cost = element[2]
                                                     break
                                                     break
-                                                elif costType == 'monetary':
+                                                elif costType == 'MONETARY':
                                                     variable_cost = element[3]
                                                     break
                                                     break
                     if (ID,ID2) in demandAddress_tmpD:
                                     if (depotLoc, demandAddress_tmpD[(ID,ID2)],"Truck") in costD:
-                                        if costType == "time":
+                                        if costType == "TIME":
                                                     weights.append(probs_tmpD[ID]*(fixed_cost + costD[(depotLoc, demandAddress_tmpD[(ID,ID2)],"Truck")])) 
                                                     validVars.append(triVar)
-                                        elif costType == 'monetary':
+                                        elif costType == 'MONETARY':
                                                     weights.append(probs_tmpD[ID]*(variable_cost * costD[(depotLoc, demandAddress_tmpD[(ID,ID2)],"Truck")])) 
                                                     validVars.append(triVar)
     expr = LinExpr()
@@ -621,7 +625,7 @@ def nonfixeddummyinventoryhelper( costType
                                   , minInvItemD
                                   , depotInWhichCountry
                                           ):
-                print("-------------------------------NONFIXED-DUMMY------------------------------")
+                print("-------------------------------"+costType+" NONFIXED-DUMMY------------------------------")
                 m = Model('StochLPNonfixedDummy')
                 #Generate list of string names
                 disasterList = demand_tmpD.keys()
@@ -710,20 +714,20 @@ def nonfixeddummyinventoryhelper( costType
                                         elements = carrierDict[key]
                                         for element in elements:
                                                         if element[0] == triVar.VarName.split(":")[1]:
-                                                            if costType == "time":
+                                                            if costType == "TIME":
                                                                 fixed_cost = element[2]
                                                                 break
                                                                 break
-                                                            elif costType == 'monetary':
+                                                            elif costType == 'MONETARY':
                                                                 variable_cost = element[3]
                                                                 break
                                                                 break
                                 if (ID,ID2) in demandAddress_tmpD:
                                                 if (depotLoc, demandAddress_tmpD[(ID,ID2)],"Truck") in costD:
-                                                    if costType == "time":
+                                                    if costType == "TIME":
                                                                 weights.append(probs_tmpD[ID]*(fixed_cost + costD[(depotLoc, demandAddress_tmpD[(ID,ID2)],"Truck")])) 
                                                                 validVars.append(triVar)
-                                                    elif costType == 'monetary':
+                                                    elif costType == 'MONETARY':
                                                                 weights.append(probs_tmpD[ID]*(variable_cost * costD[(depotLoc, demandAddress_tmpD[(ID,ID2)],"Truck")])) 
                                                                 validVars.append(triVar)
                 expr = LinExpr()
