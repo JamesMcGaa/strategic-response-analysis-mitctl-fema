@@ -102,10 +102,52 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                 # 'Dallas, Texas': 700, 
                 # 'San Francisco, California': 200, 
                 # 'Philadelphia, Pennsylvania': 30}
+                import os
+                monetaryMatrix = {}
+                timeMatrix = {}
+                matrix = pd.read_csv(os.getcwd()+"\\inputData\\inputData03_US\\drivingDistanceMatrix.csv") 
+                for index, row in matrix.iterrows():
+                  monetaryMatrix[((row.depotGglAddressAscii, row.disasterGglAddressAscii, 'Truck'))] = row.distance_km
+                  timeMatrix[((row.depotGglAddressAscii, row.disasterGglAddressAscii, 'Truck'))] = row.drivingTime_hrs
+    
 
+                # dummy_solution = dummyhelper( "time"
+                #                             , demand_tmpD
+                #                             , demandAddress_tmpD
+                #                             , probs_tmpD
+                #                             , disasterIDsUnq_tmp
+                #                             , disasterIDsWithSubLocUnq_tmp
+                #                             , inventory_tmpD
+                #                             , transModesTransParams
+                #                             , bigMCostElim
+                #                             , bigMCostDummy
+                #                             , timeMatrix
+                #                             , dummyNodeName
+                #                             , areInitialSuppliesVariables_Flag
+                #                             , depotWhichFixedSubset
+                #                             , minInvItemD
+                #                             , depotInWhichCountry
+                #                             )
 
+                # nonfixed_dummy_solution = nonfixeddummyinventoryhelper( "time"
+                #                                                       , demand_tmpD
+                #                                                       , demandAddress_tmpD
+                #                                                       , probs_tmpD
+                #                                                       , disasterIDsUnq_tmp
+                #                                                       , disasterIDsWithSubLocUnq_tmp
+                #                                                       , inventory_tmpD
+                #                                                       , transModesTransParams
+                #                                                       , bigMCostElim
+                #                                                       , bigMCostDummy
+                #                                                       , timeMatrix
+                #                                                       , dummyNodeName
+                #                                                       , areInitialSuppliesVariables_Flag
+                #                                                       , depotWhichFixedSubset
+                #                                                       , minInvItemD
+                #                                                       , depotInWhichCountry
+                #                                                       )
 
-                dummy_solution = dummyhelper( "time"
+                dummy_solution = dummyhelper( "monetary"
                                             , demand_tmpD
                                             , demandAddress_tmpD
                                             , probs_tmpD
@@ -115,7 +157,7 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                                             , transModesTransParams
                                             , bigMCostElim
                                             , bigMCostDummy
-                                            , costD
+                                            , monetaryMatrix
                                             , dummyNodeName
                                             , areInitialSuppliesVariables_Flag
                                             , depotWhichFixedSubset
@@ -123,7 +165,7 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                                             , depotInWhichCountry
                                             )
 
-                nonfixed_dummy_solution = nonfixeddummyinventoryhelper( "time"
+                nonfixed_dummy_solution = nonfixeddummyinventoryhelper( "monetary"
                                                                       , demand_tmpD
                                                                       , demandAddress_tmpD
                                                                       , probs_tmpD
@@ -133,14 +175,13 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                                                                       , transModesTransParams
                                                                       , bigMCostElim
                                                                       , bigMCostDummy
-                                                                      , costD
+                                                                      , monetaryMatrix
                                                                       , dummyNodeName
                                                                       , areInitialSuppliesVariables_Flag
                                                                       , depotWhichFixedSubset
                                                                       , minInvItemD
                                                                       , depotInWhichCountry
                                                                       )
-
 
 
 
@@ -309,7 +350,7 @@ def dummyhelper( costType
     for row in carrierDataParse:
                     if row[5] not in carrierDict:
                                     carrierDict[row[5]] = []
-                    carrierDict[row[5]].append((row[0], int(row[1])*itemCarrierConversionRatio, int(row[2]))) #FLOAT?
+                    carrierDict[row[5]].append((row[0], int(row[1])*itemCarrierConversionRatio, int(row[2]), float(row[4]))) #FLOAT?
     #------axr code ends-----
     
     #Initialize duo variables
@@ -348,7 +389,7 @@ def dummyhelper( costType
 
     #Introducing a fake dummy node across all variables
     #1000000 Capacity for dummy carrier, 0 cost
-    carrierDict["dummy"] = [("dummycarrier",1000000,0)]
+    carrierDict["dummy"] = [("dummycarrier",1000000,0,1)]
     for disasterName in disasterList:
             triVars["dummy:dummycarrier:"+disasterName[0]] = m.addVar(lb=0.0, vtype=GRB.CONTINUOUS, name="dummy:dummycarrier:"+disasterName[0]) 
             triToQuads["dummy:dummycarrier:"+disasterName[0]] = []
@@ -376,15 +417,24 @@ def dummyhelper( costType
                     ID2 = triVar.VarName.split(":")[3]
                     depotLoc = triVar.VarName.split(":")[0]
                     for key in carrierDict: #Identify proper element
-                                    elements = carrierDict[key]
-                                    for element in elements:
-                                                    if element[0] == triVar.VarName.split(":")[1]:
-                                                                    extraCost = element[2]
-                                                                    break
-                                                                    break
+                            elements = carrierDict[key]
+                            for element in elements:
+                                            if element[0] == triVar.VarName.split(":")[1]:
+                                                if costType == "time":
+                                                    fixed_cost = element[2]
+                                                    break
+                                                    break
+                                                elif costType == 'monetary':
+                                                    variable_cost = element[3]
+                                                    break
+                                                    break
                     if (ID,ID2) in demandAddress_tmpD:
                                     if (depotLoc, demandAddress_tmpD[(ID,ID2)],"Truck") in costD:
-                                                    weights.append(probs_tmpD[ID]*(extraCost + costD[(depotLoc, demandAddress_tmpD[(ID,ID2)],"Truck")])) 
+                                        if costType == "time":
+                                                    weights.append(probs_tmpD[ID]*(fixed_cost + costD[(depotLoc, demandAddress_tmpD[(ID,ID2)],"Truck")])) 
+                                                    validVars.append(triVar)
+                                        elif costType == 'monetary':
+                                                    weights.append(probs_tmpD[ID]*(variable_cost * costD[(depotLoc, demandAddress_tmpD[(ID,ID2)],"Truck")])) 
                                                     validVars.append(triVar)
     expr = LinExpr()
     expr.addTerms(weights, [quadVars[key] for key in quadVars])
@@ -395,6 +445,7 @@ def dummyhelper( costType
     triToDistanceMap = {}
     triVarList = [quadVars[key] for key in quadVars]
     for i in range(len(weights)):
+            triVar = triVarList[i]
             ID = triVar.VarName.split(":")[2]
             triToDistanceMap[triVarList[i]] = weights[i] / probs_tmpD[ID]
 
@@ -413,17 +464,17 @@ def dummyhelper( costType
 
     #Flow constraint
     for disasterTuple in demand_tmpD:
-                    for depot in carrierDict:
-                                    depotCarriers = carrierDict[depot]
-                                    for carrier in depotCarriers:
-                                                                                    LHS = LinExpr()
-                                                                                    LHS.addTerms(1, triVars[depot+":"+carrier[0]+":"+disasterTuple[0]])
-                                                                                    RHS = LinExpr()
-                                                                                    if depot+":"+carrier[0]+":"+disasterTuple[0] in triToQuads:
-                                                                                            for tri in triToQuads[depot+":"+carrier[0]+":"+disasterTuple[0]]:
-                                                                                                            if str(disasterTuple[0]) == tri.VarName.split(":")[2]:
-                                                                                                                            RHS.addTerms(1, tri)
-                                                                                                                            m.addConstr(LHS, GRB.EQUAL, RHS, name="FLOW<"+depot+":"+carrier[0]+":"+disasterTuple[0]+">")
+        for depot in carrierDict:
+            depotCarriers = carrierDict[depot]
+            for carrier in depotCarriers:
+              LHS = LinExpr()
+              LHS.addTerms(1, triVars[depot+":"+carrier[0]+":"+disasterTuple[0]])
+              RHS = LinExpr()
+              if depot+":"+carrier[0]+":"+disasterTuple[0] in triToQuads:
+                      for tri in triToQuads[depot+":"+carrier[0]+":"+disasterTuple[0]]:
+                            if str(disasterTuple[0]) == tri.VarName.split(":")[2]:
+                                    RHS.addTerms(1, tri)
+                                    m.addConstr(LHS, GRB.EQUAL, RHS, name="FLOW<"+depot+":"+carrier[0]+":"+disasterTuple[0]+">")
 
                                                                     
                                                                     
@@ -447,7 +498,7 @@ def dummyhelper( costType
     #These two are taken care of by bounds placed on respective variables
     m.update()
     m.optimize()
-    m.write("dummymodel.lp")
+    m.write("dummy_"+ costType+".lp")
     def printSolution():
                     solution_flow = {}
                     if m.status == GRB.Status.OPTIMAL:
@@ -467,8 +518,8 @@ def dummyhelper( costType
 
     flow = printSolution()
 
-
     if m.status == GRB.Status.OPTIMAL:
+
                                     #axr: adjusting objective value for dummy
                                     dummysum = 0
                                     for dummykey, dummyvalue in flow.iteritems():    
@@ -485,6 +536,7 @@ def dummyhelper( costType
 
 
     else:
+
                                     adjobjVal = 'error - no solution'
                                     dummyObj = 'error - no solution'
                                     weighted_dummy_demand = 0
@@ -552,10 +604,6 @@ def dummyhelper( costType
     return {'dummyObj': dummyObj, 'adjdummyObj': adjobjVal, 'dummyFlow': flow, 'weightedDummyDemand': weighted_dummy_demand, 'depotDuals': depotDuals, 'carrierDuals':carrierDuals}
 
 
-
-#--------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
 def nonfixeddummyinventoryhelper( costType
                                   , demand_tmpD
                                   , demandAddress_tmpD
@@ -589,14 +637,14 @@ def nonfixeddummyinventoryhelper( costType
                                                 if row[0] == n_itemIter:
                                                                                 itemCarrierConversionRatio = int(row[1])
                 
+                #Map of depot to list of [(carrierID, adjusted capacity, fixed time, variable cost),...] 
                 carrierDict = {}
                 carrierParse = f_myReadCsv(inputPath + carrierListFileName)
                 carrierDataParse = carrierParse[1]
                 for row in carrierDataParse:
                                 if row[5] not in carrierDict:
                                                 carrierDict[row[5]] = []
-                                carrierDict[row[5]].append((row[0], int(row[1])*itemCarrierConversionRatio, int(row[2]))) #FLOAT?
-
+                                carrierDict[row[5]].append((row[0], int(row[1])*itemCarrierConversionRatio, int(row[2]), float(row[4]))) #FLOAT?
 
 
                 #Initialize duo variables
@@ -632,7 +680,7 @@ def nonfixeddummyinventoryhelper( costType
 
 
                 #Introducing a fake dummy node across all variables
-                carrierDict["dummy"] = [("dummycarrier",1000000,0)]
+                carrierDict["dummy"] = [("dummycarrier",1000000,0,1)] #No fixed cost, flat variable multiplier
                 for disasterName in disasterList:
                         triVars["dummy:dummycarrier:"+disasterName[0]] = m.addVar(lb=0.0, vtype=GRB.CONTINUOUS, name="dummy:dummycarrier:"+disasterName[0]) 
                         triToQuads["dummy:dummycarrier:"+disasterName[0]] = []
@@ -655,23 +703,31 @@ def nonfixeddummyinventoryhelper( costType
                 weights = []
                 validVars = []
                 for triVar in [quadVars[key] for key in quadVars]:
-                        ID = triVar.VarName.split(":")[2]
-                        ID2 = triVar.VarName.split(":")[3]
-                        depotLoc = triVar.VarName.split(":")[0]
-                        for key in carrierDict: #Identify proper element
-                                elements = carrierDict[key]
-                                for element in elements:
-                                        if element[0] == triVar.VarName.split(":")[1]:
-                                                extraCost = element[2]
-                                                break
-                                                break
-                        if (ID,ID2) in demandAddress_tmpD:
-                                if (depotLoc, demandAddress_tmpD[(ID,ID2)],"Truck") in costD:
-                                        weights.append(probs_tmpD[ID]*(extraCost + costD[(depotLoc, demandAddress_tmpD[(ID,ID2)],"Truck")])) 
-                                        validVars.append(triVar)        
-
+                                ID = triVar.VarName.split(":")[2]
+                                ID2 = triVar.VarName.split(":")[3]
+                                depotLoc = triVar.VarName.split(":")[0]
+                                for key in carrierDict: #Identify proper element
+                                        elements = carrierDict[key]
+                                        for element in elements:
+                                                        if element[0] == triVar.VarName.split(":")[1]:
+                                                            if costType == "time":
+                                                                fixed_cost = element[2]
+                                                                break
+                                                                break
+                                                            elif costType == 'monetary':
+                                                                variable_cost = element[3]
+                                                                break
+                                                                break
+                                if (ID,ID2) in demandAddress_tmpD:
+                                                if (depotLoc, demandAddress_tmpD[(ID,ID2)],"Truck") in costD:
+                                                    if costType == "time":
+                                                                weights.append(probs_tmpD[ID]*(fixed_cost + costD[(depotLoc, demandAddress_tmpD[(ID,ID2)],"Truck")])) 
+                                                                validVars.append(triVar)
+                                                    elif costType == 'monetary':
+                                                                weights.append(probs_tmpD[ID]*(variable_cost * costD[(depotLoc, demandAddress_tmpD[(ID,ID2)],"Truck")])) 
+                                                                validVars.append(triVar)
                 expr = LinExpr()
-                expr.addTerms(weights, [quadVars[key] for key in quadVars]) 
+                expr.addTerms(weights, [quadVars[key] for key in quadVars])
                 m.setObjective(expr, GRB.MINIMIZE)
 
                 #Collect infos on distance map for T metric
@@ -679,6 +735,7 @@ def nonfixeddummyinventoryhelper( costType
                 triToDistanceMap = {}
                 triVarList = [quadVars[key] for key in quadVars]
                 for i in range(len(weights)):
+                        triVar = triVarList[i]
                         ID = triVar.VarName.split(":")[2]
                         triToDistanceMap[triVarList[i]] = weights[i] / probs_tmpD[ID]
 
@@ -760,7 +817,7 @@ def nonfixeddummyinventoryhelper( costType
 
                 m.update()
                 m.optimize()
-                m.write("nonfixeddummy.lp")
+                m.write("nonfixeddummy_"+ costType+".lp")
 
                 def printSolution():
                                 solution_flow = {}
