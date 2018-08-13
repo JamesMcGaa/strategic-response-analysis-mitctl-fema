@@ -40,39 +40,39 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                   timeMatrix[((row.depotGglAddressAscii, row.disasterGglAddressAscii, 'Truck'))] = row.drivingTime_hrs
 
                 #Test 1
-                # demand_tmpD = {
-                # ('0000-0000', 'SubLoc_00000'): 930000,
-                # ('0000-0001', 'SubLoc_00000'): 80000,
-                # ('0000-0002', 'SubLoc_00000'): 50000,}
-                # probs_tmpD = {'0000-0000':.33333, '0000-0001':.33333, '0000-0002':.33333,}
-                # demandAddress_tmpD = {
-                # ('0000-0000', 'SubLoc_00000'): "DisasterCity0", 
-                # ('0000-0001', 'SubLoc_00000'): "DisasterCity1", 
-                # ('0000-0002', 'SubLoc_00000'): "DisasterCity2",}
-                # timeMatrix = {
-                # ('San Francisco, California', 'DisasterCity0', 'Truck'):10, 
-                # ('Dallas, Texas', 'DisasterCity0', 'Truck'):50, 
-                # ("Philadelphia, Pennsylvania", 'DisasterCity0', 'Truck'):1,
-                # ('San Francisco, California', 'DisasterCity1', 'Truck'):10, 
-                # ('Dallas, Texas', 'DisasterCity1', 'Truck'):50, 
-                # ("Philadelphia, Pennsylvania", 'DisasterCity1', 'Truck'):1,
-                # ('San Francisco, California', 'DisasterCity2', 'Truck'):70, 
-                # ('Dallas, Texas', 'DisasterCity2', 'Truck'):1, 
-                # ("Philadelphia, Pennsylvania", 'DisasterCity2', 'Truck'):70,}
-                # monetaryMatrix = {
-                # ('San Francisco, California', 'DisasterCity0', 'Truck'):10, 
-                # ('Dallas, Texas', 'DisasterCity0', 'Truck'):50, 
-                # ("Philadelphia, Pennsylvania", 'DisasterCity0', 'Truck'):1,
-                # ('San Francisco, California', 'DisasterCity1', 'Truck'):10, 
-                # ('Dallas, Texas', 'DisasterCity1', 'Truck'):50, 
-                # ("Philadelphia, Pennsylvania", 'DisasterCity1', 'Truck'):1,
-                # ('San Francisco, California', 'DisasterCity2', 'Truck'):70, 
-                # ('Dallas, Texas', 'DisasterCity2', 'Truck'):1, 
-                # ("Philadelphia, Pennsylvania", 'DisasterCity2', 'Truck'):70,}
-                # inventory_tmpD = {
-                # 'Dallas, Texas': 700000, 
-                # 'San Francisco, California': 80000, 
-                # 'Philadelphia, Pennsylvania': 150000}
+#                demand_tmpD = {
+#                 ('0000-0000', 'SubLoc_00000'): 930000,
+#                 ('0000-0001', 'SubLoc_00000'): 80000,
+#                 ('0000-0002', 'SubLoc_00000'): 50000,}
+#                probs_tmpD = {'0000-0000':.33333, '0000-0001':.33333, '0000-0002':.33333,}
+#                demandAddress_tmpD = {
+#                 ('0000-0000', 'SubLoc_00000'): "DisasterCity0", 
+#                 ('0000-0001', 'SubLoc_00000'): "DisasterCity1", 
+#                 ('0000-0002', 'SubLoc_00000'): "DisasterCity2",}
+#                timeMatrix = {
+#                 ('San Francisco, California', 'DisasterCity0', 'Truck'):10, 
+#                 ('Dallas, Texas', 'DisasterCity0', 'Truck'):50, 
+#                 ("Philadelphia, Pennsylvania", 'DisasterCity0', 'Truck'):1,
+#                 ('San Francisco, California', 'DisasterCity1', 'Truck'):10, 
+#                 ('Dallas, Texas', 'DisasterCity1', 'Truck'):50, 
+#                 ("Philadelphia, Pennsylvania", 'DisasterCity1', 'Truck'):1,
+#                 ('San Francisco, California', 'DisasterCity2', 'Truck'):70, 
+#                 ('Dallas, Texas', 'DisasterCity2', 'Truck'):1, 
+#                 ("Philadelphia, Pennsylvania", 'DisasterCity2', 'Truck'):70,}
+#                monetaryMatrix = {
+#                 ('San Francisco, California', 'DisasterCity0', 'Truck'):10, 
+#                 ('Dallas, Texas', 'DisasterCity0', 'Truck'):50, 
+#                 ("Philadelphia, Pennsylvania", 'DisasterCity0', 'Truck'):1,
+#                 ('San Francisco, California', 'DisasterCity1', 'Truck'):10, 
+#                 ('Dallas, Texas', 'DisasterCity1', 'Truck'):50, 
+#                 ("Philadelphia, Pennsylvania", 'DisasterCity1', 'Truck'):1,
+#                 ('San Francisco, California', 'DisasterCity2', 'Truck'):70, 
+#                 ('Dallas, Texas', 'DisasterCity2', 'Truck'):1, 
+#                 ("Philadelphia, Pennsylvania", 'DisasterCity2', 'Truck'):70,}
+#                inventory_tmpD = {
+#                 'Dallas, Texas': 700000, 
+#                 'San Francisco, California': 80000, 
+#                 'Philadelphia, Pennsylvania': 150000}
 
                 #Test 2
                 # demand_tmpD = {
@@ -400,9 +400,8 @@ def dummyhelper( costType
     for row in carrierDataParse:
         if row[5] not in carrierDict:
               carrierDict[row[5]] = []
-              carrierDict[row[5]].append((row[0], int(row[1])*itemCarrierConversionRatio, int(row[2]), float(row[4]))) #FLOAT?
+        carrierDict[row[5]].append((row[0], int(row[1])*itemCarrierConversionRatio, int(row[2]), float(row[4]))) #FLOAT?
 
-    
     #Initialize triVars, each variable is a DEPOT:CARRIERNAME:DISASTERID trio
     #Initialize CARRIER constraints explicitly rather than using an upper bound in order to extract duals
     #Perhaps check if the relevant tri has already been added?
@@ -532,17 +531,17 @@ def dummyhelper( costType
                                                                     
     #Depot capacity
     for disasterTuple in demand_tmpD:
-                                    for depot in carrierDict:
-                                                    if depot in inventory_tmpD: #Only consider depots we have inventory in
-                                                                    depotCarriers = carrierDict[depot]
-                                                                    inventoryCapacity = inventory_tmpD[depot]
-                                                                    LHS = LinExpr()
-                                                                    LHS.addConstant(inventoryCapacity)
-                                                                    RHS = LinExpr()
-                                                                    for carrier in depotCarriers:
-                                                                                                     if depot+":"+carrier[0]+":"+disasterTuple[0] in triVars:
-                                                                                                                                     RHS.addTerms(1,triVars[depot+":"+carrier[0]+":"+disasterTuple[0]])
-                                                                    constrs["DEPOT<"+depot+":"+disasterTuple[0]+">"] = m.addConstr(LHS, GRB.GREATER_EQUAL, RHS, name="DEPOT<"+depot+":"+disasterTuple[0]+">")
+        for depot in carrierDict:
+            if depot in inventory_tmpD: #Only consider depots we have inventory in
+                depotCarriers = carrierDict[depot]
+                inventoryCapacity = inventory_tmpD[depot]
+                LHS = LinExpr()
+                LHS.addConstant(inventoryCapacity)
+                RHS = LinExpr()
+                for carrier in depotCarriers:
+                     if depot+":"+carrier[0]+":"+disasterTuple[0] in triVars:
+                         RHS.addTerms(1,triVars[depot+":"+carrier[0]+":"+disasterTuple[0]])
+                constrs["DEPOT<"+depot+":"+disasterTuple[0]+">"] = m.addConstr(LHS, GRB.GREATER_EQUAL, RHS, name="DEPOT<"+depot+":"+disasterTuple[0]+">")
 
                     
     #Carrier capacity
@@ -559,7 +558,7 @@ def dummyhelper( costType
                                                     assignments = m.getAttr('x', [quadVars[key] for key in quadVars])
                                                     for tri in [quadVars[key] for key in quadVars]:
                                                                                     if tri.x > 0.0001:
-                                                                                                    #print(tri.VarName, tri.x)
+#                                                                                                    print(tri.VarName, tri.x)
                                                                                                     solution_flow[tri.VarName] = tri.x
                     else:
                                                     print('No solution')
@@ -599,39 +598,40 @@ def dummyhelper( costType
                                     weighted_dummy_demand = 0
 
     #Collect information for T-metric and plot metric over time
-    # timeDemandTuples = []
-    # for var in triToDistanceMap:
-    #          if var.X > .01:
-    #                          disasterID = var.VarName.split(':')[2]
-    #                          sublocID = var.VarName.split(':')[3]
-    #                          #timeDemandTuples.append((var.X * probs_tmpD[disasterID] / float(demand_tmpD[(disasterID, sublocID)]), triToDistanceMap[var]))
-    #                          timeDemandTuples.append((var.X * 1.0 / (len(probs_tmpD) * float(demand_tmpD[(disasterID, sublocID)])), triToDistanceMap[var]))
-    # timeDemandTuples.sort(key = lambda x: x[1]) #Sort based on time
-    # times = [e[1] for e in timeDemandTuples]
-    # satisfied = [e[0] for e in timeDemandTuples]
-    # cumulative_satisfied = []
-    # for i in range(len(satisfied)):
-    #          cumulative_satisfied.append(sum(satisfied[:i+1]))
-
-    # adjustedTimes = [0]
-    # adjustedSatisfied = [0]
-    # for i in range(len(cumulative_satisfied)):
-    #         adjustedTimes.append(times[i])
-    #         adjustedTimes.append(times[i])
-    #         if i == 0:
-    #                 adjustedSatisfied.append(0)
-    #         else:
-    #                 adjustedSatisfied.append(cumulative_satisfied[i-1])
-    #         adjustedSatisfied.append(cumulative_satisfied[i])
-
-    # import matplotlib.pyplot as plt
-
-    # plt.step(adjustedTimes, adjustedSatisfied)
-    # plt.xlabel('Time (hours)')
-    # plt.ylabel('Cumulative Exp. Fraction of Demand Served')
-    # plt.xlim(xmin=0, xmax=200)
-    # plt.title('Demand Served Metric')
-    # plt.show()
+    if costType == "TIME":
+         timeDemandTuples = []
+         for var in triToDistanceMap:
+                  if var.X > .01:
+                                  disasterID = var.VarName.split(':')[2]
+                                  sublocID = var.VarName.split(':')[3]
+                                  #timeDemandTuples.append((var.X * probs_tmpD[disasterID] / float(demand_tmpD[(disasterID, sublocID)]), triToDistanceMap[var]))
+                                  timeDemandTuples.append((var.X * 1.0 / (len(probs_tmpD) * float(demand_tmpD[(disasterID, sublocID)])), triToDistanceMap[var]))
+         timeDemandTuples.sort(key = lambda x: x[1]) #Sort based on time
+         times = [e[1] for e in timeDemandTuples]
+         satisfied = [e[0] for e in timeDemandTuples]
+         cumulative_satisfied = []
+         for i in range(len(satisfied)):
+                  cumulative_satisfied.append(sum(satisfied[:i+1]))
+    
+         adjustedTimes = [0]
+         adjustedSatisfied = [0]
+         for i in range(len(cumulative_satisfied)):
+                 adjustedTimes.append(times[i])
+                 adjustedTimes.append(times[i])
+                 if i == 0:
+                         adjustedSatisfied.append(0)
+                 else:
+                         adjustedSatisfied.append(cumulative_satisfied[i-1])
+                 adjustedSatisfied.append(cumulative_satisfied[i])
+    
+         import matplotlib.pyplot as plt
+    
+         plt.step(adjustedTimes, adjustedSatisfied)
+         plt.xlabel('Time (hours)')
+         plt.ylabel('Cumulative Exp. Fraction of Demand Served')
+         plt.xlim(xmin=0, xmax=200)
+         plt.title('Demand Served Metric')
+         plt.show()
 
     #Generate depot duals by summing over all disasters for a fixed depot
     depotDuals = {}
@@ -644,8 +644,8 @@ def dummyhelper( costType
             if constrName in depotDuals:
               #print 'Singular Depot Dual ' + depotName + ":" + disasterTuple[0] + '= ' + str(constrs["DEPOT<"+depotName+":"+disasterTuple[0]+">"].Pi)
               depotDuals[depotName] += constrs[constrName].Pi
-
-  
+    print depotDuals
+    
     #Generate carrier duals by summing over all disasters for a fixed carrier
     print("\nDummy Carrier Duals: ")
     for depot in carrierDict:
@@ -656,7 +656,7 @@ def dummyhelper( costType
                 if "CARRIER<"+depot+":"+carrier[0]+":"+disasterTuple[0]+">" in constrs:
                     #print 'Singular Carrier Dual ' + str(depot+":"+carrier[0]+":"+disasterTuple[0]) + "= "  + str(constrs["CARRIER<"+depot+":"+carrier[0]+":"+disasterTuple[0]+">"].Pi)
                     carrierDuals[carrier[0]] += constrs["CARRIER<"+depot+":"+carrier[0]+":"+disasterTuple[0]+">"].Pi  
-
+    print carrierDuals
 
 
 
@@ -700,11 +700,10 @@ def nonfixeddummyinventoryhelper( costType
                 carrierParse = f_myReadCsv(inputPath + carrierListFileName)
                 carrierDataParse = carrierParse[1]
                 for row in carrierDataParse:
-                                if row[5] not in carrierDict:
-                                                carrierDict[row[5]] = []
-                                carrierDict[row[5]].append((row[0], int(row[1])*itemCarrierConversionRatio, int(row[2]), float(row[4]))) #FLOAT?
-
-
+                    if row[5] not in carrierDict:
+                        carrierDict[row[5]] = []
+                    carrierDict[row[5]].append((row[0], int(row[1])*itemCarrierConversionRatio, int(row[2]), float(row[4]))) #FLOAT?
+                
                 #Initialize duo variables
                 #AXR: Duo variables are all inventory-carrier pairs
                 triVars = {}
