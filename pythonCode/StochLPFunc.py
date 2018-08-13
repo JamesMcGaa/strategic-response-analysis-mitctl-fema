@@ -269,41 +269,57 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                   print("\n\n")
                   
 
-
+                  #Calculate adjusted duals from raw duals. Output to CSV
+                  #Dummy Depot
                   dummyDepotDuals = dummy_solution['depotDuals']
+                  data = {'Depot City':[], 'Dual':[], 'Adjusted Dual':[]}
                   for depotName in dummyDepotDuals:
                       if depotName != "dummy":
                           if dummyDepotDuals[depotName] > 0.001:
-                              #print("Adjusted Dummy Dual " + depotName + ": " + str(dummyDepotDuals[depotName] - (1-WeightedFractionCompletelyServed) * bigMCostDummy))
-                              dummyDepotDuals[depotName] = dummyDepotDuals[depotName] - (1-WeightedFractionCompletelyServed) * bigMCostDummy
+                              data['Depot City'].append(depotName)
+                              data['Dual'].append(dummyDepotDuals[depotName])
+                              data['Adjusted Dual'].append(dummyDepotDuals[depotName] - (1-WeightedFractionCompletelyServed) * bigMCostDummy)
+                          else:
+                              data['Depot City'].append(depotName)
+                              data['Dual'].append(dummyDepotDuals[depotName])
+                              data['Adjusted Dual'].append(dummyDepotDuals[depotName])
 
-                  DualsDF = pd.Series(dummyDepotDuals, name='Adjusted Dual')
-                  DualsDF.index.name = 'Depot City'
+                  DualsDF = pd.DataFrame(data)
                   DualsFileName =  str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_") + "_"+mode+"_dummy_depot_duals_" + n_itemIter + ".csv"
-                  DualsDF.to_csv("outputData//"+DualsFileName, header=True)   
+                  DualsDF.to_csv("outputData//"+DualsFileName, header=True, index=False, columns=['Depot City', 'Dual', 'Adjusted Dual'])   
 
-
+                  #Dummy Carrier
                   dummyCarrierDuals = dummy_solution['carrierDuals']
+                  data = {'Carrier':[], 'Dual':[], 'Adjusted Dual':[]}
                   for carrierName in dummyCarrierDuals:
                       if carrierName != "dummycarrier":
                           if dummyCarrierDuals[carrierName] > 0.001:
-                              #print("Adjusted Dummy Dual " + carrierName + ": " + str(dummyCarrierDuals[carrierName] - (1-WeightedFractionCompletelyServed) * bigMCostDummy))
-                              dummyCarrierDuals[carrierName] = dummyCarrierDuals[carrierName] - (1-WeightedFractionCompletelyServed) * bigMCostDummy
-                  DualsDF = pd.Series(dummyCarrierDuals, name='Adjusted Dual')
-                  DualsDF.index.name = 'Carrier'
+                              data['Carrier'].append(carrierName)
+                              data['Dual'].append(dummyCarrierDuals[carrierName])
+                              data['Adjusted Dual'].append(dummyCarrierDuals[carrierName] - (1-WeightedFractionCompletelyServed) * bigMCostDummy)
+                          else:
+                              data['Carrier'].append(carrierName)
+                              data['Dual'].append(dummyCarrierDuals[carrierName])
+                              data['Adjusted Dual'].append(dummyCarrierDuals[carrierName])
+                  DualsDF = pd.DataFrame(data)
                   DualsFileName =  str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_") + "_"+mode+"_dummy_carrier_duals_" + n_itemIter + ".csv"
-                  DualsDF.to_csv("outputData//"+DualsFileName, header=True)   
+                  DualsDF.to_csv("outputData//"+DualsFileName, header=True, index=False, columns=['Carrier', 'Dual', 'Adjusted Dual'])  
 
-                  dummyCarrierDuals = nonfixed_dummy_solution['carrierDuals']
-                  for carrierName in dummyCarrierDuals:
+                  #Nonfixed Carrier (nonfixed case does not have a depot dual)
+                  nonfixedCarrierDuals = nonfixed_dummy_solution['carrierDuals']
+                  for carrierName in nonfixedCarrierDuals:
                       if carrierName != "dummycarrier":
-                          if dummyCarrierDuals[carrierName] > 0.001:
-                              #print("Adjusted Dummy Dual " + carrierName + ": " + str(dummyCarrierDuals[carrierName] - (1-WeightedFractionCompletelyServed) * bigMCostDummy))
-                              dummyCarrierDuals[carrierName] = dummyCarrierDuals[carrierName] - (1-WeightedFractionCompletelyServed) * bigMCostDummy
-                  DualsDF = pd.Series(dummyCarrierDuals, name='Adjusted Dual')
-                  DualsDF.index.name = 'Carrier'
+                          if nonfixedCarrierDuals[carrierName] > 0.001:
+                              data['Carrier'].append(carrierName)
+                              data['Dual'].append(nonfixedCarrierDuals[carrierName])
+                              data['Adjusted Dual'].append(nonfixedCarrierDuals[carrierName] - (1-WeightedFractionCompletelyServed) * bigMCostDummy)
+                          else:
+                              data['Carrier'].append(carrierName)
+                              data['Dual'].append(nonfixedCarrierDuals[carrierName])
+                              data['Adjusted Dual'].append(nonfixedCarrierDuals[carrierName])                              
+                  DualsDF = pd.DataFrame(data)
                   DualsFileName =  str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_") + "_"+mode+"_nonfixeddummy_carrier_duals_" + n_itemIter + ".csv"
-                  DualsDF.to_csv("outputData//"+DualsFileName, header=True)   
+                  DualsDF.to_csv("outputData//"+DualsFileName, header=True, index=False, columns=['Carrier', 'Dual', 'Adjusted Dual'])  
 
 
 

@@ -11,3 +11,7 @@ Nonfixed_Inventory_Assignments.csv
 OtherFiles/
 gurobi.log
 StandardFlow.csv
+nonfixeddummy_TIME.lp
+nonfixeddummy_MONETARY.lp
+dummy_TIME.lp
+dummy_MONETARY.lp
