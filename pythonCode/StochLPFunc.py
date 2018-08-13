@@ -25,6 +25,13 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                 # print("-------------------------------MAIN------------------------------")
 
                 import os
+
+                import sys
+                old_stdout = sys.stdout
+                log_file = open("output.log","w")
+                sys.stdout = log_file
+
+
                 monetaryMatrix = {}
                 timeMatrix = {}
                 matrix = pd.read_csv(os.getcwd()+"\\inputData\\inputData03_US\\drivingDistanceMatrix.csv") 
@@ -326,6 +333,8 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                 
 
                 print("-------------------------------END------------------------------")
+                sys.stdout = old_stdout
+                log_file.close()
                 sys.exit()
                 myOutDict = {'myObj': myObj.getConstant() #Objective value with dummy (might be huge)
                                                                                                                                 , 'myObjNoDum': myObjNoDum.getConstant() #Objective value without dummy 
