@@ -13,7 +13,7 @@ drivingDistanceMatrixFileName = 'drivingDistanceMatrix.csv'
 gglCountryContinentLkupFileName = 'gglCountryContinentLkup.csv'
 transporationParametersFileName = 'transporationParameters.csv'
 itemAttributesFileName =  'itemAttributesFEMA.csv' # 'itemAttributes.csv'
-carrierListFileName = 'fakeCarrierDataFEMA.csv' #fakeCarrierDataFEMA.csv #fakeCarrierDataFEMA_nototcaplimit.csv
+carrierListFileName = 'fakeCarrierDataFEMA_nototcaplimit.csv' #fakeCarrierDataFEMA.csv #fakeCarrierDataFEMA_nototcaplimit.csv
 itemCarrierConversionFileName =  'fakeCarrierItemConversionRatesFEMA.csv' # 'fakeCarrierItemConversionRates.csv'
 
 
@@ -48,7 +48,7 @@ maxDrivingTimeCutAbove_Hrs = 1000
 
 
 # When the optimization routine sets up the dummy supply node, how much should that cost?
-bigMCostDummy = 10000
+bigMCostDummy = 1000000
 bigInventoryDummy = 100000000
 
 # In the original files, we set the time and cost to be 1e6 if it is infeasible (i.e., for the road link from

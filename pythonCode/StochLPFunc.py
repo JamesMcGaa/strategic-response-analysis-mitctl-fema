@@ -551,18 +551,22 @@ def dummyhelper( costType
     m.optimize()
     m.write("dummy_"+ costType+".lp")
     def printSolution():
-                    solution_flow = {}
-                    if m.status == GRB.Status.OPTIMAL:
-                                                    print('\nTotal Response Time: %g' % m.objVal)
-                                                    print('\nDispatch:')
-                                                    assignments = m.getAttr('x', [quadVars[key] for key in quadVars])
-                                                    for tri in [quadVars[key] for key in quadVars]:
-                                                                                    if tri.x > 0.0001:
-#                                                                                                    print(tri.VarName, tri.x)
-                                                                                                    solution_flow[tri.VarName] = tri.x
-                    else:
-                                                    print('No solution')
-                    return solution_flow
+        solution_flow = {}
+        if m.status == GRB.Status.OPTIMAL:
+              print('\nTotal Response Time: %g' % m.objVal)
+              print('\nDispatch:')
+              assignments = m.getAttr('x', [quadVars[key] for key in quadVars])
+              total_demand_met = 0
+              for tri in [quadVars[key] for key in quadVars]:
+                      if tri.x > 0.0001:
+                            #print(tri.VarName, tri.x)
+                            if 'dummy' not in tri.VarName:
+                              total_demand_met += tri.x
+                            solution_flow[tri.VarName] = tri.x
+              print("Total Demand Met: " + str(total_demand_met))
+        else:
+              print('No solution')
+        return solution_flow
 
 
 
@@ -600,12 +604,14 @@ def dummyhelper( costType
     #Collect information for T-metric and plot metric over time
     if costType == "TIME":
          timeDemandTuples = []
+         total_demand = sum([demand_tmpD[key] for key in demand_tmpD])
          for var in triToDistanceMap:
                   if var.X > .01:
                                   disasterID = var.VarName.split(':')[2]
                                   sublocID = var.VarName.split(':')[3]
                                   #timeDemandTuples.append((var.X * probs_tmpD[disasterID] / float(demand_tmpD[(disasterID, sublocID)]), triToDistanceMap[var]))
-                                  timeDemandTuples.append((var.X * 1.0 / (len(probs_tmpD) * float(demand_tmpD[(disasterID, sublocID)])), triToDistanceMap[var]))
+                                  #imeDemandTuples.append((var.X * 1.0 / (len(probs_tmpD) * float(demand_tmpD[(disasterID, sublocID)])), triToDistanceMap[var]))
+                                  timeDemandTuples.append((var.X / total_demand, triToDistanceMap[var]))
          timeDemandTuples.sort(key = lambda x: x[1]) #Sort based on time
          times = [e[1] for e in timeDemandTuples]
          satisfied = [e[0] for e in timeDemandTuples]
@@ -631,7 +637,7 @@ def dummyhelper( costType
          plt.ylabel('Cumulative Exp. Fraction of Demand Served')
          plt.xlim(xmin=0, xmax=200)
          plt.title('Demand Served Metric')
-         plt.show()
+         plt.savefig("outputData//" + str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_") + costType +"dummy_T_metric.png")
 
     #Generate depot duals by summing over all disasters for a fixed depot
     depotDuals = {}
@@ -641,7 +647,7 @@ def dummyhelper( costType
         depotDuals[depotName] = 0
         for disasterTuple in demand_tmpD:
             constrName = "DEPOT<"+depotName+":"+disasterTuple[0]+">"
-            if constrName in depotDuals:
+            if constrName in constrs:
               #print 'Singular Depot Dual ' + depotName + ":" + disasterTuple[0] + '= ' + str(constrs["DEPOT<"+depotName+":"+disasterTuple[0]+">"].Pi)
               depotDuals[depotName] += constrs[constrName].Pi
     print depotDuals
@@ -735,23 +741,20 @@ def nonfixeddummyinventoryhelper( costType
                                                 triToQuads[depot+":"+carrier[0]+":"+disaster[0]].append(var)
                                 m.update()        
 
-
                 #Introducing a fake dummy node across all variables
-                carrierDict["dummy"] = [("dummycarrier",1000000,0,1)] #No fixed cost, flat variable multiplier
-                for disasterName in disasterList:
+                #1000000 Capacity for dummy carrier, 0 fixed time, 1 variable cost
+                carrierDict["dummy"] = [("dummycarrier",1000000,0,1)]
+                for disasterName in disasterList: #triVar
                         triVars["dummy:dummycarrier:"+disasterName[0]] = m.addVar(lb=0.0, vtype=GRB.CONTINUOUS, name="dummy:dummycarrier:"+disasterName[0]) 
                         triToQuads["dummy:dummycarrier:"+disasterName[0]] = []
-                triToQuads["dummy:dummycarrier"] = []
                 dummyTris = []
-                for disasterName in disasterList:
+                for disasterName in disasterList: #qudVars
                                 var =  m.addVar(lb=0.0, vtype=GRB.CONTINUOUS, name="dummy:dummycarrier:" + disasterName[0]+":"+disasterName[1]) 
                                 quadVars["dummy:dummycarrier:" + disasterName[0]+":"+disasterName[1]] = var
                                 triToQuads["dummy:dummycarrier:"+ disasterName[0]].append(var)
                                 dummyTris.append(var)
                 for disasterID in demandAddress_tmpD:
-                #AXR 18/23/7 substituted specific number for bigCostDummy variable
-                                costD[('dummy', demandAddress_tmpD[disasterID], 'Truck')] = bigMCostDummy #Dummy cost
-                #AXR 18/23/7 substituetd specific number for bigInventoryDummy variable
+                                costD[('dummy', demandAddress_tmpD[disasterID], 'Truck')] = bigMCostDummy 
                 inventory_tmpD['dummy'] = bigInventoryDummy
                 m.update()
 
@@ -877,18 +880,22 @@ def nonfixeddummyinventoryhelper( costType
                 m.write("nonfixeddummy_"+ costType+".lp")
 
                 def printSolution():
-                                solution_flow = {}
-                                if m.status == GRB.Status.OPTIMAL:
-                                                                print('\nTotal Response Time: %g' % m.objVal)
-                                                                print('\nDispatch:')
-                                                                assignments = m.getAttr('x', [quadVars[key] for key in quadVars])
-                                                                for tri in [quadVars[key] for key in quadVars]:
-                                                                                                if tri.x > 0.0001:
-#                                                                                                                print(tri.VarName, tri.x)
-                                                                                                                solution_flow[tri.VarName] = tri.x
-                                else:
-                                                                print('No solution')
-                                return solution_flow
+                    solution_flow = {}
+                    if m.status == GRB.Status.OPTIMAL:
+                          print('\nTotal Response Time: %g' % m.objVal)
+                          print('\nDispatch:')
+                          assignments = m.getAttr('x', [quadVars[key] for key in quadVars])
+                          total_demand_met = 0
+                          for tri in [quadVars[key] for key in quadVars]:
+                                  if tri.x > 0.0001:
+                                        #print(tri.VarName, tri.x)
+                                        if 'dummy' not in tri.VarName:
+                                          total_demand_met += tri.x
+                                        solution_flow[tri.VarName] = tri.x
+                          print("Total Demand Met: " + str(total_demand_met))
+                    else:
+                          print('No solution')
+                    return solution_flow
                 
                 flow = printSolution()
                 
@@ -910,11 +917,12 @@ def nonfixeddummyinventoryhelper( costType
 #                                                                                    dummysum = dummysum + dummyvalue * ProductWeight * bigMCostDummy * probs_tmpD[next(iter(probs_tmpD))]
                     adjobjVal = m.objVal - dummysum
                     dummyObj = m.objVal
-                                                    
-                    weighted_dummy_demand = 0
+                    weighted_dummy_demand = 0                                
                     for dummyVar in dummyTris:
                                     disasterID = dummyVar.VarName.split(':')[2][:9]
                                     weighted_dummy_demand += probs_tmpD[disasterID] * dummyVar.x
+
+
                     
 
                     print('\nOptimal Inventory Allocation:')
