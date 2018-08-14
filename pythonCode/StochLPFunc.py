@@ -36,43 +36,43 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                 timeMatrix = {}
                 matrix = pd.read_csv(os.getcwd()+"\\inputData\\inputData03_US\\drivingDistanceMatrix.csv") 
                 for index, row in matrix.iterrows():
-                  monetaryMatrix[((row.depotGglAddressAscii, row.disasterGglAddressAscii, 'Truck'))] = row.distance_km
-                  timeMatrix[((row.depotGglAddressAscii, row.disasterGglAddressAscii, 'Truck'))] = row.drivingTime_hrs
+                  monetaryMatrix[((row.depotGglAddressAscii, row.disasterGglAddressAscii))] = row.distance_km
+                  timeMatrix[((row.depotGglAddressAscii, row.disasterGglAddressAscii))] = row.drivingTime_hrs
 
                 #Test 1
-#                demand_tmpD = {
-#                 ('0000-0000', 'SubLoc_00000'): 930000,
-#                 ('0000-0001', 'SubLoc_00000'): 80000,
-#                 ('0000-0002', 'SubLoc_00000'): 50000,}
-#                probs_tmpD = {'0000-0000':.33333, '0000-0001':.33333, '0000-0002':.33333,}
-#                demandAddress_tmpD = {
-#                 ('0000-0000', 'SubLoc_00000'): "DisasterCity0", 
-#                 ('0000-0001', 'SubLoc_00000'): "DisasterCity1", 
-#                 ('0000-0002', 'SubLoc_00000'): "DisasterCity2",}
-#                timeMatrix = {
-#                 ('San Francisco, California', 'DisasterCity0', 'Truck'):10, 
-#                 ('Dallas, Texas', 'DisasterCity0', 'Truck'):50, 
-#                 ("Philadelphia, Pennsylvania", 'DisasterCity0', 'Truck'):1,
-#                 ('San Francisco, California', 'DisasterCity1', 'Truck'):10, 
-#                 ('Dallas, Texas', 'DisasterCity1', 'Truck'):50, 
-#                 ("Philadelphia, Pennsylvania", 'DisasterCity1', 'Truck'):1,
-#                 ('San Francisco, California', 'DisasterCity2', 'Truck'):70, 
-#                 ('Dallas, Texas', 'DisasterCity2', 'Truck'):1, 
-#                 ("Philadelphia, Pennsylvania", 'DisasterCity2', 'Truck'):70,}
-#                monetaryMatrix = {
-#                 ('San Francisco, California', 'DisasterCity0', 'Truck'):10, 
-#                 ('Dallas, Texas', 'DisasterCity0', 'Truck'):50, 
-#                 ("Philadelphia, Pennsylvania", 'DisasterCity0', 'Truck'):1,
-#                 ('San Francisco, California', 'DisasterCity1', 'Truck'):10, 
-#                 ('Dallas, Texas', 'DisasterCity1', 'Truck'):50, 
-#                 ("Philadelphia, Pennsylvania", 'DisasterCity1', 'Truck'):1,
-#                 ('San Francisco, California', 'DisasterCity2', 'Truck'):70, 
-#                 ('Dallas, Texas', 'DisasterCity2', 'Truck'):1, 
-#                 ("Philadelphia, Pennsylvania", 'DisasterCity2', 'Truck'):70,}
-#                inventory_tmpD = {
-#                 'Dallas, Texas': 700000, 
-#                 'San Francisco, California': 80000, 
-#                 'Philadelphia, Pennsylvania': 150000}
+                # demand_tmpD = {
+                # ('0000-0000', 'SubLoc_00000'): 930000,
+                # ('0000-0001', 'SubLoc_00000'): 80000,
+                # ('0000-0002', 'SubLoc_00000'): 50000,}
+                # probs_tmpD = {'0000-0000':.33333, '0000-0001':.33333, '0000-0002':.33333,}
+                # demandAddress_tmpD = {
+                # ('0000-0000', 'SubLoc_00000'): "DisasterCity0", 
+                # ('0000-0001', 'SubLoc_00000'): "DisasterCity1", 
+                # ('0000-0002', 'SubLoc_00000'): "DisasterCity2",}
+                # timeMatrix = {
+                # ('San Francisco, California', 'DisasterCity0'):10, 
+                # ('Dallas, Texas', 'DisasterCity0'):50, 
+                # ("Philadelphia, Pennsylvania", 'DisasterCity0'):1,
+                # ('San Francisco, California', 'DisasterCity1'):10, 
+                # ('Dallas, Texas', 'DisasterCity1'):50, 
+                # ("Philadelphia, Pennsylvania", 'DisasterCity1'):1,
+                # ('San Francisco, California', 'DisasterCity2'):70, 
+                # ('Dallas, Texas', 'DisasterCity2'):1, 
+                # ("Philadelphia, Pennsylvania", 'DisasterCity2'):70,}
+                # monetaryMatrix = {
+                # ('San Francisco, California', 'DisasterCity0'):10, 
+                # ('Dallas, Texas', 'DisasterCity0'):50, 
+                # ("Philadelphia, Pennsylvania", 'DisasterCity0'):1,
+                # ('San Francisco, California', 'DisasterCity1'):10, 
+                # ('Dallas, Texas', 'DisasterCity1'):50, 
+                # ("Philadelphia, Pennsylvania", 'DisasterCity1'):1,
+                # ('San Francisco, California', 'DisasterCity2'):70, 
+                # ('Dallas, Texas', 'DisasterCity2'):1, 
+                # ("Philadelphia, Pennsylvania", 'DisasterCity2'):70,}
+                # inventory_tmpD = {
+                # 'Dallas, Texas': 700000, 
+                # 'San Francisco, California': 80000, 
+                # 'Philadelphia, Pennsylvania': 150000}
 
                 #Test 2
                 # demand_tmpD = {
@@ -99,7 +99,7 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                 # 'San Francisco, California': 200, 
                 # 'Philadelphia, Pennsylvania': 30}
 
-                #Test 3 - dummy  
+                #Test 3   
                 # demand_tmpD = {
                 # ('0000-0000', 'SubLoc_00000'): 1000,
                 # ('0000-0001', 'SubLoc_00000'): 80,
@@ -126,15 +126,16 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                 # 'Dallas, Texas': 700, 
                 # 'San Francisco, California': 200, 
                 # 'Philadelphia, Pennsylvania': 30}
-                
-                #AXR 18/8/12: routine to find the specific weight of the product under consideration                
+                              
                 matrix2 = pd.read_csv(os.getcwd()+"\\inputData\\inputData03_US\\itemAttributesFEMA.csv") 
                 for index, row in matrix2.iterrows():
                     if row.ItemName == n_itemIter:
                         ProductWeight = row.WeightMetricTon
-                                       
+
+                cross_validation = {}
                 for mode in ["TIME", "MONETARY"]:
                   if mode == "MONETARY":
+
                     dummy_solution = dummyhelper( "MONETARY"
                                                 , demand_tmpD
                                                 , demandAddress_tmpD
@@ -153,6 +154,7 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                                                 , depotInWhichCountry
                                                 , ProductWeight
                                                 )
+                    cross_validation[("dummy","MONETARY")] = dummy_solution
 
                     nonfixed_dummy_solution = nonfixeddummyinventoryhelper( "MONETARY"
                                                                           , demand_tmpD
@@ -172,6 +174,7 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                                                                           , depotInWhichCountry
                                                                           , ProductWeight
                                                                           )
+                    cross_validation[("nonfixed","MONETARY")] = nonfixed_dummy_solution
 
                   if mode == "TIME":
                     dummy_solution = dummyhelper( "TIME"
@@ -192,6 +195,7 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                                                 , depotInWhichCountry
                                                 , ProductWeight
                                                 )
+                    cross_validation[("dummy","TIME")] = dummy_solution
 
                     nonfixed_dummy_solution = nonfixeddummyinventoryhelper( "TIME"
                                                                           , demand_tmpD
@@ -211,6 +215,7 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                                                                           , depotInWhichCountry
                                                                           , ProductWeight
                                                                           )
+                    cross_validation[("nonfixed","TIME")] = nonfixed_dummy_solution
 
 
 
@@ -331,10 +336,32 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
 
 
                 
+                monetary_dummy_time = 0
+                monetary_nonfixed_time = 0
+                time_dummy_monetary = 0
+                time_nonfixed_monetary = 0
 
-                print("-------------------------------END------------------------------")
+                for quadVar in cross_validation[("dummy", "TIME")]["dummyFlow"]:
+                  time_dummy_monetary += cross_validation[("dummy", "TIME")]["dummyFlow"][quadVar] * cross_validation[("dummy", "MONETARY")]["weightMap"][quadVar]
+                print("Monetary value for time-dummy model: " + str(time_dummy_monetary))
+
+                for quadVar in cross_validation[("nonfixed", "TIME")]["dummyFlow"]:
+                  time_dummy_monetary += cross_validation[("nonfixed", "TIME")]["dummyFlow"][quadVar] * cross_validation[("nonfixed", "MONETARY")]["weightMap"][quadVar]
+                print("Monetary value for time-nonfixed model: " + str(time_dummy_monetary))
+
+
+                for quadVar in cross_validation[("dummy", "MONETARY")]["dummyFlow"]:
+                  time_dummy_monetary += cross_validation[("dummy", "MONETARY")]["dummyFlow"][quadVar] * cross_validation[("dummy", "TIME")]["weightMap"][quadVar]
+                print("Time value for monetary-dummy model: " + str(time_dummy_monetary))
+
+                for quadVar in cross_validation[("nonfixed", "MONETARY")]["dummyFlow"]:
+                  time_dummy_monetary += cross_validation[("nonfixed", "MONETARY")]["dummyFlow"][quadVar] * cross_validation[("nonfixed", "TIME")]["weightMap"][quadVar]
+                print("Time value for monetary-nonfixed model: " + str(time_dummy_monetary))
+
                 sys.stdout = old_stdout
                 log_file.close()
+                print("-------------------------------END------------------------------")
+
                 sys.exit()
                 myOutDict = {'myObj': myObj.getConstant() #Objective value with dummy (might be huge)
                                                                                                                                 , 'myObjNoDum': myObjNoDum.getConstant() #Objective value without dummy 
@@ -429,7 +456,7 @@ def dummyhelper( costType
         depotCarriers = carrierDict[depot]
         for carrier in depotCarriers:
                 for disaster in disasterList:
-                    if (depot, demandAddress_tmpD[disaster], 'Truck') in costD:
+                    if (depot, demandAddress_tmpD[disaster]) in costD:
                                     triName = depot+":"+carrier[0]+":"+disaster[0]
                                     quadName = depot+":"+carrier[0]+":"+disaster[0]+":"+disaster[1]
                                     var = m.addVar(lb=0.0, vtype=GRB.CONTINUOUS, name=quadName) 
@@ -453,7 +480,7 @@ def dummyhelper( costType
                     triToQuads["dummy:dummycarrier:"+ disasterName[0]].append(var)
                     dummyTris.append(var)
     for disasterID in demandAddress_tmpD:
-                    costD[('dummy', demandAddress_tmpD[disasterID], 'Truck')] = bigMCostDummy 
+                    costD[('dummy', demandAddress_tmpD[disasterID])] = bigMCostDummy 
     inventory_tmpD['dummy'] = bigInventoryDummy
     m.update()
 
@@ -461,6 +488,7 @@ def dummyhelper( costType
 
 
     #Minimize expected time
+    weightMap = {}
     weights = []
     validVars = []
     for triVar in [quadVars[key] for key in quadVars]:
@@ -480,12 +508,16 @@ def dummyhelper( costType
                                                     break
                                                     break
                     if (ID,ID2) in demandAddress_tmpD:
-                                    if (depotLoc, demandAddress_tmpD[(ID,ID2)],"Truck") in costD:
+                                    if (depotLoc, demandAddress_tmpD[(ID,ID2)]) in costD:
                                         if costType == "TIME":
-                                                    weights.append(probs_tmpD[ID]*(fixed_cost + costD[(depotLoc, demandAddress_tmpD[(ID,ID2)],"Truck")])) 
+                                                    weight = probs_tmpD[ID]*(fixed_cost + costD[(depotLoc, demandAddress_tmpD[(ID,ID2)])])
+                                                    weightMap[triVar.VarName] = weight
+                                                    weights.append(weight) 
                                                     validVars.append(triVar)
                                         elif costType == 'MONETARY':
-                                                    weights.append(probs_tmpD[ID]*(variable_cost * ProductWeight * costD[(depotLoc, demandAddress_tmpD[(ID,ID2)],"Truck")])) 
+                                                    weight = probs_tmpD[ID]*(variable_cost * ProductWeight * costD[(depotLoc, demandAddress_tmpD[(ID,ID2)])])
+                                                    weightMap[triVar.VarName] = weight
+                                                    weights.append(weight) 
                                                     validVars.append(triVar)
     expr = LinExpr()
     expr.addTerms(weights, [quadVars[key] for key in quadVars])
@@ -554,16 +586,12 @@ def dummyhelper( costType
         solution_flow = {}
         if m.status == GRB.Status.OPTIMAL:
               print('\nTotal Response Time: %g' % m.objVal)
-              print('\nDispatch:')
+              #print('\nDispatch:')
               assignments = m.getAttr('x', [quadVars[key] for key in quadVars])
-              total_demand_met = 0
               for tri in [quadVars[key] for key in quadVars]:
                       if tri.x > 0.0001:
                             #print(tri.VarName, tri.x)
-                            if 'dummy' not in tri.VarName:
-                              total_demand_met += tri.x
                             solution_flow[tri.VarName] = tri.x
-              print("Total Demand Met: " + str(total_demand_met))
         else:
               print('No solution')
         return solution_flow
@@ -666,7 +694,7 @@ def dummyhelper( costType
 
 
 
-    return {'dummyObj': dummyObj, 'adjdummyObj': adjobjVal, 'dummyFlow': flow, 'weightedDummyDemand': weighted_dummy_demand, 'depotDuals': depotDuals, 'carrierDuals':carrierDuals}
+    return {'dummyObj': dummyObj, 'adjdummyObj': adjobjVal, 'dummyFlow': flow, 'weightedDummyDemand': weighted_dummy_demand, 'depotDuals': depotDuals, 'carrierDuals':carrierDuals, 'weightMap':weightMap}
 
 
 def nonfixeddummyinventoryhelper( costType
@@ -733,7 +761,7 @@ def nonfixeddummyinventoryhelper( costType
                         depotCarriers = carrierDict[depot]
                         for carrier in depotCarriers:
                                 for disaster in disasterList:
-                                        if (depot, demandAddress_tmpD[disaster], 'Truck') in costD:
+                                        if (depot, demandAddress_tmpD[disaster]) in costD:
                                                 var = m.addVar(lb=0.0, vtype=GRB.CONTINUOUS, name=depot+":"+carrier[0]+":"+disaster[0]+":"+disaster[1]) 
                                                 quadVars[depot+":"+carrier[0]+":"+disaster[0]+":"+disaster[1]] = var
                                                 if depot+":"+carrier[0]+":"+disaster[0] not in triToQuads:
@@ -754,12 +782,13 @@ def nonfixeddummyinventoryhelper( costType
                                 triToQuads["dummy:dummycarrier:"+ disasterName[0]].append(var)
                                 dummyTris.append(var)
                 for disasterID in demandAddress_tmpD:
-                                costD[('dummy', demandAddress_tmpD[disasterID], 'Truck')] = bigMCostDummy 
+                                costD[('dummy', demandAddress_tmpD[disasterID])] = bigMCostDummy 
                 inventory_tmpD['dummy'] = bigInventoryDummy
                 m.update()
 
                 
                 #Minimize expected time
+                weightMap = {}
                 weights = []
                 validVars = []
                 for triVar in [quadVars[key] for key in quadVars]:
@@ -779,12 +808,16 @@ def nonfixeddummyinventoryhelper( costType
                                                                 break
                                                                 break
                                 if (ID,ID2) in demandAddress_tmpD:
-                                                if (depotLoc, demandAddress_tmpD[(ID,ID2)],"Truck") in costD:
+                                                if (depotLoc, demandAddress_tmpD[(ID,ID2)]) in costD:
                                                     if costType == "TIME":
-                                                                weights.append(probs_tmpD[ID]*(fixed_cost + costD[(depotLoc, demandAddress_tmpD[(ID,ID2)],"Truck")])) 
+                                                                weight = probs_tmpD[ID]*(fixed_cost + costD[(depotLoc, demandAddress_tmpD[(ID,ID2)])])
+                                                                weightMap[triVar.VarName] = weight
+                                                                weights.append(weight) 
                                                                 validVars.append(triVar)
                                                     elif costType == 'MONETARY':
-                                                                weights.append(probs_tmpD[ID]*(variable_cost * ProductWeight * costD[(depotLoc, demandAddress_tmpD[(ID,ID2)],"Truck")])) 
+                                                                weight = probs_tmpD[ID]*(variable_cost * ProductWeight * costD[(depotLoc, demandAddress_tmpD[(ID,ID2)])])
+                                                                weightMap[triVar.VarName] = weight
+                                                                weights.append(weight) 
                                                                 validVars.append(triVar)
                 expr = LinExpr()
                 expr.addTerms(weights, [quadVars[key] for key in quadVars])
@@ -883,16 +916,12 @@ def nonfixeddummyinventoryhelper( costType
                     solution_flow = {}
                     if m.status == GRB.Status.OPTIMAL:
                           print('\nTotal Response Time: %g' % m.objVal)
-                          print('\nDispatch:')
+                          #print('\nDispatch:')
                           assignments = m.getAttr('x', [quadVars[key] for key in quadVars])
-                          total_demand_met = 0
                           for tri in [quadVars[key] for key in quadVars]:
                                   if tri.x > 0.0001:
                                         #print(tri.VarName, tri.x)
-                                        if 'dummy' not in tri.VarName:
-                                          total_demand_met += tri.x
                                         solution_flow[tri.VarName] = tri.x
-                          print("Total Demand Met: " + str(total_demand_met))
                     else:
                           print('No solution')
                     return solution_flow
@@ -938,41 +967,42 @@ def nonfixeddummyinventoryhelper( costType
                     weighted_dummy_demand = 0
                                                 
                 #Collect information for T-metric and plot metric over time
-                # timeDemandTuples = []
-                # for var in triToDistanceMap:
-                #          if var.X > .01:
-                #                          disasterID = var.VarName.split(':')[2]
-                #                          sublocID = var.VarName.split(':')[3]
-                #                          #timeDemandTuples.append((var.X * probs_tmpD[disasterID] / float(demand_tmpD[(disasterID, sublocID)]), triToDistanceMap[var]))
-                #                          timeDemandTuples.append((var.X * 1.0 / (len(probs_tmpD) * float(demand_tmpD[(disasterID, sublocID)])), triToDistanceMap[var]))
-                # timeDemandTuples.sort(key = lambda x: x[1]) #Sort based on time
-                # times = [e[1] for e in timeDemandTuples]
-                # satisfied = [e[0] for e in timeDemandTuples]
-                # cumulative_satisfied = []
-                # for i in range(len(satisfied)):
-                #          cumulative_satisfied.append(sum(satisfied[:i+1]))
+                timeDemandTuples = []
+                total_demand = sum([demand_tmpD[key] for key in demand_tmpD])
+                for var in triToDistanceMap:
+                        if var.X > .01:
+                                        disasterID = var.VarName.split(':')[2]
+                                        sublocID = var.VarName.split(':')[3]
+                                        #timeDemandTuples.append((var.X * probs_tmpD[disasterID] / float(demand_tmpD[(disasterID, sublocID)]), triToDistanceMap[var]))
+                                        #imeDemandTuples.tappend((var.X * 1.0 / (len(probs_tmpD) * float(demand_tmpD[(disasterID, sublocID)])), triToDistanceMap[var]))
+                                        timeDemandTuples.append((var.X / total_demand, triToDistanceMap[var]))
+                timeDemandTuples.sort(key = lambda x: x[1]) #Sort based on time
+                times = [e[1] for e in timeDemandTuples]
+                satisfied = [e[0] for e in timeDemandTuples]
+                cumulative_satisfied = []
+                for i in range(len(satisfied)):
+                        cumulative_satisfied.append(sum(satisfied[:i+1]))
 
-                # adjustedTimes = [0]
-                # adjustedSatisfied = [0]
-                # for i in range(len(cumulative_satisfied)):
-                #         adjustedTimes.append(times[i])
-                #         adjustedTimes.append(times[i])
-                #         if i == 0:
-                #                 adjustedSatisfied.append(0)
-                #         else:
-                #                 adjustedSatisfied.append(cumulative_satisfied[i-1])
-                #         adjustedSatisfied.append(cumulative_satisfied[i])
+                adjustedTimes = [0]
+                adjustedSatisfied = [0]
+                for i in range(len(cumulative_satisfied)):
+                       adjustedTimes.append(times[i])
+                       adjustedTimes.append(times[i])
+                       if i == 0:
+                               adjustedSatisfied.append(0)
+                       else:
+                               adjustedSatisfied.append(cumulative_satisfied[i-1])
+                       adjustedSatisfied.append(cumulative_satisfied[i])
 
-                # import matplotlib.pyplot as plt
+                import matplotlib.pyplot as plt
 
-                # plt.step(adjustedTimes, adjustedSatisfied)
-                # plt.xlabel('Time (hours)')
-                # plt.ylabel('Cumulative Exp. Fraction of Demand Served')
-                # plt.xlim(xmin=0, xmax=200)
-                # plt.title('Demand Served Metric')
-                # plt.show()
+                plt.step(adjustedTimes, adjustedSatisfied)
+                plt.xlabel('Time (hours)')
+                plt.ylabel('Cumulative Exp. Fraction of Demand Served')
+                plt.xlim(xmin=0, xmax=200)
+                plt.title('Demand Served Metric')
+                plt.savefig("outputData//" + str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_") + costType +"nonfixeddummy_T_metric.png")
 
-                #Generate carrier duals by summing over all disasters for a fixed carrier
                 carrierDuals = {}
                 for depot in carrierDict:
                    for carrier in carrierDict[depot]:
@@ -986,7 +1016,7 @@ def nonfixeddummyinventoryhelper( costType
                 print(carrierDuals)
 
 
-                return {'dummyObj': dummyObj, 'adjdummyObj': adjobjVal, 'dummyFlow': flow, 'weightedDummyDemand': weighted_dummy_demand, 'carrierDuals':carrierDuals}
+                return {'dummyObj': dummyObj, 'adjdummyObj': adjobjVal, 'dummyFlow': flow, 'weightedDummyDemand': weighted_dummy_demand, 'carrierDuals':carrierDuals, 'weightMap':weightMap}
 
 
 
