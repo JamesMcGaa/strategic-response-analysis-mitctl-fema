@@ -28,7 +28,7 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
 
                 import sys
                 old_stdout = sys.stdout
-                log_file = open("outputData/"+str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_")+"output.log","w")
+                log_file = open("outputData//"+ n_itemIter+str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_")+"output_"+n_itemIter+".log","w")
                 sys.stdout = log_file
 
 
@@ -298,7 +298,7 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
 
                   DualsDF = pd.DataFrame(data)
                   DualsFileName =  str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_") + "_"+mode+"_dummy_depot_duals_" + n_itemIter + ".csv"
-                  DualsDF.to_csv("outputData//"+DualsFileName, header=True, index=False, columns=['Depot City', 'Dual', 'Adjusted Dual'])   
+                  DualsDF.to_csv("outputData//"+n_itemIter+DualsFileName, header=True, index=False, columns=['Depot City', 'Dual', 'Adjusted Dual'])   
 
                   #Dummy Carrier
                   dummyCarrierDuals = dummy_solution['carrierDuals']
@@ -315,7 +315,7 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                               data['Adjusted Dual'].append(dummyCarrierDuals[carrierName])
                   DualsDF = pd.DataFrame(data)
                   DualsFileName =  str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_") + "_"+mode+"_dummy_carrier_duals_" + n_itemIter + ".csv"
-                  DualsDF.to_csv("outputData//"+DualsFileName, header=True, index=False, columns=['Carrier', 'Dual', 'Adjusted Dual'])  
+                  DualsDF.to_csv("outputData//"+n_itemIter+DualsFileName, header=True, index=False, columns=['Carrier', 'Dual', 'Adjusted Dual'])  
 
                   #Nonfixed Carrier (nonfixed case does not have a depot dual)
                   nonfixedCarrierDuals = nonfixed_dummy_solution['carrierDuals']
@@ -331,7 +331,7 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                               data['Adjusted Dual'].append(nonfixedCarrierDuals[carrierName])                              
                   DualsDF = pd.DataFrame(data)
                   DualsFileName =  str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_") + "_"+mode+"_nonfixeddummy_carrier_duals_" + n_itemIter + ".csv"
-                  DualsDF.to_csv("outputData//"+DualsFileName, header=True, index=False, columns=['Carrier', 'Dual', 'Adjusted Dual'])  
+#                  DualsDF.to_csv("outputData//"+n_itemIter+DualsFileName, header=True, index=False, columns=['Carrier', 'Dual', 'Adjusted Dual'])  
 
 
 
@@ -662,7 +662,7 @@ def dummyhelper( costType
     
          plt.step(adjustedTimes, adjustedSatisfied)
          plt.xlabel('Time (hours)')
-         plt.ylabel('Cumulative Exp. Fraction of Demand Served')
+         plt.ylabel('Cumulative Fraction of Demand Served')
          plt.xlim(xmin=0, xmax=200)
          plt.title('Demand Served Metric')
          plt.savefig("outputData//" + str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_") + costType +"dummy_T_metric.png")
@@ -966,43 +966,45 @@ def nonfixeddummyinventoryhelper( costType
                     dummyObj = 'error - no solution'
                     weighted_dummy_demand = 0
                                                 
-                #Collect information for T-metric and plot metric over time
-                timeDemandTuples = []
-                total_demand = sum([demand_tmpD[key] for key in demand_tmpD])
-                for var in triToDistanceMap:
-                        if var.X > .01:
-                                        disasterID = var.VarName.split(':')[2]
-                                        sublocID = var.VarName.split(':')[3]
-                                        #timeDemandTuples.append((var.X * probs_tmpD[disasterID] / float(demand_tmpD[(disasterID, sublocID)]), triToDistanceMap[var]))
-                                        #imeDemandTuples.tappend((var.X * 1.0 / (len(probs_tmpD) * float(demand_tmpD[(disasterID, sublocID)])), triToDistanceMap[var]))
-                                        timeDemandTuples.append((var.X / total_demand, triToDistanceMap[var]))
-                timeDemandTuples.sort(key = lambda x: x[1]) #Sort based on time
-                times = [e[1] for e in timeDemandTuples]
-                satisfied = [e[0] for e in timeDemandTuples]
-                cumulative_satisfied = []
-                for i in range(len(satisfied)):
-                        cumulative_satisfied.append(sum(satisfied[:i+1]))
+                #Collect information for T-metric and plot metric over time                 
+                if costType == "TIME":
+                     timeDemandTuples = []
+                     total_demand = sum([demand_tmpD[key] for key in demand_tmpD])
+                     for var in triToDistanceMap:
+                              if var.X > .01:
+                                              disasterID = var.VarName.split(':')[2]
+                                              sublocID = var.VarName.split(':')[3]
+                                              #timeDemandTuples.append((var.X * probs_tmpD[disasterID] / float(demand_tmpD[(disasterID, sublocID)]), triToDistanceMap[var]))
+                                              #imeDemandTuples.append((var.X * 1.0 / (len(probs_tmpD) * float(demand_tmpD[(disasterID, sublocID)])), triToDistanceMap[var]))
+                                              timeDemandTuples.append((var.X / total_demand, triToDistanceMap[var]))
+                     timeDemandTuples.sort(key = lambda x: x[1]) #Sort based on time
+                     times = [e[1] for e in timeDemandTuples]
+                     satisfied = [e[0] for e in timeDemandTuples]
+                     cumulative_satisfied = []
+                     for i in range(len(satisfied)):
+                              cumulative_satisfied.append(sum(satisfied[:i+1]))
+                
+                     adjustedTimes = [0]
+                     adjustedSatisfied = [0]
+                     for i in range(len(cumulative_satisfied)):
+                             adjustedTimes.append(times[i])
+                             adjustedTimes.append(times[i])
+                             if i == 0:
+                                     adjustedSatisfied.append(0)
+                             else:
+                                     adjustedSatisfied.append(cumulative_satisfied[i-1])
+                             adjustedSatisfied.append(cumulative_satisfied[i])
+                
+                     import matplotlib.pyplot as plt
+                
+                     plt.step(adjustedTimes, adjustedSatisfied)
+                     plt.xlabel('Time (hours)')
+                     plt.ylabel('Cumulative Fraction of Demand Served')
+                     plt.xlim(xmin=0, xmax=200)
+                     plt.title('Demand Served Metric')
+                     plt.savefig("outputData//" + str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_") + costType +"dummy_T_metric.png")
 
-                adjustedTimes = [0]
-                adjustedSatisfied = [0]
-                for i in range(len(cumulative_satisfied)):
-                       adjustedTimes.append(times[i])
-                       adjustedTimes.append(times[i])
-                       if i == 0:
-                               adjustedSatisfied.append(0)
-                       else:
-                               adjustedSatisfied.append(cumulative_satisfied[i-1])
-                       adjustedSatisfied.append(cumulative_satisfied[i])
-
-                import matplotlib.pyplot as plt
-
-                plt.step(adjustedTimes, adjustedSatisfied)
-                plt.xlabel('Time (hours)')
-                plt.ylabel('Cumulative Exp. Fraction of Demand Served')
-                plt.xlim(xmin=0, xmax=200)
-                plt.title('Demand Served Metric')
-                plt.savefig("outputData//" + str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_") + costType +"nonfixeddummy_T_metric.png")
-
+                #Generate carrier duals by summing over all disasters for a fixed carrier
                 carrierDuals = {}
                 for depot in carrierDict:
                    for carrier in carrierDict[depot]:
