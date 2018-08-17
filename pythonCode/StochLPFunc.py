@@ -21,7 +21,7 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                                                                                                                         , minInvItemD
                                                                                                                         , depotInWhichCountry
                                                                                                                                                                                                         ):
-
+                n_itemIter = "Cots"
                 print("-------------------------------Start------------------------------")
                 import pandas as pd                
                 import os
@@ -260,8 +260,8 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                           balance_metric = 'n/a'
 
   #       just printing the results            
-                  print("\nTotal Response Time (Cost) for current inventory: " + str(dummy_solution['adjdummyObj']))
-                  print("Total Response Time (Cost) for optimal inventory: " + str(nonfixed_dummy_solution['adjdummyObj']))
+                  print("\nTotal Response "+mode+" for current inventory: " + str(dummy_solution['adjdummyObj']))
+                  print("Total Response "+mode+" for optimal inventory: " + str(nonfixed_dummy_solution['adjdummyObj']))
                   print("Balance Metric: " + str(balance_metric))
                   
                   print("\nWeighted Av. Demand: " + str(weight_av_demand))        
@@ -274,8 +274,8 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                   print("\n\nWeighted Fraction Completely Served with current inventory: " + str(WeightedFractionCompletelyServed))
                   print("Weighted Fraction Completely Served with optimal inventory: " + str(WeightedFractionCompletelyServednonFixed))
 
-                  print("\n\nAverage Time (Cost) with current inventory: " + str(average_time))
-                  print("Average Time (Cost) with optimal inventory: " + str(average_timenonFixed))
+                  print("\n\nAverage "+mode+" with current inventory: " + str(average_time))
+                  print("Average "+mode+" with optimal inventory: " + str(average_timenonFixed))
                   
                   print("dummy correction factor (1-delta)*bigMdummy: " + str((1-WeightedFractionCompletelyServed) * bigMCostDummy))
                   print("\n\n")
@@ -341,22 +341,33 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                 time_dummy_monetary = 0
                 time_nonfixed_monetary = 0
 
+                weight_av_demand_met = 0
                 for quadVar in cross_validation[("dummy", "TIME")]["dummyFlow"]:
-                  time_dummy_monetary += cross_validation[("dummy", "TIME")]["dummyFlow"][quadVar] * cross_validation[("dummy", "MONETARY")]["weightMap"][quadVar]
-                print("Monetary value for time-dummy model: " + str(time_dummy_monetary))
+                  if "dummy" not in quadVar:
+                    weight_av_demand_met += cross_validation[("dummy", "TIME")]["dummyFlow"][quadVar] * 1.0 / len(probs_tmpD)
+                    time_dummy_monetary += cross_validation[("dummy", "TIME")]["dummyFlow"][quadVar] * cross_validation[("dummy", "MONETARY")]["weightMap"][quadVar]
+                print("Monetary average for time-dummy model: " + str(time_dummy_monetary / weight_av_demand_met))
 
+                weight_av_demand_met = 0
                 for quadVar in cross_validation[("nonfixed", "TIME")]["dummyFlow"]:
-                  time_dummy_monetary += cross_validation[("nonfixed", "TIME")]["dummyFlow"][quadVar] * cross_validation[("nonfixed", "MONETARY")]["weightMap"][quadVar]
-                print("Monetary value for time-nonfixed model: " + str(time_dummy_monetary))
+                  if "dummy" not in quadVar:
+                    weight_av_demand_met += cross_validation[("nonfixed", "TIME")]["dummyFlow"][quadVar] * 1.0 / len(probs_tmpD)
+                    time_nonfixed_monetary += cross_validation[("nonfixed", "TIME")]["dummyFlow"][quadVar] * cross_validation[("nonfixed", "MONETARY")]["weightMap"][quadVar]
+                print("Monetary average for time-nonfixed model: " + str(time_nonfixed_monetary / weight_av_demand_met))
 
-
+                weight_av_demand_met = 0
                 for quadVar in cross_validation[("dummy", "MONETARY")]["dummyFlow"]:
-                  time_dummy_monetary += cross_validation[("dummy", "MONETARY")]["dummyFlow"][quadVar] * cross_validation[("dummy", "TIME")]["weightMap"][quadVar]
-                print("Time value for monetary-dummy model: " + str(time_dummy_monetary))
+                  if "dummy" not in quadVar:
+                    weight_av_demand_met += cross_validation[("dummy", "MONETARY")]["dummyFlow"][quadVar] * 1.0 / len(probs_tmpD)
+                    monetary_dummy_time += cross_validation[("dummy", "MONETARY")]["dummyFlow"][quadVar] * cross_validation[("dummy", "TIME")]["weightMap"][quadVar]
+                print("Time average for monetary-dummy model: " + str(monetary_dummy_time / weight_av_demand_met))
 
+                weight_av_demand_met = 0
                 for quadVar in cross_validation[("nonfixed", "MONETARY")]["dummyFlow"]:
-                  time_dummy_monetary += cross_validation[("nonfixed", "MONETARY")]["dummyFlow"][quadVar] * cross_validation[("nonfixed", "TIME")]["weightMap"][quadVar]
-                print("Time value for monetary-nonfixed model: " + str(time_dummy_monetary))
+                  if "dummy" not in quadVar:
+                    weight_av_demand_met += cross_validation[("nonfixed", "MONETARY")]["dummyFlow"][quadVar] * 1.0 / len(probs_tmpD)
+                    monetary_nonfixed_time += cross_validation[("nonfixed", "MONETARY")]["dummyFlow"][quadVar] * cross_validation[("nonfixed", "TIME")]["weightMap"][quadVar]
+                print("Time average for monetary-nonfixed model: " + str(monetary_nonfixed_time / weight_av_demand_met))
 
                 sys.stdout = old_stdout
                 log_file.close()
@@ -630,42 +641,42 @@ def dummyhelper( costType
                                     weighted_dummy_demand = 0
 
     #Collect information for T-metric and plot metric over time
-    if costType == "TIME":
-         timeDemandTuples = []
-         total_demand = sum([demand_tmpD[key] for key in demand_tmpD])
-         for var in triToDistanceMap:
-                  if var.X > .01:
-                                  disasterID = var.VarName.split(':')[2]
-                                  sublocID = var.VarName.split(':')[3]
-                                  #timeDemandTuples.append((var.X * probs_tmpD[disasterID] / float(demand_tmpD[(disasterID, sublocID)]), triToDistanceMap[var]))
-                                  #imeDemandTuples.append((var.X * 1.0 / (len(probs_tmpD) * float(demand_tmpD[(disasterID, sublocID)])), triToDistanceMap[var]))
-                                  timeDemandTuples.append((var.X / total_demand, triToDistanceMap[var]))
-         timeDemandTuples.sort(key = lambda x: x[1]) #Sort based on time
-         times = [e[1] for e in timeDemandTuples]
-         satisfied = [e[0] for e in timeDemandTuples]
-         cumulative_satisfied = []
-         for i in range(len(satisfied)):
-                  cumulative_satisfied.append(sum(satisfied[:i+1]))
+    # if costType == "TIME":
+    #      timeDemandTuples = []
+    #      total_demand = sum([demand_tmpD[key] for key in demand_tmpD])
+    #      for var in triToDistanceMap:
+    #               if var.X > .01:
+    #                               disasterID = var.VarName.split(':')[2]
+    #                               sublocID = var.VarName.split(':')[3]
+    #                               #timeDemandTuples.append((var.X * probs_tmpD[disasterID] / float(demand_tmpD[(disasterID, sublocID)]), triToDistanceMap[var]))
+    #                               #imeDemandTuples.append((var.X * 1.0 / (len(probs_tmpD) * float(demand_tmpD[(disasterID, sublocID)])), triToDistanceMap[var]))
+    #                               timeDemandTuples.append((var.X / total_demand, triToDistanceMap[var]))
+    #      timeDemandTuples.sort(key = lambda x: x[1]) #Sort based on time
+    #      times = [e[1] for e in timeDemandTuples]
+    #      satisfied = [e[0] for e in timeDemandTuples]
+    #      cumulative_satisfied = []
+    #      for i in range(len(satisfied)):
+    #               cumulative_satisfied.append(sum(satisfied[:i+1]))
     
-         adjustedTimes = [0]
-         adjustedSatisfied = [0]
-         for i in range(len(cumulative_satisfied)):
-                 adjustedTimes.append(times[i])
-                 adjustedTimes.append(times[i])
-                 if i == 0:
-                         adjustedSatisfied.append(0)
-                 else:
-                         adjustedSatisfied.append(cumulative_satisfied[i-1])
-                 adjustedSatisfied.append(cumulative_satisfied[i])
+    #      adjustedTimes = [0]
+    #      adjustedSatisfied = [0]
+    #      for i in range(len(cumulative_satisfied)):
+    #              adjustedTimes.append(times[i])
+    #              adjustedTimes.append(times[i])
+    #              if i == 0:
+    #                      adjustedSatisfied.append(0)
+    #              else:
+    #                      adjustedSatisfied.append(cumulative_satisfied[i-1])
+    #              adjustedSatisfied.append(cumulative_satisfied[i])
     
-         import matplotlib.pyplot as plt
+    #      import matplotlib.pyplot as plt
     
-         plt.step(adjustedTimes, adjustedSatisfied)
-         plt.xlabel('Time (hours)')
-         plt.ylabel('Cumulative Fraction of Demand Served')
-         plt.xlim(xmin=0, xmax=200)
-         plt.title('Demand Served Metric')
-         plt.savefig("outputData//" + str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_") + costType +"dummy_T_metric.png")
+    #      plt.step(adjustedTimes, adjustedSatisfied)
+    #      plt.xlabel('Time (hours)')
+    #      plt.ylabel('Cumulative Fraction of Demand Served')
+    #      plt.xlim(xmin=0, xmax=200)
+    #      plt.title('Demand Served Metric')
+    #      plt.savefig("outputData//" + str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_") + costType +"dummy_T_metric.png")
 
     #Generate depot duals by summing over all disasters for a fixed depot
     depotDuals = {}
@@ -967,42 +978,42 @@ def nonfixeddummyinventoryhelper( costType
                     weighted_dummy_demand = 0
                                                 
                 #Collect information for T-metric and plot metric over time                 
-                if costType == "TIME":
-                     timeDemandTuples = []
-                     total_demand = sum([demand_tmpD[key] for key in demand_tmpD])
-                     for var in triToDistanceMap:
-                              if var.X > .01:
-                                              disasterID = var.VarName.split(':')[2]
-                                              sublocID = var.VarName.split(':')[3]
-                                              #timeDemandTuples.append((var.X * probs_tmpD[disasterID] / float(demand_tmpD[(disasterID, sublocID)]), triToDistanceMap[var]))
-                                              #imeDemandTuples.append((var.X * 1.0 / (len(probs_tmpD) * float(demand_tmpD[(disasterID, sublocID)])), triToDistanceMap[var]))
-                                              timeDemandTuples.append((var.X / total_demand, triToDistanceMap[var]))
-                     timeDemandTuples.sort(key = lambda x: x[1]) #Sort based on time
-                     times = [e[1] for e in timeDemandTuples]
-                     satisfied = [e[0] for e in timeDemandTuples]
-                     cumulative_satisfied = []
-                     for i in range(len(satisfied)):
-                              cumulative_satisfied.append(sum(satisfied[:i+1]))
+                # if costType == "TIME":
+                #      timeDemandTuples = []
+                #      total_demand = sum([demand_tmpD[key] for key in demand_tmpD])
+                #      for var in triToDistanceMap:
+                #               if var.X > .01:
+                #                               disasterID = var.VarName.split(':')[2]
+                #                               sublocID = var.VarName.split(':')[3]
+                #                               #timeDemandTuples.append((var.X * probs_tmpD[disasterID] / float(demand_tmpD[(disasterID, sublocID)]), triToDistanceMap[var]))
+                #                               #imeDemandTuples.append((var.X * 1.0 / (len(probs_tmpD) * float(demand_tmpD[(disasterID, sublocID)])), triToDistanceMap[var]))
+                #                               timeDemandTuples.append((var.X / total_demand, triToDistanceMap[var]))
+                #      timeDemandTuples.sort(key = lambda x: x[1]) #Sort based on time
+                #      times = [e[1] for e in timeDemandTuples]
+                #      satisfied = [e[0] for e in timeDemandTuples]
+                #      cumulative_satisfied = []
+                #      for i in range(len(satisfied)):
+                #               cumulative_satisfied.append(sum(satisfied[:i+1]))
                 
-                     adjustedTimes = [0]
-                     adjustedSatisfied = [0]
-                     for i in range(len(cumulative_satisfied)):
-                             adjustedTimes.append(times[i])
-                             adjustedTimes.append(times[i])
-                             if i == 0:
-                                     adjustedSatisfied.append(0)
-                             else:
-                                     adjustedSatisfied.append(cumulative_satisfied[i-1])
-                             adjustedSatisfied.append(cumulative_satisfied[i])
+                #      adjustedTimes = [0]
+                #      adjustedSatisfied = [0]
+                #      for i in range(len(cumulative_satisfied)):
+                #              adjustedTimes.append(times[i])
+                #              adjustedTimes.append(times[i])
+                #              if i == 0:
+                #                      adjustedSatisfied.append(0)
+                #              else:
+                #                      adjustedSatisfied.append(cumulative_satisfied[i-1])
+                #              adjustedSatisfied.append(cumulative_satisfied[i])
                 
-                     import matplotlib.pyplot as plt
+                #      import matplotlib.pyplot as plt
                 
-                     plt.step(adjustedTimes, adjustedSatisfied)
-                     plt.xlabel('Time (hours)')
-                     plt.ylabel('Cumulative Fraction of Demand Served')
-                     plt.xlim(xmin=0, xmax=200)
-                     plt.title('Demand Served Metric')
-                     plt.savefig("outputData//" + str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_") + costType +"dummy_T_metric.png")
+                #      plt.step(adjustedTimes, adjustedSatisfied)
+                #      plt.xlabel('Time (hours)')
+                #      plt.ylabel('Cumulative Fraction of Demand Served')
+                #      plt.xlim(xmin=0, xmax=200)
+                #      plt.title('Demand Served Metric')
+                #      plt.savefig("outputData//" + str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_") + costType +"dummy_T_metric.png")
 
                 #Generate carrier duals by summing over all disasters for a fixed carrier
                 carrierDuals = {}
