@@ -6,21 +6,21 @@
 #TOP----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #TOP----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
-                                                                                                                        , demandAddress_tmpD
-                                                                                                                        , probs_tmpD
-                                                                                                                        , disasterIDsUnq_tmp
-                                                                                                                        , disasterIDsWithSubLocUnq_tmp
-                                                                                                                        , inventory_tmpD
-                                                                                                                        , transModesTransParams
-                                                                                                                        , bigMCostElim
-                                                                                                                        , bigMCostDummy
-                                                                                                                        , costD
-                                                                                                                        , dummyNodeName
-                                                                                                                        , areInitialSuppliesVariables_Flag
-                                                                                                                        , depotWhichFixedSubset
-                                                                                                                        , minInvItemD
-                                                                                                                        , depotInWhichCountry
-                                                                                                                                                                                                        ):
+                                        , demandAddress_tmpD
+                                        , probs_tmpD
+                                        , disasterIDsUnq_tmp
+                                        , disasterIDsWithSubLocUnq_tmp
+                                        , inventory_tmpD
+                                        , transModesTransParams
+                                        , bigMCostElim
+                                        , bigMCostDummy
+                                        , costD
+                                        , dummyNodeName
+                                        , areInitialSuppliesVariables_Flag
+                                        , depotWhichFixedSubset
+                                        , minInvItemD
+                                        , depotInWhichCountry
+                                                                                                                        ):
 
                 print("-------------------------------Start------------------------------")
                 import pandas as pd                
@@ -40,92 +40,98 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                   timeMatrix[((row.depotGglAddressAscii, row.disasterGglAddressAscii))] = row.drivingTime_hrs
 
                 #Test 1
-                # demand_tmpD = {
-                # ('0000-0000', 'SubLoc_00000'): 930000,
-                # ('0000-0001', 'SubLoc_00000'): 80000,
-                # ('0000-0002', 'SubLoc_00000'): 50000,}
-                # probs_tmpD = {'0000-0000':.33333, '0000-0001':.33333, '0000-0002':.33333,}
-                # demandAddress_tmpD = {
-                # ('0000-0000', 'SubLoc_00000'): "DisasterCity0", 
-                # ('0000-0001', 'SubLoc_00000'): "DisasterCity1", 
-                # ('0000-0002', 'SubLoc_00000'): "DisasterCity2",}
-                # timeMatrix = {
-                # ('San Francisco, California', 'DisasterCity0'):10, 
-                # ('Dallas, Texas', 'DisasterCity0'):50, 
-                # ("Philadelphia, Pennsylvania", 'DisasterCity0'):1,
-                # ('San Francisco, California', 'DisasterCity1'):10, 
-                # ('Dallas, Texas', 'DisasterCity1'):50, 
-                # ("Philadelphia, Pennsylvania", 'DisasterCity1'):1,
-                # ('San Francisco, California', 'DisasterCity2'):70, 
-                # ('Dallas, Texas', 'DisasterCity2'):1, 
-                # ("Philadelphia, Pennsylvania", 'DisasterCity2'):70,}
-                # monetaryMatrix = {
-                # ('San Francisco, California', 'DisasterCity0'):10, 
-                # ('Dallas, Texas', 'DisasterCity0'):50, 
-                # ("Philadelphia, Pennsylvania", 'DisasterCity0'):1,
-                # ('San Francisco, California', 'DisasterCity1'):10, 
-                # ('Dallas, Texas', 'DisasterCity1'):50, 
-                # ("Philadelphia, Pennsylvania", 'DisasterCity1'):1,
-                # ('San Francisco, California', 'DisasterCity2'):70, 
-                # ('Dallas, Texas', 'DisasterCity2'):1, 
-                # ("Philadelphia, Pennsylvania", 'DisasterCity2'):70,}
-                # inventory_tmpD = {
-                # 'Dallas, Texas': 700000, 
-                # 'San Francisco, California': 80000, 
-                # 'Philadelphia, Pennsylvania': 150000}
+#                demand_tmpD = {
+#                 ('0000-0000', 'SubLoc_00000'): 930000,
+#                 ('0000-0001', 'SubLoc_00000'): 80000,
+#                 ('0000-0002', 'SubLoc_00000'): 50000,}
+#                probs_tmpD = {'0000-0000':.33333, '0000-0001':.33333, '0000-0002':.33333,}
+#                demandAddress_tmpD = {
+#                 ('0000-0000', 'SubLoc_00000'): "DisasterCity0", 
+#                 ('0000-0001', 'SubLoc_00000'): "DisasterCity1", 
+#                 ('0000-0002', 'SubLoc_00000'): "DisasterCity2",}
+#                timeMatrix = {
+#                 ('San Francisco, California', 'DisasterCity0'):10, 
+#                 ('Dallas, Texas', 'DisasterCity0'):50, 
+#                 ("Philadelphia, Pennsylvania", 'DisasterCity0'):1,
+#                 ('San Francisco, California', 'DisasterCity1'):10, 
+#                 ('Dallas, Texas', 'DisasterCity1'):50, 
+#                 ("Philadelphia, Pennsylvania", 'DisasterCity1'):1,
+#                 ('San Francisco, California', 'DisasterCity2'):70, 
+#                 ('Dallas, Texas', 'DisasterCity2'):1, 
+#                 ("Philadelphia, Pennsylvania", 'DisasterCity2'):70,}
+#                monetaryMatrix = {
+#                 ('San Francisco, California', 'DisasterCity0'):10, 
+#                 ('Dallas, Texas', 'DisasterCity0'):50, 
+#                 ("Philadelphia, Pennsylvania", 'DisasterCity0'):1,
+#                 ('San Francisco, California', 'DisasterCity1'):10, 
+#                 ('Dallas, Texas', 'DisasterCity1'):50, 
+#                 ("Philadelphia, Pennsylvania", 'DisasterCity1'):1,
+#                 ('San Francisco, California', 'DisasterCity2'):70, 
+#                 ('Dallas, Texas', 'DisasterCity2'):1, 
+#                 ("Philadelphia, Pennsylvania", 'DisasterCity2'):70,}
+#                inventory_tmpD = {
+#                 'Dallas, Texas': 80000, 
+#                 'San Francisco, California': 700000, 
+#                 'Philadelphia, Pennsylvania': 150000}
 
                 #Test 2
-                # demand_tmpD = {
-                # ('0000-0000', 'SubLoc_00000'): 940,
-                # ('0000-0001', 'SubLoc_00000'): 80,
-                # ('0000-0002', 'SubLoc_00000'): 50,}
-                # probs_tmpD = {'0000-0000':.33333, '0000-0001':.333333, '0000-0002':.33333,}
-                # demandAddress_tmpD = {
-                # ('0000-0000', 'SubLoc_00000'): "DisasterCity0", 
-                # ('0000-0001', 'SubLoc_00000'): "DisasterCity1", 
-                # ('0000-0002', 'SubLoc_00000'): "DisasterCity2",}
-                # costD = {
-                # ('San Francisco, California', 'DisasterCity0', 'Truck'):10, 
-                # ('Dallas, Texas', 'DisasterCity0', 'Truck'):70, 
-                # ("Philadelphia, Pennsylvania", 'DisasterCity0', 'Truck'):1,
-                # ('San Francisco, California', 'DisasterCity1', 'Truck'):10, 
-                # ('Dallas, Texas', 'DisasterCity1', 'Truck'):70, 
-                # ("Philadelphia, Pennsylvania", 'DisasterCity1', 'Truck'):1,
-                # ('San Francisco, California', 'DisasterCity2', 'Truck'):20, 
-                # ('Dallas, Texas', 'DisasterCity2', 'Truck'):70, 
-                # ("Philadelphia, Pennsylvania", 'DisasterCity2', 'Truck'):1,}
-                # inventory_tmpD = {
-                # 'Dallas, Texas': 700, 
-                # 'San Francisco, California': 200, 
-                # 'Philadelphia, Pennsylvania': 30}
-
-                #Test 3   
-                # demand_tmpD = {
-                # ('0000-0000', 'SubLoc_00000'): 1000,
-                # ('0000-0001', 'SubLoc_00000'): 80,
-                # ('0000-0002', 'SubLoc_00000'): 50,
-                # ('0000-0003', 'SubLoc_00000'): 50}
-                # probs_tmpD = {'0000-0000':.5, '0000-0001':.99, '0000-0002':.1,
-                # '0000-0003':.5}
-                # demandAddress_tmpD = {
-                # ('0000-0000', 'SubLoc_00000'): "DisasterCity0", 
-                # ('0000-0001', 'SubLoc_00000'): "DisasterCity1", 
-                # ('0000-0002', 'SubLoc_00000'): "DisasterCity2",
-                # ('0000-0003', 'SubLoc_00000'): "DisasterCity3"}
-                # costD = {
-                # ('San Francisco, California', 'DisasterCity0', 'Truck'):10, 
-                # ('Dallas, Texas', 'DisasterCity0', 'Truck'):70, 
-                # ("Philadelphia, Pennsylvania", 'DisasterCity0', 'Truck'):1,
-                # ('San Francisco, California', 'DisasterCity1', 'Truck'):10, 
-                # ('Dallas, Texas', 'DisasterCity1', 'Truck'):70, 
-                # ("Philadelphia, Pennsylvania", 'DisasterCity1', 'Truck'):1,
-                # ('San Francisco, California', 'DisasterCity2', 'Truck'):20, 
-                # ('Dallas, Texas', 'DisasterCity2', 'Truck'):70, 
-                # ("Philadelphia, Pennsylvania", 'DisasterCity2', 'Truck'):1,}
-                # inventory_tmpD = {
-                # 'Dallas, Texas': 700, 
-                # 'San Francisco, California': 200, 
-                # 'Philadelphia, Pennsylvania': 30}
+                demand_tmpD = {
+                 ('0000-0000', 'SubLoc_00000'): 450000,
+                 ('0000-0000', 'SubLoc_00001'): 210000,
+                 ('0000-0000', 'SubLoc_00002'): 270000,
+                 ('0000-0001', 'SubLoc_00000'): 80000,
+                 ('0000-0002', 'SubLoc_00000'): 50000,
+                 ('0000-0002', 'SubLoc_00001'): 50000,}
+                probs_tmpD = {'0000-0000':.33333, '0000-0001':.33333, '0000-0002':.33333,}
+                demandAddress_tmpD = {
+                 ('0000-0000', 'SubLoc_00000'): "DisasterCity0a", 
+                 ('0000-0000', 'SubLoc_00000'): "DisasterCity0b", 
+                 ('0000-0000', 'SubLoc_00000'): "DisasterCity0c", 
+                 ('0000-0001', 'SubLoc_00000'): "DisasterCity1", 
+                 ('0000-0002', 'SubLoc_00000'): "DisasterCity2a",
+                 ('0000-0002', 'SubLoc_00000'): "DisasterCity2b",}
+                timeMatrix = {
+                 ('San Francisco, California', 'DisasterCity0a'):10,
+                 ('San Francisco, California', 'DisasterCity0b'):20,
+                 ('San Francisco, California', 'DisasterCity0c'):30,
+                 ('Dallas, Texas', 'DisasterCity0a'):40,
+                 ('Dallas, Texas', 'DisasterCity0b'):30,
+                 ('Dallas, Texas', 'DisasterCity0c'):20,
+                 ("Philadelphia, Pennsylvania", 'DisasterCity0a'):20,
+                 ("Philadelphia, Pennsylvania", 'DisasterCity0b'):20,
+                 ("Philadelphia, Pennsylvania", 'DisasterCity0c'):20,
+                 ('San Francisco, California', 'DisasterCity1'):10, 
+                 ('Dallas, Texas', 'DisasterCity1'):50, 
+                 ("Philadelphia, Pennsylvania", 'DisasterCity1'):1,
+                 ('San Francisco, California', 'DisasterCity2a'):70, 
+                 ('San Francisco, California', 'DisasterCity2b'):40, 
+                 ('Dallas, Texas', 'DisasterCity2a'):1,
+                 ('Dallas, Texas', 'DisasterCity2b'):1,
+                 ("Philadelphia, Pennsylvania", 'DisasterCity2a'):40,
+                 ("Philadelphia, Pennsylvania", 'DisasterCity2b'):70,}
+                monetaryMatrix = {
+                 ('San Francisco, California', 'DisasterCity0a'):10,
+                 ('San Francisco, California', 'DisasterCity0b'):20,
+                 ('San Francisco, California', 'DisasterCity0c'):30,
+                 ('Dallas, Texas', 'DisasterCity0a'):40,
+                 ('Dallas, Texas', 'DisasterCity0b'):30,
+                 ('Dallas, Texas', 'DisasterCity0c'):20,
+                 ("Philadelphia, Pennsylvania", 'DisasterCity0a'):20,
+                 ("Philadelphia, Pennsylvania", 'DisasterCity0b'):20,
+                 ("Philadelphia, Pennsylvania", 'DisasterCity0c'):20,
+                 ('San Francisco, California', 'DisasterCity1'):10, 
+                 ('Dallas, Texas', 'DisasterCity1'):50, 
+                 ("Philadelphia, Pennsylvania", 'DisasterCity1'):1,
+                 ('San Francisco, California', 'DisasterCity2a'):70, 
+                 ('San Francisco, California', 'DisasterCity2b'):40, 
+                 ('Dallas, Texas', 'DisasterCity2a'):1,
+                 ('Dallas, Texas', 'DisasterCity2b'):1,
+                 ("Philadelphia, Pennsylvania", 'DisasterCity2a'):40,
+                 ("Philadelphia, Pennsylvania", 'DisasterCity2b'):70,}
+                inventory_tmpD = {
+                 'Dallas, Texas': 80000, 
+                 'San Francisco, California': 700000, 
+                 'Philadelphia, Pennsylvania': 150000}
                               
                 matrix2 = pd.read_csv(os.getcwd()+"\\inputData\\inputData03_US\\itemAttributesFEMA.csv") 
                 for index, row in matrix2.iterrows():
@@ -259,7 +265,7 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                   else:
                           balance_metric = 'n/a'
 
-  #       just printing the results            
+  #       just printing the results          
                   print("\nTotal Response Time (Cost) for current inventory: " + str(dummy_solution['adjdummyObj']))
                   print("Total Response Time (Cost) for optimal inventory: " + str(nonfixed_dummy_solution['adjdummyObj']))
                   print("Balance Metric: " + str(balance_metric))
@@ -586,11 +592,11 @@ def dummyhelper( costType
         solution_flow = {}
         if m.status == GRB.Status.OPTIMAL:
               print('\nTotal Response Time: %g' % m.objVal)
-              #print('\nDispatch:')
+              print('\nDispatch:')
               assignments = m.getAttr('x', [quadVars[key] for key in quadVars])
               for tri in [quadVars[key] for key in quadVars]:
                       if tri.x > 0.0001:
-                            #print(tri.VarName, tri.x)
+                            print(tri.VarName, tri.x)
                             solution_flow[tri.VarName] = tri.x
         else:
               print('No solution')
@@ -916,11 +922,11 @@ def nonfixeddummyinventoryhelper( costType
                     solution_flow = {}
                     if m.status == GRB.Status.OPTIMAL:
                           print('\nTotal Response Time: %g' % m.objVal)
-                          #print('\nDispatch:')
+                          print('\nDispatch:')
                           assignments = m.getAttr('x', [quadVars[key] for key in quadVars])
                           for tri in [quadVars[key] for key in quadVars]:
                                   if tri.x > 0.0001:
-                                        #print(tri.VarName, tri.x)
+                                        print(tri.VarName, tri.x)
                                         solution_flow[tri.VarName] = tri.x
                     else:
                           print('No solution')

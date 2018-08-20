@@ -85,7 +85,7 @@ minTimeRequiredToRespond = 1e6
 # Where I Do the loop iterations
 
 for n_itemIter in itemNamesInventory:
-    n_itemIter = 'Meals'
+#    n_itemIter = 'Cots'
     #for n_itemIter in ['BlanketGen']:
     #for (minYearSubset, maxYearSubset) in yearSubset_Set:
     execfile(os.path.join(codePath,'InnerLoopMakeSubsets.py'))

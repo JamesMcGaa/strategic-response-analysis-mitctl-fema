@@ -1,7 +1,7 @@
 Contract,Capacity,Fixed Time to Warehouse,Fixed Cost,Variable Cost (mile),Target Depot City
-carrier1,100,5,0,2.1,"Dallas, Texas"
-carrier2,20,15,0,2.2,"Dallas, Texas"
+carrier1,1,5,0,2.1,"Dallas, Texas"
+carrier2,2,15,0,2.2,"Dallas, Texas"
 carrier3,1,8,0,2.3,"Philadelphia, Pennsylvania"
-carrier4,400,10,0,2.4,"San Francisco, California"
-carrier5,500,20,0,2.5,"San Francisco, California"
-carrier6,600,30,0,2.6,"San Francisco, California"
+carrier4,1,10,0,2.7,"San Francisco, California"
+carrier5,3,20,0,2.5,"San Francisco, California"
+carrier6,6000,30,0,2.3,"San Francisco, California"
