@@ -31,7 +31,7 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                 log_file = open("outputData//"+ n_itemIter+str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_")+"output_"+n_itemIter+".log","w")
                 sys.stdout = log_file
 
-
+                #Generate cost matrices
                 monetaryMatrix = {}
                 timeMatrix = {}
                 matrix = pd.read_csv(os.getcwd()+"\\inputData\\inputData03_US\\drivingDistanceMatrix.csv") 
@@ -39,6 +39,61 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                   monetaryMatrix[((row.depotGglAddressAscii, row.disasterGglAddressAscii))] = row.distance_km
                   timeMatrix[((row.depotGglAddressAscii, row.disasterGglAddressAscii))] = row.drivingTime_hrs
 
+                #Generate demand_tmpD, probs_tmpD, demandAddress_tmpD
+                conversion_factor = 0
+                beta_conversion_file = pd.read_csv(os.getcwd()+"\\inputData\\inputData03_US\\betaItemConversionsFEMA.csv") 
+                for index, row in beta_conversion_file.iterrows():
+                  if row.Item == n_itemIter:
+                    conversion_factor = row.PersonsPerItem
+                if conversion_factor == 0:
+                  print("Could not find beta conversion factor")
+                  sys.exit()
+
+                demand_tmpD = {}
+                demandAddress_tmpD = {}
+                probs_tmpD = {}
+
+                current_disaster = 0
+                disaster_to_ID_count = {}
+                disasters = pd.read_csv(os.getcwd()+"\\inputData\\inputData03_US\\disasterAffectedDataFEMA.csv") 
+
+                for index, row in disasters.iterrows():
+                  if (row.Day, row.Month, row.Year) not in disaster_to_ID_count: #New date
+                    disaster_to_ID_count[(row.Day, row.Month, row.Year)] = (current_disaster, 1)
+
+                    disasterString = "0" * (4 - len(str(current_disaster // 10000))) + str(current_disaster // 10000)
+                    disasterString += "-"
+                    disasterString += "0" * (4 - len(str(current_disaster % 10000))) + str(current_disaster % 10000)
+                    sublocationString = 'SubLoc_00000'
+
+                    demand_tmpD[(disasterString, sublocationString)] = int(row.TotAffected / conversion_factor)
+                    demandAddress_tmpD[(disasterString, sublocationString)] = row.gglAddress
+                    probs_tmpD[disasterString] = 0
+                    current_disaster += 1
+
+                  else: #Existing date
+                    ID = disaster_to_ID_count[(row.Day, row.Month, row.Year)][0]
+                    count = disaster_to_ID_count[(row.Day, row.Month, row.Year)][1]
+                    disaster_to_ID_count[(row.Day, row.Month, row.Year)] = (ID, count+1)
+
+                    disasterString = "0" * (4 - len(str(ID // 10000))) + str(ID // 10000)
+                    disasterString += "-"
+                    disasterString += "0" * (4 - len(str(ID % 10000))) + str(ID % 10000)
+                    sublocationString = 'SubLoc_' + "0" * (5-len(str(count))) + str(count)
+
+                    demand_tmpD[(disasterString, sublocationString)] = int(row.TotAffected / conversion_factor)
+                    demandAddress_tmpD[(disasterString, sublocationString)] = row.gglAddress
+
+                for key in probs_tmpD:
+                  probs_tmpD[key] = 1.0 / len(probs_tmpD)
+
+
+                print(demand_tmpD)
+                print(demandAddress_tmpD)
+                print(probs_tmpD)
+
+                sys.exit()
+                
                 #Test 1
                 # demand_tmpD = {
                 # ('0000-0000', 'SubLoc_00000'): 930000,
@@ -126,6 +181,7 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                 # 'Dallas, Texas': 700, 
                 # 'San Francisco, California': 200, 
                 # 'Philadelphia, Pennsylvania': 30}
+
                               
                 matrix2 = pd.read_csv(os.getcwd()+"\\inputData\\inputData03_US\\itemAttributesFEMA.csv") 
                 for index, row in matrix2.iterrows():
