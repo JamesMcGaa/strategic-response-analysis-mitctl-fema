@@ -49,12 +49,14 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                   print("Could not find beta conversion factor")
                   sys.exit()
 
+                #Generate raw inputs
                 demand_tmpD = {}
                 demandAddress_tmpD = {}
                 probs_tmpD = {}
 
                 current_disaster = 0
                 disaster_to_ID_count = {}
+                disaster_to_count = {}
                 disasters = pd.read_csv(os.getcwd()+"\\inputData\\inputData03_US\\disasterAffectedDataFEMA.csv") 
 
                 for index, row in disasters.iterrows():
@@ -69,6 +71,8 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                     demand_tmpD[(disasterString, sublocationString)] = int(row.TotAffected / conversion_factor)
                     demandAddress_tmpD[(disasterString, sublocationString)] = row.gglAddress
                     probs_tmpD[disasterString] = 0
+
+                    disaster_to_count[disasterString] = 1
                     current_disaster += 1
 
                   else: #Existing date
@@ -84,16 +88,54 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                     demand_tmpD[(disasterString, sublocationString)] = int(row.TotAffected / conversion_factor)
                     demandAddress_tmpD[(disasterString, sublocationString)] = row.gglAddress
 
+                    disaster_to_count[disasterString] += 1
+
                 for key in probs_tmpD:
                   probs_tmpD[key] = 1.0 / len(probs_tmpD)
 
 
-                print(demand_tmpD)
-                print(demandAddress_tmpD)
-                print(probs_tmpD)
 
-                sys.exit()
-                
+
+                adjusted_demand_tmpD = {}
+                adjusted_demandAddress_tmpD = {}
+                adjusted_probs_tmpD = {}
+                adjusted_cost_matrix = {}
+                adjusted_time_matrix = {}
+                for ID in range(current_disaster):
+                  total_demand = 0
+                  disasterString = "0" * (4 - len(str(ID // 10000))) + str(ID // 10000)
+                  disasterString += "-"
+                  disasterString += "0" * (4 - len(str(ID % 10000))) + str(ID % 10000)
+
+                  for sublocationID in range(disaster_to_count[disasterString]):
+                    sublocationString = 'SubLoc_' + "0" * (5-len(str(sublocationID))) + str(sublocationID)
+                    total_demand += demand_tmpD[(disasterString, sublocationString)]
+
+                    for depotName in inventory_tmpD:
+                      indexPair = (depotName, "disasterWeightedAverage"+str(ID))
+                      if indexPair not in adjusted_time_matrix and indexPair not in adjusted_cost_matrix:
+                        adjusted_time_matrix[indexPair] = timeMatrix[(depotName, demandAddress_tmpD[(disasterString, sublocationString)])] * demand_tmpD[(disasterString, sublocationString)] 
+                        adjusted_cost_matrix[indexPair] = monetaryMatrix[(depotName, demandAddress_tmpD[(disasterString, sublocationString)])] * demand_tmpD[(disasterString, sublocationString)] 
+                      else:
+                        adjusted_time_matrix[indexPair] += timeMatrix[(depotName, demandAddress_tmpD[(disasterString, sublocationString)])] * demand_tmpD[(disasterString, sublocationString)] 
+                        adjusted_cost_matrix[indexPair] += monetaryMatrix[(depotName, demandAddress_tmpD[(disasterString, sublocationString)])] * demand_tmpD[(disasterString, sublocationString)] 
+
+                  for sublocationID in range(disaster_to_count[disasterString]):
+                    indexPair = (depotName, "disasterWeightedAverage"+str(ID))
+                    adjusted_time_matrix[indexPair] /= total_demand
+                    adjusted_cost_matrix[indexPair] /= total_demand
+
+                  adjusted_demand_tmpD[(disasterString, 'SubLoc_00000')] = total_demand
+                  adjusted_demandAddress_tmpD[(disasterString, 'SubLoc_00000')] = "disasterWeightedAverage"+str(ID)
+                  adjusted_probs_tmpD[disasterString] = 1.0 / current_disaster
+
+                demand_tmpD = adjusted_demand_tmpD
+                demandAddress_tmpD = adjusted_demandAddress_tmpD
+                probs_tmpD = adjusted_probs_tmpD
+                monetaryMatrix = adjusted_cost_matrix
+                timeMatrix = adjusted_time_matrix
+
+
                 #Test 1
                 # demand_tmpD = {
                 # ('0000-0000', 'SubLoc_00000'): 930000,
