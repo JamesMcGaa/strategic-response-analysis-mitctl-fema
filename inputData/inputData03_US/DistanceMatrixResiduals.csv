@@ -1,0 +1,40 @@
+Agency,NameCity,depotGglCountryAscii,depotGglAddressAscii,depotGglLat,depotGglLong,Order,disasterGglCountryAscii,disasterGglAddressAscii,disasterGglLat,disasterGglLong,distance_km,drivingTime_hrs
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,California,San Bernardino County,35.029836,-116.479953,0,0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Wisconsin,Kewaunee County,44.453812,-87.503701,0,0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Wisconsin,Manitowoc County,44.097504,-87.658313,0,0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Louisiana,Terrebonne Parish,29.695506,-90.872068,0,0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Louisiana,St. Mary Parish,29.710718,-91.394537,0,0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Wisconsin,Ozaukee County,43.382613,-87.887276,0,0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Texas,Aransas County,28.039304,-97.077490,0,0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Ohio,Ottawa County,42.971919,-86.034629,0,0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Ohio,Erie County,42.072953,-80.093564,0,0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Louisiana,Iberia Parish,29.924698,-91.736137,0,0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Louisiana,St. Bernard Parish,29.843187,-89.757965,0,0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Wisconsin,Kenosha County,42.568246,-88.045026,0,0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Wisconsin,Racine County,42.742202,-88.071744,0,0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,North Carolina,Dare County,35.881929,-75.770014,0,0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Michigan,Charlevoix County,45.209472,-85.004834,0,0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Alaska,Yukon-Koyukuk Census Area,65.8443666,-153.4302993,1000000.0,1000000.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Alaska,Northwest Arctic Borough,67.28729809999999,-160.03426240000002,1000000.0,1000000.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Alaska,Kenai Peninsula Borough,60.537582,-149.560330,0,0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Alaska,Kodiak Island Borough,57.53693430000001,-153.2659352,1000000.0,1000000.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Michigan,Muskegon County,43.245228,-86.203329,0,0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Michigan,Oceana County,43.638892,-86.390491,0,0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Wisconsin,Sheboygan County,43.709267,-87.940771,0,0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Wisconsin,Ashland County,46.864442,-90.809314,0,0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Alaska,Denali Borough,63.858226,-149.014352,0,0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Alaska,Bristol Bay Borough,58.757850399999995,-156.7792687,1000000.0,1000000.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Alaska,Bethel Census Area,61.09344600000001,-160.8640773,1000000.0,1000000.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Alaska,Lake and Peninsula Borough,58.045835600000004,-156.5982286,1000000.0,1000000.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Alaska,Dillingham Census Area,59.80677919999999,-157.7242585,1000000.0,1000000.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Alaska,Aleutians East Borough,55.53880059999999,-161.8988535,1000000.0,1000000.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Alaska,Southeast Fairbanks Census Area,63.685070,-144.200245,0,0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Florida,Miami-Dade County,25.690208,-80.478539,0,0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Alaska,North Slope Borough,69.05787579999999,-152.8628274,1000000.0,1000000.0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Michigan,Allegan County,42.593503, -85.942936,0,0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Michigan,Alger County,46.395309,-86.648667,0,0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Michigan,Alpena County,45.060944, -83.584491,0,0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Michigan,Keweenaw County,47.995280,-89.632236,0,
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Michigan,Presque Isle County,45.377637,-83.799460,0,0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Michigan,Leelanau County,44.867903, -85.853946,0,0
+FEMA,San Francisco,California,"San Francisco, California",37.7749295,-122.4194155,0,Alaska,Aleutians West Census Area,52.323269700000004,-174.15960719999998,1000000.0,1000000.0

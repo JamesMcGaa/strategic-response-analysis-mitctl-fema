@@ -6,38 +6,141 @@
 #TOP----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #TOP----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
-                                        , demandAddress_tmpD
-                                        , probs_tmpD
-                                        , disasterIDsUnq_tmp
-                                        , disasterIDsWithSubLocUnq_tmp
-                                        , inventory_tmpD
-                                        , transModesTransParams
-                                        , bigMCostElim
-                                        , bigMCostDummy
-                                        , costD
-                                        , dummyNodeName
-                                        , areInitialSuppliesVariables_Flag
-                                        , depotWhichFixedSubset
-                                        , minInvItemD
-                                        , depotInWhichCountry
-                                                                                                                        ):
+
+                                                                                                                        , demandAddress_tmpD
+                                                                                                                        , probs_tmpD
+                                                                                                                        , disasterIDsUnq_tmp
+                                                                                                                        , disasterIDsWithSubLocUnq_tmp
+                                                                                                                        , inventory_tmpD
+                                                                                                                        , transModesTransParams
+                                                                                                                        , bigMCostElim
+                                                                                                                        , bigMCostDummy
+                                                                                                                        , costD
+                                                                                                                        , dummyNodeName
+                                                                                                                        , areInitialSuppliesVariables_Flag
+                                                                                                                        , depotWhichFixedSubset
+                                                                                                                        , minInvItemD
+                                                                                                                        , depotInWhichCountry
+                                                                                                                                                                                                        ):
+                n_itemIter = "Cots"
 
                 print("-------------------------------Start------------------------------")
                 import pandas as pd                
                 import os
 
                 import sys
-                old_stdout = sys.stdout
-                log_file = open("outputData//"+ n_itemIter+str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_")+"output_"+n_itemIter+".log","w")
-                sys.stdout = log_file
+#                old_stdout = sys.stdout
+#                log_file = open("outputData//"+ n_itemIter+str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_")+"output_"+n_itemIter+".log","w")
+#                sys.stdout = log_file
 
-
+                #Generate cost matrices
                 monetaryMatrix = {}
                 timeMatrix = {}
                 matrix = pd.read_csv(os.getcwd()+"\\inputData\\inputData03_US\\drivingDistanceMatrix.csv") 
                 for index, row in matrix.iterrows():
                   monetaryMatrix[((row.depotGglAddressAscii, row.disasterGglAddressAscii))] = row.distance_km
                   timeMatrix[((row.depotGglAddressAscii, row.disasterGglAddressAscii))] = row.drivingTime_hrs
+
+                #Generate demand_tmpD, probs_tmpD, demandAddress_tmpD
+                conversion_factor = 0
+                beta_conversion_file = pd.read_csv(os.getcwd()+"\\inputData\\inputData03_US\\betaItemConversionsFEMA.csv") 
+                for index, row in beta_conversion_file.iterrows():
+                  if row.Item == n_itemIter:
+                    conversion_factor = row.PersonsPerItem
+                if conversion_factor == 0:
+                  print("Could not find beta conversion factor")
+                  sys.exit()
+
+                #Generate raw inputs
+                demand_tmpD = {}
+                demandAddress_tmpD = {}
+                probs_tmpD = {}
+
+                current_disaster = 0
+                disaster_to_ID_count = {}
+                disaster_to_count = {}
+                disasters = pd.read_csv(os.getcwd()+"\\inputData\\inputData03_US\\disasterAffectedDataFEMA.csv") 
+
+                for index, row in disasters.iterrows():
+                  if (row.Day, row.Month, row.Year) not in disaster_to_ID_count: #New date
+                    disaster_to_ID_count[(row.Day, row.Month, row.Year)] = (current_disaster, 1)
+
+                    disasterString = "0" * (4 - len(str(current_disaster // 10000))) + str(current_disaster // 10000)
+                    disasterString += "-"
+                    disasterString += "0" * (4 - len(str(current_disaster % 10000))) + str(current_disaster % 10000)
+                    sublocationString = 'SubLoc_00000'
+
+                    demand_tmpD[(disasterString, sublocationString)] = int(row.TotAffected / conversion_factor)
+                    demandAddress_tmpD[(disasterString, sublocationString)] = row.gglAddress
+                    probs_tmpD[disasterString] = 0
+
+                    disaster_to_count[disasterString] = 1
+                    current_disaster += 1
+
+                  else: #Existing date
+                    ID = disaster_to_ID_count[(row.Day, row.Month, row.Year)][0]
+                    count = disaster_to_ID_count[(row.Day, row.Month, row.Year)][1]
+                    disaster_to_ID_count[(row.Day, row.Month, row.Year)] = (ID, count+1)
+
+                    disasterString = "0" * (4 - len(str(ID // 10000))) + str(ID // 10000)
+                    disasterString += "-"
+                    disasterString += "0" * (4 - len(str(ID % 10000))) + str(ID % 10000)
+                    sublocationString = 'SubLoc_' + "0" * (5-len(str(count))) + str(count)
+
+                    demand_tmpD[(disasterString, sublocationString)] = int(row.TotAffected / conversion_factor)
+                    demandAddress_tmpD[(disasterString, sublocationString)] = row.gglAddress
+
+                    disaster_to_count[disasterString] += 1
+
+                for key in probs_tmpD:
+                  probs_tmpD[key] = 1.0 / len(probs_tmpD)
+
+
+
+
+                adjusted_demand_tmpD = {}
+                adjusted_demandAddress_tmpD = {}
+                adjusted_probs_tmpD = {}
+                adjusted_cost_matrix = {}
+                adjusted_time_matrix = {}
+                for ID in range(current_disaster):
+                  total_demand = 0
+                  disasterString = "0" * (4 - len(str(ID // 10000))) + str(ID // 10000)
+                  disasterString += "-"
+                  disasterString += "0" * (4 - len(str(ID % 10000))) + str(ID % 10000)
+
+                  for sublocationID in range(disaster_to_count[disasterString]):
+                    sublocationString = 'SubLoc_' + "0" * (5-len(str(sublocationID))) + str(sublocationID)
+                    total_demand += demand_tmpD[(disasterString, sublocationString)]
+
+                    for depotName in inventory_tmpD:
+                      indexPair = (depotName, "disasterWeightedAverage"+str(ID))
+                      if indexPair not in adjusted_time_matrix and indexPair not in adjusted_cost_matrix:
+                        adjusted_time_matrix[indexPair] = timeMatrix[(depotName, demandAddress_tmpD[(disasterString, sublocationString)])] * demand_tmpD[(disasterString, sublocationString)] 
+                        adjusted_cost_matrix[indexPair] = monetaryMatrix[(depotName, demandAddress_tmpD[(disasterString, sublocationString)])] * demand_tmpD[(disasterString, sublocationString)] 
+                      else:
+                        adjusted_time_matrix[indexPair] += timeMatrix[(depotName, demandAddress_tmpD[(disasterString, sublocationString)])] * demand_tmpD[(disasterString, sublocationString)] 
+                        adjusted_cost_matrix[indexPair] += monetaryMatrix[(depotName, demandAddress_tmpD[(disasterString, sublocationString)])] * demand_tmpD[(disasterString, sublocationString)] 
+
+                  for sublocationID in range(disaster_to_count[disasterString]):
+                    indexPair = (depotName, "disasterWeightedAverage"+str(ID))
+                    adjusted_time_matrix[indexPair] /= total_demand
+                    adjusted_cost_matrix[indexPair] /= total_demand
+
+                  adjusted_demand_tmpD[(disasterString, 'SubLoc_00000')] = total_demand
+                  adjusted_demandAddress_tmpD[(disasterString, 'SubLoc_00000')] = "disasterWeightedAverage"+str(ID)
+                  adjusted_probs_tmpD[disasterString] = 1.0 / current_disaster
+
+                demand_tmpD = adjusted_demand_tmpD
+#                print demand_tmpD
+                
+                demandAddress_tmpD = adjusted_demandAddress_tmpD
+                print demandAddress_tmpD
+                probs_tmpD = adjusted_probs_tmpD
+                monetaryMatrix = adjusted_cost_matrix
+                timeMatrix = adjusted_time_matrix
+
+                sys.exit()
 
                 #Test 1
 #                demand_tmpD = {
@@ -75,63 +178,117 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
 #                 'Philadelphia, Pennsylvania': 150000}
 
                 #Test 2
-                demand_tmpD = {
-                 ('0000-0000', 'SubLoc_00000'): 450000,
-                 ('0000-0000', 'SubLoc_00001'): 210000,
-                 ('0000-0000', 'SubLoc_00002'): 270000,
-                 ('0000-0001', 'SubLoc_00000'): 80000,
-                 ('0000-0002', 'SubLoc_00000'): 50000,
-                 ('0000-0002', 'SubLoc_00001'): 50000,}
-                probs_tmpD = {'0000-0000':.33333, '0000-0001':.33333, '0000-0002':.33333,}
-                demandAddress_tmpD = {
-                 ('0000-0000', 'SubLoc_00000'): "DisasterCity0a", 
-                 ('0000-0000', 'SubLoc_00000'): "DisasterCity0b", 
-                 ('0000-0000', 'SubLoc_00000'): "DisasterCity0c", 
-                 ('0000-0001', 'SubLoc_00000'): "DisasterCity1", 
-                 ('0000-0002', 'SubLoc_00000'): "DisasterCity2a",
-                 ('0000-0002', 'SubLoc_00000'): "DisasterCity2b",}
-                timeMatrix = {
-                 ('San Francisco, California', 'DisasterCity0a'):10,
-                 ('San Francisco, California', 'DisasterCity0b'):20,
-                 ('San Francisco, California', 'DisasterCity0c'):30,
-                 ('Dallas, Texas', 'DisasterCity0a'):40,
-                 ('Dallas, Texas', 'DisasterCity0b'):30,
-                 ('Dallas, Texas', 'DisasterCity0c'):20,
-                 ("Philadelphia, Pennsylvania", 'DisasterCity0a'):20,
-                 ("Philadelphia, Pennsylvania", 'DisasterCity0b'):20,
-                 ("Philadelphia, Pennsylvania", 'DisasterCity0c'):20,
-                 ('San Francisco, California', 'DisasterCity1'):10, 
-                 ('Dallas, Texas', 'DisasterCity1'):50, 
-                 ("Philadelphia, Pennsylvania", 'DisasterCity1'):1,
-                 ('San Francisco, California', 'DisasterCity2a'):70, 
-                 ('San Francisco, California', 'DisasterCity2b'):40, 
-                 ('Dallas, Texas', 'DisasterCity2a'):1,
-                 ('Dallas, Texas', 'DisasterCity2b'):1,
-                 ("Philadelphia, Pennsylvania", 'DisasterCity2a'):40,
-                 ("Philadelphia, Pennsylvania", 'DisasterCity2b'):70,}
-                monetaryMatrix = {
-                 ('San Francisco, California', 'DisasterCity0a'):10,
-                 ('San Francisco, California', 'DisasterCity0b'):20,
-                 ('San Francisco, California', 'DisasterCity0c'):30,
-                 ('Dallas, Texas', 'DisasterCity0a'):40,
-                 ('Dallas, Texas', 'DisasterCity0b'):30,
-                 ('Dallas, Texas', 'DisasterCity0c'):20,
-                 ("Philadelphia, Pennsylvania", 'DisasterCity0a'):20,
-                 ("Philadelphia, Pennsylvania", 'DisasterCity0b'):20,
-                 ("Philadelphia, Pennsylvania", 'DisasterCity0c'):20,
-                 ('San Francisco, California', 'DisasterCity1'):10, 
-                 ('Dallas, Texas', 'DisasterCity1'):50, 
-                 ("Philadelphia, Pennsylvania", 'DisasterCity1'):1,
-                 ('San Francisco, California', 'DisasterCity2a'):70, 
-                 ('San Francisco, California', 'DisasterCity2b'):40, 
-                 ('Dallas, Texas', 'DisasterCity2a'):1,
-                 ('Dallas, Texas', 'DisasterCity2b'):1,
-                 ("Philadelphia, Pennsylvania", 'DisasterCity2a'):40,
-                 ("Philadelphia, Pennsylvania", 'DisasterCity2b'):70,}
-                inventory_tmpD = {
-                 'Dallas, Texas': 80000, 
-                 'San Francisco, California': 700000, 
-                 'Philadelphia, Pennsylvania': 150000}
+#                demand_tmpD = {
+#                 ('0000-0000', 'SubLoc_00000'): 450000,
+#                 ('0000-0000', 'SubLoc_00001'): 210000,
+#                 ('0000-0000', 'SubLoc_00002'): 270000,
+#                 ('0000-0001', 'SubLoc_00000'): 80000,
+#                 ('0000-0002', 'SubLoc_00000'): 50000,
+#                 ('0000-0002', 'SubLoc_00001'): 50000,}
+#                probs_tmpD = {'0000-0000':.33333, '0000-0001':.33333, '0000-0002':.33333,}
+#                demandAddress_tmpD = {
+#                 ('0000-0000', 'SubLoc_00000'): "DisasterCity0a", 
+#                 ('0000-0000', 'SubLoc_00000'): "DisasterCity0b", 
+#                 ('0000-0000', 'SubLoc_00000'): "DisasterCity0c", 
+#                 ('0000-0001', 'SubLoc_00000'): "DisasterCity1", 
+#                 ('0000-0002', 'SubLoc_00000'): "DisasterCity2a",
+#                 ('0000-0002', 'SubLoc_00000'): "DisasterCity2b",}
+#                timeMatrix = {
+#                 ('San Francisco, California', 'DisasterCity0a'):10,
+#                 ('San Francisco, California', 'DisasterCity0b'):20,
+#                 ('San Francisco, California', 'DisasterCity0c'):30,
+#                 ('Dallas, Texas', 'DisasterCity0a'):40,
+#                 ('Dallas, Texas', 'DisasterCity0b'):30,
+#                 ('Dallas, Texas', 'DisasterCity0c'):20,
+#                 ("Philadelphia, Pennsylvania", 'DisasterCity0a'):20,
+#                 ("Philadelphia, Pennsylvania", 'DisasterCity0b'):20,
+#                 ("Philadelphia, Pennsylvania", 'DisasterCity0c'):20,
+#                 ('San Francisco, California', 'DisasterCity1'):10, 
+#                 ('Dallas, Texas', 'DisasterCity1'):50, 
+#                 ("Philadelphia, Pennsylvania", 'DisasterCity1'):1,
+#                 ('San Francisco, California', 'DisasterCity2a'):70, 
+#                 ('San Francisco, California', 'DisasterCity2b'):40, 
+#                 ('Dallas, Texas', 'DisasterCity2a'):1,
+#                 ('Dallas, Texas', 'DisasterCity2b'):1,
+#                 ("Philadelphia, Pennsylvania", 'DisasterCity2a'):40,
+#                 ("Philadelphia, Pennsylvania", 'DisasterCity2b'):70,}
+#                monetaryMatrix = {
+#                 ('San Francisco, California', 'DisasterCity0a'):10,
+#                 ('San Francisco, California', 'DisasterCity0b'):20,
+#                 ('San Francisco, California', 'DisasterCity0c'):30,
+#                 ('Dallas, Texas', 'DisasterCity0a'):40,
+#                 ('Dallas, Texas', 'DisasterCity0b'):30,
+#                 ('Dallas, Texas', 'DisasterCity0c'):20,
+#                 ("Philadelphia, Pennsylvania", 'DisasterCity0a'):20,
+#                 ("Philadelphia, Pennsylvania", 'DisasterCity0b'):20,
+#                 ("Philadelphia, Pennsylvania", 'DisasterCity0c'):20,
+#                 ('San Francisco, California', 'DisasterCity1'):10, 
+#                 ('Dallas, Texas', 'DisasterCity1'):50, 
+#                 ("Philadelphia, Pennsylvania", 'DisasterCity1'):1,
+#                 ('San Francisco, California', 'DisasterCity2a'):70, 
+#                 ('San Francisco, California', 'DisasterCity2b'):40, 
+#                 ('Dallas, Texas', 'DisasterCity2a'):1,
+#                 ('Dallas, Texas', 'DisasterCity2b'):1,
+#                 ("Philadelphia, Pennsylvania", 'DisasterCity2a'):40,
+#                 ("Philadelphia, Pennsylvania", 'DisasterCity2b'):70,}
+#                inventory_tmpD = {
+#                 'Dallas, Texas': 80000, 
+#                 'San Francisco, California': 700000, 
+#                 'Philadelphia, Pennsylvania': 150000}
+# Test 2 old
+                # demand_tmpD = {
+                # ('0000-0000', 'SubLoc_00000'): 940,
+                # ('0000-0001', 'SubLoc_00000'): 80,
+                # ('0000-0002', 'SubLoc_00000'): 50,}
+                # probs_tmpD = {'0000-0000':.33333, '0000-0001':.333333, '0000-0002':.33333,}
+                # demandAddress_tmpD = {
+                # ('0000-0000', 'SubLoc_00000'): "DisasterCity0", 
+                # ('0000-0001', 'SubLoc_00000'): "DisasterCity1", 
+                # ('0000-0002', 'SubLoc_00000'): "DisasterCity2",}
+                # costD = {
+                # ('San Francisco, California', 'DisasterCity0', 'Truck'):10, 
+                # ('Dallas, Texas', 'DisasterCity0', 'Truck'):70, 
+                # ("Philadelphia, Pennsylvania", 'DisasterCity0', 'Truck'):1,
+                # ('San Francisco, California', 'DisasterCity1', 'Truck'):10, 
+                # ('Dallas, Texas', 'DisasterCity1', 'Truck'):70, 
+                # ("Philadelphia, Pennsylvania", 'DisasterCity1', 'Truck'):1,
+                # ('San Francisco, California', 'DisasterCity2', 'Truck'):20, 
+                # ('Dallas, Texas', 'DisasterCity2', 'Truck'):70, 
+                # ("Philadelphia, Pennsylvania", 'DisasterCity2', 'Truck'):1,}
+                # inventory_tmpD = {
+                # 'Dallas, Texas': 700, 
+                # 'San Francisco, California': 200, 
+                # 'Philadelphia, Pennsylvania': 30}
+
+                #Test 3   
+                # demand_tmpD = {
+                # ('0000-0000', 'SubLoc_00000'): 1000,
+                # ('0000-0001', 'SubLoc_00000'): 80,
+                # ('0000-0002', 'SubLoc_00000'): 50,
+                # ('0000-0003', 'SubLoc_00000'): 50}
+                # probs_tmpD = {'0000-0000':.5, '0000-0001':.99, '0000-0002':.1,
+                # '0000-0003':.5}
+                # demandAddress_tmpD = {
+                # ('0000-0000', 'SubLoc_00000'): "DisasterCity0", 
+                # ('0000-0001', 'SubLoc_00000'): "DisasterCity1", 
+                # ('0000-0002', 'SubLoc_00000'): "DisasterCity2",
+                # ('0000-0003', 'SubLoc_00000'): "DisasterCity3"}
+                # costD = {
+                # ('San Francisco, California', 'DisasterCity0', 'Truck'):10, 
+                # ('Dallas, Texas', 'DisasterCity0', 'Truck'):70, 
+                # ("Philadelphia, Pennsylvania", 'DisasterCity0', 'Truck'):1,
+                # ('San Francisco, California', 'DisasterCity1', 'Truck'):10, 
+                # ('Dallas, Texas', 'DisasterCity1', 'Truck'):70, 
+                # ("Philadelphia, Pennsylvania", 'DisasterCity1', 'Truck'):1,
+                # ('San Francisco, California', 'DisasterCity2', 'Truck'):20, 
+                # ('Dallas, Texas', 'DisasterCity2', 'Truck'):70, 
+                # ("Philadelphia, Pennsylvania", 'DisasterCity2', 'Truck'):1,}
+                # inventory_tmpD = {
+                # 'Dallas, Texas': 700, 
+                # 'San Francisco, California': 200, 
+                # 'Philadelphia, Pennsylvania': 30}
+
+
                               
                 matrix2 = pd.read_csv(os.getcwd()+"\\inputData\\inputData03_US\\itemAttributesFEMA.csv") 
                 for index, row in matrix2.iterrows():
@@ -265,9 +422,10 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                   else:
                           balance_metric = 'n/a'
 
-  #       just printing the results          
-                  print("\nTotal Response Time (Cost) for current inventory: " + str(dummy_solution['adjdummyObj']))
-                  print("Total Response Time (Cost) for optimal inventory: " + str(nonfixed_dummy_solution['adjdummyObj']))
+  #       just printing the results            
+                  print("\nTotal Response "+mode+" for current inventory: " + str(dummy_solution['adjdummyObj']))
+                  print("Total Response "+mode+" for optimal inventory: " + str(nonfixed_dummy_solution['adjdummyObj']))
+
                   print("Balance Metric: " + str(balance_metric))
                   
                   print("\nWeighted Av. Demand: " + str(weight_av_demand))        
@@ -280,8 +438,8 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                   print("\n\nWeighted Fraction Completely Served with current inventory: " + str(WeightedFractionCompletelyServed))
                   print("Weighted Fraction Completely Served with optimal inventory: " + str(WeightedFractionCompletelyServednonFixed))
 
-                  print("\n\nAverage Time (Cost) with current inventory: " + str(average_time))
-                  print("Average Time (Cost) with optimal inventory: " + str(average_timenonFixed))
+                  print("\n\nAverage "+mode+" with current inventory: " + str(average_time))
+                  print("Average "+mode+" with optimal inventory: " + str(average_timenonFixed))
                   
                   print("dummy correction factor (1-delta)*bigMdummy: " + str((1-WeightedFractionCompletelyServed) * bigMCostDummy))
                   print("\n\n")
@@ -347,25 +505,36 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                 time_dummy_monetary = 0
                 time_nonfixed_monetary = 0
 
+                weight_av_demand_met = 0
                 for quadVar in cross_validation[("dummy", "TIME")]["dummyFlow"]:
-                  time_dummy_monetary += cross_validation[("dummy", "TIME")]["dummyFlow"][quadVar] * cross_validation[("dummy", "MONETARY")]["weightMap"][quadVar]
-                print("Monetary value for time-dummy model: " + str(time_dummy_monetary))
+                  if "dummy" not in quadVar:
+                    weight_av_demand_met += cross_validation[("dummy", "TIME")]["dummyFlow"][quadVar] * 1.0 / len(probs_tmpD)
+                    time_dummy_monetary += cross_validation[("dummy", "TIME")]["dummyFlow"][quadVar] * cross_validation[("dummy", "MONETARY")]["weightMap"][quadVar]
+                print("Monetary average for time-dummy model: " + str(time_dummy_monetary / weight_av_demand_met))
 
+                weight_av_demand_met = 0
                 for quadVar in cross_validation[("nonfixed", "TIME")]["dummyFlow"]:
-                  time_dummy_monetary += cross_validation[("nonfixed", "TIME")]["dummyFlow"][quadVar] * cross_validation[("nonfixed", "MONETARY")]["weightMap"][quadVar]
-                print("Monetary value for time-nonfixed model: " + str(time_dummy_monetary))
+                  if "dummy" not in quadVar:
+                    weight_av_demand_met += cross_validation[("nonfixed", "TIME")]["dummyFlow"][quadVar] * 1.0 / len(probs_tmpD)
+                    time_nonfixed_monetary += cross_validation[("nonfixed", "TIME")]["dummyFlow"][quadVar] * cross_validation[("nonfixed", "MONETARY")]["weightMap"][quadVar]
+                print("Monetary average for time-nonfixed model: " + str(time_nonfixed_monetary / weight_av_demand_met))
 
-
+                weight_av_demand_met = 0
                 for quadVar in cross_validation[("dummy", "MONETARY")]["dummyFlow"]:
-                  time_dummy_monetary += cross_validation[("dummy", "MONETARY")]["dummyFlow"][quadVar] * cross_validation[("dummy", "TIME")]["weightMap"][quadVar]
-                print("Time value for monetary-dummy model: " + str(time_dummy_monetary))
+                  if "dummy" not in quadVar:
+                    weight_av_demand_met += cross_validation[("dummy", "MONETARY")]["dummyFlow"][quadVar] * 1.0 / len(probs_tmpD)
+                    monetary_dummy_time += cross_validation[("dummy", "MONETARY")]["dummyFlow"][quadVar] * cross_validation[("dummy", "TIME")]["weightMap"][quadVar]
+                print("Time average for monetary-dummy model: " + str(monetary_dummy_time / weight_av_demand_met))
 
+                weight_av_demand_met = 0
                 for quadVar in cross_validation[("nonfixed", "MONETARY")]["dummyFlow"]:
-                  time_dummy_monetary += cross_validation[("nonfixed", "MONETARY")]["dummyFlow"][quadVar] * cross_validation[("nonfixed", "TIME")]["weightMap"][quadVar]
-                print("Time value for monetary-nonfixed model: " + str(time_dummy_monetary))
-
-                sys.stdout = old_stdout
-                log_file.close()
+                  if "dummy" not in quadVar:
+                    weight_av_demand_met += cross_validation[("nonfixed", "MONETARY")]["dummyFlow"][quadVar] * 1.0 / len(probs_tmpD)
+                    monetary_nonfixed_time += cross_validation[("nonfixed", "MONETARY")]["dummyFlow"][quadVar] * cross_validation[("nonfixed", "TIME")]["weightMap"][quadVar]
+                print("Time average for monetary-nonfixed model: " + str(monetary_nonfixed_time / weight_av_demand_met))
+#
+#                sys.stdout = old_stdout
+#                log_file.close()
                 print("-------------------------------END------------------------------")
 
                 sys.exit()
@@ -596,7 +765,7 @@ def dummyhelper( costType
               assignments = m.getAttr('x', [quadVars[key] for key in quadVars])
               for tri in [quadVars[key] for key in quadVars]:
                       if tri.x > 0.0001:
-                            print(tri.VarName, tri.x)
+#                            print(tri.VarName, tri.x)
                             solution_flow[tri.VarName] = tri.x
         else:
               print('No solution')
@@ -636,42 +805,42 @@ def dummyhelper( costType
                                     weighted_dummy_demand = 0
 
     #Collect information for T-metric and plot metric over time
-    if costType == "TIME":
-         timeDemandTuples = []
-         total_demand = sum([demand_tmpD[key] for key in demand_tmpD])
-         for var in triToDistanceMap:
-                  if var.X > .01:
-                                  disasterID = var.VarName.split(':')[2]
-                                  sublocID = var.VarName.split(':')[3]
-                                  #timeDemandTuples.append((var.X * probs_tmpD[disasterID] / float(demand_tmpD[(disasterID, sublocID)]), triToDistanceMap[var]))
-                                  #imeDemandTuples.append((var.X * 1.0 / (len(probs_tmpD) * float(demand_tmpD[(disasterID, sublocID)])), triToDistanceMap[var]))
-                                  timeDemandTuples.append((var.X / total_demand, triToDistanceMap[var]))
-         timeDemandTuples.sort(key = lambda x: x[1]) #Sort based on time
-         times = [e[1] for e in timeDemandTuples]
-         satisfied = [e[0] for e in timeDemandTuples]
-         cumulative_satisfied = []
-         for i in range(len(satisfied)):
-                  cumulative_satisfied.append(sum(satisfied[:i+1]))
+    # if costType == "TIME":
+    #      timeDemandTuples = []
+    #      total_demand = sum([demand_tmpD[key] for key in demand_tmpD])
+    #      for var in triToDistanceMap:
+    #               if var.X > .01:
+    #                               disasterID = var.VarName.split(':')[2]
+    #                               sublocID = var.VarName.split(':')[3]
+    #                               #timeDemandTuples.append((var.X * probs_tmpD[disasterID] / float(demand_tmpD[(disasterID, sublocID)]), triToDistanceMap[var]))
+    #                               #imeDemandTuples.append((var.X * 1.0 / (len(probs_tmpD) * float(demand_tmpD[(disasterID, sublocID)])), triToDistanceMap[var]))
+    #                               timeDemandTuples.append((var.X / total_demand, triToDistanceMap[var]))
+    #      timeDemandTuples.sort(key = lambda x: x[1]) #Sort based on time
+    #      times = [e[1] for e in timeDemandTuples]
+    #      satisfied = [e[0] for e in timeDemandTuples]
+    #      cumulative_satisfied = []
+    #      for i in range(len(satisfied)):
+    #               cumulative_satisfied.append(sum(satisfied[:i+1]))
     
-         adjustedTimes = [0]
-         adjustedSatisfied = [0]
-         for i in range(len(cumulative_satisfied)):
-                 adjustedTimes.append(times[i])
-                 adjustedTimes.append(times[i])
-                 if i == 0:
-                         adjustedSatisfied.append(0)
-                 else:
-                         adjustedSatisfied.append(cumulative_satisfied[i-1])
-                 adjustedSatisfied.append(cumulative_satisfied[i])
+    #      adjustedTimes = [0]
+    #      adjustedSatisfied = [0]
+    #      for i in range(len(cumulative_satisfied)):
+    #              adjustedTimes.append(times[i])
+    #              adjustedTimes.append(times[i])
+    #              if i == 0:
+    #                      adjustedSatisfied.append(0)
+    #              else:
+    #                      adjustedSatisfied.append(cumulative_satisfied[i-1])
+    #              adjustedSatisfied.append(cumulative_satisfied[i])
     
-         import matplotlib.pyplot as plt
+    #      import matplotlib.pyplot as plt
     
-         plt.step(adjustedTimes, adjustedSatisfied)
-         plt.xlabel('Time (hours)')
-         plt.ylabel('Cumulative Fraction of Demand Served')
-         plt.xlim(xmin=0, xmax=200)
-         plt.title('Demand Served Metric')
-         plt.savefig("outputData//" + str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_") + costType +"dummy_T_metric.png")
+    #      plt.step(adjustedTimes, adjustedSatisfied)
+    #      plt.xlabel('Time (hours)')
+    #      plt.ylabel('Cumulative Fraction of Demand Served')
+    #      plt.xlim(xmin=0, xmax=200)
+    #      plt.title('Demand Served Metric')
+    #      plt.savefig("outputData//" + str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_") + costType +"dummy_T_metric.png")
 
     #Generate depot duals by summing over all disasters for a fixed depot
     depotDuals = {}
@@ -926,7 +1095,7 @@ def nonfixeddummyinventoryhelper( costType
                           assignments = m.getAttr('x', [quadVars[key] for key in quadVars])
                           for tri in [quadVars[key] for key in quadVars]:
                                   if tri.x > 0.0001:
-                                        print(tri.VarName, tri.x)
+#                                        print(tri.VarName, tri.x)
                                         solution_flow[tri.VarName] = tri.x
                     else:
                           print('No solution')
@@ -973,42 +1142,42 @@ def nonfixeddummyinventoryhelper( costType
                     weighted_dummy_demand = 0
                                                 
                 #Collect information for T-metric and plot metric over time                 
-                if costType == "TIME":
-                     timeDemandTuples = []
-                     total_demand = sum([demand_tmpD[key] for key in demand_tmpD])
-                     for var in triToDistanceMap:
-                              if var.X > .01:
-                                              disasterID = var.VarName.split(':')[2]
-                                              sublocID = var.VarName.split(':')[3]
-                                              #timeDemandTuples.append((var.X * probs_tmpD[disasterID] / float(demand_tmpD[(disasterID, sublocID)]), triToDistanceMap[var]))
-                                              #imeDemandTuples.append((var.X * 1.0 / (len(probs_tmpD) * float(demand_tmpD[(disasterID, sublocID)])), triToDistanceMap[var]))
-                                              timeDemandTuples.append((var.X / total_demand, triToDistanceMap[var]))
-                     timeDemandTuples.sort(key = lambda x: x[1]) #Sort based on time
-                     times = [e[1] for e in timeDemandTuples]
-                     satisfied = [e[0] for e in timeDemandTuples]
-                     cumulative_satisfied = []
-                     for i in range(len(satisfied)):
-                              cumulative_satisfied.append(sum(satisfied[:i+1]))
+                # if costType == "TIME":
+                #      timeDemandTuples = []
+                #      total_demand = sum([demand_tmpD[key] for key in demand_tmpD])
+                #      for var in triToDistanceMap:
+                #               if var.X > .01:
+                #                               disasterID = var.VarName.split(':')[2]
+                #                               sublocID = var.VarName.split(':')[3]
+                #                               #timeDemandTuples.append((var.X * probs_tmpD[disasterID] / float(demand_tmpD[(disasterID, sublocID)]), triToDistanceMap[var]))
+                #                               #imeDemandTuples.append((var.X * 1.0 / (len(probs_tmpD) * float(demand_tmpD[(disasterID, sublocID)])), triToDistanceMap[var]))
+                #                               timeDemandTuples.append((var.X / total_demand, triToDistanceMap[var]))
+                #      timeDemandTuples.sort(key = lambda x: x[1]) #Sort based on time
+                #      times = [e[1] for e in timeDemandTuples]
+                #      satisfied = [e[0] for e in timeDemandTuples]
+                #      cumulative_satisfied = []
+                #      for i in range(len(satisfied)):
+                #               cumulative_satisfied.append(sum(satisfied[:i+1]))
                 
-                     adjustedTimes = [0]
-                     adjustedSatisfied = [0]
-                     for i in range(len(cumulative_satisfied)):
-                             adjustedTimes.append(times[i])
-                             adjustedTimes.append(times[i])
-                             if i == 0:
-                                     adjustedSatisfied.append(0)
-                             else:
-                                     adjustedSatisfied.append(cumulative_satisfied[i-1])
-                             adjustedSatisfied.append(cumulative_satisfied[i])
+                #      adjustedTimes = [0]
+                #      adjustedSatisfied = [0]
+                #      for i in range(len(cumulative_satisfied)):
+                #              adjustedTimes.append(times[i])
+                #              adjustedTimes.append(times[i])
+                #              if i == 0:
+                #                      adjustedSatisfied.append(0)
+                #              else:
+                #                      adjustedSatisfied.append(cumulative_satisfied[i-1])
+                #              adjustedSatisfied.append(cumulative_satisfied[i])
                 
-                     import matplotlib.pyplot as plt
+                #      import matplotlib.pyplot as plt
                 
-                     plt.step(adjustedTimes, adjustedSatisfied)
-                     plt.xlabel('Time (hours)')
-                     plt.ylabel('Cumulative Fraction of Demand Served')
-                     plt.xlim(xmin=0, xmax=200)
-                     plt.title('Demand Served Metric')
-                     plt.savefig("outputData//" + str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_") + costType +"dummy_T_metric.png")
+                #      plt.step(adjustedTimes, adjustedSatisfied)
+                #      plt.xlabel('Time (hours)')
+                #      plt.ylabel('Cumulative Fraction of Demand Served')
+                #      plt.xlim(xmin=0, xmax=200)
+                #      plt.title('Demand Served Metric')
+                #      plt.savefig("outputData//" + str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_") + costType +"dummy_T_metric.png")
 
                 #Generate carrier duals by summing over all disasters for a fixed carrier
                 carrierDuals = {}
