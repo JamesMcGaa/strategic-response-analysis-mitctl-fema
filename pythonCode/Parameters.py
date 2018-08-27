@@ -1,7 +1,7 @@
 # File Names
 betaItemConversionsFileName = 'betaItemConversionsFEMA.csv' #'betaItemConversions.csv'
 countryAbilityToRespondFileName = 'countryAbilityToRespond.csv'
-depotInventoryFileName = 'depotInventoryDataFEMA.csv' #'depotInventoryData.csv'
+depotInventoryFileName = 'depotInventoryDataFEMA.csv' #'depotInventoryData.csv' 
 depotLatLongFileName = 'depotLatLong.csv'
 depotWhichToUseReadInvFileName = 'depotsWhichToInclude.csv'
 disasterCountryWhichToUseReadInFileName = 'disasterCountryWhichToInclude.csv'
