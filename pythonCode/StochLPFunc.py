@@ -23,16 +23,19 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                                                                     , depotInWhichCountry
                                                                                                                                                                                     ):
                 n_itemIter = "Cots"
-
+                inventory_tmpD = {
+                'Dallas, Texas': 80000, 
+                'San Francisco, California': 700000, 
+                'Washington D.C., Washington D.C.': 150000}
                 print("-------------------------------Start------------------------------")
                 import pandas as pd                
                 import os
                 import matplotlib.pyplot as plt
                 import sys
 
-#                old_stdout = sys.stdout
-#                log_file = open("outputData//"+ n_itemIter+str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_")+"output_"+n_itemIter+".log","w")
-#                sys.stdout = log_file
+                old_stdout = sys.stdout
+                log_file = open("outputData//"+ n_itemIter+str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_")+"output_"+n_itemIter+".log","w")
+                sys.stdout = log_file
 
 
                 # plt.hist(x=[demand_tmpD[key] for key in demand_tmpD], bins=50)
@@ -42,7 +45,7 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                 #Generate cost matrices
                 monetaryMatrix = {}
                 timeMatrix = {}
-                matrix = pd.read_csv(os.getcwd()+"\\inputData\\inputData03_US\\drivingDistanceMatrix.csv") 
+                matrix = pd.read_csv(os.getcwd()+"\\inputData\\inputData03_US\\drivingDistanceMatrix_test.csv") 
                 for index, row in matrix.iterrows():
                   monetaryMatrix[((row.depotGglAddressAscii, row.disasterGglAddressAscii))] = row.distance_km
                   timeMatrix[((row.depotGglAddressAscii, row.disasterGglAddressAscii))] = row.drivingTime_hrs
@@ -65,7 +68,7 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                 current_disaster = 0
                 disaster_to_ID_count = {}
                 disaster_to_count = {}
-                disasters = pd.read_csv(os.getcwd()+"\\inputData\\inputData03_US\\disasterAffectedDataFEMA.csv") 
+                disasters = pd.read_csv(os.getcwd()+"\\inputData\\inputData03_US\\disasterAffectedDataFEMA_test.csv") 
 
                 for index, row in disasters.iterrows():
                   if (row.Day, row.Month, row.Year, row.Type) not in disaster_to_ID_count: #New date
@@ -147,9 +150,7 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
 
 
 
-                # plt.hist(x=[demand_tmpD[key] for key in demand_tmpD], bins=50)
-                # plt.show()
-                # sys.exit()
+
 
 
                 #Test 1
@@ -589,6 +590,7 @@ def dummyhelper( costType
     print("\n\n-------------------------------"+ costType+" DUMMY------------------------------")
 
     m = Model('StochLP')
+    
 
     #Generate list of string names
     disasterList = demand_tmpD.keys()
