@@ -1,66 +1,74 @@
 \ Model StochLP
 \ LP format - for model browsing. Use MPS format to capture full model detail.
 Minimize
-  1305 Dallas,_Texas_DT_0000-0000_SubLoc_00000
-   + 2805 Dallas,_Texas_DT_0000-0001_SubLoc_00000
-   + 1655 Washington_D.C.,_Washington_D.C._WDC_0000-0000_SubLoc_00000
-   + 3155 Washington_D.C.,_Washington_D.C._WDC_0000-0001_SubLoc_00000
-   + 5 San_Francisco,_California_SF_0000-0000_SubLoc_00000
-   + 40 San_Francisco,_California_SF_0000-0001_SubLoc_00000
+  27.5 Dallas,_Texas_DT_Carrier_0000-0000_SubLoc_00000
+   + 37.5 Dallas,_Texas_DT_Carrier_0000-0001_SubLoc_00000
+   + 32.5 Washington_D.C.,_Washington_D.C._WDC_Carrier_0000-0000_SubLoc_00000
+   + 40 Washington_D.C.,_Washington_D.C._WDC_Carrier_0000-0001_SubLoc_00000
+   + 13 San_Francisco,_California_SF_Carrier_0000-0000_SubLoc_00000
+   + 25 San_Francisco,_California_SF_Carrier_0000-0001_SubLoc_00000
    + 500000 dummy_dummycarrier_0000-0000_SubLoc_00000
    + 500000 dummy_dummycarrier_0000-0001_SubLoc_00000
 Subject To
- CARRIER<Dallas,_Texas_DT_0000-0000>: - Dallas,_Texas_DT_0000-0000
-   >= -4.69e+07
- CARRIER<Dallas,_Texas_DT_0000-0001>: - Dallas,_Texas_DT_0000-0001
-   >= -4.69e+07
- CARRIER<Washington_D.C.,_Washington_D.C._WDC_0000-0000>:
-   - Washington_D.C.,_Washington_D.C._WDC_0000-0000 >= -6.912e+07
- CARRIER<Washington_D.C.,_Washington_D.C._WDC_0000-0001>:
-   - Washington_D.C.,_Washington_D.C._WDC_0000-0001 >= -6.912e+07
- CARRIER<San_Francisco,_California_SF_0000-0000>:
-   - San_Francisco,_California_SF_0000-0000 >= -2.468e+07
- CARRIER<San_Francisco,_California_SF_0000-0001>:
-   - San_Francisco,_California_SF_0000-0001 >= -2.468e+07
- DEMAND<0000-0000_SubLoc_00000>: - Dallas,_Texas_DT_0000-0000_SubLoc_00000
-   - Washington_D.C.,_Washington_D.C._WDC_0000-0000_SubLoc_00000
-   - San_Francisco,_California_SF_0000-0000_SubLoc_00000
-   - dummy_dummycarrier_0000-0000_SubLoc_00000 = -70
- DEMAND<0000-0001_SubLoc_00000>: - Dallas,_Texas_DT_0000-0001_SubLoc_00000
-   - Washington_D.C.,_Washington_D.C._WDC_0000-0001_SubLoc_00000
-   - San_Francisco,_California_SF_0000-0001_SubLoc_00000
-   - dummy_dummycarrier_0000-0001_SubLoc_00000 = -70
- FLOW<Dallas,_Texas_DT_0000-0000>: Dallas,_Texas_DT_0000-0000
-   - Dallas,_Texas_DT_0000-0000_SubLoc_00000 = 0
- FLOW<Washington_D.C.,_Washington_D.C._WDC_0000-0000>:
-   Washington_D.C.,_Washington_D.C._WDC_0000-0000
-   - Washington_D.C.,_Washington_D.C._WDC_0000-0000_SubLoc_00000 = 0
+ CARRIER<Dallas,_Texas_DT_Carrier_0000-0000>:
+   - Dallas,_Texas_DT_Carrier_0000-0000 >= -200000
+ CARRIER<Dallas,_Texas_DT_Carrier_0000-0001>:
+   - Dallas,_Texas_DT_Carrier_0000-0001 >= -200000
+ CARRIER<Washington_D.C.,_Washington_D.C._WDC_Carrier_0000-0000>:
+   - Washington_D.C.,_Washington_D.C._WDC_Carrier_0000-0000 >= -200000
+ CARRIER<Washington_D.C.,_Washington_D.C._WDC_Carrier_0000-0001>:
+   - Washington_D.C.,_Washington_D.C._WDC_Carrier_0000-0001 >= -200000
+ CARRIER<San_Francisco,_California_SF_Carrier_0000-0000>:
+   - San_Francisco,_California_SF_Carrier_0000-0000 >= -200000
+ CARRIER<San_Francisco,_California_SF_Carrier_0000-0001>:
+   - San_Francisco,_California_SF_Carrier_0000-0001 >= -200000
+ DEMAND<0000-0000_SubLoc_00000>:
+   - Dallas,_Texas_DT_Carrier_0000-0000_SubLoc_00000
+   - Washington_D.C.,_Washington_D.C._WDC_Carrier_0000-0000_SubLoc_00000
+   - San_Francisco,_California_SF_Carrier_0000-0000_SubLoc_00000
+   - dummy_dummycarrier_0000-0000_SubLoc_00000 = -2
+ DEMAND<0000-0001_SubLoc_00000>:
+   - Dallas,_Texas_DT_Carrier_0000-0001_SubLoc_00000
+   - Washington_D.C.,_Washington_D.C._WDC_Carrier_0000-0001_SubLoc_00000
+   - San_Francisco,_California_SF_Carrier_0000-0001_SubLoc_00000
+   - dummy_dummycarrier_0000-0001_SubLoc_00000 = -1
+ FLOW<Dallas,_Texas_DT_Carrier_0000-0000>:
+   Dallas,_Texas_DT_Carrier_0000-0000
+   - Dallas,_Texas_DT_Carrier_0000-0000_SubLoc_00000 = 0
+ FLOW<Washington_D.C.,_Washington_D.C._WDC_Carrier_0000-0000>:
+   Washington_D.C.,_Washington_D.C._WDC_Carrier_0000-0000
+   - Washington_D.C.,_Washington_D.C._WDC_Carrier_0000-0000_SubLoc_00000
+   = 0
  FLOW<dummy_dummycarrier_0000-0000>: dummy_dummycarrier_0000-0000
    - dummy_dummycarrier_0000-0000_SubLoc_00000 = 0
- FLOW<San_Francisco,_California_SF_0000-0000>:
-   San_Francisco,_California_SF_0000-0000
-   - San_Francisco,_California_SF_0000-0000_SubLoc_00000 = 0
- FLOW<Dallas,_Texas_DT_0000-0001>: Dallas,_Texas_DT_0000-0001
-   - Dallas,_Texas_DT_0000-0001_SubLoc_00000 = 0
- FLOW<Washington_D.C.,_Washington_D.C._WDC_0000-0001>:
-   Washington_D.C.,_Washington_D.C._WDC_0000-0001
-   - Washington_D.C.,_Washington_D.C._WDC_0000-0001_SubLoc_00000 = 0
+ FLOW<San_Francisco,_California_SF_Carrier_0000-0000>:
+   San_Francisco,_California_SF_Carrier_0000-0000
+   - San_Francisco,_California_SF_Carrier_0000-0000_SubLoc_00000 = 0
+ FLOW<Dallas,_Texas_DT_Carrier_0000-0001>:
+   Dallas,_Texas_DT_Carrier_0000-0001
+   - Dallas,_Texas_DT_Carrier_0000-0001_SubLoc_00000 = 0
+ FLOW<Washington_D.C.,_Washington_D.C._WDC_Carrier_0000-0001>:
+   Washington_D.C.,_Washington_D.C._WDC_Carrier_0000-0001
+   - Washington_D.C.,_Washington_D.C._WDC_Carrier_0000-0001_SubLoc_00000
+   = 0
  FLOW<dummy_dummycarrier_0000-0001>: dummy_dummycarrier_0000-0001
    - dummy_dummycarrier_0000-0001_SubLoc_00000 = 0
- FLOW<San_Francisco,_California_SF_0000-0001>:
-   San_Francisco,_California_SF_0000-0001
-   - San_Francisco,_California_SF_0000-0001_SubLoc_00000 = 0
- DEPOT<Dallas,_Texas_0000-0000>: - Dallas,_Texas_DT_0000-0000 >= -80000
+ FLOW<San_Francisco,_California_SF_Carrier_0000-0001>:
+   San_Francisco,_California_SF_Carrier_0000-0001
+   - San_Francisco,_California_SF_Carrier_0000-0001_SubLoc_00000 = 0
+ DEPOT<Dallas,_Texas_0000-0000>: - Dallas,_Texas_DT_Carrier_0000-0000
+   >= -1
  DEPOT<Washington_D.C.,_Washington_D.C._0000-0000>:
-   - Washington_D.C.,_Washington_D.C._WDC_0000-0000 >= -150000
+   - Washington_D.C.,_Washington_D.C._WDC_Carrier_0000-0000 >= -1
  DEPOT<dummy_0000-0000>: - dummy_dummycarrier_0000-0000 >= -1e+08
  DEPOT<San_Francisco,_California_0000-0000>:
-   - San_Francisco,_California_SF_0000-0000 >= -700000
- DEPOT<Dallas,_Texas_0000-0001>: - Dallas,_Texas_DT_0000-0001 >= -80000
+   - San_Francisco,_California_SF_Carrier_0000-0000 >= -1
+ DEPOT<Dallas,_Texas_0000-0001>: - Dallas,_Texas_DT_Carrier_0000-0001
+   >= -1
  DEPOT<Washington_D.C.,_Washington_D.C._0000-0001>:
-   - Washington_D.C.,_Washington_D.C._WDC_0000-0001 >= -150000
+   - Washington_D.C.,_Washington_D.C._WDC_Carrier_0000-0001 >= -1
  DEPOT<dummy_0000-0001>: - dummy_dummycarrier_0000-0001 >= -1e+08
  DEPOT<San_Francisco,_California_0000-0001>:
-   - San_Francisco,_California_SF_0000-0001 >= -700000
+   - San_Francisco,_California_SF_Carrier_0000-0001 >= -1
 Bounds
 End

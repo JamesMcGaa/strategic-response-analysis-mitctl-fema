@@ -24,9 +24,9 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                                                                                                                                                                                     ):
                 n_itemIter = "Cots"
                 inventory_tmpD = {
-                'Dallas, Texas': 80000, 
-                'San Francisco, California': 700000, 
-                'Washington D.C., Washington D.C.': 150000}
+                'Dallas, Texas': 1, 
+                'San Francisco, California': 1, 
+                'Washington D.C., Washington D.C.': 1}
                 print("-------------------------------Start------------------------------")
                 import pandas as pd                
                 import os
@@ -544,8 +544,8 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                     monetary_nonfixed_time += cross_validation[("nonfixed", "MONETARY")]["dummyFlow"][quadVar] * cross_validation[("nonfixed", "TIME")]["weightMap"][quadVar]
                 print("Time average for monetary-nonfixed model: " + str(monetary_nonfixed_time / weight_av_demand_met))
 #
-#                sys.stdout = old_stdout
-#                log_file.close()
+                sys.stdout = old_stdout
+                log_file.close()
                 print("-------------------------------END------------------------------")
 
                 sys.exit()
@@ -777,7 +777,7 @@ def dummyhelper( costType
               assignments = m.getAttr('x', [quadVars[key] for key in quadVars])
               for tri in [quadVars[key] for key in quadVars]:
                       if tri.x > 0.0001:
-#                            print(tri.VarName, tri.x)
+                            print(tri.VarName, tri.x)
                             solution_flow[tri.VarName] = tri.x
         else:
               print('No solution')
@@ -1107,7 +1107,7 @@ def nonfixeddummyinventoryhelper( costType
                           assignments = m.getAttr('x', [quadVars[key] for key in quadVars])
                           for tri in [quadVars[key] for key in quadVars]:
                                   if tri.x > 0.0001:
-#                                        print(tri.VarName, tri.x)
+                                        print(tri.VarName, tri.x)
                                         solution_flow[tri.VarName] = tri.x
                     else:
                           print('No solution')
