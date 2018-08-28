@@ -1,0 +1,10 @@
+depotGglAddressAscii,disasterGglAddressAscii,distance_km,drivingTime_hrs
+"San Francisco, California",Disaster1,10,10
+"Dallas, Texas",Disaster1,20,20
+"Washington D.C., Washington D.C.",Disaster1,30,30
+"San Francisco, California",Disaster2,40,40
+"Dallas, Texas",Disaster2,50,50
+"Washington D.C., Washington D.C.",Disaster2,60,60
+"San Francisco, California",Disaster3,70,70
+"Dallas, Texas",Disaster3,80,80
+"Washington D.C., Washington D.C.",Disaster3,90,90
