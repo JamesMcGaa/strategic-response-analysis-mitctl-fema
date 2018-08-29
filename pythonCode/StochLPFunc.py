@@ -106,7 +106,8 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
 
 
 
-
+                print(timeMatrix)
+                print(demand_tmpD)
                 adjusted_demand_tmpD = {}
                 adjusted_demandAddress_tmpD = {}
                 adjusted_probs_tmpD = {}
@@ -124,6 +125,7 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
 
                     for depotName in inventory_tmpD:
                       indexPair = (depotName, "disasterWeightedAverage"+str(ID))
+
                       if indexPair not in adjusted_time_matrix and indexPair not in adjusted_cost_matrix:
                         adjusted_time_matrix[indexPair] = timeMatrix[(depotName, demandAddress_tmpD[(disasterString, sublocationString)])] * demand_tmpD[(disasterString, sublocationString)] 
                         adjusted_cost_matrix[indexPair] = monetaryMatrix[(depotName, demandAddress_tmpD[(disasterString, sublocationString)])] * demand_tmpD[(disasterString, sublocationString)] 
@@ -131,10 +133,10 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                         adjusted_time_matrix[indexPair] += timeMatrix[(depotName, demandAddress_tmpD[(disasterString, sublocationString)])] * demand_tmpD[(disasterString, sublocationString)] 
                         adjusted_cost_matrix[indexPair] += monetaryMatrix[(depotName, demandAddress_tmpD[(disasterString, sublocationString)])] * demand_tmpD[(disasterString, sublocationString)] 
 
-                  for sublocationID in range(disaster_to_count[disasterString]):
+                  for depotName in inventory_tmpD:
                     indexPair = (depotName, "disasterWeightedAverage"+str(ID))
-                    adjusted_time_matrix[indexPair] /= total_demand
-                    adjusted_cost_matrix[indexPair] /= total_demand
+                    adjusted_time_matrix[indexPair] /= float(total_demand)
+                    adjusted_cost_matrix[indexPair] /= float(total_demand)
 
                   adjusted_demand_tmpD[(disasterString, 'SubLoc_00000')] = total_demand
                   adjusted_demandAddress_tmpD[(disasterString, 'SubLoc_00000')] = "disasterWeightedAverage"+str(ID)
@@ -148,7 +150,9 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                 monetaryMatrix = adjusted_cost_matrix
                 timeMatrix = adjusted_time_matrix
 
-
+                print(timeMatrix)
+                print(demand_tmpD)
+                #sys.exit()
 
 
 

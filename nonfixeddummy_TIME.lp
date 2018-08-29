@@ -1,11 +1,11 @@
 \ Model StochLPNonfixedDummy
 \ LP format - for model browsing. Use MPS format to capture full model detail.
 Minimize
-  27.5 Dallas,_Texas_DT_Carrier_0000-0000_SubLoc_00000
+  16.25 Dallas,_Texas_DT_Carrier_0000-0000_SubLoc_00000
    + 37.5 Dallas,_Texas_DT_Carrier_0000-0001_SubLoc_00000
-   + 32.5 Washington_D.C.,_Washington_D.C._WDC_Carrier_0000-0000_SubLoc_00000
+   + 18.75 Washington_D.C.,_Washington_D.C._WDC_Carrier_0000-0000_SubLoc_00000
    + 40 Washington_D.C.,_Washington_D.C._WDC_Carrier_0000-0001_SubLoc_00000
-   + 13 San_Francisco,_California_SF_Carrier_0000-0000_SubLoc_00000
+   + 21.25 San_Francisco,_California_SF_Carrier_0000-0000_SubLoc_00000
    + 25 San_Francisco,_California_SF_Carrier_0000-0001_SubLoc_00000
    + 500000 dummy_dummycarrier_0000-0000_SubLoc_00000
    + 500000 dummy_dummycarrier_0000-0001_SubLoc_00000
