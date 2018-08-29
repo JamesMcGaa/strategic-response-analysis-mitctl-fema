@@ -23,10 +23,10 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                                                                     , depotInWhichCountry
                                                                                                                                                                                     ):
                 n_itemIter = "Cots"
-                inventory_tmpD = {
-                'Dallas, Texas': 1, 
-                'San Francisco, California': 1, 
-                'Washington D.C., Washington D.C.': 1}
+#                inventory_tmpD = {
+#                'Dallas, Texas': 300, 
+#                'San Francisco, California': 400, 
+#                'Washington D.C., Washington D.C.': 200}
                 print("-------------------------------Start------------------------------")
                 import pandas as pd                
                 import os
@@ -45,14 +45,14 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                 #Generate cost matrices
                 monetaryMatrix = {}
                 timeMatrix = {}
-                matrix = pd.read_csv(os.getcwd()+"\\inputData\\inputData03_US\\drivingDistanceMatrix_test.csv") 
+                matrix = pd.read_csv(os.getcwd()+"\\inputData\\inputData03_US\\" + drivingDistanceMatrixFileName) 
                 for index, row in matrix.iterrows():
                   monetaryMatrix[((row.depotGglAddressAscii, row.disasterGglAddressAscii))] = row.distance_km
                   timeMatrix[((row.depotGglAddressAscii, row.disasterGglAddressAscii))] = row.drivingTime_hrs
 
                 #Generate demand_tmpD, probs_tmpD, demandAddress_tmpD
                 conversion_factor = 0
-                beta_conversion_file = pd.read_csv(os.getcwd()+"\\inputData\\inputData03_US\\betaItemConversionsFEMA.csv") 
+                beta_conversion_file = pd.read_csv(os.getcwd()+"\\inputData\\inputData03_US\\" + betaItemConversionsFileName) 
                 for index, row in beta_conversion_file.iterrows():
                   if row.Item == n_itemIter:
                     conversion_factor = row.PersonsPerItem
@@ -68,7 +68,7 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                 current_disaster = 0
                 disaster_to_ID_count = {}
                 disaster_to_count = {}
-                disasters = pd.read_csv(os.getcwd()+"\\inputData\\inputData03_US\\disasterAffectedDataFEMA_test.csv") 
+                disasters = pd.read_csv(os.getcwd()+"\\inputData\\inputData03_US\\" + disasterTotAffectedFileName) 
 
                 for index, row in disasters.iterrows():
                   if (row.Day, row.Month, row.Year, row.Type) not in disaster_to_ID_count: #New date
@@ -106,8 +106,8 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
 
 
 
-                print(timeMatrix)
-                print(demand_tmpD)
+#                print(timeMatrix)
+#                print(demand_tmpD)
                 adjusted_demand_tmpD = {}
                 adjusted_demandAddress_tmpD = {}
                 adjusted_probs_tmpD = {}
@@ -150,8 +150,8 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                 monetaryMatrix = adjusted_cost_matrix
                 timeMatrix = adjusted_time_matrix
 
-                print(timeMatrix)
-                print(demand_tmpD)
+#                print(timeMatrix)
+#                print(demand_tmpD)
                 #sys.exit()
 
 
@@ -781,7 +781,7 @@ def dummyhelper( costType
               assignments = m.getAttr('x', [quadVars[key] for key in quadVars])
               for tri in [quadVars[key] for key in quadVars]:
                       if tri.x > 0.0001:
-                            print(tri.VarName, tri.x)
+#                            print(tri.VarName, tri.x)
                             solution_flow[tri.VarName] = tri.x
         else:
               print('No solution')
@@ -867,7 +867,7 @@ def dummyhelper( costType
         for disasterTuple in demand_tmpD:
             constrName = "DEPOT<"+depotName+":"+disasterTuple[0]+">"
             if constrName in constrs:
-              #print 'Singular Depot Dual ' + depotName + ":" + disasterTuple[0] + '= ' + str(constrs["DEPOT<"+depotName+":"+disasterTuple[0]+">"].Pi)
+#              print 'Singular Depot Dual ' + depotName + ":" + disasterTuple[0] + '= ' + str(constrs["DEPOT<"+depotName+":"+disasterTuple[0]+">"].Pi)
               depotDuals[depotName] += constrs[constrName].Pi
     print depotDuals
     
@@ -1111,7 +1111,7 @@ def nonfixeddummyinventoryhelper( costType
                           assignments = m.getAttr('x', [quadVars[key] for key in quadVars])
                           for tri in [quadVars[key] for key in quadVars]:
                                   if tri.x > 0.0001:
-                                        print(tri.VarName, tri.x)
+#                                        print(tri.VarName, tri.x)
                                         solution_flow[tri.VarName] = tri.x
                     else:
                           print('No solution')

@@ -1,4 +1,4 @@
 Contract,Capacity,Fixed Time to Warehouse,Fixed Cost,Variable Cost (mile),Target Depot City
 SF Carrier,10,10,,2,"San Francisco, California"
-DT Carrier,10,10,,2,"Dallas, Texas"
+DT Carrier,1,10,,2,"Dallas, Texas"
 WDC Carrier,10,10,,2,"Washington D.C., Washington D.C."

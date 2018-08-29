@@ -1,4 +1,4 @@
 Day,Month,Year,gglAddress,Type,TotAffected
-1,1,1,Florida 1,Flood,1
-1,1,1,Florida 2,Flood,1
-2,2,2,Seattle,Severe Storm(s),1
+1,1,1,NC 1,Flood,400
+1,1,1,NC 2,Flood,500
+2,2,2,Seattle,Severe Storm(s),900

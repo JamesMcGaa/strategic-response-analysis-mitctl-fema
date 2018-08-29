@@ -1,10 +1,10 @@
 depotGglAddressAscii,disasterGglAddressAscii,distance_km,drivingTime_hrs
-"San Francisco, California",Florida 1,10,30
-"Dallas, Texas",Florida 1,20,20
-"Washington D.C., Washington D.C.",Florida 1,30,25
-"San Francisco, California",Florida 2,40,35
-"Dallas, Texas",Florida 2,50,25
-"Washington D.C., Washington D.C.",Florida 2,60,30
-"San Francisco, California",Seattle,70,40
+"San Francisco, California",NC 1,10,35
+"Dallas, Texas",NC 1,20,10
+"Washington D.C., Washington D.C.",NC 1,30,15
+"San Francisco, California",NC 2,40,38
+"Dallas, Texas",NC 2,50,15
+"Washington D.C., Washington D.C.",NC 2,60,10
+"San Francisco, California",Seattle,70,55
 "Dallas, Texas",Seattle,80,65
 "Washington D.C., Washington D.C.",Seattle,90,70
