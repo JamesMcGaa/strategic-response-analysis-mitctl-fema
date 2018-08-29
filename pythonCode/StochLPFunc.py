@@ -32,6 +32,7 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                 import os
                 import matplotlib.pyplot as plt
                 import sys
+                import numpy as np
 
                 old_stdout = sys.stdout
                 log_file = open("outputData//"+ n_itemIter+str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_")+"output_"+n_itemIter+".log","w")
@@ -60,6 +61,8 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                   print("Could not find beta conversion factor")
                   sys.exit()
 
+                total_disasters = len(demand_tmpD)
+
                 #Generate raw inputs
                 demand_tmpD = {}
                 demandAddress_tmpD = {}
@@ -69,6 +72,7 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                 disaster_to_ID_count = {}
                 disaster_to_count = {}
                 disasters = pd.read_csv(os.getcwd()+"\\inputData\\inputData03_US\\" + disasterTotAffectedFileName) 
+
 
                 for index, row in disasters.iterrows():
                   if (row.Day, row.Month, row.Year, row.Type) not in disaster_to_ID_count: #New date
@@ -106,8 +110,6 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
 
 
 
-#                print(timeMatrix)
-#                print(demand_tmpD)
                 adjusted_demand_tmpD = {}
                 adjusted_demandAddress_tmpD = {}
                 adjusted_probs_tmpD = {}
@@ -143,19 +145,21 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                   adjusted_probs_tmpD[disasterString] = 1.0 / current_disaster
 
                 demand_tmpD = adjusted_demand_tmpD
-#                print demand_tmpD
-                
                 demandAddress_tmpD = adjusted_demandAddress_tmpD
                 probs_tmpD = adjusted_probs_tmpD
                 monetaryMatrix = adjusted_cost_matrix
                 timeMatrix = adjusted_time_matrix
 
-#                print(timeMatrix)
-#                print(demand_tmpD)
-                #sys.exit()
+                total_unique_disasters = len(demand_tmpD)
 
-
-
+                print("-------------------------------Disaster Stats------------------------------")
+                print("Total disasters: " + str(total_unique_disasters))
+                print("Total sublocations: " + str(total_disasters))
+                demands = [demand_tmpD[key] for key in demand_tmpD]
+                print("Average demand: " + str(np.mean(demands)))
+                print("Standard deviation: " + str(np.std(demands)))
+                print("Minimum demand: " + str(np.min(demands)))
+                print("Maximum demand: " + str(np.max(demands)))
 
                 #Test 1
 #                demand_tmpD = {
