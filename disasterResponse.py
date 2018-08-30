@@ -7,15 +7,22 @@ from datetime import datetime
 from gurobipy import *
 
 drivingDistanceMatrixFileName = 'drivingDistanceMatrix.csv' # 'drivingDistanceMatrixFEMACountyv2.csv'
-betaItemConversionsFileName = 'betaItemConversionsFEMA.csv' #'betaItemConversions.csv'
+carrierDataFileName =  'fakeCarrierDataFEMA_nototcaplimit.csv'
 disasterTotAffectedFileName = 'disasterAffectedDataFEMA.csv' # 'disasterAffectedDataFEMACountyv2.csv' #disasterAffectedDataFEMA.csv
 depotInventoryFileName = 'depotInventoryDataFEMA.csv' #'depotInventoryData.csv' 
+
+#Penalize items based on weight or volume
 itemAttributesFileName =  'itemAttributesFEMA.csv' # 'itemAttributes.csv'
+
+#Covert people affected into items demanded
+betaItemConversionsFileName = 'betaItemConversionsFEMA.csv' #'betaItemConversions.csv'
+
+#Convert carrier capacity based on current item
+conversionRatesFileName = 'fakeCarrierItemConversionRatesFEMA.csv'
 
 bigMCostDummy = 1000000
 bigInventoryDummy = 100000000
 n_itemIter = "Cots"
-inventory_tmpD = {'Dallas, Texas': 39910, 'Washington D.C., Washington D.C.': 56487, 'San Francisco, California': 29874, 'Atlanta, Georgia': 33790, 'Philadelphia, Pennsylvania': 32047}
 
 
 def optimize():
@@ -41,7 +48,7 @@ def optimize():
       monetaryMatrix[((row.depotGglAddressAscii, row.disasterGglAddressAscii))] = row.distance_km
       timeMatrix[((row.depotGglAddressAscii, row.disasterGglAddressAscii))] = row.drivingTime_hrs
 
-    #Generate demand_tmpD, probs_tmpD, demandAddress_tmpD
+    #Find conversion factor to transform
     conversion_factor = 0
     beta_conversion_file = pd.read_csv(os.getcwd()+"\\inputData\\inputData03_US\\" + betaItemConversionsFileName) 
     for index, row in beta_conversion_file.iterrows():
@@ -94,6 +101,7 @@ def optimize():
 
         disaster_to_count[disasterString] += 1
 
+    #Uniform probability
     for key in probs_tmpD:
       probs_tmpD[key] = 1.0 / len(probs_tmpD)
 
@@ -310,19 +318,9 @@ def optimize():
         dummy_solution = dummyhelper( "MONETARY"
                                     , demand_tmpD
                                     , demandAddress_tmpD
-                                    , probs_tmpD
-                                     
-                                    
+                                    , probs_tmpD   
                                     , inventory_tmpD
-                                    
-                                    
-                                    , bigMCostDummy
                                     , monetaryMatrix
-                                    
-                                    
-                                    
-                                    
-                                    
                                     , ProductWeight
                                     )
         cross_validation[("dummy","MONETARY")] = dummy_solution
@@ -331,18 +329,8 @@ def optimize():
                                                               , demand_tmpD
                                                               , demandAddress_tmpD
                                                               , probs_tmpD
-                                                               
-                                                              
                                                               , inventory_tmpD
-                                                              
-                                                              
-                                                              , bigMCostDummy
-                                                              , monetaryMatrix
-                                                              
-                                                              
-                                                              
-                                                              
-                                                              
+                                                              , monetaryMatrix                                                              
                                                               , ProductWeight
                                                               )
         cross_validation[("nonfixed","MONETARY")] = nonfixed_dummy_solution
@@ -352,18 +340,8 @@ def optimize():
                                     , demand_tmpD
                                     , demandAddress_tmpD
                                     , probs_tmpD
-                                     
-                                    
-                                    , inventory_tmpD
-
-                                    
-                                    , bigMCostDummy
+                                    , inventory_tmpD                                    
                                     , timeMatrix
-                                    
-                                    
-                                    
-                                    
-                                    
                                     , ProductWeight
                                     )
         cross_validation[("dummy","TIME")] = dummy_solution
@@ -372,18 +350,8 @@ def optimize():
                                                               , demand_tmpD
                                                               , demandAddress_tmpD
                                                               , probs_tmpD
-                                                               
-                                                              
                                                               , inventory_tmpD
-                                                              
-                                                              
-                                                              , bigMCostDummy
                                                               , timeMatrix
-                                                              
-                                                              
-                                                              
-                                                              
-                                                              
                                                               , ProductWeight
                                                               )
         cross_validation[("nonfixed","TIME")] = nonfixed_dummy_solution
@@ -393,9 +361,6 @@ def optimize():
 
       print("-------------------------------"+ mode +" METRICS------------------------------\n")
       print 'Printing metrics for ' + n_itemIter
-#        print dummy_solution
-#        print ""
-#        print nonfixed_dummy_solution
       weight_av_demand = 0
       for key in demand_tmpD:
               weight_av_demand += probs_tmpD[key[0]]*demand_tmpD[key]
@@ -540,32 +505,21 @@ def optimize():
         weight_av_demand_met += cross_validation[("nonfixed", "MONETARY")]["dummyFlow"][quadVar] * 1.0 / len(probs_tmpD)
         monetary_nonfixed_time += cross_validation[("nonfixed", "MONETARY")]["dummyFlow"][quadVar] * cross_validation[("nonfixed", "TIME")]["weightMap"][quadVar]
     print("Time average for monetary-nonfixed model: " + str(monetary_nonfixed_time / weight_av_demand_met))
-#
+
     sys.stdout = old_stdout
     log_file.close()
     print("-------------------------------END------------------------------")
     return None
 
-#----------------------------------------------------------------------------------------------------------------------------------
 
 def dummyhelper( costType
               , demand_tmpD
               , demandAddress_tmpD
               , probs_tmpD
-               
-              
               , inventory_tmpD
-              
-              
-              , bigMCostDummy
               , costD
-              
-              
-              
-              
-              
               , ProductWeight
-                                                                                                                                                                    ):
+                ):
     print("\n\n-------------------------------"+ costType+" DUMMY------------------------------")
 
     m = Model('StochLP')
@@ -576,18 +530,15 @@ def dummyhelper( costType
     carrierList = []
     constrs = {}
     
-
-    #Create a mapping from depot city names to (contractor, capacity, cost) triplets
-    #Populate carrierList
-    #Convert number trucks to capacity
-    itemCarrierConversion = pd.read_csv(os.getcwd()+"\\inputData\\inputData03_US\\" + "fakeCarrierItemConversionRatesFEMA.csv")
+    #Adjust carrier capacity based on item
+    itemCarrierConversion = pd.read_csv(os.getcwd()+"\\inputData\\inputData03_US\\" + conversionRatesFileName)
     for index, row in itemCarrierConversion.iterrows():
         if row.Item == n_itemIter:
             itemCarrierConversionRatio = int(row.ConversionRate)
     
     #CarrierDict is a mapping from Depot City Name to a list of (Carrier name, adjusted capacity, fixed time, variable cost) quadruplets
     carrierDict = {}
-    carrier_DataFrame = pd.read_csv(os.getcwd()+"\\inputData\\inputData03_US\\" + 'fakeCarrierDataFEMA_nototcaplimit.csv')
+    carrier_DataFrame = pd.read_csv(os.getcwd()+"\\inputData\\inputData03_US\\" + carrierDataFileName)
     for index, row in carrier_DataFrame.iterrows():
         if row["Target Depot City"] not in carrierDict:
               carrierDict[row["Target Depot City"]] = []
@@ -871,7 +822,7 @@ def nonfixeddummyinventoryhelper( costType
                                   , inventory_tmpD
                                   
                                   
-                                  , bigMCostDummy
+                                  
                                   , costD
                                   
                                   
@@ -889,21 +840,20 @@ def nonfixeddummyinventoryhelper( costType
                 carrierList = []
                 constrs = {}
 
-                #Create a mapping from depot city names to (contractor, capacity, cost) triplets
-                #Populate carrierList
-                #Convert number trucks to capacity
-                itemCarrierConversion = pd.read_csv(os.getcwd()+"\\inputData\\inputData03_US\\" + "fakeCarrierItemConversionRatesFEMA.csv")
+                #Adjust carrier capacity based on item
+                itemCarrierConversion = pd.read_csv(os.getcwd()+"\\inputData\\inputData03_US\\" + conversionRatesFileName)
                 for index, row in itemCarrierConversion.iterrows():
                     if row.Item == n_itemIter:
                         itemCarrierConversionRatio = int(row.ConversionRate)
-                
+
                 #CarrierDict is a mapping from Depot City Name to a list of (Carrier name, adjusted capacity, fixed time, variable cost) quadruplets
                 carrierDict = {}
-                carrier_DataFrame = pd.read_csv(os.getcwd()+"\\inputData\\inputData03_US\\" + 'fakeCarrierDataFEMA_nototcaplimit.csv')
+                carrier_DataFrame = pd.read_csv(os.getcwd()+"\\inputData\\inputData03_US\\" + carrierDataFileName)
                 for index, row in carrier_DataFrame.iterrows():
                     if row["Target Depot City"] not in carrierDict:
                           carrierDict[row["Target Depot City"]] = []
                     carrierDict[row["Target Depot City"]].append((row.Contract, int(row.Capacity)*itemCarrierConversionRatio, int(row["Fixed Time to Warehouse"]), float(row["Variable Cost (mile)"]))) #FLOAT?
+
 
                 #Initialize duo variables
                 #AXR: Duo variables are all inventory-carrier pairs
