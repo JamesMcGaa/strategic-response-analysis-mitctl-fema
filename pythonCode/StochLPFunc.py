@@ -23,6 +23,7 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                                                                     , depotInWhichCountry
                                                                                                                                                                                     ):
                 n_itemIter = "Cots"
+
 #                inventory_tmpD = {
 #                'Dallas, Texas': 300, 
 #                'San Francisco, California': 400, 
@@ -33,6 +34,7 @@ def f_solveStochLPDisasterGurobiSubLoc3(demand_tmpD
                 import matplotlib.pyplot as plt
                 import sys
                 import numpy as np
+
 
                 old_stdout = sys.stdout
                 log_file = open("outputData//"+ n_itemIter+str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_")+"output_"+n_itemIter+".log","w")
