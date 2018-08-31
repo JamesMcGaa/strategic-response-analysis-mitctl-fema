@@ -22,7 +22,7 @@ conversionRatesFileName = 'fakeCarrierItemConversionRatesFEMA.csv'
 
 bigMCostDummy = 1000000
 bigInventoryDummy = 10000000000
-n_itemIter = "Cots"
+n_itemIter = "Meals"
 
 
 output_folder = os.getcwd()+"\\outputData\\"+str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_")+"_"+n_itemIter
@@ -653,13 +653,13 @@ def dummyhelper( costType
     
          import matplotlib.pyplot as plt
     
-         plt.step(adjustedTimes, adjustedSatisfied)
+         plt.step(adjustedTimes, adjustedSatisfied, label="Dummy")
          plt.xlabel('Time (hours)')
          plt.ylabel('Cumulative Fraction of Demand Served')
          plt.xlim(xmin=0, xmax=75)
          plt.title('Demand Served Metric')
-         plt.savefig(output_folder+"\\"+ costType +"dummy_T_metric.png")
-         plt.close()
+         #plt.savefig(output_folder+"\\"+ costType +"dummy_T_metric.png")
+         #plt.close()
 
 
     #Generate depot duals by summing over all disasters for a fixed depot
@@ -984,12 +984,13 @@ def nonfixeddummyinventoryhelper( costType
                 
                      import matplotlib.pyplot as plt
                 
-                     plt.step(adjustedTimes, adjustedSatisfied)
+                     plt.step(adjustedTimes, adjustedSatisfied, label="Nonfixed")
                      plt.xlabel('Time (hours)')
                      plt.ylabel('Cumulative Fraction of Demand Served')
                      plt.xlim(xmin=0, xmax=75)
                      plt.title('Demand Served Metric')
-                     plt.savefig(output_folder+"\\" + costType +"nonfixeddummy_T_metric.png")
+                     plt.legend()
+                     plt.savefig(output_folder+"\\" + costType +"_T_metric.png")
                      plt.close()
 
 
