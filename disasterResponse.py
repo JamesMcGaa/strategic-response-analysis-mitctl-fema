@@ -21,8 +21,8 @@ betaItemConversionsFileName = 'betaItemConversionsFEMA.csv' #'betaItemConversion
 conversionRatesFileName = 'fakeCarrierItemConversionRatesFEMA.csv'
 
 bigMCostDummy = 1000000
-bigInventoryDummy = 100000000
-n_itemIter = "Cots"
+bigInventoryDummy = 10000000000
+n_itemIter = "Water"
 
 output_folder = os.getcwd()+"\\outputData\\"+str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_")
 os.makedirs(output_folder)
@@ -32,7 +32,7 @@ def optimize():
 
     #Remap output to a new file
     old_stdout = sys.stdout
-    log_file = open(os.getcwd()+"\\outputData\\"+ n_itemIter+str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_")+"output_"+n_itemIter+".log","w")
+    log_file = open(output_folder+"\\output_"+n_itemIter+".log","w")
     sys.stdout = log_file
 
     #Read in inventory values for the particular item
