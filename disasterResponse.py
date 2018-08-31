@@ -6,9 +6,9 @@ import numpy as np
 from datetime import datetime
 from gurobipy import *
 
-drivingDistanceMatrixFileName = 'drivingDistanceMatrix.csv' # 'drivingDistanceMatrixFEMACountyv2.csv'
-carrierDataFileName =  'fakeCarrierDataFEMA_nototcaplimit.csv'
-disasterTotAffectedFileName = 'disasterAffectedDataFEMA.csv' # 'disasterAffectedDataFEMACountyv2.csv' #disasterAffectedDataFEMA.csv
+drivingDistanceMatrixFileName = 'drivingDistanceMatrixFEMACountyv2.csv' #'drivingDistanceMatrix.csv' # 'drivingDistanceMatrixFEMACountyv2.csv'
+carrierDataFileName =  'fakeCarrierDataFEMA.csv' #'fakeCarrierDataFEMA_nototcaplimit.csv'
+disasterTotAffectedFileName = 'disasterAffectedDataFEMACountyv2.csv' # 'disasterAffectedDataFEMACountyv2.csv' #disasterAffectedDataFEMA.csv
 depotInventoryFileName = 'depotInventoryDataFEMA.csv' #'depotInventoryData.csv' 
 
 #Penalize items based on weight or volume
@@ -23,7 +23,6 @@ conversionRatesFileName = 'fakeCarrierItemConversionRatesFEMA.csv'
 bigMCostDummy = 1000000
 bigInventoryDummy = 100000000
 n_itemIter = "Cots"
-
 
 def optimize():
     print("-------------------------------Start------------------------------")
@@ -157,154 +156,6 @@ def optimize():
     print("Standard deviation: " + str(np.std(demands)))
     print("Minimum demand: " + str(np.min(demands)))
     print("Maximum demand: " + str(np.max(demands)))
-
-    #Test 1
-#                demand_tmpD = {
-#                 ('0000-0000', 'SubLoc_00000'): 930000,
-#                 ('0000-0001', 'SubLoc_00000'): 80000,
-#                 ('0000-0002', 'SubLoc_00000'): 50000,}
-#                probs_tmpD = {'0000-0000':.33333, '0000-0001':.33333, '0000-0002':.33333,}
-#                demandAddress_tmpD = {
-#                 ('0000-0000', 'SubLoc_00000'): "DisasterCity0", 
-#                 ('0000-0001', 'SubLoc_00000'): "DisasterCity1", 
-#                 ('0000-0002', 'SubLoc_00000'): "DisasterCity2",}
-#                timeMatrix = {
-#                 ('San Francisco, California', 'DisasterCity0'):10, 
-#                 ('Dallas, Texas', 'DisasterCity0'):50, 
-#                 ("Philadelphia, Pennsylvania", 'DisasterCity0'):1,
-#                 ('San Francisco, California', 'DisasterCity1'):10, 
-#                 ('Dallas, Texas', 'DisasterCity1'):50, 
-#                 ("Philadelphia, Pennsylvania", 'DisasterCity1'):1,
-#                 ('San Francisco, California', 'DisasterCity2'):70, 
-#                 ('Dallas, Texas', 'DisasterCity2'):1, 
-#                 ("Philadelphia, Pennsylvania", 'DisasterCity2'):70,}
-#                monetaryMatrix = {
-#                 ('San Francisco, California', 'DisasterCity0'):10, 
-#                 ('Dallas, Texas', 'DisasterCity0'):50, 
-#                 ("Philadelphia, Pennsylvania", 'DisasterCity0'):1,
-#                 ('San Francisco, California', 'DisasterCity1'):10, 
-#                 ('Dallas, Texas', 'DisasterCity1'):50, 
-#                 ("Philadelphia, Pennsylvania", 'DisasterCity1'):1,
-#                 ('San Francisco, California', 'DisasterCity2'):70, 
-#                 ('Dallas, Texas', 'DisasterCity2'):1, 
-#                 ("Philadelphia, Pennsylvania", 'DisasterCity2'):70,}
-#                inventory_tmpD = {
-#                 'Dallas, Texas': 80000, 
-#                 'San Francisco, California': 700000, 
-#                 'Philadelphia, Pennsylvania': 150000}
-
-    #Test 2
-#                demand_tmpD = {
-#                 ('0000-0000', 'SubLoc_00000'): 450000,
-#                 ('0000-0000', 'SubLoc_00001'): 210000,
-#                 ('0000-0000', 'SubLoc_00002'): 270000,
-#                 ('0000-0001', 'SubLoc_00000'): 80000,
-#                 ('0000-0002', 'SubLoc_00000'): 50000,
-#                 ('0000-0002', 'SubLoc_00001'): 50000,}
-#                probs_tmpD = {'0000-0000':.33333, '0000-0001':.33333, '0000-0002':.33333,}
-#                demandAddress_tmpD = {
-#                 ('0000-0000', 'SubLoc_00000'): "DisasterCity0a", 
-#                 ('0000-0000', 'SubLoc_00000'): "DisasterCity0b", 
-#                 ('0000-0000', 'SubLoc_00000'): "DisasterCity0c", 
-#                 ('0000-0001', 'SubLoc_00000'): "DisasterCity1", 
-#                 ('0000-0002', 'SubLoc_00000'): "DisasterCity2a",
-#                 ('0000-0002', 'SubLoc_00000'): "DisasterCity2b",}
-#                timeMatrix = {
-#                 ('San Francisco, California', 'DisasterCity0a'):10,
-#                 ('San Francisco, California', 'DisasterCity0b'):20,
-#                 ('San Francisco, California', 'DisasterCity0c'):30,
-#                 ('Dallas, Texas', 'DisasterCity0a'):40,
-#                 ('Dallas, Texas', 'DisasterCity0b'):30,
-#                 ('Dallas, Texas', 'DisasterCity0c'):20,
-#                 ("Philadelphia, Pennsylvania", 'DisasterCity0a'):20,
-#                 ("Philadelphia, Pennsylvania", 'DisasterCity0b'):20,
-#                 ("Philadelphia, Pennsylvania", 'DisasterCity0c'):20,
-#                 ('San Francisco, California', 'DisasterCity1'):10, 
-#                 ('Dallas, Texas', 'DisasterCity1'):50, 
-#                 ("Philadelphia, Pennsylvania", 'DisasterCity1'):1,
-#                 ('San Francisco, California', 'DisasterCity2a'):70, 
-#                 ('San Francisco, California', 'DisasterCity2b'):40, 
-#                 ('Dallas, Texas', 'DisasterCity2a'):1,
-#                 ('Dallas, Texas', 'DisasterCity2b'):1,
-#                 ("Philadelphia, Pennsylvania", 'DisasterCity2a'):40,
-#                 ("Philadelphia, Pennsylvania", 'DisasterCity2b'):70,}
-#                monetaryMatrix = {
-#                 ('San Francisco, California', 'DisasterCity0a'):10,
-#                 ('San Francisco, California', 'DisasterCity0b'):20,
-#                 ('San Francisco, California', 'DisasterCity0c'):30,
-#                 ('Dallas, Texas', 'DisasterCity0a'):40,
-#                 ('Dallas, Texas', 'DisasterCity0b'):30,
-#                 ('Dallas, Texas', 'DisasterCity0c'):20,
-#                 ("Philadelphia, Pennsylvania", 'DisasterCity0a'):20,
-#                 ("Philadelphia, Pennsylvania", 'DisasterCity0b'):20,
-#                 ("Philadelphia, Pennsylvania", 'DisasterCity0c'):20,
-#                 ('San Francisco, California', 'DisasterCity1'):10, 
-#                 ('Dallas, Texas', 'DisasterCity1'):50, 
-#                 ("Philadelphia, Pennsylvania", 'DisasterCity1'):1,
-#                 ('San Francisco, California', 'DisasterCity2a'):70, 
-#                 ('San Francisco, California', 'DisasterCity2b'):40, 
-#                 ('Dallas, Texas', 'DisasterCity2a'):1,
-#                 ('Dallas, Texas', 'DisasterCity2b'):1,
-#                 ("Philadelphia, Pennsylvania", 'DisasterCity2a'):40,
-#                 ("Philadelphia, Pennsylvania", 'DisasterCity2b'):70,}
-#                inventory_tmpD = {
-#                 'Dallas, Texas': 80000, 
-#                 'San Francisco, California': 700000, 
-#                 'Philadelphia, Pennsylvania': 150000}
-# Test 2 old
-    # demand_tmpD = {
-    # ('0000-0000', 'SubLoc_00000'): 940,
-    # ('0000-0001', 'SubLoc_00000'): 80,
-    # ('0000-0002', 'SubLoc_00000'): 50,}
-    # probs_tmpD = {'0000-0000':.33333, '0000-0001':.333333, '0000-0002':.33333,}
-    # demandAddress_tmpD = {
-    # ('0000-0000', 'SubLoc_00000'): "DisasterCity0", 
-    # ('0000-0001', 'SubLoc_00000'): "DisasterCity1", 
-    # ('0000-0002', 'SubLoc_00000'): "DisasterCity2",}
-    # costD = {
-    # ('San Francisco, California', 'DisasterCity0', 'Truck'):10, 
-    # ('Dallas, Texas', 'DisasterCity0', 'Truck'):70, 
-    # ("Philadelphia, Pennsylvania", 'DisasterCity0', 'Truck'):1,
-    # ('San Francisco, California', 'DisasterCity1', 'Truck'):10, 
-    # ('Dallas, Texas', 'DisasterCity1', 'Truck'):70, 
-    # ("Philadelphia, Pennsylvania", 'DisasterCity1', 'Truck'):1,
-    # ('San Francisco, California', 'DisasterCity2', 'Truck'):20, 
-    # ('Dallas, Texas', 'DisasterCity2', 'Truck'):70, 
-    # ("Philadelphia, Pennsylvania", 'DisasterCity2', 'Truck'):1,}
-    # inventory_tmpD = {
-    # 'Dallas, Texas': 700, 
-    # 'San Francisco, California': 200, 
-    # 'Philadelphia, Pennsylvania': 30}
-
-    #Test 3   
-    # demand_tmpD = {
-    # ('0000-0000', 'SubLoc_00000'): 1000,
-    # ('0000-0001', 'SubLoc_00000'): 80,
-    # ('0000-0002', 'SubLoc_00000'): 50,
-    # ('0000-0003', 'SubLoc_00000'): 50}
-    # probs_tmpD = {'0000-0000':.5, '0000-0001':.99, '0000-0002':.1,
-    # '0000-0003':.5}
-    # demandAddress_tmpD = {
-    # ('0000-0000', 'SubLoc_00000'): "DisasterCity0", 
-    # ('0000-0001', 'SubLoc_00000'): "DisasterCity1", 
-    # ('0000-0002', 'SubLoc_00000'): "DisasterCity2",
-    # ('0000-0003', 'SubLoc_00000'): "DisasterCity3"}
-    # costD = {
-    # ('San Francisco, California', 'DisasterCity0', 'Truck'):10, 
-    # ('Dallas, Texas', 'DisasterCity0', 'Truck'):70, 
-    # ("Philadelphia, Pennsylvania", 'DisasterCity0', 'Truck'):1,
-    # ('San Francisco, California', 'DisasterCity1', 'Truck'):10, 
-    # ('Dallas, Texas', 'DisasterCity1', 'Truck'):70, 
-    # ("Philadelphia, Pennsylvania", 'DisasterCity1', 'Truck'):1,
-    # ('San Francisco, California', 'DisasterCity2', 'Truck'):20, 
-    # ('Dallas, Texas', 'DisasterCity2', 'Truck'):70, 
-    # ("Philadelphia, Pennsylvania", 'DisasterCity2', 'Truck'):1,}
-    # inventory_tmpD = {
-    # 'Dallas, Texas': 700, 
-    # 'San Francisco, California': 200, 
-    # 'Philadelphia, Pennsylvania': 30}
-
-
                   
     matrix2 = pd.read_csv(os.getcwd()+"\\inputData\\inputData03_US\\" + itemAttributesFileName) 
     for index, row in matrix2.iterrows():
@@ -746,42 +597,44 @@ def dummyhelper( costType
                                     weighted_dummy_demand = 0
 
     #Collect information for T-metric and plot metric over time
-    # if costType == "TIME":
-    #      timeDemandTuples = []
-    #      total_demand = sum([demand_tmpD[key] for key in demand_tmpD])
-    #      for var in triToDistanceMap:
-    #               if var.X > .01:
-    #                               disasterID = var.VarName.split(':')[2]
-    #                               sublocID = var.VarName.split(':')[3]
-    #                               #timeDemandTuples.append((var.X * probs_tmpD[disasterID] / float(demand_tmpD[(disasterID, sublocID)]), triToDistanceMap[var]))
-    #                               #imeDemandTuples.append((var.X * 1.0 / (len(probs_tmpD) * float(demand_tmpD[(disasterID, sublocID)])), triToDistanceMap[var]))
-    #                               timeDemandTuples.append((var.X / total_demand, triToDistanceMap[var]))
-    #      timeDemandTuples.sort(key = lambda x: x[1]) #Sort based on time
-    #      times = [e[1] for e in timeDemandTuples]
-    #      satisfied = [e[0] for e in timeDemandTuples]
-    #      cumulative_satisfied = []
-    #      for i in range(len(satisfied)):
-    #               cumulative_satisfied.append(sum(satisfied[:i+1]))
-    
-    #      adjustedTimes = [0]
-    #      adjustedSatisfied = [0]
-    #      for i in range(len(cumulative_satisfied)):
-    #              adjustedTimes.append(times[i])
-    #              adjustedTimes.append(times[i])
-    #              if i == 0:
-    #                      adjustedSatisfied.append(0)
-    #              else:
-    #                      adjustedSatisfied.append(cumulative_satisfied[i-1])
-    #              adjustedSatisfied.append(cumulative_satisfied[i])
-    
-    #      import matplotlib.pyplot as plt
-    
-    #      plt.step(adjustedTimes, adjustedSatisfied)
-    #      plt.xlabel('Time (hours)')
-    #      plt.ylabel('Cumulative Fraction of Demand Served')
-    #      plt.xlim(xmin=0, xmax=200)
-    #      plt.title('Demand Served Metric')
-    #      plt.savefig("outputData//" + str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_") + costType +"dummy_T_metric.png")
+#    if costType == "TIME":
+#      timeDemandTuples = []
+#      total_demand = sum([demand_tmpD[key] for key in demand_tmpD])
+#      for var in triToDistanceMap:
+#               if var.X > .01:
+#                               disasterID = var.VarName.split(':')[2]
+#                               sublocID = var.VarName.split(':')[3]
+#                               #timeDemandTuples.append((var.X * probs_tmpD[disasterID] / float(demand_tmpD[(disasterID, sublocID)]), triToDistanceMap[var]))
+#                               #imeDemandTuples.append((var.X * 1.0 / (len(probs_tmpD) * float(demand_tmpD[(disasterID, sublocID)])), triToDistanceMap[var]))
+#                               timeDemandTuples.append((var.X / total_demand, triToDistanceMap[var]))
+#      timeDemandTuples.sort(key = lambda x: x[1]) #Sort based on time
+#      times = [e[1] for e in timeDemandTuples]
+#      satisfied = [e[0] for e in timeDemandTuples]
+#      cumulative_satisfied = []
+#      for i in range(len(satisfied)):
+#               cumulative_satisfied.append(sum(satisfied[:i+1]))
+#    
+#      adjustedTimes = [0]
+#      adjustedSatisfied = [0]
+#      for i in range(len(cumulative_satisfied)):
+#              adjustedTimes.append(times[i])
+#              adjustedTimes.append(times[i])
+#              if i == 0:
+#                      adjustedSatisfied.append(0)
+#              else:
+#                      adjustedSatisfied.append(cumulative_satisfied[i-1])
+#              adjustedSatisfied.append(cumulative_satisfied[i])
+#
+#      
+#      import matplotlib.pyplot as plt
+#    
+#      plt.step(adjustedTimes, adjustedSatisfied)
+#      plt.xlabel('Time (hours)')
+#      plt.ylabel('Cumulative Fraction of Demand Served')
+#      plt.xlim(xmin=0, xmax=125)
+##      plt.ylim(ymin=0, ymax=maxSatisfied)
+#      plt.title('Demand Served Metric')
+#      plt.savefig("outputData//" + str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_") + costType +"dummy_T_metric.png")
 
     #Generate depot duals by summing over all disasters for a fixed depot
     depotDuals = {}
@@ -1084,42 +937,42 @@ def nonfixeddummyinventoryhelper( costType
                     weighted_dummy_demand = 0
                                                 
                 #Collect information for T-metric and plot metric over time                 
-                # if costType == "TIME":
-                #      timeDemandTuples = []
-                #      total_demand = sum([demand_tmpD[key] for key in demand_tmpD])
-                #      for var in triToDistanceMap:
-                #               if var.X > .01:
-                #                               disasterID = var.VarName.split(':')[2]
-                #                               sublocID = var.VarName.split(':')[3]
-                #                               #timeDemandTuples.append((var.X * probs_tmpD[disasterID] / float(demand_tmpD[(disasterID, sublocID)]), triToDistanceMap[var]))
-                #                               #imeDemandTuples.append((var.X * 1.0 / (len(probs_tmpD) * float(demand_tmpD[(disasterID, sublocID)])), triToDistanceMap[var]))
-                #                               timeDemandTuples.append((var.X / total_demand, triToDistanceMap[var]))
-                #      timeDemandTuples.sort(key = lambda x: x[1]) #Sort based on time
-                #      times = [e[1] for e in timeDemandTuples]
-                #      satisfied = [e[0] for e in timeDemandTuples]
-                #      cumulative_satisfied = []
-                #      for i in range(len(satisfied)):
-                #               cumulative_satisfied.append(sum(satisfied[:i+1]))
-                
-                #      adjustedTimes = [0]
-                #      adjustedSatisfied = [0]
-                #      for i in range(len(cumulative_satisfied)):
-                #              adjustedTimes.append(times[i])
-                #              adjustedTimes.append(times[i])
-                #              if i == 0:
-                #                      adjustedSatisfied.append(0)
-                #              else:
-                #                      adjustedSatisfied.append(cumulative_satisfied[i-1])
-                #              adjustedSatisfied.append(cumulative_satisfied[i])
-                
-                #      import matplotlib.pyplot as plt
-                
-                #      plt.step(adjustedTimes, adjustedSatisfied)
-                #      plt.xlabel('Time (hours)')
-                #      plt.ylabel('Cumulative Fraction of Demand Served')
-                #      plt.xlim(xmin=0, xmax=200)
-                #      plt.title('Demand Served Metric')
-                #      plt.savefig("outputData//" + str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_") + costType +"dummy_T_metric.png")
+#                if costType == "TIME":
+#                      timeDemandTuples = []
+#                      total_demand = sum([demand_tmpD[key] for key in demand_tmpD])
+#                      for var in triToDistanceMap:
+#                               if var.X > .01:
+#                                               disasterID = var.VarName.split(':')[2]
+#                                               sublocID = var.VarName.split(':')[3]
+#                                               #timeDemandTuples.append((var.X * probs_tmpD[disasterID] / float(demand_tmpD[(disasterID, sublocID)]), triToDistanceMap[var]))
+#                                               #imeDemandTuples.append((var.X * 1.0 / (len(probs_tmpD) * float(demand_tmpD[(disasterID, sublocID)])), triToDistanceMap[var]))
+#                                               timeDemandTuples.append((var.X / total_demand, triToDistanceMap[var]))
+#                      timeDemandTuples.sort(key = lambda x: x[1]) #Sort based on time
+#                      times = [e[1] for e in timeDemandTuples]
+#                      satisfied = [e[0] for e in timeDemandTuples]
+#                      cumulative_satisfied = []
+#                      for i in range(len(satisfied)):
+#                               cumulative_satisfied.append(sum(satisfied[:i+1]))
+#                
+#                      adjustedTimes = [0]
+#                      adjustedSatisfied = [0]
+#                      for i in range(len(cumulative_satisfied)):
+#                              adjustedTimes.append(times[i])
+#                              adjustedTimes.append(times[i])
+#                              if i == 0:
+#                                      adjustedSatisfied.append(0)
+#                              else:
+#                                      adjustedSatisfied.append(cumulative_satisfied[i-1])
+#                              adjustedSatisfied.append(cumulative_satisfied[i])
+#                
+#                      import matplotlib.pyplot as plt
+#                
+#                      plt.step(adjustedTimes, adjustedSatisfied)
+#                      plt.xlabel('Time (hours)')
+#                      plt.ylabel('Cumulative Fraction of Demand Served')
+#                      plt.xlim(xmin=0, xmax=125)
+#                      plt.title('Demand Served Metric')
+#                      plt.savefig("outputData//" + str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_") + costType +"dummy_T_metric.png")
 
                 #Generate carrier duals by summing over all disasters for a fixed carrier
                 carrierDuals = {}
