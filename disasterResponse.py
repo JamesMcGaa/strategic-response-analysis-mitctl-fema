@@ -7,7 +7,7 @@ from datetime import datetime
 from gurobipy import *
 
 drivingDistanceMatrixFileName = 'drivingDistanceMatrixFEMACountyv2.csv' #'drivingDistanceMatrix.csv' # 'drivingDistanceMatrixFEMACountyv2.csv'
-carrierDataFileName =  'fakeCarrierDataFEMA.csv' #'fakeCarrierDataFEMA_nototcaplimit.csv'
+carrierDataFileName =  'fakeCarrierDataFEMA_nototcaplimit.csv' # 'fakeCarrierDataFEMA_onlySM.csv' #'fakeCarrierDataFEMA_nototcap_reduced.csv'  #'fakeCarrierDataFEMA_nototcaplimit.csv' #'fakeCarrierDataFEMA.csv' 
 disasterTotAffectedFileName = 'disasterAffectedDataFEMACountyv2.csv' # 'disasterAffectedDataFEMACountyv2.csv' #disasterAffectedDataFEMA.csv
 depotInventoryFileName = 'depotInventoryDataFEMA.csv' #'depotInventoryData.csv' 
 
@@ -15,14 +15,14 @@ depotInventoryFileName = 'depotInventoryDataFEMA.csv' #'depotInventoryData.csv'
 itemAttributesFileName =  'itemAttributesFEMA.csv' # 'itemAttributes.csv'
 
 #Covert people affected into items demanded
-betaItemConversionsFileName = 'betaItemConversionsFEMA.csv' #'betaItemConversions.csv'
+betaItemConversionsFileName = 'betaItemConversionsFEMA_oneday.csv' #'betaItemConversions.csv'
 
 #Convert carrier capacity based on current item
 conversionRatesFileName = 'fakeCarrierItemConversionRatesFEMA.csv'
 
 bigMCostDummy = 1000000
 bigInventoryDummy = 10000000000
-n_itemIter = "Meals"
+n_itemIter = "Water"
 
 
 output_folder = os.getcwd()+"\\outputData\\"+str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_")+"_"+n_itemIter
@@ -152,7 +152,8 @@ def optimize():
     timeMatrix = adjusted_time_matrix
 
     total_unique_disasters = len(demand_tmpD)
-            
+
+        
     plt.hist([disaster_to_count[key] for key in disaster_to_count], bins=np.arange(0, 3000, 25))
     plt.xlabel('Sublocations')
     plt.ylabel('Disaster Count')
@@ -171,13 +172,14 @@ def optimize():
     
     print("-------------------------------Disaster Stats------------------------------")
     print("Total disasters: " + str(total_unique_disasters))
-    print("Total sublocations: " + str(total_disasters))
     demands = [demand_tmpD[key] for key in demand_tmpD]
-    print("Average demand: " + str(np.mean(demands)))
-    print("Standard deviation: " + str(np.std(demands)))
     print("Minimum demand: " + str(np.min(demands)))
     print("Maximum demand: " + str(np.max(demands)))
-
+    print("Average demand: " + str(np.mean(demands)))
+    print("Median demand: " + str(np.median(demands)))
+    print("Standard deviation: " + str(np.std(demands)))
+    print("1st Quartile: " + str(np.percentile(demands,25)))
+    print("3rd Quartile: " + str(np.percentile(demands,75)))
     
     plt.hist(demands, bins=np.arange(0, 10000000, 100000))
     plt.xlabel('Total People Affected')
@@ -185,7 +187,17 @@ def optimize():
     plt.title('Total People Affected')
     plt.savefig(output_folder  +"\\demand_distribution.png")
     plt.close()
-                  
+    
+    print("Total sublocations: " + str(total_disasters))
+    SubLocsForStats = [disaster_to_count[key] for key in disaster_to_count]
+    print("Minimum sublocations: " + str(np.min(SubLocsForStats)))
+    print("Maximum sublocations: " + str(np.max(SubLocsForStats)))
+    print("Average sublocations: " + str(np.mean(SubLocsForStats)))
+    print("Median sublocations: " + str(np.median(SubLocsForStats)))
+    print("Standard deviation: " + str(np.std(SubLocsForStats)))
+    print("1st Quartile: " + str(np.percentile(SubLocsForStats,25)))
+    print("3rd Quartile: " + str(np.percentile(SubLocsForStats,75)))       
+    
     matrix2 = pd.read_csv(os.getcwd()+"\\inputData\\inputData03_US\\" + itemAttributesFileName) 
     for index, row in matrix2.iterrows():
         if row.ItemName == n_itemIter:
@@ -653,13 +665,14 @@ def dummyhelper( costType
     
          import matplotlib.pyplot as plt
     
-         plt.step(adjustedTimes, adjustedSatisfied, label="Dummy")
+         plt.step(adjustedTimes, adjustedSatisfied, label="Current State")
          plt.xlabel('Time (hours)')
          plt.ylabel('Cumulative Fraction of Demand Served')
          plt.xlim(xmin=0, xmax=75)
+         plt.ylim(ymin=0, ymax=1)
          plt.title('Demand Served Metric')
-         #plt.savefig(output_folder+"\\"+ costType +"dummy_T_metric.png")
-         #plt.close()
+         plt.savefig(output_folder+"\\"+ costType +"dummy_T_metric_single.png")
+#         plt.close()
 
 
     #Generate depot duals by summing over all disasters for a fixed depot
@@ -984,10 +997,11 @@ def nonfixeddummyinventoryhelper( costType
                 
                      import matplotlib.pyplot as plt
                 
-                     plt.step(adjustedTimes, adjustedSatisfied, label="Nonfixed")
+                     plt.step(adjustedTimes, adjustedSatisfied, label="Sys. Optimum")
                      plt.xlabel('Time (hours)')
                      plt.ylabel('Cumulative Fraction of Demand Served')
                      plt.xlim(xmin=0, xmax=75)
+                     plt.ylim(ymin=0, ymax=1)
                      plt.title('Demand Served Metric')
                      plt.legend()
                      plt.savefig(output_folder+"\\" + costType +"_T_metric.png")
