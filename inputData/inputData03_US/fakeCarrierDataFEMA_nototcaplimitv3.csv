@@ -1,0 +1,41 @@
+Contract,Capacity,Fixed Time to Warehouse,Fixed Cost,Variable Cost (mile),Target Depot City,Contract
+SF Carrier 01 ID,20,4,,0.000161836,"San Francisco, California",1
+SF Carrier 02 CO,34,8,,0.000145237,"San Francisco, California",1
+SF Carrier 03 CO,32,9,,0.000153537,"San Francisco, California",1
+SF Carrier 04 CO,6,11,,0.000141088,"San Francisco, California",1
+SF Carrier 05 CO,14,13,,0.000145237,"San Francisco, California",1
+SF Carrier 06 CO,8,15,,0.000124489,"San Francisco, California",1
+SF Carrier 07 CO,6,17,,0.000141088,"San Francisco, California",1
+SF Carrier 08 SM,100000,26,,0.000381767,"San Francisco, California",0
+DA Carrier 01 ID,20,4,,0.000132788,"Dallas, Texas",1
+DA Carrier 02 CO,30,9,,0.00011204,"Dallas, Texas",1
+DA Carrier 03 CO,42,10,,0.000124489,"Dallas, Texas",1
+DA Carrier 04 CO,28,15,,0.00011204,"Dallas, Texas",1
+DA Carrier 05 CO,10,20,,0.000107891,"Dallas, Texas",1
+DA Carrier 06 CO,14,22,,0.000103741,"Dallas, Texas",1
+DA Carrier 07 CO,16,24,,0.000286325,"Dallas, Texas",1
+DA Carrier 08 SM,100000,26,,0.000286325,"Dallas, Texas",0
+PH Carrier 01 ID,16,4,,0.000149387,"Philadelphia, Pennsylvania",1
+PH Carrier 02 CO,24,9,,0.000157686,"Philadelphia, Pennsylvania",1
+PH Carrier 03 CO,20,11,,0.000145237,"Philadelphia, Pennsylvania",1
+PH Carrier 04 SM,20,14,,0.000149387,"Philadelphia, Pennsylvania",1
+PH Carrier 05 CO,16,15,,0.000141088,"Philadelphia, Pennsylvania",1
+PH Carrier 06 CO,14,16,,0.000145237,"Philadelphia, Pennsylvania",1
+PH Carrier 07 CO,10,20,,0.000128639,"Philadelphia, Pennsylvania",1
+PH Carrier 08 SM,100000,26,,0.000377617,"Philadelphia, Pennsylvania",0
+AT Carrier 01 ID,26,4,,0.000132788,"Atlanta, Georgia",1
+AT Carrier 02 CO,32,10,,0.000124489,"Atlanta, Georgia",1
+AT Carrier 03 CO,38,15,,0.000107891,"Atlanta, Georgia",1
+AT Carrier 04 CO,10,16,,0.00011204,"Atlanta, Georgia",1
+AT Carrier 05 CO,32,18,,0.0000913,"Atlanta, Georgia",1
+AT Carrier 06 CO,10,19,,0.00012034,"Atlanta, Georgia",1
+AT Carrier 07 CO,12,25,,0.0000954,"Atlanta, Georgia",1
+AT Carrier 08 SM,100000,26,,0.000327822,"Atlanta, Georgia",0
+WA Carrier 01 ID,30,4,,0.000157686,"Washington D.C., Washington D.C.",1
+WA Carrier 02 CO,32,8,,0.000149387,"Washington D.C., Washington D.C.",1
+WA Carrier 03 CO,24,10,,0.000153537,"Washington D.C., Washington D.C.",1
+WA Carrier 04 CO,30,13,,0.000149387,"Washington D.C., Washington D.C.",1
+WA Carrier 05 CO,30,14,,0.000132788,"Washington D.C., Washington D.C.",1
+WA Carrier 06 CO,24,16,,0.000141088,"Washington D.C., Washington D.C.",1
+WA Carrier 07 CO,30,19,,0.000136938,"Washington D.C., Washington D.C.",1
+WA Carrier 08 SM,100000,26,,0.000377617,"Washington D.C., Washington D.C.",0

@@ -6,16 +6,16 @@ import numpy as np
 from datetime import datetime
 from gurobipy import *
 
-drivingDistanceMatrixFileName = 'drivingDistanceMatrixFEMACountyv2.csv' #'drivingDistanceMatrix.csv' # 'drivingDistanceMatrixFEMACountyv2.csv'
-carrierDataFileName =  'fakeCarrierDataFEMA_nototcap_reduced.csv' # 'fakeCarrierDataFEMA_onlySM.csv' #'fakeCarrierDataFEMA_nototcap_reduced.csv'  #'fakeCarrierDataFEMA_nototcaplimit.csv' #'fakeCarrierDataFEMA.csv' 
-disasterTotAffectedFileName = 'disasterAffectedDataFEMACountyv2.csv' # 'disasterAffectedDataFEMACountyv2.csv' #disasterAffectedDataFEMA.csv
+drivingDistanceMatrixFileName = 'drivingDistanceMatrixFEMACountyv3.csv' #'drivingDistanceMatrix.csv' # 'drivingDistanceMatrixFEMACountyv2.csv'
+carrierDataFileName =  'fakeCarrierDataFEMA_nototcaplimitv3.csv' # 'fakeCarrierDataFEMA_onlySM.csv' #'fakeCarrierDataFEMA_nototcap_reduced.csv'  #'fakeCarrierDataFEMA_nototcaplimit.csv' #'fakeCarrierDataFEMA.csv' 
+disasterTotAffectedFileName = 'disasterAffectedDataFEMACountyv3.csv' # 'disasterAffectedDataFEMACountyv2.csv' #disasterAffectedDataFEMA.csv
 depotInventoryFileName = 'depotInventoryDataFEMA.csv' #'depotInventoryData.csv' 
 
 #Penalize items based on weight or volume
 itemAttributesFileName =  'itemAttributesFEMA.csv' # 'itemAttributes.csv'
 
 #Covert people affected into items demanded
-betaItemConversionsFileName = 'betaItemConversionsFEMA_oneday.csv' #'betaItemConversions.csv'
+betaItemConversionsFileName = 'betaItemConversionsFEMA.csv' #'betaItemConversions.csv'
 
 #Convert carrier capacity based on current item
 conversionRatesFileName = 'fakeCarrierItemConversionRatesFEMA.csv'
@@ -201,7 +201,7 @@ def optimize():
     matrix2 = pd.read_csv(os.getcwd()+"\\inputData\\inputData03_US\\" + itemAttributesFileName) 
     for index, row in matrix2.iterrows():
         if row.ItemName == n_itemIter:
-            ProductWeight = row.WeightMetricTon
+            ProductWeight = row.WeightKG
 
     cross_validation = {}
     for mode in ["TIME", "MONETARY"]:

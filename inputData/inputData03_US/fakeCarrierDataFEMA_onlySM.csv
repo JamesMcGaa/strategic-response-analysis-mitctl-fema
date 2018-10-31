@@ -1,6 +1,6 @@
-Contract,Capacity,Fixed Time to Warehouse,Fixed Cost,Variable Cost (mile),Target Depot City
-SF Carrier 08 SM,100000,18,,9.2,"San Francisco, California"
-DA Carrier 08 SM,100000,25,,6.9,"Dallas, Texas"
-PH Carrier 08 SM,100000,23,,9.1,"Philadelphia, Pennsylvania"
-AT Carrier 08 SM,100000,21,,7.9,"Atlanta, Georgia"
-WA Carrier 08 SM,100000,18,,9.1,"Washington D.C., Washington D.C."
+Contract,Capacity,Fixed Time to Warehouse,Fixed Cost,Variable Cost (mile),Target Depot City,Contract
+SF Carrier 08 SM,100000,26,,0.000381767,"San Francisco, California",0
+DA Carrier 08 SM,100000,26,,0.000286325,"Dallas, Texas",0
+PH Carrier 08 SM,100000,26,,0.000377617,"Philadelphia, Pennsylvania",0
+AT Carrier 08 SM,100000,26,,0.000327822,"Atlanta, Georgia",0
+WA Carrier 08 SM,100000,26,,0.000377617,"Washington D.C., Washington D.C.",0
