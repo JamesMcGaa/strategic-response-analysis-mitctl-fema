@@ -308,7 +308,27 @@ def optimize():
       
       print("dummy correction factor (1-delta)*bigMdummy: " + str((1-WeightedFractionCompletelyServed) * bigMCostDummy))
       print("\n\n")
-      
+
+      #CARRIER UTILIZATION EXCEL OUTPUT
+      carrier_utilization = dummy_solution['carrierUtilization']
+      data = {'Depot City':[], 'Utilization Metric':[]}
+      for depotName in carrier_utilization:
+        data["Utilization Metric"].append(carrier_utilization[depotName])
+        data["Depot City"].append(depotName)
+      DualsDF = pd.DataFrame(data)
+      DualsDF.to_csv(output_folder+ "\\"+mode+"_dummy_carrier_utilization_" + n_itemIter + ".csv", header=True, index=False, columns=['Depot City', 'Utilization Metric'])   
+
+
+      carrier_utilization = nonfixed_dummy_solution['carrierUtilization']
+      data = {'Depot City':[], 'Utilization Metric':[]}
+      for depotName in carrier_utilization:
+        data["Utilization Metric"].append(carrier_utilization[depotName])
+        data["Depot City"].append(depotName)
+      DualsDF = pd.DataFrame(data)
+      DualsDF.to_csv(output_folder+ "\\"+mode+"_nonfixed_carrier_utilization_" + n_itemIter + ".csv", header=True, index=False, columns=['Depot City', 'Utilization Metric'])   
+
+
+
 
       #Calculate adjusted duals from raw duals. Output to CSV
       #Dummy Depot
@@ -395,6 +415,8 @@ def optimize():
         weight_av_demand_met += cross_validation[("nonfixed", "MONETARY")]["dummyFlow"][quadVar] * 1.0 / len(probs_tmpD)
         monetary_nonfixed_time += cross_validation[("nonfixed", "MONETARY")]["dummyFlow"][quadVar] * cross_validation[("nonfixed", "TIME")]["weightMap"][quadVar]
     print("Time average for monetary-nonfixed model: " + str(monetary_nonfixed_time / weight_av_demand_met))
+
+
 
     sys.stdout = old_stdout
     log_file.close()
@@ -667,17 +689,17 @@ def dummyhelper( costType
 
     import matplotlib.pyplot as plt
 
-    plt.step(adjustedTimes, adjustedSatisfied, label="Current State")
-    plt.xlabel('Time (hours)')
-    plt.ylabel('Cumulative Fraction of Demand Served')
-    if costType == "TIME":
-      plt.xlim(xmin=0, xmax=75)
-    if costType == "MONETARY":
-      plt.xlim(xmin=0, xmax=2)
-    plt.ylim(ymin=0, ymax=1)
-    plt.title('Demand Served Metric')
-    plt.savefig(output_folder+"\\"+ costType +"dummy_T_metric_single.png")
-#         plt.close()
+#     plt.step(adjustedTimes, adjustedSatisfied, label="Current State")
+#     plt.xlabel('Time (hours)')
+#     plt.ylabel('Cumulative Fraction of Demand Served')
+#     if costType == "TIME":
+#       plt.xlim(xmin=0, xmax=75)
+#     if costType == "MONETARY":
+#       plt.xlim(xmin=0, xmax=2)
+#     plt.ylim(ymin=0, ymax=1)
+#     plt.title('Demand Served Metric')
+#     plt.savefig(output_folder+"\\"+ costType +"dummy_T_metric_single.png")
+# #         plt.close()
 
 
     #Generate depot duals by summing over all disasters for a fixed depot
@@ -706,8 +728,33 @@ def dummyhelper( costType
     print carrierDuals
 
 
+    #Carrier Utilization Metric
+    carrier_utilization = {}
+    for key in quadVars:
+      depot, carrier, disasterID, sublocationID = key.split(':')
+      if depot not in carrier_utilization:
+        carrier_utilization[depot] = {}
+      if carrier not in carrier_utilization[depot]:
+        carrier_utilization[depot][carrier] = 0
+      carrier_utilization[depot][carrier] += quadVars[":".join(key.split(':'))].x * probs_tmpD[disasterID]
 
-    return {'dummyObj': dummyObj, 'adjdummyObj': adjobjVal, 'dummyFlow': flow, 'weightedDummyDemand': weighted_dummy_demand, 'depotDuals': depotDuals, 'carrierDuals':carrierDuals, 'weightMap':weightMap}
+    for depot in carrier_utilization:
+      for carrier in carrier_utilization[depot]:
+        capacity = 0.0
+        for tup in carrierDict[depot]:
+          if tup[0] == carrier:
+            capacity = tup[1]
+        carrier_utilization[depot][carrier] /= capacity
+
+    for depot in carrier_utilization:
+      su = 0
+      for carrier in carrier_utilization[depot]:
+        su += carrier_utilization[depot][carrier]
+      carrier_utilization[depot] = su
+
+
+
+    return {'dummyObj': dummyObj, 'adjdummyObj': adjobjVal, 'dummyFlow': flow, 'weightedDummyDemand': weighted_dummy_demand, 'depotDuals': depotDuals, 'carrierDuals':carrierDuals, 'weightMap':weightMap, "carrierUtilization": carrier_utilization}
 
 
 def nonfixeddummyinventoryhelper( costType
@@ -924,7 +971,6 @@ def nonfixeddummyinventoryhelper( costType
                           assignments = m.getAttr('x', [quadVars[key] for key in quadVars])
                           for tri in [quadVars[key] for key in quadVars]:
                                   if tri.x > 0.0001:
-#                                        print(tri.VarName, tri.x)
                                         solution_flow[tri.VarName] = tri.x
                     else:
                           print('No solution')
@@ -933,8 +979,7 @@ def nonfixeddummyinventoryhelper( costType
                 flow = printSolution()
                 
                 
-                                
-                
+                              
                 if m.status == GRB.Status.OPTIMAL:
                     dummysum = 0
                     if costType == 'TIME':
@@ -945,9 +990,7 @@ def nonfixeddummyinventoryhelper( costType
                         for dummykey, dummyvalue in flow.iteritems():    
                             if 'dummy' in dummykey:
                                 dummysum = dummysum + dummyvalue * ProductWeight * bigMCostDummy * probs_tmpD[next(iter(probs_tmpD))]
-#                    for dummykey, dummyvalue in flow.iteritems():    
-#                                                    if 'dummy' in dummykey:
-#                                                                                    dummysum = dummysum + dummyvalue * ProductWeight * bigMCostDummy * probs_tmpD[next(iter(probs_tmpD))]
+
                     adjobjVal = m.objVal - dummysum
                     dummyObj = m.objVal
                     weighted_dummy_demand = 0                                
@@ -999,20 +1042,20 @@ def nonfixeddummyinventoryhelper( costType
                                adjustedSatisfied.append(cumulative_satisfied[i-1])
                        adjustedSatisfied.append(cumulative_satisfied[i])
 
-                import matplotlib.pyplot as plt
+                # import matplotlib.pyplot as plt
 
-                plt.step(adjustedTimes, adjustedSatisfied, label="Sys. Optimum")
-                plt.xlabel('Time (hours)')
-                plt.ylabel('Cumulative Fraction of Demand Served')
-                if costType == "TIME":
-                  plt.xlim(xmin=0, xmax=75)
-                if costType == "MONETARY":
-                  plt.xlim(xmin=0, xmax=2)
-                plt.ylim(ymin=0, ymax=1)
-                plt.title('Demand Served Metric')
-                plt.legend()
-                plt.savefig(output_folder+"\\" + costType +"_T_metric.png")
-                plt.close()
+                # plt.step(adjustedTimes, adjustedSatisfied, label="Sys. Optimum")
+                # plt.xlabel('Time (hours)')
+                # plt.ylabel('Cumulative Fraction of Demand Served')
+                # if costType == "TIME":
+                #   plt.xlim(xmin=0, xmax=75)
+                # if costType == "MONETARY":
+                #   plt.xlim(xmin=0, xmax=2)
+                # plt.ylim(ymin=0, ymax=1)
+                # plt.title('Demand Served Metric')
+                # plt.legend()
+                # plt.savefig(output_folder+"\\" + costType +"_T_metric.png")
+                # plt.close()
 
 
                 #Generate carrier duals by summing over all disasters for a fixed carrier
@@ -1029,5 +1072,31 @@ def nonfixeddummyinventoryhelper( costType
                 print(carrierDuals)
 
 
-                return {'dummyObj': dummyObj, 'adjdummyObj': adjobjVal, 'dummyFlow': flow, 'weightedDummyDemand': weighted_dummy_demand, 'carrierDuals':carrierDuals, 'weightMap':weightMap}
+                #Carrier Utilization Metric
+                carrier_utilization = {}
+                for key in quadVars:
+                  depot, carrier, disasterID, sublocationID = key.split(':')
+                  if depot not in carrier_utilization:
+                    carrier_utilization[depot] = {}
+                  if carrier not in carrier_utilization[depot]:
+                    carrier_utilization[depot][carrier] = 0
+                  carrier_utilization[depot][carrier] += quadVars[":".join(key.split(':'))].x * probs_tmpD[disasterID]
+
+                for depot in carrier_utilization:
+                  for carrier in carrier_utilization[depot]:
+                    capacity = 0.0
+                    for tup in carrierDict[depot]:
+                      if tup[0] == carrier:
+                        capacity = tup[1]
+                    carrier_utilization[depot][carrier] /= capacity
+
+                for depot in carrier_utilization:
+                  su = 0
+                  for carrier in carrier_utilization[depot]:
+                    su += carrier_utilization[depot][carrier]
+                  carrier_utilization[depot] = su
+
+
+
+                return {'dummyObj': dummyObj, 'adjdummyObj': adjobjVal, 'dummyFlow': flow, 'weightedDummyDemand': weighted_dummy_demand, 'carrierDuals':carrierDuals, 'weightMap':weightMap, "carrierUtilization": carrier_utilization}
 optimize()
