@@ -454,7 +454,7 @@ def dummyhelper( costType
     for index, row in carrier_DataFrame.iterrows():
         if row["Target Depot City"] not in carrierDict:
               carrierDict[row["Target Depot City"]] = []
-        carrierDict[row["Target Depot City"]].append((row.Contract, int(row.Capacity)*itemCarrierConversionRatio, int(row["Fixed Time to Warehouse"]), float(row["Variable Cost (mile)"]))) #FLOAT?
+        carrierDict[row["Target Depot City"]].append((row.Contract, int(row.Capacity)*itemCarrierConversionRatio, int(row["Fixed Time to Warehouse"]), float(row["Variable Cost (mile)"]), row.ContractFlag)) #FLOAT?
 
 
     #Initialize triVars, each variable is a DEPOT:CARRIERNAME:DISASTERID trio
@@ -689,17 +689,17 @@ def dummyhelper( costType
 
     import matplotlib.pyplot as plt
 
-#     plt.step(adjustedTimes, adjustedSatisfied, label="Current State")
-#     plt.xlabel('Time (hours)')
-#     plt.ylabel('Cumulative Fraction of Demand Served')
-#     if costType == "TIME":
-#       plt.xlim(xmin=0, xmax=75)
-#     if costType == "MONETARY":
-#       plt.xlim(xmin=0, xmax=2)
-#     plt.ylim(ymin=0, ymax=1)
-#     plt.title('Demand Served Metric')
-#     plt.savefig(output_folder+"\\"+ costType +"dummy_T_metric_single.png")
-# #         plt.close()
+    plt.step(adjustedTimes, adjustedSatisfied, label="Current State")
+    plt.xlabel('Time (hours)')
+    plt.ylabel('Cumulative Fraction of Demand Served')
+    if costType == "TIME":
+      plt.xlim(xmin=0, xmax=75)
+    if costType == "MONETARY":
+      plt.xlim(xmin=0, xmax=2)
+    plt.ylim(ymin=0, ymax=1)
+    plt.title('Demand Served Metric')
+    plt.savefig(output_folder+"\\"+ costType +"dummy_T_metric_single.png")
+#         plt.close()
 
 
     #Generate depot duals by summing over all disasters for a fixed depot
@@ -732,25 +732,24 @@ def dummyhelper( costType
     carrier_utilization = {}
     for key in quadVars:
       depot, carrier, disasterID, sublocationID = key.split(':')
-      if depot not in carrier_utilization:
-        carrier_utilization[depot] = {}
-      if carrier not in carrier_utilization[depot]:
-        carrier_utilization[depot][carrier] = 0
-      carrier_utilization[depot][carrier] += quadVars[":".join(key.split(':'))].x * probs_tmpD[disasterID]
-
-    for depot in carrier_utilization:
-      for carrier in carrier_utilization[depot]:
-        capacity = 0.0
+      if depot != "dummy":
+        if depot not in carrier_utilization:
+          carrier_utilization[depot] = 0
         for tup in carrierDict[depot]:
-          if tup[0] == carrier:
-            capacity = tup[1]
-        carrier_utilization[depot][carrier] /= capacity
+          if tup[len(tup)-1] == 1 and tup[0] == carrier:
+            carrier_utilization[depot] += int(quadVars[":".join(key.split(':'))].x * probs_tmpD[disasterID])
+            break
 
     for depot in carrier_utilization:
-      su = 0
-      for carrier in carrier_utilization[depot]:
-        su += carrier_utilization[depot][carrier]
-      carrier_utilization[depot] = su
+      if depot != "dummy":
+        capacity = 0.0
+        for carrier in carrierDict[depot]:
+          if tup[len(tup)-1] == 1:
+            capacity += tup[1]
+        print(depot, capacity, carrier_utilization[depot])
+
+
+        carrier_utilization[depot] /= capacity
 
 
 
@@ -786,7 +785,7 @@ def nonfixeddummyinventoryhelper( costType
                 for index, row in carrier_DataFrame.iterrows():
                     if row["Target Depot City"] not in carrierDict:
                           carrierDict[row["Target Depot City"]] = []
-                    carrierDict[row["Target Depot City"]].append((row.Contract, int(row.Capacity)*itemCarrierConversionRatio, int(row["Fixed Time to Warehouse"]), float(row["Variable Cost (mile)"]))) #FLOAT?
+                          carrierDict[row["Target Depot City"]].append((row.Contract, int(row.Capacity)*itemCarrierConversionRatio, int(row["Fixed Time to Warehouse"]), float(row["Variable Cost (mile)"]), row.ContractFlag))
 
 
                 #Initialize duo variables
@@ -1042,20 +1041,20 @@ def nonfixeddummyinventoryhelper( costType
                                adjustedSatisfied.append(cumulative_satisfied[i-1])
                        adjustedSatisfied.append(cumulative_satisfied[i])
 
-                # import matplotlib.pyplot as plt
+                import matplotlib.pyplot as plt
 
-                # plt.step(adjustedTimes, adjustedSatisfied, label="Sys. Optimum")
-                # plt.xlabel('Time (hours)')
-                # plt.ylabel('Cumulative Fraction of Demand Served')
-                # if costType == "TIME":
-                #   plt.xlim(xmin=0, xmax=75)
-                # if costType == "MONETARY":
-                #   plt.xlim(xmin=0, xmax=2)
-                # plt.ylim(ymin=0, ymax=1)
-                # plt.title('Demand Served Metric')
-                # plt.legend()
-                # plt.savefig(output_folder+"\\" + costType +"_T_metric.png")
-                # plt.close()
+                plt.step(adjustedTimes, adjustedSatisfied, label="Sys. Optimum")
+                plt.xlabel('Time (hours)')
+                plt.ylabel('Cumulative Fraction of Demand Served')
+                if costType == "TIME":
+                  plt.xlim(xmin=0, xmax=75)
+                if costType == "MONETARY":
+                  plt.xlim(xmin=0, xmax=2)
+                plt.ylim(ymin=0, ymax=1)
+                plt.title('Demand Served Metric')
+                plt.legend()
+                plt.savefig(output_folder+"\\" + costType +"_T_metric.png")
+                plt.close()
 
 
                 #Generate carrier duals by summing over all disasters for a fixed carrier
@@ -1076,25 +1075,26 @@ def nonfixeddummyinventoryhelper( costType
                 carrier_utilization = {}
                 for key in quadVars:
                   depot, carrier, disasterID, sublocationID = key.split(':')
-                  if depot not in carrier_utilization:
-                    carrier_utilization[depot] = {}
-                  if carrier not in carrier_utilization[depot]:
-                    carrier_utilization[depot][carrier] = 0
-                  carrier_utilization[depot][carrier] += quadVars[":".join(key.split(':'))].x * probs_tmpD[disasterID]
-
-                for depot in carrier_utilization:
-                  for carrier in carrier_utilization[depot]:
-                    capacity = 0.0
+                  if depot != "dummy":
+                    if depot not in carrier_utilization:
+                      carrier_utilization[depot] = 0
                     for tup in carrierDict[depot]:
-                      if tup[0] == carrier:
-                        capacity = tup[1]
-                    carrier_utilization[depot][carrier] /= capacity
+                      if tup[len(tup)-1] == 1 and tup[0] == carrier:
+                        carrier_utilization[depot] += int(quadVars[":".join(key.split(':'))].x * probs_tmpD[disasterID])
+                        break
 
                 for depot in carrier_utilization:
-                  su = 0
-                  for carrier in carrier_utilization[depot]:
-                    su += carrier_utilization[depot][carrier]
-                  carrier_utilization[depot] = su
+                  if depot != "dummy":
+                    capacity = 0.0
+                    for carrier in carrierDict[depot]:
+                      if tup[len(tup)-1] == 1:
+                        capacity += tup[1]
+                    print(depot, capacity, carrier_utilization[depot])
+
+
+                    carrier_utilization[depot] /= capacity
+
+
 
 
 

@@ -1,4 +1,4 @@
-Contract,Capacity,Fixed Time to Warehouse,Fixed Cost,Variable Cost (mile),Target Depot City,Contract
+Contract,Capacity,Fixed Time to Warehouse,Fixed Cost,Variable Cost (mile),Target Depot City,ContractFlag
 SF Carrier 01 ID,20,4,,0.000161836,"San Francisco, California",1
 SF Carrier 02 CO,34,8,,0.000145237,"San Francisco, California",1
 SF Carrier 03 CO,32,9,,0.000153537,"San Francisco, California",1
