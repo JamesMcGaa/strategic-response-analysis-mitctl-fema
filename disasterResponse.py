@@ -7,7 +7,7 @@ from datetime import datetime
 from gurobipy import *
 
 drivingDistanceMatrixFileName = 'drivingDistanceMatrixFEMACountyv3.csv' #'drivingDistanceMatrix.csv' # 'drivingDistanceMatrixFEMACountyv2.csv'
-carrierDataFileName =  'fakeCarrierDataFEMA_nototcaplimitv3.csv' # 'fakeCarrierDataFEMA_onlySM.csv' #'fakeCarrierDataFEMA_nototcap_reduced.csv'  #'fakeCarrierDataFEMA_nototcaplimit.csv' #'fakeCarrierDataFEMA.csv' 
+carrierDataFileName =  'fakeCarrierDataFEMA_onlySM.csv' # 'fakeCarrierDataFEMA_onlySM.csv' #'fakeCarrierDataFEMA_nototcap_reduced.csv'  #'fakeCarrierDataFEMA_nototcaplimit.csv' #'fakeCarrierDataFEMA.csv' 
 disasterTotAffectedFileName = 'disasterAffectedDataFEMACountyv3.csv' # 'disasterAffectedDataFEMACountyv2.csv' #disasterAffectedDataFEMA.csv
 depotInventoryFileName = 'depotInventoryDataFEMA.csv' #'depotInventoryData.csv' 
 
@@ -748,8 +748,8 @@ def dummyhelper( costType
             capacity += tup[1]
         print(depot, capacity, carrier_utilization[depot])
 
-
-        carrier_utilization[depot] /= capacity
+        if capacity>0:
+            carrier_utilization[depot] /= capacity
 
 
 
@@ -1109,8 +1109,8 @@ def nonfixeddummyinventoryhelper( costType
                         capacity += tup[1]
                     print(depot, capacity, carrier_utilization[depot])
 
-
-                    carrier_utilization[depot] /= capacity
+                    if capacity>0:
+                        carrier_utilization[depot] /= capacity
 
 
 

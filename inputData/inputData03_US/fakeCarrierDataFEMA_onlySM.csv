@@ -1,4 +1,4 @@
-Contract,Capacity,Fixed Time to Warehouse,Fixed Cost,Variable Cost (mile),Target Depot City,Contract
+Contract,Capacity,Fixed Time to Warehouse,Fixed Cost,Variable Cost (mile),Target Depot City,ContractFlag
 SF Carrier 08 SM,100000,26,,0.000381767,"San Francisco, California",0
 DA Carrier 08 SM,100000,26,,0.000286325,"Dallas, Texas",0
 PH Carrier 08 SM,100000,26,,0.000377617,"Philadelphia, Pennsylvania",0
