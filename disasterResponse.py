@@ -765,59 +765,66 @@ def nonfixeddummyinventoryhelper( costType
                                   , ProductWeight
                                 ):
                 print("-------------------------------"+costType+" NONFIXED-DUMMY------------------------------")
-                m = Model('StochLPNonfixedDummy')
+                m = Model('NonfixedModel')
                 m.setParam('OutputFlag', 0)
 
                 #Generate list of string names
                 disasterList = demand_tmpD.keys()
                 carrierList = []
                 constrs = {}
-
+                
                 #Adjust carrier capacity based on item
                 itemCarrierConversion = pd.read_csv(os.getcwd()+"\\inputData\\inputData03_US\\" + conversionRatesFileName)
                 for index, row in itemCarrierConversion.iterrows():
                     if row.Item == n_itemIter:
                         itemCarrierConversionRatio = int(row.ConversionRate)
-
+                
                 #CarrierDict is a mapping from Depot City Name to a list of (Carrier name, adjusted capacity, fixed time, variable cost) quadruplets
                 carrierDict = {}
                 carrier_DataFrame = pd.read_csv(os.getcwd()+"\\inputData\\inputData03_US\\" + carrierDataFileName)
                 for index, row in carrier_DataFrame.iterrows():
                     if row["Target Depot City"] not in carrierDict:
                           carrierDict[row["Target Depot City"]] = []
-                          carrierDict[row["Target Depot City"]].append((row.Contract, int(row.Capacity)*itemCarrierConversionRatio, int(row["Fixed Time to Warehouse"]), float(row["Variable Cost (mile)"]), row.ContractFlag))
+                    carrierDict[row["Target Depot City"]].append((row.Contract, int(row.Capacity)*itemCarrierConversionRatio, int(row["Fixed Time to Warehouse"]), float(row["Variable Cost (mile)"]), row.ContractFlag)) #FLOAT?
 
 
-                #Initialize duo variables
-                #AXR: Duo variables are all inventory-carrier pairs
+                #Initialize triVars, each variable is a DEPOT:CARRIERNAME:DISASTERID trio
+                #Initialize CARRIER constraints explicitly rather than using an upper bound in order to extract duals
+                #Perhaps check if the relevant tri has already been added?
                 triVars = {}
                 for depot in carrierDict:
-                        depotCarriers = carrierDict[depot]
-                        for carrier in depotCarriers:
-                                for disasterName in disasterList:
-                                        disasterName = disasterName[0]
-                                        triVars[depot+":"+carrier[0]+":"+disasterName] = m.addVar(lb=0.0, vtype=GRB.CONTINUOUS, name=depot+":"+carrier[0]+disasterName) 
-                                        LHS = LinExpr()
-                                        LHS.addConstant(carrier[1])
-                                        RHS = LinExpr()
-                                        RHS.addTerms(1,triVars[depot+":"+carrier[0]+":"+disasterName])
-                                        constrs["CARRIER<"+depot+":"+carrier[0]+":"+disasterName+">"] = m.addConstr(LHS, GRB.GREATER_EQUAL, RHS, name="CARRIER<"+depot+":"+carrier[0]+":"+disasterName+">"+">")
+                    depotCarriers = carrierDict[depot]
+                    for carrier in depotCarriers:
+                          for disasterTuple in disasterList:
+                                disasterName = disasterTuple[0]
+                                triName = depot+":"+carrier[0]+":"+disasterName
+                                triVars[triName] = m.addVar(lb=0.0, vtype=GRB.CONTINUOUS, name=triName) 
+                                LHS = LinExpr()
+                                LHS.addConstant(carrier[1]) #Adjusted capacity
+                                RHS = LinExpr()
+                                RHS.addTerms(1,triVars[triName])
+                                constrs["CARRIER<"+triName+">"] = m.addConstr(LHS, GRB.GREATER_EQUAL, RHS, name="CARRIER<"+triName+">")
 
 
-                #Initialize triplet variables
+                
+                #Initialize quadVars, each variable is a DEPOT:CARRIERNAME:DISASTERID:SUBLOCATIONID quadruplet
+                #Create a mapping from each triVar to its corresponding quad sublocations
                 quadVars = {}
                 triToQuads = {}
                 for depot in carrierDict:
-                        depotCarriers = carrierDict[depot]
-                        for carrier in depotCarriers:
-                                for disaster in disasterList:
-                                        if (depot, demandAddress_tmpD[disaster]) in costD:
-                                                var = m.addVar(lb=0.0, vtype=GRB.CONTINUOUS, name=depot+":"+carrier[0]+":"+disaster[0]+":"+disaster[1]) 
-                                                quadVars[depot+":"+carrier[0]+":"+disaster[0]+":"+disaster[1]] = var
-                                                if depot+":"+carrier[0]+":"+disaster[0] not in triToQuads:
-                                                        triToQuads[depot+":"+carrier[0]+":"+disaster[0]] = []
-                                                triToQuads[depot+":"+carrier[0]+":"+disaster[0]].append(var)
-                                m.update()        
+                    depotCarriers = carrierDict[depot]
+                    for carrier in depotCarriers:
+                            for disaster in disasterList:
+                                if (depot, demandAddress_tmpD[disaster]) in costD:
+                                                triName = depot+":"+carrier[0]+":"+disaster[0]
+                                                quadName = depot+":"+carrier[0]+":"+disaster[0]+":"+disaster[1]
+                                                var = m.addVar(lb=0.0, vtype=GRB.CONTINUOUS, name=quadName) 
+                                                quadVars[quadName] = var
+                                                if triName not in triToQuads:
+                                                        triToQuads[triName] = []
+                                                triToQuads[triName].append(var)
+                    m.update()
+
 
                 #Introducing a fake dummy node across all variables
                 #1000000 Capacity for dummy carrier, 0 fixed time, 1 variable cost
@@ -835,7 +842,6 @@ def nonfixeddummyinventoryhelper( costType
                                 costD[('dummy', demandAddress_tmpD[disasterID])] = bigMCostDummy 
                 inventory_tmpD['dummy'] = bigInventoryDummy
                 m.update()
-
                 
                 #Minimize expected time
                 weightMap = {}
@@ -895,6 +901,18 @@ def nonfixeddummyinventoryhelper( costType
                                                 RHS.addTerms(1,quadVars[depot+":"+carrier[0]+":"+disasterTuple[0]+":"+disasterTuple[1]])
                         m.addConstr(LHS, GRB.EQUAL, RHS, name="DEMAND<"+disasterTuple[0]+":"+disasterTuple[1]+">")
 
+                #Satisfy demand DUMMY
+                for disasterTuple in demand_tmpD:
+                        demandQuantity = demand_tmpD[disasterTuple]
+                        LHS = LinExpr()
+                        LHS.addConstant(demandQuantity)
+                        RHS = LinExpr()
+                        for depot in carrierDict:
+                                        depotCarriers = carrierDict[depot]
+                                        for carrier in depotCarriers:
+                                                        if depot+":"+carrier[0]+":"+disasterTuple[0]+":"+disasterTuple[1] in quadVars:
+                                                                        RHS.addTerms(1,quadVars[depot+":"+carrier[0]+":"+disasterTuple[0]+":"+disasterTuple[1]])
+                        m.addConstr(LHS, GRB.EQUAL, RHS, name="DEMAND<"+disasterTuple[0]+":"+disasterTuple[1]+">")
                 #Flow constraint
                 for disasterTuple in demand_tmpD:
                         for depot in carrierDict:
