@@ -316,7 +316,7 @@ def optimize():
         data["Utilization Metric"].append(carrier_utilization[depotName])
         data["Depot City"].append(depotName)
       DualsDF = pd.DataFrame(data)
-      DualsDF.to_csv(output_folder+ "\\"+mode+"_dummy_carrier_utilization_" + n_itemIter + ".csv", header=True, index=False, columns=['Depot City', 'Utilization Metric'])   
+      DualsDF.to_csv(output_folder+ "\\"+mode+"_dummy_spot_carrier_utilization_" + n_itemIter + ".csv", header=True, index=False, columns=['Depot City', 'Utilization Metric'])   
 
 
       carrier_utilization = nonfixed_dummy_solution['carrierUtilization']
@@ -325,8 +325,24 @@ def optimize():
         data["Utilization Metric"].append(carrier_utilization[depotName])
         data["Depot City"].append(depotName)
       DualsDF = pd.DataFrame(data)
-      DualsDF.to_csv(output_folder+ "\\"+mode+"_nonfixed_carrier_utilization_" + n_itemIter + ".csv", header=True, index=False, columns=['Depot City', 'Utilization Metric'])   
+      DualsDF.to_csv(output_folder+ "\\"+mode+"_nonfixed_spot_carrier_utilization_" + n_itemIter + ".csv", header=True, index=False, columns=['Depot City', 'Utilization Metric'])   
 
+      carrier_utilization = dummy_solution['totalCarrierUtilization']
+      data = {'Depot City':[], 'Utilization Metric':[]}
+      for depotName in carrier_utilization:
+        data["Utilization Metric"].append(carrier_utilization[depotName])
+        data["Depot City"].append(depotName)
+      DualsDF = pd.DataFrame(data)
+      DualsDF.to_csv(output_folder+ "\\"+mode+"_dummy_total_carrier_utilization_" + n_itemIter + ".csv", header=True, index=False, columns=['Depot City', 'Utilization Metric'])   
+
+
+      carrier_utilization = nonfixed_dummy_solution['totalCarrierUtilization']
+      data = {'Depot City':[], 'Utilization Metric':[]}
+      for depotName in carrier_utilization:
+        data["Utilization Metric"].append(carrier_utilization[depotName])
+        data["Depot City"].append(depotName)
+      DualsDF = pd.DataFrame(data)
+      DualsDF.to_csv(output_folder+ "\\"+mode+"_nonfixed_total_carrier_utilization_" + n_itemIter + ".csv", header=True, index=False, columns=['Depot City', 'Utilization Metric'])   
 
 
 
@@ -736,7 +752,7 @@ def dummyhelper( costType
         if depot not in carrier_utilization:
           carrier_utilization[depot] = 0
         for tup in carrierDict[depot]:
-          if tup[len(tup)-1] == 1 and tup[0] == carrier:
+          if tup[len(tup)-1] == 1 and tup[0] == carrier: #Spot only
             carrier_utilization[depot] += int(quadVars[":".join(key.split(':'))].x * probs_tmpD[disasterID])
             break
 
@@ -744,16 +760,36 @@ def dummyhelper( costType
       if depot != "dummy":
         capacity = 0.0
         for carrier in carrierDict[depot]:
-          if tup[len(tup)-1] == 1:
+          if tup[len(tup)-1] == 1: #Spot only
             capacity += tup[1]
-        print(depot, capacity, carrier_utilization[depot])
 
         if capacity>0:
             carrier_utilization[depot] /= capacity
 
+    #Carrier Utilization Metric NONSPOT
+    total_carrier_utilization = {}
+    for key in quadVars:
+      depot, carrier, disasterID, sublocationID = key.split(':')
+      if depot != "dummy":
+        if depot not in total_carrier_utilization:
+          total_carrier_utilization[depot] = 0
+        for tup in carrierDict[depot]:
+          if tup[0] == carrier: #Spot only
+            total_carrier_utilization[depot] += int(quadVars[":".join(key.split(':'))].x * probs_tmpD[disasterID])
+            break
+
+    for depot in total_carrier_utilization:
+      if depot != "dummy":
+        capacity = 0.0
+        for carrier in carrierDict[depot]:
+            capacity += tup[1]
+
+        if capacity>0:
+            total_carrier_utilization[depot] /= capacity
 
 
-    return {'dummyObj': dummyObj, 'adjdummyObj': adjobjVal, 'dummyFlow': flow, 'weightedDummyDemand': weighted_dummy_demand, 'depotDuals': depotDuals, 'carrierDuals':carrierDuals, 'weightMap':weightMap, "carrierUtilization": carrier_utilization}
+
+    return {'dummyObj': dummyObj, 'adjdummyObj': adjobjVal, 'dummyFlow': flow, 'weightedDummyDemand': weighted_dummy_demand, 'depotDuals': depotDuals, 'carrierDuals':carrierDuals, 'weightMap':weightMap, "carrierUtilization": carrier_utilization, "totalCarrierUtilization": total_carrier_utilization}
 
 
 def nonfixeddummyinventoryhelper( costType
@@ -1112,9 +1148,30 @@ def nonfixeddummyinventoryhelper( costType
                     if capacity>0:
                         carrier_utilization[depot] /= capacity
 
+                #Carrier Utilization Metric NONSPOT
+                total_carrier_utilization = {}
+                for key in quadVars:
+                  depot, carrier, disasterID, sublocationID = key.split(':')
+                  if depot != "dummy":
+                    if depot not in total_carrier_utilization:
+                      total_carrier_utilization[depot] = 0
+                    for tup in carrierDict[depot]:
+                      if tup[0] == carrier: #Spot only
+                        total_carrier_utilization[depot] += int(quadVars[":".join(key.split(':'))].x * probs_tmpD[disasterID])
+                        break
+
+                for depot in total_carrier_utilization:
+                  if depot != "dummy":
+                    capacity = 0.0
+                    for carrier in carrierDict[depot]:
+                        capacity += tup[1]
+
+                    if capacity>0:
+                        total_carrier_utilization[depot] /= capacity
 
 
 
 
-                return {'dummyObj': dummyObj, 'adjdummyObj': adjobjVal, 'dummyFlow': flow, 'weightedDummyDemand': weighted_dummy_demand, 'carrierDuals':carrierDuals, 'weightMap':weightMap, "carrierUtilization": carrier_utilization}
+
+                return {'dummyObj': dummyObj, 'adjdummyObj': adjobjVal, 'dummyFlow': flow, 'weightedDummyDemand': weighted_dummy_demand, 'carrierDuals':carrierDuals, 'weightMap':weightMap, "carrierUtilization": carrier_utilization, "totalCarrierUtilization": total_carrier_utilization}
 optimize()

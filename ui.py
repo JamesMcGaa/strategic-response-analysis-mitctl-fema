@@ -7,29 +7,22 @@ from PIL import Image, ImageTk
 #from Tkinter import *
 
 class App:
-    def change_run(self):
-        print("LOL")
+    def change_run(self, x):
+        print(x)
 
     def __init__(self, master):
-        master.name = "Disaster Response"
         self.frame = tk.Frame(master, background="white")
-        #self.frame.pack(fill=None, expand=False)
         self.frame.grid()
-        self.frame.name = "Disaster Response"
-
-
+        self.frame.winfo_toplevel().title("Disaster Reponse Analysis")
 
         self.input_frame = tk.Frame(self.frame, background="grey", height = 500, width = 400)
         self.stat_image_frame = tk.Frame(self.frame, background="grey", height = 500, width = 325)
         self.dummy_frame = tk.Frame(self.frame, background="grey", height = 500, width = 325)
         self.nonfixed_frame = tk.Frame(self.frame, background="grey", height = 500, width = 325)
-
-
         self.input_frame.grid_propagate(0)
         self.dummy_frame.grid_propagate(0)
         self.stat_image_frame.grid_propagate(0)
         self.nonfixed_frame.grid_propagate(0)
-
         self.input_frame.grid(row=0, column=0)
         self.stat_image_frame.grid(row=0, column=1)
         self.dummy_frame.grid(row=0, column=2)
@@ -37,10 +30,6 @@ class App:
 
 
         path = "C:\\Users\\mitadm\\Documents\\urop\\outputData\\2018-11-01_16_11_26_513000_Water"
-    
-
-    
-
 
         tkimage = ImageTk.PhotoImage(Image.open(os.path.join(path, "demand_distribution.png")).resize((300,225), resample=Image.BICUBIC))
         label = tk.Label(self.stat_image_frame, image=tkimage)
