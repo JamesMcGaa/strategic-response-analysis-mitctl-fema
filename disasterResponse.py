@@ -7,7 +7,7 @@ from datetime import datetime
 from gurobipy import *
 
 drivingDistanceMatrixFileName = 'drivingDistanceMatrixFEMACountyv3.csv' #'drivingDistanceMatrix.csv' # 'drivingDistanceMatrixFEMACountyv2.csv'
-carrierDataFileName =  'fakeCarrierDataFEMA_onlySM.csv' # 'fakeCarrierDataFEMA_onlySM.csv' #'fakeCarrierDataFEMA_nototcap_reduced.csv'  #'fakeCarrierDataFEMA_nototcaplimit.csv' #'fakeCarrierDataFEMA.csv' 
+carrierDataFileName =  'fakeCarrierDataFEMA_nototcaplimitv3.csv' # 'fakeCarrierDataFEMA_onlySM.csv' #'fakeCarrierDataFEMA_nototcap_reduced.csv'  #'fakeCarrierDataFEMA_nototcaplimit.csv' #'fakeCarrierDataFEMA.csv' 
 disasterTotAffectedFileName = 'disasterAffectedDataFEMACountyv3.csv' # 'disasterAffectedDataFEMACountyv2.csv' #disasterAffectedDataFEMA.csv
 depotInventoryFileName = 'depotInventoryDataFEMA.csv' #'depotInventoryData.csv' 
 
@@ -316,7 +316,7 @@ def optimize():
         data["Utilization Metric"].append(carrier_utilization[depotName])
         data["Depot City"].append(depotName)
       DualsDF = pd.DataFrame(data)
-      DualsDF.to_csv(output_folder+ "\\"+mode+"_dummy_spot_carrier_utilization_" + n_itemIter + ".csv", header=True, index=False, columns=['Depot City', 'Utilization Metric'])   
+      DualsDF.to_csv(output_folder+ "\\"+mode+"_dummy_contract_carrier_utilization_" + n_itemIter + ".csv", header=True, index=False, columns=['Depot City', 'Utilization Metric'])   
 
 
       carrier_utilization = nonfixed_dummy_solution['carrierUtilization']
@@ -325,24 +325,7 @@ def optimize():
         data["Utilization Metric"].append(carrier_utilization[depotName])
         data["Depot City"].append(depotName)
       DualsDF = pd.DataFrame(data)
-      DualsDF.to_csv(output_folder+ "\\"+mode+"_nonfixed_spot_carrier_utilization_" + n_itemIter + ".csv", header=True, index=False, columns=['Depot City', 'Utilization Metric'])   
-
-      carrier_utilization = dummy_solution['totalCarrierUtilization']
-      data = {'Depot City':[], 'Utilization Metric':[]}
-      for depotName in carrier_utilization:
-        data["Utilization Metric"].append(carrier_utilization[depotName])
-        data["Depot City"].append(depotName)
-      DualsDF = pd.DataFrame(data)
-      DualsDF.to_csv(output_folder+ "\\"+mode+"_dummy_total_carrier_utilization_" + n_itemIter + ".csv", header=True, index=False, columns=['Depot City', 'Utilization Metric'])   
-
-
-      carrier_utilization = nonfixed_dummy_solution['totalCarrierUtilization']
-      data = {'Depot City':[], 'Utilization Metric':[]}
-      for depotName in carrier_utilization:
-        data["Utilization Metric"].append(carrier_utilization[depotName])
-        data["Depot City"].append(depotName)
-      DualsDF = pd.DataFrame(data)
-      DualsDF.to_csv(output_folder+ "\\"+mode+"_nonfixed_total_carrier_utilization_" + n_itemIter + ".csv", header=True, index=False, columns=['Depot City', 'Utilization Metric'])   
+      DualsDF.to_csv(output_folder+ "\\"+mode+"_nonfixed_contract_carrier_utilization_" + n_itemIter + ".csv", header=True, index=False, columns=['Depot City', 'Utilization Metric'])   
 
 
 
@@ -746,50 +729,40 @@ def dummyhelper( costType
 
     #Carrier Utilization Metric
     carrier_utilization = {}
+    total_dispatch = 0.0
     for key in quadVars:
       depot, carrier, disasterID, sublocationID = key.split(':')
       if depot != "dummy":
         if depot not in carrier_utilization:
           carrier_utilization[depot] = 0
         for tup in carrierDict[depot]:
-          if tup[len(tup)-1] == 1 and tup[0] == carrier: #Spot only
+          if tup[len(tup)-1] == 1 and tup[0] == carrier: #Contract only
             carrier_utilization[depot] += int(quadVars[":".join(key.split(':'))].x * probs_tmpD[disasterID])
+            total_dispatch += int(quadVars[":".join(key.split(':'))].x * probs_tmpD[disasterID])
             break
 
+    total_capacity = 0.0
     for depot in carrier_utilization:
       if depot != "dummy":
         capacity = 0.0
         for carrier in carrierDict[depot]:
-          if tup[len(tup)-1] == 1: #Spot only
+          if tup[len(tup)-1] == 1: #Contract only
             capacity += tup[1]
+            total_capacity += tup[1]
 
         if capacity>0:
             carrier_utilization[depot] /= capacity
 
-    #Carrier Utilization Metric NONSPOT
-    total_carrier_utilization = {}
-    for key in quadVars:
-      depot, carrier, disasterID, sublocationID = key.split(':')
-      if depot != "dummy":
-        if depot not in total_carrier_utilization:
-          total_carrier_utilization[depot] = 0
-        for tup in carrierDict[depot]:
-          if tup[0] == carrier: #Spot only
-            total_carrier_utilization[depot] += int(quadVars[":".join(key.split(':'))].x * probs_tmpD[disasterID])
-            break
+    if total_capacity == 0.0:
+      total_capacity = 1.0
+    carrier_utilization["Total"] = total_dispatch / total_capacity
 
-    for depot in total_carrier_utilization:
-      if depot != "dummy":
-        capacity = 0.0
-        for carrier in carrierDict[depot]:
-            capacity += tup[1]
 
-        if capacity>0:
-            total_carrier_utilization[depot] /= capacity
+    
 
 
 
-    return {'dummyObj': dummyObj, 'adjdummyObj': adjobjVal, 'dummyFlow': flow, 'weightedDummyDemand': weighted_dummy_demand, 'depotDuals': depotDuals, 'carrierDuals':carrierDuals, 'weightMap':weightMap, "carrierUtilization": carrier_utilization, "totalCarrierUtilization": total_carrier_utilization}
+    return {'dummyObj': dummyObj, 'adjdummyObj': adjobjVal, 'dummyFlow': flow, 'weightedDummyDemand': weighted_dummy_demand, 'depotDuals': depotDuals, 'carrierDuals':carrierDuals, 'weightMap':weightMap, "carrierUtilization": carrier_utilization}
 
 
 def nonfixeddummyinventoryhelper( costType
@@ -1127,51 +1100,37 @@ def nonfixeddummyinventoryhelper( costType
 
                 #Carrier Utilization Metric
                 carrier_utilization = {}
+                total_dispatch = 0.0
                 for key in quadVars:
                   depot, carrier, disasterID, sublocationID = key.split(':')
                   if depot != "dummy":
                     if depot not in carrier_utilization:
                       carrier_utilization[depot] = 0
                     for tup in carrierDict[depot]:
-                      if tup[len(tup)-1] == 1 and tup[0] == carrier:
+                      if tup[len(tup)-1] == 1 and tup[0] == carrier: #Contract only
                         carrier_utilization[depot] += int(quadVars[":".join(key.split(':'))].x * probs_tmpD[disasterID])
+                        total_dispatch += int(quadVars[":".join(key.split(':'))].x * probs_tmpD[disasterID])
                         break
 
+                total_capacity = 0.0
                 for depot in carrier_utilization:
                   if depot != "dummy":
                     capacity = 0.0
                     for carrier in carrierDict[depot]:
-                      if tup[len(tup)-1] == 1:
+                      if tup[len(tup)-1] == 1: #Contract only
                         capacity += tup[1]
-                    print(depot, capacity, carrier_utilization[depot])
+                        total_capacity += tup[1]
 
                     if capacity>0:
                         carrier_utilization[depot] /= capacity
 
-                #Carrier Utilization Metric NONSPOT
-                total_carrier_utilization = {}
-                for key in quadVars:
-                  depot, carrier, disasterID, sublocationID = key.split(':')
-                  if depot != "dummy":
-                    if depot not in total_carrier_utilization:
-                      total_carrier_utilization[depot] = 0
-                    for tup in carrierDict[depot]:
-                      if tup[0] == carrier: #Spot only
-                        total_carrier_utilization[depot] += int(quadVars[":".join(key.split(':'))].x * probs_tmpD[disasterID])
-                        break
-
-                for depot in total_carrier_utilization:
-                  if depot != "dummy":
-                    capacity = 0.0
-                    for carrier in carrierDict[depot]:
-                        capacity += tup[1]
-
-                    if capacity>0:
-                        total_carrier_utilization[depot] /= capacity
+                if total_capacity == 0.0:
+                  total_capacity = 1.0
+                carrier_utilization["Total"] = total_dispatch / total_capacity
 
 
 
 
 
-                return {'dummyObj': dummyObj, 'adjdummyObj': adjobjVal, 'dummyFlow': flow, 'weightedDummyDemand': weighted_dummy_demand, 'carrierDuals':carrierDuals, 'weightMap':weightMap, "carrierUtilization": carrier_utilization, "totalCarrierUtilization": total_carrier_utilization}
+                return {'dummyObj': dummyObj, 'adjdummyObj': adjobjVal, 'dummyFlow': flow, 'weightedDummyDemand': weighted_dummy_demand, 'carrierDuals':carrierDuals, 'weightMap':weightMap, "carrierUtilization": carrier_utilization}
 optimize()
