@@ -9,7 +9,7 @@ from gurobipy import *
 drivingDistanceMatrixFileName = 'drivingDistanceMatrixFEMACountyv3.csv' #'drivingDistanceMatrix.csv' # 'drivingDistanceMatrixFEMACountyv2.csv'
 carrierDataFileName =  'fakeCarrierDataFEMA_nototcaplimitv3.csv' # 'fakeCarrierDataFEMA_onlySM.csv' #'fakeCarrierDataFEMA_nototcap_reduced.csv'  #'fakeCarrierDataFEMA_nototcaplimit.csv' #'fakeCarrierDataFEMA.csv' 
 disasterTotAffectedFileName = 'disasterAffectedDataFEMACountyv3.csv' # 'disasterAffectedDataFEMACountyv2.csv' #disasterAffectedDataFEMA.csv
-depotInventoryFileName = 'depotInventoryDataFEMA.csv' #'depotInventoryData.csv' 
+depotInventoryFileName = 'depotInventoryData_test_fixed.csv' #'depotInventoryData.csv' 
 
 #Penalize items based on weight or volume
 itemAttributesFileName =  'itemAttributesFEMA.csv' # 'itemAttributes.csv'
@@ -24,6 +24,7 @@ bigMCostDummy = 1000000
 bigInventoryDummy = 10000000000
 n_itemIter = "Water"
 
+ConstrainedRelocation = 1
 
 output_folder = os.getcwd()+"\\outputData\\"+str(datetime.now()).replace(":", "_").replace(".","_").replace(" ","_")+"_"+n_itemIter
 os.makedirs(output_folder)
@@ -38,11 +39,20 @@ def optimize():
     sys.stdout = log_file
 
     #Read in inventory values for the particular item
+    total_inventory_tmpD = {}
     inventory_tmpD = {}
+    supplier_tmpD = {}
     matrix = pd.read_csv(os.getcwd()+"\\inputData\\inputData03_US\\" + depotInventoryFileName) 
     for index, row in matrix.iterrows():
         if row.ItemName == n_itemIter:
+          if row.gglAddress not in total_inventory_tmpD:
+            total_inventory_tmpD[row.gglAddress] = 0
+          total_inventory_tmpD[row.gglAddress] += row.Total
+          if row.fixed == 0: #Organic inventory for moving around
             inventory_tmpD[row.gglAddress] = row.Total
+          if row.fixed == 1: #Supplier inventory fixed
+            supplier_tmpD[row.gglAddress] = row.Total
+
 
     #Generate cost matrices
     monetaryMatrix = {}
@@ -211,19 +221,29 @@ def optimize():
                                     , demand_tmpD
                                     , demandAddress_tmpD
                                     , probs_tmpD   
-                                    , inventory_tmpD
+                                    , total_inventory_tmpD
                                     , monetaryMatrix
                                     , ProductWeight
                                     )
         cross_validation[("dummy","MONETARY")] = dummy_solution
-
-        nonfixed_dummy_solution = nonfixeddummyinventoryhelper( "MONETARY"
-                                                              , demand_tmpD
-                                                              , demandAddress_tmpD
-                                                              , probs_tmpD
-                                                              , inventory_tmpD
-                                                              , monetaryMatrix                                                              
-                                                              , ProductWeight
+        if ConstrainedRelocation == 0:
+          nonfixed_dummy_solution = nonfixeddummyinventoryhelper( "MONETARY"
+                                                                , demand_tmpD
+                                                                , demandAddress_tmpD
+                                                                , probs_tmpD
+                                                                , total_inventory_tmpD
+                                                                , monetaryMatrix                                                              
+                                                                , ProductWeight
+                                                              )
+        else:
+          nonfixed_dummy_solution = nonfixeddummyinventoryhelper( "MONETARY"
+                                                                , demand_tmpD
+                                                                , demandAddress_tmpD
+                                                                , probs_tmpD
+                                                                , inventory_tmpD
+                                                                , monetaryMatrix                                                              
+                                                                , ProductWeight
+                                                                , supplier_tmpD
                                                               )
         cross_validation[("nonfixed","MONETARY")] = nonfixed_dummy_solution
 
@@ -232,20 +252,30 @@ def optimize():
                                     , demand_tmpD
                                     , demandAddress_tmpD
                                     , probs_tmpD
-                                    , inventory_tmpD                                    
+                                    , total_inventory_tmpD                                    
                                     , timeMatrix
                                     , ProductWeight
                                     )
         cross_validation[("dummy","TIME")] = dummy_solution
-
-        nonfixed_dummy_solution = nonfixeddummyinventoryhelper( "TIME"
-                                                              , demand_tmpD
-                                                              , demandAddress_tmpD
-                                                              , probs_tmpD
-                                                              , inventory_tmpD
-                                                              , timeMatrix
-                                                              , ProductWeight
-                                                              )
+        if ConstrainedRelocation == 0:
+          nonfixed_dummy_solution = nonfixeddummyinventoryhelper( "TIME"
+                                                                , demand_tmpD
+                                                                , demandAddress_tmpD
+                                                                , probs_tmpD
+                                                                , total_inventory_tmpD
+                                                                , timeMatrix
+                                                                , ProductWeight
+                                                                )
+        else: 
+          nonfixed_dummy_solution = nonfixeddummyinventoryhelper( "TIME"
+                                                                , demand_tmpD
+                                                                , demandAddress_tmpD
+                                                                , probs_tmpD
+                                                                , inventory_tmpD
+                                                                , timeMatrix
+                                                                , ProductWeight
+                                                                , supplier_tmpD
+                                                                )
         cross_validation[("nonfixed","TIME")] = nonfixed_dummy_solution
 
 
@@ -772,6 +802,7 @@ def nonfixeddummyinventoryhelper( costType
                                   , inventory_tmpD
                                   , costD 
                                   , ProductWeight
+                                  , supplier_tmpD = None
                                 ):
                 print("-------------------------------"+costType+" NONFIXED-DUMMY------------------------------")
                 m = Model('NonfixedModel')
@@ -946,7 +977,7 @@ def nonfixeddummyinventoryhelper( costType
                 
                 #assigning all depots except dummy to depotVars and adding it to the LHS. Then setting right hand side of each constraint to entire inventory
                 depotVars = {}
-                for depotName in inventory_tmpD:
+                for depotName in set(inventory_tmpD.keys()).union(set(supplier_tmpD.keys())):
                         if depotName != 'dummy':
                                 depotVars[depotName] = m.addVar(lb=0.0, ub=totalCapacity, vtype=GRB.CONTINUOUS, name=depotName+":NONFIXEDCAPACITY")
                 LHS = LinExpr()
@@ -977,6 +1008,11 @@ def nonfixeddummyinventoryhelper( costType
                                 inventoryCapacity = depotVars[depot]
                                 LHS = LinExpr()
                                 LHS.addTerms(1.0, inventoryCapacity)
+                                # print(supplier_tmpD)
+                                # print(depot)
+                                # sys.exit()
+                                if ConstrainedRelocation == 1:
+                                  LHS.addConstant(supplier_tmpD.get(depot, 0))
                                 RHS = LinExpr()
                                 for carrier in depotCarriers:
                                         if depot+":"+carrier[0]+":"+disasterTuple[0] in triVars:
